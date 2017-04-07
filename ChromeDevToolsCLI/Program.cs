@@ -2,6 +2,7 @@
 {
     using BaristaLabs.ChromeDevTools;
     using BaristaLabs.ChromeDevTools.Page;
+    using BaristaLabs.ChromeDevTools.Runtime;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Linq;
     using System;
@@ -23,11 +24,25 @@
 
             var sessions = GetSessions("http://localhost:9223/").GetAwaiter().GetResult();
 
-            var session = new ChromeSession(sessions.Last());
-            var result = session.SendCommand<NavigateCommand, NavigateCommandResponse>(new NavigateCommand
+            using (var session = new ChromeSession(sessions.Last()))
             {
-                Url = "http://www.winamp.com"
-            }, CancellationToken.None).GetAwaiter().GetResult();
+                //Navigate to winamp.com
+                var result = session.SendCommand<NavigateCommand, NavigateCommandResponse>(new NavigateCommand
+                {
+                    Url = "http://www.winamp.com"
+                }, CancellationToken.None).GetAwaiter().GetResult();
+
+                //Enable the runtime.
+                var result1 = session.SendCommand<BaristaLabs.ChromeDevTools.Runtime.EnableCommand, BaristaLabs.ChromeDevTools.Runtime.EnableCommandResponse>(new BaristaLabs.ChromeDevTools.Runtime.EnableCommand(), CancellationToken.None).GetAwaiter().GetResult();
+
+                //Evaluate
+                var result2 = session.SendCommand<EvaluateCommand, EvaluateCommandResponse>(new EvaluateCommand
+                {
+                    //ContextId = "",
+                    //ObjectGroup = "test123",
+                    Expression = "6*7",
+                }, CancellationToken.None).GetAwaiter().GetResult();
+            }
         }
 
         public static async Task<string[]> GetSessions(string url)
@@ -40,7 +55,7 @@
             using (var stringReader = new StringReader(remoteSessions))
             using (var jsonReader = new JsonTextReader(stringReader))
             {
-                var sessionsObject = JToken.ReadFrom(jsonReader) as JArray;
+                 var sessionsObject = JToken.ReadFrom(jsonReader) as JArray;
                 foreach (var sessionObject in sessionsObject)
                 {
                     var webSocketDebuggerToken = sessionObject["webSocketDebuggerUrl"];
