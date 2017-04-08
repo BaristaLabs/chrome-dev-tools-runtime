@@ -1,8 +1,8 @@
 ﻿namespace ChromeDevToolsCLI
 {
-    using BaristaLabs.ChromeDevTools;
-    using BaristaLabs.ChromeDevTools.Page;
     using BaristaLabs.ChromeDevTools.Runtime;
+    using Page = BaristaLabs.ChromeDevTools.Runtime.Page;
+    using Runtime = BaristaLabs.ChromeDevTools.Runtime.Runtime;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Linq;
     using System;
@@ -27,16 +27,22 @@
             using (var session = new ChromeSession(sessions.Last()))
             {
                 //Navigate to winamp.com
-                var result = session.SendCommand<NavigateCommand, NavigateCommandResponse>(new NavigateCommand
+                var navigateResult = session.SendCommand<Page.NavigateCommand, Page.NavigateCommandResponse>(new Page.NavigateCommand
                 {
                     Url = "http://www.winamp.com"
                 }, CancellationToken.None).GetAwaiter().GetResult();
 
+                //Subscribe to the eval command
+                session.Subscribe<Runtime.ExecutionContextCreatedEvent>((e) =>
+                {
+                    
+                });
+
                 //Enable the runtime.
-                var result1 = session.SendCommand<BaristaLabs.ChromeDevTools.Runtime.EnableCommand, BaristaLabs.ChromeDevTools.Runtime.EnableCommandResponse>(new BaristaLabs.ChromeDevTools.Runtime.EnableCommand(), CancellationToken.None).GetAwaiter().GetResult();
+                var result1 = session.SendCommand<Runtime.EnableCommand, Runtime.EnableCommandResponse>(new Runtime.EnableCommand(), CancellationToken.None).GetAwaiter().GetResult();
 
                 //Evaluate
-                var result2 = session.SendCommand<EvaluateCommand, EvaluateCommandResponse>(new EvaluateCommand
+                var result2 = session.SendCommand<Runtime.EvaluateCommand, Runtime.EvaluateCommandResponse>(new Runtime.EvaluateCommand
                 {
                     //ContextId = "",
                     //ObjectGroup = "test123",

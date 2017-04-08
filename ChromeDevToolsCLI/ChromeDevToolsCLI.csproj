@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BaristaLabs.ChromeDevTools\BaristaLabs.ChromeDevTools.csproj" />
+    <ProjectReference Include="..\BaristaLabs.ChromeDevTools.Runtime\BaristaLabs.ChromeDevTools.Runtime.csproj" />
   </ItemGroup>
 
 </Project>

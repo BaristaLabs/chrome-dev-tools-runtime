@@ -1,0 +1,22 @@
+namespace BaristaLabs.ChromeDevTools.Runtime.Database
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    [Event("Database.addDatabase")]
+    public sealed class AddDatabaseEvent : IEvent
+    {
+    
+        
+        /// <summary>
+        /// Gets or sets the database
+        /// </summary>
+        
+        public Database Database
+        {
+            get;
+            set;
+        }
+    
+    }
+}
