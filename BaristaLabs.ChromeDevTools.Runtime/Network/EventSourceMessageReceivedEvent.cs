@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Fired when EventSource message is received.
     /// </summary>
-    [Event("Network.eventSourceMessageReceived")]
     public sealed class EventSourceMessageReceivedEvent : IEvent
     {
     

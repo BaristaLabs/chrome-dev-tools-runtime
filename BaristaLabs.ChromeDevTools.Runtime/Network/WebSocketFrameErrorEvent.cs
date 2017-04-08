@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Fired when WebSocket frame error occurs.
     /// </summary>
-    [Event("Network.webSocketFrameError")]
     public sealed class WebSocketFrameErrorEvent : IEvent
     {
     

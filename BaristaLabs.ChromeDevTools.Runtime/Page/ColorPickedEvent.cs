@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Fired when a color has been picked.
     /// </summary>
-    [Event("Page.colorPicked")]
     public sealed class ColorPickedEvent : IEvent
     {
     

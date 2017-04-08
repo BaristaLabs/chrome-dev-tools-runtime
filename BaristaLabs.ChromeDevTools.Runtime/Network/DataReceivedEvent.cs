@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Fired when data chunk was received over the network.
     /// </summary>
-    [Event("Network.dataReceived")]
     public sealed class DataReceivedEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Fired when <code>Element</code>'s attribute is modified.
     /// </summary>
-    [Event("DOM.attributeModified")]
     public sealed class AttributeModifiedEvent : IEvent
     {
     

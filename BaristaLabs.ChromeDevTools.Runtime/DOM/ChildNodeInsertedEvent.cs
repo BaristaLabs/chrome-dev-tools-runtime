@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Mirrors <code>DOMNodeInserted</code> event.
     /// </summary>
-    [Event("DOM.childNodeInserted")]
     public sealed class ChildNodeInsertedEvent : IEvent
     {
     

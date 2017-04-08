@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Fired when WebSocket frame is received.
     /// </summary>
-    [Event("Network.webSocketFrameReceived")]
     public sealed class WebSocketFrameReceivedEvent : IEvent
     {
     

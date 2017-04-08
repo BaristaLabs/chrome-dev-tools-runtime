@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     /// <summary>
     /// 
     /// </summary>
-    [Event("Profiler.consoleProfileFinished")]
     public sealed class ConsoleProfileFinishedEvent : IEvent
     {
     

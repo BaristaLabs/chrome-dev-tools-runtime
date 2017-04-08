@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Called when a pseudo element is added to an element.
     /// </summary>
-    [Event("DOM.pseudoElementAdded")]
     public sealed class PseudoElementAddedEvent : IEvent
     {
     

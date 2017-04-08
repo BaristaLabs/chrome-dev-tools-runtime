@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Notifies about new protocol message from attached target.
     /// </summary>
-    [Event("Target.receivedMessageFromTarget")]
     public sealed class ReceivedMessageFromTargetEvent : IEvent
     {
     

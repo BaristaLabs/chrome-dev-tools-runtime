@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
     /// <summary>
     /// 
     /// </summary>
-    [Event("ApplicationCache.networkStateUpdated")]
     public sealed class NetworkStateUpdatedEvent : IEvent
     {
     

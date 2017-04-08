@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Fired when HTTP response is available.
     /// </summary>
-    [Event("Network.responseReceived")]
     public sealed class ResponseReceivedEvent : IEvent
     {
     

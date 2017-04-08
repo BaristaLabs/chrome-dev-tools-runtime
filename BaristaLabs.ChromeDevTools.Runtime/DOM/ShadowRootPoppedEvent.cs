@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Called when shadow root is popped from the element.
     /// </summary>
-    [Event("DOM.shadowRootPopped")]
     public sealed class ShadowRootPoppedEvent : IEvent
     {
     

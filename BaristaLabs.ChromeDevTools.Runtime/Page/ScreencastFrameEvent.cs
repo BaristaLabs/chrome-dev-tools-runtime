@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Compressed image data requested by the <code>startScreencast</code>.
     /// </summary>
-    [Event("Page.screencastFrame")]
     public sealed class ScreencastFrameEvent : IEvent
     {
     

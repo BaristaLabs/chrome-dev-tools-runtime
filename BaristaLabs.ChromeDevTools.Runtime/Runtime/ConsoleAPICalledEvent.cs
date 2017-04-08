@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// Issued when console API was called.
     /// </summary>
-    [Event("Runtime.consoleAPICalled")]
     public sealed class ConsoleAPICalledEvent : IEvent
     {
     

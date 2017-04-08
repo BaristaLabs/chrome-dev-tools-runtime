@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Fired when HTTP request has finished loading.
     /// </summary>
-    [Event("Network.loadingFinished")]
     public sealed class LoadingFinishedEvent : IEvent
     {
     

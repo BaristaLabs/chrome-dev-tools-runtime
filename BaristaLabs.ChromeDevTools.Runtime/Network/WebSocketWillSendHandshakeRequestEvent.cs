@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Fired when WebSocket is about to initiate handshake.
     /// </summary>
-    [Event("Network.webSocketWillSendHandshakeRequest")]
     public sealed class WebSocketWillSendHandshakeRequestEvent : IEvent
     {
     

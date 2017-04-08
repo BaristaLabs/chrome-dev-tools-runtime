@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tethering
     /// <summary>
     /// Informs that port was successfully bound and got a specified connection id.
     /// </summary>
-    [Event("Tethering.accepted")]
     public sealed class AcceptedEvent : IEvent
     {
     

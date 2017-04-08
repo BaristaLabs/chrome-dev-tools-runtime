@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     /// <summary>
     /// Sent when new profile recodring is started using console.profile() call.
     /// </summary>
-    [Event("Profiler.consoleProfileStarted")]
     public sealed class ConsoleProfileStartedEvent : IEvent
     {
     

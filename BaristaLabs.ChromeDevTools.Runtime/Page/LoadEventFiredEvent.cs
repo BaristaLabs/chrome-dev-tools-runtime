@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// 
     /// </summary>
-    [Event("Page.loadEventFired")]
     public sealed class LoadEventFiredEvent : IEvent
     {
     

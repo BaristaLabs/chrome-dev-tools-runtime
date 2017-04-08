@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Fired when WebSocket is closed.
     /// </summary>
-    [Event("Network.webSocketClosed")]
     public sealed class WebSocketClosedEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
     /// <summary>
     /// 
     /// </summary>
-    [Event("Database.addDatabase")]
     public sealed class AddDatabaseEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     /// <summary>
     /// 
     /// </summary>
-    [Event("Tracing.bufferUsage")]
     public sealed class BufferUsageEvent : IEvent
     {
     

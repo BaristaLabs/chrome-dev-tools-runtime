@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Fired when frame has been detached from its parent.
     /// </summary>
-    [Event("Page.frameDetached")]
     public sealed class FrameDetachedEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Fired when resource loading priority is changed
     /// </summary>
-    [Event("Network.resourceChangedPriority")]
     public sealed class ResourceChangedPriorityEvent : IEvent
     {
     

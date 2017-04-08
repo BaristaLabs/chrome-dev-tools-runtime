@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// 
     /// </summary>
-    [Event("DOM.nodeHighlightRequested")]
     public sealed class NodeHighlightRequestedEvent : IEvent
     {
     

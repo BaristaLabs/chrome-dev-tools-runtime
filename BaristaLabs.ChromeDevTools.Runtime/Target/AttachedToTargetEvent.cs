@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Issued when attached to target because of auto-attach or <code>attachToTarget</code> command.
     /// </summary>
-    [Event("Target.attachedToTarget")]
     public sealed class AttachedToTargetEvent : IEvent
     {
     

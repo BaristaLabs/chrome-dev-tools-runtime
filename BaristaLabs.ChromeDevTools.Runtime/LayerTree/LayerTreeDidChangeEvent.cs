@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     /// <summary>
     /// 
     /// </summary>
-    [Event("LayerTree.layerTreeDidChange")]
     public sealed class LayerTreeDidChangeEvent : IEvent
     {
     

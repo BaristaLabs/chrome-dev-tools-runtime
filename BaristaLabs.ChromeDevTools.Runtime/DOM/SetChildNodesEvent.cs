@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Fired when backend wants to provide client with the missing DOM structure. This happens upon most of the calls requesting node ids.
     /// </summary>
-    [Event("DOM.setChildNodes")]
     public sealed class SetChildNodesEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
     /// <summary>
     /// Issued when new console message is added.
     /// </summary>
-    [Event("Console.messageAdded")]
     public sealed class MessageAddedEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     /// <summary>
     /// 
     /// </summary>
-    [Event("LayerTree.layerPainted")]
     public sealed class LayerPaintedEvent : IEvent
     {
     

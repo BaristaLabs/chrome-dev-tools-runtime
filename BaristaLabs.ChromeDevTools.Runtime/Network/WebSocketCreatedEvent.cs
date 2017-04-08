@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Fired upon WebSocket creation.
     /// </summary>
-    [Event("Network.webSocketCreated")]
     public sealed class WebSocketCreatedEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// Issued when exception was thrown and unhandled.
     /// </summary>
-    [Event("Runtime.exceptionThrown")]
     public sealed class ExceptionThrownEvent : IEvent
     {
     

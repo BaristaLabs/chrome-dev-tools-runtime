@@ -108,11 +108,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime
                 typeof(TEvent),
                 (type) =>
                 {
-                    var eventInfoAttribute = typeof(TEvent).GetTypeInfo().GetCustomAttribute<EventAttribute>();
-                    if (eventInfoAttribute == null)
-                        throw new InvalidOperationException("Expected a class that implements IEvent to contain an EventInfoAttribute");
+                    if (!EventTypeMap.TryGetMethodNameForType<TEvent>(out string methodName))
+                        throw new InvalidOperationException($"Type {typeof(TEvent)} does not correspond to a known event type.");
 
-                    return eventInfoAttribute.EventName;
+                    return methodName;
                 });
             
             var callbackWrapper = new Action<object>(obj => eventCallback((TEvent)obj));
@@ -137,14 +136,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime
 
         private void RaiseEvent(string methodName, JToken eventData)
         {
-            //if (m_eventHandlers.TryGetValue(methodName, out ConcurrentBag<Action<Object>> bag))
-            //{
-            //    var typedEventData = eventData.ToObject(typeof(foo));
-            //    foreach (var callback in bag)
-            //    {
-            //        callback(typedEventData);
-            //    }
-            //}
+            if (m_eventHandlers.TryGetValue(methodName, out ConcurrentBag<Action<Object>> bag))
+            {
+                if (!EventTypeMap.TryGetTypeForMethodName(methodName, out Type eventType))
+                    throw new InvalidOperationException($"Unknown {methodName} does not correspond to a known event type.");
+
+                var typedEventData = eventData.ToObject(eventType);
+                foreach (var callback in bag)
+                {
+                    callback(typedEventData);
+                }
+            }
         }
 
         #region EventHandlers

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
     /// <summary>
     /// 
     /// </summary>
-    [Event("DOMStorage.domStorageItemRemoved")]
     public sealed class DomStorageItemRemovedEvent : IEvent
     {
     

@@ -32,22 +32,33 @@
                     Url = "http://www.winamp.com"
                 }, CancellationToken.None).GetAwaiter().GetResult();
 
-                //Subscribe to the eval command
+                long executionContextId = -1;
+
+                //Subscribe to the eval command and determine the execution context id to use which
+                //correlates to the page we navigated to.
                 session.Subscribe<Runtime.ExecutionContextCreatedEvent>((e) =>
                 {
-                    
+                    var auxData = e.Context.AuxData as JObject;
+                    var frameId = auxData["frameId"].Value<string>();
+
+                    if (e.Context.Origin == "http://www.winamp.com" && frameId == navigateResult.FrameId)
+                    {
+                        executionContextId = e.Context.Id;
+                    }
                 });
 
-                //Enable the runtime.
+                //Enable the runtime so that execution context events are raised.
                 var result1 = session.SendCommand<Runtime.EnableCommand, Runtime.EnableCommandResponse>(new Runtime.EnableCommand(), CancellationToken.None).GetAwaiter().GetResult();
 
-                //Evaluate
+                //Evaluate a complex answer.
                 var result2 = session.SendCommand<Runtime.EvaluateCommand, Runtime.EvaluateCommandResponse>(new Runtime.EvaluateCommand
                 {
-                    //ContextId = "",
-                    //ObjectGroup = "test123",
+                    ContextId = executionContextId,
+                    ObjectGroup = "test123",
                     Expression = "6*7",
                 }, CancellationToken.None).GetAwaiter().GetResult();
+
+                Console.WriteLine(result2.Result.Description);
             }
         }
 

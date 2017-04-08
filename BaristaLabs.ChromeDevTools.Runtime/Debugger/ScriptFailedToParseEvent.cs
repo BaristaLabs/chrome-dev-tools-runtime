@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Fired when virtual machine fails to parse the script.
     /// </summary>
-    [Event("Debugger.scriptFailedToParse")]
     public sealed class ScriptFailedToParseEvent : IEvent
     {
     

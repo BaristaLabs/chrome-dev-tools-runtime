@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
     /// <summary>
     /// 
     /// </summary>
-    [Event("DOMStorage.domStorageItemUpdated")]
     public sealed class DomStorageItemUpdatedEvent : IEvent
     {
     

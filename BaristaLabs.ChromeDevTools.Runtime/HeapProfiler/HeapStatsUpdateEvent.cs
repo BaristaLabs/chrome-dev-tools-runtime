@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     /// <summary>
     /// If heap objects tracking has been started then backend may send update for one or more fragments
     /// </summary>
-    [Event("HeapProfiler.heapStatsUpdate")]
     public sealed class HeapStatsUpdateEvent : IEvent
     {
     

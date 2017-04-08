@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Fired when a navigation is started if navigation throttles are enabled.  The navigation will be deferred until processNavigation is called.
     /// </summary>
-    [Event("Page.navigationRequested")]
     public sealed class NavigationRequestedEvent : IEvent
     {
     

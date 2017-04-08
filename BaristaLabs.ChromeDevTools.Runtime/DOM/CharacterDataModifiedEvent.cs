@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Mirrors <code>DOMCharacterDataModified</code> event.
     /// </summary>
-    [Event("DOM.characterDataModified")]
     public sealed class CharacterDataModifiedEvent : IEvent
     {
     

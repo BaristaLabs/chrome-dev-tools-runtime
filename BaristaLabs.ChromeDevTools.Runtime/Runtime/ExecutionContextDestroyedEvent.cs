@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// Issued when execution context is destroyed.
     /// </summary>
-    [Event("Runtime.executionContextDestroyed")]
     public sealed class ExecutionContextDestroyedEvent : IEvent
     {
     

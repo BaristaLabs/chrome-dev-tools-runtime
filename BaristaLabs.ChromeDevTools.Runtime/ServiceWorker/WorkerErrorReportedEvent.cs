@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     /// <summary>
     /// 
     /// </summary>
-    [Event("ServiceWorker.workerErrorReported")]
     public sealed class WorkerErrorReportedEvent : IEvent
     {
     

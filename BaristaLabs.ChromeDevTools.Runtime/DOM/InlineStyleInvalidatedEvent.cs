@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Fired when <code>Element</code>'s inline style is modified via a CSS property modification.
     /// </summary>
-    [Event("DOM.inlineStyleInvalidated")]
     public sealed class InlineStyleInvalidatedEvent : IEvent
     {
     

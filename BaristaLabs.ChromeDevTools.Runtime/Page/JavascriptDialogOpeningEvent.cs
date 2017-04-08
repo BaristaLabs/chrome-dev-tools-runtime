@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Fired when a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload) is about to open.
     /// </summary>
-    [Event("Page.javascriptDialogOpening")]
     public sealed class JavascriptDialogOpeningEvent : IEvent
     {
     

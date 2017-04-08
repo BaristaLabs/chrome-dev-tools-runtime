@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Fired when frame has been attached to its parent.
     /// </summary>
-    [Event("Page.frameAttached")]
     public sealed class FrameAttachedEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
     /// <summary>
     /// 
     /// </summary>
-    [Event("ApplicationCache.applicationCacheStatusUpdated")]
     public sealed class ApplicationCacheStatusUpdatedEvent : IEvent
     {
     

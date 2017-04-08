@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     /// <summary>
     /// 
     /// </summary>
-    [Event("ServiceWorker.workerRegistrationUpdated")]
     public sealed class WorkerRegistrationUpdatedEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     /// <summary>
     /// 
     /// </summary>
-    [Event("HeapProfiler.reportHeapSnapshotProgress")]
     public sealed class ReportHeapSnapshotProgressEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Fired when frame no longer has a scheduled navigation.
     /// </summary>
-    [Event("Page.frameClearedScheduledNavigation")]
     public sealed class FrameClearedScheduledNavigationEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Fired when frame has stopped loading.
     /// </summary>
-    [Event("Page.frameStoppedLoading")]
     public sealed class FrameStoppedLoadingEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
     /// <summary>
     /// The security state of the page changed.
     /// </summary>
-    [Event("Security.securityStateChanged")]
     public sealed class SecurityStateChangedEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Fired when HTTP request has failed to load.
     /// </summary>
-    [Event("Network.loadingFailed")]
     public sealed class LoadingFailedEvent : IEvent
     {
     

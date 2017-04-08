@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Called when shadow root is pushed into the element.
     /// </summary>
-    [Event("DOM.shadowRootPushed")]
     public sealed class ShadowRootPushedEvent : IEvent
     {
     

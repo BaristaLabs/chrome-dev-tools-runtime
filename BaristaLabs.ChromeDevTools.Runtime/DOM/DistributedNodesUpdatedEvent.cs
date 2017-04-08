@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Called when distrubution is changed.
     /// </summary>
-    [Event("DOM.distributedNodesUpdated")]
     public sealed class DistributedNodesUpdatedEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Mirrors <code>DOMNodeRemoved</code> event.
     /// </summary>
-    [Event("DOM.childNodeRemoved")]
     public sealed class ChildNodeRemovedEvent : IEvent
     {
     

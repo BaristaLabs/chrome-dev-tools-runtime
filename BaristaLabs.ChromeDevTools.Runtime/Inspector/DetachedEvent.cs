@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Inspector
     /// <summary>
     /// Fired when remote debugging connection is about to be terminated. Contains detach reason.
     /// </summary>
-    [Event("Inspector.detached")]
     public sealed class DetachedEvent : IEvent
     {
     

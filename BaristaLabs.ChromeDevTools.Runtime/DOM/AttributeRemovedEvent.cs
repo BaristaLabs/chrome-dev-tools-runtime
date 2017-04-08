@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Fired when <code>Element</code>'s attribute is removed.
     /// </summary>
-    [Event("DOM.attributeRemoved")]
     public sealed class AttributeRemovedEvent : IEvent
     {
     

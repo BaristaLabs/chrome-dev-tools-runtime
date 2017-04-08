@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// Issued when unhandled exception was revoked.
     /// </summary>
-    [Event("Runtime.exceptionRevoked")]
     public sealed class ExceptionRevokedEvent : IEvent
     {
     

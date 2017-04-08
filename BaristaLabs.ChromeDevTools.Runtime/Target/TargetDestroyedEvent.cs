@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Issued when a target is destroyed.
     /// </summary>
-    [Event("Target.targetDestroyed")]
     public sealed class TargetDestroyedEvent : IEvent
     {
     

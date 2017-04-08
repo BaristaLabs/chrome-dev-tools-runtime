@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Called when a pseudo element is removed from an element.
     /// </summary>
-    [Event("DOM.pseudoElementRemoved")]
     public sealed class PseudoElementRemovedEvent : IEvent
     {
     

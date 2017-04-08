@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// <summary>
     /// Event for animation that has been started.
     /// </summary>
-    [Event("Animation.animationStarted")]
     public sealed class AnimationStartedEvent : IEvent
     {
     

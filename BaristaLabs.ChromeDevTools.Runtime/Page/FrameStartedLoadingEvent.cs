@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Fired when frame has started loading.
     /// </summary>
-    [Event("Page.frameStartedLoading")]
     public sealed class FrameStartedLoadingEvent : IEvent
     {
     

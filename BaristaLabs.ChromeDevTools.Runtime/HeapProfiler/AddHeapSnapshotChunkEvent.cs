@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     /// <summary>
     /// 
     /// </summary>
-    [Event("HeapProfiler.addHeapSnapshotChunk")]
     public sealed class AddHeapSnapshotChunkEvent : IEvent
     {
     

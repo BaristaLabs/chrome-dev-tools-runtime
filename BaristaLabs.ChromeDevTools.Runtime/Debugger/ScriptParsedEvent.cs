@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Fired when virtual machine parses script. This event is also fired for all known and uncollected scripts upon enabling debugger.
     /// </summary>
-    [Event("Debugger.scriptParsed")]
     public sealed class ScriptParsedEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Fired whenever a stylesheet is changed as a result of the client operation.
     /// </summary>
-    [Event("CSS.styleSheetChanged")]
     public sealed class StyleSheetChangedEvent : IEvent
     {
     

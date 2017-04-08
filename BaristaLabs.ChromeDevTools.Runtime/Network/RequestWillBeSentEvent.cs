@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Fired when page is about to send HTTP request.
     /// </summary>
-    [Event("Network.requestWillBeSent")]
     public sealed class RequestWillBeSentEvent : IEvent
     {
     

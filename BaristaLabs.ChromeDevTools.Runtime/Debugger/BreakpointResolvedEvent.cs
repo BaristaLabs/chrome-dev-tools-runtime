@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Fired when breakpoint is resolved to an actual script and location.
     /// </summary>
-    [Event("Debugger.breakpointResolved")]
     public sealed class BreakpointResolvedEvent : IEvent
     {
     

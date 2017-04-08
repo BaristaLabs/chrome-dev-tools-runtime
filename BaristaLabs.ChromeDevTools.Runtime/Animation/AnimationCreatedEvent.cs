@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// <summary>
     /// Event for each animation that has been created.
     /// </summary>
-    [Event("Animation.animationCreated")]
     public sealed class AnimationCreatedEvent : IEvent
     {
     

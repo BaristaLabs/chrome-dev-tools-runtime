@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// <summary>
     /// Event for when an animation has been cancelled.
     /// </summary>
-    [Event("Animation.animationCanceled")]
     public sealed class AnimationCanceledEvent : IEvent
     {
     

@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Fired when <code>Container</code>'s child node count has changed.
     /// </summary>
-    [Event("DOM.childNodeCountUpdated")]
     public sealed class ChildNodeCountUpdatedEvent : IEvent
     {
     

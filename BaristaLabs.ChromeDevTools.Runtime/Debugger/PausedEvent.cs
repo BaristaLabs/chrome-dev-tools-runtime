@@ -3,7 +3,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Fired when the virtual machine stopped on breakpoint or exception or any other stop criteria.
     /// </summary>
-    [Event("Debugger.paused")]
     public sealed class PausedEvent : IEvent
     {
     
