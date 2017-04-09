@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Returns present frame / resource tree structure.
     /// </summary>
-    public sealed class GetResourceTreeCommand : ICommand<GetResourceTreeCommandResponse>
+    public sealed class GetResourceTreeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.getResourceTree";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class GetResourceTreeCommandResponse : ICommandResponse
+    public sealed class GetResourceTreeCommandResponse : ICommandResponse<GetResourceTreeCommand>
     {
     
         

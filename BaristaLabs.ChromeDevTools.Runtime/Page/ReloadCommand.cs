@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Reloads given page optionally ignoring the cache.
     /// </summary>
-    public sealed class ReloadCommand : ICommand<ReloadCommandResponse>
+    public sealed class ReloadCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.reload";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class ReloadCommandResponse : ICommandResponse
+    public sealed class ReloadCommandResponse : ICommandResponse<ReloadCommand>
     {
     
     }

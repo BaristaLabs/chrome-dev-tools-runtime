@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     /// <summary>
     /// 
     /// </summary>
-    public sealed class UnregisterCommand : ICommand<UnregisterCommandResponse>
+    public sealed class UnregisterCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "ServiceWorker.unregister";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     
     }
 
-    public sealed class UnregisterCommandResponse : ICommandResponse
+    public sealed class UnregisterCommandResponse : ICommandResponse<UnregisterCommand>
     {
     
     }

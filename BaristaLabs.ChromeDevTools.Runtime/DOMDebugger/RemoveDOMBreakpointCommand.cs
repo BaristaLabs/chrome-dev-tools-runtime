@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     /// <summary>
     /// Removes DOM breakpoint that was set using <code>setDOMBreakpoint</code>.
     /// </summary>
-    public sealed class RemoveDOMBreakpointCommand : ICommand<RemoveDOMBreakpointCommandResponse>
+    public sealed class RemoveDOMBreakpointCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOMDebugger.removeDOMBreakpoint";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     
     }
 
-    public sealed class RemoveDOMBreakpointCommandResponse : ICommandResponse
+    public sealed class RemoveDOMBreakpointCommandResponse : ICommandResponse<RemoveDOMBreakpointCommand>
     {
     
     }

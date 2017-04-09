@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Creates a new empty BrowserContext. Similar to an incognito profile but you can have more than one.
     /// </summary>
-    public sealed class CreateBrowserContextCommand : ICommand<CreateBrowserContextCommandResponse>
+    public sealed class CreateBrowserContextCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Target.createBrowserContext";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     
     }
 
-    public sealed class CreateBrowserContextCommandResponse : ICommandResponse
+    public sealed class CreateBrowserContextCommandResponse : ICommandResponse<CreateBrowserContextCommand>
     {
     
         

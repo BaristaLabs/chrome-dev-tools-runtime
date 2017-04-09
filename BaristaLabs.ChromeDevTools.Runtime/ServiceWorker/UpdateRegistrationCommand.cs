@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     /// <summary>
     /// 
     /// </summary>
-    public sealed class UpdateRegistrationCommand : ICommand<UpdateRegistrationCommandResponse>
+    public sealed class UpdateRegistrationCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "ServiceWorker.updateRegistration";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     
     }
 
-    public sealed class UpdateRegistrationCommandResponse : ICommandResponse
+    public sealed class UpdateRegistrationCommandResponse : ICommandResponse<UpdateRegistrationCommand>
     {
     
     }

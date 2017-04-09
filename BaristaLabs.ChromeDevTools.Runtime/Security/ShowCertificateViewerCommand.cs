@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
     /// <summary>
     /// Displays native dialog with the certificate details.
     /// </summary>
-    public sealed class ShowCertificateViewerCommand : ICommand<ShowCertificateViewerCommandResponse>
+    public sealed class ShowCertificateViewerCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Security.showCertificateViewer";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
     
     }
 
-    public sealed class ShowCertificateViewerCommandResponse : ICommandResponse
+    public sealed class ShowCertificateViewerCommandResponse : ICommandResponse<ShowCertificateViewerCommand>
     {
     
     }

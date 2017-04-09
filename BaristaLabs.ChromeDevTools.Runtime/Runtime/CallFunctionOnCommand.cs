@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// Calls function with given declaration on the given object. Object group of the result is inherited from the target object.
     /// </summary>
-    public sealed class CallFunctionOnCommand : ICommand<CallFunctionOnCommandResponse>
+    public sealed class CallFunctionOnCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Runtime.callFunctionOn";
         
@@ -114,7 +114,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     
     }
 
-    public sealed class CallFunctionOnCommandResponse : ICommandResponse
+    public sealed class CallFunctionOnCommandResponse : ICommandResponse<CallFunctionOnCommand>
     {
     
         

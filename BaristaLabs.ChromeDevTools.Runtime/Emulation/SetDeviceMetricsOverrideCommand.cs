@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     /// <summary>
     /// Overrides the values of device screen dimensions (window.screen.width, window.screen.height, window.innerWidth, window.innerHeight, and "device-width"/"device-height"-related CSS media query results).
     /// </summary>
-    public sealed class SetDeviceMetricsOverrideCommand : ICommand<SetDeviceMetricsOverrideCommandResponse>
+    public sealed class SetDeviceMetricsOverrideCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Emulation.setDeviceMetricsOverride";
         
@@ -174,7 +174,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     
     }
 
-    public sealed class SetDeviceMetricsOverrideCommandResponse : ICommandResponse
+    public sealed class SetDeviceMetricsOverrideCommandResponse : ICommandResponse<SetDeviceMetricsOverrideCommand>
     {
     
     }

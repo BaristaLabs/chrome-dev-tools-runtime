@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     /// <summary>
     /// Removes breakpoint from XMLHttpRequest.
     /// </summary>
-    public sealed class RemoveXHRBreakpointCommand : ICommand<RemoveXHRBreakpointCommandResponse>
+    public sealed class RemoveXHRBreakpointCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOMDebugger.removeXHRBreakpoint";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     
     }
 
-    public sealed class RemoveXHRBreakpointCommandResponse : ICommandResponse
+    public sealed class RemoveXHRBreakpointCommandResponse : ICommandResponse<RemoveXHRBreakpointCommand>
     {
     
     }

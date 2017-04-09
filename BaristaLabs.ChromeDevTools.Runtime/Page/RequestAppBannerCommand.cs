@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// 
     /// </summary>
-    public sealed class RequestAppBannerCommand : ICommand<RequestAppBannerCommandResponse>
+    public sealed class RequestAppBannerCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.requestAppBanner";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class RequestAppBannerCommandResponse : ICommandResponse
+    public sealed class RequestAppBannerCommandResponse : ICommandResponse<RequestAppBannerCommand>
     {
     
     }

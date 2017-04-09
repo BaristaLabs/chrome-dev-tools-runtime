@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Enables target discovery for the specified locations, when <code>setDiscoverTargets</code> was set to <code>true</code>.
     /// </summary>
-    public sealed class SetRemoteLocationsCommand : ICommand<SetRemoteLocationsCommandResponse>
+    public sealed class SetRemoteLocationsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Target.setRemoteLocations";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     
     }
 
-    public sealed class SetRemoteLocationsCommandResponse : ICommandResponse
+    public sealed class SetRemoteLocationsCommandResponse : ICommandResponse<SetRemoteLocationsCommand>
     {
     
     }

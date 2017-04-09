@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Configures overlay.
     /// </summary>
-    public sealed class ConfigureOverlayCommand : ICommand<ConfigureOverlayCommandResponse>
+    public sealed class ConfigureOverlayCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.configureOverlay";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class ConfigureOverlayCommandResponse : ICommandResponse
+    public sealed class ConfigureOverlayCommandResponse : ICommandResponse<ConfigureOverlayCommand>
     {
     
     }

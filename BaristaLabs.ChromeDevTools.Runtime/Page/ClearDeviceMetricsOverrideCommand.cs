@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Clears the overriden device metrics.
     /// </summary>
-    public sealed class ClearDeviceMetricsOverrideCommand : ICommand<ClearDeviceMetricsOverrideCommandResponse>
+    public sealed class ClearDeviceMetricsOverrideCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.clearDeviceMetricsOverride";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class ClearDeviceMetricsOverrideCommandResponse : ICommandResponse
+    public sealed class ClearDeviceMetricsOverrideCommandResponse : ICommandResponse<ClearDeviceMetricsOverrideCommand>
     {
     
     }

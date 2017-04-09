@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Disables debugger for given page.
     /// </summary>
-    public sealed class DisableCommand : ICommand<DisableCommandResponse>
+    public sealed class DisableCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.disable";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class DisableCommandResponse : ICommandResponse
+    public sealed class DisableCommandResponse : ICommandResponse<DisableCommand>
     {
     
     }

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Sets given markup as the document's HTML.
     /// </summary>
-    public sealed class SetDocumentContentCommand : ICommand<SetDocumentContentCommandResponse>
+    public sealed class SetDocumentContentCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.setDocumentContent";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class SetDocumentContentCommandResponse : ICommandResponse
+    public sealed class SetDocumentContentCommandResponse : ICommandResponse<SetDocumentContentCommand>
     {
     
     }

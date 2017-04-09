@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     /// <summary>
     /// Releases layer snapshot captured by the back-end.
     /// </summary>
-    public sealed class ReleaseSnapshotCommand : ICommand<ReleaseSnapshotCommandResponse>
+    public sealed class ReleaseSnapshotCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "LayerTree.releaseSnapshot";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     
     }
 
-    public sealed class ReleaseSnapshotCommandResponse : ICommandResponse
+    public sealed class ReleaseSnapshotCommandResponse : ICommandResponse<ReleaseSnapshotCommand>
     {
     
     }

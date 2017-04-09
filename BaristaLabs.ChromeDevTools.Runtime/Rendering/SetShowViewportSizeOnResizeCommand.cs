@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
     /// <summary>
     /// Paints viewport size upon main frame resize.
     /// </summary>
-    public sealed class SetShowViewportSizeOnResizeCommand : ICommand<SetShowViewportSizeOnResizeCommandResponse>
+    public sealed class SetShowViewportSizeOnResizeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Rendering.setShowViewportSizeOnResize";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
     
     }
 
-    public sealed class SetShowViewportSizeOnResizeCommandResponse : ICommandResponse
+    public sealed class SetShowViewportSizeOnResizeCommandResponse : ICommandResponse<SetShowViewportSizeOnResizeCommand>
     {
     
     }

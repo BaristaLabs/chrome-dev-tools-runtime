@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     /// <summary>
     /// Removes breakpoint on particular native event.
     /// </summary>
-    public sealed class RemoveInstrumentationBreakpointCommand : ICommand<RemoveInstrumentationBreakpointCommandResponse>
+    public sealed class RemoveInstrumentationBreakpointCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOMDebugger.removeInstrumentationBreakpoint";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     
     }
 
-    public sealed class RemoveInstrumentationBreakpointCommandResponse : ICommandResponse
+    public sealed class RemoveInstrumentationBreakpointCommandResponse : ICommandResponse<RemoveInstrumentationBreakpointCommand>
     {
     
     }

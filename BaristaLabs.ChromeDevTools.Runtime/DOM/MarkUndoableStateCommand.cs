@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Marks last undoable state.
     /// </summary>
-    public sealed class MarkUndoableStateCommand : ICommand<MarkUndoableStateCommandResponse>
+    public sealed class MarkUndoableStateCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.markUndoableState";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class MarkUndoableStateCommandResponse : ICommandResponse
+    public sealed class MarkUndoableStateCommandResponse : ICommandResponse<MarkUndoableStateCommand>
     {
     
     }

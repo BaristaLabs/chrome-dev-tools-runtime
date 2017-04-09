@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Enables page domain notifications.
     /// </summary>
-    public sealed class EnableCommand : ICommand<EnableCommandResponse>
+    public sealed class EnableCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.enable";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class EnableCommandResponse : ICommandResponse
+    public sealed class EnableCommandResponse : ICommandResponse<EnableCommand>
     {
     
     }

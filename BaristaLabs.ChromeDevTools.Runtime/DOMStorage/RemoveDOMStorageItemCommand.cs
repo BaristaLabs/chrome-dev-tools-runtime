@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
     /// <summary>
     /// 
     /// </summary>
-    public sealed class RemoveDOMStorageItemCommand : ICommand<RemoveDOMStorageItemCommandResponse>
+    public sealed class RemoveDOMStorageItemCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOMStorage.removeDOMStorageItem";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
     
     }
 
-    public sealed class RemoveDOMStorageItemCommandResponse : ICommandResponse
+    public sealed class RemoveDOMStorageItemCommandResponse : ICommandResponse<RemoveDOMStorageItemCommand>
     {
     
     }

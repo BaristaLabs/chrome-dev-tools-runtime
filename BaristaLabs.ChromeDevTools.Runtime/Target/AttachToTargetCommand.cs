@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Attaches to the target with given id.
     /// </summary>
-    public sealed class AttachToTargetCommand : ICommand<AttachToTargetCommandResponse>
+    public sealed class AttachToTargetCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Target.attachToTarget";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     
     }
 
-    public sealed class AttachToTargetCommandResponse : ICommandResponse
+    public sealed class AttachToTargetCommandResponse : ICommandResponse<AttachToTargetCommand>
     {
     
         

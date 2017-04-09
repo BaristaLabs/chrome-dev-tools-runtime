@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     /// <summary>
     /// Sets a specified page scale factor.
     /// </summary>
-    public sealed class SetPageScaleFactorCommand : ICommand<SetPageScaleFactorCommandResponse>
+    public sealed class SetPageScaleFactorCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Emulation.setPageScaleFactor";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     
     }
 
-    public sealed class SetPageScaleFactorCommandResponse : ICommandResponse
+    public sealed class SetPageScaleFactorCommandResponse : ICommandResponse<SetPageScaleFactorCommand>
     {
     
     }

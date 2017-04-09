@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Executes <code>querySelectorAll</code> on a given node.
     /// </summary>
-    public sealed class QuerySelectorAllCommand : ICommand<QuerySelectorAllCommandResponse>
+    public sealed class QuerySelectorAllCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.querySelectorAll";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class QuerySelectorAllCommandResponse : ICommandResponse
+    public sealed class QuerySelectorAllCommandResponse : ICommandResponse<QuerySelectorAllCommand>
     {
     
         

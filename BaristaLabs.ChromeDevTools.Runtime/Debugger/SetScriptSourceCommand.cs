@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Edits JavaScript source live.
     /// </summary>
-    public sealed class SetScriptSourceCommand : ICommand<SetScriptSourceCommandResponse>
+    public sealed class SetScriptSourceCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.setScriptSource";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class SetScriptSourceCommandResponse : ICommandResponse
+    public sealed class SetScriptSourceCommandResponse : ICommandResponse<SetScriptSourceCommand>
     {
     
         

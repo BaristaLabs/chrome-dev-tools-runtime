@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Discards search results from the session with the given id. <code>getSearchResults</code> should no longer be called for that search.
     /// </summary>
-    public sealed class DiscardSearchResultsCommand : ICommand<DiscardSearchResultsCommandResponse>
+    public sealed class DiscardSearchResultsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.discardSearchResults";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class DiscardSearchResultsCommandResponse : ICommandResponse
+    public sealed class DiscardSearchResultsCommandResponse : ICommandResponse<DiscardSearchResultsCommand>
     {
     
     }

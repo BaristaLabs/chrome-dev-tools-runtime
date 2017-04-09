@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Deletes a BrowserContext, will fail of any open page uses it.
     /// </summary>
-    public sealed class DisposeBrowserContextCommand : ICommand<DisposeBrowserContextCommandResponse>
+    public sealed class DisposeBrowserContextCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Target.disposeBrowserContext";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     
     }
 
-    public sealed class DisposeBrowserContextCommandResponse : ICommandResponse
+    public sealed class DisposeBrowserContextCommandResponse : ICommandResponse<DisposeBrowserContextCommand>
     {
     
         

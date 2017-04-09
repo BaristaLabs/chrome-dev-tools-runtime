@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Returns requested styles for a DOM node identified by <code>nodeId</code>.
     /// </summary>
-    public sealed class GetMatchedStylesForNodeCommand : ICommand<GetMatchedStylesForNodeCommandResponse>
+    public sealed class GetMatchedStylesForNodeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.getMatchedStylesForNode";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class GetMatchedStylesForNodeCommandResponse : ICommandResponse
+    public sealed class GetMatchedStylesForNodeCommandResponse : ICommandResponse<GetMatchedStylesForNodeCommand>
     {
     
         

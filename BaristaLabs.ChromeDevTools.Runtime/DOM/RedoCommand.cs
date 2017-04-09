@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Re-does the last undone action.
     /// </summary>
-    public sealed class RedoCommand : ICommand<RedoCommandResponse>
+    public sealed class RedoCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.redo";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class RedoCommandResponse : ICommandResponse
+    public sealed class RedoCommandResponse : ICommandResponse<RedoCommand>
     {
     
     }

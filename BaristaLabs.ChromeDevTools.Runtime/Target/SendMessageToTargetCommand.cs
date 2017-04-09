@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Sends protocol message to the target with given id.
     /// </summary>
-    public sealed class SendMessageToTargetCommand : ICommand<SendMessageToTargetCommandResponse>
+    public sealed class SendMessageToTargetCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Target.sendMessageToTarget";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     
     }
 
-    public sealed class SendMessageToTargetCommandResponse : ICommandResponse
+    public sealed class SendMessageToTargetCommandResponse : ICommandResponse<SendMessageToTargetCommand>
     {
     
     }

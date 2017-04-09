@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
     /// <summary>
     /// Requests that backend shows the FPS counter
     /// </summary>
-    public sealed class SetShowFPSCounterCommand : ICommand<SetShowFPSCounterCommandResponse>
+    public sealed class SetShowFPSCounterCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Rendering.setShowFPSCounter";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
     
     }
 
-    public sealed class SetShowFPSCounterCommandResponse : ICommandResponse
+    public sealed class SetShowFPSCounterCommandResponse : ICommandResponse<SetShowFPSCounterCommand>
     {
     
     }

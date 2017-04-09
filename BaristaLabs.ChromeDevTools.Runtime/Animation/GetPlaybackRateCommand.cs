@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// <summary>
     /// Gets the playback rate of the document timeline.
     /// </summary>
-    public sealed class GetPlaybackRateCommand : ICommand<GetPlaybackRateCommandResponse>
+    public sealed class GetPlaybackRateCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Animation.getPlaybackRate";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     
     }
 
-    public sealed class GetPlaybackRateCommandResponse : ICommandResponse
+    public sealed class GetPlaybackRateCommandResponse : ICommandResponse<GetPlaybackRateCommand>
     {
     
         

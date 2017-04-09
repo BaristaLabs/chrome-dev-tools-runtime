@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// <summary>
     /// Seek a set of animations to a particular time within each animation.
     /// </summary>
-    public sealed class SeekAnimationsCommand : ICommand<SeekAnimationsCommandResponse>
+    public sealed class SeekAnimationsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Animation.seekAnimations";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     
     }
 
-    public sealed class SeekAnimationsCommandResponse : ICommandResponse
+    public sealed class SeekAnimationsCommandResponse : ICommandResponse<SeekAnimationsCommand>
     {
     
     }

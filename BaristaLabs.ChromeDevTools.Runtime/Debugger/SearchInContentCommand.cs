@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Searches for given string in script content.
     /// </summary>
-    public sealed class SearchInContentCommand : ICommand<SearchInContentCommandResponse>
+    public sealed class SearchInContentCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.searchInContent";
         
@@ -66,7 +66,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class SearchInContentCommandResponse : ICommandResponse
+    public sealed class SearchInContentCommandResponse : ICommandResponse<SearchInContentCommand>
     {
     
         

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Sets the new stylesheet text.
     /// </summary>
-    public sealed class SetStyleSheetTextCommand : ICommand<SetStyleSheetTextCommandResponse>
+    public sealed class SetStyleSheetTextCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.setStyleSheetText";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class SetStyleSheetTextCommandResponse : ICommandResponse
+    public sealed class SetStyleSheetTextCommandResponse : ICommandResponse<SetStyleSheetTextCommand>
     {
     
         

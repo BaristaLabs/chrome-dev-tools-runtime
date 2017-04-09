@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Creates a deep copy of the specified node and places it into the target container before the given anchor.
     /// </summary>
-    public sealed class CopyToCommand : ICommand<CopyToCommandResponse>
+    public sealed class CopyToCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.copyTo";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class CopyToCommandResponse : ICommandResponse
+    public sealed class CopyToCommandResponse : ICommandResponse<CopyToCommand>
     {
     
         

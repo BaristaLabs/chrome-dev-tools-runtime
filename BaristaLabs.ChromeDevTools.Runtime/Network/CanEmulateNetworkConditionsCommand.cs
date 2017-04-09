@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Tells whether emulation of network conditions is supported.
     /// </summary>
-    public sealed class CanEmulateNetworkConditionsCommand : ICommand<CanEmulateNetworkConditionsCommandResponse>
+    public sealed class CanEmulateNetworkConditionsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.canEmulateNetworkConditions";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class CanEmulateNetworkConditionsCommandResponse : ICommandResponse
+    public sealed class CanEmulateNetworkConditionsCommandResponse : ICommandResponse<CanEmulateNetworkConditionsCommand>
     {
     
         

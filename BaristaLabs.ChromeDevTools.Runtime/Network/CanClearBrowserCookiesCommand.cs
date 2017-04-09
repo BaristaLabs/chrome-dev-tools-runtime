@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Tells whether clearing browser cookies is supported.
     /// </summary>
-    public sealed class CanClearBrowserCookiesCommand : ICommand<CanClearBrowserCookiesCommandResponse>
+    public sealed class CanClearBrowserCookiesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.canClearBrowserCookies";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class CanClearBrowserCookiesCommandResponse : ICommandResponse
+    public sealed class CanClearBrowserCookiesCommandResponse : ICommandResponse<CanClearBrowserCookiesCommand>
     {
     
         

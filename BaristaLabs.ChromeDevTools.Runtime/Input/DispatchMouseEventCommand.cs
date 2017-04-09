@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     /// <summary>
     /// Dispatches a mouse event to the page.
     /// </summary>
-    public sealed class DispatchMouseEventCommand : ICommand<DispatchMouseEventCommandResponse>
+    public sealed class DispatchMouseEventCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Input.dispatchMouseEvent";
         
@@ -102,7 +102,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     
     }
 
-    public sealed class DispatchMouseEventCommandResponse : ICommandResponse
+    public sealed class DispatchMouseEventCommandResponse : ICommandResponse<DispatchMouseEventCommand>
     {
     
     }

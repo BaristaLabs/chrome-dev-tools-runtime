@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Sets JavaScript breakpoint at a given location.
     /// </summary>
-    public sealed class SetBreakpointCommand : ICommand<SetBreakpointCommandResponse>
+    public sealed class SetBreakpointCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.setBreakpoint";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class SetBreakpointCommandResponse : ICommandResponse
+    public sealed class SetBreakpointCommandResponse : ICommandResponse<SetBreakpointCommand>
     {
     
         

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
     /// <summary>
     /// Returns array of frame identifiers with manifest urls for each frame containing a document associated with some application cache.
     /// </summary>
-    public sealed class GetFramesWithManifestsCommand : ICommand<GetFramesWithManifestsCommandResponse>
+    public sealed class GetFramesWithManifestsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "ApplicationCache.getFramesWithManifests";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
     
     }
 
-    public sealed class GetFramesWithManifestsCommandResponse : ICommandResponse
+    public sealed class GetFramesWithManifestsCommandResponse : ICommandResponse<GetFramesWithManifestsCommand>
     {
     
         

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// <summary>
     /// Sets the playback rate of the document timeline.
     /// </summary>
-    public sealed class SetPlaybackRateCommand : ICommand<SetPlaybackRateCommandResponse>
+    public sealed class SetPlaybackRateCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Animation.setPlaybackRate";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     
     }
 
-    public sealed class SetPlaybackRateCommandResponse : ICommandResponse
+    public sealed class SetPlaybackRateCommandResponse : ICommandResponse<SetPlaybackRateCommand>
     {
     
     }

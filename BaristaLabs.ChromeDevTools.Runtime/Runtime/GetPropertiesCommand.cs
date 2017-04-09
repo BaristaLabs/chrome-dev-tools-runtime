@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// Returns properties of a given object. Object group of the result is inherited from the target object.
     /// </summary>
-    public sealed class GetPropertiesCommand : ICommand<GetPropertiesCommandResponse>
+    public sealed class GetPropertiesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Runtime.getProperties";
         
@@ -66,7 +66,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     
     }
 
-    public sealed class GetPropertiesCommandResponse : ICommandResponse
+    public sealed class GetPropertiesCommandResponse : ICommandResponse<GetPropertiesCommand>
     {
     
         

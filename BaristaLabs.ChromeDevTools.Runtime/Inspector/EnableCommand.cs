@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Inspector
     /// <summary>
     /// Enables inspector domain notifications.
     /// </summary>
-    public sealed class EnableCommand : ICommand<EnableCommandResponse>
+    public sealed class EnableCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Inspector.enable";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Inspector
     
     }
 
-    public sealed class EnableCommandResponse : ICommandResponse
+    public sealed class EnableCommandResponse : ICommandResponse<EnableCommand>
     {
     
     }

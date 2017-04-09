@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Deletes browser cookie with given name, domain and path.
     /// </summary>
-    public sealed class DeleteCookieCommand : ICommand<DeleteCookieCommandResponse>
+    public sealed class DeleteCookieCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.deleteCookie";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class DeleteCookieCommandResponse : ICommandResponse
+    public sealed class DeleteCookieCommandResponse : ICommandResponse<DeleteCookieCommand>
     {
     
     }

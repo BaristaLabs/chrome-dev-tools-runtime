@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Removes attribute with given name from an element with given id.
     /// </summary>
-    public sealed class RemoveAttributeCommand : ICommand<RemoveAttributeCommandResponse>
+    public sealed class RemoveAttributeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.removeAttribute";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class RemoveAttributeCommandResponse : ICommandResponse
+    public sealed class RemoveAttributeCommandResponse : ICommandResponse<RemoveAttributeCommand>
     {
     
     }

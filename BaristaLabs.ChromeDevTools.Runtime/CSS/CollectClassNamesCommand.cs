@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Returns all class names from specified stylesheet.
     /// </summary>
-    public sealed class CollectClassNamesCommand : ICommand<CollectClassNamesCommandResponse>
+    public sealed class CollectClassNamesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.collectClassNames";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class CollectClassNamesCommandResponse : ICommandResponse
+    public sealed class CollectClassNamesCommandResponse : ICommandResponse<CollectClassNamesCommand>
     {
     
         

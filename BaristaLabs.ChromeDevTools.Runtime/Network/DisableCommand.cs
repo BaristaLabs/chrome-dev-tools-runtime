@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Disables network tracking, prevents network events from being sent to the client.
     /// </summary>
-    public sealed class DisableCommand : ICommand<DisableCommandResponse>
+    public sealed class DisableCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.disable";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class DisableCommandResponse : ICommandResponse
+    public sealed class DisableCommandResponse : ICommandResponse<DisableCommand>
     {
     
     }

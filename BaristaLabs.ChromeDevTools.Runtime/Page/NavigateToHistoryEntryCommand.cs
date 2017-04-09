@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Navigates current page to the given history entry.
     /// </summary>
-    public sealed class NavigateToHistoryEntryCommand : ICommand<NavigateToHistoryEntryCommandResponse>
+    public sealed class NavigateToHistoryEntryCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.navigateToHistoryEntry";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class NavigateToHistoryEntryCommandResponse : ICommandResponse
+    public sealed class NavigateToHistoryEntryCommandResponse : ICommandResponse<NavigateToHistoryEntryCommand>
     {
     
     }

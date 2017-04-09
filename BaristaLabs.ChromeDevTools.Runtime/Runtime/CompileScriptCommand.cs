@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// Compiles expression.
     /// </summary>
-    public sealed class CompileScriptCommand : ICommand<CompileScriptCommandResponse>
+    public sealed class CompileScriptCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Runtime.compileScript";
         
@@ -66,7 +66,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     
     }
 
-    public sealed class CompileScriptCommandResponse : ICommandResponse
+    public sealed class CompileScriptCommandResponse : ICommandResponse<CompileScriptCommand>
     {
     
         

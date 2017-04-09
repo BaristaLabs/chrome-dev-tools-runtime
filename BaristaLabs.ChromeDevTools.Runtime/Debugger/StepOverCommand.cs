@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Steps over the statement.
     /// </summary>
-    public sealed class StepOverCommand : ICommand<StepOverCommandResponse>
+    public sealed class StepOverCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.stepOver";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class StepOverCommandResponse : ICommandResponse
+    public sealed class StepOverCommandResponse : ICommandResponse<StepOverCommand>
     {
     
     }

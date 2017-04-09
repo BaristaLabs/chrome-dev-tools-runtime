@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
     /// <summary>
     /// Deletes a cache.
     /// </summary>
-    public sealed class DeleteCacheCommand : ICommand<DeleteCacheCommandResponse>
+    public sealed class DeleteCacheCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CacheStorage.deleteCache";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
     
     }
 
-    public sealed class DeleteCacheCommandResponse : ICommandResponse
+    public sealed class DeleteCacheCommandResponse : ICommandResponse<DeleteCacheCommand>
     {
     
     }

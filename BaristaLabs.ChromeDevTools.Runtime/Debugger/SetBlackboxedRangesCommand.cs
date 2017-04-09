@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Makes backend skip steps in the script in blackboxed ranges. VM will try leave blacklisted scripts by performing 'step in' several times, finally resorting to 'step out' if unsuccessful. Positions array contains positions where blackbox state is changed. First interval isn't blackboxed. Array should be sorted.
     /// </summary>
-    public sealed class SetBlackboxedRangesCommand : ICommand<SetBlackboxedRangesCommandResponse>
+    public sealed class SetBlackboxedRangesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.setBlackboxedRanges";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class SetBlackboxedRangesCommandResponse : ICommandResponse
+    public sealed class SetBlackboxedRangesCommandResponse : ICommandResponse<SetBlackboxedRangesCommand>
     {
     
     }

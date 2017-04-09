@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     /// <summary>
     /// 
     /// </summary>
-    public sealed class StopCommand : ICommand<StopCommandResponse>
+    public sealed class StopCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Profiler.stop";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     
     }
 
-    public sealed class StopCommandResponse : ICommandResponse
+    public sealed class StopCommandResponse : ICommandResponse<StopCommand>
     {
     
         

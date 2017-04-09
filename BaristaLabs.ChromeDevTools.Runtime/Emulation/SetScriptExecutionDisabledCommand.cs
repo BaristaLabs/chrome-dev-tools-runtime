@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     /// <summary>
     /// Switches script execution in the page.
     /// </summary>
-    public sealed class SetScriptExecutionDisabledCommand : ICommand<SetScriptExecutionDisabledCommandResponse>
+    public sealed class SetScriptExecutionDisabledCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Emulation.setScriptExecutionDisabled";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     
     }
 
-    public sealed class SetScriptExecutionDisabledCommandResponse : ICommandResponse
+    public sealed class SetScriptExecutionDisabledCommandResponse : ICommandResponse<SetScriptExecutionDisabledCommand>
     {
     
     }

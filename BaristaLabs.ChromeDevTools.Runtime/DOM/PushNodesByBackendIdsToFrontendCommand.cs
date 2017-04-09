@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Requests that a batch of nodes is sent to the caller given their backend node ids.
     /// </summary>
-    public sealed class PushNodesByBackendIdsToFrontendCommand : ICommand<PushNodesByBackendIdsToFrontendCommandResponse>
+    public sealed class PushNodesByBackendIdsToFrontendCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.pushNodesByBackendIdsToFrontend";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class PushNodesByBackendIdsToFrontendCommandResponse : ICommandResponse
+    public sealed class PushNodesByBackendIdsToFrontendCommandResponse : ICommandResponse<PushNodesByBackendIdsToFrontendCommand>
     {
     
         

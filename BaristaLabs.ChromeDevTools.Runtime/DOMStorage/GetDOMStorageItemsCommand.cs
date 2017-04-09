@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
     /// <summary>
     /// 
     /// </summary>
-    public sealed class GetDOMStorageItemsCommand : ICommand<GetDOMStorageItemsCommandResponse>
+    public sealed class GetDOMStorageItemsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOMStorage.getDOMStorageItems";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
     
     }
 
-    public sealed class GetDOMStorageItemsCommandResponse : ICommandResponse
+    public sealed class GetDOMStorageItemsCommandResponse : ICommandResponse<GetDOMStorageItemsCommand>
     {
     
         

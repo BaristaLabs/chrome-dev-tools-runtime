@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     /// <summary>
     /// Resizes the frame/viewport of the page. Note that this does not affect the frame's container (e.g. browser window). Can be used to produce screenshots of the specified size. Not supported on Android.
     /// </summary>
-    public sealed class SetVisibleSizeCommand : ICommand<SetVisibleSizeCommandResponse>
+    public sealed class SetVisibleSizeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Emulation.setVisibleSize";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     
     }
 
-    public sealed class SetVisibleSizeCommandResponse : ICommandResponse
+    public sealed class SetVisibleSizeCommandResponse : ICommandResponse<SetVisibleSizeCommand>
     {
     
     }

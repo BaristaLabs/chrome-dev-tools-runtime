@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// Runs script with given id in a given context.
     /// </summary>
-    public sealed class RunScriptCommand : ICommand<RunScriptCommandResponse>
+    public sealed class RunScriptCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Runtime.runScript";
         
@@ -114,7 +114,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     
     }
 
-    public sealed class RunScriptCommandResponse : ICommandResponse
+    public sealed class RunScriptCommandResponse : ICommandResponse<RunScriptCommand>
     {
     
         

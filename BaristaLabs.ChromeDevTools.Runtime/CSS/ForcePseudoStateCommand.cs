@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Ensures that the given node will have specified pseudo-classes whenever its style is computed by the browser.
     /// </summary>
-    public sealed class ForcePseudoStateCommand : ICommand<ForcePseudoStateCommandResponse>
+    public sealed class ForcePseudoStateCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.forcePseudoState";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class ForcePseudoStateCommandResponse : ICommandResponse
+    public sealed class ForcePseudoStateCommandResponse : ICommandResponse<ForcePseudoStateCommand>
     {
     
     }

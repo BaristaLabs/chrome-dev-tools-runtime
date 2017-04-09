@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
     /// <summary>
     /// Returns manifest URL for document in the given frame.
     /// </summary>
-    public sealed class GetManifestForFrameCommand : ICommand<GetManifestForFrameCommandResponse>
+    public sealed class GetManifestForFrameCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "ApplicationCache.getManifestForFrame";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
     
     }
 
-    public sealed class GetManifestForFrameCommandResponse : ICommandResponse
+    public sealed class GetManifestForFrameCommandResponse : ICommandResponse<GetManifestForFrameCommand>
     {
     
         

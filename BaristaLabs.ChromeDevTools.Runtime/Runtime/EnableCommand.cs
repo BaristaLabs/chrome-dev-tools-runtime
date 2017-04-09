@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// Enables reporting of execution contexts creation by means of <code>executionContextCreated</code> event. When the reporting gets enabled the event will be sent immediately for each existing execution context.
     /// </summary>
-    public sealed class EnableCommand : ICommand<EnableCommandResponse>
+    public sealed class EnableCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Runtime.enable";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     
     }
 
-    public sealed class EnableCommandResponse : ICommandResponse
+    public sealed class EnableCommandResponse : ICommandResponse<EnableCommand>
     {
     
     }

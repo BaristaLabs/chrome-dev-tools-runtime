@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
     /// <summary>
     /// Enable/disable suppressing memory pressure notifications in all processes.
     /// </summary>
-    public sealed class SetPressureNotificationsSuppressedCommand : ICommand<SetPressureNotificationsSuppressedCommandResponse>
+    public sealed class SetPressureNotificationsSuppressedCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Memory.setPressureNotificationsSuppressed";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
     
     }
 
-    public sealed class SetPressureNotificationsSuppressedCommandResponse : ICommandResponse
+    public sealed class SetPressureNotificationsSuppressedCommandResponse : ICommandResponse<SetPressureNotificationsSuppressedCommand>
     {
     
     }

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     /// <summary>
     /// 
     /// </summary>
-    public sealed class SkipWaitingCommand : ICommand<SkipWaitingCommandResponse>
+    public sealed class SkipWaitingCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "ServiceWorker.skipWaiting";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     
     }
 
-    public sealed class SkipWaitingCommandResponse : ICommandResponse
+    public sealed class SkipWaitingCommandResponse : ICommandResponse<SkipWaitingCommand>
     {
     
     }

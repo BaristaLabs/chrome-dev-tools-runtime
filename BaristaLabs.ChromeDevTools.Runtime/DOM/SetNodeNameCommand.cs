@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Sets node name for a node with given id.
     /// </summary>
-    public sealed class SetNodeNameCommand : ICommand<SetNodeNameCommandResponse>
+    public sealed class SetNodeNameCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.setNodeName";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class SetNodeNameCommandResponse : ICommandResponse
+    public sealed class SetNodeNameCommandResponse : ICommandResponse<SetNodeNameCommand>
     {
     
         

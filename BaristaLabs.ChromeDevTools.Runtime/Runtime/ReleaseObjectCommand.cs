@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// Releases remote object with given id.
     /// </summary>
-    public sealed class ReleaseObjectCommand : ICommand<ReleaseObjectCommandResponse>
+    public sealed class ReleaseObjectCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Runtime.releaseObject";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     
     }
 
-    public sealed class ReleaseObjectCommandResponse : ICommandResponse
+    public sealed class ReleaseObjectCommandResponse : ICommandResponse<ReleaseObjectCommand>
     {
     
     }

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Requests that children of the node with given id are returned to the caller in form of <code>setChildNodes</code> events where not only immediate children are retrieved, but all children down to the specified depth.
     /// </summary>
-    public sealed class RequestChildNodesCommand : ICommand<RequestChildNodesCommandResponse>
+    public sealed class RequestChildNodesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.requestChildNodes";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class RequestChildNodesCommandResponse : ICommandResponse
+    public sealed class RequestChildNodesCommandResponse : ICommandResponse<RequestChildNodesCommand>
     {
     
     }

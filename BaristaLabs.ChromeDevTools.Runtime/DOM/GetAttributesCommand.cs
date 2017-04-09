@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Returns attributes for the specified node.
     /// </summary>
-    public sealed class GetAttributesCommand : ICommand<GetAttributesCommandResponse>
+    public sealed class GetAttributesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.getAttributes";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class GetAttributesCommandResponse : ICommandResponse
+    public sealed class GetAttributesCommandResponse : ICommandResponse<GetAttributesCommand>
     {
     
         

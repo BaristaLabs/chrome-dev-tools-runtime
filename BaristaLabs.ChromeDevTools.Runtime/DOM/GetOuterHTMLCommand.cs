@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Returns node's HTML markup.
     /// </summary>
-    public sealed class GetOuterHTMLCommand : ICommand<GetOuterHTMLCommandResponse>
+    public sealed class GetOuterHTMLCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.getOuterHTML";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class GetOuterHTMLCommandResponse : ICommandResponse
+    public sealed class GetOuterHTMLCommandResponse : ICommandResponse<GetOuterHTMLCommand>
     {
     
         

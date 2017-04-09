@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Highlights given rectangle. Coordinates are absolute with respect to the main frame viewport.
     /// </summary>
-    public sealed class HighlightRectCommand : ICommand<HighlightRectCommandResponse>
+    public sealed class HighlightRectCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.highlightRect";
         
@@ -90,7 +90,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class HighlightRectCommandResponse : ICommandResponse
+    public sealed class HighlightRectCommandResponse : ICommandResponse<HighlightRectCommand>
     {
     
     }

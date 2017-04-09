@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// Add handler to promise with given promise object id.
     /// </summary>
-    public sealed class AwaitPromiseCommand : ICommand<AwaitPromiseCommandResponse>
+    public sealed class AwaitPromiseCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Runtime.awaitPromise";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     
     }
 
-    public sealed class AwaitPromiseCommandResponse : ICommandResponse
+    public sealed class AwaitPromiseCommandResponse : ICommandResponse<AwaitPromiseCommand>
     {
     
         

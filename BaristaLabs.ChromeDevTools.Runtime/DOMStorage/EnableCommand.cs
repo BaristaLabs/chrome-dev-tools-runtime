@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
     /// <summary>
     /// Enables storage tracking, storage events will now be delivered to the client.
     /// </summary>
-    public sealed class EnableCommand : ICommand<EnableCommandResponse>
+    public sealed class EnableCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOMStorage.enable";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
     
     }
 
-    public sealed class EnableCommandResponse : ICommandResponse
+    public sealed class EnableCommandResponse : ICommandResponse<EnableCommand>
     {
     
     }

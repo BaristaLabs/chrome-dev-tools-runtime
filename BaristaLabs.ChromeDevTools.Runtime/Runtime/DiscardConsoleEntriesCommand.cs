@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// Discards collected exceptions and console API calls.
     /// </summary>
-    public sealed class DiscardConsoleEntriesCommand : ICommand<DiscardConsoleEntriesCommandResponse>
+    public sealed class DiscardConsoleEntriesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Runtime.discardConsoleEntries";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     
     }
 
-    public sealed class DiscardConsoleEntriesCommandResponse : ICommandResponse
+    public sealed class DiscardConsoleEntriesCommandResponse : ICommandResponse<DiscardConsoleEntriesCommand>
     {
     
     }

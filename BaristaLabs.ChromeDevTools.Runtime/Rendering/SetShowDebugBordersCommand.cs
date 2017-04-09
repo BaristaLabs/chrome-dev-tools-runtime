@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
     /// <summary>
     /// Requests that backend shows debug borders on layers
     /// </summary>
-    public sealed class SetShowDebugBordersCommand : ICommand<SetShowDebugBordersCommandResponse>
+    public sealed class SetShowDebugBordersCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Rendering.setShowDebugBorders";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
     
     }
 
-    public sealed class SetShowDebugBordersCommandResponse : ICommandResponse
+    public sealed class SetShowDebugBordersCommandResponse : ICommandResponse<SetShowDebugBordersCommand>
     {
     
     }

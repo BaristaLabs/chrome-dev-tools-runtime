@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Toggles mouse event-based touch event emulation.
     /// </summary>
-    public sealed class SetTouchEmulationEnabledCommand : ICommand<SetTouchEmulationEnabledCommandResponse>
+    public sealed class SetTouchEmulationEnabledCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.setTouchEmulationEnabled";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class SetTouchEmulationEnabledCommandResponse : ICommandResponse
+    public sealed class SetTouchEmulationEnabledCommandResponse : ICommandResponse<SetTouchEmulationEnabledCommand>
     {
     
     }

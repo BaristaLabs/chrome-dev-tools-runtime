@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Inserts a new rule with the given <code>ruleText</code> in a stylesheet with given <code>styleSheetId</code>, at the position specified by <code>location</code>.
     /// </summary>
-    public sealed class AddRuleCommand : ICommand<AddRuleCommandResponse>
+    public sealed class AddRuleCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.addRule";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class AddRuleCommandResponse : ICommandResponse
+    public sealed class AddRuleCommandResponse : ICommandResponse<AddRuleCommand>
     {
     
         

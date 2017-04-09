@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
     /// <summary>
     /// Requests data from cache.
     /// </summary>
-    public sealed class RequestEntriesCommand : ICommand<RequestEntriesCommandResponse>
+    public sealed class RequestEntriesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CacheStorage.requestEntries";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
     
     }
 
-    public sealed class RequestEntriesCommandResponse : ICommandResponse
+    public sealed class RequestEntriesCommandResponse : ICommandResponse<RequestEntriesCommand>
     {
     
         

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Sets attribute for an element with given id.
     /// </summary>
-    public sealed class SetAttributeValueCommand : ICommand<SetAttributeValueCommandResponse>
+    public sealed class SetAttributeValueCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.setAttributeValue";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class SetAttributeValueCommandResponse : ICommandResponse
+    public sealed class SetAttributeValueCommandResponse : ICommandResponse<SetAttributeValueCommand>
     {
     
     }

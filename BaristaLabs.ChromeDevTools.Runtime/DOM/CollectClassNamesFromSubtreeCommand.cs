@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Collects class names for the node with given id and all of it's child nodes.
     /// </summary>
-    public sealed class CollectClassNamesFromSubtreeCommand : ICommand<CollectClassNamesFromSubtreeCommandResponse>
+    public sealed class CollectClassNamesFromSubtreeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.collectClassNamesFromSubtree";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class CollectClassNamesFromSubtreeCommandResponse : ICommandResponse
+    public sealed class CollectClassNamesFromSubtreeCommandResponse : ICommandResponse<CollectClassNamesFromSubtreeCommand>
     {
     
         

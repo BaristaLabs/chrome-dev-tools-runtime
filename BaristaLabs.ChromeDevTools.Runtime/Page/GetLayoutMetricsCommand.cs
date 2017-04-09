@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Returns metrics relating to the layouting of the page, such as viewport bounds/scale.
     /// </summary>
-    public sealed class GetLayoutMetricsCommand : ICommand<GetLayoutMetricsCommandResponse>
+    public sealed class GetLayoutMetricsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.getLayoutMetrics";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class GetLayoutMetricsCommandResponse : ICommandResponse
+    public sealed class GetLayoutMetricsCommandResponse : ICommandResponse<GetLayoutMetricsCommand>
     {
     
         

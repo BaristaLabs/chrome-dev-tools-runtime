@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     /// <summary>
     /// 
     /// </summary>
-    public sealed class GetHeapObjectIdCommand : ICommand<GetHeapObjectIdCommandResponse>
+    public sealed class GetHeapObjectIdCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "HeapProfiler.getHeapObjectId";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     
     }
 
-    public sealed class GetHeapObjectIdCommandResponse : ICommandResponse
+    public sealed class GetHeapObjectIdCommandResponse : ICommandResponse<GetHeapObjectIdCommand>
     {
     
         

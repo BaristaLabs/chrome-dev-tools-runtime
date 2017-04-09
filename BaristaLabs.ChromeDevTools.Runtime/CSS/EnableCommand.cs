@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Enables the CSS agent for the given page. Clients should not assume that the CSS agent has been enabled until the result of this command is received.
     /// </summary>
-    public sealed class EnableCommand : ICommand<EnableCommandResponse>
+    public sealed class EnableCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.enable";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class EnableCommandResponse : ICommandResponse
+    public sealed class EnableCommandResponse : ICommandResponse<EnableCommand>
     {
     
     }

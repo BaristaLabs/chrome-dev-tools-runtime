@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
     /// <summary>
     /// Requests data from object store or index.
     /// </summary>
-    public sealed class RequestDataCommand : ICommand<RequestDataCommandResponse>
+    public sealed class RequestDataCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "IndexedDB.requestData";
         
@@ -102,7 +102,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
     
     }
 
-    public sealed class RequestDataCommandResponse : ICommandResponse
+    public sealed class RequestDataCommandResponse : ICommandResponse<RequestDataCommand>
     {
     
         

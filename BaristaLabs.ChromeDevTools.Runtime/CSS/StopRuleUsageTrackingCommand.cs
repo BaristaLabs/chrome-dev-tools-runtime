@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// The list of rules with an indication of whether these were used
     /// </summary>
-    public sealed class StopRuleUsageTrackingCommand : ICommand<StopRuleUsageTrackingCommandResponse>
+    public sealed class StopRuleUsageTrackingCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.stopRuleUsageTracking";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class StopRuleUsageTrackingCommandResponse : ICommandResponse
+    public sealed class StopRuleUsageTrackingCommandResponse : ICommandResponse<StopRuleUsageTrackingCommand>
     {
     
         

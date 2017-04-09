@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Disables the CSS agent for the given page.
     /// </summary>
-    public sealed class DisableCommand : ICommand<DisableCommandResponse>
+    public sealed class DisableCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.disable";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class DisableCommandResponse : ICommandResponse
+    public sealed class DisableCommandResponse : ICommandResponse<DisableCommand>
     {
     
     }

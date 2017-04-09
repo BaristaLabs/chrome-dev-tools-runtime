@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Should be sent in response to a navigationRequested or a redirectRequested event, telling the browser how to handle the navigation.
     /// </summary>
-    public sealed class ProcessNavigationCommand : ICommand<ProcessNavigationCommandResponse>
+    public sealed class ProcessNavigationCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.processNavigation";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class ProcessNavigationCommandResponse : ICommandResponse
+    public sealed class ProcessNavigationCommandResponse : ICommandResponse<ProcessNavigationCommand>
     {
     
     }

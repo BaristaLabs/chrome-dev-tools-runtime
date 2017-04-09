@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Toggles navigation throttling which allows programatic control over navigation and redirect response.
     /// </summary>
-    public sealed class SetControlNavigationsCommand : ICommand<SetControlNavigationsCommandResponse>
+    public sealed class SetControlNavigationsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.setControlNavigations";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class SetControlNavigationsCommandResponse : ICommandResponse
+    public sealed class SetControlNavigationsCommandResponse : ICommandResponse<SetControlNavigationsCommand>
     {
     
     }

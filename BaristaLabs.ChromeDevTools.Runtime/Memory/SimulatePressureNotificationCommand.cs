@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
     /// <summary>
     /// Simulate a memory pressure notification in all processes.
     /// </summary>
-    public sealed class SimulatePressureNotificationCommand : ICommand<SimulatePressureNotificationCommandResponse>
+    public sealed class SimulatePressureNotificationCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Memory.simulatePressureNotification";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
     
     }
 
-    public sealed class SimulatePressureNotificationCommandResponse : ICommandResponse
+    public sealed class SimulatePressureNotificationCommandResponse : ICommandResponse<SimulatePressureNotificationCommand>
     {
     
     }

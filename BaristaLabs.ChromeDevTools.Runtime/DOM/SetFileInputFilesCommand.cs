@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Sets files for the given file input element.
     /// </summary>
-    public sealed class SetFileInputFilesCommand : ICommand<SetFileInputFilesCommandResponse>
+    public sealed class SetFileInputFilesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.setFileInputFiles";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class SetFileInputFilesCommandResponse : ICommandResponse
+    public sealed class SetFileInputFilesCommandResponse : ICommandResponse<SetFileInputFilesCommand>
     {
     
     }

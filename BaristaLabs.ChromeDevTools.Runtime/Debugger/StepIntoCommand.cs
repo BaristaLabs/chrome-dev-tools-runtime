@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Steps into the function call.
     /// </summary>
-    public sealed class StepIntoCommand : ICommand<StepIntoCommandResponse>
+    public sealed class StepIntoCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.stepInto";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class StepIntoCommandResponse : ICommandResponse
+    public sealed class StepIntoCommandResponse : ICommandResponse<StepIntoCommand>
     {
     
     }

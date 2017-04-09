@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position unavailable.
     /// </summary>
-    public sealed class SetGeolocationOverrideCommand : ICommand<SetGeolocationOverrideCommandResponse>
+    public sealed class SetGeolocationOverrideCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.setGeolocationOverride";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class SetGeolocationOverrideCommandResponse : ICommandResponse
+    public sealed class SetGeolocationOverrideCommandResponse : ICommandResponse<SetGeolocationOverrideCommand>
     {
     
     }

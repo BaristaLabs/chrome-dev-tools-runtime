@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Returns all media queries parsed by the rendering engine.
     /// </summary>
-    public sealed class GetMediaQueriesCommand : ICommand<GetMediaQueriesCommandResponse>
+    public sealed class GetMediaQueriesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.getMediaQueries";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class GetMediaQueriesCommandResponse : ICommandResponse
+    public sealed class GetMediaQueriesCommandResponse : ICommandResponse<GetMediaQueriesCommand>
     {
     
         

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Shows / hides color picker
     /// </summary>
-    public sealed class SetColorPickerEnabledCommand : ICommand<SetColorPickerEnabledCommandResponse>
+    public sealed class SetColorPickerEnabledCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.setColorPickerEnabled";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class SetColorPickerEnabledCommandResponse : ICommandResponse
+    public sealed class SetColorPickerEnabledCommandResponse : ICommandResponse<SetColorPickerEnabledCommand>
     {
     
     }

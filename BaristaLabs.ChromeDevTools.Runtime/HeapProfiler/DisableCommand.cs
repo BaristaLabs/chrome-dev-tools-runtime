@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     /// <summary>
     /// 
     /// </summary>
-    public sealed class DisableCommand : ICommand<DisableCommandResponse>
+    public sealed class DisableCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "HeapProfiler.disable";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     
     }
 
-    public sealed class DisableCommandResponse : ICommandResponse
+    public sealed class DisableCommandResponse : ICommandResponse<DisableCommand>
     {
     
     }

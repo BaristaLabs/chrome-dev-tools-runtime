@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Sets JavaScript breakpoint at given location specified either by URL or URL regex. Once this command is issued, all existing parsed scripts will have breakpoints resolved and returned in <code>locations</code> property. Further matching script parsing will result in subsequent <code>breakpointResolved</code> events issued. This logical breakpoint will survive page reloads.
     /// </summary>
-    public sealed class SetBreakpointByUrlCommand : ICommand<SetBreakpointByUrlCommandResponse>
+    public sealed class SetBreakpointByUrlCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.setBreakpointByUrl";
         
@@ -78,7 +78,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class SetBreakpointByUrlCommandResponse : ICommandResponse
+    public sealed class SetBreakpointByUrlCommandResponse : ICommandResponse<SetBreakpointByUrlCommand>
     {
     
         

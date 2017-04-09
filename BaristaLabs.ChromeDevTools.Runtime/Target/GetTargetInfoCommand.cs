@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Returns information about a target.
     /// </summary>
-    public sealed class GetTargetInfoCommand : ICommand<GetTargetInfoCommandResponse>
+    public sealed class GetTargetInfoCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Target.getTargetInfo";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     
     }
 
-    public sealed class GetTargetInfoCommandResponse : ICommandResponse
+    public sealed class GetTargetInfoCommandResponse : ICommandResponse<GetTargetInfoCommand>
     {
     
         

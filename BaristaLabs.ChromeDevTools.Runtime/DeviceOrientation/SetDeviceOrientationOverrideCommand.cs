@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DeviceOrientation
     /// <summary>
     /// Overrides the Device Orientation.
     /// </summary>
-    public sealed class SetDeviceOrientationOverrideCommand : ICommand<SetDeviceOrientationOverrideCommandResponse>
+    public sealed class SetDeviceOrientationOverrideCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DeviceOrientation.setDeviceOrientationOverride";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DeviceOrientation
     
     }
 
-    public sealed class SetDeviceOrientationOverrideCommandResponse : ICommandResponse
+    public sealed class SetDeviceOrientationOverrideCommandResponse : ICommandResponse<SetDeviceOrientationOverrideCommand>
     {
     
     }

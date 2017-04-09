@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// 
     /// </summary>
-    public sealed class AddScriptToEvaluateOnLoadCommand : ICommand<AddScriptToEvaluateOnLoadCommandResponse>
+    public sealed class AddScriptToEvaluateOnLoadCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.addScriptToEvaluateOnLoad";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class AddScriptToEvaluateOnLoadCommandResponse : ICommandResponse
+    public sealed class AddScriptToEvaluateOnLoadCommandResponse : ICommandResponse<AddScriptToEvaluateOnLoadCommand>
     {
     
         

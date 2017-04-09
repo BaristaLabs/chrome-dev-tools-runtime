@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     /// <summary>
     /// Dispatches a touch event to the page.
     /// </summary>
-    public sealed class DispatchTouchEventCommand : ICommand<DispatchTouchEventCommandResponse>
+    public sealed class DispatchTouchEventCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Input.dispatchTouchEvent";
         
@@ -66,7 +66,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     
     }
 
-    public sealed class DispatchTouchEventCommandResponse : ICommandResponse
+    public sealed class DispatchTouchEventCommandResponse : ICommandResponse<DispatchTouchEventCommand>
     {
     
     }

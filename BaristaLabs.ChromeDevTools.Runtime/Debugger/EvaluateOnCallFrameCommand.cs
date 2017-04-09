@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Evaluates expression on a given call frame.
     /// </summary>
-    public sealed class EvaluateOnCallFrameCommand : ICommand<EvaluateOnCallFrameCommandResponse>
+    public sealed class EvaluateOnCallFrameCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.evaluateOnCallFrame";
         
@@ -102,7 +102,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class EvaluateOnCallFrameCommandResponse : ICommandResponse
+    public sealed class EvaluateOnCallFrameCommandResponse : ICommandResponse<EvaluateOnCallFrameCommand>
     {
     
         

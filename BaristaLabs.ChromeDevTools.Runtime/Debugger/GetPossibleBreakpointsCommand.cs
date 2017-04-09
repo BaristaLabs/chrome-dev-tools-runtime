@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Returns possible locations for breakpoint. scriptId in start and end range locations should be the same.
     /// </summary>
-    public sealed class GetPossibleBreakpointsCommand : ICommand<GetPossibleBreakpointsCommandResponse>
+    public sealed class GetPossibleBreakpointsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.getPossibleBreakpoints";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class GetPossibleBreakpointsCommandResponse : ICommandResponse
+    public sealed class GetPossibleBreakpointsCommandResponse : ICommandResponse<GetPossibleBreakpointsCommand>
     {
     
         

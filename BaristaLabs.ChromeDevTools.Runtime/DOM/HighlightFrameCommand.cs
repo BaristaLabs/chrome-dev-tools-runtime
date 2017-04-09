@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Highlights owner element of the frame with given id.
     /// </summary>
-    public sealed class HighlightFrameCommand : ICommand<HighlightFrameCommandResponse>
+    public sealed class HighlightFrameCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.highlightFrame";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class HighlightFrameCommandResponse : ICommandResponse
+    public sealed class HighlightFrameCommandResponse : ICommandResponse<HighlightFrameCommand>
     {
     
     }

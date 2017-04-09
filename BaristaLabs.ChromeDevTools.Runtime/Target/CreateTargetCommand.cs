@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Creates a new page.
     /// </summary>
-    public sealed class CreateTargetCommand : ICommand<CreateTargetCommandResponse>
+    public sealed class CreateTargetCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Target.createTarget";
         
@@ -66,7 +66,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     
     }
 
-    public sealed class CreateTargetCommandResponse : ICommandResponse
+    public sealed class CreateTargetCommandResponse : ICommandResponse<CreateTargetCommand>
     {
     
         

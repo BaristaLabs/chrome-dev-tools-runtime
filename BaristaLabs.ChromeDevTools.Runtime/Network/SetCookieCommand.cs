@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Sets a cookie with the given cookie data; may overwrite equivalent cookies if they exist.
     /// </summary>
-    public sealed class SetCookieCommand : ICommand<SetCookieCommandResponse>
+    public sealed class SetCookieCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.setCookie";
         
@@ -126,7 +126,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class SetCookieCommandResponse : ICommandResponse
+    public sealed class SetCookieCommandResponse : ICommandResponse<SetCookieCommand>
     {
     
         

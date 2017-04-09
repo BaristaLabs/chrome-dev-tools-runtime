@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     /// <summary>
     /// Emulates the given media for CSS media queries.
     /// </summary>
-    public sealed class SetEmulatedMediaCommand : ICommand<SetEmulatedMediaCommandResponse>
+    public sealed class SetEmulatedMediaCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Emulation.setEmulatedMedia";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     
     }
 
-    public sealed class SetEmulatedMediaCommandResponse : ICommandResponse
+    public sealed class SetEmulatedMediaCommandResponse : ICommandResponse<SetEmulatedMediaCommand>
     {
     
     }

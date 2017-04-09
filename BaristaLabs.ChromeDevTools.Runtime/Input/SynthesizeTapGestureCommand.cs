@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     /// <summary>
     /// Synthesizes a tap gesture over a time period by issuing appropriate touch events.
     /// </summary>
-    public sealed class SynthesizeTapGestureCommand : ICommand<SynthesizeTapGestureCommandResponse>
+    public sealed class SynthesizeTapGestureCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Input.synthesizeTapGesture";
         
@@ -78,7 +78,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     
     }
 
-    public sealed class SynthesizeTapGestureCommandResponse : ICommandResponse
+    public sealed class SynthesizeTapGestureCommandResponse : ICommandResponse<SynthesizeTapGestureCommand>
     {
     
     }

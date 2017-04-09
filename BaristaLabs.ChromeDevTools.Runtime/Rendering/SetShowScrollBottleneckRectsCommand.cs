@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
     /// <summary>
     /// Requests that backend shows scroll bottleneck rects
     /// </summary>
-    public sealed class SetShowScrollBottleneckRectsCommand : ICommand<SetShowScrollBottleneckRectsCommandResponse>
+    public sealed class SetShowScrollBottleneckRectsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Rendering.setShowScrollBottleneckRects";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
     
     }
 
-    public sealed class SetShowScrollBottleneckRectsCommandResponse : ICommandResponse
+    public sealed class SetShowScrollBottleneckRectsCommandResponse : ICommandResponse<SetShowScrollBottleneckRectsCommand>
     {
     
     }

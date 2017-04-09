@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Sets attributes on element with given id. This method is useful when user edits some existing attribute value and types in several attribute name/value pairs.
     /// </summary>
-    public sealed class SetAttributesAsTextCommand : ICommand<SetAttributesAsTextCommandResponse>
+    public sealed class SetAttributesAsTextCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.setAttributesAsText";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class SetAttributesAsTextCommandResponse : ICommandResponse
+    public sealed class SetAttributesAsTextCommandResponse : ICommandResponse<SetAttributesAsTextCommand>
     {
     
     }

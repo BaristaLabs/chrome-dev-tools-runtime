@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     /// <summary>
     /// Provides the reasons why the given layer was composited.
     /// </summary>
-    public sealed class CompositingReasonsCommand : ICommand<CompositingReasonsCommandResponse>
+    public sealed class CompositingReasonsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "LayerTree.compositingReasons";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     
     }
 
-    public sealed class CompositingReasonsCommandResponse : ICommandResponse
+    public sealed class CompositingReasonsCommandResponse : ICommandResponse<CompositingReasonsCommand>
     {
     
         

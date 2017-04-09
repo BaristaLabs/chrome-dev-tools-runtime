@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Highlights given quad. Coordinates are absolute with respect to the main frame viewport.
     /// </summary>
-    public sealed class HighlightQuadCommand : ICommand<HighlightQuadCommandResponse>
+    public sealed class HighlightQuadCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.highlightQuad";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class HighlightQuadCommandResponse : ICommandResponse
+    public sealed class HighlightQuadCommandResponse : ICommandResponse<HighlightQuadCommand>
     {
     
     }

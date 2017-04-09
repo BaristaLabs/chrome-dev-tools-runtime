@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Activates / deactivates all breakpoints on the page.
     /// </summary>
-    public sealed class SetBreakpointsActiveCommand : ICommand<SetBreakpointsActiveCommandResponse>
+    public sealed class SetBreakpointsActiveCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.setBreakpointsActive";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class SetBreakpointsActiveCommandResponse : ICommandResponse
+    public sealed class SetBreakpointsActiveCommandResponse : ICommandResponse<SetBreakpointsActiveCommand>
     {
     
     }

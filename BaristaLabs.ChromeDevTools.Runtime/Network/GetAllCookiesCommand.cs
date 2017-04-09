@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Returns all browser cookies. Depending on the backend support, will return detailed cookie information in the <code>cookies</code> field.
     /// </summary>
-    public sealed class GetAllCookiesCommand : ICommand<GetAllCookiesCommandResponse>
+    public sealed class GetAllCookiesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.getAllCookies";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class GetAllCookiesCommandResponse : ICommandResponse
+    public sealed class GetAllCookiesCommandResponse : ICommandResponse<GetAllCookiesCommand>
     {
     
         

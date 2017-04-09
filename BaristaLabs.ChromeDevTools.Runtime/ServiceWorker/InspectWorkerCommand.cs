@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     /// <summary>
     /// 
     /// </summary>
-    public sealed class InspectWorkerCommand : ICommand<InspectWorkerCommandResponse>
+    public sealed class InspectWorkerCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "ServiceWorker.inspectWorker";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     
     }
 
-    public sealed class InspectWorkerCommandResponse : ICommandResponse
+    public sealed class InspectWorkerCommandResponse : ICommandResponse<InspectWorkerCommand>
     {
     
     }

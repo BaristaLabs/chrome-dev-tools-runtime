@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
     /// <summary>
     /// Requests database with given name in given frame.
     /// </summary>
-    public sealed class RequestDatabaseCommand : ICommand<RequestDatabaseCommandResponse>
+    public sealed class RequestDatabaseCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "IndexedDB.requestDatabase";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
     
     }
 
-    public sealed class RequestDatabaseCommandResponse : ICommandResponse
+    public sealed class RequestDatabaseCommandResponse : ICommandResponse<RequestDatabaseCommand>
     {
     
         

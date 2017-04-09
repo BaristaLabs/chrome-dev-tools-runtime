@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Cancels blocking of a specific URL from loading.
     /// </summary>
-    public sealed class RemoveBlockedURLCommand : ICommand<RemoveBlockedURLCommandResponse>
+    public sealed class RemoveBlockedURLCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.removeBlockedURL";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class RemoveBlockedURLCommandResponse : ICommandResponse
+    public sealed class RemoveBlockedURLCommandResponse : ICommandResponse<RemoveBlockedURLCommand>
     {
     
     }

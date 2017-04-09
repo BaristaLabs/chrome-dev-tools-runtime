@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Blocks specific URL from loading.
     /// </summary>
-    public sealed class AddBlockedURLCommand : ICommand<AddBlockedURLCommandResponse>
+    public sealed class AddBlockedURLCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.addBlockedURL";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class AddBlockedURLCommandResponse : ICommandResponse
+    public sealed class AddBlockedURLCommandResponse : ICommandResponse<AddBlockedURLCommand>
     {
     
     }

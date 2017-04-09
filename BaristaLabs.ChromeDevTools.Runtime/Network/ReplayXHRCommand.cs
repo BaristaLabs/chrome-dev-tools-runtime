@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// This method sends a new XMLHttpRequest which is identical to the original one. The following parameters should be identical: method, url, async, request body, extra headers, withCredentials attribute, user, password.
     /// </summary>
-    public sealed class ReplayXHRCommand : ICommand<ReplayXHRCommandResponse>
+    public sealed class ReplayXHRCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.replayXHR";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class ReplayXHRCommandResponse : ICommandResponse
+    public sealed class ReplayXHRCommandResponse : ICommandResponse<ReplayXHRCommand>
     {
     
     }

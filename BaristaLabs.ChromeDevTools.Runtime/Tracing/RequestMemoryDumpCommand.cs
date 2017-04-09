@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     /// <summary>
     /// Request a global memory dump.
     /// </summary>
-    public sealed class RequestMemoryDumpCommand : ICommand<RequestMemoryDumpCommandResponse>
+    public sealed class RequestMemoryDumpCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Tracing.requestMemoryDump";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     
     }
 
-    public sealed class RequestMemoryDumpCommandResponse : ICommandResponse
+    public sealed class RequestMemoryDumpCommandResponse : ICommandResponse<RequestMemoryDumpCommand>
     {
     
         

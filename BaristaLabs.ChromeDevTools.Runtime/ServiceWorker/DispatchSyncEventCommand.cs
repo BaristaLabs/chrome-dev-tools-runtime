@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     /// <summary>
     /// 
     /// </summary>
-    public sealed class DispatchSyncEventCommand : ICommand<DispatchSyncEventCommandResponse>
+    public sealed class DispatchSyncEventCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "ServiceWorker.dispatchSyncEvent";
         
@@ -66,7 +66,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     
     }
 
-    public sealed class DispatchSyncEventCommandResponse : ICommandResponse
+    public sealed class DispatchSyncEventCommandResponse : ICommandResponse<DispatchSyncEventCommand>
     {
     
     }

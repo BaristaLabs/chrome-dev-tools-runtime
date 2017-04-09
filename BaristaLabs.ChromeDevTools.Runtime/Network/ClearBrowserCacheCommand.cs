@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Clears browser cache.
     /// </summary>
-    public sealed class ClearBrowserCacheCommand : ICommand<ClearBrowserCacheCommandResponse>
+    public sealed class ClearBrowserCacheCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.clearBrowserCache";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class ClearBrowserCacheCommandResponse : ICommandResponse
+    public sealed class ClearBrowserCacheCommandResponse : ICommandResponse<ClearBrowserCacheCommand>
     {
     
     }

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     /// <summary>
     /// Dispatches a key event to the page.
     /// </summary>
-    public sealed class DispatchKeyEventCommand : ICommand<DispatchKeyEventCommandResponse>
+    public sealed class DispatchKeyEventCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Input.dispatchKeyEvent";
         
@@ -174,7 +174,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     
     }
 
-    public sealed class DispatchKeyEventCommandResponse : ICommandResponse
+    public sealed class DispatchKeyEventCommandResponse : ICommandResponse<DispatchKeyEventCommand>
     {
     
     }

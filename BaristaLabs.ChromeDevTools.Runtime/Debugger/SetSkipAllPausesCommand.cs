@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Makes page not interrupt on any pauses (breakpoint, exception, dom exception etc).
     /// </summary>
-    public sealed class SetSkipAllPausesCommand : ICommand<SetSkipAllPausesCommandResponse>
+    public sealed class SetSkipAllPausesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.setSkipAllPauses";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class SetSkipAllPausesCommandResponse : ICommandResponse
+    public sealed class SetSkipAllPausesCommandResponse : ICommandResponse<SetSkipAllPausesCommand>
     {
     
     }

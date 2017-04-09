@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// <summary>
     /// Sets the timing of an animation node.
     /// </summary>
-    public sealed class SetTimingCommand : ICommand<SetTimingCommandResponse>
+    public sealed class SetTimingCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Animation.setTiming";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     
     }
 
-    public sealed class SetTimingCommandResponse : ICommandResponse
+    public sealed class SetTimingCommandResponse : ICommandResponse<SetTimingCommand>
     {
     
     }

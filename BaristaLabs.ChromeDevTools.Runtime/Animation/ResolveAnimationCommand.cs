@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// <summary>
     /// Gets the remote object of the Animation.
     /// </summary>
-    public sealed class ResolveAnimationCommand : ICommand<ResolveAnimationCommandResponse>
+    public sealed class ResolveAnimationCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Animation.resolveAnimation";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     
     }
 
-    public sealed class ResolveAnimationCommandResponse : ICommandResponse
+    public sealed class ResolveAnimationCommandResponse : ICommandResponse<ResolveAnimationCommand>
     {
     
         

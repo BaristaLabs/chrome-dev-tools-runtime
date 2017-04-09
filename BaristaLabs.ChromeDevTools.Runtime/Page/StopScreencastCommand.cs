@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Stops sending each frame in the <code>screencastFrame</code>.
     /// </summary>
-    public sealed class StopScreencastCommand : ICommand<StopScreencastCommandResponse>
+    public sealed class StopScreencastCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.stopScreencast";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class StopScreencastCommandResponse : ICommandResponse
+    public sealed class StopScreencastCommandResponse : ICommandResponse<StopScreencastCommand>
     {
     
     }

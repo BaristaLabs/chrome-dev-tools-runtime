@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Toggles ignoring cache for each request. If <code>true</code>, cache will not be used.
     /// </summary>
-    public sealed class SetCacheDisabledCommand : ICommand<SetCacheDisabledCommandResponse>
+    public sealed class SetCacheDisabledCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.setCacheDisabled";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class SetCacheDisabledCommandResponse : ICommandResponse
+    public sealed class SetCacheDisabledCommandResponse : ICommandResponse<SetCacheDisabledCommand>
     {
     
     }

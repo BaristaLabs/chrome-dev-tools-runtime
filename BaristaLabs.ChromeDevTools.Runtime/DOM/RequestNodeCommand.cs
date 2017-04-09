@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Requests that the node is sent to the caller given the JavaScript node object reference. All nodes that form the path from the node to the root are also sent to the client as a series of <code>setChildNodes</code> notifications.
     /// </summary>
-    public sealed class RequestNodeCommand : ICommand<RequestNodeCommandResponse>
+    public sealed class RequestNodeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.requestNode";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class RequestNodeCommandResponse : ICommandResponse
+    public sealed class RequestNodeCommandResponse : ICommandResponse<RequestNodeCommand>
     {
     
         

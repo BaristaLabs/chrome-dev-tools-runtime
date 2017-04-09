@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     /// <summary>
     /// Sets breakpoint on XMLHttpRequest.
     /// </summary>
-    public sealed class SetXHRBreakpointCommand : ICommand<SetXHRBreakpointCommandResponse>
+    public sealed class SetXHRBreakpointCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOMDebugger.setXHRBreakpoint";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     
     }
 
-    public sealed class SetXHRBreakpointCommandResponse : ICommandResponse
+    public sealed class SetXHRBreakpointCommandResponse : ICommandResponse<SetXHRBreakpointCommand>
     {
     
     }

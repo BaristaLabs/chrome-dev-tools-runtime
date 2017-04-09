@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     /// <summary>
     /// Sets breakpoint on particular operation with DOM.
     /// </summary>
-    public sealed class SetDOMBreakpointCommand : ICommand<SetDOMBreakpointCommandResponse>
+    public sealed class SetDOMBreakpointCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOMDebugger.setDOMBreakpoint";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     
     }
 
-    public sealed class SetDOMBreakpointCommandResponse : ICommandResponse
+    public sealed class SetDOMBreakpointCommandResponse : ICommandResponse<SetDOMBreakpointCommand>
     {
     
     }

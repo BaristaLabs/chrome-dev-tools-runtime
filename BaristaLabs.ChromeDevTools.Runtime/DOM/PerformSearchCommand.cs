@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Searches for a given string in the DOM tree. Use <code>getSearchResults</code> to access search results or <code>cancelSearch</code> to end this search session.
     /// </summary>
-    public sealed class PerformSearchCommand : ICommand<PerformSearchCommandResponse>
+    public sealed class PerformSearchCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.performSearch";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class PerformSearchCommandResponse : ICommandResponse
+    public sealed class PerformSearchCommandResponse : ICommandResponse<PerformSearchCommand>
     {
     
         

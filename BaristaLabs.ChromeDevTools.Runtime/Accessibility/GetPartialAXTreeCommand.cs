@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
     /// <summary>
     /// Fetches the accessibility node and partial accessibility tree for this DOM node, if it exists.
     /// </summary>
-    public sealed class GetPartialAXTreeCommand : ICommand<GetPartialAXTreeCommandResponse>
+    public sealed class GetPartialAXTreeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Accessibility.getPartialAXTree";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
     
     }
 
-    public sealed class GetPartialAXTreeCommandResponse : ICommandResponse
+    public sealed class GetPartialAXTreeCommandResponse : ICommandResponse<GetPartialAXTreeCommand>
     {
     
         

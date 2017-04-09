@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Acknowledges that a screencast frame has been received by the frontend.
     /// </summary>
-    public sealed class ScreencastFrameAckCommand : ICommand<ScreencastFrameAckCommandResponse>
+    public sealed class ScreencastFrameAckCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.screencastFrameAck";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class ScreencastFrameAckCommandResponse : ICommandResponse
+    public sealed class ScreencastFrameAckCommandResponse : ICommandResponse<ScreencastFrameAckCommand>
     {
     
     }

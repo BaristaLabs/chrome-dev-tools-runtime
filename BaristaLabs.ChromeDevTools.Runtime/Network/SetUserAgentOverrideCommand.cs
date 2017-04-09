@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Allows overriding user agent with the given string.
     /// </summary>
-    public sealed class SetUserAgentOverrideCommand : ICommand<SetUserAgentOverrideCommandResponse>
+    public sealed class SetUserAgentOverrideCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.setUserAgentOverride";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class SetUserAgentOverrideCommandResponse : ICommandResponse
+    public sealed class SetUserAgentOverrideCommandResponse : ICommandResponse<SetUserAgentOverrideCommand>
     {
     
     }

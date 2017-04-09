@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Controls whether to automatically attach to new targets which are considered to be related to this one. When turned on, attaches to all existing related targets as well. When turned off, automatically detaches from all currently attached targets.
     /// </summary>
-    public sealed class SetAutoAttachCommand : ICommand<SetAutoAttachCommandResponse>
+    public sealed class SetAutoAttachCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Target.setAutoAttach";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     
     }
 
-    public sealed class SetAutoAttachCommandResponse : ICommandResponse
+    public sealed class SetAutoAttachCommandResponse : ICommandResponse<SetAutoAttachCommand>
     {
     
     }

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Modifies the keyframe rule key text.
     /// </summary>
-    public sealed class SetKeyframeKeyCommand : ICommand<SetKeyframeKeyCommandResponse>
+    public sealed class SetKeyframeKeyCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.setKeyframeKey";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class SetKeyframeKeyCommandResponse : ICommandResponse
+    public sealed class SetKeyframeKeyCommandResponse : ICommandResponse<SetKeyframeKeyCommand>
     {
     
         

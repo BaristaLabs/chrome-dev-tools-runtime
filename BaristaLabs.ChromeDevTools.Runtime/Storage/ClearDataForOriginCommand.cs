@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
     /// <summary>
     /// Clears storage for origin.
     /// </summary>
-    public sealed class ClearDataForOriginCommand : ICommand<ClearDataForOriginCommandResponse>
+    public sealed class ClearDataForOriginCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Storage.clearDataForOrigin";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
     
     }
 
-    public sealed class ClearDataForOriginCommandResponse : ICommandResponse
+    public sealed class ClearDataForOriginCommandResponse : ICommandResponse<ClearDataForOriginCommand>
     {
     
     }

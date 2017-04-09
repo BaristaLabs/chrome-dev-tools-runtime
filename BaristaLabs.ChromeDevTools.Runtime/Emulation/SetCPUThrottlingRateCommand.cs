@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     /// <summary>
     /// Enables CPU throttling to emulate slow CPUs.
     /// </summary>
-    public sealed class SetCPUThrottlingRateCommand : ICommand<SetCPUThrottlingRateCommandResponse>
+    public sealed class SetCPUThrottlingRateCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Emulation.setCPUThrottlingRate";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     
     }
 
-    public sealed class SetCPUThrottlingRateCommandResponse : ICommandResponse
+    public sealed class SetCPUThrottlingRateCommandResponse : ICommandResponse<SetCPUThrottlingRateCommand>
     {
     
     }

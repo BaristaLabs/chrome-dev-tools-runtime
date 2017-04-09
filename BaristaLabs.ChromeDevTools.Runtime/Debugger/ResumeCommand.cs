@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Resumes JavaScript execution.
     /// </summary>
-    public sealed class ResumeCommand : ICommand<ResumeCommandResponse>
+    public sealed class ResumeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.resume";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class ResumeCommandResponse : ICommandResponse
+    public sealed class ResumeCommandResponse : ICommandResponse<ResumeCommand>
     {
     
     }

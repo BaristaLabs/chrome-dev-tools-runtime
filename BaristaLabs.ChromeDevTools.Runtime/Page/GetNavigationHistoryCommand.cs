@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Returns navigation history for the current page.
     /// </summary>
-    public sealed class GetNavigationHistoryCommand : ICommand<GetNavigationHistoryCommandResponse>
+    public sealed class GetNavigationHistoryCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.getNavigationHistory";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class GetNavigationHistoryCommandResponse : ICommandResponse
+    public sealed class GetNavigationHistoryCommandResponse : ICommandResponse<GetNavigationHistoryCommand>
     {
     
         

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     /// <summary>
     /// 
     /// </summary>
-    public sealed class StartCommand : ICommand<StartCommandResponse>
+    public sealed class StartCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Profiler.start";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     
     }
 
-    public sealed class StartCommandResponse : ICommandResponse
+    public sealed class StartCommandResponse : ICommandResponse<StartCommand>
     {
     
     }

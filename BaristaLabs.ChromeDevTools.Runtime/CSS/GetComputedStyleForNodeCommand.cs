@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Returns the computed style for a DOM node identified by <code>nodeId</code>.
     /// </summary>
-    public sealed class GetComputedStyleForNodeCommand : ICommand<GetComputedStyleForNodeCommandResponse>
+    public sealed class GetComputedStyleForNodeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.getComputedStyleForNode";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class GetComputedStyleForNodeCommandResponse : ICommandResponse
+    public sealed class GetComputedStyleForNodeCommandResponse : ICommandResponse<GetComputedStyleForNodeCommand>
     {
     
         

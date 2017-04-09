@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Activates (focuses) the target.
     /// </summary>
-    public sealed class ActivateTargetCommand : ICommand<ActivateTargetCommandResponse>
+    public sealed class ActivateTargetCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Target.activateTarget";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     
     }
 
-    public sealed class ActivateTargetCommandResponse : ICommandResponse
+    public sealed class ActivateTargetCommandResponse : ICommandResponse<ActivateTargetCommand>
     {
     
     }

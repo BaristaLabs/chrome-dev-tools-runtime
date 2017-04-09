@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
     /// <summary>
     /// Requests database names for given security origin.
     /// </summary>
-    public sealed class RequestDatabaseNamesCommand : ICommand<RequestDatabaseNamesCommandResponse>
+    public sealed class RequestDatabaseNamesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "IndexedDB.requestDatabaseNames";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
     
     }
 
-    public sealed class RequestDatabaseNamesCommandResponse : ICommandResponse
+    public sealed class RequestDatabaseNamesCommandResponse : ICommandResponse<RequestDatabaseNamesCommand>
     {
     
         

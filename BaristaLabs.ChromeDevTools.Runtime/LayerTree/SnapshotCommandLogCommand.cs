@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     /// <summary>
     /// Replays the layer snapshot and returns canvas log.
     /// </summary>
-    public sealed class SnapshotCommandLogCommand : ICommand<SnapshotCommandLogCommandResponse>
+    public sealed class SnapshotCommandLogCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "LayerTree.snapshotCommandLog";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     
     }
 
-    public sealed class SnapshotCommandLogCommandResponse : ICommandResponse
+    public sealed class SnapshotCommandLogCommandResponse : ICommandResponse<SnapshotCommandLogCommand>
     {
     
         

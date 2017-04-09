@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Focuses the given element.
     /// </summary>
-    public sealed class FocusCommand : ICommand<FocusCommandResponse>
+    public sealed class FocusCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.focus";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class FocusCommandResponse : ICommandResponse
+    public sealed class FocusCommandResponse : ICommandResponse<FocusCommand>
     {
     
     }

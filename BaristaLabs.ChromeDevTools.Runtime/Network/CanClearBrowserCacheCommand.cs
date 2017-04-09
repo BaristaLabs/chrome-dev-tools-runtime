@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Tells whether clearing browser cache is supported.
     /// </summary>
-    public sealed class CanClearBrowserCacheCommand : ICommand<CanClearBrowserCacheCommandResponse>
+    public sealed class CanClearBrowserCacheCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.canClearBrowserCache";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class CanClearBrowserCacheCommandResponse : ICommandResponse
+    public sealed class CanClearBrowserCacheCommandResponse : ICommandResponse<CanClearBrowserCacheCommand>
     {
     
         

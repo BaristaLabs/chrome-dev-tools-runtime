@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Stops on the next JavaScript statement.
     /// </summary>
-    public sealed class PauseCommand : ICommand<PauseCommandResponse>
+    public sealed class PauseCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.pause";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class PauseCommandResponse : ICommandResponse
+    public sealed class PauseCommandResponse : ICommandResponse<PauseCommand>
     {
     
     }

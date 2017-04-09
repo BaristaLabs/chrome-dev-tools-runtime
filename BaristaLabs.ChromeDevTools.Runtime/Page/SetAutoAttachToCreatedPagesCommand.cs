@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Controls whether browser will open a new inspector window for connected pages.
     /// </summary>
-    public sealed class SetAutoAttachToCreatedPagesCommand : ICommand<SetAutoAttachToCreatedPagesCommandResponse>
+    public sealed class SetAutoAttachToCreatedPagesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.setAutoAttachToCreatedPages";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class SetAutoAttachToCreatedPagesCommandResponse : ICommandResponse
+    public sealed class SetAutoAttachToCreatedPagesCommandResponse : ICommandResponse<SetAutoAttachToCreatedPagesCommand>
     {
     
     }

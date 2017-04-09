@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// For testing.
     /// </summary>
-    public sealed class GetHighlightObjectForTestCommand : ICommand<GetHighlightObjectForTestCommandResponse>
+    public sealed class GetHighlightObjectForTestCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.getHighlightObjectForTest";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class GetHighlightObjectForTestCommandResponse : ICommandResponse
+    public sealed class GetHighlightObjectForTestCommandResponse : ICommandResponse<GetHighlightObjectForTestCommand>
     {
     
         

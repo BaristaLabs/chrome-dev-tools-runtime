@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Requests that the node is sent to the caller given its path. // FIXME, use XPath
     /// </summary>
-    public sealed class PushNodeByPathToFrontendCommand : ICommand<PushNodeByPathToFrontendCommandResponse>
+    public sealed class PushNodeByPathToFrontendCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.pushNodeByPathToFrontend";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class PushNodeByPathToFrontendCommandResponse : ICommandResponse
+    public sealed class PushNodeByPathToFrontendCommandResponse : ICommandResponse<PushNodeByPathToFrontendCommand>
     {
     
         

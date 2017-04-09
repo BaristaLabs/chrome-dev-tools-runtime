@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     /// <summary>
     /// Overrides the visible area of the page. The change is hidden from the page, i.e. the observable scroll position and page scale does not change. In effect, the command moves the specified area of the page into the top-left corner of the frame.
     /// </summary>
-    public sealed class ForceViewportCommand : ICommand<ForceViewportCommandResponse>
+    public sealed class ForceViewportCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Emulation.forceViewport";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     
     }
 
-    public sealed class ForceViewportCommandResponse : ICommandResponse
+    public sealed class ForceViewportCommandResponse : ICommandResponse<ForceViewportCommand>
     {
     
     }

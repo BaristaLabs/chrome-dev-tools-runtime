@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Hides DOM node highlight.
     /// </summary>
-    public sealed class HideHighlightCommand : ICommand<HideHighlightCommandResponse>
+    public sealed class HideHighlightCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.hideHighlight";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class HideHighlightCommandResponse : ICommandResponse
+    public sealed class HideHighlightCommandResponse : ICommandResponse<HideHighlightCommand>
     {
     
     }

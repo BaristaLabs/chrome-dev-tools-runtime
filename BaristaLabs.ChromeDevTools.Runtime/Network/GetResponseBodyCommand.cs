@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Returns content served for the given request.
     /// </summary>
-    public sealed class GetResponseBodyCommand : ICommand<GetResponseBodyCommandResponse>
+    public sealed class GetResponseBodyCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.getResponseBody";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class GetResponseBodyCommandResponse : ICommandResponse
+    public sealed class GetResponseBodyCommandResponse : ICommandResponse<GetResponseBodyCommand>
     {
     
         

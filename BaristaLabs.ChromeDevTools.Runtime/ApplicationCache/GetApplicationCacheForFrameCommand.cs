@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
     /// <summary>
     /// Returns relevant application cache data for the document in given frame.
     /// </summary>
-    public sealed class GetApplicationCacheForFrameCommand : ICommand<GetApplicationCacheForFrameCommandResponse>
+    public sealed class GetApplicationCacheForFrameCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "ApplicationCache.getApplicationCacheForFrame";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
     
     }
 
-    public sealed class GetApplicationCacheForFrameCommandResponse : ICommandResponse
+    public sealed class GetApplicationCacheForFrameCommandResponse : ICommandResponse<GetApplicationCacheForFrameCommand>
     {
     
         

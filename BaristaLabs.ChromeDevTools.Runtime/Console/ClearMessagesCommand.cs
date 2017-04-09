@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
     /// <summary>
     /// Does nothing.
     /// </summary>
-    public sealed class ClearMessagesCommand : ICommand<ClearMessagesCommandResponse>
+    public sealed class ClearMessagesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Console.clearMessages";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
     
     }
 
-    public sealed class ClearMessagesCommandResponse : ICommandResponse
+    public sealed class ClearMessagesCommandResponse : ICommandResponse<ClearMessagesCommand>
     {
     
     }

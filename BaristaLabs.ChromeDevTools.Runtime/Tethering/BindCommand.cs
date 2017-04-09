@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tethering
     /// <summary>
     /// Request browser port binding.
     /// </summary>
-    public sealed class BindCommand : ICommand<BindCommandResponse>
+    public sealed class BindCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Tethering.bind";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tethering
     
     }
 
-    public sealed class BindCommandResponse : ICommandResponse
+    public sealed class BindCommandResponse : ICommandResponse<BindCommand>
     {
     
     }

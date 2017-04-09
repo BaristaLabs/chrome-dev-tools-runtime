@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     /// <summary>
     /// Emulates touch event from the mouse event parameters.
     /// </summary>
-    public sealed class EmulateTouchFromMouseEventCommand : ICommand<EmulateTouchFromMouseEventCommandResponse>
+    public sealed class EmulateTouchFromMouseEventCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Input.emulateTouchFromMouseEvent";
         
@@ -126,7 +126,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     
     }
 
-    public sealed class EmulateTouchFromMouseEventCommandResponse : ICommandResponse
+    public sealed class EmulateTouchFromMouseEventCommandResponse : ICommandResponse<EmulateTouchFromMouseEventCommand>
     {
     
     }

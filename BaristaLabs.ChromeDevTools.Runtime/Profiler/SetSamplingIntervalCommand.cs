@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     /// <summary>
     /// Changes CPU profiler sampling interval. Must be called before CPU profiles recording started.
     /// </summary>
-    public sealed class SetSamplingIntervalCommand : ICommand<SetSamplingIntervalCommandResponse>
+    public sealed class SetSamplingIntervalCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Profiler.setSamplingInterval";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     
     }
 
-    public sealed class SetSamplingIntervalCommandResponse : ICommandResponse
+    public sealed class SetSamplingIntervalCommandResponse : ICommandResponse<SetSamplingIntervalCommand>
     {
     
     }

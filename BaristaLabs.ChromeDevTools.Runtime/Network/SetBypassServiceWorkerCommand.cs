@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Toggles ignoring of service worker for each request.
     /// </summary>
-    public sealed class SetBypassServiceWorkerCommand : ICommand<SetBypassServiceWorkerCommandResponse>
+    public sealed class SetBypassServiceWorkerCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.setBypassServiceWorker";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class SetBypassServiceWorkerCommandResponse : ICommandResponse
+    public sealed class SetBypassServiceWorkerCommandResponse : ICommandResponse<SetBypassServiceWorkerCommand>
     {
     
     }

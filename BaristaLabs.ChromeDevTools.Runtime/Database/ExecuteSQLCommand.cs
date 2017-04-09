@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
     /// <summary>
     /// 
     /// </summary>
-    public sealed class ExecuteSQLCommand : ICommand<ExecuteSQLCommandResponse>
+    public sealed class ExecuteSQLCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Database.executeSQL";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
     
     }
 
-    public sealed class ExecuteSQLCommandResponse : ICommandResponse
+    public sealed class ExecuteSQLCommandResponse : ICommandResponse<ExecuteSQLCommand>
     {
     
         

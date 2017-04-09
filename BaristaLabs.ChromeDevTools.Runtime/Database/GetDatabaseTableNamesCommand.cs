@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
     /// <summary>
     /// 
     /// </summary>
-    public sealed class GetDatabaseTableNamesCommand : ICommand<GetDatabaseTableNamesCommandResponse>
+    public sealed class GetDatabaseTableNamesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Database.getDatabaseTableNames";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
     
     }
 
-    public sealed class GetDatabaseTableNamesCommandResponse : ICommandResponse
+    public sealed class GetDatabaseTableNamesCommandResponse : ICommandResponse<GetDatabaseTableNamesCommand>
     {
     
         

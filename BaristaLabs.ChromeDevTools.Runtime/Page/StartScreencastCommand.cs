@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Starts sending each frame using the <code>screencastFrame</code> event.
     /// </summary>
-    public sealed class StartScreencastCommand : ICommand<StartScreencastCommandResponse>
+    public sealed class StartScreencastCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.startScreencast";
         
@@ -78,7 +78,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class StartScreencastCommandResponse : ICommandResponse
+    public sealed class StartScreencastCommandResponse : ICommandResponse<StartScreencastCommand>
     {
     
     }

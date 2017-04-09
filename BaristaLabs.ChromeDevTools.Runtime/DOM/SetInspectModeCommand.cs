@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Enters the 'inspect' mode. In this mode, elements that user is hovering over are highlighted. Backend then generates 'inspectNodeRequested' event upon element selection.
     /// </summary>
-    public sealed class SetInspectModeCommand : ICommand<SetInspectModeCommandResponse>
+    public sealed class SetInspectModeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.setInspectMode";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class SetInspectModeCommandResponse : ICommandResponse
+    public sealed class SetInspectModeCommandResponse : ICommandResponse<SetInspectModeCommand>
     {
     
     }

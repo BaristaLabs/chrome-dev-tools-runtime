@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Returns the DER-encoded certificate.
     /// </summary>
-    public sealed class GetCertificateCommand : ICommand<GetCertificateCommandResponse>
+    public sealed class GetCertificateCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.getCertificate";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class GetCertificateCommandResponse : ICommandResponse
+    public sealed class GetCertificateCommandResponse : ICommandResponse<GetCertificateCommand>
     {
     
         

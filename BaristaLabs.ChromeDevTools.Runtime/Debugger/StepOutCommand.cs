@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Steps out of the function call.
     /// </summary>
-    public sealed class StepOutCommand : ICommand<StepOutCommandResponse>
+    public sealed class StepOutCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.stepOut";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class StepOutCommandResponse : ICommandResponse
+    public sealed class StepOutCommandResponse : ICommandResponse<StepOutCommand>
     {
     
     }

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Applies specified style edits one after another in the given order.
     /// </summary>
-    public sealed class SetStyleTextsCommand : ICommand<SetStyleTextsCommandResponse>
+    public sealed class SetStyleTextsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.setStyleTexts";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class SetStyleTextsCommandResponse : ICommandResponse
+    public sealed class SetStyleTextsCommandResponse : ICommandResponse<SetStyleTextsCommand>
     {
     
         

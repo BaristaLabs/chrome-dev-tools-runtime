@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Force the page stop all navigations and pending resource fetches.
     /// </summary>
-    public sealed class StopLoadingCommand : ICommand<StopLoadingCommandResponse>
+    public sealed class StopLoadingCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.stopLoading";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class StopLoadingCommandResponse : ICommandResponse
+    public sealed class StopLoadingCommandResponse : ICommandResponse<StopLoadingCommand>
     {
     
     }

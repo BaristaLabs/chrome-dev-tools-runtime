@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Enables console to refer to the node with given id via $x (see Command Line API for more details $x functions).
     /// </summary>
-    public sealed class SetInspectedNodeCommand : ICommand<SetInspectedNodeCommandResponse>
+    public sealed class SetInspectedNodeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.setInspectedNode";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class SetInspectedNodeCommandResponse : ICommandResponse
+    public sealed class SetInspectedNodeCommandResponse : ICommandResponse<SetInspectedNodeCommand>
     {
     
     }

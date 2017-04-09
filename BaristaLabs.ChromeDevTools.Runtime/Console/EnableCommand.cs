@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
     /// <summary>
     /// Enables console domain, sends the messages collected so far to the client by means of the <code>messageAdded</code> notification.
     /// </summary>
-    public sealed class EnableCommand : ICommand<EnableCommandResponse>
+    public sealed class EnableCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Console.enable";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
     
     }
 
-    public sealed class EnableCommandResponse : ICommandResponse
+    public sealed class EnableCommandResponse : ICommandResponse<EnableCommand>
     {
     
     }

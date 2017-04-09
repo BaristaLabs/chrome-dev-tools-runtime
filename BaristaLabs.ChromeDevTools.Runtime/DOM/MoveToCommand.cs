@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Moves node into the new container, places it before the given anchor.
     /// </summary>
-    public sealed class MoveToCommand : ICommand<MoveToCommandResponse>
+    public sealed class MoveToCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.moveTo";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class MoveToCommandResponse : ICommandResponse
+    public sealed class MoveToCommandResponse : ICommandResponse<MoveToCommand>
     {
     
         

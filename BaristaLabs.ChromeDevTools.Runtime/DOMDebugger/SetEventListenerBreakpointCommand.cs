@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     /// <summary>
     /// Sets breakpoint on particular DOM event.
     /// </summary>
-    public sealed class SetEventListenerBreakpointCommand : ICommand<SetEventListenerBreakpointCommandResponse>
+    public sealed class SetEventListenerBreakpointCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOMDebugger.setEventListenerBreakpoint";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     
     }
 
-    public sealed class SetEventListenerBreakpointCommandResponse : ICommandResponse
+    public sealed class SetEventListenerBreakpointCommandResponse : ICommandResponse<SetEventListenerBreakpointCommand>
     {
     
     }

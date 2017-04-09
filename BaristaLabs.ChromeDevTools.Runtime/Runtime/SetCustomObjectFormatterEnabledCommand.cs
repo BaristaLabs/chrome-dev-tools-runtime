@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// 
     /// </summary>
-    public sealed class SetCustomObjectFormatterEnabledCommand : ICommand<SetCustomObjectFormatterEnabledCommandResponse>
+    public sealed class SetCustomObjectFormatterEnabledCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Runtime.setCustomObjectFormatterEnabled";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     
     }
 
-    public sealed class SetCustomObjectFormatterEnabledCommandResponse : ICommandResponse
+    public sealed class SetCustomObjectFormatterEnabledCommandResponse : ICommandResponse<SetCustomObjectFormatterEnabledCommand>
     {
     
     }

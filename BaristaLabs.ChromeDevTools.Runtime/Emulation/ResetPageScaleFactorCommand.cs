@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     /// <summary>
     /// Requests that page scale factor is reset to initial values.
     /// </summary>
-    public sealed class ResetPageScaleFactorCommand : ICommand<ResetPageScaleFactorCommandResponse>
+    public sealed class ResetPageScaleFactorCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Emulation.resetPageScaleFactor";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     
     }
 
-    public sealed class ResetPageScaleFactorCommandResponse : ICommandResponse
+    public sealed class ResetPageScaleFactorCommandResponse : ICommandResponse<ResetPageScaleFactorCommand>
     {
     
     }

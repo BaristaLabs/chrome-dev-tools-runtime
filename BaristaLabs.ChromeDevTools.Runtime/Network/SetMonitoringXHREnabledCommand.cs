@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Toggles monitoring of XMLHttpRequest. If <code>true</code>, console will receive messages upon each XHR issued.
     /// </summary>
-    public sealed class SetMonitoringXHREnabledCommand : ICommand<SetMonitoringXHREnabledCommandResponse>
+    public sealed class SetMonitoringXHREnabledCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.setMonitoringXHREnabled";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class SetMonitoringXHREnabledCommandResponse : ICommandResponse
+    public sealed class SetMonitoringXHREnabledCommandResponse : ICommandResponse<SetMonitoringXHREnabledCommand>
     {
     
     }

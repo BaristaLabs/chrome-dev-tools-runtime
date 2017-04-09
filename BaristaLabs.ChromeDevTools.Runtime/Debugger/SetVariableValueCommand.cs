@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Changes value of variable in a callframe. Object-based scopes are not supported and must be mutated manually.
     /// </summary>
-    public sealed class SetVariableValueCommand : ICommand<SetVariableValueCommandResponse>
+    public sealed class SetVariableValueCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.setVariableValue";
         
@@ -66,7 +66,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class SetVariableValueCommandResponse : ICommandResponse
+    public sealed class SetVariableValueCommandResponse : ICommandResponse<SetVariableValueCommand>
     {
     
     }

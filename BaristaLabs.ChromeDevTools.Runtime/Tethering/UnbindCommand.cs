@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tethering
     /// <summary>
     /// Request browser port unbinding.
     /// </summary>
-    public sealed class UnbindCommand : ICommand<UnbindCommandResponse>
+    public sealed class UnbindCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Tethering.unbind";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tethering
     
     }
 
-    public sealed class UnbindCommandResponse : ICommandResponse
+    public sealed class UnbindCommandResponse : ICommandResponse<UnbindCommand>
     {
     
     }

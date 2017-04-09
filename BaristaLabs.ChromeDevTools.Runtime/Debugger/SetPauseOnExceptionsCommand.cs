@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Defines pause on exceptions state. Can be set to stop on all exceptions, uncaught exceptions or no exceptions. Initial pause on exceptions state is <code>none</code>.
     /// </summary>
-    public sealed class SetPauseOnExceptionsCommand : ICommand<SetPauseOnExceptionsCommandResponse>
+    public sealed class SetPauseOnExceptionsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.setPauseOnExceptions";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class SetPauseOnExceptionsCommandResponse : ICommandResponse
+    public sealed class SetPauseOnExceptionsCommandResponse : ICommandResponse<SetPauseOnExceptionsCommand>
     {
     
     }

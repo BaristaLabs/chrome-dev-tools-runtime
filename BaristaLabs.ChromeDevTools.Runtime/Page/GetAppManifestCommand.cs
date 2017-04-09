@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// 
     /// </summary>
-    public sealed class GetAppManifestCommand : ICommand<GetAppManifestCommandResponse>
+    public sealed class GetAppManifestCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.getAppManifest";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class GetAppManifestCommandResponse : ICommandResponse
+    public sealed class GetAppManifestCommandResponse : ICommandResponse<GetAppManifestCommand>
     {
     
         

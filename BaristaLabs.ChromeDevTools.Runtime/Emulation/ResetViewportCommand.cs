@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     /// <summary>
     /// Resets the visible area of the page to the original viewport, undoing any effects of the <code>forceViewport</code> command.
     /// </summary>
-    public sealed class ResetViewportCommand : ICommand<ResetViewportCommandResponse>
+    public sealed class ResetViewportCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Emulation.resetViewport";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     
     }
 
-    public sealed class ResetViewportCommandResponse : ICommandResponse
+    public sealed class ResetViewportCommandResponse : ICommandResponse<ResetViewportCommand>
     {
     
     }

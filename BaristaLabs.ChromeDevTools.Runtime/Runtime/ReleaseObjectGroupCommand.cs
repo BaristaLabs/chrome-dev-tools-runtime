@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// Releases all remote objects that belong to a given group.
     /// </summary>
-    public sealed class ReleaseObjectGroupCommand : ICommand<ReleaseObjectGroupCommandResponse>
+    public sealed class ReleaseObjectGroupCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Runtime.releaseObjectGroup";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     
     }
 
-    public sealed class ReleaseObjectGroupCommandResponse : ICommandResponse
+    public sealed class ReleaseObjectGroupCommandResponse : ICommandResponse<ReleaseObjectGroupCommand>
     {
     
     }

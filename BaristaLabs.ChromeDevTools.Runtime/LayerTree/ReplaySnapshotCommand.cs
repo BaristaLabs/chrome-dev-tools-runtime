@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     /// <summary>
     /// Replays the layer snapshot and returns the resulting bitmap.
     /// </summary>
-    public sealed class ReplaySnapshotCommand : ICommand<ReplaySnapshotCommandResponse>
+    public sealed class ReplaySnapshotCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "LayerTree.replaySnapshot";
         
@@ -66,7 +66,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     
     }
 
-    public sealed class ReplaySnapshotCommandResponse : ICommandResponse
+    public sealed class ReplaySnapshotCommandResponse : ICommandResponse<ReplaySnapshotCommand>
     {
     
         

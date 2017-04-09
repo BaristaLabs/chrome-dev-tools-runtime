@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Retrieves a list of available targets.
     /// </summary>
-    public sealed class GetTargetsCommand : ICommand<GetTargetsCommandResponse>
+    public sealed class GetTargetsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Target.getTargets";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     
     }
 
-    public sealed class GetTargetsCommandResponse : ICommandResponse
+    public sealed class GetTargetsCommandResponse : ICommandResponse<GetTargetsCommand>
     {
     
         

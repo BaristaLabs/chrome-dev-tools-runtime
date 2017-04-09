@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Sets node HTML markup, returns new node id.
     /// </summary>
-    public sealed class SetOuterHTMLCommand : ICommand<SetOuterHTMLCommandResponse>
+    public sealed class SetOuterHTMLCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.setOuterHTML";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class SetOuterHTMLCommandResponse : ICommandResponse
+    public sealed class SetOuterHTMLCommandResponse : ICommandResponse<SetOuterHTMLCommand>
     {
     
     }

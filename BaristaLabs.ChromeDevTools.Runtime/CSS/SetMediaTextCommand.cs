@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Modifies the rule selector.
     /// </summary>
-    public sealed class SetMediaTextCommand : ICommand<SetMediaTextCommandResponse>
+    public sealed class SetMediaTextCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.setMediaText";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class SetMediaTextCommandResponse : ICommandResponse
+    public sealed class SetMediaTextCommandResponse : ICommandResponse<SetMediaTextCommand>
     {
     
         

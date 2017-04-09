@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Enables the selector recording.
     /// </summary>
-    public sealed class StartRuleUsageTrackingCommand : ICommand<StartRuleUsageTrackingCommandResponse>
+    public sealed class StartRuleUsageTrackingCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.startRuleUsageTracking";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class StartRuleUsageTrackingCommandResponse : ICommandResponse
+    public sealed class StartRuleUsageTrackingCommandResponse : ICommandResponse<StartRuleUsageTrackingCommand>
     {
     
     }

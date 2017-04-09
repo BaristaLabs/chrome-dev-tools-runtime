@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Searches for given string in resource content.
     /// </summary>
-    public sealed class SearchInResourceCommand : ICommand<SearchInResourceCommandResponse>
+    public sealed class SearchInResourceCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.searchInResource";
         
@@ -78,7 +78,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class SearchInResourceCommandResponse : ICommandResponse
+    public sealed class SearchInResourceCommandResponse : ICommandResponse<SearchInResourceCommand>
     {
     
         

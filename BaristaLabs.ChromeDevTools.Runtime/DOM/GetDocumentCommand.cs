@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Returns the root DOM node (and optionally the subtree) to the caller.
     /// </summary>
-    public sealed class GetDocumentCommand : ICommand<GetDocumentCommandResponse>
+    public sealed class GetDocumentCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.getDocument";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class GetDocumentCommandResponse : ICommandResponse
+    public sealed class GetDocumentCommandResponse : ICommandResponse<GetDocumentCommand>
     {
     
         

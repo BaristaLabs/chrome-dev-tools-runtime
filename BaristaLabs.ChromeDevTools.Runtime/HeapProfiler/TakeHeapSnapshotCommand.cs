@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     /// <summary>
     /// 
     /// </summary>
-    public sealed class TakeHeapSnapshotCommand : ICommand<TakeHeapSnapshotCommandResponse>
+    public sealed class TakeHeapSnapshotCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "HeapProfiler.takeHeapSnapshot";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     
     }
 
-    public sealed class TakeHeapSnapshotCommandResponse : ICommandResponse
+    public sealed class TakeHeapSnapshotCommandResponse : ICommandResponse<TakeHeapSnapshotCommand>
     {
     
     }

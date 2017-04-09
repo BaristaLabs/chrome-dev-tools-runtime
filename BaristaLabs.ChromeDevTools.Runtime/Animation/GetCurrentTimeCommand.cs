@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// <summary>
     /// Returns the current time of the an animation.
     /// </summary>
-    public sealed class GetCurrentTimeCommand : ICommand<GetCurrentTimeCommandResponse>
+    public sealed class GetCurrentTimeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Animation.getCurrentTime";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     
     }
 
-    public sealed class GetCurrentTimeCommandResponse : ICommandResponse
+    public sealed class GetCurrentTimeCommandResponse : ICommandResponse<GetCurrentTimeCommand>
     {
     
         

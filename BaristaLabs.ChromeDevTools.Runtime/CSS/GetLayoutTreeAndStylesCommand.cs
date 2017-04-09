@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// For the main document and any content documents, return the LayoutTreeNodes and a whitelisted subset of the computed style. It only returns pushed nodes, on way to pull all nodes is to call DOM.getDocument with a depth of -1.
     /// </summary>
-    public sealed class GetLayoutTreeAndStylesCommand : ICommand<GetLayoutTreeAndStylesCommandResponse>
+    public sealed class GetLayoutTreeAndStylesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.getLayoutTreeAndStyles";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class GetLayoutTreeAndStylesCommandResponse : ICommandResponse
+    public sealed class GetLayoutTreeAndStylesCommandResponse : ICommandResponse<GetLayoutTreeAndStylesCommand>
     {
     
         

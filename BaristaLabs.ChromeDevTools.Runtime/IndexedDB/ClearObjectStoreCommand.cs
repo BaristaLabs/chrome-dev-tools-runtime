@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
     /// <summary>
     /// Clears all entries from an object store.
     /// </summary>
-    public sealed class ClearObjectStoreCommand : ICommand<ClearObjectStoreCommandResponse>
+    public sealed class ClearObjectStoreCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "IndexedDB.clearObjectStore";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
     
     }
 
-    public sealed class ClearObjectStoreCommandResponse : ICommandResponse
+    public sealed class ClearObjectStoreCommandResponse : ICommandResponse<ClearObjectStoreCommand>
     {
     
     }

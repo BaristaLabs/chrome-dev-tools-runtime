@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Removes JavaScript breakpoint.
     /// </summary>
-    public sealed class RemoveBreakpointCommand : ICommand<RemoveBreakpointCommandResponse>
+    public sealed class RemoveBreakpointCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.removeBreakpoint";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class RemoveBreakpointCommandResponse : ICommandResponse
+    public sealed class RemoveBreakpointCommandResponse : ICommandResponse<RemoveBreakpointCommand>
     {
     
     }

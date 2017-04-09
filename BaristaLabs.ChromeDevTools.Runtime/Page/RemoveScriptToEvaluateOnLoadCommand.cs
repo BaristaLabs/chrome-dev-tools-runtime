@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// 
     /// </summary>
-    public sealed class RemoveScriptToEvaluateOnLoadCommand : ICommand<RemoveScriptToEvaluateOnLoadCommandResponse>
+    public sealed class RemoveScriptToEvaluateOnLoadCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.removeScriptToEvaluateOnLoad";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class RemoveScriptToEvaluateOnLoadCommandResponse : ICommandResponse
+    public sealed class RemoveScriptToEvaluateOnLoadCommandResponse : ICommandResponse<RemoveScriptToEvaluateOnLoadCommand>
     {
     
     }

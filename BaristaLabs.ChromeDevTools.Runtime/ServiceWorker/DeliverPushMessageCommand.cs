@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     /// <summary>
     /// 
     /// </summary>
-    public sealed class DeliverPushMessageCommand : ICommand<DeliverPushMessageCommandResponse>
+    public sealed class DeliverPushMessageCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "ServiceWorker.deliverPushMessage";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     
     }
 
-    public sealed class DeliverPushMessageCommandResponse : ICommandResponse
+    public sealed class DeliverPushMessageCommandResponse : ICommandResponse<DeliverPushMessageCommand>
     {
     
     }

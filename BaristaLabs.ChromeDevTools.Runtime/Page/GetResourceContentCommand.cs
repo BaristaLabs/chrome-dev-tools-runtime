@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Returns content of the given resource.
     /// </summary>
-    public sealed class GetResourceContentCommand : ICommand<GetResourceContentCommandResponse>
+    public sealed class GetResourceContentCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.getResourceContent";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class GetResourceContentCommandResponse : ICommandResponse
+    public sealed class GetResourceContentCommandResponse : ICommandResponse<GetResourceContentCommand>
     {
     
         

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
     /// <summary>
     /// Requests that backend shows paint rectangles
     /// </summary>
-    public sealed class SetShowPaintRectsCommand : ICommand<SetShowPaintRectsCommandResponse>
+    public sealed class SetShowPaintRectsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Rendering.setShowPaintRects";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
     
     }
 
-    public sealed class SetShowPaintRectsCommandResponse : ICommandResponse
+    public sealed class SetShowPaintRectsCommandResponse : ICommandResponse<SetShowPaintRectsCommand>
     {
     
     }

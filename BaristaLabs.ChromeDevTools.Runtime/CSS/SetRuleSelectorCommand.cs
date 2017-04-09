@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Modifies the rule selector.
     /// </summary>
-    public sealed class SetRuleSelectorCommand : ICommand<SetRuleSelectorCommandResponse>
+    public sealed class SetRuleSelectorCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.setRuleSelector";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class SetRuleSelectorCommandResponse : ICommandResponse
+    public sealed class SetRuleSelectorCommandResponse : ICommandResponse<SetRuleSelectorCommand>
     {
     
         

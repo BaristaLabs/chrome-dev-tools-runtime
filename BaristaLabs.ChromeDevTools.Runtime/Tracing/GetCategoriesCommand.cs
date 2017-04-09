@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     /// <summary>
     /// Gets supported tracing categories.
     /// </summary>
-    public sealed class GetCategoriesCommand : ICommand<GetCategoriesCommandResponse>
+    public sealed class GetCategoriesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Tracing.getCategories";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     
     }
 
-    public sealed class GetCategoriesCommandResponse : ICommandResponse
+    public sealed class GetCategoriesCommandResponse : ICommandResponse<GetCategoriesCommand>
     {
     
         

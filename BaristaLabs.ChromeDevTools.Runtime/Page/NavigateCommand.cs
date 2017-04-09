@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Navigates current page to the given URL.
     /// </summary>
-    public sealed class NavigateCommand : ICommand<NavigateCommandResponse>
+    public sealed class NavigateCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.navigate";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class NavigateCommandResponse : ICommandResponse
+    public sealed class NavigateCommandResponse : ICommandResponse<NavigateCommand>
     {
     
         

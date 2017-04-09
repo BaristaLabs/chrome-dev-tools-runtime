@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// 
     /// </summary>
-    public sealed class SetAttachToFramesCommand : ICommand<SetAttachToFramesCommandResponse>
+    public sealed class SetAttachToFramesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Target.setAttachToFrames";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     
     }
 
-    public sealed class SetAttachToFramesCommandResponse : ICommandResponse
+    public sealed class SetAttachToFramesCommandResponse : ICommandResponse<SetAttachToFramesCommand>
     {
     
     }

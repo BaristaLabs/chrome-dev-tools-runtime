@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// For testing.
     /// </summary>
-    public sealed class SetDataSizeLimitsForTestCommand : ICommand<SetDataSizeLimitsForTestCommandResponse>
+    public sealed class SetDataSizeLimitsForTestCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.setDataSizeLimitsForTest";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class SetDataSizeLimitsForTestCommandResponse : ICommandResponse
+    public sealed class SetDataSizeLimitsForTestCommandResponse : ICommandResponse<SetDataSizeLimitsForTestCommand>
     {
     
     }

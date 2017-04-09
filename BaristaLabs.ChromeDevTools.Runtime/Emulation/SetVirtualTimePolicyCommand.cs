@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     /// <summary>
     /// Turns on virtual time for all frames (replacing real-time with a synthetic time source) and sets the current virtual time policy.  Note this supersedes any previous time budget.
     /// </summary>
-    public sealed class SetVirtualTimePolicyCommand : ICommand<SetVirtualTimePolicyCommandResponse>
+    public sealed class SetVirtualTimePolicyCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Emulation.setVirtualTimePolicy";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     
     }
 
-    public sealed class SetVirtualTimePolicyCommandResponse : ICommandResponse
+    public sealed class SetVirtualTimePolicyCommandResponse : ICommandResponse<SetVirtualTimePolicyCommand>
     {
     
     }

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
     /// <summary>
     /// Close the stream, discard any temporary backing storage.
     /// </summary>
-    public sealed class CloseCommand : ICommand<CloseCommandResponse>
+    public sealed class CloseCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "IO.close";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
     
     }
 
-    public sealed class CloseCommandResponse : ICommandResponse
+    public sealed class CloseCommandResponse : ICommandResponse<CloseCommand>
     {
     
     }

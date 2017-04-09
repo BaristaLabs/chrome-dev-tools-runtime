@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Creates a new special "via-inspector" stylesheet in the frame with given <code>frameId</code>.
     /// </summary>
-    public sealed class CreateStyleSheetCommand : ICommand<CreateStyleSheetCommandResponse>
+    public sealed class CreateStyleSheetCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.createStyleSheet";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class CreateStyleSheetCommandResponse : ICommandResponse
+    public sealed class CreateStyleSheetCommandResponse : ICommandResponse<CreateStyleSheetCommand>
     {
     
         

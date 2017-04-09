@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     /// <summary>
     /// Enables console to refer to the node with given id via $x (see Command Line API for more details $x functions).
     /// </summary>
-    public sealed class AddInspectedHeapObjectCommand : ICommand<AddInspectedHeapObjectCommandResponse>
+    public sealed class AddInspectedHeapObjectCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "HeapProfiler.addInspectedHeapObject";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     
     }
 
-    public sealed class AddInspectedHeapObjectCommandResponse : ICommandResponse
+    public sealed class AddInspectedHeapObjectCommandResponse : ICommandResponse<AddInspectedHeapObjectCommand>
     {
     
     }

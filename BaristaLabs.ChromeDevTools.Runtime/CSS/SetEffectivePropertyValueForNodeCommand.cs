@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Find a rule with the given active property for the given node and set the new value for this property
     /// </summary>
-    public sealed class SetEffectivePropertyValueForNodeCommand : ICommand<SetEffectivePropertyValueForNodeCommandResponse>
+    public sealed class SetEffectivePropertyValueForNodeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.setEffectivePropertyValueForNode";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class SetEffectivePropertyValueForNodeCommandResponse : ICommandResponse
+    public sealed class SetEffectivePropertyValueForNodeCommandResponse : ICommandResponse<SetEffectivePropertyValueForNodeCommand>
     {
     
     }

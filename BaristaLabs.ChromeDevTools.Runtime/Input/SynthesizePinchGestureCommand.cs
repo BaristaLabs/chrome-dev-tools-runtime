@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     /// <summary>
     /// Synthesizes a pinch gesture over a time period by issuing appropriate touch events.
     /// </summary>
-    public sealed class SynthesizePinchGestureCommand : ICommand<SynthesizePinchGestureCommandResponse>
+    public sealed class SynthesizePinchGestureCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Input.synthesizePinchGesture";
         
@@ -78,7 +78,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     
     }
 
-    public sealed class SynthesizePinchGestureCommandResponse : ICommandResponse
+    public sealed class SynthesizePinchGestureCommandResponse : ICommandResponse<SynthesizePinchGestureCommand>
     {
     
     }

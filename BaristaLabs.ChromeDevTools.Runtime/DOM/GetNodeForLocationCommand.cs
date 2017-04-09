@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Returns node id at given location.
     /// </summary>
-    public sealed class GetNodeForLocationCommand : ICommand<GetNodeForLocationCommandResponse>
+    public sealed class GetNodeForLocationCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.getNodeForLocation";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class GetNodeForLocationCommandResponse : ICommandResponse
+    public sealed class GetNodeForLocationCommandResponse : ICommandResponse<GetNodeForLocationCommand>
     {
     
         

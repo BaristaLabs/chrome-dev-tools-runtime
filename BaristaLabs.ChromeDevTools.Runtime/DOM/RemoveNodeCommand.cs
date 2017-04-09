@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Removes node with given id.
     /// </summary>
-    public sealed class RemoveNodeCommand : ICommand<RemoveNodeCommandResponse>
+    public sealed class RemoveNodeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.removeNode";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class RemoveNodeCommandResponse : ICommandResponse
+    public sealed class RemoveNodeCommandResponse : ICommandResponse<RemoveNodeCommand>
     {
     
     }

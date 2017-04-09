@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
     /// <summary>
     /// Read a chunk of the stream
     /// </summary>
-    public sealed class ReadCommand : ICommand<ReadCommandResponse>
+    public sealed class ReadCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "IO.read";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
     
     }
 
-    public sealed class ReadCommandResponse : ICommandResponse
+    public sealed class ReadCommandResponse : ICommandResponse<ReadCommand>
     {
     
         

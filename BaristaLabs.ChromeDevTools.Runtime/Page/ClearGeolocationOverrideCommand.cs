@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Clears the overriden Geolocation Position and Error.
     /// </summary>
-    public sealed class ClearGeolocationOverrideCommand : ICommand<ClearGeolocationOverrideCommandResponse>
+    public sealed class ClearGeolocationOverrideCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.clearGeolocationOverride";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class ClearGeolocationOverrideCommandResponse : ICommandResponse
+    public sealed class ClearGeolocationOverrideCommandResponse : ICommandResponse<ClearGeolocationOverrideCommand>
     {
     
     }

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     /// <summary>
     /// 
     /// </summary>
-    public sealed class ProfileSnapshotCommand : ICommand<ProfileSnapshotCommandResponse>
+    public sealed class ProfileSnapshotCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "LayerTree.profileSnapshot";
         
@@ -66,7 +66,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     
     }
 
-    public sealed class ProfileSnapshotCommandResponse : ICommandResponse
+    public sealed class ProfileSnapshotCommandResponse : ICommandResponse<ProfileSnapshotCommand>
     {
     
         

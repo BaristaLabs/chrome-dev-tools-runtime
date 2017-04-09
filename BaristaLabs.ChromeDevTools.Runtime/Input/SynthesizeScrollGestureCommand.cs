@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     /// <summary>
     /// Synthesizes a scroll gesture over a time period by issuing appropriate touch events.
     /// </summary>
-    public sealed class SynthesizeScrollGestureCommand : ICommand<SynthesizeScrollGestureCommandResponse>
+    public sealed class SynthesizeScrollGestureCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Input.synthesizeScrollGesture";
         
@@ -162,7 +162,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     
     }
 
-    public sealed class SynthesizeScrollGestureCommandResponse : ICommandResponse
+    public sealed class SynthesizeScrollGestureCommandResponse : ICommandResponse<SynthesizeScrollGestureCommand>
     {
     
     }

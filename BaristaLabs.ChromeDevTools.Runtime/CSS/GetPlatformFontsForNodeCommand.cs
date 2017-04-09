@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Requests information about platform fonts which we used to render child TextNodes in the given node.
     /// </summary>
-    public sealed class GetPlatformFontsForNodeCommand : ICommand<GetPlatformFontsForNodeCommandResponse>
+    public sealed class GetPlatformFontsForNodeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.getPlatformFontsForNode";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class GetPlatformFontsForNodeCommandResponse : ICommandResponse
+    public sealed class GetPlatformFontsForNodeCommandResponse : ICommandResponse<GetPlatformFontsForNodeCommand>
     {
     
         

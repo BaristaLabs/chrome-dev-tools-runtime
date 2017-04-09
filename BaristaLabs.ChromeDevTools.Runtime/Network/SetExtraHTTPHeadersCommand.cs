@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Specifies whether to always send extra HTTP headers with the requests from this page.
     /// </summary>
-    public sealed class SetExtraHTTPHeadersCommand : ICommand<SetExtraHTTPHeadersCommandResponse>
+    public sealed class SetExtraHTTPHeadersCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.setExtraHTTPHeaders";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class SetExtraHTTPHeadersCommandResponse : ICommandResponse
+    public sealed class SetExtraHTTPHeadersCommandResponse : ICommandResponse<SetExtraHTTPHeadersCommand>
     {
     
     }

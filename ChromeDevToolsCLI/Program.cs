@@ -1,8 +1,6 @@
 ﻿namespace ChromeDevToolsCLI
 {
     using BaristaLabs.ChromeDevTools.Runtime;
-    using Page = BaristaLabs.ChromeDevTools.Runtime.Page;
-    using Runtime = BaristaLabs.ChromeDevTools.Runtime.Runtime;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Linq;
     using System;
@@ -10,8 +8,9 @@
     using System.IO;
     using System.Linq;
     using System.Net.Http;
-    using System.Threading;
     using System.Threading.Tasks;
+    using Page = BaristaLabs.ChromeDevTools.Runtime.Page;
+    using Runtime = BaristaLabs.ChromeDevTools.Runtime.Runtime;
 
     class Program
     {
@@ -26,18 +25,11 @@
 
             using (var session = new ChromeSession(sessions.Last()))
             {
-                session.SendCommand<Page.EnableCommand, Page.EnableCommandResponse>(new Page.EnableCommand()).GetAwaiter().GetResult();
-
-                session.Subscribe<Page.FrameNavigatedEvent>((e) =>
-                {
-                    Console.WriteLine($"Navigated to {e.Frame.Url}");
-                });
-
                 //Navigate to winamp.com
-                var navigateResult = session.SendCommand<Page.NavigateCommand, Page.NavigateCommandResponse>(new Page.NavigateCommand
+                var navigateResult = session.SendCommand(new Page.NavigateCommand
                 {
                     Url = "http://www.winamp.com"
-                }).GetAwaiter().GetResult();
+                }).GetAwaiter().GetResult().GetResponse<Page.NavigateCommandResponse>();
 
                 long executionContextId = -1;
 
@@ -55,15 +47,15 @@
                 });
 
                 //Enable the runtime so that execution context events are raised.
-                var result1 = session.SendCommand<Runtime.EnableCommand, Runtime.EnableCommandResponse>(new Runtime.EnableCommand()).GetAwaiter().GetResult();
+                var result1 = session.SendCommand(new Runtime.EnableCommand()).GetAwaiter().GetResult();
 
                 //Evaluate a complex answer.
-                var result2 = session.SendCommand<Runtime.EvaluateCommand, Runtime.EvaluateCommandResponse>(new Runtime.EvaluateCommand
+                var result2 = session.SendCommand(new Runtime.EvaluateCommand
                 {
                     ContextId = executionContextId,
                     ObjectGroup = "test123",
                     Expression = "6*7",
-                }).GetAwaiter().GetResult();
+                }).GetAwaiter().GetResult().GetResponse<Runtime.EvaluateCommandResponse>();
 
                 Console.WriteLine(result2.Result.Description);
             }

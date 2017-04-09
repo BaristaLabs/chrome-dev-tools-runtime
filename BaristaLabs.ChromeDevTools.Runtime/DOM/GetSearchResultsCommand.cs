@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Returns search results from given <code>fromIndex</code> to given <code>toIndex</code> from the sarch with the given identifier.
     /// </summary>
-    public sealed class GetSearchResultsCommand : ICommand<GetSearchResultsCommandResponse>
+    public sealed class GetSearchResultsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.getSearchResults";
         
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class GetSearchResultsCommandResponse : ICommandResponse
+    public sealed class GetSearchResultsCommandResponse : ICommandResponse<GetSearchResultsCommand>
     {
     
         

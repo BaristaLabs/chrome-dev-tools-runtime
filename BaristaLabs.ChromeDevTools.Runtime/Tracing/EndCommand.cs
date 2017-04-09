@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     /// <summary>
     /// Stop trace events collection.
     /// </summary>
-    public sealed class EndCommand : ICommand<EndCommandResponse>
+    public sealed class EndCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Tracing.end";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     
     }
 
-    public sealed class EndCommandResponse : ICommandResponse
+    public sealed class EndCommandResponse : ICommandResponse<EndCommand>
     {
     
     }

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Returns the id of the nearest ancestor that is a relayout boundary.
     /// </summary>
-    public sealed class GetRelayoutBoundaryCommand : ICommand<GetRelayoutBoundaryCommandResponse>
+    public sealed class GetRelayoutBoundaryCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.getRelayoutBoundary";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class GetRelayoutBoundaryCommandResponse : ICommandResponse
+    public sealed class GetRelayoutBoundaryCommandResponse : ICommandResponse<GetRelayoutBoundaryCommand>
     {
     
         

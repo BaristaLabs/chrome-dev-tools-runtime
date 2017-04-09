@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     /// <summary>
     /// 
     /// </summary>
-    public sealed class StopWorkerCommand : ICommand<StopWorkerCommandResponse>
+    public sealed class StopWorkerCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "ServiceWorker.stopWorker";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     
     }
 
-    public sealed class StopWorkerCommandResponse : ICommandResponse
+    public sealed class StopWorkerCommandResponse : ICommandResponse<StopWorkerCommand>
     {
     
     }

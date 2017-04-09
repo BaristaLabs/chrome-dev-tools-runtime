@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     /// <summary>
     /// 
     /// </summary>
-    public sealed class SetForceUpdateOnPageLoadCommand : ICommand<SetForceUpdateOnPageLoadCommandResponse>
+    public sealed class SetForceUpdateOnPageLoadCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "ServiceWorker.setForceUpdateOnPageLoad";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     
     }
 
-    public sealed class SetForceUpdateOnPageLoadCommandResponse : ICommandResponse
+    public sealed class SetForceUpdateOnPageLoadCommandResponse : ICommandResponse<SetForceUpdateOnPageLoadCommand>
     {
     
     }

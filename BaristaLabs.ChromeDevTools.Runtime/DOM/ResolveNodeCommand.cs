@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Resolves JavaScript node object for given node id.
     /// </summary>
-    public sealed class ResolveNodeCommand : ICommand<ResolveNodeCommandResponse>
+    public sealed class ResolveNodeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.resolveNode";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class ResolveNodeCommandResponse : ICommandResponse
+    public sealed class ResolveNodeCommandResponse : ICommandResponse<ResolveNodeCommand>
     {
     
         

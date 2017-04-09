@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Schema
     /// <summary>
     /// Returns supported domains.
     /// </summary>
-    public sealed class GetDomainsCommand : ICommand<GetDomainsCommandResponse>
+    public sealed class GetDomainsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Schema.getDomains";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Schema
     
     }
 
-    public sealed class GetDomainsCommandResponse : ICommandResponse
+    public sealed class GetDomainsCommandResponse : ICommandResponse<GetDomainsCommand>
     {
     
         

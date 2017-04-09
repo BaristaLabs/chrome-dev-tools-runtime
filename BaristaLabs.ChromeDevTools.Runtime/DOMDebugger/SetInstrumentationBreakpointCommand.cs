@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     /// <summary>
     /// Sets breakpoint on particular native event.
     /// </summary>
-    public sealed class SetInstrumentationBreakpointCommand : ICommand<SetInstrumentationBreakpointCommandResponse>
+    public sealed class SetInstrumentationBreakpointCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOMDebugger.setInstrumentationBreakpoint";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     
     }
 
-    public sealed class SetInstrumentationBreakpointCommandResponse : ICommandResponse
+    public sealed class SetInstrumentationBreakpointCommandResponse : ICommandResponse<SetInstrumentationBreakpointCommand>
     {
     
     }

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     /// <summary>
     /// Tells whether emulation is supported.
     /// </summary>
-    public sealed class CanEmulateCommand : ICommand<CanEmulateCommandResponse>
+    public sealed class CanEmulateCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Emulation.canEmulate";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     
     }
 
-    public sealed class CanEmulateCommandResponse : ICommandResponse
+    public sealed class CanEmulateCommandResponse : ICommandResponse<CanEmulateCommand>
     {
     
         

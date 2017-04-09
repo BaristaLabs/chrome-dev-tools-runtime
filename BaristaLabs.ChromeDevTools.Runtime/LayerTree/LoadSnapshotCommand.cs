@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     /// <summary>
     /// Returns the snapshot identifier.
     /// </summary>
-    public sealed class LoadSnapshotCommand : ICommand<LoadSnapshotCommandResponse>
+    public sealed class LoadSnapshotCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "LayerTree.loadSnapshot";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     
     }
 
-    public sealed class LoadSnapshotCommandResponse : ICommandResponse
+    public sealed class LoadSnapshotCommandResponse : ICommandResponse<LoadSnapshotCommand>
     {
     
         

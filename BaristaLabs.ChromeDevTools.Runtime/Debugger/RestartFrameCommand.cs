@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Restarts particular call frame from the beginning.
     /// </summary>
-    public sealed class RestartFrameCommand : ICommand<RestartFrameCommandResponse>
+    public sealed class RestartFrameCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.restartFrame";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class RestartFrameCommandResponse : ICommandResponse
+    public sealed class RestartFrameCommandResponse : ICommandResponse<RestartFrameCommand>
     {
     
         

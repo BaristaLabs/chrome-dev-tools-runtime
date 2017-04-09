@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// <summary>
     /// Sets the paused state of a set of animations.
     /// </summary>
-    public sealed class SetPausedCommand : ICommand<SetPausedCommandResponse>
+    public sealed class SetPausedCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Animation.setPaused";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     
     }
 
-    public sealed class SetPausedCommandResponse : ICommandResponse
+    public sealed class SetPausedCommandResponse : ICommandResponse<SetPausedCommand>
     {
     
     }

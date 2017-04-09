@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Clears the overridden Device Orientation.
     /// </summary>
-    public sealed class ClearDeviceOrientationOverrideCommand : ICommand<ClearDeviceOrientationOverrideCommandResponse>
+    public sealed class ClearDeviceOrientationOverrideCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.clearDeviceOrientationOverride";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class ClearDeviceOrientationOverrideCommandResponse : ICommandResponse
+    public sealed class ClearDeviceOrientationOverrideCommandResponse : ICommandResponse<ClearDeviceOrientationOverrideCommand>
     {
     
     }

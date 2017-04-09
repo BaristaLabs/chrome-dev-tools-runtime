@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// Evaluates expression on global object.
     /// </summary>
-    public sealed class EvaluateCommand : ICommand<EvaluateCommandResponse>
+    public sealed class EvaluateCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Runtime.evaluate";
         
@@ -126,7 +126,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     
     }
 
-    public sealed class EvaluateCommandResponse : ICommandResponse
+    public sealed class EvaluateCommandResponse : ICommandResponse<EvaluateCommand>
     {
     
         

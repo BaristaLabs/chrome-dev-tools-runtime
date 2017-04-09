@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Capture page screenshot.
     /// </summary>
-    public sealed class CaptureScreenshotCommand : ICommand<CaptureScreenshotCommandResponse>
+    public sealed class CaptureScreenshotCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.captureScreenshot";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class CaptureScreenshotCommandResponse : ICommandResponse
+    public sealed class CaptureScreenshotCommandResponse : ICommandResponse<CaptureScreenshotCommand>
     {
     
         

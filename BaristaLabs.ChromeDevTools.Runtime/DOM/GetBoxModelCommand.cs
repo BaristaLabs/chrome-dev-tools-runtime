@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Returns boxes for the currently selected nodes.
     /// </summary>
-    public sealed class GetBoxModelCommand : ICommand<GetBoxModelCommandResponse>
+    public sealed class GetBoxModelCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.getBoxModel";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class GetBoxModelCommandResponse : ICommandResponse
+    public sealed class GetBoxModelCommandResponse : ICommandResponse<GetBoxModelCommand>
     {
     
         

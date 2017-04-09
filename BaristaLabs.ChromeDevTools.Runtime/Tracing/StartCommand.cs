@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     /// <summary>
     /// Start trace events collection.
     /// </summary>
-    public sealed class StartCommand : ICommand<StartCommandResponse>
+    public sealed class StartCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Tracing.start";
         
@@ -78,7 +78,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     
     }
 
-    public sealed class StartCommandResponse : ICommandResponse
+    public sealed class StartCommandResponse : ICommandResponse<StartCommand>
     {
     
     }

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Closes the target. If the target is a page that gets closed too.
     /// </summary>
-    public sealed class CloseTargetCommand : ICommand<CloseTargetCommandResponse>
+    public sealed class CloseTargetCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Target.closeTarget";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     
     }
 
-    public sealed class CloseTargetCommandResponse : ICommandResponse
+    public sealed class CloseTargetCommandResponse : ICommandResponse<CloseTargetCommand>
     {
     
         

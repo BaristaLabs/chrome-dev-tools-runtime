@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
     /// <summary>
     /// Returns information about the system.
     /// </summary>
-    public sealed class GetInfoCommand : ICommand<GetInfoCommandResponse>
+    public sealed class GetInfoCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "SystemInfo.getInfo";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
     
     }
 
-    public sealed class GetInfoCommandResponse : ICommandResponse
+    public sealed class GetInfoCommandResponse : ICommandResponse<GetInfoCommand>
     {
     
         

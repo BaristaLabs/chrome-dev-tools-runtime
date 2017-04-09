@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Returns source for the script with given id.
     /// </summary>
-    public sealed class GetScriptSourceCommand : ICommand<GetScriptSourceCommandResponse>
+    public sealed class GetScriptSourceCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.getScriptSource";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class GetScriptSourceCommandResponse : ICommandResponse
+    public sealed class GetScriptSourceCommandResponse : ICommandResponse<GetScriptSourceCommand>
     {
     
         

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Clears browser cookies.
     /// </summary>
-    public sealed class ClearBrowserCookiesCommand : ICommand<ClearBrowserCookiesCommandResponse>
+    public sealed class ClearBrowserCookiesCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Network.clearBrowserCookies";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     
     }
 
-    public sealed class ClearBrowserCookiesCommandResponse : ICommandResponse
+    public sealed class ClearBrowserCookiesCommandResponse : ICommandResponse<ClearBrowserCookiesCommand>
     {
     
     }

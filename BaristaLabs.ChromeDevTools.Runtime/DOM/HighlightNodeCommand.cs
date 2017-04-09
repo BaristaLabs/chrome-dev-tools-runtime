@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Highlights DOM node with given id or with the given JavaScript object wrapper. Either nodeId or objectId must be specified.
     /// </summary>
-    public sealed class HighlightNodeCommand : ICommand<HighlightNodeCommandResponse>
+    public sealed class HighlightNodeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.highlightNode";
         
@@ -66,7 +66,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class HighlightNodeCommandResponse : ICommandResponse
+    public sealed class HighlightNodeCommandResponse : ICommandResponse<HighlightNodeCommand>
     {
     
     }

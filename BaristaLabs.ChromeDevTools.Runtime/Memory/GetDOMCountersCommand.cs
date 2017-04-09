@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
     /// <summary>
     /// 
     /// </summary>
-    public sealed class GetDOMCountersCommand : ICommand<GetDOMCountersCommandResponse>
+    public sealed class GetDOMCountersCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Memory.getDOMCounters";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
     
     }
 
-    public sealed class GetDOMCountersCommandResponse : ICommandResponse
+    public sealed class GetDOMCountersCommandResponse : ICommandResponse<GetDOMCountersCommand>
     {
     
         

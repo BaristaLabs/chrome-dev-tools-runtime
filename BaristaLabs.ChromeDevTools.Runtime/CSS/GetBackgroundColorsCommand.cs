@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// 
     /// </summary>
-    public sealed class GetBackgroundColorsCommand : ICommand<GetBackgroundColorsCommandResponse>
+    public sealed class GetBackgroundColorsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.getBackgroundColors";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class GetBackgroundColorsCommandResponse : ICommandResponse
+    public sealed class GetBackgroundColorsCommandResponse : ICommandResponse<GetBackgroundColorsCommand>
     {
     
         

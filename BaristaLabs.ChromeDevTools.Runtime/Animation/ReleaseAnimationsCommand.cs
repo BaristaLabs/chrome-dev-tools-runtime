@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// <summary>
     /// Releases a set of animations to no longer be manipulated.
     /// </summary>
-    public sealed class ReleaseAnimationsCommand : ICommand<ReleaseAnimationsCommandResponse>
+    public sealed class ReleaseAnimationsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Animation.releaseAnimations";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     
     }
 
-    public sealed class ReleaseAnimationsCommandResponse : ICommandResponse
+    public sealed class ReleaseAnimationsCommandResponse : ICommandResponse<ReleaseAnimationsCommand>
     {
     
     }

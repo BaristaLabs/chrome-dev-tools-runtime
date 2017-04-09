@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     /// <summary>
     /// Returns event listeners of the given object.
     /// </summary>
-    public sealed class GetEventListenersCommand : ICommand<GetEventListenersCommandResponse>
+    public sealed class GetEventListenersCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOMDebugger.getEventListeners";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     
     }
 
-    public sealed class GetEventListenersCommandResponse : ICommandResponse
+    public sealed class GetEventListenersCommandResponse : ICommandResponse<GetEventListenersCommand>
     {
     
         

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Enables or disables async call stacks tracking.
     /// </summary>
-    public sealed class SetAsyncCallStackDepthCommand : ICommand<SetAsyncCallStackDepthCommandResponse>
+    public sealed class SetAsyncCallStackDepthCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.setAsyncCallStackDepth";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class SetAsyncCallStackDepthCommandResponse : ICommandResponse
+    public sealed class SetAsyncCallStackDepthCommandResponse : ICommandResponse<SetAsyncCallStackDepthCommand>
     {
     
     }

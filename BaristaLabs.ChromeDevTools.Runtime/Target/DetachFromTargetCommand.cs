@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Detaches from the target with given id.
     /// </summary>
-    public sealed class DetachFromTargetCommand : ICommand<DetachFromTargetCommandResponse>
+    public sealed class DetachFromTargetCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Target.detachFromTarget";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     
     }
 
-    public sealed class DetachFromTargetCommandResponse : ICommandResponse
+    public sealed class DetachFromTargetCommandResponse : ICommandResponse<DetachFromTargetCommand>
     {
     
     }

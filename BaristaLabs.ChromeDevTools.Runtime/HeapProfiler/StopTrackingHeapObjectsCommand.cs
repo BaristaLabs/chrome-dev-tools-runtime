@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     /// <summary>
     /// 
     /// </summary>
-    public sealed class StopTrackingHeapObjectsCommand : ICommand<StopTrackingHeapObjectsCommandResponse>
+    public sealed class StopTrackingHeapObjectsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "HeapProfiler.stopTrackingHeapObjects";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     
     }
 
-    public sealed class StopTrackingHeapObjectsCommandResponse : ICommandResponse
+    public sealed class StopTrackingHeapObjectsCommandResponse : ICommandResponse<StopTrackingHeapObjectsCommand>
     {
     
     }

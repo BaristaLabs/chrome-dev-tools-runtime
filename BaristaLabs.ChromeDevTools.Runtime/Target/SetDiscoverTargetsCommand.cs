@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// <summary>
     /// Controls whether to discover available targets and notify via <code>targetCreated/targetDestroyed</code> events.
     /// </summary>
-    public sealed class SetDiscoverTargetsCommand : ICommand<SetDiscoverTargetsCommandResponse>
+    public sealed class SetDiscoverTargetsCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Target.setDiscoverTargets";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     
     }
 
-    public sealed class SetDiscoverTargetsCommandResponse : ICommandResponse
+    public sealed class SetDiscoverTargetsCommandResponse : ICommandResponse<SetDiscoverTargetsCommand>
     {
     
     }

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     /// <summary>
     /// Record a clock sync marker in the trace.
     /// </summary>
-    public sealed class RecordClockSyncMarkerCommand : ICommand<RecordClockSyncMarkerCommandResponse>
+    public sealed class RecordClockSyncMarkerCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Tracing.recordClockSyncMarker";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     
     }
 
-    public sealed class RecordClockSyncMarkerCommandResponse : ICommandResponse
+    public sealed class RecordClockSyncMarkerCommandResponse : ICommandResponse<RecordClockSyncMarkerCommand>
     {
     
     }

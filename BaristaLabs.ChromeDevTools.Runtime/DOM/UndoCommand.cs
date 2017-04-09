@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// <summary>
     /// Undoes the last performed action.
     /// </summary>
-    public sealed class UndoCommand : ICommand<UndoCommandResponse>
+    public sealed class UndoCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "DOM.undo";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     
     }
 
-    public sealed class UndoCommandResponse : ICommandResponse
+    public sealed class UndoCommandResponse : ICommandResponse<UndoCommand>
     {
     
     }

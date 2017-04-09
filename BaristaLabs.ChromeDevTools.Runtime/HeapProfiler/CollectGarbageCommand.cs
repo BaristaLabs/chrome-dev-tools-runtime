@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     /// <summary>
     /// 
     /// </summary>
-    public sealed class CollectGarbageCommand : ICommand<CollectGarbageCommandResponse>
+    public sealed class CollectGarbageCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "HeapProfiler.collectGarbage";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     
     }
 
-    public sealed class CollectGarbageCommandResponse : ICommandResponse
+    public sealed class CollectGarbageCommandResponse : ICommandResponse<CollectGarbageCommand>
     {
     
     }

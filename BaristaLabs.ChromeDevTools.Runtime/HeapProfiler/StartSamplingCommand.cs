@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     /// <summary>
     /// 
     /// </summary>
-    public sealed class StartSamplingCommand : ICommand<StartSamplingCommandResponse>
+    public sealed class StartSamplingCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "HeapProfiler.startSampling";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     
     }
 
-    public sealed class StartSamplingCommandResponse : ICommandResponse
+    public sealed class StartSamplingCommandResponse : ICommandResponse<StartSamplingCommand>
     {
     
     }

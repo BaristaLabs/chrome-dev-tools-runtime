@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// <summary>
     /// Accepts or dismisses a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload).
     /// </summary>
-    public sealed class HandleJavaScriptDialogCommand : ICommand<HandleJavaScriptDialogCommandResponse>
+    public sealed class HandleJavaScriptDialogCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Page.handleJavaScriptDialog";
         
@@ -42,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
     }
 
-    public sealed class HandleJavaScriptDialogCommandResponse : ICommandResponse
+    public sealed class HandleJavaScriptDialogCommandResponse : ICommandResponse<HandleJavaScriptDialogCommand>
     {
     
     }

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// <summary>
     /// Continues execution until specific location is reached.
     /// </summary>
-    public sealed class ContinueToLocationCommand : ICommand<ContinueToLocationCommandResponse>
+    public sealed class ContinueToLocationCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Debugger.continueToLocation";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     
     }
 
-    public sealed class ContinueToLocationCommandResponse : ICommandResponse
+    public sealed class ContinueToLocationCommandResponse : ICommandResponse<ContinueToLocationCommand>
     {
     
     }

@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// <summary>
     /// Tells inspected instance to run if it was waiting for debugger to attach.
     /// </summary>
-    public sealed class RunIfWaitingForDebuggerCommand : ICommand<RunIfWaitingForDebuggerCommandResponse>
+    public sealed class RunIfWaitingForDebuggerCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "Runtime.runIfWaitingForDebugger";
         
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     
     }
 
-    public sealed class RunIfWaitingForDebuggerCommandResponse : ICommandResponse
+    public sealed class RunIfWaitingForDebuggerCommandResponse : ICommandResponse<RunIfWaitingForDebuggerCommand>
     {
     
     }

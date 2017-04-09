@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// <summary>
     /// Returns the styles defined inline (explicitly in the "style" attribute and implicitly, using DOM attributes) for a DOM node identified by <code>nodeId</code>.
     /// </summary>
-    public sealed class GetInlineStylesForNodeCommand : ICommand<GetInlineStylesForNodeCommandResponse>
+    public sealed class GetInlineStylesForNodeCommand : ICommand
     {
         private const string ChromeRemoteInterface_CommandName = "CSS.getInlineStylesForNode";
         
@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     
     }
 
-    public sealed class GetInlineStylesForNodeCommandResponse : ICommandResponse
+    public sealed class GetInlineStylesForNodeCommandResponse : ICommandResponse<GetInlineStylesForNodeCommand>
     {
     
         
