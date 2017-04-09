@@ -15,6 +15,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         }
     }
 
+    /// <summary>
+    /// Represents a response to a command submitted by the Chrome Remote Interface
+    ///</summary>
     public interface ICommandResponse
     {
     }

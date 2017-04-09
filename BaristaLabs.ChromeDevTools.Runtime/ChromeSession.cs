@@ -4,7 +4,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime
     using Newtonsoft.Json.Linq;
     using System;
     using System.Collections.Concurrent;
-    using System.Reflection;
     using System.Threading;
     using System.Threading.Tasks;
     using WebSocket4Net;
@@ -157,7 +156,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
 
         private void Ws_Error(object sender, SuperSocket.ClientEngine.ErrorEventArgs e)
         {
-            
+            throw e.Exception;
         }
 
         private void Ws_MessageReceived(object sender, MessageReceivedEventArgs e)
@@ -200,7 +199,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         #region IDisposable Support
         private bool m_isDisposed = false;
 
-        void Dispose(bool disposing)
+        private void Dispose(bool disposing)
         {
             if (!m_isDisposed)
             {
@@ -231,7 +230,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime
                 m_isDisposed = true;
             }
         }
-
+        
+        /// <summary>
+        /// Disposes of the ChromeSession and frees all resources.
+        ///</summary>
         public void Dispose()
         {
             Dispose(true);
