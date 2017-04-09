@@ -23,7 +23,7 @@
 
             var sessions = GetSessions("http://localhost:9223/").GetAwaiter().GetResult();
 
-            using (var session = new ChromeSession(sessions.Last()))
+            using (var session = new ChromeSession(sessions.Last().WebSocketDebuggerUrl))
             {
                 //Navigate to winamp.com
                 var navigateResult = session.SendCommand(new Page.NavigateCommand
@@ -61,27 +61,14 @@
             }
         }
 
-        public static async Task<string[]> GetSessions(string url)
+        public static async Task<ICollection<ChromeSessionInfo>> GetSessions(string chromeUrl)
         {
-            var remoteSessionUrls = new List<string>();
-            var webClient = new HttpClient();
-            var uriBuilder = new UriBuilder(url);
-            uriBuilder.Path = "/json";
-            var remoteSessions = await webClient.GetStringAsync(uriBuilder.Uri);
-            using (var stringReader = new StringReader(remoteSessions))
-            using (var jsonReader = new JsonTextReader(stringReader))
+            using (var webClient = new HttpClient())
             {
-                 var sessionsObject = JToken.ReadFrom(jsonReader) as JArray;
-                foreach (var sessionObject in sessionsObject)
-                {
-                    var webSocketDebuggerToken = sessionObject["webSocketDebuggerUrl"];
-                    if (webSocketDebuggerToken != null)
-                    {
-                        remoteSessionUrls.Add(webSocketDebuggerToken.Value<string>());
-                    }
-                }
+                webClient.BaseAddress = new Uri(chromeUrl);
+                var remoteSessions = await webClient.GetStringAsync("/json");
+                return JsonConvert.DeserializeObject<ICollection<ChromeSessionInfo>>(remoteSessions);
             }
-            return remoteSessionUrls.ToArray();
         }
     }
 }
