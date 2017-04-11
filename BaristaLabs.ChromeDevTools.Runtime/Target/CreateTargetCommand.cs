@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// </summary>
         
         [JsonProperty("width")]
-        public long Width
+        public long? Width
         {
             get;
             set;
@@ -46,7 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// </summary>
         
         [JsonProperty("height")]
-        public long Height
+        public long? Height
         {
             get;
             set;

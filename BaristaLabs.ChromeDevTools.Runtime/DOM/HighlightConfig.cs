@@ -9,7 +9,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Whether the node info tooltip should be shown (default: false).
         ///</summary>
-        public bool ShowInfo
+        public bool? ShowInfo
         {
             get;
             set;
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Whether the rulers should be shown (default: false).
         ///</summary>
-        public bool ShowRulers
+        public bool? ShowRulers
         {
             get;
             set;
@@ -27,7 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Whether the extension lines from node to the rulers should be shown (default: false).
         ///</summary>
-        public bool ShowExtensionLines
+        public bool? ShowExtensionLines
         {
             get;
             set;
@@ -36,7 +36,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// 
         ///</summary>
-        public bool DisplayAsMaterial
+        public bool? DisplayAsMaterial
         {
             get;
             set;

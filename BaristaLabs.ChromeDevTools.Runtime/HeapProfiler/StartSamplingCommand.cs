@@ -22,7 +22,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         /// </summary>
         
         [JsonProperty("samplingInterval")]
-        public double SamplingInterval
+        public double? SamplingInterval
         {
             get;
             set;

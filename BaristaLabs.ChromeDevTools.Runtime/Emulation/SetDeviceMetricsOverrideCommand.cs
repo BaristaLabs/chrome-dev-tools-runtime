@@ -82,7 +82,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         /// </summary>
         
         [JsonProperty("scale")]
-        public double Scale
+        public double? Scale
         {
             get;
             set;
@@ -94,7 +94,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         /// </summary>
         
         [JsonProperty("offsetX")]
-        public double OffsetX
+        public double? OffsetX
         {
             get;
             set;
@@ -106,7 +106,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         /// </summary>
         
         [JsonProperty("offsetY")]
-        public double OffsetY
+        public double? OffsetY
         {
             get;
             set;
@@ -118,7 +118,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         /// </summary>
         
         [JsonProperty("screenWidth")]
-        public long ScreenWidth
+        public long? ScreenWidth
         {
             get;
             set;
@@ -130,7 +130,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         /// </summary>
         
         [JsonProperty("screenHeight")]
-        public long ScreenHeight
+        public long? ScreenHeight
         {
             get;
             set;
@@ -142,7 +142,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         /// </summary>
         
         [JsonProperty("positionX")]
-        public long PositionX
+        public long? PositionX
         {
             get;
             set;
@@ -154,7 +154,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         /// </summary>
         
         [JsonProperty("positionY")]
-        public long PositionY
+        public long? PositionY
         {
             get;
             set;

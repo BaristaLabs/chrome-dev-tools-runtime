@@ -22,7 +22,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         /// </summary>
         
         [JsonProperty("trackAllocations")]
-        public bool TrackAllocations
+        public bool? TrackAllocations
         {
             get;
             set;

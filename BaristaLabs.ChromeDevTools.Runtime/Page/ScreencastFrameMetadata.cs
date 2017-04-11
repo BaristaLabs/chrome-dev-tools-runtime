@@ -63,7 +63,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Frame swap timestamp.
         ///</summary>
-        public double Timestamp
+        public double? Timestamp
         {
             get;
             set;

@@ -22,7 +22,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// </summary>
         
         [JsonProperty("depth")]
-        public long Depth
+        public long? Depth
         {
             get;
             set;
@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// </summary>
         
         [JsonProperty("pierce")]
-        public bool Pierce
+        public bool? Pierce
         {
             get;
             set;

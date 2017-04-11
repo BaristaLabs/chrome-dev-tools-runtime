@@ -1,13 +1,16 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Storage
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Enum of possible storage types.
     /// </summary>
+    [JsonConverter(typeof(StringClassConverter))]
     public sealed class StorageType
     {
         private string m_value;
-
-        private StorageType(string value)
+        
+        public StorageType(string value)
         {
             m_value = value;
         }
@@ -15,6 +18,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
         public override string ToString()
         {
             return m_value;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return m_value.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return m_value.GetHashCode();
         }
 
     

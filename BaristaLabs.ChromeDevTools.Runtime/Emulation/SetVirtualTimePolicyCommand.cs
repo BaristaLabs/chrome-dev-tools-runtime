@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         /// </summary>
         
         [JsonProperty("budget")]
-        public long Budget
+        public long? Budget
         {
             get;
             set;

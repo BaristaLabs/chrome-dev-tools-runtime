@@ -46,7 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("xDistance")]
-        public long XDistance
+        public long? XDistance
         {
             get;
             set;
@@ -58,7 +58,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("yDistance")]
-        public long YDistance
+        public long? YDistance
         {
             get;
             set;
@@ -70,7 +70,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("xOverscroll")]
-        public long XOverscroll
+        public long? XOverscroll
         {
             get;
             set;
@@ -82,7 +82,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("yOverscroll")]
-        public long YOverscroll
+        public long? YOverscroll
         {
             get;
             set;
@@ -94,7 +94,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("preventFling")]
-        public bool PreventFling
+        public bool? PreventFling
         {
             get;
             set;
@@ -106,7 +106,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("speed")]
-        public long Speed
+        public long? Speed
         {
             get;
             set;
@@ -130,7 +130,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("repeatCount")]
-        public long RepeatCount
+        public long? RepeatCount
         {
             get;
             set;
@@ -142,7 +142,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("repeatDelayMs")]
-        public long RepeatDelayMs
+        public long? RepeatDelayMs
         {
             get;
             set;

@@ -1,13 +1,16 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Page
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Resource type as it was perceived by the rendering engine.
     /// </summary>
+    [JsonConverter(typeof(StringClassConverter))]
     public sealed class ResourceType
     {
         private string m_value;
-
-        private ResourceType(string value)
+        
+        public ResourceType(string value)
         {
             m_value = value;
         }
@@ -15,6 +18,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         public override string ToString()
         {
             return m_value;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return m_value.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return m_value.GetHashCode();
         }
 
     

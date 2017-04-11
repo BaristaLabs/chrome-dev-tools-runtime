@@ -82,7 +82,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// </summary>
         
         [JsonProperty("secure")]
-        public bool Secure
+        public bool? Secure
         {
             get;
             set;
@@ -94,7 +94,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// </summary>
         
         [JsonProperty("httpOnly")]
-        public bool HttpOnly
+        public bool? HttpOnly
         {
             get;
             set;

@@ -46,7 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// </summary>
         
         [JsonProperty("dryRun")]
-        public bool DryRun
+        public bool? DryRun
         {
             get;
             set;
@@ -75,7 +75,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         ///</summary>
         
         [JsonProperty("stackChanged")]
-        public bool StackChanged
+        public bool? StackChanged
         {
             get;
             set;

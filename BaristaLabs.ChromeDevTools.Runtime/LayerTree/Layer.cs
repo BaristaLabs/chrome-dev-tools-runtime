@@ -27,7 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// The backend id for the node associated with this layer.
         ///</summary>
-        public long BackendNodeId
+        public long? BackendNodeId
         {
             get;
             set;
@@ -81,7 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Transform anchor point X, absent if no transform specified
         ///</summary>
-        public double AnchorX
+        public double? AnchorX
         {
             get;
             set;
@@ -90,7 +90,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Transform anchor point Y, absent if no transform specified
         ///</summary>
-        public double AnchorY
+        public double? AnchorY
         {
             get;
             set;
@@ -99,7 +99,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Transform anchor point Z, absent if no transform specified
         ///</summary>
-        public double AnchorZ
+        public double? AnchorZ
         {
             get;
             set;
@@ -126,7 +126,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Set if layer is not visible.
         ///</summary>
-        public bool Invisible
+        public bool? Invisible
         {
             get;
             set;

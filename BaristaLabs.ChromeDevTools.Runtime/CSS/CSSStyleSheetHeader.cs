@@ -63,7 +63,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// The backend id for the owner node of the stylesheet.
         ///</summary>
-        public long OwnerNode
+        public long? OwnerNode
         {
             get;
             set;
@@ -81,7 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Whether the sourceURL field value comes from the sourceURL comment.
         ///</summary>
-        public bool HasSourceURL
+        public bool? HasSourceURL
         {
             get;
             set;

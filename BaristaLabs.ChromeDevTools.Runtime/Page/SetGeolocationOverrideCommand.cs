@@ -22,7 +22,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// </summary>
         
         [JsonProperty("latitude")]
-        public double Latitude
+        public double? Latitude
         {
             get;
             set;
@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// </summary>
         
         [JsonProperty("longitude")]
-        public double Longitude
+        public double? Longitude
         {
             get;
             set;
@@ -46,7 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// </summary>
         
         [JsonProperty("accuracy")]
-        public double Accuracy
+        public double? Accuracy
         {
             get;
             set;

@@ -11,7 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// A number in range [0..1] that indicates the used size of event buffer as a fraction of its total size.
         /// </summary>
         
-        public double PercentFull
+        public double? PercentFull
         {
             get;
             set;
@@ -22,7 +22,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// An approximate number of events in the trace log.
         /// </summary>
         
-        public double EventCount
+        public double? EventCount
         {
             get;
             set;
@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// A number in range [0..1] that indicates the used size of event buffer as a fraction of its total size.
         /// </summary>
         
-        public double Value
+        public double? Value
         {
             get;
             set;

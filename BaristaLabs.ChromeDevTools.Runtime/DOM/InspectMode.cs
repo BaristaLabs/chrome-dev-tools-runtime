@@ -1,13 +1,16 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
+    [JsonConverter(typeof(StringClassConverter))]
     public sealed class InspectMode
     {
         private string m_value;
-
-        private InspectMode(string value)
+        
+        public InspectMode(string value)
         {
             m_value = value;
         }
@@ -15,6 +18,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         public override string ToString()
         {
             return m_value;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return m_value.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return m_value.GetHashCode();
         }
 
     

@@ -22,7 +22,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// </summary>
         
         [JsonProperty("maxTotalBufferSize")]
-        public long MaxTotalBufferSize
+        public long? MaxTotalBufferSize
         {
             get;
             set;
@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// </summary>
         
         [JsonProperty("maxResourceBufferSize")]
-        public long MaxResourceBufferSize
+        public long? MaxResourceBufferSize
         {
             get;
             set;

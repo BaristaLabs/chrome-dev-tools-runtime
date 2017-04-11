@@ -108,7 +108,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Remote port.
         ///</summary>
-        public long RemotePort
+        public long? RemotePort
         {
             get;
             set;
@@ -117,7 +117,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Specifies that the request was served from the disk cache.
         ///</summary>
-        public bool FromDiskCache
+        public bool? FromDiskCache
         {
             get;
             set;
@@ -126,7 +126,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Specifies that the request was served from the ServiceWorker.
         ///</summary>
-        public bool FromServiceWorker
+        public bool? FromServiceWorker
         {
             get;
             set;

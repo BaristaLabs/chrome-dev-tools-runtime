@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// </summary>
         
         [JsonProperty("fetchRelatives")]
-        public bool FetchRelatives
+        public bool? FetchRelatives
         {
             get;
             set;

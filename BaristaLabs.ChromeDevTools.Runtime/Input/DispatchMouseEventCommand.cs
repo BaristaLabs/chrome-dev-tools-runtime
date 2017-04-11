@@ -58,7 +58,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("modifiers")]
-        public long Modifiers
+        public long? Modifiers
         {
             get;
             set;
@@ -70,7 +70,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("timestamp")]
-        public double Timestamp
+        public double? Timestamp
         {
             get;
             set;
@@ -94,7 +94,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("clickCount")]
-        public long ClickCount
+        public long? ClickCount
         {
             get;
             set;

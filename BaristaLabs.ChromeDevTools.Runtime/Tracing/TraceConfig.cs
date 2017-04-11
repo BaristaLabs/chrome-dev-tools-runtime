@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// <summary>
         /// Turns on JavaScript stack sampling.
         ///</summary>
-        public bool EnableSampling
+        public bool? EnableSampling
         {
             get;
             set;
@@ -27,7 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// <summary>
         /// Turns on system tracing.
         ///</summary>
-        public bool EnableSystrace
+        public bool? EnableSystrace
         {
             get;
             set;
@@ -36,7 +36,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// <summary>
         /// Turns on argument filter.
         ///</summary>
-        public bool EnableArgumentFilter
+        public bool? EnableArgumentFilter
         {
             get;
             set;

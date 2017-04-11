@@ -27,7 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Whether the property has "!important" annotation (implies <code>false</code> if absent).
         ///</summary>
-        public bool Important
+        public bool? Important
         {
             get;
             set;
@@ -36,7 +36,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Whether the property is implicit (implies <code>false</code> if absent).
         ///</summary>
-        public bool Implicit
+        public bool? Implicit
         {
             get;
             set;
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Whether the property is understood by the browser (implies <code>true</code> if absent).
         ///</summary>
-        public bool ParsedOk
+        public bool? ParsedOk
         {
             get;
             set;
@@ -63,7 +63,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Whether the property is disabled by the user (present for source-based properties only).
         ///</summary>
-        public bool Disabled
+        public bool? Disabled
         {
             get;
             set;

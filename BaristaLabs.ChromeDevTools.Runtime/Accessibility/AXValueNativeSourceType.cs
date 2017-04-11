@@ -1,13 +1,16 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Enum of possible native property sources (as a subtype of a particular AXValueSourceType).
     /// </summary>
+    [JsonConverter(typeof(StringClassConverter))]
     public sealed class AXValueNativeSourceType
     {
         private string m_value;
-
-        private AXValueNativeSourceType(string value)
+        
+        public AXValueNativeSourceType(string value)
         {
             m_value = value;
         }
@@ -15,6 +18,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         public override string ToString()
         {
             return m_value;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return m_value.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return m_value.GetHashCode();
         }
 
     

@@ -1,13 +1,16 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Attributes which apply to widgets.
     /// </summary>
+    [JsonConverter(typeof(StringClassConverter))]
     public sealed class AXWidgetAttributes
     {
         private string m_value;
-
-        private AXWidgetAttributes(string value)
+        
+        public AXWidgetAttributes(string value)
         {
             m_value = value;
         }
@@ -15,6 +18,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         public override string ToString()
         {
             return m_value;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return m_value.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return m_value.GetHashCode();
         }
 
     

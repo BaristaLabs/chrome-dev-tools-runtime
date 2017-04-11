@@ -1,13 +1,16 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
+    [JsonConverter(typeof(StringClassConverter))]
     public sealed class ServiceWorkerVersionStatus
     {
         private string m_value;
-
-        private ServiceWorkerVersionStatus(string value)
+        
+        public ServiceWorkerVersionStatus(string value)
         {
             m_value = value;
         }
@@ -15,6 +18,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         public override string ToString()
         {
             return m_value;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return m_value.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return m_value.GetHashCode();
         }
 
     

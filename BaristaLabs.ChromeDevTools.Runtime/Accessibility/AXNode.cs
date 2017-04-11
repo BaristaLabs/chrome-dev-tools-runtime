@@ -90,7 +90,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// The backend ID for the associated DOM node, if any.
         ///</summary>
-        public long BackendDOMNodeId
+        public long? BackendDOMNodeId
         {
             get;
             set;

@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
         /// <summary>
         /// Line number in the resource that generated this message (1-based).
         ///</summary>
-        public long Line
+        public long? Line
         {
             get;
             set;
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
         /// <summary>
         /// Column number in the resource that generated this message (1-based).
         ///</summary>
-        public long Column
+        public long? Column
         {
             get;
             set;

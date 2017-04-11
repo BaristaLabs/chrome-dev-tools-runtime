@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
         /// </summary>
         
         [JsonProperty("offset")]
-        public long Offset
+        public long? Offset
         {
             get;
             set;
@@ -46,7 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
         /// </summary>
         
         [JsonProperty("size")]
-        public long Size
+        public long? Size
         {
             get;
             set;

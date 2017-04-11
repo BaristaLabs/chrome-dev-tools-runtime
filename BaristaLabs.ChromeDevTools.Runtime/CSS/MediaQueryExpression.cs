@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Computed length of media query expression (if applicable).
         ///</summary>
-        public double ComputedLength
+        public double? ComputedLength
         {
             get;
             set;

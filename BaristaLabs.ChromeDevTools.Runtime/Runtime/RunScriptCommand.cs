@@ -58,7 +58,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// </summary>
         
         [JsonProperty("silent")]
-        public bool Silent
+        public bool? Silent
         {
             get;
             set;
@@ -70,7 +70,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// </summary>
         
         [JsonProperty("includeCommandLineAPI")]
-        public bool IncludeCommandLineAPI
+        public bool? IncludeCommandLineAPI
         {
             get;
             set;
@@ -82,7 +82,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// </summary>
         
         [JsonProperty("returnByValue")]
-        public bool ReturnByValue
+        public bool? ReturnByValue
         {
             get;
             set;
@@ -94,7 +94,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// </summary>
         
         [JsonProperty("generatePreview")]
-        public bool GeneratePreview
+        public bool? GeneratePreview
         {
             get;
             set;
@@ -106,7 +106,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// </summary>
         
         [JsonProperty("awaitPromise")]
-        public bool AwaitPromise
+        public bool? AwaitPromise
         {
             get;
             set;

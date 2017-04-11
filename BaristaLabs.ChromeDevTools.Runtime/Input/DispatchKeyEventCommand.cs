@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("modifiers")]
-        public long Modifiers
+        public long? Modifiers
         {
             get;
             set;
@@ -46,7 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("timestamp")]
-        public double Timestamp
+        public double? Timestamp
         {
             get;
             set;
@@ -118,7 +118,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("windowsVirtualKeyCode")]
-        public long WindowsVirtualKeyCode
+        public long? WindowsVirtualKeyCode
         {
             get;
             set;
@@ -130,7 +130,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("nativeVirtualKeyCode")]
-        public long NativeVirtualKeyCode
+        public long? NativeVirtualKeyCode
         {
             get;
             set;
@@ -142,7 +142,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("autoRepeat")]
-        public bool AutoRepeat
+        public bool? AutoRepeat
         {
             get;
             set;
@@ -154,7 +154,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("isKeypad")]
-        public bool IsKeypad
+        public bool? IsKeypad
         {
             get;
             set;
@@ -166,7 +166,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("isSystemKey")]
-        public bool IsSystemKey
+        public bool? IsSystemKey
         {
             get;
             set;

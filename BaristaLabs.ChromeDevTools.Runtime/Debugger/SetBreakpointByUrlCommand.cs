@@ -58,7 +58,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// </summary>
         
         [JsonProperty("columnNumber")]
-        public long ColumnNumber
+        public long? ColumnNumber
         {
             get;
             set;

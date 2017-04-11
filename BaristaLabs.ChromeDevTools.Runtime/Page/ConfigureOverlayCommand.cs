@@ -22,7 +22,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// </summary>
         
         [JsonProperty("suspended")]
-        public bool Suspended
+        public bool? Suspended
         {
             get;
             set;

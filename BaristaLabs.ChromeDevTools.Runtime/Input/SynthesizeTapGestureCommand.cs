@@ -46,7 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("duration")]
-        public long Duration
+        public long? Duration
         {
             get;
             set;
@@ -58,7 +58,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("tapCount")]
-        public long TapCount
+        public long? TapCount
         {
             get;
             set;

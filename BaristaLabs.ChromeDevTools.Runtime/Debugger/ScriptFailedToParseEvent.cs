@@ -121,7 +121,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// True, if this script has sourceURL.
         /// </summary>
         
-        public bool HasSourceURL
+        public bool? HasSourceURL
         {
             get;
             set;

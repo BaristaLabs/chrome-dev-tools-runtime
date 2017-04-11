@@ -82,7 +82,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("deltaX")]
-        public double DeltaX
+        public double? DeltaX
         {
             get;
             set;
@@ -94,7 +94,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("deltaY")]
-        public double DeltaY
+        public double? DeltaY
         {
             get;
             set;
@@ -106,7 +106,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("modifiers")]
-        public long Modifiers
+        public long? Modifiers
         {
             get;
             set;
@@ -118,7 +118,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("clickCount")]
-        public long ClickCount
+        public long? ClickCount
         {
             get;
             set;

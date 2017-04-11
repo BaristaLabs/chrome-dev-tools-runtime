@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// </summary>
         
         [JsonProperty("returnByValue")]
-        public bool ReturnByValue
+        public bool? ReturnByValue
         {
             get;
             set;
@@ -46,7 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// </summary>
         
         [JsonProperty("generatePreview")]
-        public bool GeneratePreview
+        public bool? GeneratePreview
         {
             get;
             set;

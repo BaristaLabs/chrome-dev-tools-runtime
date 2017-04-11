@@ -46,7 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// </summary>
         
         [JsonProperty("bufferUsageReportingInterval")]
-        public double BufferUsageReportingInterval
+        public double? BufferUsageReportingInterval
         {
             get;
             set;

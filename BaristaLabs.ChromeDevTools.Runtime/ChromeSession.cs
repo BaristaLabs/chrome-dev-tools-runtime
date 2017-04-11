@@ -60,11 +60,12 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         /// </summary>
         /// <typeparam name="TCommand"></typeparam>
         /// <param name="command"></param>
+        /// <param name="throwExceptionIfResponseNotReceived"></param>
         /// <returns></returns>
         public async Task<ICommandResponse<TCommand>> SendCommand<TCommand>(TCommand command, bool throwExceptionIfResponseNotReceived = true)
             where TCommand : ICommand
         {
-            return await SendCommand<TCommand>(command, CancellationToken.None, throwExceptionIfResponseNotReceived);
+            return await SendCommand(command, CancellationToken.None, throwExceptionIfResponseNotReceived);
         }
 
         /// <summary>
@@ -73,6 +74,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         /// <typeparam name="TCommand"></typeparam>
         /// <param name="command"></param>
         /// <param name="cancellationToken"></param>
+        /// <param name="throwExceptionIfResponseNotReceived"></param>
         /// <returns></returns>
         public async Task<ICommandResponse<TCommand>> SendCommand<TCommand>(TCommand command, CancellationToken cancellationToken, bool throwExceptionIfResponseNotReceived = true)
             where TCommand : ICommand
@@ -96,6 +98,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         /// </summary>
         /// <typeparam name="TCommand"></typeparam>
         /// <param name="command"></param>
+        /// <param name="throwExceptionIfResponseNotReceived"></param>
         /// <returns></returns>
         public async Task<TCommandResponse> SendCommand<TCommand, TCommandResponse>(TCommand command, bool throwExceptionIfResponseNotReceived = true)
             where TCommand : ICommand
@@ -111,6 +114,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         /// <typeparam name="TCommandResponse"></typeparam>
         /// <param name="command"></param>
         /// <param name="cancellationToken"></param>
+        /// <param name="throwExceptionIfResponseNotReceived"></param>
         /// <returns></returns>
         public async Task<TCommandResponse> SendCommand<TCommand, TCommandResponse>(TCommand command, CancellationToken cancellationToken, bool throwExceptionIfResponseNotReceived = true)
             where TCommand : ICommand

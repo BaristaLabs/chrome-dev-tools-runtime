@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// </summary>
         
         [JsonProperty("ownProperties")]
-        public bool OwnProperties
+        public bool? OwnProperties
         {
             get;
             set;
@@ -46,7 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// </summary>
         
         [JsonProperty("accessorPropertiesOnly")]
-        public bool AccessorPropertiesOnly
+        public bool? AccessorPropertiesOnly
         {
             get;
             set;
@@ -58,7 +58,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// </summary>
         
         [JsonProperty("generatePreview")]
-        public bool GeneratePreview
+        public bool? GeneratePreview
         {
             get;
             set;

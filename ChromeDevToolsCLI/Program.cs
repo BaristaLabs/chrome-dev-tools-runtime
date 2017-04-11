@@ -22,8 +22,11 @@
 
             var sessions = GetSessions("http://localhost:9223/").GetAwaiter().GetResult();
 
-            using (var session = new ChromeSession(sessions.Last().WebSocketDebuggerUrl))
+            using (var session = new ChromeSession(sessions.First(s => s.Type == "page").WebSocketDebuggerUrl))
             {
+                //Get the frame resource tree
+                var resource = session.SendCommand<Page.GetResourceTreeCommand, Page.GetResourceTreeCommandResponse>(new Page.GetResourceTreeCommand()).GetAwaiter().GetResult();
+
                 //Navigate to winamp.com
                 var navigateResult = session.SendCommand(new Page.NavigateCommand
                 {

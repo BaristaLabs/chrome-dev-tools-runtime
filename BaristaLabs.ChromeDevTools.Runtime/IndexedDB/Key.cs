@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// Number value.
         ///</summary>
-        public double Number
+        public double? Number
         {
             get;
             set;
@@ -36,7 +36,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// Date value.
         ///</summary>
-        public double Date
+        public double? Date
         {
             get;
             set;

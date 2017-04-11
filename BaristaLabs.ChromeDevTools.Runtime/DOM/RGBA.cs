@@ -36,7 +36,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// The alpha component, in the [0-1] range (default: 1).
         ///</summary>
-        public double A
+        public double? A
         {
             get;
             set;

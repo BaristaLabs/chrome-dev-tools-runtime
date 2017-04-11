@@ -36,7 +36,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// last-modified timestamp as reported by server.
         ///</summary>
-        public double LastModified
+        public double? LastModified
         {
             get;
             set;
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Resource content size.
         ///</summary>
-        public double ContentSize
+        public double? ContentSize
         {
             get;
             set;
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// True if the resource failed to load.
         ///</summary>
-        public bool Failed
+        public bool? Failed
         {
             get;
             set;
@@ -63,7 +63,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// True if the resource was canceled during loading.
         ///</summary>
-        public bool Canceled
+        public bool? Canceled
         {
             get;
             set;

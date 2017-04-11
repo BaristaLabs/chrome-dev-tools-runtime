@@ -27,7 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Column number in the script (0-based).
         ///</summary>
-        public long ColumnNumber
+        public long? ColumnNumber
         {
             get;
             set;

@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// </summary>
         
         [JsonProperty("quality")]
-        public long Quality
+        public long? Quality
         {
             get;
             set;
@@ -46,7 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// </summary>
         
         [JsonProperty("maxWidth")]
-        public long MaxWidth
+        public long? MaxWidth
         {
             get;
             set;
@@ -58,7 +58,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// </summary>
         
         [JsonProperty("maxHeight")]
-        public long MaxHeight
+        public long? MaxHeight
         {
             get;
             set;
@@ -70,7 +70,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// </summary>
         
         [JsonProperty("everyNthFrame")]
-        public long EveryNthFrame
+        public long? EveryNthFrame
         {
             get;
             set;

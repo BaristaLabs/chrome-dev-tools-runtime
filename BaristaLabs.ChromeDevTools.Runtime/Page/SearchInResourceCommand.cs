@@ -58,7 +58,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// </summary>
         
         [JsonProperty("caseSensitive")]
-        public bool CaseSensitive
+        public bool? CaseSensitive
         {
             get;
             set;
@@ -70,7 +70,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// </summary>
         
         [JsonProperty("isRegex")]
-        public bool IsRegex
+        public bool? IsRegex
         {
             get;
             set;

@@ -22,7 +22,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         /// </summary>
         
         [JsonProperty("reportProgress")]
-        public bool ReportProgress
+        public bool? ReportProgress
         {
             get;
             set;

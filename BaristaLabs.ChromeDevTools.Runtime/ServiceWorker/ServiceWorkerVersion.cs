@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// The Last-Modified header value of the main script.
         ///</summary>
-        public double ScriptLastModified
+        public double? ScriptLastModified
         {
             get;
             set;
@@ -63,7 +63,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// The time at which the response headers of the main script were received from the server.  For cached script it is the last time the cache entry was validated.
         ///</summary>
-        public double ScriptResponseTime
+        public double? ScriptResponseTime
         {
             get;
             set;

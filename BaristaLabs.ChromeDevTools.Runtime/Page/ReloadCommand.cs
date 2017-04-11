@@ -22,7 +22,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// </summary>
         
         [JsonProperty("ignoreCache")]
-        public bool IgnoreCache
+        public bool? IgnoreCache
         {
             get;
             set;

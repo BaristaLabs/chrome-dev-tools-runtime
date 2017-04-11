@@ -1,13 +1,16 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Attributes which apply to nodes in live regions.
     /// </summary>
+    [JsonConverter(typeof(StringClassConverter))]
     public sealed class AXLiveRegionAttributes
     {
         private string m_value;
-
-        private AXLiveRegionAttributes(string value)
+        
+        public AXLiveRegionAttributes(string value)
         {
             m_value = value;
         }
@@ -15,6 +18,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         public override string ToString()
         {
             return m_value;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return m_value.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return m_value.GetHashCode();
         }
 
     

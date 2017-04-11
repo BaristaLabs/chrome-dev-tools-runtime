@@ -58,7 +58,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("relativeSpeed")]
-        public long RelativeSpeed
+        public long? RelativeSpeed
         {
             get;
             set;

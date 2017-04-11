@@ -27,7 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// Number of samples where this node was on top of the call stack.
         ///</summary>
-        public long HitCount
+        public long? HitCount
         {
             get;
             set;

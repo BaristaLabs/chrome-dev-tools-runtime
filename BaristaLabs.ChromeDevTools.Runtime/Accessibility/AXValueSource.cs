@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// Whether this source is superseded by a higher priority source.
         ///</summary>
-        public bool Superseded
+        public bool? Superseded
         {
             get;
             set;
@@ -72,7 +72,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// Whether the value for this property is invalid.
         ///</summary>
-        public bool Invalid
+        public bool? Invalid
         {
             get;
             set;

@@ -36,7 +36,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// <summary>
         /// X radius of the touch area (default: 1).
         ///</summary>
-        public long RadiusX
+        public long? RadiusX
         {
             get;
             set;
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// <summary>
         /// Y radius of the touch area (default: 1).
         ///</summary>
-        public long RadiusY
+        public long? RadiusY
         {
             get;
             set;
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// <summary>
         /// Rotation angle (default: 0.0).
         ///</summary>
-        public double RotationAngle
+        public double? RotationAngle
         {
             get;
             set;
@@ -63,7 +63,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// <summary>
         /// Force (default: 1.0).
         ///</summary>
-        public double Force
+        public double? Force
         {
             get;
             set;
@@ -72,7 +72,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// <summary>
         /// Identifier used to track touch sources between events, must be unique within an event.
         ///</summary>
-        public double Id
+        public double? Id
         {
             get;
             set;

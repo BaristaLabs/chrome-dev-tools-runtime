@@ -1,13 +1,16 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// The reason why request was blocked.
     /// </summary>
+    [JsonConverter(typeof(StringClassConverter))]
     public sealed class BlockedReason
     {
         private string m_value;
-
-        private BlockedReason(string value)
+        
+        public BlockedReason(string value)
         {
             m_value = value;
         }
@@ -15,6 +18,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         public override string ToString()
         {
             return m_value;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return m_value.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return m_value.GetHashCode();
         }
 
     
