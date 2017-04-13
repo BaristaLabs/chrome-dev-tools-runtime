@@ -57,6 +57,12 @@
                     ContextId = executionContextId,
                     ObjectGroup = "test123",
                     Expression = "6*7",
+                    IncludeCommandLineAPI = true,
+                    Silent = false,
+                    ReturnByValue = false,
+                    GeneratePreview = false,
+                    UserGesture = false,
+                    AwaitPromise = false
                 }).GetAwaiter().GetResult().GetResponse<Runtime.EvaluateCommandResponse>();
 
                 Console.WriteLine(result2.Result.Description);
