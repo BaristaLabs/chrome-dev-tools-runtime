@@ -32,7 +32,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            throw new NotImplementedException();
+            writer.WriteValue(value.ToString());
         }
     }
 }
