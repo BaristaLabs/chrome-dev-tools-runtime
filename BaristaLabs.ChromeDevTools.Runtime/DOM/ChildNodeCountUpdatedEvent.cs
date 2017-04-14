@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired when <code>Container</code>'s child node count has changed.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// Id of the node that has changed.
         /// </summary>
         
+        [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// New node count.
         /// </summary>
         
+        [JsonProperty("childNodeCount")]
         public long ChildNodeCount
         {
             get;

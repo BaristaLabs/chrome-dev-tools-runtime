@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Page
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Gets or sets the timestamp
         /// </summary>
         
+        [JsonProperty("timestamp")]
         public double Timestamp
         {
             get;

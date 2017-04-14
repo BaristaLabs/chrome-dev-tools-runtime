@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Target
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("targetId")]
         public string TargetId
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("type")]
         public string Type
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("title")]
         public string Title
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("url")]
         public string Url
         {
             get;

@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.CSS
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// CSS style representation.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// The css style sheet identifier (absent for user agent stylesheet and user-specified stylesheet rules) this rule came from.
         ///</summary>
+        [JsonProperty("styleSheetId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string StyleSheetId
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// CSS properties in the style.
         ///</summary>
+        [JsonProperty("cssProperties")]
         public CSSProperty[] CssProperties
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Computed values for all shorthands found in the style.
         ///</summary>
+        [JsonProperty("shorthandEntries")]
         public ShorthandEntry[] ShorthandEntries
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Style declaration text (if available).
         ///</summary>
+        [JsonProperty("cssText", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string CssText
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Style declaration range in the enclosing stylesheet (if available).
         ///</summary>
+        [JsonProperty("range", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public SourceRange Range
         {
             get;

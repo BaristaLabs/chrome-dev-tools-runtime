@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Information about a compositing layer.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// The unique id for this layer.
         ///</summary>
+        [JsonProperty("layerId")]
         public string LayerId
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// The id of parent (not present for root).
         ///</summary>
+        [JsonProperty("parentLayerId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ParentLayerId
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// The backend id for the node associated with this layer.
         ///</summary>
+        [JsonProperty("backendNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? BackendNodeId
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Offset from parent layer, X coordinate.
         ///</summary>
+        [JsonProperty("offsetX")]
         public double OffsetX
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Offset from parent layer, Y coordinate.
         ///</summary>
+        [JsonProperty("offsetY")]
         public double OffsetY
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Layer width.
         ///</summary>
+        [JsonProperty("width")]
         public double Width
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Layer height.
         ///</summary>
+        [JsonProperty("height")]
         public double Height
         {
             get;
@@ -72,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Transformation matrix for layer, default is identity matrix
         ///</summary>
+        [JsonProperty("transform", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double[] Transform
         {
             get;
@@ -81,6 +91,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Transform anchor point X, absent if no transform specified
         ///</summary>
+        [JsonProperty("anchorX", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? AnchorX
         {
             get;
@@ -90,6 +101,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Transform anchor point Y, absent if no transform specified
         ///</summary>
+        [JsonProperty("anchorY", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? AnchorY
         {
             get;
@@ -99,6 +111,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Transform anchor point Z, absent if no transform specified
         ///</summary>
+        [JsonProperty("anchorZ", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? AnchorZ
         {
             get;
@@ -108,6 +121,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Indicates how many time this layer has painted.
         ///</summary>
+        [JsonProperty("paintCount")]
         public long PaintCount
         {
             get;
@@ -117,6 +131,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Indicates whether this layer hosts any content, rather than being used for transform/scrolling purposes only.
         ///</summary>
+        [JsonProperty("drawsContent")]
         public bool DrawsContent
         {
             get;
@@ -126,6 +141,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Set if layer is not visible.
         ///</summary>
+        [JsonProperty("invisible", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Invisible
         {
             get;
@@ -135,6 +151,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// Rectangles scrolling on main thread only.
         ///</summary>
+        [JsonProperty("scrollRects", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ScrollRect[] ScrollRects
         {
             get;

@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// <summary>
         /// Controls how the trace buffer stores data.
         ///</summary>
+        [JsonProperty("recordMode", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string RecordMode
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// <summary>
         /// Turns on JavaScript stack sampling.
         ///</summary>
+        [JsonProperty("enableSampling", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? EnableSampling
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// <summary>
         /// Turns on system tracing.
         ///</summary>
+        [JsonProperty("enableSystrace", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? EnableSystrace
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// <summary>
         /// Turns on argument filter.
         ///</summary>
+        [JsonProperty("enableArgumentFilter", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? EnableArgumentFilter
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// <summary>
         /// Included category filters.
         ///</summary>
+        [JsonProperty("includedCategories", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string[] IncludedCategories
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// <summary>
         /// Excluded category filters.
         ///</summary>
+        [JsonProperty("excludedCategories", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string[] ExcludedCategories
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// <summary>
         /// Configuration to synthesize the delays in tracing.
         ///</summary>
+        [JsonProperty("syntheticDelays", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string[] SyntheticDelays
         {
             get;
@@ -72,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// <summary>
         /// Configuration for memory dump triggers. Used only when "memory-infra" category is enabled.
         ///</summary>
+        [JsonProperty("memoryDumpConfig", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public MemoryDumpConfig MemoryDumpConfig
         {
             get;

@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Database
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Database error.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
         /// <summary>
         /// Error message.
         ///</summary>
+        [JsonProperty("message")]
         public string Message
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
         /// <summary>
         /// Error code.
         ///</summary>
+        [JsonProperty("code")]
         public long Code
         {
             get;

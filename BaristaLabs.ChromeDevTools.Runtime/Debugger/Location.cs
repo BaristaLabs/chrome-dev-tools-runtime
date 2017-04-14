@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Location in the source code.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Script identifier as reported in the <code>Debugger.scriptParsed</code>.
         ///</summary>
+        [JsonProperty("scriptId")]
         public string ScriptId
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Line number in the script (0-based).
         ///</summary>
+        [JsonProperty("lineNumber")]
         public long LineNumber
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Column number in the script (0-based).
         ///</summary>
+        [JsonProperty("columnNumber", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ColumnNumber
         {
             get;

@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         /// Gets or sets the done
         /// </summary>
         
+        [JsonProperty("done")]
         public long Done
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         /// Gets or sets the total
         /// </summary>
         
+        [JsonProperty("total")]
         public long Total
         {
             get;
@@ -33,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         /// Gets or sets the finished
         /// </summary>
         
+        [JsonProperty("finished", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Finished
         {
             get;

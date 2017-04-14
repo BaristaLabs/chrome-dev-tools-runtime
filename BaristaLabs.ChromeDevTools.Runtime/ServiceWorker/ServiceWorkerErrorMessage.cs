@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// ServiceWorker error message.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("errorMessage")]
         public string ErrorMessage
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("registrationId")]
         public string RegistrationId
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("versionId")]
         public string VersionId
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("sourceURL")]
         public string SourceURL
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("lineNumber")]
         public long LineNumber
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("columnNumber")]
         public long ColumnNumber
         {
             get;

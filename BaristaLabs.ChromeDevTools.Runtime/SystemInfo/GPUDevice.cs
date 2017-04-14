@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Describes a single graphics processor (GPU).
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
         /// <summary>
         /// PCI ID of the GPU vendor, if available; 0 otherwise.
         ///</summary>
+        [JsonProperty("vendorId")]
         public double VendorId
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
         /// <summary>
         /// PCI ID of the GPU device, if available; 0 otherwise.
         ///</summary>
+        [JsonProperty("deviceId")]
         public double DeviceId
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
         /// <summary>
         /// String description of the GPU vendor, if the PCI ID is not available.
         ///</summary>
+        [JsonProperty("vendorString")]
         public string VendorString
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
         /// <summary>
         /// String description of the GPU device, if the PCI ID is not available.
         ///</summary>
+        [JsonProperty("deviceString")]
         public string DeviceString
         {
             get;

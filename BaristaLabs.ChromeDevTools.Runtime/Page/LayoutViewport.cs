@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Page
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Layout viewport position and dimensions.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Horizontal offset relative to the document (CSS pixels).
         ///</summary>
+        [JsonProperty("pageX")]
         public long PageX
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Vertical offset relative to the document (CSS pixels).
         ///</summary>
+        [JsonProperty("pageY")]
         public long PageY
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Width (CSS pixels), excludes scrollbar if present.
         ///</summary>
+        [JsonProperty("clientWidth")]
         public long ClientWidth
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Height (CSS pixels), excludes scrollbar if present.
         ///</summary>
+        [JsonProperty("clientHeight")]
         public long ClientHeight
         {
             get;

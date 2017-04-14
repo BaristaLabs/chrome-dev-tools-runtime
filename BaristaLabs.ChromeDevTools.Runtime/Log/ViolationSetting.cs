@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Log
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Violation configuration setting.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         /// <summary>
         /// Violation type.
         ///</summary>
+        [JsonProperty("name")]
         public string Name
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         /// <summary>
         /// Time threshold to trigger upon.
         ///</summary>
+        [JsonProperty("threshold")]
         public double Threshold
         {
             get;

@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Box model.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Content box
         ///</summary>
+        [JsonProperty("content")]
         public double[] Content
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Padding box
         ///</summary>
+        [JsonProperty("padding")]
         public double[] Padding
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Border box
         ///</summary>
+        [JsonProperty("border")]
         public double[] Border
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Margin box
         ///</summary>
+        [JsonProperty("margin")]
         public double[] Margin
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Node width
         ///</summary>
+        [JsonProperty("width")]
         public long Width
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Node height
         ///</summary>
+        [JsonProperty("height")]
         public long Height
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Shape outside coordinates
         ///</summary>
+        [JsonProperty("shapeOutside", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ShapeOutsideInfo ShapeOutside
         {
             get;

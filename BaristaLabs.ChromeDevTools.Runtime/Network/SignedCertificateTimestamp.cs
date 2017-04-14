@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Details of a signed certificate timestamp (SCT).
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Validation status.
         ///</summary>
+        [JsonProperty("status")]
         public string Status
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Origin.
         ///</summary>
+        [JsonProperty("origin")]
         public string Origin
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Log name / description.
         ///</summary>
+        [JsonProperty("logDescription")]
         public string LogDescription
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Log ID.
         ///</summary>
+        [JsonProperty("logId")]
         public string LogId
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Issuance date.
         ///</summary>
+        [JsonProperty("timestamp")]
         public double Timestamp
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Hash algorithm.
         ///</summary>
+        [JsonProperty("hashAlgorithm")]
         public string HashAlgorithm
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Signature algorithm.
         ///</summary>
+        [JsonProperty("signatureAlgorithm")]
         public string SignatureAlgorithm
         {
             get;
@@ -72,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Signature data.
         ///</summary>
+        [JsonProperty("signatureData")]
         public string SignatureData
         {
             get;

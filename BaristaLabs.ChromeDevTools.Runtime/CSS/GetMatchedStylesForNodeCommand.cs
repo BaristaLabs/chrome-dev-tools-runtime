@@ -38,7 +38,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// Inline style for the specified DOM node.
         ///</summary>
         
-        [JsonProperty("inlineStyle")]
+        [JsonProperty("inlineStyle, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public CSSStyle InlineStyle
         {
             get;
@@ -50,7 +50,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// Attribute-defined element style (e.g. resulting from "width=20 height=100%").
         ///</summary>
         
-        [JsonProperty("attributesStyle")]
+        [JsonProperty("attributesStyle, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public CSSStyle AttributesStyle
         {
             get;
@@ -62,7 +62,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// CSS rules matching this node, from all applicable stylesheets.
         ///</summary>
         
-        [JsonProperty("matchedCSSRules")]
+        [JsonProperty("matchedCSSRules, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public RuleMatch[] MatchedCSSRules
         {
             get;
@@ -74,7 +74,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// Pseudo style matches for this node.
         ///</summary>
         
-        [JsonProperty("pseudoElements")]
+        [JsonProperty("pseudoElements, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public PseudoElementMatches[] PseudoElements
         {
             get;
@@ -86,7 +86,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// A chain of inherited styles (from the immediate node parent up to the DOM tree root).
         ///</summary>
         
-        [JsonProperty("inherited")]
+        [JsonProperty("inherited, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public InheritedStyleEntry[] Inherited
         {
             get;
@@ -98,7 +98,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// A list of CSS keyframed animations matching this node.
         ///</summary>
         
-        [JsonProperty("cssKeyframesRules")]
+        [JsonProperty("cssKeyframesRules, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public CSSKeyframesRule[] CssKeyframesRules
         {
             get;

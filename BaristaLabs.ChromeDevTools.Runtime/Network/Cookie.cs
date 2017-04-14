@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Cookie object
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Cookie name.
         ///</summary>
+        [JsonProperty("name")]
         public string Name
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Cookie value.
         ///</summary>
+        [JsonProperty("value")]
         public string Value
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Cookie domain.
         ///</summary>
+        [JsonProperty("domain")]
         public string Domain
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Cookie path.
         ///</summary>
+        [JsonProperty("path")]
         public string Path
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Cookie expiration date as the number of seconds since the UNIX epoch.
         ///</summary>
+        [JsonProperty("expires")]
         public double Expires
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Cookie size.
         ///</summary>
+        [JsonProperty("size")]
         public long Size
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// True if cookie is http-only.
         ///</summary>
+        [JsonProperty("httpOnly")]
         public bool HttpOnly
         {
             get;
@@ -72,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// True if cookie is secure.
         ///</summary>
+        [JsonProperty("secure")]
         public bool Secure
         {
             get;
@@ -81,6 +91,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// True in case of session cookie.
         ///</summary>
+        [JsonProperty("session")]
         public bool Session
         {
             get;
@@ -90,6 +101,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Cookie SameSite type.
         ///</summary>
+        [JsonProperty("sameSite", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public CookieSameSite SameSite
         {
             get;

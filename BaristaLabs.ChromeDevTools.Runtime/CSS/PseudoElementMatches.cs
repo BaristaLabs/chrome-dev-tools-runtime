@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.CSS
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// CSS rule collection for a single pseudo style.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Pseudo element type.
         ///</summary>
+        [JsonProperty("pseudoType")]
         public BaristaLabs.ChromeDevTools.Runtime.DOM.PseudoType PseudoType
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Matches of CSS rules applicable to the pseudo style.
         ///</summary>
+        [JsonProperty("matches")]
         public RuleMatch[] Matches
         {
             get;

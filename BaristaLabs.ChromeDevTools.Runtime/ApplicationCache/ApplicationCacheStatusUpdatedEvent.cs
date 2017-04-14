@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         /// Identifier of the frame containing document whose application cache updated status.
         /// </summary>
         
+        [JsonProperty("frameId")]
         public string FrameId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         /// Manifest URL.
         /// </summary>
         
+        [JsonProperty("manifestURL")]
         public string ManifestURL
         {
             get;
@@ -33,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         /// Updated application cache status.
         /// </summary>
         
+        [JsonProperty("status")]
         public long Status
         {
             get;

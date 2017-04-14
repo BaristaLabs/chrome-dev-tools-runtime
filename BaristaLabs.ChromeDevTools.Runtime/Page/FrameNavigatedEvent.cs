@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Page
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired once navigation of the frame has completed. Frame is now associated with the new loader.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Frame object.
         /// </summary>
         
+        [JsonProperty("frame")]
         public Frame Frame
         {
             get;

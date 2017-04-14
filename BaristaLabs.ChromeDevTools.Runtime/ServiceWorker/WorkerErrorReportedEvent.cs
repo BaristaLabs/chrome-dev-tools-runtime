@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// Gets or sets the errorMessage
         /// </summary>
         
+        [JsonProperty("errorMessage")]
         public ServiceWorkerErrorMessage ErrorMessage
         {
             get;

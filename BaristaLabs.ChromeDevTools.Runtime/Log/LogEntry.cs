@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Log
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Log entry.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         /// <summary>
         /// Log entry source.
         ///</summary>
+        [JsonProperty("source")]
         public string Source
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         /// <summary>
         /// Log entry severity.
         ///</summary>
+        [JsonProperty("level")]
         public string Level
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         /// <summary>
         /// Logged text.
         ///</summary>
+        [JsonProperty("text")]
         public string Text
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         /// <summary>
         /// Timestamp when this entry was added.
         ///</summary>
+        [JsonProperty("timestamp")]
         public double Timestamp
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         /// <summary>
         /// URL of the resource if known.
         ///</summary>
+        [JsonProperty("url", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Url
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         /// <summary>
         /// Line number in the resource.
         ///</summary>
+        [JsonProperty("lineNumber", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? LineNumber
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         /// <summary>
         /// JavaScript stack trace.
         ///</summary>
+        [JsonProperty("stackTrace", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public BaristaLabs.ChromeDevTools.Runtime.Runtime.StackTrace StackTrace
         {
             get;
@@ -72,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         /// <summary>
         /// Identifier of the network request associated with this entry.
         ///</summary>
+        [JsonProperty("networkRequestId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string NetworkRequestId
         {
             get;
@@ -81,6 +91,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         /// <summary>
         /// Identifier of the worker associated with this entry.
         ///</summary>
+        [JsonProperty("workerId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string WorkerId
         {
             get;

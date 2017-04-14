@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.CSS
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Text range within a resource. All numbers are zero-based.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Start line of range.
         ///</summary>
+        [JsonProperty("startLine")]
         public long StartLine
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Start column of range (inclusive).
         ///</summary>
+        [JsonProperty("startColumn")]
         public long StartColumn
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// End line of range
         ///</summary>
+        [JsonProperty("endLine")]
         public long EndLine
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// End column of range (exclusive).
         ///</summary>
+        [JsonProperty("endColumn")]
         public long EndColumn
         {
             get;

@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Backend node with a friendly name.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// <code>Node</code>'s nodeType.
         ///</summary>
+        [JsonProperty("nodeType")]
         public long NodeType
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// <code>Node</code>'s nodeName.
         ///</summary>
+        [JsonProperty("nodeName")]
         public string NodeName
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("backendNodeId")]
         public long BackendNodeId
         {
             get;

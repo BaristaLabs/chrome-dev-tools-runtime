@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Page
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Compressed image data requested by the <code>startScreencast</code>.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Base64-encoded compressed image.
         /// </summary>
         
+        [JsonProperty("data")]
         public string Data
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Screencast frame metadata.
         /// </summary>
         
+        [JsonProperty("metadata")]
         public ScreencastFrameMetadata Metadata
         {
             get;
@@ -33,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Frame number.
         /// </summary>
         
+        [JsonProperty("sessionId")]
         public long SessionId
         {
             get;

@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("header")]
         public string Header
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("hasBody")]
         public bool HasBody
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("formatterObjectId")]
         public string FormatterObjectId
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("bindRemoteObjectFunctionId")]
         public string BindRemoteObjectFunctionId
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("configObjectId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ConfigObjectId
         {
             get;

@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Profile.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// The list of profile nodes. First item is the root node.
         ///</summary>
+        [JsonProperty("nodes")]
         public ProfileNode[] Nodes
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// Profiling start timestamp in microseconds.
         ///</summary>
+        [JsonProperty("startTime")]
         public double StartTime
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// Profiling end timestamp in microseconds.
         ///</summary>
+        [JsonProperty("endTime")]
         public double EndTime
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// Ids of samples top nodes.
         ///</summary>
+        [JsonProperty("samples", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long[] Samples
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// Time intervals between adjacent samples in microseconds. The first delta is relative to the profile startTime.
         ///</summary>
+        [JsonProperty("timeDeltas", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long[] TimeDeltas
         {
             get;

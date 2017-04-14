@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Property name.
         ///</summary>
+        [JsonProperty("name")]
         public string Name
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Object type. Accessor means that the property itself is an accessor property.
         ///</summary>
+        [JsonProperty("type")]
         public string Type
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// User-friendly property value string.
         ///</summary>
+        [JsonProperty("value", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Value
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Nested value preview.
         ///</summary>
+        [JsonProperty("valuePreview", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ObjectPreview ValuePreview
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Object subtype hint. Specified for <code>object</code> type values only.
         ///</summary>
+        [JsonProperty("subtype", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Subtype
         {
             get;

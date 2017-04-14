@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Object internal property descriptor. This property isn't normally visible in JavaScript code.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Conventional property name.
         ///</summary>
+        [JsonProperty("name")]
         public string Name
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// The value associated with the property.
         ///</summary>
+        [JsonProperty("value", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RemoteObject Value
         {
             get;

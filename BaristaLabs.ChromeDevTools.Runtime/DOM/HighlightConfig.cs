@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Configuration data for the highlighting of page elements.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Whether the node info tooltip should be shown (default: false).
         ///</summary>
+        [JsonProperty("showInfo", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? ShowInfo
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Whether the rulers should be shown (default: false).
         ///</summary>
+        [JsonProperty("showRulers", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? ShowRulers
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Whether the extension lines from node to the rulers should be shown (default: false).
         ///</summary>
+        [JsonProperty("showExtensionLines", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? ShowExtensionLines
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("displayAsMaterial", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? DisplayAsMaterial
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// The content box highlight fill color (default: transparent).
         ///</summary>
+        [JsonProperty("contentColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RGBA ContentColor
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// The padding highlight fill color (default: transparent).
         ///</summary>
+        [JsonProperty("paddingColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RGBA PaddingColor
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// The border highlight fill color (default: transparent).
         ///</summary>
+        [JsonProperty("borderColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RGBA BorderColor
         {
             get;
@@ -72,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// The margin highlight fill color (default: transparent).
         ///</summary>
+        [JsonProperty("marginColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RGBA MarginColor
         {
             get;
@@ -81,6 +91,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// The event target element highlight fill color (default: transparent).
         ///</summary>
+        [JsonProperty("eventTargetColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RGBA EventTargetColor
         {
             get;
@@ -90,6 +101,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// The shape outside fill color (default: transparent).
         ///</summary>
+        [JsonProperty("shapeColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RGBA ShapeColor
         {
             get;
@@ -99,6 +111,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// The shape margin fill color (default: transparent).
         ///</summary>
+        [JsonProperty("shapeMarginColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RGBA ShapeMarginColor
         {
             get;
@@ -108,6 +121,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Selectors to highlight relevant nodes.
         ///</summary>
+        [JsonProperty("selectorList", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string SelectorList
         {
             get;

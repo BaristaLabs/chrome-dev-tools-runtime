@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Page
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired when a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload) is about to open.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Message that will be displayed by the dialog.
         /// </summary>
         
+        [JsonProperty("message")]
         public string Message
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Dialog type.
         /// </summary>
         
+        [JsonProperty("type")]
         public DialogType Type
         {
             get;

@@ -50,7 +50,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
         /// Gets or sets the columnNames
         /// </summary>
         
-        [JsonProperty("columnNames")]
+        [JsonProperty("columnNames, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public string[] ColumnNames
         {
             get;
@@ -62,7 +62,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
         /// Gets or sets the values
         /// </summary>
         
-        [JsonProperty("values")]
+        [JsonProperty("values, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public object[] Values
         {
             get;
@@ -74,7 +74,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
         /// Gets or sets the sqlError
         /// </summary>
         
-        [JsonProperty("sqlError")]
+        [JsonProperty("sqlError, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public Error SqlError
         {
             get;

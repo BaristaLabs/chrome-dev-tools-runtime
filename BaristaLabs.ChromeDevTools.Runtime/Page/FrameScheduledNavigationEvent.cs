@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Page
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired when frame schedules a potential navigation.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Id of the frame that has scheduled a navigation.
         /// </summary>
         
+        [JsonProperty("frameId")]
         public string FrameId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Delay (in seconds) until the navigation is scheduled to begin. The navigation is not guaranteed to start.
         /// </summary>
         
+        [JsonProperty("delay")]
         public double Delay
         {
             get;

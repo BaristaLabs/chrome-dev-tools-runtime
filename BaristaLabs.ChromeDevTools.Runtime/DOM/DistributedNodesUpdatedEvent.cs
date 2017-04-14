@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Called when distrubution is changed.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// Insertion point where distrubuted nodes were updated.
         /// </summary>
         
+        [JsonProperty("insertionPointId")]
         public long InsertionPointId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// Distributed nodes for given insertion point.
         /// </summary>
         
+        [JsonProperty("distributedNodes")]
         public BackendNode[] DistributedNodes
         {
             get;

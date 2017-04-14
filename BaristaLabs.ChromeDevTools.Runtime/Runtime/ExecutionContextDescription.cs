@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Description of an isolated world.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Unique id of the execution context. It can be used to specify in which execution context script evaluation should be performed.
         ///</summary>
+        [JsonProperty("id")]
         public long Id
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Execution context origin.
         ///</summary>
+        [JsonProperty("origin")]
         public string Origin
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Human readable name describing given context.
         ///</summary>
+        [JsonProperty("name")]
         public string Name
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Embedder-specific auxiliary data.
         ///</summary>
+        [JsonProperty("auxData", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public object AuxData
         {
             get;

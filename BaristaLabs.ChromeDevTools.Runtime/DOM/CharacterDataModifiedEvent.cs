@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Mirrors <code>DOMCharacterDataModified</code> event.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// Id of the node that has changed.
         /// </summary>
         
+        [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// New text value.
         /// </summary>
         
+        [JsonProperty("characterData")]
         public string CharacterData
         {
             get;

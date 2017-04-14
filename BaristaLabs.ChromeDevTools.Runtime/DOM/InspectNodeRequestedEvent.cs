@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired when the node should be inspected. This happens after call to <code>setInspectMode</code>.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// Id of the node to inspect.
         /// </summary>
         
+        [JsonProperty("backendNodeId")]
         public long BackendNodeId
         {
             get;

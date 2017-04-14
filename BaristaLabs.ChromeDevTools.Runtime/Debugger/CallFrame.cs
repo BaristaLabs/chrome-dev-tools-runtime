@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// JavaScript call frame. Array of call frames form the call stack.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Call frame identifier. This identifier is only valid while the virtual machine is paused.
         ///</summary>
+        [JsonProperty("callFrameId")]
         public string CallFrameId
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Name of the JavaScript function called on this call frame.
         ///</summary>
+        [JsonProperty("functionName")]
         public string FunctionName
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Location in the source code.
         ///</summary>
+        [JsonProperty("functionLocation", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Location FunctionLocation
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Location in the source code.
         ///</summary>
+        [JsonProperty("location")]
         public Location Location
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Scope chain for this call frame.
         ///</summary>
+        [JsonProperty("scopeChain")]
         public Scope[] ScopeChain
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// <code>this</code> object for this call frame.
         ///</summary>
+        [JsonProperty("this")]
         public BaristaLabs.ChromeDevTools.Runtime.Runtime.RemoteObject This
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// The value being returned, if the function is at return point.
         ///</summary>
+        [JsonProperty("returnValue", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public BaristaLabs.ChromeDevTools.Runtime.Runtime.RemoteObject ReturnValue
         {
             get;

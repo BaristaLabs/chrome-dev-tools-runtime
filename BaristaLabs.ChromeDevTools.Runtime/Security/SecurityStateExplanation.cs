@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Security
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// An explanation of an factor contributing to the security state.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         /// <summary>
         /// Security state representing the severity of the factor being explained.
         ///</summary>
+        [JsonProperty("securityState")]
         public SecurityState SecurityState
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         /// <summary>
         /// Short phrase describing the type of factor.
         ///</summary>
+        [JsonProperty("summary")]
         public string Summary
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         /// <summary>
         /// Full text explanation of the factor.
         ///</summary>
+        [JsonProperty("description")]
         public string Description
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         /// <summary>
         /// True if the page has a certificate.
         ///</summary>
+        [JsonProperty("hasCertificate")]
         public bool HasCertificate
         {
             get;

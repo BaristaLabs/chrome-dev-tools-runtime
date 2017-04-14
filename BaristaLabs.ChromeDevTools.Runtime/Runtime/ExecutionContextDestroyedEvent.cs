@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Issued when execution context is destroyed.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Id of the destroyed context
         /// </summary>
         
+        [JsonProperty("executionContextId")]
         public long ExecutionContextId
         {
             get;

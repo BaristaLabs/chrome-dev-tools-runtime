@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// ServiceWorker version.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("versionId")]
         public string VersionId
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("registrationId")]
         public string RegistrationId
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("scriptURL")]
         public string ScriptURL
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("runningStatus")]
         public ServiceWorkerVersionRunningStatus RunningStatus
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("status")]
         public ServiceWorkerVersionStatus Status
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// The Last-Modified header value of the main script.
         ///</summary>
+        [JsonProperty("scriptLastModified", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? ScriptLastModified
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// The time at which the response headers of the main script were received from the server.  For cached script it is the last time the cache entry was validated.
         ///</summary>
+        [JsonProperty("scriptResponseTime", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? ScriptResponseTime
         {
             get;
@@ -72,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("controlledClients", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ControlledClients
         {
             get;
@@ -81,6 +91,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("targetId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string TargetId
         {
             get;

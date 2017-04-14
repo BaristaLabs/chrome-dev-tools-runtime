@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Target
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("host")]
         public string Host
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("port")]
         public long Port
         {
             get;

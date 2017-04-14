@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Page
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Visual viewport position, dimensions, and scale.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Horizontal offset relative to the layout viewport (CSS pixels).
         ///</summary>
+        [JsonProperty("offsetX")]
         public double OffsetX
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Vertical offset relative to the layout viewport (CSS pixels).
         ///</summary>
+        [JsonProperty("offsetY")]
         public double OffsetY
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Horizontal offset relative to the document (CSS pixels).
         ///</summary>
+        [JsonProperty("pageX")]
         public double PageX
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Vertical offset relative to the document (CSS pixels).
         ///</summary>
+        [JsonProperty("pageY")]
         public double PageY
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Width (CSS pixels), excludes scrollbar if present.
         ///</summary>
+        [JsonProperty("clientWidth")]
         public double ClientWidth
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Height (CSS pixels), excludes scrollbar if present.
         ///</summary>
+        [JsonProperty("clientHeight")]
         public double ClientHeight
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Scale relative to the ideal viewport (size at width=device-width).
         ///</summary>
+        [JsonProperty("scale")]
         public double Scale
         {
             get;

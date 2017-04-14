@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired when WebSocket is closed.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Request identifier.
         /// </summary>
         
+        [JsonProperty("requestId")]
         public string RequestId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Timestamp.
         /// </summary>
         
+        [JsonProperty("timestamp")]
         public double Timestamp
         {
             get;

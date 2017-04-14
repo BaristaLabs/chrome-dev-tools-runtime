@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Detailed information about exception (or error) that was thrown during script compilation or execution.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Exception id.
         ///</summary>
+        [JsonProperty("exceptionId")]
         public long ExceptionId
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Exception text, which should be used together with exception object when available.
         ///</summary>
+        [JsonProperty("text")]
         public string Text
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Line number of the exception location (0-based).
         ///</summary>
+        [JsonProperty("lineNumber")]
         public long LineNumber
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Column number of the exception location (0-based).
         ///</summary>
+        [JsonProperty("columnNumber")]
         public long ColumnNumber
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Script ID of the exception location.
         ///</summary>
+        [JsonProperty("scriptId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ScriptId
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// URL of the exception location, to be used when the script was not reported.
         ///</summary>
+        [JsonProperty("url", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Url
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// JavaScript stack trace if available.
         ///</summary>
+        [JsonProperty("stackTrace", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public StackTrace StackTrace
         {
             get;
@@ -72,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Exception object if available.
         ///</summary>
+        [JsonProperty("exception", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RemoteObject Exception
         {
             get;
@@ -81,6 +91,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Identifier of the context where exception happened.
         ///</summary>
+        [JsonProperty("executionContextId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long ExecutionContextId
         {
             get;

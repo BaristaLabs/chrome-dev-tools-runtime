@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.CSS
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Details of an element in the DOM tree with a LayoutObject.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// The id of the related DOM node matching one from DOM.GetDocument.
         ///</summary>
+        [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// The absolute position bounding box.
         ///</summary>
+        [JsonProperty("boundingBox")]
         public BaristaLabs.ChromeDevTools.Runtime.DOM.Rect BoundingBox
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Contents of the LayoutText if any
         ///</summary>
+        [JsonProperty("layoutText", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string LayoutText
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// The post layout inline text nodes, if any.
         ///</summary>
+        [JsonProperty("inlineTextNodes", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public InlineTextBox[] InlineTextNodes
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Index into the computedStyles array returned by getLayoutTreeAndStyles.
         ///</summary>
+        [JsonProperty("styleIndex", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? StyleIndex
         {
             get;

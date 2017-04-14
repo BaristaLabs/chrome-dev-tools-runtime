@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Cache identifier.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         /// <summary>
         /// An opaque unique id of the cache.
         ///</summary>
+        [JsonProperty("cacheId")]
         public string CacheId
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         /// <summary>
         /// Security origin of the cache.
         ///</summary>
+        [JsonProperty("securityOrigin")]
         public string SecurityOrigin
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         /// <summary>
         /// The name of the cache.
         ///</summary>
+        [JsonProperty("cacheName")]
         public string CacheName
         {
             get;

@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired when page is about to send HTTP request.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Request identifier.
         /// </summary>
         
+        [JsonProperty("requestId")]
         public string RequestId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Frame identifier.
         /// </summary>
         
+        [JsonProperty("frameId")]
         public string FrameId
         {
             get;
@@ -33,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Loader identifier.
         /// </summary>
         
+        [JsonProperty("loaderId")]
         public string LoaderId
         {
             get;
@@ -44,6 +49,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// URL of the document this request is loaded for.
         /// </summary>
         
+        [JsonProperty("documentURL")]
         public string DocumentURL
         {
             get;
@@ -55,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Request data.
         /// </summary>
         
+        [JsonProperty("request")]
         public Request Request
         {
             get;
@@ -66,6 +73,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Timestamp.
         /// </summary>
         
+        [JsonProperty("timestamp")]
         public double Timestamp
         {
             get;
@@ -77,6 +85,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// UTC Timestamp.
         /// </summary>
         
+        [JsonProperty("wallTime")]
         public double WallTime
         {
             get;
@@ -88,6 +97,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Request initiator.
         /// </summary>
         
+        [JsonProperty("initiator")]
         public Initiator Initiator
         {
             get;
@@ -99,6 +109,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Redirect response data.
         /// </summary>
         
+        [JsonProperty("redirectResponse", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Response RedirectResponse
         {
             get;
@@ -110,6 +121,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Type of this resource.
         /// </summary>
         
+        [JsonProperty("type", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public BaristaLabs.ChromeDevTools.Runtime.Page.ResourceType Type
         {
             get;

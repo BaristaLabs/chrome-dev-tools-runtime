@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired when WebSocket is about to initiate handshake.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Request identifier.
         /// </summary>
         
+        [JsonProperty("requestId")]
         public string RequestId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Timestamp.
         /// </summary>
         
+        [JsonProperty("timestamp")]
         public double Timestamp
         {
             get;
@@ -33,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// UTC Timestamp.
         /// </summary>
         
+        [JsonProperty("wallTime")]
         public double WallTime
         {
             get;
@@ -44,6 +49,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// WebSocket request data.
         /// </summary>
         
+        [JsonProperty("request")]
         public WebSocketRequest Request
         {
             get;

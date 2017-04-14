@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// WebSocket frame data.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// WebSocket frame opcode.
         ///</summary>
+        [JsonProperty("opcode")]
         public double Opcode
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// WebSocke frame mask.
         ///</summary>
+        [JsonProperty("mask")]
         public bool Mask
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// WebSocke frame payload data.
         ///</summary>
+        [JsonProperty("payloadData")]
         public string PayloadData
         {
             get;

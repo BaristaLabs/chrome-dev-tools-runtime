@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// DOM interaction is implemented in terms of mirror objects that represent the actual DOM nodes. DOMNode is a base node mirror type.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Node identifier that is passed into the rest of the DOM messages as the <code>nodeId</code>. Backend will only push node with given <code>id</code> once. It is aware of all requested nodes and will only fire DOM events for nodes known to the client.
         ///</summary>
+        [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// The BackendNodeId for this node.
         ///</summary>
+        [JsonProperty("backendNodeId")]
         public long BackendNodeId
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// <code>Node</code>'s nodeType.
         ///</summary>
+        [JsonProperty("nodeType")]
         public long NodeType
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// <code>Node</code>'s nodeName.
         ///</summary>
+        [JsonProperty("nodeName")]
         public string NodeName
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// <code>Node</code>'s localName.
         ///</summary>
+        [JsonProperty("localName")]
         public string LocalName
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// <code>Node</code>'s nodeValue.
         ///</summary>
+        [JsonProperty("nodeValue")]
         public string NodeValue
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Child count for <code>Container</code> nodes.
         ///</summary>
+        [JsonProperty("childNodeCount", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ChildNodeCount
         {
             get;
@@ -72,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Child nodes of this node when requested with children.
         ///</summary>
+        [JsonProperty("children", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Node[] Children
         {
             get;
@@ -81,6 +91,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Attributes of the <code>Element</code> node in the form of flat array <code>[name1, value1, name2, value2]</code>.
         ///</summary>
+        [JsonProperty("attributes", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string[] Attributes
         {
             get;
@@ -90,6 +101,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Document URL that <code>Document</code> or <code>FrameOwner</code> node points to.
         ///</summary>
+        [JsonProperty("documentURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string DocumentURL
         {
             get;
@@ -99,6 +111,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Base URL that <code>Document</code> or <code>FrameOwner</code> node uses for URL completion.
         ///</summary>
+        [JsonProperty("baseURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string BaseURL
         {
             get;
@@ -108,6 +121,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// <code>DocumentType</code>'s publicId.
         ///</summary>
+        [JsonProperty("publicId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string PublicId
         {
             get;
@@ -117,6 +131,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// <code>DocumentType</code>'s systemId.
         ///</summary>
+        [JsonProperty("systemId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string SystemId
         {
             get;
@@ -126,6 +141,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// <code>DocumentType</code>'s internalSubset.
         ///</summary>
+        [JsonProperty("internalSubset", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string InternalSubset
         {
             get;
@@ -135,6 +151,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// <code>Document</code>'s XML version in case of XML documents.
         ///</summary>
+        [JsonProperty("xmlVersion", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string XmlVersion
         {
             get;
@@ -144,6 +161,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// <code>Attr</code>'s name.
         ///</summary>
+        [JsonProperty("name", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Name
         {
             get;
@@ -153,6 +171,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// <code>Attr</code>'s value.
         ///</summary>
+        [JsonProperty("value", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Value
         {
             get;
@@ -162,6 +181,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Pseudo element type for this node.
         ///</summary>
+        [JsonProperty("pseudoType", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public PseudoType PseudoType
         {
             get;
@@ -171,6 +191,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Shadow root type.
         ///</summary>
+        [JsonProperty("shadowRootType", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ShadowRootType ShadowRootType
         {
             get;
@@ -180,6 +201,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Frame ID for frame owner elements.
         ///</summary>
+        [JsonProperty("frameId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string FrameId
         {
             get;
@@ -189,6 +211,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Content document for frame owner elements.
         ///</summary>
+        [JsonProperty("contentDocument", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Node ContentDocument
         {
             get;
@@ -198,6 +221,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Shadow root list for given element host.
         ///</summary>
+        [JsonProperty("shadowRoots", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Node[] ShadowRoots
         {
             get;
@@ -207,6 +231,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Content document fragment for template elements.
         ///</summary>
+        [JsonProperty("templateContent", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Node TemplateContent
         {
             get;
@@ -216,6 +241,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Pseudo elements associated with this node.
         ///</summary>
+        [JsonProperty("pseudoElements", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Node[] PseudoElements
         {
             get;
@@ -225,6 +251,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Import document for the HTMLImport links.
         ///</summary>
+        [JsonProperty("importedDocument", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Node ImportedDocument
         {
             get;
@@ -234,6 +261,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Distributed nodes for given insertion point.
         ///</summary>
+        [JsonProperty("distributedNodes", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public BackendNode[] DistributedNodes
         {
             get;
@@ -243,6 +271,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Whether the node is SVG.
         ///</summary>
+        [JsonProperty("isSVG", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? IsSVG
         {
             get;

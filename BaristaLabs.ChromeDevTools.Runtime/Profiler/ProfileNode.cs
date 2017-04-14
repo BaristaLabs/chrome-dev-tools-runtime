@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Profile node. Holds callsite information, execution statistics and child nodes.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// Unique id of the node.
         ///</summary>
+        [JsonProperty("id")]
         public long Id
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// Function location.
         ///</summary>
+        [JsonProperty("callFrame")]
         public BaristaLabs.ChromeDevTools.Runtime.Runtime.CallFrame CallFrame
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// Number of samples where this node was on top of the call stack.
         ///</summary>
+        [JsonProperty("hitCount", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? HitCount
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// Child node ids.
         ///</summary>
+        [JsonProperty("children", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long[] Children
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// The reason of being not optimized. The function may be deoptimized or marked as don't optimize.
         ///</summary>
+        [JsonProperty("deoptReason", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string DeoptReason
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// An array of source position ticks.
         ///</summary>
+        [JsonProperty("positionTicks", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public PositionTickInfo[] PositionTicks
         {
             get;

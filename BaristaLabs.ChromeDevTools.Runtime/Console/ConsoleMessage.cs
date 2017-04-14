@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Console
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Console message.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
         /// <summary>
         /// Message source.
         ///</summary>
+        [JsonProperty("source")]
         public string Source
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
         /// <summary>
         /// Message severity.
         ///</summary>
+        [JsonProperty("level")]
         public string Level
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
         /// <summary>
         /// Message text.
         ///</summary>
+        [JsonProperty("text")]
         public string Text
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
         /// <summary>
         /// URL of the message origin.
         ///</summary>
+        [JsonProperty("url", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Url
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
         /// <summary>
         /// Line number in the resource that generated this message (1-based).
         ///</summary>
+        [JsonProperty("line", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Line
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
         /// <summary>
         /// Column number in the resource that generated this message (1-based).
         ///</summary>
+        [JsonProperty("column", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Column
         {
             get;

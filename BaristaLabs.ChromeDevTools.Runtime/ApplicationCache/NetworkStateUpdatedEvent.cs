@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         /// Gets or sets the isNowOnline
         /// </summary>
         
+        [JsonProperty("isNowOnline")]
         public bool IsNowOnline
         {
             get;

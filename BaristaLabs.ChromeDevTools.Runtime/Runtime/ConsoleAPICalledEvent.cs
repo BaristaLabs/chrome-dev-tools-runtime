@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Issued when console API was called.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Type of the call.
         /// </summary>
         
+        [JsonProperty("type")]
         public string Type
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Call arguments.
         /// </summary>
         
+        [JsonProperty("args")]
         public RemoteObject[] Args
         {
             get;
@@ -33,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Identifier of the context where the call was made.
         /// </summary>
         
+        [JsonProperty("executionContextId")]
         public long ExecutionContextId
         {
             get;
@@ -44,6 +49,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Call timestamp.
         /// </summary>
         
+        [JsonProperty("timestamp")]
         public double Timestamp
         {
             get;
@@ -55,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Stack trace captured when the call was made.
         /// </summary>
         
+        [JsonProperty("stackTrace", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public StackTrace StackTrace
         {
             get;

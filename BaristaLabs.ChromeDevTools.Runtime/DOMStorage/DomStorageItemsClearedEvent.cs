@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
         /// Gets or sets the storageId
         /// </summary>
         
+        [JsonProperty("storageId")]
         public StorageId StorageId
         {
             get;

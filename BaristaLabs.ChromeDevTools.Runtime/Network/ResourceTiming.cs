@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Timing information for the request.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Timing's requestTime is a baseline in seconds, while the other numbers are ticks in milliseconds relatively to this requestTime.
         ///</summary>
+        [JsonProperty("requestTime")]
         public double RequestTime
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Started resolving proxy.
         ///</summary>
+        [JsonProperty("proxyStart")]
         public double ProxyStart
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Finished resolving proxy.
         ///</summary>
+        [JsonProperty("proxyEnd")]
         public double ProxyEnd
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Started DNS address resolve.
         ///</summary>
+        [JsonProperty("dnsStart")]
         public double DnsStart
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Finished DNS address resolve.
         ///</summary>
+        [JsonProperty("dnsEnd")]
         public double DnsEnd
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Started connecting to the remote host.
         ///</summary>
+        [JsonProperty("connectStart")]
         public double ConnectStart
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Connected to the remote host.
         ///</summary>
+        [JsonProperty("connectEnd")]
         public double ConnectEnd
         {
             get;
@@ -72,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Started SSL handshake.
         ///</summary>
+        [JsonProperty("sslStart")]
         public double SslStart
         {
             get;
@@ -81,6 +91,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Finished SSL handshake.
         ///</summary>
+        [JsonProperty("sslEnd")]
         public double SslEnd
         {
             get;
@@ -90,6 +101,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Started running ServiceWorker.
         ///</summary>
+        [JsonProperty("workerStart")]
         public double WorkerStart
         {
             get;
@@ -99,6 +111,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Finished Starting ServiceWorker.
         ///</summary>
+        [JsonProperty("workerReady")]
         public double WorkerReady
         {
             get;
@@ -108,6 +121,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Started sending request.
         ///</summary>
+        [JsonProperty("sendStart")]
         public double SendStart
         {
             get;
@@ -117,6 +131,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Finished sending request.
         ///</summary>
+        [JsonProperty("sendEnd")]
         public double SendEnd
         {
             get;
@@ -126,6 +141,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Time the server started pushing request.
         ///</summary>
+        [JsonProperty("pushStart")]
         public double PushStart
         {
             get;
@@ -135,6 +151,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Time the server finished pushing request.
         ///</summary>
+        [JsonProperty("pushEnd")]
         public double PushEnd
         {
             get;
@@ -144,6 +161,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Finished receiving response headers.
         ///</summary>
+        [JsonProperty("receiveHeadersEnd")]
         public double ReceiveHeadersEnd
         {
             get;

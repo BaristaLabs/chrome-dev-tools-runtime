@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Key range.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// Lower bound.
         ///</summary>
+        [JsonProperty("lower", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Key Lower
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// Upper bound.
         ///</summary>
+        [JsonProperty("upper", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Key Upper
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// If true lower bound is open.
         ///</summary>
+        [JsonProperty("lowerOpen")]
         public bool LowerOpen
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// If true upper bound is open.
         ///</summary>
+        [JsonProperty("upperOpen")]
         public bool UpperOpen
         {
             get;

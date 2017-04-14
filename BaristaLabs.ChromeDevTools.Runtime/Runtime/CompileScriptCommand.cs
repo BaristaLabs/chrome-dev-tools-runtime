@@ -74,7 +74,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Id of the script.
         ///</summary>
         
-        [JsonProperty("scriptId")]
+        [JsonProperty("scriptId, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public string ScriptId
         {
             get;
@@ -86,7 +86,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Exception details.
         ///</summary>
         
-        [JsonProperty("exceptionDetails")]
+        [JsonProperty("exceptionDetails, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public ExceptionDetails ExceptionDetails
         {
             get;

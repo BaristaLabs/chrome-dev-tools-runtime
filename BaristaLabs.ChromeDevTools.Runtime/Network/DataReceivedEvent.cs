@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired when data chunk was received over the network.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Request identifier.
         /// </summary>
         
+        [JsonProperty("requestId")]
         public string RequestId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Timestamp.
         /// </summary>
         
+        [JsonProperty("timestamp")]
         public double Timestamp
         {
             get;
@@ -33,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Data chunk length.
         /// </summary>
         
+        [JsonProperty("dataLength")]
         public long DataLength
         {
             get;
@@ -44,6 +49,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Actual bytes received (might be less than dataLength for compressed encodings).
         /// </summary>
         
+        [JsonProperty("encodedDataLength")]
         public long EncodedDataLength
         {
             get;

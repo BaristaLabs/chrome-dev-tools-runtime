@@ -38,7 +38,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// Inline style for the specified DOM node.
         ///</summary>
         
-        [JsonProperty("inlineStyle")]
+        [JsonProperty("inlineStyle, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public CSSStyle InlineStyle
         {
             get;
@@ -50,7 +50,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// Attribute-defined element style (e.g. resulting from "width=20 height=100%").
         ///</summary>
         
-        [JsonProperty("attributesStyle")]
+        [JsonProperty("attributesStyle, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public CSSStyle AttributesStyle
         {
             get;

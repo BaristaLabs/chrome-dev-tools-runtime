@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired when breakpoint is resolved to an actual script and location.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Breakpoint unique identifier.
         /// </summary>
         
+        [JsonProperty("breakpointId")]
         public string BreakpointId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Actual breakpoint location.
         /// </summary>
         
+        [JsonProperty("location")]
         public Location Location
         {
             get;

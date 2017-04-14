@@ -122,7 +122,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Exception details.
         ///</summary>
         
-        [JsonProperty("exceptionDetails")]
+        [JsonProperty("exceptionDetails, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public BaristaLabs.ChromeDevTools.Runtime.Runtime.ExceptionDetails ExceptionDetails
         {
             get;

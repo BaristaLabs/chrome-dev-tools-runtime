@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.CSS
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Media query descriptor.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Array of media query expressions.
         ///</summary>
+        [JsonProperty("expressions")]
         public MediaQueryExpression[] Expressions
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Whether the media query condition is satisfied.
         ///</summary>
+        [JsonProperty("active")]
         public bool Active
         {
             get;

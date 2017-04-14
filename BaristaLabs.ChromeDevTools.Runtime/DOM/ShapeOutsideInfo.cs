@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// CSS Shape Outside details.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Shape bounds
         ///</summary>
+        [JsonProperty("bounds")]
         public double[] Bounds
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Shape coordinate details
         ///</summary>
+        [JsonProperty("shape")]
         public object[] Shape
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Margin shape bounds
         ///</summary>
+        [JsonProperty("marginShape")]
         public object[] MarginShape
         {
             get;

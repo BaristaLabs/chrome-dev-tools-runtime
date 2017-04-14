@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Location in the source code.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("lineNumber")]
         public long LineNumber
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("columnNumber")]
         public long ColumnNumber
         {
             get;

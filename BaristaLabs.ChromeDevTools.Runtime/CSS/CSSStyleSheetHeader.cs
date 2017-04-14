@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.CSS
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// CSS stylesheet metainformation.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// The stylesheet identifier.
         ///</summary>
+        [JsonProperty("styleSheetId")]
         public string StyleSheetId
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Owner frame identifier.
         ///</summary>
+        [JsonProperty("frameId")]
         public string FrameId
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Stylesheet resource URL.
         ///</summary>
+        [JsonProperty("sourceURL")]
         public string SourceURL
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// URL of source map associated with the stylesheet (if any).
         ///</summary>
+        [JsonProperty("sourceMapURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string SourceMapURL
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Stylesheet origin.
         ///</summary>
+        [JsonProperty("origin")]
         public StyleSheetOrigin Origin
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Stylesheet title.
         ///</summary>
+        [JsonProperty("title")]
         public string Title
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// The backend id for the owner node of the stylesheet.
         ///</summary>
+        [JsonProperty("ownerNode", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? OwnerNode
         {
             get;
@@ -72,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Denotes whether the stylesheet is disabled.
         ///</summary>
+        [JsonProperty("disabled")]
         public bool Disabled
         {
             get;
@@ -81,6 +91,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Whether the sourceURL field value comes from the sourceURL comment.
         ///</summary>
+        [JsonProperty("hasSourceURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? HasSourceURL
         {
             get;
@@ -90,6 +101,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Whether this stylesheet is created for STYLE tag by parser. This flag is not set for document.written STYLE tags.
         ///</summary>
+        [JsonProperty("isInline")]
         public bool IsInline
         {
             get;
@@ -99,6 +111,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Line offset of the stylesheet within the resource (zero based).
         ///</summary>
+        [JsonProperty("startLine")]
         public double StartLine
         {
             get;
@@ -108,6 +121,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Column offset of the stylesheet within the resource (zero based).
         ///</summary>
+        [JsonProperty("startColumn")]
         public double StartColumn
         {
             get;

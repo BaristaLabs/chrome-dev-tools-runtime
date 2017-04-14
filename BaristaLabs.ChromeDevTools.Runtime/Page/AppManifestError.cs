@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Page
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Error while paring app manifest.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Error message.
         ///</summary>
+        [JsonProperty("message")]
         public string Message
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// If criticial, this is a non-recoverable parse error.
         ///</summary>
+        [JsonProperty("critical")]
         public long Critical
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Error line.
         ///</summary>
+        [JsonProperty("line")]
         public long Line
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Error column.
         ///</summary>
+        [JsonProperty("column")]
         public long Column
         {
             get;

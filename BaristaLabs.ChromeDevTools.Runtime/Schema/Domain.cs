@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Schema
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Description of the protocol domain.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Schema
         /// <summary>
         /// Domain name.
         ///</summary>
+        [JsonProperty("name")]
         public string Name
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Schema
         /// <summary>
         /// Domain version.
         ///</summary>
+        [JsonProperty("version")]
         public string Version
         {
             get;

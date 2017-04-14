@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Target
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Issued when attached to target because of auto-attach or <code>attachToTarget</code> command.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// Gets or sets the targetInfo
         /// </summary>
         
+        [JsonProperty("targetInfo")]
         public TargetInfo TargetInfo
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// Gets or sets the waitingForDebugger
         /// </summary>
         
+        [JsonProperty("waitingForDebugger")]
         public bool WaitingForDebugger
         {
             get;

@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Specifies a number of samples attributed to a certain source position.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// Source line number (1-based).
         ///</summary>
+        [JsonProperty("line")]
         public long Line
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// Number of samples attributed to the source line.
         ///</summary>
+        [JsonProperty("ticks")]
         public long Ticks
         {
             get;

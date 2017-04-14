@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Called when shadow root is popped from the element.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// Host element id.
         /// </summary>
         
+        [JsonProperty("hostId")]
         public long HostId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// Shadow root id.
         /// </summary>
         
+        [JsonProperty("rootId")]
         public long RootId
         {
             get;

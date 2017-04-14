@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired when EventSource message is received.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Request identifier.
         /// </summary>
         
+        [JsonProperty("requestId")]
         public string RequestId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Timestamp.
         /// </summary>
         
+        [JsonProperty("timestamp")]
         public double Timestamp
         {
             get;
@@ -33,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Message type.
         /// </summary>
         
+        [JsonProperty("eventName")]
         public string EventName
         {
             get;
@@ -44,6 +49,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Message identifier.
         /// </summary>
         
+        [JsonProperty("eventId")]
         public string EventId
         {
             get;
@@ -55,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Message content.
         /// </summary>
         
+        [JsonProperty("data")]
         public string Data
         {
             get;

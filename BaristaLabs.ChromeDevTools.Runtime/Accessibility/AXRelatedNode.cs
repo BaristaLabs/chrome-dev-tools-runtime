@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// The BackendNodeId of the related DOM node.
         ///</summary>
+        [JsonProperty("backendDOMNodeId")]
         public long BackendDOMNodeId
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// The IDRef value provided, if any.
         ///</summary>
+        [JsonProperty("idref", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Idref
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// The text alternative of this node in the current context.
         ///</summary>
+        [JsonProperty("text", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Text
         {
             get;

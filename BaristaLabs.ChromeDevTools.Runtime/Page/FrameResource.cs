@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Page
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Information about the Resource on the page.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Resource URL.
         ///</summary>
+        [JsonProperty("url")]
         public string Url
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Type of this resource.
         ///</summary>
+        [JsonProperty("type")]
         public ResourceType Type
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Resource mimeType as determined by the browser.
         ///</summary>
+        [JsonProperty("mimeType")]
         public string MimeType
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// last-modified timestamp as reported by server.
         ///</summary>
+        [JsonProperty("lastModified", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? LastModified
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Resource content size.
         ///</summary>
+        [JsonProperty("contentSize", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? ContentSize
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// True if the resource failed to load.
         ///</summary>
+        [JsonProperty("failed", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Failed
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// True if the resource was canceled during loading.
         ///</summary>
+        [JsonProperty("canceled", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Canceled
         {
             get;

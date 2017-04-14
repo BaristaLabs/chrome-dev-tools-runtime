@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Call frames for assertions or error messages.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// String label of this stack trace. For async traces this may be a name of the function that initiated the async call.
         ///</summary>
+        [JsonProperty("description", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Description
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// JavaScript function name.
         ///</summary>
+        [JsonProperty("callFrames")]
         public CallFrame[] CallFrames
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Asynchronous JavaScript stack trace that preceded this stack, if available.
         ///</summary>
+        [JsonProperty("parent", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public StackTrace Parent
         {
             get;

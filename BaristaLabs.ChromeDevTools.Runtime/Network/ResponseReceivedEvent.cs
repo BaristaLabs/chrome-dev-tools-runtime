@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired when HTTP response is available.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Request identifier.
         /// </summary>
         
+        [JsonProperty("requestId")]
         public string RequestId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Frame identifier.
         /// </summary>
         
+        [JsonProperty("frameId")]
         public string FrameId
         {
             get;
@@ -33,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Loader identifier.
         /// </summary>
         
+        [JsonProperty("loaderId")]
         public string LoaderId
         {
             get;
@@ -44,6 +49,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Timestamp.
         /// </summary>
         
+        [JsonProperty("timestamp")]
         public double Timestamp
         {
             get;
@@ -55,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Resource type.
         /// </summary>
         
+        [JsonProperty("type")]
         public BaristaLabs.ChromeDevTools.Runtime.Page.ResourceType Type
         {
             get;
@@ -66,6 +73,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Response data.
         /// </summary>
         
+        [JsonProperty("response")]
         public Response Response
         {
             get;

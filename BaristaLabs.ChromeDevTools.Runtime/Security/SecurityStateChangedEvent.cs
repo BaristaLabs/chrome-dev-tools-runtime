@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Security
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// The security state of the page changed.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         /// Security state.
         /// </summary>
         
+        [JsonProperty("securityState")]
         public SecurityState SecurityState
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         /// True if the page was loaded over cryptographic transport such as HTTPS.
         /// </summary>
         
+        [JsonProperty("schemeIsCryptographic")]
         public bool SchemeIsCryptographic
         {
             get;
@@ -33,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         /// List of explanations for the security state. If the overall security state is `insecure` or `warning`, at least one corresponding explanation should be included.
         /// </summary>
         
+        [JsonProperty("explanations")]
         public SecurityStateExplanation[] Explanations
         {
             get;
@@ -44,6 +49,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         /// Information about insecure content on the page.
         /// </summary>
         
+        [JsonProperty("insecureContentStatus")]
         public InsecureContentStatus InsecureContentStatus
         {
             get;
@@ -55,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         /// Overrides user-visible description of the state.
         /// </summary>
         
+        [JsonProperty("summary", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Summary
         {
             get;

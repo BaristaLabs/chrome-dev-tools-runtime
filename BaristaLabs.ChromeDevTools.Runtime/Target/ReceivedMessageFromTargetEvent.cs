@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Target
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Notifies about new protocol message from attached target.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// Gets or sets the targetId
         /// </summary>
         
+        [JsonProperty("targetId")]
         public string TargetId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// Gets or sets the message
         /// </summary>
         
+        [JsonProperty("message")]
         public string Message
         {
             get;

@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Information about the cached resource.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Resource URL. This is the url of the original network request.
         ///</summary>
+        [JsonProperty("url")]
         public string Url
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Type of this resource.
         ///</summary>
+        [JsonProperty("type")]
         public BaristaLabs.ChromeDevTools.Runtime.Page.ResourceType Type
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Cached response data.
         ///</summary>
+        [JsonProperty("response", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Response Response
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Cached response body size.
         ///</summary>
+        [JsonProperty("bodySize")]
         public double BodySize
         {
             get;

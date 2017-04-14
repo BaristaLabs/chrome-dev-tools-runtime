@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Inspector
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired when remote debugging connection is about to be terminated. Contains detach reason.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Inspector
         /// The reason why connection has been terminated.
         /// </summary>
         
+        [JsonProperty("reason")]
         public string Reason
         {
             get;

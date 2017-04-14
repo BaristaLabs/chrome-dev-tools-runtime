@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// A structure holding an RGBA color.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// The red component, in the [0-255] range.
         ///</summary>
+        [JsonProperty("r")]
         public long R
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// The green component, in the [0-255] range.
         ///</summary>
+        [JsonProperty("g")]
         public long G
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// The blue component, in the [0-255] range.
         ///</summary>
+        [JsonProperty("b")]
         public long B
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// The alpha component, in the [0-1] range (default: 1).
         ///</summary>
+        [JsonProperty("a", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? A
         {
             get;

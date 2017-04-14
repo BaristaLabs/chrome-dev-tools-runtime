@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Issued when unhandled exception was revoked.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Reason describing why exception was revoked.
         /// </summary>
         
+        [JsonProperty("reason")]
         public string Reason
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// The id of revoked exception, as reported in <code>exceptionUnhandled</code>.
         /// </summary>
         
+        [JsonProperty("exceptionId")]
         public long ExceptionId
         {
             get;

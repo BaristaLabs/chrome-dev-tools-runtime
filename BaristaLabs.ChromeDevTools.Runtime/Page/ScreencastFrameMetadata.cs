@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Page
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Screencast frame metadata.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Top offset in DIP.
         ///</summary>
+        [JsonProperty("offsetTop")]
         public double OffsetTop
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Page scale factor.
         ///</summary>
+        [JsonProperty("pageScaleFactor")]
         public double PageScaleFactor
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Device screen width in DIP.
         ///</summary>
+        [JsonProperty("deviceWidth")]
         public double DeviceWidth
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Device screen height in DIP.
         ///</summary>
+        [JsonProperty("deviceHeight")]
         public double DeviceHeight
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Position of horizontal scroll in CSS pixels.
         ///</summary>
+        [JsonProperty("scrollOffsetX")]
         public double ScrollOffsetX
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Position of vertical scroll in CSS pixels.
         ///</summary>
+        [JsonProperty("scrollOffsetY")]
         public double ScrollOffsetY
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Frame swap timestamp.
         ///</summary>
+        [JsonProperty("timestamp", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? Timestamp
         {
             get;

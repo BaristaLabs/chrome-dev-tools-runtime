@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// HTTP response data.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Response URL. This URL can be different from CachedResource.url in case of redirect.
         ///</summary>
+        [JsonProperty("url")]
         public string Url
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// HTTP response status code.
         ///</summary>
+        [JsonProperty("status")]
         public double Status
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// HTTP response status text.
         ///</summary>
+        [JsonProperty("statusText")]
         public string StatusText
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// HTTP response headers.
         ///</summary>
+        [JsonProperty("headers")]
         public Headers Headers
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// HTTP response headers text.
         ///</summary>
+        [JsonProperty("headersText", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string HeadersText
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Resource mimeType as determined by the browser.
         ///</summary>
+        [JsonProperty("mimeType")]
         public string MimeType
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Refined HTTP request headers that were actually transmitted over the network.
         ///</summary>
+        [JsonProperty("requestHeaders", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Headers RequestHeaders
         {
             get;
@@ -72,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// HTTP request headers text.
         ///</summary>
+        [JsonProperty("requestHeadersText", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string RequestHeadersText
         {
             get;
@@ -81,6 +91,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Specifies whether physical connection was actually reused for this request.
         ///</summary>
+        [JsonProperty("connectionReused")]
         public bool ConnectionReused
         {
             get;
@@ -90,6 +101,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Physical connection id that was actually used for this request.
         ///</summary>
+        [JsonProperty("connectionId")]
         public double ConnectionId
         {
             get;
@@ -99,6 +111,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Remote IP address.
         ///</summary>
+        [JsonProperty("remoteIPAddress", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string RemoteIPAddress
         {
             get;
@@ -108,6 +121,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Remote port.
         ///</summary>
+        [JsonProperty("remotePort", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? RemotePort
         {
             get;
@@ -117,6 +131,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Specifies that the request was served from the disk cache.
         ///</summary>
+        [JsonProperty("fromDiskCache", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? FromDiskCache
         {
             get;
@@ -126,6 +141,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Specifies that the request was served from the ServiceWorker.
         ///</summary>
+        [JsonProperty("fromServiceWorker", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? FromServiceWorker
         {
             get;
@@ -135,6 +151,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Total number of bytes received for this request so far.
         ///</summary>
+        [JsonProperty("encodedDataLength")]
         public double EncodedDataLength
         {
             get;
@@ -144,6 +161,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Timing information for the given request.
         ///</summary>
+        [JsonProperty("timing", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ResourceTiming Timing
         {
             get;
@@ -153,6 +171,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Protocol used to fetch this request.
         ///</summary>
+        [JsonProperty("protocol", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Protocol
         {
             get;
@@ -162,6 +181,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Security state of the request resource.
         ///</summary>
+        [JsonProperty("securityState")]
         public BaristaLabs.ChromeDevTools.Runtime.Security.SecurityState SecurityState
         {
             get;
@@ -171,6 +191,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Security details for the request.
         ///</summary>
+        [JsonProperty("securityDetails", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public SecurityDetails SecurityDetails
         {
             get;

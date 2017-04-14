@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Detailed application cache information.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         /// <summary>
         /// Manifest URL.
         ///</summary>
+        [JsonProperty("manifestURL")]
         public string ManifestURL
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         /// <summary>
         /// Application cache size.
         ///</summary>
+        [JsonProperty("size")]
         public double Size
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         /// <summary>
         /// Application cache creation time.
         ///</summary>
+        [JsonProperty("creationTime")]
         public double CreationTime
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         /// <summary>
         /// Application cache update time.
         ///</summary>
+        [JsonProperty("updateTime")]
         public double UpdateTime
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         /// <summary>
         /// Application cache resources.
         ///</summary>
+        [JsonProperty("resources")]
         public ApplicationCacheResource[] Resources
         {
             get;

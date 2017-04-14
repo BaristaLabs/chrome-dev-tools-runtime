@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Console
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Issued when new console message is added.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
         /// Console message that has been added.
         /// </summary>
         
+        [JsonProperty("message")]
         public ConsoleMessage Message
         {
             get;

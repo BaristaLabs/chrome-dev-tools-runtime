@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// The id of the painted layer.
         /// </summary>
         
+        [JsonProperty("layerId")]
         public string LayerId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// Clip rectangle.
         /// </summary>
         
+        [JsonProperty("clip")]
         public BaristaLabs.ChromeDevTools.Runtime.DOM.Rect Clip
         {
             get;

@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Object store.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// Object store name.
         ///</summary>
+        [JsonProperty("name")]
         public string Name
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// Object store key path.
         ///</summary>
+        [JsonProperty("keyPath")]
         public KeyPath KeyPath
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// If true, object store has auto increment flag set.
         ///</summary>
+        [JsonProperty("autoIncrement")]
         public bool AutoIncrement
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// Indexes in this object store.
         ///</summary>
+        [JsonProperty("indexes")]
         public ObjectStoreIndex[] Indexes
         {
             get;

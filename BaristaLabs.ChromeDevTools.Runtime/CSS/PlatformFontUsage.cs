@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.CSS
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Information about amount of glyphs that were rendered with given font.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Font's family name reported by platform.
         ///</summary>
+        [JsonProperty("familyName")]
         public string FamilyName
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Indicates if the font was downloaded or resolved locally.
         ///</summary>
+        [JsonProperty("isCustomFont")]
         public bool IsCustomFont
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Amount of glyphs that were rendered with this font.
         ///</summary>
+        [JsonProperty("glyphCount")]
         public double GlyphCount
         {
             get;

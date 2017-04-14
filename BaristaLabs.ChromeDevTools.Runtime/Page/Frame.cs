@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Page
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Information about the Frame on the page.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Frame unique identifier.
         ///</summary>
+        [JsonProperty("id")]
         public string Id
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Parent frame identifier.
         ///</summary>
+        [JsonProperty("parentId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ParentId
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Identifier of the loader associated with this frame.
         ///</summary>
+        [JsonProperty("loaderId")]
         public string LoaderId
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Frame's name as specified in the tag.
         ///</summary>
+        [JsonProperty("name", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Name
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Frame document's URL.
         ///</summary>
+        [JsonProperty("url")]
         public string Url
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Frame document's security origin.
         ///</summary>
+        [JsonProperty("securityOrigin")]
         public string SecurityOrigin
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Frame document's mimeType as determined by the browser.
         ///</summary>
+        [JsonProperty("mimeType")]
         public string MimeType
         {
             get;

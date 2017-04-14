@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Object containing abbreviated remote object value.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Object type.
         ///</summary>
+        [JsonProperty("type")]
         public string Type
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Object subtype hint. Specified for <code>object</code> type values only.
         ///</summary>
+        [JsonProperty("subtype", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Subtype
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// String representation of the object.
         ///</summary>
+        [JsonProperty("description", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Description
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// True iff some of the properties or entries of the original object did not fit.
         ///</summary>
+        [JsonProperty("overflow")]
         public bool Overflow
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// List of the properties.
         ///</summary>
+        [JsonProperty("properties")]
         public PropertyPreview[] Properties
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// List of the entries. Specified for <code>map</code> and <code>set</code> subtype values only.
         ///</summary>
+        [JsonProperty("entries", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public EntryPreview[] Entries
         {
             get;

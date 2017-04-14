@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Object event listener.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         /// <summary>
         /// <code>EventListener</code>'s type.
         ///</summary>
+        [JsonProperty("type")]
         public string Type
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         /// <summary>
         /// <code>EventListener</code>'s useCapture.
         ///</summary>
+        [JsonProperty("useCapture")]
         public bool UseCapture
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         /// <summary>
         /// <code>EventListener</code>'s passive flag.
         ///</summary>
+        [JsonProperty("passive")]
         public bool Passive
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         /// <summary>
         /// <code>EventListener</code>'s once flag.
         ///</summary>
+        [JsonProperty("once")]
         public bool Once
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         /// <summary>
         /// Script id of the handler code.
         ///</summary>
+        [JsonProperty("scriptId")]
         public string ScriptId
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         /// <summary>
         /// Line number in the script (0-based).
         ///</summary>
+        [JsonProperty("lineNumber")]
         public long LineNumber
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         /// <summary>
         /// Column number in the script (0-based).
         ///</summary>
+        [JsonProperty("columnNumber")]
         public long ColumnNumber
         {
             get;
@@ -72,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         /// <summary>
         /// Event handler function value.
         ///</summary>
+        [JsonProperty("handler", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public BaristaLabs.ChromeDevTools.Runtime.Runtime.RemoteObject Handler
         {
             get;
@@ -81,6 +91,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         /// <summary>
         /// Event original handler function value.
         ///</summary>
+        [JsonProperty("originalHandler", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public BaristaLabs.ChromeDevTools.Runtime.Runtime.RemoteObject OriginalHandler
         {
             get;
@@ -90,6 +101,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         /// <summary>
         /// Event listener remove function.
         ///</summary>
+        [JsonProperty("removeFunction", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public BaristaLabs.ChromeDevTools.Runtime.Runtime.RemoteObject RemoveFunction
         {
             get;

@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// WebSocket response data.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// HTTP response status code.
         ///</summary>
+        [JsonProperty("status")]
         public double Status
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// HTTP response status text.
         ///</summary>
+        [JsonProperty("statusText")]
         public string StatusText
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// HTTP response headers.
         ///</summary>
+        [JsonProperty("headers")]
         public Headers Headers
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// HTTP response headers text.
         ///</summary>
+        [JsonProperty("headersText", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string HeadersText
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// HTTP request headers.
         ///</summary>
+        [JsonProperty("requestHeaders", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Headers RequestHeaders
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// HTTP request headers text.
         ///</summary>
+        [JsonProperty("requestHeadersText", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string RequestHeadersText
         {
             get;

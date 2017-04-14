@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// The name of this property.
         ///</summary>
+        [JsonProperty("name")]
         public string Name
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// The value of this property.
         ///</summary>
+        [JsonProperty("value")]
         public AXValue Value
         {
             get;

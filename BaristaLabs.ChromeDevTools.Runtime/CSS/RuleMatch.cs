@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.CSS
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Match data for a CSS rule.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// CSS rule in the match.
         ///</summary>
+        [JsonProperty("rule")]
         public CSSRule Rule
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Matching selector indices in the rule's selectorList selectors (0-based).
         ///</summary>
+        [JsonProperty("matchingSelectors")]
         public long[] MatchingSelectors
         {
             get;

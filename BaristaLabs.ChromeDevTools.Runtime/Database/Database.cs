@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Database
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Database object.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
         /// <summary>
         /// Database ID.
         ///</summary>
+        [JsonProperty("id")]
         public string Id
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
         /// <summary>
         /// Database domain.
         ///</summary>
+        [JsonProperty("domain")]
         public string Domain
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
         /// <summary>
         /// Database name.
         ///</summary>
+        [JsonProperty("name")]
         public string Name
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
         /// <summary>
         /// Database version.
         ///</summary>
+        [JsonProperty("version")]
         public string Version
         {
             get;

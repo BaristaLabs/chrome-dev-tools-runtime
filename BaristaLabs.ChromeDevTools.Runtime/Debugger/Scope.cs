@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Scope description.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Scope type.
         ///</summary>
+        [JsonProperty("type")]
         public string Type
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Object representing the scope. For <code>global</code> and <code>with</code> scopes it represents the actual object; for the rest of the scopes, it is artificial transient object enumerating scope variables as its properties.
         ///</summary>
+        [JsonProperty("object")]
         public BaristaLabs.ChromeDevTools.Runtime.Runtime.RemoteObject Object
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// 
         ///</summary>
+        [JsonProperty("name", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Name
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Location in the source code where scope starts
         ///</summary>
+        [JsonProperty("startLocation", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Location StartLocation
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Location in the source code where scope ends
         ///</summary>
+        [JsonProperty("endLocation", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Location EndLocation
         {
             get;

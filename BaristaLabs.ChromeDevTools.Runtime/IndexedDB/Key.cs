@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Key.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// Key type.
         ///</summary>
+        [JsonProperty("type")]
         public string Type
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// Number value.
         ///</summary>
+        [JsonProperty("number", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? Number
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// String value.
         ///</summary>
+        [JsonProperty("string", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string String
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// Date value.
         ///</summary>
+        [JsonProperty("date", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? Date
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// Array value.
         ///</summary>
+        [JsonProperty("array", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Key[] Array
         {
             get;

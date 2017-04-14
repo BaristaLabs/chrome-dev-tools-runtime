@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Input
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// 
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// <summary>
         /// State of the touch point.
         ///</summary>
+        [JsonProperty("state")]
         public string State
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// <summary>
         /// X coordinate of the event relative to the main frame's viewport.
         ///</summary>
+        [JsonProperty("x")]
         public long X
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// <summary>
         /// Y coordinate of the event relative to the main frame's viewport. 0 refers to the top of the viewport and Y increases as it proceeds towards the bottom of the viewport.
         ///</summary>
+        [JsonProperty("y")]
         public long Y
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// <summary>
         /// X radius of the touch area (default: 1).
         ///</summary>
+        [JsonProperty("radiusX", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? RadiusX
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// <summary>
         /// Y radius of the touch area (default: 1).
         ///</summary>
+        [JsonProperty("radiusY", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? RadiusY
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// <summary>
         /// Rotation angle (default: 0.0).
         ///</summary>
+        [JsonProperty("rotationAngle", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? RotationAngle
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// <summary>
         /// Force (default: 1.0).
         ///</summary>
+        [JsonProperty("force", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? Force
         {
             get;
@@ -72,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// <summary>
         /// Identifier used to track touch sources between events, must be unique within an event.
         ///</summary>
+        [JsonProperty("id", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? Id
         {
             get;

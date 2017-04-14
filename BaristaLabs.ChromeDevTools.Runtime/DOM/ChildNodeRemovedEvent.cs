@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Mirrors <code>DOMNodeRemoved</code> event.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// Parent id.
         /// </summary>
         
+        [JsonProperty("parentNodeId")]
         public long ParentNodeId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// Id of the node that has been removed.
         /// </summary>
         
+        [JsonProperty("nodeId")]
         public long NodeId
         {
             get;

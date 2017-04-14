@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired when the virtual machine stopped on breakpoint or exception or any other stop criteria.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Call stack the virtual machine stopped on.
         /// </summary>
         
+        [JsonProperty("callFrames")]
         public CallFrame[] CallFrames
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Pause reason.
         /// </summary>
         
+        [JsonProperty("reason")]
         public string Reason
         {
             get;
@@ -33,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Object containing break-specific auxiliary properties.
         /// </summary>
         
+        [JsonProperty("data", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public object Data
         {
             get;
@@ -44,6 +49,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Hit breakpoints IDs
         /// </summary>
         
+        [JsonProperty("hitBreakpoints", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string[] HitBreakpoints
         {
             get;
@@ -55,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Async stack trace, if any.
         /// </summary>
         
+        [JsonProperty("asyncStackTrace", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public BaristaLabs.ChromeDevTools.Runtime.Runtime.StackTrace AsyncStackTrace
         {
             get;

@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// A node in the accessibility tree.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// Unique identifier for this node.
         ///</summary>
+        [JsonProperty("nodeId")]
         public string NodeId
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// Whether this node is ignored for accessibility
         ///</summary>
+        [JsonProperty("ignored")]
         public bool Ignored
         {
             get;
@@ -27,6 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// Collection of reasons why this node is hidden.
         ///</summary>
+        [JsonProperty("ignoredReasons", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public AXProperty[] IgnoredReasons
         {
             get;
@@ -36,6 +41,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// This <code>Node</code>'s role, whether explicit or implicit.
         ///</summary>
+        [JsonProperty("role", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public AXValue Role
         {
             get;
@@ -45,6 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// The accessible name for this <code>Node</code>.
         ///</summary>
+        [JsonProperty("name", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public AXValue Name
         {
             get;
@@ -54,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// The accessible description for this <code>Node</code>.
         ///</summary>
+        [JsonProperty("description", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public AXValue Description
         {
             get;
@@ -63,6 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// The value for this <code>Node</code>.
         ///</summary>
+        [JsonProperty("value", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public AXValue Value
         {
             get;
@@ -72,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// All other properties
         ///</summary>
+        [JsonProperty("properties", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public AXProperty[] Properties
         {
             get;
@@ -81,6 +91,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// IDs for each of this node's child nodes.
         ///</summary>
+        [JsonProperty("childIds", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string[] ChildIds
         {
             get;
@@ -90,6 +101,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// The backend ID for the associated DOM node, if any.
         ///</summary>
+        [JsonProperty("backendDOMNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? BackendDOMNodeId
         {
             get;

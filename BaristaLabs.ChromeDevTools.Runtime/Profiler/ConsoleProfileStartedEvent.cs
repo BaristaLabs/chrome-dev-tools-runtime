@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Sent when new profile recodring is started using console.profile() call.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// Gets or sets the id
         /// </summary>
         
+        [JsonProperty("id")]
         public string Id
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// Location of console.profile().
         /// </summary>
         
+        [JsonProperty("location")]
         public BaristaLabs.ChromeDevTools.Runtime.Debugger.Location Location
         {
             get;
@@ -33,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// Profile title passed as an argument to console.profile().
         /// </summary>
         
+        [JsonProperty("title", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Title
         {
             get;

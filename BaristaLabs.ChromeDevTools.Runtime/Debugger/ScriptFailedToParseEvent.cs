@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired when virtual machine fails to parse the script.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Identifier of the script parsed.
         /// </summary>
         
+        [JsonProperty("scriptId")]
         public string ScriptId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// URL or name of the script parsed (if any).
         /// </summary>
         
+        [JsonProperty("url")]
         public string Url
         {
             get;
@@ -33,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Line offset of the script within the resource with given URL (for script tags).
         /// </summary>
         
+        [JsonProperty("startLine")]
         public long StartLine
         {
             get;
@@ -44,6 +49,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Column offset of the script within the resource with given URL.
         /// </summary>
         
+        [JsonProperty("startColumn")]
         public long StartColumn
         {
             get;
@@ -55,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Last line of the script.
         /// </summary>
         
+        [JsonProperty("endLine")]
         public long EndLine
         {
             get;
@@ -66,6 +73,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Length of the last line of the script.
         /// </summary>
         
+        [JsonProperty("endColumn")]
         public long EndColumn
         {
             get;
@@ -77,6 +85,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Specifies script creation context.
         /// </summary>
         
+        [JsonProperty("executionContextId")]
         public long ExecutionContextId
         {
             get;
@@ -88,6 +97,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Content hash of the script.
         /// </summary>
         
+        [JsonProperty("hash")]
         public string Hash
         {
             get;
@@ -99,6 +109,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Embedder-specific auxiliary data.
         /// </summary>
         
+        [JsonProperty("executionContextAuxData", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public object ExecutionContextAuxData
         {
             get;
@@ -110,6 +121,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// URL of source map associated with script (if any).
         /// </summary>
         
+        [JsonProperty("sourceMapURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string SourceMapURL
         {
             get;
@@ -121,6 +133,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// True, if this script has sourceURL.
         /// </summary>
         
+        [JsonProperty("hasSourceURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? HasSourceURL
         {
             get;

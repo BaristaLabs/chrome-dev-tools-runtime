@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Fired when HTTP request has failed to load.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Request identifier.
         /// </summary>
         
+        [JsonProperty("requestId")]
         public string RequestId
         {
             get;
@@ -22,6 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Timestamp.
         /// </summary>
         
+        [JsonProperty("timestamp")]
         public double Timestamp
         {
             get;
@@ -33,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Resource type.
         /// </summary>
         
+        [JsonProperty("type")]
         public BaristaLabs.ChromeDevTools.Runtime.Page.ResourceType Type
         {
             get;
@@ -44,6 +49,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// User friendly error message.
         /// </summary>
         
+        [JsonProperty("errorText")]
         public string ErrorText
         {
             get;
@@ -55,6 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// True if loading was canceled.
         /// </summary>
         
+        [JsonProperty("canceled", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Canceled
         {
             get;
@@ -66,6 +73,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// The reason why loading was blocked, if any.
         /// </summary>
         
+        [JsonProperty("blockedReason", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public BlockedReason BlockedReason
         {
             get;

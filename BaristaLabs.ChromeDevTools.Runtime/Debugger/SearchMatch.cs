@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Search match for resource.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Line number in resource content.
         ///</summary>
+        [JsonProperty("lineNumber")]
         public double LineNumber
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Line with match content.
         ///</summary>
+        [JsonProperty("lineContent")]
         public string LineContent
         {
             get;

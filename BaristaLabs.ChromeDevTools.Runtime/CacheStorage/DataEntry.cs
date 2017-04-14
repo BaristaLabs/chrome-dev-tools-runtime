@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Data entry.
     /// </summary>
@@ -9,6 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         /// <summary>
         /// Request url spec.
         ///</summary>
+        [JsonProperty("request")]
         public string Request
         {
             get;
@@ -18,6 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         /// <summary>
         /// Response stataus text.
         ///</summary>
+        [JsonProperty("response")]
         public string Response
         {
             get;

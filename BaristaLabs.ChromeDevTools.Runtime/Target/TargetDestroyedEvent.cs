@@ -1,5 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Target
 {
+    using Newtonsoft.Json;
+
     /// <summary>
     /// Issued when a target is destroyed.
     /// </summary>
@@ -11,6 +13,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// Gets or sets the targetId
         /// </summary>
         
+        [JsonProperty("targetId")]
         public string TargetId
         {
             get;
