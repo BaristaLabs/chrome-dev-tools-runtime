@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// If true, returns properties belonging only to the element itself, not to its prototype chain.
         /// </summary>
         
-        [JsonProperty("ownProperties")]
+        [JsonProperty("ownProperties", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? OwnProperties
         {
             get;
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// If true, returns accessor properties (with getter/setter) only; internal properties are not returned either.
         /// </summary>
         
-        [JsonProperty("accessorPropertiesOnly")]
+        [JsonProperty("accessorPropertiesOnly", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? AccessorPropertiesOnly
         {
             get;
@@ -57,7 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Whether preview should be generated for the results.
         /// </summary>
         
-        [JsonProperty("generatePreview")]
+        [JsonProperty("generatePreview", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? GeneratePreview
         {
             get;

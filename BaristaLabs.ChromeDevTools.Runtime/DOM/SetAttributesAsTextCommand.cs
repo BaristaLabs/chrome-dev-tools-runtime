@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// Attribute name to replace with new attributes derived from text in case text parsed successfully.
         /// </summary>
         
-        [JsonProperty("name")]
+        [JsonProperty("name", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Name
         {
             get;

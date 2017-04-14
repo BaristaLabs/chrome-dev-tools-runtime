@@ -57,7 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// If omitted, the cookie becomes a host-only cookie.
         /// </summary>
         
-        [JsonProperty("domain")]
+        [JsonProperty("domain", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Domain
         {
             get;
@@ -69,7 +69,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Defaults to the path portion of the url parameter.
         /// </summary>
         
-        [JsonProperty("path")]
+        [JsonProperty("path", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Path
         {
             get;
@@ -81,7 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Defaults ot false.
         /// </summary>
         
-        [JsonProperty("secure")]
+        [JsonProperty("secure", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Secure
         {
             get;
@@ -93,7 +93,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Defaults to false.
         /// </summary>
         
-        [JsonProperty("httpOnly")]
+        [JsonProperty("httpOnly", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? HttpOnly
         {
             get;
@@ -105,7 +105,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Defaults to browser default behavior.
         /// </summary>
         
-        [JsonProperty("sameSite")]
+        [JsonProperty("sameSite", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public CookieSameSite SameSite
         {
             get;
@@ -117,7 +117,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// If omitted, the cookie becomes a session cookie.
         /// </summary>
         
-        [JsonProperty("expirationDate")]
+        [JsonProperty("expirationDate", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double ExpirationDate
         {
             get;

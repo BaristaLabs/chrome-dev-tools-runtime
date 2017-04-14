@@ -57,7 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// Bit field representing pressed modifier keys. Alt=1, Ctrl=2, Meta/Command=4, Shift=8 (default: 0).
         /// </summary>
         
-        [JsonProperty("modifiers")]
+        [JsonProperty("modifiers", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Modifiers
         {
             get;
@@ -69,7 +69,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// Time at which the event occurred. Measured in UTC time in seconds since January 1, 1970 (default: current time).
         /// </summary>
         
-        [JsonProperty("timestamp")]
+        [JsonProperty("timestamp", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? Timestamp
         {
             get;
@@ -81,7 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// Mouse button (default: "none").
         /// </summary>
         
-        [JsonProperty("button")]
+        [JsonProperty("button", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Button
         {
             get;
@@ -93,7 +93,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// Number of times the mouse button was clicked (default: 0).
         /// </summary>
         
-        [JsonProperty("clickCount")]
+        [JsonProperty("clickCount", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ClickCount
         {
             get;

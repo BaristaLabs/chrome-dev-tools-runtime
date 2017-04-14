@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// The maximum depth at which children should be retrieved, defaults to 1. Use -1 for the entire subtree or provide an integer larger than 0.
         /// </summary>
         
-        [JsonProperty("depth")]
+        [JsonProperty("depth", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Depth
         {
             get;
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// Whether or not iframes and shadow roots should be traversed when returning the sub-tree (default is false).
         /// </summary>
         
-        [JsonProperty("pierce")]
+        [JsonProperty("pierce", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Pierce
         {
             get;

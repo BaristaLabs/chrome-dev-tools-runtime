@@ -21,7 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// Category/tag filter
         /// </summary>
         
-        [JsonProperty("categories")]
+        [JsonProperty("categories", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Categories
         {
             get;
@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// Tracing options
         /// </summary>
         
-        [JsonProperty("options")]
+        [JsonProperty("options", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Options
         {
             get;
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// If set, the agent will issue bufferUsage events at this interval, specified in milliseconds
         /// </summary>
         
-        [JsonProperty("bufferUsageReportingInterval")]
+        [JsonProperty("bufferUsageReportingInterval", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? BufferUsageReportingInterval
         {
             get;
@@ -57,7 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// Whether to report trace events as series of dataCollected events or to save trace to a stream (defaults to <code>ReportEvents</code>).
         /// </summary>
         
-        [JsonProperty("transferMode")]
+        [JsonProperty("transferMode", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string TransferMode
         {
             get;
@@ -69,7 +69,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// Gets or sets the traceConfig
         /// </summary>
         
-        [JsonProperty("traceConfig")]
+        [JsonProperty("traceConfig", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public TraceConfig TraceConfig
         {
             get;

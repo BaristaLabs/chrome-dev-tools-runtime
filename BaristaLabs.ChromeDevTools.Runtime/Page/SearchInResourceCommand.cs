@@ -57,7 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// If true, search is case sensitive.
         /// </summary>
         
-        [JsonProperty("caseSensitive")]
+        [JsonProperty("caseSensitive", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? CaseSensitive
         {
             get;
@@ -69,7 +69,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// If true, treats string parameter as regex.
         /// </summary>
         
-        [JsonProperty("isRegex")]
+        [JsonProperty("isRegex", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? IsRegex
         {
             get;

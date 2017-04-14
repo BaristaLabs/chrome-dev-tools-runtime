@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Specifies in which execution context to perform script run. If the parameter is omitted the evaluation will be performed in the context of the inspected page.
         /// </summary>
         
-        [JsonProperty("executionContextId")]
+        [JsonProperty("executionContextId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long ExecutionContextId
         {
             get;
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Symbolic group name that can be used to release multiple objects.
         /// </summary>
         
-        [JsonProperty("objectGroup")]
+        [JsonProperty("objectGroup", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ObjectGroup
         {
             get;
@@ -57,7 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// In silent mode exceptions thrown during evaluation are not reported and do not pause execution. Overrides <code>setPauseOnException</code> state.
         /// </summary>
         
-        [JsonProperty("silent")]
+        [JsonProperty("silent", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Silent
         {
             get;
@@ -69,7 +69,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Determines whether Command Line API should be available during the evaluation.
         /// </summary>
         
-        [JsonProperty("includeCommandLineAPI")]
+        [JsonProperty("includeCommandLineAPI", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? IncludeCommandLineAPI
         {
             get;
@@ -81,7 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Whether the result is expected to be a JSON object which should be sent by value.
         /// </summary>
         
-        [JsonProperty("returnByValue")]
+        [JsonProperty("returnByValue", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? ReturnByValue
         {
             get;
@@ -93,7 +93,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Whether preview should be generated for the result.
         /// </summary>
         
-        [JsonProperty("generatePreview")]
+        [JsonProperty("generatePreview", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? GeneratePreview
         {
             get;
@@ -105,7 +105,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Whether execution should wait for promise to be resolved. If the result of evaluation is not a Promise, it's considered to be an error.
         /// </summary>
         
-        [JsonProperty("awaitPromise")]
+        [JsonProperty("awaitPromise", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? AwaitPromise
         {
             get;

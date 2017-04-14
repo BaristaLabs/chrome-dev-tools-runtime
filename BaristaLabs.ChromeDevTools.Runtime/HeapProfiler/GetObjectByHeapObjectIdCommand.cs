@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         /// Symbolic group name that can be used to release multiple objects.
         /// </summary>
         
-        [JsonProperty("objectGroup")]
+        [JsonProperty("objectGroup", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ObjectGroup
         {
             get;

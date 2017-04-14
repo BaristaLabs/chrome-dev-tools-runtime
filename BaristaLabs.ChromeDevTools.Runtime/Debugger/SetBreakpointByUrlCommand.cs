@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// URL of the resources to set breakpoint on.
         /// </summary>
         
-        [JsonProperty("url")]
+        [JsonProperty("url", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Url
         {
             get;
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Regex pattern for the URLs of the resources to set breakpoints on. Either <code>url</code> or <code>urlRegex</code> must be specified.
         /// </summary>
         
-        [JsonProperty("urlRegex")]
+        [JsonProperty("urlRegex", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string UrlRegex
         {
             get;
@@ -57,7 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Offset in the line to set breakpoint at.
         /// </summary>
         
-        [JsonProperty("columnNumber")]
+        [JsonProperty("columnNumber", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ColumnNumber
         {
             get;
@@ -69,7 +69,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Expression to use as a breakpoint condition. When specified, debugger will only stop on the breakpoint if this expression evaluates to true.
         /// </summary>
         
-        [JsonProperty("condition")]
+        [JsonProperty("condition", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Condition
         {
             get;

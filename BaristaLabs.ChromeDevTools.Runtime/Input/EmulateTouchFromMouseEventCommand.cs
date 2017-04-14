@@ -81,7 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// X delta in DIP for mouse wheel event (default: 0).
         /// </summary>
         
-        [JsonProperty("deltaX")]
+        [JsonProperty("deltaX", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? DeltaX
         {
             get;
@@ -93,7 +93,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// Y delta in DIP for mouse wheel event (default: 0).
         /// </summary>
         
-        [JsonProperty("deltaY")]
+        [JsonProperty("deltaY", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? DeltaY
         {
             get;
@@ -105,7 +105,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// Bit field representing pressed modifier keys. Alt=1, Ctrl=2, Meta/Command=4, Shift=8 (default: 0).
         /// </summary>
         
-        [JsonProperty("modifiers")]
+        [JsonProperty("modifiers", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Modifiers
         {
             get;
@@ -117,7 +117,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// Number of times the mouse button was clicked (default: 0).
         /// </summary>
         
-        [JsonProperty("clickCount")]
+        [JsonProperty("clickCount", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ClickCount
         {
             get;

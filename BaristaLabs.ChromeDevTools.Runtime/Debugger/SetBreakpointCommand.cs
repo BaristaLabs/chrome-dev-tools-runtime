@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Expression to use as a breakpoint condition. When specified, debugger will only stop on the breakpoint if this expression evaluates to true.
         /// </summary>
         
-        [JsonProperty("condition")]
+        [JsonProperty("condition", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Condition
         {
             get;

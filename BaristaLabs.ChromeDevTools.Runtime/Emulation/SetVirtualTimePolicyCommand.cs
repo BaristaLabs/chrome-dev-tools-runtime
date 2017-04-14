@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         /// If set, after this many virtual milliseconds have elapsed virtual time will be paused and a virtualTimeBudgetExpired event is sent.
         /// </summary>
         
-        [JsonProperty("budget")]
+        [JsonProperty("budget", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Budget
         {
             get;

@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Whether the result is expected to be a JSON object that should be sent by value.
         /// </summary>
         
-        [JsonProperty("returnByValue")]
+        [JsonProperty("returnByValue", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? ReturnByValue
         {
             get;
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Whether preview should be generated for the result.
         /// </summary>
         
-        [JsonProperty("generatePreview")]
+        [JsonProperty("generatePreview", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? GeneratePreview
         {
             get;

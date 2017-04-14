@@ -81,7 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Scale to apply to resulting view image. Ignored in |fitWindow| mode.
         /// </summary>
         
-        [JsonProperty("scale")]
+        [JsonProperty("scale", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? Scale
         {
             get;
@@ -93,7 +93,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// X offset to shift resulting view image by. Ignored in |fitWindow| mode.
         /// </summary>
         
-        [JsonProperty("offsetX")]
+        [JsonProperty("offsetX", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? OffsetX
         {
             get;
@@ -105,7 +105,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Y offset to shift resulting view image by. Ignored in |fitWindow| mode.
         /// </summary>
         
-        [JsonProperty("offsetY")]
+        [JsonProperty("offsetY", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? OffsetY
         {
             get;
@@ -117,7 +117,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Overriding screen width value in pixels (minimum 0, maximum 10000000). Only used for |mobile==true|.
         /// </summary>
         
-        [JsonProperty("screenWidth")]
+        [JsonProperty("screenWidth", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ScreenWidth
         {
             get;
@@ -129,7 +129,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Overriding screen height value in pixels (minimum 0, maximum 10000000). Only used for |mobile==true|.
         /// </summary>
         
-        [JsonProperty("screenHeight")]
+        [JsonProperty("screenHeight", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ScreenHeight
         {
             get;
@@ -141,7 +141,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Overriding view X position on screen in pixels (minimum 0, maximum 10000000). Only used for |mobile==true|.
         /// </summary>
         
-        [JsonProperty("positionX")]
+        [JsonProperty("positionX", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? PositionX
         {
             get;
@@ -153,7 +153,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Overriding view Y position on screen in pixels (minimum 0, maximum 10000000). Only used for |mobile==true|.
         /// </summary>
         
-        [JsonProperty("positionY")]
+        [JsonProperty("positionY", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? PositionY
         {
             get;
@@ -165,7 +165,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Screen orientation override.
         /// </summary>
         
-        [JsonProperty("screenOrientation")]
+        [JsonProperty("screenOrientation", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public BaristaLabs.ChromeDevTools.Runtime.Emulation.ScreenOrientation ScreenOrientation
         {
             get;

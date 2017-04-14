@@ -57,7 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// Relative pointer speed in pixels per second (default: 800).
         /// </summary>
         
-        [JsonProperty("relativeSpeed")]
+        [JsonProperty("relativeSpeed", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? RelativeSpeed
         {
             get;
@@ -69,7 +69,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// Which type of input events to be generated (default: 'default', which queries the platform for the preferred input type).
         /// </summary>
         
-        [JsonProperty("gestureSourceType")]
+        [JsonProperty("gestureSourceType", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public GestureSourceType GestureSourceType
         {
             get;

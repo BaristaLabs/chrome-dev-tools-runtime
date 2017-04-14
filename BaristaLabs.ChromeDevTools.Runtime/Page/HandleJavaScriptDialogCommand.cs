@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// The text to enter into the dialog prompt before accepting. Used only if this is a prompt dialog.
         /// </summary>
         
-        [JsonProperty("promptText")]
+        [JsonProperty("promptText", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string PromptText
         {
             get;

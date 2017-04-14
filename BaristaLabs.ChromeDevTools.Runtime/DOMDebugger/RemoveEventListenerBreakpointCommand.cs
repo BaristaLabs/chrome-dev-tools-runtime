@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         /// EventTarget interface name.
         /// </summary>
         
-        [JsonProperty("targetName")]
+        [JsonProperty("targetName", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string TargetName
         {
             get;

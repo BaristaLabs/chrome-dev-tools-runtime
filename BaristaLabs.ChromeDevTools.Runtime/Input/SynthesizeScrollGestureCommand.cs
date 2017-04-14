@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// The distance to scroll along the X axis (positive to scroll left).
         /// </summary>
         
-        [JsonProperty("xDistance")]
+        [JsonProperty("xDistance", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? XDistance
         {
             get;
@@ -57,7 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// The distance to scroll along the Y axis (positive to scroll up).
         /// </summary>
         
-        [JsonProperty("yDistance")]
+        [JsonProperty("yDistance", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? YDistance
         {
             get;
@@ -69,7 +69,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// The number of additional pixels to scroll back along the X axis, in addition to the given distance.
         /// </summary>
         
-        [JsonProperty("xOverscroll")]
+        [JsonProperty("xOverscroll", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? XOverscroll
         {
             get;
@@ -81,7 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// The number of additional pixels to scroll back along the Y axis, in addition to the given distance.
         /// </summary>
         
-        [JsonProperty("yOverscroll")]
+        [JsonProperty("yOverscroll", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? YOverscroll
         {
             get;
@@ -93,7 +93,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// Prevent fling (default: true).
         /// </summary>
         
-        [JsonProperty("preventFling")]
+        [JsonProperty("preventFling", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? PreventFling
         {
             get;
@@ -105,7 +105,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// Swipe speed in pixels per second (default: 800).
         /// </summary>
         
-        [JsonProperty("speed")]
+        [JsonProperty("speed", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Speed
         {
             get;
@@ -117,7 +117,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// Which type of input events to be generated (default: 'default', which queries the platform for the preferred input type).
         /// </summary>
         
-        [JsonProperty("gestureSourceType")]
+        [JsonProperty("gestureSourceType", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public GestureSourceType GestureSourceType
         {
             get;
@@ -129,7 +129,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// The number of times to repeat the gesture (default: 0).
         /// </summary>
         
-        [JsonProperty("repeatCount")]
+        [JsonProperty("repeatCount", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? RepeatCount
         {
             get;
@@ -141,7 +141,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// The number of milliseconds delay between each repeat. (default: 250).
         /// </summary>
         
-        [JsonProperty("repeatDelayMs")]
+        [JsonProperty("repeatDelayMs", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? RepeatDelayMs
         {
             get;
@@ -153,7 +153,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// The name of the interaction markers to generate, if not empty (default: "").
         /// </summary>
         
-        [JsonProperty("interactionMarkerName")]
+        [JsonProperty("interactionMarkerName", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string InteractionMarkerName
         {
             get;

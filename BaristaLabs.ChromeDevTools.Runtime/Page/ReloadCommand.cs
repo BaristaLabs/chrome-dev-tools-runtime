@@ -21,7 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// If true, browser cache is ignored (as if the user pressed Shift+refresh).
         /// </summary>
         
-        [JsonProperty("ignoreCache")]
+        [JsonProperty("ignoreCache", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? IgnoreCache
         {
             get;
@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// If set, the script will be injected into all frames of the inspected page after reload.
         /// </summary>
         
-        [JsonProperty("scriptToEvaluateOnLoad")]
+        [JsonProperty("scriptToEvaluateOnLoad", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ScriptToEvaluateOnLoad
         {
             get;

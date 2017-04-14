@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// End of range to search possible breakpoint locations in (excluding). When not specifed, end of scripts is used as end of range.
         /// </summary>
         
-        [JsonProperty("end")]
+        [JsonProperty("end", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Location End
         {
             get;

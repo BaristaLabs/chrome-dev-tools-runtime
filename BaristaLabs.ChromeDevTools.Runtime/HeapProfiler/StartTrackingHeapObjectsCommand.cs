@@ -21,7 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         /// Gets or sets the trackAllocations
         /// </summary>
         
-        [JsonProperty("trackAllocations")]
+        [JsonProperty("trackAllocations", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? TrackAllocations
         {
             get;

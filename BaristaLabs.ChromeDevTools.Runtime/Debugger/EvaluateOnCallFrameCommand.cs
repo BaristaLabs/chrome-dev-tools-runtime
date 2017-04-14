@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// String object group name to put result into (allows rapid releasing resulting object handles using <code>releaseObjectGroup</code>).
         /// </summary>
         
-        [JsonProperty("objectGroup")]
+        [JsonProperty("objectGroup", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ObjectGroup
         {
             get;
@@ -57,7 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Specifies whether command line API should be available to the evaluated expression, defaults to false.
         /// </summary>
         
-        [JsonProperty("includeCommandLineAPI")]
+        [JsonProperty("includeCommandLineAPI", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? IncludeCommandLineAPI
         {
             get;
@@ -69,7 +69,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// In silent mode exceptions thrown during evaluation are not reported and do not pause execution. Overrides <code>setPauseOnException</code> state.
         /// </summary>
         
-        [JsonProperty("silent")]
+        [JsonProperty("silent", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Silent
         {
             get;
@@ -81,7 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Whether the result is expected to be a JSON object that should be sent by value.
         /// </summary>
         
-        [JsonProperty("returnByValue")]
+        [JsonProperty("returnByValue", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? ReturnByValue
         {
             get;
@@ -93,7 +93,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// Whether preview should be generated for the result.
         /// </summary>
         
-        [JsonProperty("generatePreview")]
+        [JsonProperty("generatePreview", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? GeneratePreview
         {
             get;

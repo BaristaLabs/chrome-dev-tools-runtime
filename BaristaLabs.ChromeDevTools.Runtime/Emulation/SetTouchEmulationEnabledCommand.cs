@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         /// Touch/gesture events configuration. Default: current platform.
         /// </summary>
         
-        [JsonProperty("configuration")]
+        [JsonProperty("configuration", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Configuration
         {
             get;

@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// The first step to replay from (replay from the very start if not specified).
         /// </summary>
         
-        [JsonProperty("fromStep")]
+        [JsonProperty("fromStep", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? FromStep
         {
             get;
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// The last step to replay to (replay till the end if not specified).
         /// </summary>
         
-        [JsonProperty("toStep")]
+        [JsonProperty("toStep", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ToStep
         {
             get;
@@ -57,7 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// The scale to apply while replaying (defaults to 1).
         /// </summary>
         
-        [JsonProperty("scale")]
+        [JsonProperty("scale", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? Scale
         {
             get;

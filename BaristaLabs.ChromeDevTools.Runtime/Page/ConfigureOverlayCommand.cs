@@ -21,7 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Whether overlay should be suspended and not consume any resources.
         /// </summary>
         
-        [JsonProperty("suspended")]
+        [JsonProperty("suspended", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Suspended
         {
             get;
@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Overlay message to display.
         /// </summary>
         
-        [JsonProperty("message")]
+        [JsonProperty("message", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Message
         {
             get;

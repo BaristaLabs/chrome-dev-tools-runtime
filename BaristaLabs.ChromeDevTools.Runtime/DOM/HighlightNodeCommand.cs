@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// Identifier of the node to highlight.
         /// </summary>
         
-        [JsonProperty("nodeId")]
+        [JsonProperty("nodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long NodeId
         {
             get;
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// Identifier of the backend node to highlight.
         /// </summary>
         
-        [JsonProperty("backendNodeId")]
+        [JsonProperty("backendNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long BackendNodeId
         {
             get;
@@ -57,7 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// JavaScript object id of the node to be highlighted.
         /// </summary>
         
-        [JsonProperty("objectId")]
+        [JsonProperty("objectId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ObjectId
         {
             get;

@@ -21,7 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Buffer size in bytes to use when preserving network payloads (XHRs, etc).
         /// </summary>
         
-        [JsonProperty("maxTotalBufferSize")]
+        [JsonProperty("maxTotalBufferSize", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? MaxTotalBufferSize
         {
             get;
@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Per-resource buffer size in bytes to use when preserving network payloads (XHRs, etc).
         /// </summary>
         
-        [JsonProperty("maxResourceBufferSize")]
+        [JsonProperty("maxResourceBufferSize", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? MaxResourceBufferSize
         {
             get;

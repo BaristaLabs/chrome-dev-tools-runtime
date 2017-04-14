@@ -21,7 +21,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Image compression format.
         /// </summary>
         
-        [JsonProperty("format")]
+        [JsonProperty("format", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Format
         {
             get;
@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Compression quality from range [0..100].
         /// </summary>
         
-        [JsonProperty("quality")]
+        [JsonProperty("quality", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Quality
         {
             get;
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Maximum screenshot width.
         /// </summary>
         
-        [JsonProperty("maxWidth")]
+        [JsonProperty("maxWidth", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? MaxWidth
         {
             get;
@@ -57,7 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Maximum screenshot height.
         /// </summary>
         
-        [JsonProperty("maxHeight")]
+        [JsonProperty("maxHeight", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? MaxHeight
         {
             get;
@@ -69,7 +69,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Send every n-th frame.
         /// </summary>
         
-        [JsonProperty("everyNthFrame")]
+        [JsonProperty("everyNthFrame", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? EveryNthFrame
         {
             get;

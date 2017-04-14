@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
         /// Seek to the specified offset before reading (if not specificed, proceed with offset following the last read).
         /// </summary>
         
-        [JsonProperty("offset")]
+        [JsonProperty("offset", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Offset
         {
             get;
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
         /// Maximum number of bytes to read (left upon the agent discretion if not specified).
         /// </summary>
         
-        [JsonProperty("size")]
+        [JsonProperty("size", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Size
         {
             get;

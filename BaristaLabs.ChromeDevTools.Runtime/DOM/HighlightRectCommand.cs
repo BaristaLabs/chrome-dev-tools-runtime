@@ -69,7 +69,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// The highlight fill color (default: transparent).
         /// </summary>
         
-        [JsonProperty("color")]
+        [JsonProperty("color", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RGBA Color
         {
             get;
@@ -81,7 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// The highlight outline color (default: transparent).
         /// </summary>
         
-        [JsonProperty("outlineColor")]
+        [JsonProperty("outlineColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RGBA OutlineColor
         {
             get;

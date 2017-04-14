@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// The content box highlight fill color (default: transparent).
         /// </summary>
         
-        [JsonProperty("contentColor")]
+        [JsonProperty("contentColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RGBA ContentColor
         {
             get;
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// The content box highlight outline color (default: transparent).
         /// </summary>
         
-        [JsonProperty("contentOutlineColor")]
+        [JsonProperty("contentOutlineColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RGBA ContentOutlineColor
         {
             get;

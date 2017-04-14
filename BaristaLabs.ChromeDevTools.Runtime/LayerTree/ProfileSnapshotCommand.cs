@@ -33,7 +33,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// The maximum number of times to replay the snapshot (1, if not specified).
         /// </summary>
         
-        [JsonProperty("minRepeatCount")]
+        [JsonProperty("minRepeatCount", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? MinRepeatCount
         {
             get;
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// The minimum duration (in seconds) to replay the snapshot.
         /// </summary>
         
-        [JsonProperty("minDuration")]
+        [JsonProperty("minDuration", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? MinDuration
         {
             get;
@@ -57,7 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// The clip rectangle to apply when replaying the snapshot.
         /// </summary>
         
-        [JsonProperty("clipRect")]
+        [JsonProperty("clipRect", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public BaristaLabs.ChromeDevTools.Runtime.DOM.Rect ClipRect
         {
             get;
