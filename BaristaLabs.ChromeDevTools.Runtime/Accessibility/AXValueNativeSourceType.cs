@@ -1,51 +1,39 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Enum of possible native property sources (as a subtype of a particular AXValueSourceType).
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class AXValueNativeSourceType
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum AXValueNativeSourceType
     {
-        private string m_value;
-        
-        public AXValueNativeSourceType(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static AXValueNativeSourceType Figcaption = new AXValueNativeSourceType("figcaption");
+        [EnumMember(Value = "figcaption")]
+        Figcaption,
     
-        public static AXValueNativeSourceType Label = new AXValueNativeSourceType("label");
+        [EnumMember(Value = "label")]
+        Label,
     
-        public static AXValueNativeSourceType Labelfor = new AXValueNativeSourceType("labelfor");
+        [EnumMember(Value = "labelfor")]
+        Labelfor,
     
-        public static AXValueNativeSourceType Labelwrapped = new AXValueNativeSourceType("labelwrapped");
+        [EnumMember(Value = "labelwrapped")]
+        Labelwrapped,
     
-        public static AXValueNativeSourceType Legend = new AXValueNativeSourceType("legend");
+        [EnumMember(Value = "legend")]
+        Legend,
     
-        public static AXValueNativeSourceType Tablecaption = new AXValueNativeSourceType("tablecaption");
+        [EnumMember(Value = "tablecaption")]
+        Tablecaption,
     
-        public static AXValueNativeSourceType Title = new AXValueNativeSourceType("title");
+        [EnumMember(Value = "title")]
+        Title,
     
-        public static AXValueNativeSourceType Other = new AXValueNativeSourceType("other");
+        [EnumMember(Value = "other")]
+        Other,
     
     }
 }

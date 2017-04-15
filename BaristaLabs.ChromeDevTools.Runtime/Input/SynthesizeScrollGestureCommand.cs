@@ -118,7 +118,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// </summary>
         
         [JsonProperty("gestureSourceType", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public GestureSourceType GestureSourceType
+        public GestureSourceType? GestureSourceType
         {
             get;
             set;

@@ -1,43 +1,27 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Primitive value which cannot be JSON-stringified.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class UnserializableValue
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum UnserializableValue
     {
-        private string m_value;
-        
-        public UnserializableValue(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static UnserializableValue Infinity = new UnserializableValue("Infinity");
+        [EnumMember(Value = "Infinity")]
+        Infinity,
     
-        public static UnserializableValue NaN = new UnserializableValue("NaN");
+        [EnumMember(Value = "NaN")]
+        NaN,
     
-        public static UnserializableValue NegativeInfinity = new UnserializableValue("-Infinity");
+        [EnumMember(Value = "-Infinity")]
+        NegativeInfinity,
     
-        public static UnserializableValue Negative0 = new UnserializableValue("-0");
+        [EnumMember(Value = "-0")]
+        Negative0,
     
     }
 }

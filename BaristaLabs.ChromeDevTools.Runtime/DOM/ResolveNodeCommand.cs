@@ -51,7 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         ///</summary>
         
         [JsonProperty("object")]
-        public BaristaLabs.ChromeDevTools.Runtime.Runtime.RemoteObject Object
+        public Runtime.RemoteObject Object
         {
             get;
             set;

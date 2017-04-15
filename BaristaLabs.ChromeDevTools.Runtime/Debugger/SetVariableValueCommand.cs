@@ -46,7 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// </summary>
         
         [JsonProperty("newValue")]
-        public BaristaLabs.ChromeDevTools.Runtime.Runtime.CallArgument NewValue
+        public Runtime.CallArgument NewValue
         {
             get;
             set;

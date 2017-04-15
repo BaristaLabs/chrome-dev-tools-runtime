@@ -1,41 +1,24 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// 
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class InspectMode
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum InspectMode
     {
-        private string m_value;
-        
-        public InspectMode(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static InspectMode SearchForNode = new InspectMode("searchForNode");
+        [EnumMember(Value = "searchForNode")]
+        SearchForNode,
     
-        public static InspectMode SearchForUAShadowDOM = new InspectMode("searchForUAShadowDOM");
+        [EnumMember(Value = "searchForUAShadowDOM")]
+        SearchForUAShadowDOM,
     
-        public static InspectMode None = new InspectMode("none");
+        [EnumMember(Value = "none")]
+        None,
     
     }
 }

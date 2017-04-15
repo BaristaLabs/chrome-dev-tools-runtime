@@ -58,7 +58,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// </summary>
         
         [JsonProperty("clipRect", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public BaristaLabs.ChromeDevTools.Runtime.DOM.Rect ClipRect
+        public DOM.Rect ClipRect
         {
             get;
             set;

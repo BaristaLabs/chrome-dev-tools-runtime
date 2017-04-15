@@ -1,47 +1,33 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Enum of possible property sources.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class AXValueSourceType
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum AXValueSourceType
     {
-        private string m_value;
-        
-        public AXValueSourceType(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static AXValueSourceType Attribute = new AXValueSourceType("attribute");
+        [EnumMember(Value = "attribute")]
+        Attribute,
     
-        public static AXValueSourceType Implicit = new AXValueSourceType("implicit");
+        [EnumMember(Value = "implicit")]
+        Implicit,
     
-        public static AXValueSourceType Style = new AXValueSourceType("style");
+        [EnumMember(Value = "style")]
+        Style,
     
-        public static AXValueSourceType Contents = new AXValueSourceType("contents");
+        [EnumMember(Value = "contents")]
+        Contents,
     
-        public static AXValueSourceType Placeholder = new AXValueSourceType("placeholder");
+        [EnumMember(Value = "placeholder")]
+        Placeholder,
     
-        public static AXValueSourceType RelatedElement = new AXValueSourceType("relatedElement");
+        [EnumMember(Value = "relatedElement")]
+        RelatedElement,
     
     }
 }

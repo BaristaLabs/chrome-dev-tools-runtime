@@ -1,57 +1,48 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Attributes which apply to widgets.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class AXWidgetAttributes
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum AXWidgetAttributes
     {
-        private string m_value;
-        
-        public AXWidgetAttributes(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static AXWidgetAttributes Autocomplete = new AXWidgetAttributes("autocomplete");
+        [EnumMember(Value = "autocomplete")]
+        Autocomplete,
     
-        public static AXWidgetAttributes Haspopup = new AXWidgetAttributes("haspopup");
+        [EnumMember(Value = "haspopup")]
+        Haspopup,
     
-        public static AXWidgetAttributes Level = new AXWidgetAttributes("level");
+        [EnumMember(Value = "level")]
+        Level,
     
-        public static AXWidgetAttributes Multiselectable = new AXWidgetAttributes("multiselectable");
+        [EnumMember(Value = "multiselectable")]
+        Multiselectable,
     
-        public static AXWidgetAttributes Orientation = new AXWidgetAttributes("orientation");
+        [EnumMember(Value = "orientation")]
+        Orientation,
     
-        public static AXWidgetAttributes Multiline = new AXWidgetAttributes("multiline");
+        [EnumMember(Value = "multiline")]
+        Multiline,
     
-        public static AXWidgetAttributes Readonly = new AXWidgetAttributes("readonly");
+        [EnumMember(Value = "readonly")]
+        Readonly,
     
-        public static AXWidgetAttributes Required = new AXWidgetAttributes("required");
+        [EnumMember(Value = "required")]
+        Required,
     
-        public static AXWidgetAttributes Valuemin = new AXWidgetAttributes("valuemin");
+        [EnumMember(Value = "valuemin")]
+        Valuemin,
     
-        public static AXWidgetAttributes Valuemax = new AXWidgetAttributes("valuemax");
+        [EnumMember(Value = "valuemax")]
+        Valuemax,
     
-        public static AXWidgetAttributes Valuetext = new AXWidgetAttributes("valuetext");
+        [EnumMember(Value = "valuetext")]
+        Valuetext,
     
     }
 }

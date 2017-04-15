@@ -106,7 +106,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// </summary>
         
         [JsonProperty("sameSite", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public CookieSameSite SameSite
+        public CookieSameSite? SameSite
         {
             get;
             set;
@@ -118,7 +118,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// </summary>
         
         [JsonProperty("expirationDate", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public double ExpirationDate
+        public double? ExpirationDate
         {
             get;
             set;

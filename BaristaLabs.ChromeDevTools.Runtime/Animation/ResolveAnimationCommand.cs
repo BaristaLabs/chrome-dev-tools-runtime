@@ -39,7 +39,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         ///</summary>
         
         [JsonProperty("remoteObject")]
-        public BaristaLabs.ChromeDevTools.Runtime.Runtime.RemoteObject RemoteObject
+        public Runtime.RemoteObject RemoteObject
         {
             get;
             set;

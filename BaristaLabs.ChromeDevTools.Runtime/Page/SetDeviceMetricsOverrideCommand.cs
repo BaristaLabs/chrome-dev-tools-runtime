@@ -166,7 +166,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// </summary>
         
         [JsonProperty("screenOrientation", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public BaristaLabs.ChromeDevTools.Runtime.Emulation.ScreenOrientation ScreenOrientation
+        public Emulation.ScreenOrientation ScreenOrientation
         {
             get;
             set;

@@ -1,43 +1,27 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// States which apply to every AX node.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class AXGlobalStates
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum AXGlobalStates
     {
-        private string m_value;
-        
-        public AXGlobalStates(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static AXGlobalStates Disabled = new AXGlobalStates("disabled");
+        [EnumMember(Value = "disabled")]
+        Disabled,
     
-        public static AXGlobalStates Hidden = new AXGlobalStates("hidden");
+        [EnumMember(Value = "hidden")]
+        Hidden,
     
-        public static AXGlobalStates HiddenRoot = new AXGlobalStates("hiddenRoot");
+        [EnumMember(Value = "hiddenRoot")]
+        HiddenRoot,
     
-        public static AXGlobalStates Invalid = new AXGlobalStates("invalid");
+        [EnumMember(Value = "invalid")]
+        Invalid,
     
     }
 }

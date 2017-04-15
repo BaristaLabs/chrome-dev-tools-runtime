@@ -27,7 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         ///</summary>
         
         [JsonProperty("cookies")]
-        public BaristaLabs.ChromeDevTools.Runtime.Network.Cookie[] Cookies
+        public Network.Cookie[] Cookies
         {
             get;
             set;

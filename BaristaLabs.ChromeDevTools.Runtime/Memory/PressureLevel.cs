@@ -1,39 +1,21 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Memory
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Memory pressure level.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class PressureLevel
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum PressureLevel
     {
-        private string m_value;
-        
-        public PressureLevel(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static PressureLevel Moderate = new PressureLevel("moderate");
+        [EnumMember(Value = "moderate")]
+        Moderate,
     
-        public static PressureLevel Critical = new PressureLevel("critical");
+        [EnumMember(Value = "critical")]
+        Critical,
     
     }
 }

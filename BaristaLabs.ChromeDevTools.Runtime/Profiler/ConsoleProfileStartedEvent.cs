@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// </summary>
         
         [JsonProperty("location")]
-        public BaristaLabs.ChromeDevTools.Runtime.Debugger.Location Location
+        public Debugger.Location Location
         {
             get;
             set;

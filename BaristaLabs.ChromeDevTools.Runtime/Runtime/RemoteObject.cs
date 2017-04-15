@@ -52,7 +52,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// Primitive value which can not be JSON-stringified does not have <code>value</code>, but gets this property.
         ///</summary>
         [JsonProperty("unserializableValue", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public UnserializableValue UnserializableValue
+        public UnserializableValue? UnserializableValue
         {
             get;
             set;

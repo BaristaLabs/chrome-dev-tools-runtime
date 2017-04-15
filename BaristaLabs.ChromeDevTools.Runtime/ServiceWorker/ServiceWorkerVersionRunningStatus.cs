@@ -1,43 +1,27 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// 
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class ServiceWorkerVersionRunningStatus
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum ServiceWorkerVersionRunningStatus
     {
-        private string m_value;
-        
-        public ServiceWorkerVersionRunningStatus(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static ServiceWorkerVersionRunningStatus Stopped = new ServiceWorkerVersionRunningStatus("stopped");
+        [EnumMember(Value = "stopped")]
+        Stopped,
     
-        public static ServiceWorkerVersionRunningStatus Starting = new ServiceWorkerVersionRunningStatus("starting");
+        [EnumMember(Value = "starting")]
+        Starting,
     
-        public static ServiceWorkerVersionRunningStatus Running = new ServiceWorkerVersionRunningStatus("running");
+        [EnumMember(Value = "running")]
+        Running,
     
-        public static ServiceWorkerVersionRunningStatus Stopping = new ServiceWorkerVersionRunningStatus("stopping");
+        [EnumMember(Value = "stopping")]
+        Stopping,
     
     }
 }

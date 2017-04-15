@@ -72,7 +72,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         /// JavaScript stack trace.
         ///</summary>
         [JsonProperty("stackTrace", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public BaristaLabs.ChromeDevTools.Runtime.Runtime.StackTrace StackTrace
+        public Runtime.StackTrace StackTrace
         {
             get;
             set;

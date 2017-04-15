@@ -1,69 +1,66 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Enum of possible property types.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class AXValueType
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum AXValueType
     {
-        private string m_value;
-        
-        public AXValueType(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static AXValueType Boolean = new AXValueType("boolean");
+        [EnumMember(Value = "boolean")]
+        Boolean,
     
-        public static AXValueType Tristate = new AXValueType("tristate");
+        [EnumMember(Value = "tristate")]
+        Tristate,
     
-        public static AXValueType BooleanOrUndefined = new AXValueType("booleanOrUndefined");
+        [EnumMember(Value = "booleanOrUndefined")]
+        BooleanOrUndefined,
     
-        public static AXValueType Idref = new AXValueType("idref");
+        [EnumMember(Value = "idref")]
+        Idref,
     
-        public static AXValueType IdrefList = new AXValueType("idrefList");
+        [EnumMember(Value = "idrefList")]
+        IdrefList,
     
-        public static AXValueType Integer = new AXValueType("integer");
+        [EnumMember(Value = "integer")]
+        Integer,
     
-        public static AXValueType Node = new AXValueType("node");
+        [EnumMember(Value = "node")]
+        Node,
     
-        public static AXValueType NodeList = new AXValueType("nodeList");
+        [EnumMember(Value = "nodeList")]
+        NodeList,
     
-        public static AXValueType Number = new AXValueType("number");
+        [EnumMember(Value = "number")]
+        Number,
     
-        public static AXValueType String = new AXValueType("string");
+        [EnumMember(Value = "string")]
+        String,
     
-        public static AXValueType ComputedString = new AXValueType("computedString");
+        [EnumMember(Value = "computedString")]
+        ComputedString,
     
-        public static AXValueType Token = new AXValueType("token");
+        [EnumMember(Value = "token")]
+        Token,
     
-        public static AXValueType TokenList = new AXValueType("tokenList");
+        [EnumMember(Value = "tokenList")]
+        TokenList,
     
-        public static AXValueType DomRelation = new AXValueType("domRelation");
+        [EnumMember(Value = "domRelation")]
+        DomRelation,
     
-        public static AXValueType Role = new AXValueType("role");
+        [EnumMember(Value = "role")]
+        Role,
     
-        public static AXValueType InternalRole = new AXValueType("internalRole");
+        [EnumMember(Value = "internalRole")]
+        InternalRole,
     
-        public static AXValueType ValueUndefined = new AXValueType("valueUndefined");
+        [EnumMember(Value = "valueUndefined")]
+        ValueUndefined,
     
     }
 }

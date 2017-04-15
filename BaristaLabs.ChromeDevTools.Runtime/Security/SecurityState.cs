@@ -1,47 +1,33 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Security
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// The security level of a page or resource.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class SecurityState
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum SecurityState
     {
-        private string m_value;
-        
-        public SecurityState(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static SecurityState Unknown = new SecurityState("unknown");
+        [EnumMember(Value = "unknown")]
+        Unknown,
     
-        public static SecurityState Neutral = new SecurityState("neutral");
+        [EnumMember(Value = "neutral")]
+        Neutral,
     
-        public static SecurityState Insecure = new SecurityState("insecure");
+        [EnumMember(Value = "insecure")]
+        Insecure,
     
-        public static SecurityState Warning = new SecurityState("warning");
+        [EnumMember(Value = "warning")]
+        Warning,
     
-        public static SecurityState Secure = new SecurityState("secure");
+        [EnumMember(Value = "secure")]
+        Secure,
     
-        public static SecurityState Info = new SecurityState("info");
+        [EnumMember(Value = "info")]
+        Info,
     
     }
 }

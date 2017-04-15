@@ -182,7 +182,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Security state of the request resource.
         ///</summary>
         [JsonProperty("securityState")]
-        public BaristaLabs.ChromeDevTools.Runtime.Security.SecurityState SecurityState
+        public Security.SecurityState SecurityState
         {
             get;
             set;

@@ -1,41 +1,24 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Shadow root type.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class ShadowRootType
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum ShadowRootType
     {
-        private string m_value;
-        
-        public ShadowRootType(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static ShadowRootType UserAgent = new ShadowRootType("user-agent");
+        [EnumMember(Value = "user-agent")]
+        UserAgent,
     
-        public static ShadowRootType Open = new ShadowRootType("open");
+        [EnumMember(Value = "open")]
+        Open,
     
-        public static ShadowRootType Closed = new ShadowRootType("closed");
+        [EnumMember(Value = "closed")]
+        Closed,
     
     }
 }

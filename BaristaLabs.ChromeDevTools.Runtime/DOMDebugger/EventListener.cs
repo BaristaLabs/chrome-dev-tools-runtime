@@ -82,7 +82,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         /// Event handler function value.
         ///</summary>
         [JsonProperty("handler", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public BaristaLabs.ChromeDevTools.Runtime.Runtime.RemoteObject Handler
+        public Runtime.RemoteObject Handler
         {
             get;
             set;
@@ -92,7 +92,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         /// Event original handler function value.
         ///</summary>
         [JsonProperty("originalHandler", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public BaristaLabs.ChromeDevTools.Runtime.Runtime.RemoteObject OriginalHandler
+        public Runtime.RemoteObject OriginalHandler
         {
             get;
             set;
@@ -102,7 +102,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         /// Event listener remove function.
         ///</summary>
         [JsonProperty("removeFunction", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public BaristaLabs.ChromeDevTools.Runtime.Runtime.RemoteObject RemoveFunction
+        public Runtime.RemoteObject RemoveFunction
         {
             get;
             set;

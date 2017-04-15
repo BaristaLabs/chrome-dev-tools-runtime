@@ -1,65 +1,60 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.DOM
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Pseudo element type.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class PseudoType
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum PseudoType
     {
-        private string m_value;
-        
-        public PseudoType(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static PseudoType FirstLine = new PseudoType("first-line");
+        [EnumMember(Value = "first-line")]
+        FirstLine,
     
-        public static PseudoType FirstLetter = new PseudoType("first-letter");
+        [EnumMember(Value = "first-letter")]
+        FirstLetter,
     
-        public static PseudoType Before = new PseudoType("before");
+        [EnumMember(Value = "before")]
+        Before,
     
-        public static PseudoType After = new PseudoType("after");
+        [EnumMember(Value = "after")]
+        After,
     
-        public static PseudoType Backdrop = new PseudoType("backdrop");
+        [EnumMember(Value = "backdrop")]
+        Backdrop,
     
-        public static PseudoType Selection = new PseudoType("selection");
+        [EnumMember(Value = "selection")]
+        Selection,
     
-        public static PseudoType FirstLineInherited = new PseudoType("first-line-inherited");
+        [EnumMember(Value = "first-line-inherited")]
+        FirstLineInherited,
     
-        public static PseudoType Scrollbar = new PseudoType("scrollbar");
+        [EnumMember(Value = "scrollbar")]
+        Scrollbar,
     
-        public static PseudoType ScrollbarThumb = new PseudoType("scrollbar-thumb");
+        [EnumMember(Value = "scrollbar-thumb")]
+        ScrollbarThumb,
     
-        public static PseudoType ScrollbarButton = new PseudoType("scrollbar-button");
+        [EnumMember(Value = "scrollbar-button")]
+        ScrollbarButton,
     
-        public static PseudoType ScrollbarTrack = new PseudoType("scrollbar-track");
+        [EnumMember(Value = "scrollbar-track")]
+        ScrollbarTrack,
     
-        public static PseudoType ScrollbarTrackPiece = new PseudoType("scrollbar-track-piece");
+        [EnumMember(Value = "scrollbar-track-piece")]
+        ScrollbarTrackPiece,
     
-        public static PseudoType ScrollbarCorner = new PseudoType("scrollbar-corner");
+        [EnumMember(Value = "scrollbar-corner")]
+        ScrollbarCorner,
     
-        public static PseudoType Resizer = new PseudoType("resizer");
+        [EnumMember(Value = "resizer")]
+        Resizer,
     
-        public static PseudoType InputListButton = new PseudoType("input-list-button");
+        [EnumMember(Value = "input-list-button")]
+        InputListButton,
     
     }
 }

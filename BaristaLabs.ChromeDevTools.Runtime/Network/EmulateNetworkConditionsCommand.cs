@@ -70,7 +70,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// </summary>
         
         [JsonProperty("connectionType", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public ConnectionType ConnectionType
+        public ConnectionType? ConnectionType
         {
             get;
             set;

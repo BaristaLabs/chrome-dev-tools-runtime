@@ -62,7 +62,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// </summary>
         
         [JsonProperty("type")]
-        public BaristaLabs.ChromeDevTools.Runtime.Page.ResourceType Type
+        public Page.ResourceType Type
         {
             get;
             set;

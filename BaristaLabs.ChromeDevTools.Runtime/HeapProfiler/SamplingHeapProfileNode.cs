@@ -12,7 +12,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         /// Function location.
         ///</summary>
         [JsonProperty("callFrame")]
-        public BaristaLabs.ChromeDevTools.Runtime.Runtime.CallFrame CallFrame
+        public Runtime.CallFrame CallFrame
         {
             get;
             set;

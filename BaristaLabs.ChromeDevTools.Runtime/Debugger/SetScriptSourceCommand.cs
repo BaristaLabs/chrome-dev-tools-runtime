@@ -87,7 +87,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         ///</summary>
         
         [JsonProperty("asyncStackTrace, DefaultValueHandling = DefaultValueHandling.Ignore")]
-        public BaristaLabs.ChromeDevTools.Runtime.Runtime.StackTrace AsyncStackTrace
+        public Runtime.StackTrace AsyncStackTrace
         {
             get;
             set;
@@ -99,7 +99,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         ///</summary>
         
         [JsonProperty("exceptionDetails, DefaultValueHandling = DefaultValueHandling.Ignore")]
-        public BaristaLabs.ChromeDevTools.Runtime.Runtime.ExceptionDetails ExceptionDetails
+        public Runtime.ExceptionDetails ExceptionDetails
         {
             get;
             set;

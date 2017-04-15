@@ -1,55 +1,45 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Storage
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Enum of possible storage types.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class StorageType
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum StorageType
     {
-        private string m_value;
-        
-        public StorageType(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static StorageType Appcache = new StorageType("appcache");
+        [EnumMember(Value = "appcache")]
+        Appcache,
     
-        public static StorageType Cookies = new StorageType("cookies");
+        [EnumMember(Value = "cookies")]
+        Cookies,
     
-        public static StorageType FileSystems = new StorageType("file_systems");
+        [EnumMember(Value = "file_systems")]
+        FileSystems,
     
-        public static StorageType Indexeddb = new StorageType("indexeddb");
+        [EnumMember(Value = "indexeddb")]
+        Indexeddb,
     
-        public static StorageType LocalStorage = new StorageType("local_storage");
+        [EnumMember(Value = "local_storage")]
+        LocalStorage,
     
-        public static StorageType ShaderCache = new StorageType("shader_cache");
+        [EnumMember(Value = "shader_cache")]
+        ShaderCache,
     
-        public static StorageType Websql = new StorageType("websql");
+        [EnumMember(Value = "websql")]
+        Websql,
     
-        public static StorageType ServiceWorkers = new StorageType("service_workers");
+        [EnumMember(Value = "service_workers")]
+        ServiceWorkers,
     
-        public static StorageType CacheStorage = new StorageType("cache_storage");
+        [EnumMember(Value = "cache_storage")]
+        CacheStorage,
     
-        public static StorageType All = new StorageType("all");
+        [EnumMember(Value = "all")]
+        All,
     
     }
 }

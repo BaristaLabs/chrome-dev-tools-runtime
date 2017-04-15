@@ -111,7 +111,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         ///</summary>
         
         [JsonProperty("result")]
-        public BaristaLabs.ChromeDevTools.Runtime.Runtime.RemoteObject Result
+        public Runtime.RemoteObject Result
         {
             get;
             set;
@@ -123,7 +123,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         ///</summary>
         
         [JsonProperty("exceptionDetails, DefaultValueHandling = DefaultValueHandling.Ignore")]
-        public BaristaLabs.ChromeDevTools.Runtime.Runtime.ExceptionDetails ExceptionDetails
+        public Runtime.ExceptionDetails ExceptionDetails
         {
             get;
             set;

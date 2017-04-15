@@ -1,47 +1,33 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// The reason why request was blocked.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class BlockedReason
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum BlockedReason
     {
-        private string m_value;
-        
-        public BlockedReason(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static BlockedReason Csp = new BlockedReason("csp");
+        [EnumMember(Value = "csp")]
+        Csp,
     
-        public static BlockedReason MixedContent = new BlockedReason("mixed-content");
+        [EnumMember(Value = "mixed-content")]
+        MixedContent,
     
-        public static BlockedReason Origin = new BlockedReason("origin");
+        [EnumMember(Value = "origin")]
+        Origin,
     
-        public static BlockedReason Inspector = new BlockedReason("inspector");
+        [EnumMember(Value = "inspector")]
+        Inspector,
     
-        public static BlockedReason SubresourceFilter = new BlockedReason("subresource-filter");
+        [EnumMember(Value = "subresource-filter")]
+        SubresourceFilter,
     
-        public static BlockedReason Other = new BlockedReason("other");
+        [EnumMember(Value = "other")]
+        Other,
     
     }
 }

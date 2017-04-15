@@ -62,7 +62,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <code>this</code> object for this call frame.
         ///</summary>
         [JsonProperty("this")]
-        public BaristaLabs.ChromeDevTools.Runtime.Runtime.RemoteObject This
+        public Runtime.RemoteObject This
         {
             get;
             set;
@@ -72,7 +72,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// The value being returned, if the function is at return point.
         ///</summary>
         [JsonProperty("returnValue", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public BaristaLabs.ChromeDevTools.Runtime.Runtime.RemoteObject ReturnValue
+        public Runtime.RemoteObject ReturnValue
         {
             get;
             set;

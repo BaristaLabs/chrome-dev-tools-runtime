@@ -1,61 +1,54 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Page
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Resource type as it was perceived by the rendering engine.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class ResourceType
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum ResourceType
     {
-        private string m_value;
-        
-        public ResourceType(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static ResourceType Document = new ResourceType("Document");
+        [EnumMember(Value = "Document")]
+        Document,
     
-        public static ResourceType Stylesheet = new ResourceType("Stylesheet");
+        [EnumMember(Value = "Stylesheet")]
+        Stylesheet,
     
-        public static ResourceType Image = new ResourceType("Image");
+        [EnumMember(Value = "Image")]
+        Image,
     
-        public static ResourceType Media = new ResourceType("Media");
+        [EnumMember(Value = "Media")]
+        Media,
     
-        public static ResourceType Font = new ResourceType("Font");
+        [EnumMember(Value = "Font")]
+        Font,
     
-        public static ResourceType Script = new ResourceType("Script");
+        [EnumMember(Value = "Script")]
+        Script,
     
-        public static ResourceType TextTrack = new ResourceType("TextTrack");
+        [EnumMember(Value = "TextTrack")]
+        TextTrack,
     
-        public static ResourceType XHR = new ResourceType("XHR");
+        [EnumMember(Value = "XHR")]
+        XHR,
     
-        public static ResourceType Fetch = new ResourceType("Fetch");
+        [EnumMember(Value = "Fetch")]
+        Fetch,
     
-        public static ResourceType EventSource = new ResourceType("EventSource");
+        [EnumMember(Value = "EventSource")]
+        EventSource,
     
-        public static ResourceType WebSocket = new ResourceType("WebSocket");
+        [EnumMember(Value = "WebSocket")]
+        WebSocket,
     
-        public static ResourceType Manifest = new ResourceType("Manifest");
+        [EnumMember(Value = "Manifest")]
+        Manifest,
     
-        public static ResourceType Other = new ResourceType("Other");
+        [EnumMember(Value = "Other")]
+        Other,
     
     }
 }

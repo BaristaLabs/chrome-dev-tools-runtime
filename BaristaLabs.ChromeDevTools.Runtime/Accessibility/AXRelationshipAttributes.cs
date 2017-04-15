@@ -1,47 +1,33 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Relationships between elements other than parent/child/sibling.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class AXRelationshipAttributes
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum AXRelationshipAttributes
     {
-        private string m_value;
-        
-        public AXRelationshipAttributes(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static AXRelationshipAttributes Activedescendant = new AXRelationshipAttributes("activedescendant");
+        [EnumMember(Value = "activedescendant")]
+        Activedescendant,
     
-        public static AXRelationshipAttributes Flowto = new AXRelationshipAttributes("flowto");
+        [EnumMember(Value = "flowto")]
+        Flowto,
     
-        public static AXRelationshipAttributes Controls = new AXRelationshipAttributes("controls");
+        [EnumMember(Value = "controls")]
+        Controls,
     
-        public static AXRelationshipAttributes Describedby = new AXRelationshipAttributes("describedby");
+        [EnumMember(Value = "describedby")]
+        Describedby,
     
-        public static AXRelationshipAttributes Labelledby = new AXRelationshipAttributes("labelledby");
+        [EnumMember(Value = "labelledby")]
+        Labelledby,
     
-        public static AXRelationshipAttributes Owns = new AXRelationshipAttributes("owns");
+        [EnumMember(Value = "owns")]
+        Owns,
     
     }
 }

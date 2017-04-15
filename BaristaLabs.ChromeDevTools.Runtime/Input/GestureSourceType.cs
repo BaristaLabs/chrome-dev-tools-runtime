@@ -1,41 +1,24 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Input
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// 
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class GestureSourceType
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum GestureSourceType
     {
-        private string m_value;
-        
-        public GestureSourceType(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static GestureSourceType Default = new GestureSourceType("default");
+        [EnumMember(Value = "default")]
+        Default,
     
-        public static GestureSourceType Touch = new GestureSourceType("touch");
+        [EnumMember(Value = "touch")]
+        Touch,
     
-        public static GestureSourceType Mouse = new GestureSourceType("mouse");
+        [EnumMember(Value = "mouse")]
+        Mouse,
     
     }
 }

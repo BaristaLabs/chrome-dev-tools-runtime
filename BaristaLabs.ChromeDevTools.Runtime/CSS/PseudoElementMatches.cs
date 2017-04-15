@@ -12,7 +12,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// Pseudo element type.
         ///</summary>
         [JsonProperty("pseudoType")]
-        public BaristaLabs.ChromeDevTools.Runtime.DOM.PseudoType PseudoType
+        public DOM.PseudoType PseudoType
         {
             get;
             set;

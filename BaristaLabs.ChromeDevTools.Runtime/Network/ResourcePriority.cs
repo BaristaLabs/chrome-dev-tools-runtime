@@ -1,45 +1,30 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Loading priority of a resource request.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class ResourcePriority
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum ResourcePriority
     {
-        private string m_value;
-        
-        public ResourcePriority(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static ResourcePriority VeryLow = new ResourcePriority("VeryLow");
+        [EnumMember(Value = "VeryLow")]
+        VeryLow,
     
-        public static ResourcePriority Low = new ResourcePriority("Low");
+        [EnumMember(Value = "Low")]
+        Low,
     
-        public static ResourcePriority Medium = new ResourcePriority("Medium");
+        [EnumMember(Value = "Medium")]
+        Medium,
     
-        public static ResourcePriority High = new ResourcePriority("High");
+        [EnumMember(Value = "High")]
+        High,
     
-        public static ResourcePriority VeryHigh = new ResourcePriority("VeryHigh");
+        [EnumMember(Value = "VeryHigh")]
+        VeryHigh,
     
     }
 }

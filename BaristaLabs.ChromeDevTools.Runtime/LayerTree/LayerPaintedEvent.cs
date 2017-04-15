@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// </summary>
         
         [JsonProperty("clip")]
-        public BaristaLabs.ChromeDevTools.Runtime.DOM.Rect Clip
+        public DOM.Rect Clip
         {
             get;
             set;

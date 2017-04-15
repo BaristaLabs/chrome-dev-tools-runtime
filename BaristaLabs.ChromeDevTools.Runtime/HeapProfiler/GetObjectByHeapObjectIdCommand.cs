@@ -51,7 +51,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         ///</summary>
         
         [JsonProperty("result")]
-        public BaristaLabs.ChromeDevTools.Runtime.Runtime.RemoteObject Result
+        public Runtime.RemoteObject Result
         {
             get;
             set;

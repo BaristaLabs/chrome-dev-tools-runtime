@@ -1,45 +1,30 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Attributes which apply to nodes in live regions.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class AXLiveRegionAttributes
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum AXLiveRegionAttributes
     {
-        private string m_value;
-        
-        public AXLiveRegionAttributes(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static AXLiveRegionAttributes Live = new AXLiveRegionAttributes("live");
+        [EnumMember(Value = "live")]
+        Live,
     
-        public static AXLiveRegionAttributes Atomic = new AXLiveRegionAttributes("atomic");
+        [EnumMember(Value = "atomic")]
+        Atomic,
     
-        public static AXLiveRegionAttributes Relevant = new AXLiveRegionAttributes("relevant");
+        [EnumMember(Value = "relevant")]
+        Relevant,
     
-        public static AXLiveRegionAttributes Busy = new AXLiveRegionAttributes("busy");
+        [EnumMember(Value = "busy")]
+        Busy,
     
-        public static AXLiveRegionAttributes Root = new AXLiveRegionAttributes("root");
+        [EnumMember(Value = "root")]
+        Root,
     
     }
 }

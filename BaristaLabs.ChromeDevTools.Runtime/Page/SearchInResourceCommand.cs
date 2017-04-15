@@ -87,7 +87,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         ///</summary>
         
         [JsonProperty("result")]
-        public BaristaLabs.ChromeDevTools.Runtime.Debugger.SearchMatch[] Result
+        public Debugger.SearchMatch[] Result
         {
             get;
             set;

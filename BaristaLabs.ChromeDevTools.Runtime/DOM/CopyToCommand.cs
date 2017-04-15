@@ -46,7 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// </summary>
         
         [JsonProperty("insertBeforeNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public long InsertBeforeNodeId
+        public long? InsertBeforeNodeId
         {
             get;
             set;

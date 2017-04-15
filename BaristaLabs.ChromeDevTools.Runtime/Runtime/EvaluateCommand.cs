@@ -70,7 +70,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// </summary>
         
         [JsonProperty("contextId", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public long ContextId
+        public long? ContextId
         {
             get;
             set;

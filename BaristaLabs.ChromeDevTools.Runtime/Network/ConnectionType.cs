@@ -1,53 +1,42 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Network
 {
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Converters;
+    using System.Runtime.Serialization;
 
     /// <summary>
     /// Loading priority of a resource request.
     /// </summary>
-    [JsonConverter(typeof(StringClassConverter))]
-    public sealed class ConnectionType
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum ConnectionType
     {
-        private string m_value;
-        
-        public ConnectionType(string value)
-        {
-            m_value = value;
-        }
-
-        public override string ToString()
-        {
-            return m_value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return m_value.Equals(obj);
-        }
-
-        public override int GetHashCode()
-        {
-            return m_value.GetHashCode();
-        }
-
     
-        public static ConnectionType None = new ConnectionType("none");
+        [EnumMember(Value = "none")]
+        None,
     
-        public static ConnectionType Cellular2g = new ConnectionType("cellular2g");
+        [EnumMember(Value = "cellular2g")]
+        Cellular2g,
     
-        public static ConnectionType Cellular3g = new ConnectionType("cellular3g");
+        [EnumMember(Value = "cellular3g")]
+        Cellular3g,
     
-        public static ConnectionType Cellular4g = new ConnectionType("cellular4g");
+        [EnumMember(Value = "cellular4g")]
+        Cellular4g,
     
-        public static ConnectionType Bluetooth = new ConnectionType("bluetooth");
+        [EnumMember(Value = "bluetooth")]
+        Bluetooth,
     
-        public static ConnectionType Ethernet = new ConnectionType("ethernet");
+        [EnumMember(Value = "ethernet")]
+        Ethernet,
     
-        public static ConnectionType Wifi = new ConnectionType("wifi");
+        [EnumMember(Value = "wifi")]
+        Wifi,
     
-        public static ConnectionType Wimax = new ConnectionType("wimax");
+        [EnumMember(Value = "wimax")]
+        Wimax,
     
-        public static ConnectionType Other = new ConnectionType("other");
+        [EnumMember(Value = "other")]
+        Other,
     
     }
 }

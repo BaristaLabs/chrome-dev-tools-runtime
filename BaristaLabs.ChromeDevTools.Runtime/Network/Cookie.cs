@@ -102,7 +102,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Cookie SameSite type.
         ///</summary>
         [JsonProperty("sameSite", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public CookieSameSite SameSite
+        public CookieSameSite? SameSite
         {
             get;
             set;

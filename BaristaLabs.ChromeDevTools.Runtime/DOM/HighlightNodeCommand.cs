@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// </summary>
         
         [JsonProperty("nodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public long NodeId
+        public long? NodeId
         {
             get;
             set;
@@ -46,7 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// </summary>
         
         [JsonProperty("backendNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public long BackendNodeId
+        public long? BackendNodeId
         {
             get;
             set;
