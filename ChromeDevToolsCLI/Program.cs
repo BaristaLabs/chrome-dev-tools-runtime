@@ -25,13 +25,13 @@
             using (var session = new ChromeSession(sessions.First(s => s.Type == "page").WebSocketDebuggerUrl))
             {
                 //Get the frame resource tree
-                var resource = session.SendCommand<Page.GetResourceTreeCommand, Page.GetResourceTreeCommandResponse>(new Page.GetResourceTreeCommand()).GetAwaiter().GetResult();
+                var resource = session.Page.GetResourceTree(new Page.GetResourceTreeCommand()).GetAwaiter().GetResult();
 
                 //Navigate to winamp.com
-                var navigateResult = session.SendCommand(new Page.NavigateCommand
+                var navigateResult = session.Page.Navigate(new Page.NavigateCommand
                 {
                     Url = "http://www.winamp.com"
-                }).GetAwaiter().GetResult().GetResponse<Page.NavigateCommandResponse>();
+                }).GetAwaiter().GetResult();
 
                 long executionContextId = -1;
 
@@ -49,15 +49,15 @@
                 });
 
                 //Enable the runtime so that execution context events are raised.
-                var result1 = session.SendCommand(new Runtime.EnableCommand()).GetAwaiter().GetResult();
+                var result1 = session.Runtime.Enable(new Runtime.EnableCommand()).GetAwaiter().GetResult();
 
                 //Evaluate a complex answer.
-                var result2 = session.SendCommand(new Runtime.EvaluateCommand
+                var result2 = session.Runtime.Evaluate(new Runtime.EvaluateCommand
                 {
                     ContextId = executionContextId,
                     ObjectGroup = "test123",
                     Expression = "6*7"
-                }).GetAwaiter().GetResult().GetResponse<Runtime.EvaluateCommandResponse>();
+                }).GetAwaiter().GetResult();
 
                 Console.WriteLine(result2.Result.Description);
             }
