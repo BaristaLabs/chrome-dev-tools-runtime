@@ -200,5 +200,127 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             return await m_session.SendCommand<GetCertificateCommand, GetCertificateCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// Fired when resource loading priority is changed
+        /// </summary>
+        public void SubscribeToResourceChangedPriorityEvent(Action<ResourceChangedPriorityEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when page is about to send HTTP request.
+        /// </summary>
+        public void SubscribeToRequestWillBeSentEvent(Action<RequestWillBeSentEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired if request ended up loading from cache.
+        /// </summary>
+        public void SubscribeToRequestServedFromCacheEvent(Action<RequestServedFromCacheEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when HTTP response is available.
+        /// </summary>
+        public void SubscribeToResponseReceivedEvent(Action<ResponseReceivedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when data chunk was received over the network.
+        /// </summary>
+        public void SubscribeToDataReceivedEvent(Action<DataReceivedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when HTTP request has finished loading.
+        /// </summary>
+        public void SubscribeToLoadingFinishedEvent(Action<LoadingFinishedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when HTTP request has failed to load.
+        /// </summary>
+        public void SubscribeToLoadingFailedEvent(Action<LoadingFailedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when WebSocket is about to initiate handshake.
+        /// </summary>
+        public void SubscribeToWebSocketWillSendHandshakeRequestEvent(Action<WebSocketWillSendHandshakeRequestEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when WebSocket handshake response becomes available.
+        /// </summary>
+        public void SubscribeToWebSocketHandshakeResponseReceivedEvent(Action<WebSocketHandshakeResponseReceivedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired upon WebSocket creation.
+        /// </summary>
+        public void SubscribeToWebSocketCreatedEvent(Action<WebSocketCreatedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when WebSocket is closed.
+        /// </summary>
+        public void SubscribeToWebSocketClosedEvent(Action<WebSocketClosedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when WebSocket frame is received.
+        /// </summary>
+        public void SubscribeToWebSocketFrameReceivedEvent(Action<WebSocketFrameReceivedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when WebSocket frame error occurs.
+        /// </summary>
+        public void SubscribeToWebSocketFrameErrorEvent(Action<WebSocketFrameErrorEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when WebSocket frame is sent.
+        /// </summary>
+        public void SubscribeToWebSocketFrameSentEvent(Action<WebSocketFrameSentEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when EventSource message is received.
+        /// </summary>
+        public void SubscribeToEventSourceMessageReceivedEvent(Action<EventSourceMessageReceivedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

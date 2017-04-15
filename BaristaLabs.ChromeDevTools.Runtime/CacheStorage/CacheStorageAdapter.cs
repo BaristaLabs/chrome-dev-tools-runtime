@@ -48,5 +48,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
             return await m_session.SendCommand<DeleteEntryCommand, DeleteEntryCommandResponse>(command);
         }
     
+
+    
     }
 }

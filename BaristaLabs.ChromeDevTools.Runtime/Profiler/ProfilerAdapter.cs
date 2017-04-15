@@ -56,5 +56,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             return await m_session.SendCommand<StopCommand, StopCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// Sent when new profile recodring is started using console.profile() call.
+        /// </summary>
+        public void SubscribeToConsoleProfileStartedEvent(Action<ConsoleProfileStartedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToConsoleProfileFinishedEvent(Action<ConsoleProfileFinishedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

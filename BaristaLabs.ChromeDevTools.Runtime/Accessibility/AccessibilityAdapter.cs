@@ -24,5 +24,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             return await m_session.SendCommand<GetPartialAXTreeCommand, GetPartialAXTreeCommandResponse>(command);
         }
     
+
+    
     }
 }

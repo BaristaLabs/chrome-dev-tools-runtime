@@ -56,5 +56,31 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             return await m_session.SendCommand<RecordClockSyncMarkerCommand, RecordClockSyncMarkerCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// Contains an bucket of collected trace events. When tracing is stopped collected events will be send as a sequence of dataCollected events followed by tracingComplete event.
+        /// </summary>
+        public void SubscribeToDataCollectedEvent(Action<DataCollectedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Signals that tracing is stopped and there is no trace buffers pending flush, all data were delivered via dataCollected events.
+        /// </summary>
+        public void SubscribeToTracingCompleteEvent(Action<TracingCompleteEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToBufferUsageEvent(Action<BufferUsageEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

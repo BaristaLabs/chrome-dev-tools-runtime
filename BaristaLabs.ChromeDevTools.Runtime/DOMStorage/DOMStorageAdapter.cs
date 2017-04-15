@@ -56,5 +56,39 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
             return await m_session.SendCommand<RemoveDOMStorageItemCommand, RemoveDOMStorageItemCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToDomStorageItemsClearedEvent(Action<DomStorageItemsClearedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToDomStorageItemRemovedEvent(Action<DomStorageItemRemovedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToDomStorageItemAddedEvent(Action<DomStorageItemAddedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToDomStorageItemUpdatedEvent(Action<DomStorageItemUpdatedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

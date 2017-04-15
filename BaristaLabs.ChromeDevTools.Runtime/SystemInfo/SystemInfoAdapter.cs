@@ -24,5 +24,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
             return await m_session.SendCommand<GetInfoCommand, GetInfoCommandResponse>(command);
         }
     
+
+    
     }
 }

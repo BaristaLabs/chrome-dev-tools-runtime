@@ -48,5 +48,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
             return await m_session.SendCommand<ExecuteSQLCommand, ExecuteSQLCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToAddDatabaseEvent(Action<AddDatabaseEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

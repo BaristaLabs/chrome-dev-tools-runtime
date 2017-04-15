@@ -40,5 +40,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
             return await m_session.SendCommand<SimulatePressureNotificationCommand, SimulatePressureNotificationCommandResponse>(command);
         }
     
+
+    
     }
 }

@@ -88,5 +88,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             return await m_session.SendCommand<SnapshotCommandLogCommand, SnapshotCommandLogCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToLayerTreeDidChangeEvent(Action<LayerTreeDidChangeEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToLayerPaintedEvent(Action<LayerPaintedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

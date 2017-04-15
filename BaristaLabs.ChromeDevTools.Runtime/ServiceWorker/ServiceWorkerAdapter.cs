@@ -104,5 +104,31 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             return await m_session.SendCommand<DispatchSyncEventCommand, DispatchSyncEventCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToWorkerRegistrationUpdatedEvent(Action<WorkerRegistrationUpdatedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToWorkerVersionUpdatedEvent(Action<WorkerVersionUpdatedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToWorkerErrorReportedEvent(Action<WorkerErrorReportedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

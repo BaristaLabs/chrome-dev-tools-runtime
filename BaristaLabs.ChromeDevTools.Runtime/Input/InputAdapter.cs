@@ -72,5 +72,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             return await m_session.SendCommand<SynthesizeTapGestureCommand, SynthesizeTapGestureCommandResponse>(command);
         }
     
+
+    
     }
 }

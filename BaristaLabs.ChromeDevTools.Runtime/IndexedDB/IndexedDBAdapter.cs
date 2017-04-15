@@ -64,5 +64,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             return await m_session.SendCommand<ClearObjectStoreCommand, ClearObjectStoreCommandResponse>(command);
         }
     
+
+    
     }
 }

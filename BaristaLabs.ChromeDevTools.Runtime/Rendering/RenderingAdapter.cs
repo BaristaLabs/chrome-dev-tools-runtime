@@ -56,5 +56,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
             return await m_session.SendCommand<SetShowViewportSizeOnResizeCommand, SetShowViewportSizeOnResizeCommandResponse>(command);
         }
     
+
+    
     }
 }

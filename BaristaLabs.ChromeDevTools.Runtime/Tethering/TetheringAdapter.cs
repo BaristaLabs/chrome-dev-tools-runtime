@@ -32,5 +32,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tethering
             return await m_session.SendCommand<UnbindCommand, UnbindCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// Informs that port was successfully bound and got a specified connection id.
+        /// </summary>
+        public void SubscribeToAcceptedEvent(Action<AcceptedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

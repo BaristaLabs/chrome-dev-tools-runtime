@@ -296,5 +296,151 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<GetLayoutMetricsCommand, GetLayoutMetricsCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToDomContentEventFiredEvent(Action<DomContentEventFiredEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToLoadEventFiredEvent(Action<LoadEventFiredEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when frame has been attached to its parent.
+        /// </summary>
+        public void SubscribeToFrameAttachedEvent(Action<FrameAttachedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired once navigation of the frame has completed. Frame is now associated with the new loader.
+        /// </summary>
+        public void SubscribeToFrameNavigatedEvent(Action<FrameNavigatedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when frame has been detached from its parent.
+        /// </summary>
+        public void SubscribeToFrameDetachedEvent(Action<FrameDetachedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when frame has started loading.
+        /// </summary>
+        public void SubscribeToFrameStartedLoadingEvent(Action<FrameStartedLoadingEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when frame has stopped loading.
+        /// </summary>
+        public void SubscribeToFrameStoppedLoadingEvent(Action<FrameStoppedLoadingEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when frame schedules a potential navigation.
+        /// </summary>
+        public void SubscribeToFrameScheduledNavigationEvent(Action<FrameScheduledNavigationEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when frame no longer has a scheduled navigation.
+        /// </summary>
+        public void SubscribeToFrameClearedScheduledNavigationEvent(Action<FrameClearedScheduledNavigationEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToFrameResizedEvent(Action<FrameResizedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload) is about to open.
+        /// </summary>
+        public void SubscribeToJavascriptDialogOpeningEvent(Action<JavascriptDialogOpeningEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload) has been closed.
+        /// </summary>
+        public void SubscribeToJavascriptDialogClosedEvent(Action<JavascriptDialogClosedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Compressed image data requested by the <code>startScreencast</code>.
+        /// </summary>
+        public void SubscribeToScreencastFrameEvent(Action<ScreencastFrameEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when the page with currently enabled screencast was shown or hidden </code>.
+        /// </summary>
+        public void SubscribeToScreencastVisibilityChangedEvent(Action<ScreencastVisibilityChangedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when a color has been picked.
+        /// </summary>
+        public void SubscribeToColorPickedEvent(Action<ColorPickedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when interstitial page was shown
+        /// </summary>
+        public void SubscribeToInterstitialShownEvent(Action<InterstitialShownEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when interstitial page was hidden
+        /// </summary>
+        public void SubscribeToInterstitialHiddenEvent(Action<InterstitialHiddenEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when a navigation is started if navigation throttles are enabled.  The navigation will be deferred until processNavigation is called.
+        /// </summary>
+        public void SubscribeToNavigationRequestedEvent(Action<NavigationRequestedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

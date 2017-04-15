@@ -192,5 +192,47 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             return await m_session.SendCommand<StopRuleUsageTrackingCommand, StopRuleUsageTrackingCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// Fires whenever a MediaQuery result changes (for example, after a browser window has been resized.) The current implementation considers only viewport-dependent media features.
+        /// </summary>
+        public void SubscribeToMediaQueryResultChangedEvent(Action<MediaQueryResultChangedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fires whenever a web font gets loaded.
+        /// </summary>
+        public void SubscribeToFontsUpdatedEvent(Action<FontsUpdatedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired whenever a stylesheet is changed as a result of the client operation.
+        /// </summary>
+        public void SubscribeToStyleSheetChangedEvent(Action<StyleSheetChangedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired whenever an active document stylesheet is added.
+        /// </summary>
+        public void SubscribeToStyleSheetAddedEvent(Action<StyleSheetAddedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired whenever an active document stylesheet is removed.
+        /// </summary>
+        public void SubscribeToStyleSheetRemovedEvent(Action<StyleSheetRemovedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

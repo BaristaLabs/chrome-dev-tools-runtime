@@ -104,5 +104,47 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
             return await m_session.SendCommand<StopSamplingCommand, StopSamplingCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToAddHeapSnapshotChunkEvent(Action<AddHeapSnapshotChunkEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToResetProfilesEvent(Action<ResetProfilesEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToReportHeapSnapshotProgressEvent(Action<ReportHeapSnapshotProgressEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// If heap objects tracking has been started then backend regulary sends a current value for last seen object id and corresponding timestamp. If the were changes in the heap since last event then one or more heapStatsUpdate events will be sent before a new lastSeenObjectId event.
+        /// </summary>
+        public void SubscribeToLastSeenObjectIdEvent(Action<LastSeenObjectIdEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// If heap objects tracking has been started then backend may send update for one or more fragments
+        /// </summary>
+        public void SubscribeToHeapStatsUpdateEvent(Action<HeapStatsUpdateEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

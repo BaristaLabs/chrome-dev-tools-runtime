@@ -96,5 +96,31 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             return await m_session.SendCommand<ResolveAnimationCommand, ResolveAnimationCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// Event for each animation that has been created.
+        /// </summary>
+        public void SubscribeToAnimationCreatedEvent(Action<AnimationCreatedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Event for animation that has been started.
+        /// </summary>
+        public void SubscribeToAnimationStartedEvent(Action<AnimationStartedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Event for when an animation has been cancelled.
+        /// </summary>
+        public void SubscribeToAnimationCanceledEvent(Action<AnimationCanceledEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

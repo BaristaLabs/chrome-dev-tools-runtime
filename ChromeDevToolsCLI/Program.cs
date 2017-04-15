@@ -37,7 +37,7 @@
 
                 //Subscribe to the eval command and determine the execution context id to use which
                 //correlates to the page we navigated to.
-                session.Subscribe<Runtime.ExecutionContextCreatedEvent>((e) =>
+                session.Runtime.SubscribeToExecutionContextCreatedEvent((e) =>
                 {
                     var auxData = e.Context.AuxData as JObject;
                     var frameId = auxData["frameId"].Value<string>();

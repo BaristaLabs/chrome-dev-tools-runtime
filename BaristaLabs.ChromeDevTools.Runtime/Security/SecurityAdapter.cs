@@ -40,5 +40,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             return await m_session.SendCommand<ShowCertificateViewerCommand, ShowCertificateViewerCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// The security state of the page changed.
+        /// </summary>
+        public void SubscribeToSecurityStateChangedEvent(Action<SecurityStateChangedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

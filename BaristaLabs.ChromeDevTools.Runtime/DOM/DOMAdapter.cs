@@ -344,5 +344,135 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             return await m_session.SendCommand<GetHighlightObjectForTestCommand, GetHighlightObjectForTestCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// Fired when <code>Document</code> has been totally updated. Node ids are no longer valid.
+        /// </summary>
+        public void SubscribeToDocumentUpdatedEvent(Action<DocumentUpdatedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when the node should be inspected. This happens after call to <code>setInspectMode</code>.
+        /// </summary>
+        public void SubscribeToInspectNodeRequestedEvent(Action<InspectNodeRequestedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when backend wants to provide client with the missing DOM structure. This happens upon most of the calls requesting node ids.
+        /// </summary>
+        public void SubscribeToSetChildNodesEvent(Action<SetChildNodesEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when <code>Element</code>'s attribute is modified.
+        /// </summary>
+        public void SubscribeToAttributeModifiedEvent(Action<AttributeModifiedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when <code>Element</code>'s attribute is removed.
+        /// </summary>
+        public void SubscribeToAttributeRemovedEvent(Action<AttributeRemovedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when <code>Element</code>'s inline style is modified via a CSS property modification.
+        /// </summary>
+        public void SubscribeToInlineStyleInvalidatedEvent(Action<InlineStyleInvalidatedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Mirrors <code>DOMCharacterDataModified</code> event.
+        /// </summary>
+        public void SubscribeToCharacterDataModifiedEvent(Action<CharacterDataModifiedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when <code>Container</code>'s child node count has changed.
+        /// </summary>
+        public void SubscribeToChildNodeCountUpdatedEvent(Action<ChildNodeCountUpdatedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Mirrors <code>DOMNodeInserted</code> event.
+        /// </summary>
+        public void SubscribeToChildNodeInsertedEvent(Action<ChildNodeInsertedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Mirrors <code>DOMNodeRemoved</code> event.
+        /// </summary>
+        public void SubscribeToChildNodeRemovedEvent(Action<ChildNodeRemovedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Called when shadow root is pushed into the element.
+        /// </summary>
+        public void SubscribeToShadowRootPushedEvent(Action<ShadowRootPushedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Called when shadow root is popped from the element.
+        /// </summary>
+        public void SubscribeToShadowRootPoppedEvent(Action<ShadowRootPoppedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Called when a pseudo element is added to an element.
+        /// </summary>
+        public void SubscribeToPseudoElementAddedEvent(Action<PseudoElementAddedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Called when a pseudo element is removed from an element.
+        /// </summary>
+        public void SubscribeToPseudoElementRemovedEvent(Action<PseudoElementRemovedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Called when distrubution is changed.
+        /// </summary>
+        public void SubscribeToDistributedNodesUpdatedEvent(Action<DistributedNodesUpdatedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToNodeHighlightRequestedEvent(Action<NodeHighlightRequestedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

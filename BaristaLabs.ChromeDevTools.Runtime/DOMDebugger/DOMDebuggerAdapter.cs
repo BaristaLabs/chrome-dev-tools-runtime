@@ -88,5 +88,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             return await m_session.SendCommand<GetEventListenersCommand, GetEventListenersCommandResponse>(command);
         }
     
+
+    
     }
 }

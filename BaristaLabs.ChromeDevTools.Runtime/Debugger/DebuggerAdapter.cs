@@ -208,5 +208,47 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             return await m_session.SendCommand<SetBlackboxedRangesCommand, SetBlackboxedRangesCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// Fired when virtual machine parses script. This event is also fired for all known and uncollected scripts upon enabling debugger.
+        /// </summary>
+        public void SubscribeToScriptParsedEvent(Action<ScriptParsedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when virtual machine fails to parse the script.
+        /// </summary>
+        public void SubscribeToScriptFailedToParseEvent(Action<ScriptFailedToParseEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when breakpoint is resolved to an actual script and location.
+        /// </summary>
+        public void SubscribeToBreakpointResolvedEvent(Action<BreakpointResolvedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when the virtual machine stopped on breakpoint or exception or any other stop criteria.
+        /// </summary>
+        public void SubscribeToPausedEvent(Action<PausedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when the virtual machine resumed execution.
+        /// </summary>
+        public void SubscribeToResumedEvent(Action<ResumedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

@@ -24,5 +24,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
             return await m_session.SendCommand<ClearDataForOriginCommand, ClearDataForOriginCommandResponse>(command);
         }
     
+
+    
     }
 }

@@ -128,5 +128,47 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             return await m_session.SendCommand<GetTargetsCommand, GetTargetsCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// Issued when a possible inspection target is created.
+        /// </summary>
+        public void SubscribeToTargetCreatedEvent(Action<TargetCreatedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Issued when a target is destroyed.
+        /// </summary>
+        public void SubscribeToTargetDestroyedEvent(Action<TargetDestroyedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Issued when attached to target because of auto-attach or <code>attachToTarget</code> command.
+        /// </summary>
+        public void SubscribeToAttachedToTargetEvent(Action<AttachedToTargetEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Issued when detached from target for any reason (including <code>detachFromTarget</code> command).
+        /// </summary>
+        public void SubscribeToDetachedFromTargetEvent(Action<DetachedFromTargetEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Notifies about new protocol message from attached target.
+        /// </summary>
+        public void SubscribeToReceivedMessageFromTargetEvent(Action<ReceivedMessageFromTargetEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

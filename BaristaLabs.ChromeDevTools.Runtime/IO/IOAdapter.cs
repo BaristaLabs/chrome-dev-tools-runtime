@@ -32,5 +32,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
             return await m_session.SendCommand<CloseCommand, CloseCommandResponse>(command);
         }
     
+
+    
     }
 }

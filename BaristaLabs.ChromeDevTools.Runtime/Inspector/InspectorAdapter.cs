@@ -32,5 +32,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Inspector
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// Fired when remote debugging connection is about to be terminated. Contains detach reason.
+        /// </summary>
+        public void SubscribeToDetachedEvent(Action<DetachedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Fired when debugging target has crashed
+        /// </summary>
+        public void SubscribeToTargetCrashedEvent(Action<TargetCrashedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

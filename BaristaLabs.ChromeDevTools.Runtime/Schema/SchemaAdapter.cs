@@ -24,5 +24,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Schema
             return await m_session.SendCommand<GetDomainsCommand, GetDomainsCommandResponse>(command);
         }
     
+
+    
     }
 }

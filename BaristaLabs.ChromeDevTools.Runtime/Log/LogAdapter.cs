@@ -56,5 +56,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             return await m_session.SendCommand<StopViolationsReportCommand, StopViolationsReportCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// Issued when new message was logged.
+        /// </summary>
+        public void SubscribeToEntryAddedEvent(Action<EntryAddedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

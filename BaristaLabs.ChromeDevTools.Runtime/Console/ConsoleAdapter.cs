@@ -40,5 +40,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
             return await m_session.SendCommand<ClearMessagesCommand, ClearMessagesCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// Issued when new console message is added.
+        /// </summary>
+        public void SubscribeToMessageAddedEvent(Action<MessageAddedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }

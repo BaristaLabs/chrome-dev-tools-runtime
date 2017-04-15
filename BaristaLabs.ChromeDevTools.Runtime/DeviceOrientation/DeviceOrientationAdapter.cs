@@ -32,5 +32,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DeviceOrientation
             return await m_session.SendCommand<ClearDeviceOrientationOverrideCommand, ClearDeviceOrientationOverrideCommandResponse>(command);
         }
     
+
+    
     }
 }

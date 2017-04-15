@@ -120,5 +120,63 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             return await m_session.SendCommand<RunScriptCommand, RunScriptCommandResponse>(command);
         }
     
+
+    
+        /// <summary>
+        /// Issued when new execution context is created.
+        /// </summary>
+        public void SubscribeToExecutionContextCreatedEvent(Action<ExecutionContextCreatedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Issued when execution context is destroyed.
+        /// </summary>
+        public void SubscribeToExecutionContextDestroyedEvent(Action<ExecutionContextDestroyedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Issued when all executionContexts were cleared in browser
+        /// </summary>
+        public void SubscribeToExecutionContextsClearedEvent(Action<ExecutionContextsClearedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Issued when exception was thrown and unhandled.
+        /// </summary>
+        public void SubscribeToExceptionThrownEvent(Action<ExceptionThrownEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Issued when unhandled exception was revoked.
+        /// </summary>
+        public void SubscribeToExceptionRevokedEvent(Action<ExceptionRevokedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Issued when console API was called.
+        /// </summary>
+        public void SubscribeToConsoleAPICalledEvent(Action<ConsoleAPICalledEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
+        /// <summary>
+        /// Issued when object should be inspected (for example, as a result of inspect() command line API call).
+        /// </summary>
+        public void SubscribeToInspectRequestedEvent(Action<InspectRequestedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+    
     }
 }
