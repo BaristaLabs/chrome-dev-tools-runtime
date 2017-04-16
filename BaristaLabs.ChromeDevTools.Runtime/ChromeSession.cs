@@ -198,7 +198,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
 
                 var exceptionMessage = $"{commandName}: {errorMessage}";
                 if (!String.IsNullOrWhiteSpace(errorData))
-                    exceptionMessage = exceptionMessage + " - {errorData}";
+                    exceptionMessage = $"{exceptionMessage} - {errorData}";
 
                 LogTrace("Recieved Error Response {id}: {message} {data}", message.id, message, errorData);
                 throw new CommandResponseException(exceptionMessage)
