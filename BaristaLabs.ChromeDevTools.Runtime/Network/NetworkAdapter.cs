@@ -15,6 +15,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             m_session = session ?? throw new ArgumentNullException(nameof(session));
         }
 
+        /// <summary>
+        /// Gets the ChromeSession associated with the adapter.
+        /// </summary>
+        public ChromeSession Session
+        {
+            get { return m_session; }
+        }
+
     
         /// <summary>
         /// Enables network tracking, network events will now be delivered to the client.

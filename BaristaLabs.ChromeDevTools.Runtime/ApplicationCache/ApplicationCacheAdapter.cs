@@ -15,6 +15,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
             m_session = session ?? throw new ArgumentNullException(nameof(session));
         }
 
+        /// <summary>
+        /// Gets the ChromeSession associated with the adapter.
+        /// </summary>
+        public ChromeSession Session
+        {
+            get { return m_session; }
+        }
+
     
         /// <summary>
         /// Returns array of frame identifiers with manifest urls for each frame containing a document associated with some application cache.

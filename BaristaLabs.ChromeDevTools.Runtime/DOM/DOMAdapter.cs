@@ -15,6 +15,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             m_session = session ?? throw new ArgumentNullException(nameof(session));
         }
 
+        /// <summary>
+        /// Gets the ChromeSession associated with the adapter.
+        /// </summary>
+        public ChromeSession Session
+        {
+            get { return m_session; }
+        }
+
     
         /// <summary>
         /// Enables DOM agent for the given page.

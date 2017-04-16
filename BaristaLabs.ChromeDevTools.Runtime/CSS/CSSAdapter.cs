@@ -15,6 +15,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             m_session = session ?? throw new ArgumentNullException(nameof(session));
         }
 
+        /// <summary>
+        /// Gets the ChromeSession associated with the adapter.
+        /// </summary>
+        public ChromeSession Session
+        {
+            get { return m_session; }
+        }
+
     
         /// <summary>
         /// Enables the CSS agent for the given page. Clients should not assume that the CSS agent has been enabled until the result of this command is received.

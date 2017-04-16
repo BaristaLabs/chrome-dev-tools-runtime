@@ -15,6 +15,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             m_session = session ?? throw new ArgumentNullException(nameof(session));
         }
 
+        /// <summary>
+        /// Gets the ChromeSession associated with the adapter.
+        /// </summary>
+        public ChromeSession Session
+        {
+            get { return m_session; }
+        }
+
     
         /// <summary>
         /// Enables log domain, sends the entries collected so far to the client by means of the <code>entryAdded</code> notification.

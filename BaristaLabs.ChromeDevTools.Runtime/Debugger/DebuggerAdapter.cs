@@ -15,6 +15,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             m_session = session ?? throw new ArgumentNullException(nameof(session));
         }
 
+        /// <summary>
+        /// Gets the ChromeSession associated with the adapter.
+        /// </summary>
+        public ChromeSession Session
+        {
+            get { return m_session; }
+        }
+
     
         /// <summary>
         /// Enables debugger for the given page. Clients should not assume that the debugging has been enabled until the result for this command is received.

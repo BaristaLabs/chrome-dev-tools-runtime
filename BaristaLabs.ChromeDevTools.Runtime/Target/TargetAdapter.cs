@@ -15,6 +15,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             m_session = session ?? throw new ArgumentNullException(nameof(session));
         }
 
+        /// <summary>
+        /// Gets the ChromeSession associated with the adapter.
+        /// </summary>
+        public ChromeSession Session
+        {
+            get { return m_session; }
+        }
+
     
         /// <summary>
         /// Controls whether to discover available targets and notify via <code>targetCreated/targetDestroyed</code> events.
