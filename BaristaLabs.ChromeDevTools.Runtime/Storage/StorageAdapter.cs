@@ -27,9 +27,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
         /// <summary>
         /// Clears storage for origin.
         /// </summary>
-        public async Task<ClearDataForOriginCommandResponse> ClearDataForOrigin(ClearDataForOriginCommand command)
+        public async Task<ClearDataForOriginCommandResponse> ClearDataForOrigin(ClearDataForOriginCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<ClearDataForOriginCommand, ClearDataForOriginCommandResponse>(command);
+            return await m_session.SendCommand<ClearDataForOriginCommand, ClearDataForOriginCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

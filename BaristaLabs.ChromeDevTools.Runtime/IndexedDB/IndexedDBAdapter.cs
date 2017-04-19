@@ -27,49 +27,49 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         /// <summary>
         /// Enables events from backend.
         /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Disables events from backend.
         /// </summary>
-        public async Task<DisableCommandResponse> Disable(DisableCommand command)
+        public async Task<DisableCommandResponse> Disable(DisableCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command);
+            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Requests database names for given security origin.
         /// </summary>
-        public async Task<RequestDatabaseNamesCommandResponse> RequestDatabaseNames(RequestDatabaseNamesCommand command)
+        public async Task<RequestDatabaseNamesCommandResponse> RequestDatabaseNames(RequestDatabaseNamesCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<RequestDatabaseNamesCommand, RequestDatabaseNamesCommandResponse>(command);
+            return await m_session.SendCommand<RequestDatabaseNamesCommand, RequestDatabaseNamesCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Requests database with given name in given frame.
         /// </summary>
-        public async Task<RequestDatabaseCommandResponse> RequestDatabase(RequestDatabaseCommand command)
+        public async Task<RequestDatabaseCommandResponse> RequestDatabase(RequestDatabaseCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<RequestDatabaseCommand, RequestDatabaseCommandResponse>(command);
+            return await m_session.SendCommand<RequestDatabaseCommand, RequestDatabaseCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Requests data from object store or index.
         /// </summary>
-        public async Task<RequestDataCommandResponse> RequestData(RequestDataCommand command)
+        public async Task<RequestDataCommandResponse> RequestData(RequestDataCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<RequestDataCommand, RequestDataCommandResponse>(command);
+            return await m_session.SendCommand<RequestDataCommand, RequestDataCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Clears all entries from an object store.
         /// </summary>
-        public async Task<ClearObjectStoreCommandResponse> ClearObjectStore(ClearObjectStoreCommand command)
+        public async Task<ClearObjectStoreCommandResponse> ClearObjectStore(ClearObjectStoreCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<ClearObjectStoreCommand, ClearObjectStoreCommandResponse>(command);
+            return await m_session.SendCommand<ClearObjectStoreCommand, ClearObjectStoreCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

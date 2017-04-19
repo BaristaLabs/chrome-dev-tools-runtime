@@ -27,17 +27,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Inspector
         /// <summary>
         /// Enables inspector domain notifications.
         /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Disables inspector domain notifications.
         /// </summary>
-        public async Task<DisableCommandResponse> Disable(DisableCommand command)
+        public async Task<DisableCommandResponse> Disable(DisableCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command);
+            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

@@ -27,41 +27,41 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         /// <summary>
         /// Enables log domain, sends the entries collected so far to the client by means of the <code>entryAdded</code> notification.
         /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Disables log domain, prevents further log entries from being reported to the client.
         /// </summary>
-        public async Task<DisableCommandResponse> Disable(DisableCommand command)
+        public async Task<DisableCommandResponse> Disable(DisableCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command);
+            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Clears the log.
         /// </summary>
-        public async Task<ClearCommandResponse> Clear(ClearCommand command)
+        public async Task<ClearCommandResponse> Clear(ClearCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<ClearCommand, ClearCommandResponse>(command);
+            return await m_session.SendCommand<ClearCommand, ClearCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// start violation reporting.
         /// </summary>
-        public async Task<StartViolationsReportCommandResponse> StartViolationsReport(StartViolationsReportCommand command)
+        public async Task<StartViolationsReportCommandResponse> StartViolationsReport(StartViolationsReportCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<StartViolationsReportCommand, StartViolationsReportCommandResponse>(command);
+            return await m_session.SendCommand<StartViolationsReportCommand, StartViolationsReportCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Stop violation reporting.
         /// </summary>
-        public async Task<StopViolationsReportCommandResponse> StopViolationsReport(StopViolationsReportCommand command)
+        public async Task<StopViolationsReportCommandResponse> StopViolationsReport(StopViolationsReportCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<StopViolationsReportCommand, StopViolationsReportCommandResponse>(command);
+            return await m_session.SendCommand<StopViolationsReportCommand, StopViolationsReportCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

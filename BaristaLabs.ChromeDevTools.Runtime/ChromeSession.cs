@@ -357,6 +357,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime
             {
                 if (disposing)
                 {
+                    //Clear all subscribed events.
+                    m_eventHandlers.Clear();
+                    m_eventTypeMap.Clear();
+
                     if (m_sessionSocket != null)
                     {
                         m_sessionSocket.Dispose();

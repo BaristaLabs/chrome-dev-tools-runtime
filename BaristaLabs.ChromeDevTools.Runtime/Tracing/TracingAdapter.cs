@@ -27,41 +27,41 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// <summary>
         /// Start trace events collection.
         /// </summary>
-        public async Task<StartCommandResponse> Start(StartCommand command)
+        public async Task<StartCommandResponse> Start(StartCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<StartCommand, StartCommandResponse>(command);
+            return await m_session.SendCommand<StartCommand, StartCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Stop trace events collection.
         /// </summary>
-        public async Task<EndCommandResponse> End(EndCommand command)
+        public async Task<EndCommandResponse> End(EndCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EndCommand, EndCommandResponse>(command);
+            return await m_session.SendCommand<EndCommand, EndCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Gets supported tracing categories.
         /// </summary>
-        public async Task<GetCategoriesCommandResponse> GetCategories(GetCategoriesCommand command)
+        public async Task<GetCategoriesCommandResponse> GetCategories(GetCategoriesCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetCategoriesCommand, GetCategoriesCommandResponse>(command);
+            return await m_session.SendCommand<GetCategoriesCommand, GetCategoriesCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Request a global memory dump.
         /// </summary>
-        public async Task<RequestMemoryDumpCommandResponse> RequestMemoryDump(RequestMemoryDumpCommand command)
+        public async Task<RequestMemoryDumpCommandResponse> RequestMemoryDump(RequestMemoryDumpCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<RequestMemoryDumpCommand, RequestMemoryDumpCommandResponse>(command);
+            return await m_session.SendCommand<RequestMemoryDumpCommand, RequestMemoryDumpCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Record a clock sync marker in the trace.
         /// </summary>
-        public async Task<RecordClockSyncMarkerCommandResponse> RecordClockSyncMarker(RecordClockSyncMarkerCommand command)
+        public async Task<RecordClockSyncMarkerCommandResponse> RecordClockSyncMarker(RecordClockSyncMarkerCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<RecordClockSyncMarkerCommand, RecordClockSyncMarkerCommandResponse>(command);
+            return await m_session.SendCommand<RecordClockSyncMarkerCommand, RecordClockSyncMarkerCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

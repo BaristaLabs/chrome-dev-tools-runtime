@@ -27,17 +27,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tethering
         /// <summary>
         /// Request browser port binding.
         /// </summary>
-        public async Task<BindCommandResponse> Bind(BindCommand command)
+        public async Task<BindCommandResponse> Bind(BindCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<BindCommand, BindCommandResponse>(command);
+            return await m_session.SendCommand<BindCommand, BindCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Request browser port unbinding.
         /// </summary>
-        public async Task<UnbindCommandResponse> Unbind(UnbindCommand command)
+        public async Task<UnbindCommandResponse> Unbind(UnbindCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<UnbindCommand, UnbindCommandResponse>(command);
+            return await m_session.SendCommand<UnbindCommand, UnbindCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

@@ -27,9 +27,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Schema
         /// <summary>
         /// Returns supported domains.
         /// </summary>
-        public async Task<GetDomainsCommandResponse> GetDomains(GetDomainsCommand command)
+        public async Task<GetDomainsCommandResponse> GetDomains(GetDomainsCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetDomainsCommand, GetDomainsCommandResponse>(command);
+            return await m_session.SendCommand<GetDomainsCommand, GetDomainsCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

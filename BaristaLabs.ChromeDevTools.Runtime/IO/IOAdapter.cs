@@ -27,17 +27,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
         /// <summary>
         /// Read a chunk of the stream
         /// </summary>
-        public async Task<ReadCommandResponse> Read(ReadCommand command)
+        public async Task<ReadCommandResponse> Read(ReadCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<ReadCommand, ReadCommandResponse>(command);
+            return await m_session.SendCommand<ReadCommand, ReadCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Close the stream, discard any temporary backing storage.
         /// </summary>
-        public async Task<CloseCommandResponse> Close(CloseCommand command)
+        public async Task<CloseCommandResponse> Close(CloseCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<CloseCommand, CloseCommandResponse>(command);
+            return await m_session.SendCommand<CloseCommand, CloseCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

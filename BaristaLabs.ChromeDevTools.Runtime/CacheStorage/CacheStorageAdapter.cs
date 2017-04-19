@@ -27,33 +27,33 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         /// <summary>
         /// Requests cache names.
         /// </summary>
-        public async Task<RequestCacheNamesCommandResponse> RequestCacheNames(RequestCacheNamesCommand command)
+        public async Task<RequestCacheNamesCommandResponse> RequestCacheNames(RequestCacheNamesCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<RequestCacheNamesCommand, RequestCacheNamesCommandResponse>(command);
+            return await m_session.SendCommand<RequestCacheNamesCommand, RequestCacheNamesCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Requests data from cache.
         /// </summary>
-        public async Task<RequestEntriesCommandResponse> RequestEntries(RequestEntriesCommand command)
+        public async Task<RequestEntriesCommandResponse> RequestEntries(RequestEntriesCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<RequestEntriesCommand, RequestEntriesCommandResponse>(command);
+            return await m_session.SendCommand<RequestEntriesCommand, RequestEntriesCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Deletes a cache.
         /// </summary>
-        public async Task<DeleteCacheCommandResponse> DeleteCache(DeleteCacheCommand command)
+        public async Task<DeleteCacheCommandResponse> DeleteCache(DeleteCacheCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<DeleteCacheCommand, DeleteCacheCommandResponse>(command);
+            return await m_session.SendCommand<DeleteCacheCommand, DeleteCacheCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Deletes a cache entry.
         /// </summary>
-        public async Task<DeleteEntryCommandResponse> DeleteEntry(DeleteEntryCommand command)
+        public async Task<DeleteEntryCommandResponse> DeleteEntry(DeleteEntryCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<DeleteEntryCommand, DeleteEntryCommandResponse>(command);
+            return await m_session.SendCommand<DeleteEntryCommand, DeleteEntryCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

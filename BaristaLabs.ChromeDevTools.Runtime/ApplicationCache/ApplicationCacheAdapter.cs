@@ -27,33 +27,33 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         /// <summary>
         /// Returns array of frame identifiers with manifest urls for each frame containing a document associated with some application cache.
         /// </summary>
-        public async Task<GetFramesWithManifestsCommandResponse> GetFramesWithManifests(GetFramesWithManifestsCommand command)
+        public async Task<GetFramesWithManifestsCommandResponse> GetFramesWithManifests(GetFramesWithManifestsCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetFramesWithManifestsCommand, GetFramesWithManifestsCommandResponse>(command);
+            return await m_session.SendCommand<GetFramesWithManifestsCommand, GetFramesWithManifestsCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Enables application cache domain notifications.
         /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Returns manifest URL for document in the given frame.
         /// </summary>
-        public async Task<GetManifestForFrameCommandResponse> GetManifestForFrame(GetManifestForFrameCommand command)
+        public async Task<GetManifestForFrameCommandResponse> GetManifestForFrame(GetManifestForFrameCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetManifestForFrameCommand, GetManifestForFrameCommandResponse>(command);
+            return await m_session.SendCommand<GetManifestForFrameCommand, GetManifestForFrameCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Returns relevant application cache data for the document in given frame.
         /// </summary>
-        public async Task<GetApplicationCacheForFrameCommandResponse> GetApplicationCacheForFrame(GetApplicationCacheForFrameCommand command)
+        public async Task<GetApplicationCacheForFrameCommandResponse> GetApplicationCacheForFrame(GetApplicationCacheForFrameCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetApplicationCacheForFrameCommand, GetApplicationCacheForFrameCommandResponse>(command);
+            return await m_session.SendCommand<GetApplicationCacheForFrameCommand, GetApplicationCacheForFrameCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

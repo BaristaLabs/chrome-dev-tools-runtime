@@ -27,25 +27,25 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
         /// <summary>
         /// Enables console domain, sends the messages collected so far to the client by means of the <code>messageAdded</code> notification.
         /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Disables console domain, prevents further console messages from being reported to the client.
         /// </summary>
-        public async Task<DisableCommandResponse> Disable(DisableCommand command)
+        public async Task<DisableCommandResponse> Disable(DisableCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command);
+            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Does nothing.
         /// </summary>
-        public async Task<ClearMessagesCommandResponse> ClearMessages(ClearMessagesCommand command)
+        public async Task<ClearMessagesCommandResponse> ClearMessages(ClearMessagesCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<ClearMessagesCommand, ClearMessagesCommandResponse>(command);
+            return await m_session.SendCommand<ClearMessagesCommand, ClearMessagesCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

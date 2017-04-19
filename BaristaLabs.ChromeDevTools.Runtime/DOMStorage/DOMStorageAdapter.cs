@@ -27,41 +27,41 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
         /// <summary>
         /// Enables storage tracking, storage events will now be delivered to the client.
         /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Disables storage tracking, prevents storage events from being sent to the client.
         /// </summary>
-        public async Task<DisableCommandResponse> Disable(DisableCommand command)
+        public async Task<DisableCommandResponse> Disable(DisableCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command);
+            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// 
         /// </summary>
-        public async Task<GetDOMStorageItemsCommandResponse> GetDOMStorageItems(GetDOMStorageItemsCommand command)
+        public async Task<GetDOMStorageItemsCommandResponse> GetDOMStorageItems(GetDOMStorageItemsCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetDOMStorageItemsCommand, GetDOMStorageItemsCommandResponse>(command);
+            return await m_session.SendCommand<GetDOMStorageItemsCommand, GetDOMStorageItemsCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// 
         /// </summary>
-        public async Task<SetDOMStorageItemCommandResponse> SetDOMStorageItem(SetDOMStorageItemCommand command)
+        public async Task<SetDOMStorageItemCommandResponse> SetDOMStorageItem(SetDOMStorageItemCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<SetDOMStorageItemCommand, SetDOMStorageItemCommandResponse>(command);
+            return await m_session.SendCommand<SetDOMStorageItemCommand, SetDOMStorageItemCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// 
         /// </summary>
-        public async Task<RemoveDOMStorageItemCommandResponse> RemoveDOMStorageItem(RemoveDOMStorageItemCommand command)
+        public async Task<RemoveDOMStorageItemCommandResponse> RemoveDOMStorageItem(RemoveDOMStorageItemCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<RemoveDOMStorageItemCommand, RemoveDOMStorageItemCommandResponse>(command);
+            return await m_session.SendCommand<RemoveDOMStorageItemCommand, RemoveDOMStorageItemCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

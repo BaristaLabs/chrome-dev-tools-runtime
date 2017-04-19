@@ -27,105 +27,105 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Evaluates expression on global object.
         /// </summary>
-        public async Task<EvaluateCommandResponse> Evaluate(EvaluateCommand command)
+        public async Task<EvaluateCommandResponse> Evaluate(EvaluateCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EvaluateCommand, EvaluateCommandResponse>(command);
+            return await m_session.SendCommand<EvaluateCommand, EvaluateCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Add handler to promise with given promise object id.
         /// </summary>
-        public async Task<AwaitPromiseCommandResponse> AwaitPromise(AwaitPromiseCommand command)
+        public async Task<AwaitPromiseCommandResponse> AwaitPromise(AwaitPromiseCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<AwaitPromiseCommand, AwaitPromiseCommandResponse>(command);
+            return await m_session.SendCommand<AwaitPromiseCommand, AwaitPromiseCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Calls function with given declaration on the given object. Object group of the result is inherited from the target object.
         /// </summary>
-        public async Task<CallFunctionOnCommandResponse> CallFunctionOn(CallFunctionOnCommand command)
+        public async Task<CallFunctionOnCommandResponse> CallFunctionOn(CallFunctionOnCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<CallFunctionOnCommand, CallFunctionOnCommandResponse>(command);
+            return await m_session.SendCommand<CallFunctionOnCommand, CallFunctionOnCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Returns properties of a given object. Object group of the result is inherited from the target object.
         /// </summary>
-        public async Task<GetPropertiesCommandResponse> GetProperties(GetPropertiesCommand command)
+        public async Task<GetPropertiesCommandResponse> GetProperties(GetPropertiesCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetPropertiesCommand, GetPropertiesCommandResponse>(command);
+            return await m_session.SendCommand<GetPropertiesCommand, GetPropertiesCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Releases remote object with given id.
         /// </summary>
-        public async Task<ReleaseObjectCommandResponse> ReleaseObject(ReleaseObjectCommand command)
+        public async Task<ReleaseObjectCommandResponse> ReleaseObject(ReleaseObjectCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<ReleaseObjectCommand, ReleaseObjectCommandResponse>(command);
+            return await m_session.SendCommand<ReleaseObjectCommand, ReleaseObjectCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Releases all remote objects that belong to a given group.
         /// </summary>
-        public async Task<ReleaseObjectGroupCommandResponse> ReleaseObjectGroup(ReleaseObjectGroupCommand command)
+        public async Task<ReleaseObjectGroupCommandResponse> ReleaseObjectGroup(ReleaseObjectGroupCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<ReleaseObjectGroupCommand, ReleaseObjectGroupCommandResponse>(command);
+            return await m_session.SendCommand<ReleaseObjectGroupCommand, ReleaseObjectGroupCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Tells inspected instance to run if it was waiting for debugger to attach.
         /// </summary>
-        public async Task<RunIfWaitingForDebuggerCommandResponse> RunIfWaitingForDebugger(RunIfWaitingForDebuggerCommand command)
+        public async Task<RunIfWaitingForDebuggerCommandResponse> RunIfWaitingForDebugger(RunIfWaitingForDebuggerCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<RunIfWaitingForDebuggerCommand, RunIfWaitingForDebuggerCommandResponse>(command);
+            return await m_session.SendCommand<RunIfWaitingForDebuggerCommand, RunIfWaitingForDebuggerCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Enables reporting of execution contexts creation by means of <code>executionContextCreated</code> event. When the reporting gets enabled the event will be sent immediately for each existing execution context.
         /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Disables reporting of execution contexts creation.
         /// </summary>
-        public async Task<DisableCommandResponse> Disable(DisableCommand command)
+        public async Task<DisableCommandResponse> Disable(DisableCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command);
+            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Discards collected exceptions and console API calls.
         /// </summary>
-        public async Task<DiscardConsoleEntriesCommandResponse> DiscardConsoleEntries(DiscardConsoleEntriesCommand command)
+        public async Task<DiscardConsoleEntriesCommandResponse> DiscardConsoleEntries(DiscardConsoleEntriesCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<DiscardConsoleEntriesCommand, DiscardConsoleEntriesCommandResponse>(command);
+            return await m_session.SendCommand<DiscardConsoleEntriesCommand, DiscardConsoleEntriesCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// 
         /// </summary>
-        public async Task<SetCustomObjectFormatterEnabledCommandResponse> SetCustomObjectFormatterEnabled(SetCustomObjectFormatterEnabledCommand command)
+        public async Task<SetCustomObjectFormatterEnabledCommandResponse> SetCustomObjectFormatterEnabled(SetCustomObjectFormatterEnabledCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<SetCustomObjectFormatterEnabledCommand, SetCustomObjectFormatterEnabledCommandResponse>(command);
+            return await m_session.SendCommand<SetCustomObjectFormatterEnabledCommand, SetCustomObjectFormatterEnabledCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Compiles expression.
         /// </summary>
-        public async Task<CompileScriptCommandResponse> CompileScript(CompileScriptCommand command)
+        public async Task<CompileScriptCommandResponse> CompileScript(CompileScriptCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<CompileScriptCommand, CompileScriptCommandResponse>(command);
+            return await m_session.SendCommand<CompileScriptCommand, CompileScriptCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Runs script with given id in a given context.
         /// </summary>
-        public async Task<RunScriptCommandResponse> RunScript(RunScriptCommand command)
+        public async Task<RunScriptCommandResponse> RunScript(RunScriptCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<RunScriptCommand, RunScriptCommandResponse>(command);
+            return await m_session.SendCommand<RunScriptCommand, RunScriptCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 
