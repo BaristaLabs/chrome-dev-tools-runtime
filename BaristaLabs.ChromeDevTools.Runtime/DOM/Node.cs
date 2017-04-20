@@ -19,6 +19,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         }
     
         /// <summary>
+        /// The id of the parent node if any.
+        ///</summary>
+        [JsonProperty("parentId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? ParentId
+        {
+            get;
+            set;
+        }
+    
+        /// <summary>
         /// The BackendNodeId for this node.
         ///</summary>
         [JsonProperty("backendNodeId")]

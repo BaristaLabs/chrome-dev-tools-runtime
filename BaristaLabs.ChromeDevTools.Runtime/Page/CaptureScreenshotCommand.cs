@@ -16,6 +16,30 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         }
 
     
+        
+        /// <summary>
+        /// Image compression format (defaults to png).
+        /// </summary>
+        
+        [JsonProperty("format", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string Format
+        {
+            get;
+            set;
+        }
+    
+        
+        /// <summary>
+        /// Compression quality from range [0..100] (jpeg only).
+        /// </summary>
+        
+        [JsonProperty("quality", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? Quality
+        {
+            get;
+            set;
+        }
+    
     }
 
     public sealed class CaptureScreenshotCommandResponse : ICommandResponse<CaptureScreenshotCommand>
@@ -23,7 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     
         
         /// <summary>
-        /// Base64-encoded image data (PNG).
+        /// Base64-encoded image data.
         ///</summary>
         
         [JsonProperty("data")]

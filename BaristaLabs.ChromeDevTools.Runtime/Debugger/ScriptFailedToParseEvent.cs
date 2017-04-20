@@ -140,5 +140,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             set;
         }
     
+        
+        /// <summary>
+        /// True, if this script is ES6 module.
+        /// </summary>
+        
+        [JsonProperty("isModule", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? IsModule
+        {
+            get;
+            set;
+        }
+    
     }
 }

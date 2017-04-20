@@ -45,5 +45,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
     
+        
+        /// <summary>
+        /// Size of scrollable area.
+        ///</summary>
+        
+        [JsonProperty("contentSize")]
+        public DOM.Rect ContentSize
+        {
+            get;
+            set;
+        }
+    
     }
 }

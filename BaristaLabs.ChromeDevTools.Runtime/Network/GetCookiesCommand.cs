@@ -16,6 +16,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         }
 
     
+        
+        /// <summary>
+        /// The list of URLs for which applicable cookies will be fetched
+        /// </summary>
+        
+        [JsonProperty("urls", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string[] Urls
+        {
+            get;
+            set;
+        }
+    
     }
 
     public sealed class GetCookiesCommandResponse : ICommandResponse<GetCookiesCommand>

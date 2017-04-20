@@ -144,6 +144,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             return await m_session.SendCommand<SetVirtualTimePolicyCommand, SetVirtualTimePolicyCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
+        /// <summary>
+        /// Sets or clears an override of the default background color of the frame. This override is used if the content does not specify one.
+        /// </summary>
+        public async Task<SetDefaultBackgroundColorOverrideCommandResponse> SetDefaultBackgroundColorOverride(SetDefaultBackgroundColorOverrideCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetDefaultBackgroundColorOverrideCommand, SetDefaultBackgroundColorOverrideCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+    
 
     
         /// <summary>

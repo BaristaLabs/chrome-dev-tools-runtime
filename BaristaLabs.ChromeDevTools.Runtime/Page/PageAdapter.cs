@@ -217,6 +217,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         }
     
         /// <summary>
+        /// Print page as pdf.
+        /// </summary>
+        public async Task<PrintToPDFCommandResponse> PrintToPDF(PrintToPDFCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<PrintToPDFCommand, PrintToPDFCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+    
+        /// <summary>
         /// Starts sending each frame using the <code>screencastFrame</code> event.
         /// </summary>
         public async Task<StartScreencastCommandResponse> StartScreencast(StartScreencastCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

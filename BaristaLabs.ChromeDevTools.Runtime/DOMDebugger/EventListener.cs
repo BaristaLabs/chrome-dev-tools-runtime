@@ -99,10 +99,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         }
     
         /// <summary>
-        /// Event listener remove function.
+        /// Node the listener is added to (if any).
         ///</summary>
-        [JsonProperty("removeFunction", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public Runtime.RemoteObject RemoveFunction
+        [JsonProperty("backendNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? BackendNodeId
         {
             get;
             set;

@@ -28,6 +28,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
     
+        
+        /// <summary>
+        /// Referrer URL.
+        /// </summary>
+        
+        [JsonProperty("referrer", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string Referrer
+        {
+            get;
+            set;
+        }
+    
     }
 
     public sealed class NavigateCommandResponse : ICommandResponse<NavigateCommand>

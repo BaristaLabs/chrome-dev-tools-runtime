@@ -64,6 +64,38 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             return await m_session.SendCommand<StopCommand, StopCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
+        /// <summary>
+        /// Enable precise code coverage. Coverage data for JavaScript executed before enabling precise code coverage may be incomplete. Enabling prevents running optimized code and resets execution counters.
+        /// </summary>
+        public async Task<StartPreciseCoverageCommandResponse> StartPreciseCoverage(StartPreciseCoverageCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<StartPreciseCoverageCommand, StartPreciseCoverageCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+    
+        /// <summary>
+        /// Disable precise code coverage. Disabling releases unnecessary execution count records and allows executing optimized code.
+        /// </summary>
+        public async Task<StopPreciseCoverageCommandResponse> StopPreciseCoverage(StopPreciseCoverageCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<StopPreciseCoverageCommand, StopPreciseCoverageCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+    
+        /// <summary>
+        /// Collect coverage data for the current isolate, and resets execution counters. Precise code coverage needs to have started.
+        /// </summary>
+        public async Task<TakePreciseCoverageCommandResponse> TakePreciseCoverage(TakePreciseCoverageCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<TakePreciseCoverageCommand, TakePreciseCoverageCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+    
+        /// <summary>
+        /// Collect coverage data for the current isolate. The coverage data may be incomplete due to garbage collection.
+        /// </summary>
+        public async Task<GetBestEffortCoverageCommandResponse> GetBestEffortCoverage(GetBestEffortCoverageCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetBestEffortCoverageCommand, GetBestEffortCoverageCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+    
 
     
         /// <summary>

@@ -49,6 +49,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         }
     
         /// <summary>
+        /// Returns the root DOM node (and optionally the subtree) to the caller.
+        /// </summary>
+        public async Task<GetFlattenedDocumentCommandResponse> GetFlattenedDocument(GetFlattenedDocumentCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetFlattenedDocumentCommand, GetFlattenedDocumentCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+    
+        /// <summary>
         /// Collects class names for the node with given id and all of it's child nodes.
         /// </summary>
         public async Task<CollectClassNamesFromSubtreeCommandResponse> CollectClassNamesFromSubtree(CollectClassNamesFromSubtreeCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

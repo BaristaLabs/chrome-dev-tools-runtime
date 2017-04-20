@@ -72,6 +72,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             return await m_session.SendCommand<ClearObjectStoreCommand, ClearObjectStoreCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
+        /// <summary>
+        /// Deletes a database.
+        /// </summary>
+        public async Task<DeleteDatabaseCommandResponse> DeleteDatabase(DeleteDatabaseCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<DeleteDatabaseCommand, DeleteDatabaseCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+    
 
     
     }

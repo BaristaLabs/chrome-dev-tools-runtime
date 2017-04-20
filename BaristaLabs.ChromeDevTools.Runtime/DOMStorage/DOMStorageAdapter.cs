@@ -43,6 +43,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
         /// <summary>
         /// 
         /// </summary>
+        public async Task<ClearCommandResponse> Clear(ClearCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<ClearCommand, ClearCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+    
+        /// <summary>
+        /// 
+        /// </summary>
         public async Task<GetDOMStorageItemsCommandResponse> GetDOMStorageItems(GetDOMStorageItemsCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<GetDOMStorageItemsCommand, GetDOMStorageItemsCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);

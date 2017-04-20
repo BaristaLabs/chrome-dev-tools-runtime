@@ -38,5 +38,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
     
+        /// <summary>
+        /// Creation frame of the Promise which produced the next synchronous trace when resolved, if available.
+        ///</summary>
+        [JsonProperty("promiseCreationFrame", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public CallFrame PromiseCreationFrame
+        {
+            get;
+            set;
+        }
+    
     }
 }
