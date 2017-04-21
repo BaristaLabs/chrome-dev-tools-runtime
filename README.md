@@ -20,12 +20,12 @@ This is a sample so the intent is to hack away at the code.
 
 ### Commands
 
-In general, using an instance of a ChromeSession, submit strongly-typed commands via the SendCommand method.
+In general, using an instance of a ChromeSession, submit strongly-typed commands via the adapter methods.
 
 ``` CS
 using (var session = new ChromeSession("ws://...")
 {
-    await session.SendCommand<Page.NavigateCommand, Page.NavigateCommandResponse>(new Page.NavigateCommand
+    await session.Page.Navigate(new Page.NavigateCommand
     {
         Url = "http://www.winamp.com"
     });
@@ -39,7 +39,7 @@ Subscribe to events via the Subscribe method
 ``` CS
 using (var session = new ChromeSession("ws://...")
 {
-    session.Subscribe<Page.FrameNavigatedEvent>((e) =>
+    session.Page.SubscribeToFrameNavigatedEvent((e) =>
     {
         Console.WriteLine($"Navigated to {e.Frame.Url}");
     });
