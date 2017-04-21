@@ -16,7 +16,7 @@ $ "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --remote-debuggi
 $ dotnet run
 ```
 
-This is a sample so the intent is to hack away at the code.
+This repository is supplied as a sample -- the intent is for you to hack away at the code and automate Chrome to your every desire.
 
 ### Commands
 
