@@ -1,6 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Security
 {
     using System;
+    using System.Threading;
     using System.Threading.Tasks;
 
     /// <summary>
@@ -27,25 +28,25 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         /// <summary>
         /// Enables tracking security state changes.
         /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Disables tracking security state changes.
         /// </summary>
-        public async Task<DisableCommandResponse> Disable(DisableCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<DisableCommandResponse> Disable(DisableCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Displays native dialog with the certificate details.
         /// </summary>
-        public async Task<ShowCertificateViewerCommandResponse> ShowCertificateViewer(ShowCertificateViewerCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<ShowCertificateViewerCommandResponse> ShowCertificateViewer(ShowCertificateViewerCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<ShowCertificateViewerCommand, ShowCertificateViewerCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<ShowCertificateViewerCommand, ShowCertificateViewerCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

@@ -1,6 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Memory
 {
     using System;
+    using System.Threading;
     using System.Threading.Tasks;
 
     /// <summary>
@@ -27,25 +28,25 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
         /// <summary>
         /// 
         /// </summary>
-        public async Task<GetDOMCountersCommandResponse> GetDOMCounters(GetDOMCountersCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<GetDOMCountersCommandResponse> GetDOMCounters(GetDOMCountersCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetDOMCountersCommand, GetDOMCountersCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<GetDOMCountersCommand, GetDOMCountersCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Enable/disable suppressing memory pressure notifications in all processes.
         /// </summary>
-        public async Task<SetPressureNotificationsSuppressedCommandResponse> SetPressureNotificationsSuppressed(SetPressureNotificationsSuppressedCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<SetPressureNotificationsSuppressedCommandResponse> SetPressureNotificationsSuppressed(SetPressureNotificationsSuppressedCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<SetPressureNotificationsSuppressedCommand, SetPressureNotificationsSuppressedCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<SetPressureNotificationsSuppressedCommand, SetPressureNotificationsSuppressedCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Simulate a memory pressure notification in all processes.
         /// </summary>
-        public async Task<SimulatePressureNotificationCommandResponse> SimulatePressureNotification(SimulatePressureNotificationCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<SimulatePressureNotificationCommandResponse> SimulatePressureNotification(SimulatePressureNotificationCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<SimulatePressureNotificationCommand, SimulatePressureNotificationCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<SimulatePressureNotificationCommand, SimulatePressureNotificationCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

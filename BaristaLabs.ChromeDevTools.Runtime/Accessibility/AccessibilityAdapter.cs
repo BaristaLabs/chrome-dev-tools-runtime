@@ -1,6 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
 {
     using System;
+    using System.Threading;
     using System.Threading.Tasks;
 
     /// <summary>
@@ -27,9 +28,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// <summary>
         /// Fetches the accessibility node and partial accessibility tree for this DOM node, if it exists.
         /// </summary>
-        public async Task<GetPartialAXTreeCommandResponse> GetPartialAXTree(GetPartialAXTreeCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<GetPartialAXTreeCommandResponse> GetPartialAXTree(GetPartialAXTreeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetPartialAXTreeCommand, GetPartialAXTreeCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<GetPartialAXTreeCommand, GetPartialAXTreeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

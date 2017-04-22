@@ -1,6 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
 {
     using System;
+    using System.Threading;
     using System.Threading.Tasks;
 
     /// <summary>
@@ -27,9 +28,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
         /// <summary>
         /// Returns information about the system.
         /// </summary>
-        public async Task<GetInfoCommandResponse> GetInfo(GetInfoCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<GetInfoCommandResponse> GetInfo(GetInfoCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetInfoCommand, GetInfoCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<GetInfoCommand, GetInfoCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

@@ -1,6 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Tethering
 {
     using System;
+    using System.Threading;
     using System.Threading.Tasks;
 
     /// <summary>
@@ -27,17 +28,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tethering
         /// <summary>
         /// Request browser port binding.
         /// </summary>
-        public async Task<BindCommandResponse> Bind(BindCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<BindCommandResponse> Bind(BindCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<BindCommand, BindCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<BindCommand, BindCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
         /// <summary>
         /// Request browser port unbinding.
         /// </summary>
-        public async Task<UnbindCommandResponse> Unbind(UnbindCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<UnbindCommandResponse> Unbind(UnbindCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<UnbindCommand, UnbindCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<UnbindCommand, UnbindCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 

@@ -1,6 +1,7 @@
 namespace BaristaLabs.ChromeDevTools.Runtime.Schema
 {
     using System;
+    using System.Threading;
     using System.Threading.Tasks;
 
     /// <summary>
@@ -27,9 +28,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Schema
         /// <summary>
         /// Returns supported domains.
         /// </summary>
-        public async Task<GetDomainsCommandResponse> GetDomains(GetDomainsCommand command, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<GetDomainsCommandResponse> GetDomains(GetDomainsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetDomainsCommand, GetDomainsCommandResponse>(command, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<GetDomainsCommand, GetDomainsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
     
 
