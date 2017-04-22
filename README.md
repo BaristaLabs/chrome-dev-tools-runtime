@@ -32,6 +32,19 @@ using (var session = new ChromeSession("ws://...")
 }
 ```
 
+All commands can specify a timeout and are cancellable:
+``` CS
+using (var session = new ChromeSession("ws://...")
+{
+    var shouldCancel = new CancellationTokenSource();
+    await session.Page.Navigate(new Page.NavigateCommand
+    {
+        Url = "http://www.winamp.com"
+    }, millisecondsTimeout: 60000, cancellationToken: shouldCancel);
+    
+    shouldCancel.Cancel();
+}
+```
 ### Events
 
 Subscribe to events via the Subscribe method
