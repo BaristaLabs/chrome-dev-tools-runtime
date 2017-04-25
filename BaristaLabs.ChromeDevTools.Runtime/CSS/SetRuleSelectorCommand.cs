@@ -15,59 +15,45 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Gets or sets the styleSheetId
         /// </summary>
-        
         [JsonProperty("styleSheetId")]
         public string StyleSheetId
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Gets or sets the range
         /// </summary>
-        
         [JsonProperty("range")]
         public SourceRange Range
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Gets or sets the selector
         /// </summary>
-        
         [JsonProperty("selector")]
         public string Selector
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetRuleSelectorCommandResponse : ICommandResponse<SetRuleSelectorCommand>
     {
-    
-        
         /// <summary>
         /// The resulting selector list after modification.
         ///</summary>
-        
         [JsonProperty("selectorList")]
         public SelectorList SelectorList
         {
             get;
             set;
         }
-    
     }
 }

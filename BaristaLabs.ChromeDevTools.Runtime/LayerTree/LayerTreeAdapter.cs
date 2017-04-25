@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// Enables compositing tree inspection.
         /// </summary>
@@ -32,7 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Disables compositing tree inspection.
         /// </summary>
@@ -40,7 +38,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Provides the reasons why the given layer was composited.
         /// </summary>
@@ -48,7 +45,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         {
             return await m_session.SendCommand<CompositingReasonsCommand, CompositingReasonsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns the layer snapshot identifier.
         /// </summary>
@@ -56,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         {
             return await m_session.SendCommand<MakeSnapshotCommand, MakeSnapshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns the snapshot identifier.
         /// </summary>
@@ -64,7 +59,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         {
             return await m_session.SendCommand<LoadSnapshotCommand, LoadSnapshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Releases layer snapshot captured by the back-end.
         /// </summary>
@@ -72,7 +66,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         {
             return await m_session.SendCommand<ReleaseSnapshotCommand, ReleaseSnapshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -80,7 +73,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         {
             return await m_session.SendCommand<ProfileSnapshotCommand, ProfileSnapshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Replays the layer snapshot and returns the resulting bitmap.
         /// </summary>
@@ -88,7 +80,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         {
             return await m_session.SendCommand<ReplaySnapshotCommand, ReplaySnapshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Replays the layer snapshot and returns canvas log.
         /// </summary>
@@ -96,9 +87,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         {
             return await m_session.SendCommand<SnapshotCommandLogCommand, SnapshotCommandLogCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
         /// <summary>
         /// 
         /// </summary>
@@ -106,7 +95,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -114,6 +102,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         {
             m_session.Subscribe(eventCallback);
         }
-    
     }
 }

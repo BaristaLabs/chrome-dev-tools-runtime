@@ -15,47 +15,36 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// X coordinate.
         /// </summary>
-        
         [JsonProperty("x")]
         public long X
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Y coordinate.
         /// </summary>
-        
         [JsonProperty("y")]
         public long Y
         {
             get;
             set;
         }
-    
     }
 
     public sealed class GetNodeForLocationCommandResponse : ICommandResponse<GetNodeForLocationCommand>
     {
-    
-        
         /// <summary>
         /// Id of the node at given coordinates.
         ///</summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
     }
 }

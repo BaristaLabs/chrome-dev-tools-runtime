@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
     /// </summary>
     public sealed class GPUInfo
     {
-    
         /// <summary>
         /// The graphics devices on the system. Element 0 is the primary GPU.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
             get;
             set;
         }
-    
         /// <summary>
         /// An optional dictionary of additional GPU related attributes.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
             get;
             set;
         }
-    
         /// <summary>
         /// An optional dictionary of graphics features and their status.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
             get;
             set;
         }
-    
         /// <summary>
         /// An optional array of GPU driver bug workarounds.
         ///</summary>
@@ -47,6 +43,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
             get;
             set;
         }
-    
     }
 }

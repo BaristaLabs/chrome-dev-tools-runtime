@@ -15,11 +15,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
     }
 
     public sealed class ShowCertificateViewerCommandResponse : ICommandResponse<ShowCertificateViewerCommand>
     {
-    
     }
 }

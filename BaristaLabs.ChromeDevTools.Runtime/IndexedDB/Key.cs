@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
     /// </summary>
     public sealed class Key
     {
-    
         /// <summary>
         /// Key type.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
         /// <summary>
         /// Number value.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
         /// <summary>
         /// String value.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
         /// <summary>
         /// Date value.
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
         /// <summary>
         /// Array value.
         ///</summary>
@@ -57,6 +52,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
     }
 }

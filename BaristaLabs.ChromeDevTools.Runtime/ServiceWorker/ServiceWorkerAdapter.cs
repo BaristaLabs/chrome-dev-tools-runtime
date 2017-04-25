@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// 
         /// </summary>
@@ -32,7 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -40,7 +38,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -48,7 +45,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         {
             return await m_session.SendCommand<UnregisterCommand, UnregisterCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -56,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         {
             return await m_session.SendCommand<UpdateRegistrationCommand, UpdateRegistrationCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -64,7 +59,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         {
             return await m_session.SendCommand<StartWorkerCommand, StartWorkerCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -72,7 +66,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         {
             return await m_session.SendCommand<SkipWaitingCommand, SkipWaitingCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -80,7 +73,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         {
             return await m_session.SendCommand<StopWorkerCommand, StopWorkerCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -88,7 +80,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         {
             return await m_session.SendCommand<InspectWorkerCommand, InspectWorkerCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -96,7 +87,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         {
             return await m_session.SendCommand<SetForceUpdateOnPageLoadCommand, SetForceUpdateOnPageLoadCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -104,7 +94,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         {
             return await m_session.SendCommand<DeliverPushMessageCommand, DeliverPushMessageCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -112,9 +101,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         {
             return await m_session.SendCommand<DispatchSyncEventCommand, DispatchSyncEventCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
         /// <summary>
         /// 
         /// </summary>
@@ -122,7 +109,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -130,7 +116,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -138,6 +123,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         {
             m_session.Subscribe(eventCallback);
         }
-    
     }
 }

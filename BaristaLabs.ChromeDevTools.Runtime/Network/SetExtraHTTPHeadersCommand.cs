@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Map with extra HTTP headers.
         /// </summary>
-        
         [JsonProperty("headers")]
         public Headers Headers
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetExtraHTTPHeadersCommandResponse : ICommandResponse<SetExtraHTTPHeadersCommand>
     {
-    
     }
 }

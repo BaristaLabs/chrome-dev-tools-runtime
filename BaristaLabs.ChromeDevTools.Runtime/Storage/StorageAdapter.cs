@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// Clears storage for origin.
         /// </summary>
@@ -32,8 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
         {
             return await m_session.SendCommand<ClearDataForOriginCommand, ClearDataForOriginCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
     }
 }

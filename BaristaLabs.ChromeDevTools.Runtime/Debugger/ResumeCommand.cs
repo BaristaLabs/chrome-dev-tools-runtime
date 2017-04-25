@@ -15,11 +15,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
     }
 
     public sealed class ResumeCommandResponse : ICommandResponse<ResumeCommand>
     {
-    
     }
 }

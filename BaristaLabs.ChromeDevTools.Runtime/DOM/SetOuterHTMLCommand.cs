@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Id of the node to set markup for.
         /// </summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Outer HTML markup to set.
         /// </summary>
-        
         [JsonProperty("outerHTML")]
         public string OuterHTML
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetOuterHTMLCommandResponse : ICommandResponse<SetOuterHTMLCommand>
     {
-    
     }
 }

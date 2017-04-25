@@ -10,15 +10,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     [JsonConverter(typeof(StringEnumConverter))]
     public enum VirtualTimePolicy
     {
-    
         [EnumMember(Value = "advance")]
         Advance,
-    
         [EnumMember(Value = "pause")]
         Pause,
-    
         [EnumMember(Value = "pauseIfNetworkFetchesPending")]
         PauseIfNetworkFetchesPending,
-    
     }
 }

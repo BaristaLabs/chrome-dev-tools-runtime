@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Frame width (DIP).
         /// </summary>
-        
         [JsonProperty("width")]
         public long Width
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Frame height (DIP).
         /// </summary>
-        
         [JsonProperty("height")]
         public long Height
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetVisibleSizeCommandResponse : ICommandResponse<SetVisibleSizeCommand>
     {
-    
     }
 }

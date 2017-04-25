@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Identifier of the node to set breakpoint on.
         /// </summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Type of the operation to stop upon.
         /// </summary>
-        
         [JsonProperty("type")]
         public DOMBreakpointType Type
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetDOMBreakpointCommandResponse : ICommandResponse<SetDOMBreakpointCommand>
     {
-    
     }
 }

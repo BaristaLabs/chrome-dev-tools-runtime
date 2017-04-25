@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// </summary>
     public sealed class BackendNode
     {
-    
         /// <summary>
         /// <code>Node</code>'s nodeType.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// <code>Node</code>'s nodeName.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// 
         ///</summary>
@@ -37,6 +34,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
     }
 }

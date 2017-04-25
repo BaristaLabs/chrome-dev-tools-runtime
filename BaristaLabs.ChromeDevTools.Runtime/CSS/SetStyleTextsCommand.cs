@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Gets or sets the edits
         /// </summary>
-        
         [JsonProperty("edits")]
         public StyleDeclarationEdit[] Edits
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetStyleTextsCommandResponse : ICommandResponse<SetStyleTextsCommand>
     {
-    
-        
         /// <summary>
         /// The resulting styles after modification.
         ///</summary>
-        
         [JsonProperty("styles")]
         public CSSStyle[] Styles
         {
             get;
             set;
         }
-    
     }
 }

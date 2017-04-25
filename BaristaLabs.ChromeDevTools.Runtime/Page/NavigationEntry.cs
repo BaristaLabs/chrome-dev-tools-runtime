@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// </summary>
     public sealed class NavigationEntry
     {
-    
         /// <summary>
         /// Unique id of the navigation history entry.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
-    
         /// <summary>
         /// URL of the navigation history entry.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
-    
         /// <summary>
         /// Title of the navigation history entry.
         ///</summary>
@@ -37,6 +34,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
-    
     }
 }

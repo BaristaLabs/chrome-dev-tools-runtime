@@ -7,18 +7,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// </summary>
     public sealed class ColorPickedEvent : IEvent
     {
-    
-        
         /// <summary>
         /// RGBA of the picked color.
         /// </summary>
-        
         [JsonProperty("color")]
         public DOM.RGBA Color
         {
             get;
             set;
         }
-    
     }
 }

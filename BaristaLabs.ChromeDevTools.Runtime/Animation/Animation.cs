@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// </summary>
     public sealed class Animation
     {
-    
         /// <summary>
         /// <code>Animation</code>'s id.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get;
             set;
         }
-    
         /// <summary>
         /// <code>Animation</code>'s name.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get;
             set;
         }
-    
         /// <summary>
         /// <code>Animation</code>'s internal paused state.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get;
             set;
         }
-    
         /// <summary>
         /// <code>Animation</code>'s play state.
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get;
             set;
         }
-    
         /// <summary>
         /// <code>Animation</code>'s playback rate.
         ///</summary>
@@ -57,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get;
             set;
         }
-    
         /// <summary>
         /// <code>Animation</code>'s start time.
         ///</summary>
@@ -67,7 +61,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get;
             set;
         }
-    
         /// <summary>
         /// <code>Animation</code>'s current time.
         ///</summary>
@@ -77,7 +70,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get;
             set;
         }
-    
         /// <summary>
         /// <code>Animation</code>'s source animation node.
         ///</summary>
@@ -87,7 +79,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get;
             set;
         }
-    
         /// <summary>
         /// Animation type of <code>Animation</code>.
         ///</summary>
@@ -97,7 +88,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get;
             set;
         }
-    
         /// <summary>
         /// A unique ID for <code>Animation</code> representing the sources that triggered this CSS animation/transition.
         ///</summary>
@@ -107,6 +97,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get;
             set;
         }
-    
     }
 }

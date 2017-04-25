@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// </summary>
     public sealed class ResourceTiming
     {
-    
         /// <summary>
         /// Timing's requestTime is a baseline in seconds, while the other numbers are ticks in milliseconds relatively to this requestTime.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Started resolving proxy.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Finished resolving proxy.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Started DNS address resolve.
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Finished DNS address resolve.
         ///</summary>
@@ -57,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Started connecting to the remote host.
         ///</summary>
@@ -67,7 +61,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Connected to the remote host.
         ///</summary>
@@ -77,7 +70,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Started SSL handshake.
         ///</summary>
@@ -87,7 +79,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Finished SSL handshake.
         ///</summary>
@@ -97,7 +88,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Started running ServiceWorker.
         ///</summary>
@@ -107,7 +97,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Finished Starting ServiceWorker.
         ///</summary>
@@ -117,7 +106,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Started sending request.
         ///</summary>
@@ -127,7 +115,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Finished sending request.
         ///</summary>
@@ -137,7 +124,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Time the server started pushing request.
         ///</summary>
@@ -147,7 +133,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Time the server finished pushing request.
         ///</summary>
@@ -157,7 +142,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Finished receiving response headers.
         ///</summary>
@@ -167,6 +151,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
     }
 }

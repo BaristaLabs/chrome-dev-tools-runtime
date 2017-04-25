@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Inspector
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// Enables inspector domain notifications.
         /// </summary>
@@ -32,7 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Inspector
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Disables inspector domain notifications.
         /// </summary>
@@ -40,9 +38,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Inspector
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
         /// <summary>
         /// Fired when remote debugging connection is about to be terminated. Contains detach reason.
         /// </summary>
@@ -50,7 +46,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Inspector
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when debugging target has crashed
         /// </summary>
@@ -58,6 +53,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Inspector
         {
             m_session.Subscribe(eventCallback);
         }
-    
     }
 }

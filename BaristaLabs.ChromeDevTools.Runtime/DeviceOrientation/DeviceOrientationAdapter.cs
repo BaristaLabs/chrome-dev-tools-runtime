@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DeviceOrientation
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// Overrides the Device Orientation.
         /// </summary>
@@ -32,7 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DeviceOrientation
         {
             return await m_session.SendCommand<SetDeviceOrientationOverrideCommand, SetDeviceOrientationOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Clears the overridden Device Orientation.
         /// </summary>
@@ -40,8 +38,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DeviceOrientation
         {
             return await m_session.SendCommand<ClearDeviceOrientationOverrideCommand, ClearDeviceOrientationOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
     }
 }

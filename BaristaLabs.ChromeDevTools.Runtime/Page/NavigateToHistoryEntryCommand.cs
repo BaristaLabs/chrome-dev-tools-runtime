@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Unique id of the entry to navigate to.
         /// </summary>
-        
         [JsonProperty("entryId")]
         public long EntryId
         {
             get;
             set;
         }
-    
     }
 
     public sealed class NavigateToHistoryEntryCommandResponse : ICommandResponse<NavigateToHistoryEntryCommand>
     {
-    
     }
 }

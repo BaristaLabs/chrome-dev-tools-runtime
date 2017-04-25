@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// </summary>
     public sealed class Node
     {
-    
         /// <summary>
         /// Node identifier that is passed into the rest of the DOM messages as the <code>nodeId</code>. Backend will only push node with given <code>id</code> once. It is aware of all requested nodes and will only fire DOM events for nodes known to the client.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// The id of the parent node if any.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// The BackendNodeId for this node.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// <code>Node</code>'s nodeType.
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// <code>Node</code>'s nodeName.
         ///</summary>
@@ -57,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// <code>Node</code>'s localName.
         ///</summary>
@@ -67,7 +61,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// <code>Node</code>'s nodeValue.
         ///</summary>
@@ -77,7 +70,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// Child count for <code>Container</code> nodes.
         ///</summary>
@@ -87,7 +79,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// Child nodes of this node when requested with children.
         ///</summary>
@@ -97,7 +88,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// Attributes of the <code>Element</code> node in the form of flat array <code>[name1, value1, name2, value2]</code>.
         ///</summary>
@@ -107,7 +97,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// Document URL that <code>Document</code> or <code>FrameOwner</code> node points to.
         ///</summary>
@@ -117,7 +106,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// Base URL that <code>Document</code> or <code>FrameOwner</code> node uses for URL completion.
         ///</summary>
@@ -127,7 +115,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// <code>DocumentType</code>'s publicId.
         ///</summary>
@@ -137,7 +124,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// <code>DocumentType</code>'s systemId.
         ///</summary>
@@ -147,7 +133,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// <code>DocumentType</code>'s internalSubset.
         ///</summary>
@@ -157,7 +142,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// <code>Document</code>'s XML version in case of XML documents.
         ///</summary>
@@ -167,7 +151,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// <code>Attr</code>'s name.
         ///</summary>
@@ -177,7 +160,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// <code>Attr</code>'s value.
         ///</summary>
@@ -187,7 +169,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// Pseudo element type for this node.
         ///</summary>
@@ -197,7 +178,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// Shadow root type.
         ///</summary>
@@ -207,7 +187,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// Frame ID for frame owner elements.
         ///</summary>
@@ -217,7 +196,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// Content document for frame owner elements.
         ///</summary>
@@ -227,7 +205,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// Shadow root list for given element host.
         ///</summary>
@@ -237,7 +214,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// Content document fragment for template elements.
         ///</summary>
@@ -247,7 +223,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// Pseudo elements associated with this node.
         ///</summary>
@@ -257,7 +232,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// Import document for the HTMLImport links.
         ///</summary>
@@ -267,7 +241,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// Distributed nodes for given insertion point.
         ///</summary>
@@ -277,7 +250,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// Whether the node is SVG.
         ///</summary>
@@ -287,6 +259,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
     }
 }

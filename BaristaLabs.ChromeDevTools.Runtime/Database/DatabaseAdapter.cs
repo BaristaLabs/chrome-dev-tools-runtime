@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// Enables database tracking, database events will now be delivered to the client.
         /// </summary>
@@ -32,7 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Disables database tracking, prevents database events from being sent to the client.
         /// </summary>
@@ -40,7 +38,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -48,7 +45,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
         {
             return await m_session.SendCommand<GetDatabaseTableNamesCommand, GetDatabaseTableNamesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -56,9 +52,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
         {
             return await m_session.SendCommand<ExecuteSQLCommand, ExecuteSQLCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
         /// <summary>
         /// 
         /// </summary>
@@ -66,6 +60,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
         {
             m_session.Subscribe(eventCallback);
         }
-    
     }
 }

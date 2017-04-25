@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Heap snapshot object id to be accessible by means of $x command line API.
         /// </summary>
-        
         [JsonProperty("heapObjectId")]
         public string HeapObjectId
         {
             get;
             set;
         }
-    
     }
 
     public sealed class AddInspectedHeapObjectCommandResponse : ICommandResponse<AddInspectedHeapObjectCommand>
     {
-    
     }
 }

@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Array of regexps that will be used to check script url for blackbox state.
         /// </summary>
-        
         [JsonProperty("patterns")]
         public string[] Patterns
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetBlackboxPatternsCommandResponse : ICommandResponse<SetBlackboxPatternsCommand>
     {
-    
     }
 }

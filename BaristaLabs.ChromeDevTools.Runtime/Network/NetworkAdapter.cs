@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// Enables network tracking, network events will now be delivered to the client.
         /// </summary>
@@ -32,7 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Disables network tracking, prevents network events from being sent to the client.
         /// </summary>
@@ -40,7 +38,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Allows overriding user agent with the given string.
         /// </summary>
@@ -48,7 +45,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<SetUserAgentOverrideCommand, SetUserAgentOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Specifies whether to always send extra HTTP headers with the requests from this page.
         /// </summary>
@@ -56,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<SetExtraHTTPHeadersCommand, SetExtraHTTPHeadersCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns content served for the given request.
         /// </summary>
@@ -64,7 +59,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<GetResponseBodyCommand, GetResponseBodyCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Blocks specific URL from loading.
         /// </summary>
@@ -72,7 +66,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<AddBlockedURLCommand, AddBlockedURLCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Cancels blocking of a specific URL from loading.
         /// </summary>
@@ -80,7 +73,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<RemoveBlockedURLCommand, RemoveBlockedURLCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// This method sends a new XMLHttpRequest which is identical to the original one. The following parameters should be identical: method, url, async, request body, extra headers, withCredentials attribute, user, password.
         /// </summary>
@@ -88,7 +80,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<ReplayXHRCommand, ReplayXHRCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Toggles monitoring of XMLHttpRequest. If <code>true</code>, console will receive messages upon each XHR issued.
         /// </summary>
@@ -96,7 +87,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<SetMonitoringXHREnabledCommand, SetMonitoringXHREnabledCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Tells whether clearing browser cache is supported.
         /// </summary>
@@ -104,7 +94,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<CanClearBrowserCacheCommand, CanClearBrowserCacheCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Clears browser cache.
         /// </summary>
@@ -112,7 +101,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<ClearBrowserCacheCommand, ClearBrowserCacheCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Tells whether clearing browser cookies is supported.
         /// </summary>
@@ -120,7 +108,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<CanClearBrowserCookiesCommand, CanClearBrowserCookiesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Clears browser cookies.
         /// </summary>
@@ -128,7 +115,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<ClearBrowserCookiesCommand, ClearBrowserCookiesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns all browser cookies for the current URL. Depending on the backend support, will return detailed cookie information in the <code>cookies</code> field.
         /// </summary>
@@ -136,7 +122,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<GetCookiesCommand, GetCookiesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns all browser cookies. Depending on the backend support, will return detailed cookie information in the <code>cookies</code> field.
         /// </summary>
@@ -144,7 +129,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<GetAllCookiesCommand, GetAllCookiesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Deletes browser cookie with given name, domain and path.
         /// </summary>
@@ -152,7 +136,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<DeleteCookieCommand, DeleteCookieCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Sets a cookie with the given cookie data; may overwrite equivalent cookies if they exist.
         /// </summary>
@@ -160,7 +143,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<SetCookieCommand, SetCookieCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Tells whether emulation of network conditions is supported.
         /// </summary>
@@ -168,7 +150,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<CanEmulateNetworkConditionsCommand, CanEmulateNetworkConditionsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Activates emulation of network conditions.
         /// </summary>
@@ -176,7 +157,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<EmulateNetworkConditionsCommand, EmulateNetworkConditionsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Toggles ignoring cache for each request. If <code>true</code>, cache will not be used.
         /// </summary>
@@ -184,7 +164,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<SetCacheDisabledCommand, SetCacheDisabledCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Toggles ignoring of service worker for each request.
         /// </summary>
@@ -192,7 +171,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<SetBypassServiceWorkerCommand, SetBypassServiceWorkerCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// For testing.
         /// </summary>
@@ -200,7 +178,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<SetDataSizeLimitsForTestCommand, SetDataSizeLimitsForTestCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns the DER-encoded certificate.
         /// </summary>
@@ -208,9 +185,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<GetCertificateCommand, GetCertificateCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
         /// <summary>
         /// Fired when resource loading priority is changed
         /// </summary>
@@ -218,7 +193,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when page is about to send HTTP request.
         /// </summary>
@@ -226,7 +200,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired if request ended up loading from cache.
         /// </summary>
@@ -234,7 +207,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when HTTP response is available.
         /// </summary>
@@ -242,7 +214,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when data chunk was received over the network.
         /// </summary>
@@ -250,7 +221,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when HTTP request has finished loading.
         /// </summary>
@@ -258,7 +228,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when HTTP request has failed to load.
         /// </summary>
@@ -266,7 +235,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when WebSocket is about to initiate handshake.
         /// </summary>
@@ -274,7 +242,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when WebSocket handshake response becomes available.
         /// </summary>
@@ -282,7 +249,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired upon WebSocket creation.
         /// </summary>
@@ -290,7 +256,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when WebSocket is closed.
         /// </summary>
@@ -298,7 +263,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when WebSocket frame is received.
         /// </summary>
@@ -306,7 +270,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when WebSocket frame error occurs.
         /// </summary>
@@ -314,7 +277,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when WebSocket frame is sent.
         /// </summary>
@@ -322,7 +284,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when EventSource message is received.
         /// </summary>
@@ -330,6 +291,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             m_session.Subscribe(eventCallback);
         }
-    
     }
 }

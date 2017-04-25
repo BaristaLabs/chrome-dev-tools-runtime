@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// </summary>
     public sealed class RemoteLocation
     {
-    
         /// <summary>
         /// 
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             get;
             set;
         }
-    
         /// <summary>
         /// 
         ///</summary>
@@ -27,6 +25,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             get;
             set;
         }
-    
     }
 }

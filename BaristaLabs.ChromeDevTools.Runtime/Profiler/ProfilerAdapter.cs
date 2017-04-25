@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// 
         /// </summary>
@@ -32,7 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -40,7 +38,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Changes CPU profiler sampling interval. Must be called before CPU profiles recording started.
         /// </summary>
@@ -48,7 +45,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         {
             return await m_session.SendCommand<SetSamplingIntervalCommand, SetSamplingIntervalCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -56,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         {
             return await m_session.SendCommand<StartCommand, StartCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -64,7 +59,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         {
             return await m_session.SendCommand<StopCommand, StopCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Enable precise code coverage. Coverage data for JavaScript executed before enabling precise code coverage may be incomplete. Enabling prevents running optimized code and resets execution counters.
         /// </summary>
@@ -72,7 +66,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         {
             return await m_session.SendCommand<StartPreciseCoverageCommand, StartPreciseCoverageCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Disable precise code coverage. Disabling releases unnecessary execution count records and allows executing optimized code.
         /// </summary>
@@ -80,7 +73,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         {
             return await m_session.SendCommand<StopPreciseCoverageCommand, StopPreciseCoverageCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Collect coverage data for the current isolate, and resets execution counters. Precise code coverage needs to have started.
         /// </summary>
@@ -88,7 +80,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         {
             return await m_session.SendCommand<TakePreciseCoverageCommand, TakePreciseCoverageCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Collect coverage data for the current isolate. The coverage data may be incomplete due to garbage collection.
         /// </summary>
@@ -96,9 +87,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         {
             return await m_session.SendCommand<GetBestEffortCoverageCommand, GetBestEffortCoverageCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
         /// <summary>
         /// Sent when new profile recodring is started using console.profile() call.
         /// </summary>
@@ -106,7 +95,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -114,6 +102,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         {
             m_session.Subscribe(eventCallback);
         }
-    
     }
 }

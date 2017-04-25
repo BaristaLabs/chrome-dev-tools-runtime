@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Returns the styles defined inline (explicitly in the "style" attribute and implicitly, using DOM attributes) for a DOM node identified by <code>nodeId</code>.
+    /// Returns the styles defined inline (explicitly in the &quot;style&quot; attribute and implicitly, using DOM attributes) for a DOM node identified by &lt;code&gt;nodeId&lt;/code&gt;.
     /// </summary>
     public sealed class GetInlineStylesForNodeCommand : ICommand
     {
@@ -15,47 +15,36 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Gets or sets the nodeId
         /// </summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
     }
 
     public sealed class GetInlineStylesForNodeCommandResponse : ICommandResponse<GetInlineStylesForNodeCommand>
     {
-    
-        
         /// <summary>
         /// Inline style for the specified DOM node.
         ///</summary>
-        
         [JsonProperty("inlineStyle, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public CSSStyle InlineStyle
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Attribute-defined element style (e.g. resulting from "width=20 height=100%").
         ///</summary>
-        
         [JsonProperty("attributesStyle, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public CSSStyle AttributesStyle
         {
             get;
             set;
         }
-    
     }
 }

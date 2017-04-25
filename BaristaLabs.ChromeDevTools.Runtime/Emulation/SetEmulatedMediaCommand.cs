@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Media type to emulate. Empty string disables the override.
         /// </summary>
-        
         [JsonProperty("media")]
         public string Media
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetEmulatedMediaCommandResponse : ICommandResponse<SetEmulatedMediaCommand>
     {
-    
     }
 }

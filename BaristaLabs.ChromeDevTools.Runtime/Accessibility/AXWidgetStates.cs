@@ -10,21 +10,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
     [JsonConverter(typeof(StringEnumConverter))]
     public enum AXWidgetStates
     {
-    
         [EnumMember(Value = "checked")]
         Checked,
-    
         [EnumMember(Value = "expanded")]
         Expanded,
-    
         [EnumMember(Value = "modal")]
         Modal,
-    
         [EnumMember(Value = "pressed")]
         Pressed,
-    
         [EnumMember(Value = "selected")]
         Selected,
-    
     }
 }

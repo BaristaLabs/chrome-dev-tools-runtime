@@ -15,47 +15,36 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// X coordinate of top-left corner of the area (CSS pixels).
         /// </summary>
-        
         [JsonProperty("x")]
         public double X
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Y coordinate of top-left corner of the area (CSS pixels).
         /// </summary>
-        
         [JsonProperty("y")]
         public double Y
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Scale to apply to the area (relative to a page scale of 1.0).
         /// </summary>
-        
         [JsonProperty("scale")]
         public double Scale
         {
             get;
             set;
         }
-    
     }
 
     public sealed class ForceViewportCommandResponse : ICommandResponse<ForceViewportCommand>
     {
-    
     }
 }

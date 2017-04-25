@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Id of the node to get box model for.
         /// </summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
     }
 
     public sealed class GetBoxModelCommandResponse : ICommandResponse<GetBoxModelCommand>
     {
-    
-        
         /// <summary>
         /// Box model for the node.
         ///</summary>
-        
         [JsonProperty("model")]
         public BoxModel Model
         {
             get;
             set;
         }
-    
     }
 }

@@ -10,36 +10,25 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
     [JsonConverter(typeof(StringEnumConverter))]
     public enum StorageType
     {
-    
         [EnumMember(Value = "appcache")]
         Appcache,
-    
         [EnumMember(Value = "cookies")]
         Cookies,
-    
         [EnumMember(Value = "file_systems")]
         FileSystems,
-    
         [EnumMember(Value = "indexeddb")]
         Indexeddb,
-    
         [EnumMember(Value = "local_storage")]
         LocalStorage,
-    
         [EnumMember(Value = "shader_cache")]
         ShaderCache,
-    
         [EnumMember(Value = "websql")]
         Websql,
-    
         [EnumMember(Value = "service_workers")]
         ServiceWorkers,
-    
         [EnumMember(Value = "cache_storage")]
         CacheStorage,
-    
         [EnumMember(Value = "all")]
         All,
-    
     }
 }

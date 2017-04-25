@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// New value for skip pauses state.
         /// </summary>
-        
         [JsonProperty("skip")]
         public bool Skip
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetSkipAllPausesCommandResponse : ICommandResponse<SetSkipAllPausesCommand>
     {
-    
     }
 }

@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// Enables DOM agent for the given page.
         /// </summary>
@@ -32,7 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Disables DOM agent for the given page.
         /// </summary>
@@ -40,7 +38,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns the root DOM node (and optionally the subtree) to the caller.
         /// </summary>
@@ -48,7 +45,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<GetDocumentCommand, GetDocumentCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns the root DOM node (and optionally the subtree) to the caller.
         /// </summary>
@@ -56,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<GetFlattenedDocumentCommand, GetFlattenedDocumentCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Collects class names for the node with given id and all of it's child nodes.
         /// </summary>
@@ -64,7 +59,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<CollectClassNamesFromSubtreeCommand, CollectClassNamesFromSubtreeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Requests that children of the node with given id are returned to the caller in form of <code>setChildNodes</code> events where not only immediate children are retrieved, but all children down to the specified depth.
         /// </summary>
@@ -72,7 +66,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<RequestChildNodesCommand, RequestChildNodesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Executes <code>querySelector</code> on a given node.
         /// </summary>
@@ -80,7 +73,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<QuerySelectorCommand, QuerySelectorCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Executes <code>querySelectorAll</code> on a given node.
         /// </summary>
@@ -88,7 +80,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<QuerySelectorAllCommand, QuerySelectorAllCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Sets node name for a node with given id.
         /// </summary>
@@ -96,7 +87,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<SetNodeNameCommand, SetNodeNameCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Sets node value for a node with given id.
         /// </summary>
@@ -104,7 +94,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<SetNodeValueCommand, SetNodeValueCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Removes node with given id.
         /// </summary>
@@ -112,7 +101,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<RemoveNodeCommand, RemoveNodeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Sets attribute for an element with given id.
         /// </summary>
@@ -120,7 +108,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<SetAttributeValueCommand, SetAttributeValueCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Sets attributes on element with given id. This method is useful when user edits some existing attribute value and types in several attribute name/value pairs.
         /// </summary>
@@ -128,7 +115,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<SetAttributesAsTextCommand, SetAttributesAsTextCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Removes attribute with given name from an element with given id.
         /// </summary>
@@ -136,7 +122,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<RemoveAttributeCommand, RemoveAttributeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns node's HTML markup.
         /// </summary>
@@ -144,7 +129,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<GetOuterHTMLCommand, GetOuterHTMLCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Sets node HTML markup, returns new node id.
         /// </summary>
@@ -152,7 +136,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<SetOuterHTMLCommand, SetOuterHTMLCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Searches for a given string in the DOM tree. Use <code>getSearchResults</code> to access search results or <code>cancelSearch</code> to end this search session.
         /// </summary>
@@ -160,7 +143,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<PerformSearchCommand, PerformSearchCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns search results from given <code>fromIndex</code> to given <code>toIndex</code> from the sarch with the given identifier.
         /// </summary>
@@ -168,7 +150,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<GetSearchResultsCommand, GetSearchResultsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Discards search results from the session with the given id. <code>getSearchResults</code> should no longer be called for that search.
         /// </summary>
@@ -176,7 +157,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<DiscardSearchResultsCommand, DiscardSearchResultsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Requests that the node is sent to the caller given the JavaScript node object reference. All nodes that form the path from the node to the root are also sent to the client as a series of <code>setChildNodes</code> notifications.
         /// </summary>
@@ -184,7 +164,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<RequestNodeCommand, RequestNodeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Enters the 'inspect' mode. In this mode, elements that user is hovering over are highlighted. Backend then generates 'inspectNodeRequested' event upon element selection.
         /// </summary>
@@ -192,7 +171,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<SetInspectModeCommand, SetInspectModeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Highlights given rectangle. Coordinates are absolute with respect to the main frame viewport.
         /// </summary>
@@ -200,7 +178,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<HighlightRectCommand, HighlightRectCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Highlights given quad. Coordinates are absolute with respect to the main frame viewport.
         /// </summary>
@@ -208,7 +185,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<HighlightQuadCommand, HighlightQuadCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Highlights DOM node with given id or with the given JavaScript object wrapper. Either nodeId or objectId must be specified.
         /// </summary>
@@ -216,7 +192,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<HighlightNodeCommand, HighlightNodeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Hides DOM node highlight.
         /// </summary>
@@ -224,7 +199,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<HideHighlightCommand, HideHighlightCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Highlights owner element of the frame with given id.
         /// </summary>
@@ -232,7 +206,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<HighlightFrameCommand, HighlightFrameCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Requests that the node is sent to the caller given its path. // FIXME, use XPath
         /// </summary>
@@ -240,7 +213,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<PushNodeByPathToFrontendCommand, PushNodeByPathToFrontendCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Requests that a batch of nodes is sent to the caller given their backend node ids.
         /// </summary>
@@ -248,7 +220,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<PushNodesByBackendIdsToFrontendCommand, PushNodesByBackendIdsToFrontendCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Enables console to refer to the node with given id via $x (see Command Line API for more details $x functions).
         /// </summary>
@@ -256,7 +227,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<SetInspectedNodeCommand, SetInspectedNodeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Resolves JavaScript node object for given node id.
         /// </summary>
@@ -264,7 +234,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<ResolveNodeCommand, ResolveNodeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns attributes for the specified node.
         /// </summary>
@@ -272,7 +241,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<GetAttributesCommand, GetAttributesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Creates a deep copy of the specified node and places it into the target container before the given anchor.
         /// </summary>
@@ -280,7 +248,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<CopyToCommand, CopyToCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Moves node into the new container, places it before the given anchor.
         /// </summary>
@@ -288,7 +255,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<MoveToCommand, MoveToCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Undoes the last performed action.
         /// </summary>
@@ -296,7 +262,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<UndoCommand, UndoCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Re-does the last undone action.
         /// </summary>
@@ -304,7 +269,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<RedoCommand, RedoCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Marks last undoable state.
         /// </summary>
@@ -312,7 +276,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<MarkUndoableStateCommand, MarkUndoableStateCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Focuses the given element.
         /// </summary>
@@ -320,7 +283,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<FocusCommand, FocusCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Sets files for the given file input element.
         /// </summary>
@@ -328,7 +290,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<SetFileInputFilesCommand, SetFileInputFilesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns boxes for the currently selected nodes.
         /// </summary>
@@ -336,7 +297,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<GetBoxModelCommand, GetBoxModelCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns node id at given location.
         /// </summary>
@@ -344,7 +304,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<GetNodeForLocationCommand, GetNodeForLocationCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns the id of the nearest ancestor that is a relayout boundary.
         /// </summary>
@@ -352,7 +311,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<GetRelayoutBoundaryCommand, GetRelayoutBoundaryCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// For testing.
         /// </summary>
@@ -360,9 +318,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<GetHighlightObjectForTestCommand, GetHighlightObjectForTestCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
         /// <summary>
         /// Fired when <code>Document</code> has been totally updated. Node ids are no longer valid.
         /// </summary>
@@ -370,7 +326,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when the node should be inspected. This happens after call to <code>setInspectMode</code>.
         /// </summary>
@@ -378,7 +333,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when backend wants to provide client with the missing DOM structure. This happens upon most of the calls requesting node ids.
         /// </summary>
@@ -386,7 +340,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when <code>Element</code>'s attribute is modified.
         /// </summary>
@@ -394,7 +347,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when <code>Element</code>'s attribute is removed.
         /// </summary>
@@ -402,7 +354,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when <code>Element</code>'s inline style is modified via a CSS property modification.
         /// </summary>
@@ -410,7 +361,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Mirrors <code>DOMCharacterDataModified</code> event.
         /// </summary>
@@ -418,7 +368,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Fired when <code>Container</code>'s child node count has changed.
         /// </summary>
@@ -426,7 +375,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Mirrors <code>DOMNodeInserted</code> event.
         /// </summary>
@@ -434,7 +382,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Mirrors <code>DOMNodeRemoved</code> event.
         /// </summary>
@@ -442,7 +389,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Called when shadow root is pushed into the element.
         /// </summary>
@@ -450,7 +396,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Called when shadow root is popped from the element.
         /// </summary>
@@ -458,7 +403,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Called when a pseudo element is added to an element.
         /// </summary>
@@ -466,7 +410,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Called when a pseudo element is removed from an element.
         /// </summary>
@@ -474,7 +417,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Called when distrubution is changed.
         /// </summary>
@@ -482,7 +424,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// 
         /// </summary>
@@ -490,6 +431,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             m_session.Subscribe(eventCallback);
         }
-    
     }
 }

@@ -7,30 +7,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// </summary>
     public sealed class FrameAttachedEvent : IEvent
     {
-    
-        
         /// <summary>
         /// Id of the frame that has been attached.
         /// </summary>
-        
         [JsonProperty("frameId")]
         public string FrameId
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Parent frame identifier.
         /// </summary>
-        
         [JsonProperty("parentFrameId")]
         public string ParentFrameId
         {
             get;
             set;
         }
-    
     }
 }

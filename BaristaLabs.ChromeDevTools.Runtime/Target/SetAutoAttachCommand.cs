@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Whether to auto-attach to related targets.
         /// </summary>
-        
         [JsonProperty("autoAttach")]
         public bool AutoAttach
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Whether to pause new targets when attaching to them. Use <code>Runtime.runIfWaitingForDebugger</code> to run paused targets.
         /// </summary>
-        
         [JsonProperty("waitForDebuggerOnStart")]
         public bool WaitForDebuggerOnStart
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetAutoAttachCommandResponse : ICommandResponse<SetAutoAttachCommand>
     {
-    
     }
 }

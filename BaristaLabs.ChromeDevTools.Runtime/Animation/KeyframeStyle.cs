@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// </summary>
     public sealed class KeyframeStyle
     {
-    
         /// <summary>
         /// Keyframe's time offset.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get;
             set;
         }
-    
         /// <summary>
         /// <code>AnimationEffect</code>'s timing function.
         ///</summary>
@@ -27,6 +25,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get;
             set;
         }
-    
     }
 }

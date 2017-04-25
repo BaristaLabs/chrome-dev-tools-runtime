@@ -15,47 +15,36 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Start of range to search possible breakpoint locations in.
         /// </summary>
-        
         [JsonProperty("start")]
         public Location Start
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// End of range to search possible breakpoint locations in (excluding). When not specifed, end of scripts is used as end of range.
         /// </summary>
-        
         [JsonProperty("end", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Location End
         {
             get;
             set;
         }
-    
     }
 
     public sealed class GetPossibleBreakpointsCommandResponse : ICommandResponse<GetPossibleBreakpointsCommand>
     {
-    
-        
         /// <summary>
         /// List of the possible breakpoint locations.
         ///</summary>
-        
         [JsonProperty("locations")]
         public Location[] Locations
         {
             get;
             set;
         }
-    
     }
 }

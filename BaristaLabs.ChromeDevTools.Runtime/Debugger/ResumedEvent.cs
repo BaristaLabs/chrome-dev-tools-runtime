@@ -7,6 +7,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// </summary>
     public sealed class ResumedEvent : IEvent
     {
-    
     }
 }

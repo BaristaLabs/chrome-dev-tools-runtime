@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// </summary>
     public sealed class Request
     {
-    
         /// <summary>
         /// Request URL.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// HTTP request method.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// HTTP request headers.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// HTTP POST request data.
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// The mixed content status of the request, as defined in http://www.w3.org/TR/mixed-content/
         ///</summary>
@@ -57,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Priority of the resource request at the time request is sent.
         ///</summary>
@@ -67,7 +61,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// The referrer policy of the request, as defined in https://www.w3.org/TR/referrer-policy/
         ///</summary>
@@ -77,6 +70,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
     }
 }

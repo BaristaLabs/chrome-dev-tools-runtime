@@ -7,18 +7,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// </summary>
     public sealed class JavascriptDialogClosedEvent : IEvent
     {
-    
-        
         /// <summary>
         /// Whether dialog was confirmed.
         /// </summary>
-        
         [JsonProperty("result")]
         public bool Result
         {
             get;
             set;
         }
-    
     }
 }

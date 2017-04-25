@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// </summary>
     public sealed class Scope
     {
-    
         /// <summary>
         /// Scope type.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
-    
         /// <summary>
         /// Object representing the scope. For <code>global</code> and <code>with</code> scopes it represents the actual object; for the rest of the scopes, it is artificial transient object enumerating scope variables as its properties.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
-    
         /// <summary>
         /// 
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
-    
         /// <summary>
         /// Location in the source code where scope starts
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
-    
         /// <summary>
         /// Location in the source code where scope ends
         ///</summary>
@@ -57,6 +52,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
-    
     }
 }

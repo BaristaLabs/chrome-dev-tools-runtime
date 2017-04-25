@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Gets or sets the policy
         /// </summary>
-        
         [JsonProperty("policy")]
         public VirtualTimePolicy Policy
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// If set, after this many virtual milliseconds have elapsed virtual time will be paused and a virtualTimeBudgetExpired event is sent.
         /// </summary>
-        
         [JsonProperty("budget", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Budget
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetVirtualTimePolicyCommandResponse : ICommandResponse<SetVirtualTimePolicyCommand>
     {
-    
     }
 }

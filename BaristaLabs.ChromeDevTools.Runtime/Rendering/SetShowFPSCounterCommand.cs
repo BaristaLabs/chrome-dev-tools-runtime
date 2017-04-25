@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// True for showing the FPS counter
         /// </summary>
-        
         [JsonProperty("show")]
         public bool Show
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetShowFPSCounterCommandResponse : ICommandResponse<SetShowFPSCounterCommand>
     {
-    
     }
 }

@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Shows / hides color picker
         /// </summary>
-        
         [JsonProperty("enabled")]
         public bool Enabled
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetColorPickerEnabledCommandResponse : ICommandResponse<SetColorPickerEnabledCommand>
     {
-    
     }
 }

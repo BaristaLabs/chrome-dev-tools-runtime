@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Id of the node to get highlight object for.
         /// </summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
     }
 
     public sealed class GetHighlightObjectForTestCommandResponse : ICommandResponse<GetHighlightObjectForTestCommand>
     {
-    
-        
         /// <summary>
         /// Highlight data for the node.
         ///</summary>
-        
         [JsonProperty("highlight")]
         public object Highlight
         {
             get;
             set;
         }
-    
     }
 }

@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// </summary>
     public sealed class AppManifestError
     {
-    
         /// <summary>
         /// Error message.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
-    
         /// <summary>
         /// If criticial, this is a non-recoverable parse error.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
-    
         /// <summary>
         /// Error line.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
-    
         /// <summary>
         /// Error column.
         ///</summary>
@@ -47,6 +43,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
-    
     }
 }

@@ -10,18 +10,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ServiceWorkerVersionRunningStatus
     {
-    
         [EnumMember(Value = "stopped")]
         Stopped,
-    
         [EnumMember(Value = "starting")]
         Starting,
-    
         [EnumMember(Value = "running")]
         Running,
-    
         [EnumMember(Value = "stopping")]
         Stopping,
-    
     }
 }

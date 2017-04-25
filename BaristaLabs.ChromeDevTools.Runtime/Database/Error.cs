@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
     /// </summary>
     public sealed class Error
     {
-    
         /// <summary>
         /// Error message.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
             get;
             set;
         }
-    
         /// <summary>
         /// Error code.
         ///</summary>
@@ -27,6 +25,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
             get;
             set;
         }
-    
     }
 }

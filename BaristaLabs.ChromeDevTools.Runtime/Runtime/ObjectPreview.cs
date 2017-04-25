@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// </summary>
     public sealed class ObjectPreview
     {
-    
         /// <summary>
         /// Object type.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
-    
         /// <summary>
         /// Object subtype hint. Specified for <code>object</code> type values only.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
-    
         /// <summary>
         /// String representation of the object.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
-    
         /// <summary>
         /// True iff some of the properties or entries of the original object did not fit.
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
-    
         /// <summary>
         /// List of the properties.
         ///</summary>
@@ -57,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
-    
         /// <summary>
         /// List of the entries. Specified for <code>map</code> and <code>set</code> subtype values only.
         ///</summary>
@@ -67,6 +61,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
-    
     }
 }

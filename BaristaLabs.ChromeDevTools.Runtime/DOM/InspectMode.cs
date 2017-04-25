@@ -10,15 +10,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     [JsonConverter(typeof(StringEnumConverter))]
     public enum InspectMode
     {
-    
         [EnumMember(Value = "searchForNode")]
         SearchForNode,
-    
         [EnumMember(Value = "searchForUAShadowDOM")]
         SearchForUAShadowDOM,
-    
         [EnumMember(Value = "none")]
         None,
-    
     }
 }

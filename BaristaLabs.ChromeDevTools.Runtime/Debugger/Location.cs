@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// </summary>
     public sealed class Location
     {
-    
         /// <summary>
         /// Script identifier as reported in the <code>Debugger.scriptParsed</code>.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
-    
         /// <summary>
         /// Line number in the script (0-based).
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
-    
         /// <summary>
         /// Column number in the script (0-based).
         ///</summary>
@@ -37,6 +34,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
-    
     }
 }

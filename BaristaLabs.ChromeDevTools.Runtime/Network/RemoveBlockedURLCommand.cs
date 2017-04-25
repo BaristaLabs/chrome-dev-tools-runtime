@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// URL to stop blocking.
         /// </summary>
-        
         [JsonProperty("url")]
         public string Url
         {
             get;
             set;
         }
-    
     }
 
     public sealed class RemoveBlockedURLCommandResponse : ICommandResponse<RemoveBlockedURLCommand>
     {
-    
     }
 }

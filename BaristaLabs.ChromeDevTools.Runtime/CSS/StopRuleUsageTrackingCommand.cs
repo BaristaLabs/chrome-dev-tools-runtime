@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
     }
 
     public sealed class StopRuleUsageTrackingCommandResponse : ICommandResponse<StopRuleUsageTrackingCommand>
     {
-    
-        
         /// <summary>
         /// Gets or sets the ruleUsage
         /// </summary>
-        
         [JsonProperty("ruleUsage")]
         public RuleUsage[] RuleUsage
         {
             get;
             set;
         }
-    
     }
 }

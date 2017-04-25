@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Whether to paint size or not.
         /// </summary>
-        
         [JsonProperty("show")]
         public bool Show
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetShowViewportSizeOnResizeCommandResponse : ICommandResponse<SetShowViewportSizeOnResizeCommand>
     {
-    
     }
 }

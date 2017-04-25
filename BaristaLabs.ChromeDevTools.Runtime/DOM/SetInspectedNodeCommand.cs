@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// DOM node id to be accessible by means of $x command line API.
         /// </summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetInspectedNodeCommandResponse : ICommandResponse<SetInspectedNodeCommand>
     {
-    
     }
 }

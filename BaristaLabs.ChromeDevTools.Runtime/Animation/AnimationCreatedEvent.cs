@@ -7,18 +7,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// </summary>
     public sealed class AnimationCreatedEvent : IEvent
     {
-    
-        
         /// <summary>
         /// Id of the animation that was created.
         /// </summary>
-        
         [JsonProperty("id")]
         public string Id
         {
             get;
             set;
         }
-    
     }
 }

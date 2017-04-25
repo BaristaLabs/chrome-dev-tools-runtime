@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// Enables log domain, sends the entries collected so far to the client by means of the <code>entryAdded</code> notification.
         /// </summary>
@@ -32,7 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Disables log domain, prevents further log entries from being reported to the client.
         /// </summary>
@@ -40,7 +38,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Clears the log.
         /// </summary>
@@ -48,7 +45,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         {
             return await m_session.SendCommand<ClearCommand, ClearCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// start violation reporting.
         /// </summary>
@@ -56,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         {
             return await m_session.SendCommand<StartViolationsReportCommand, StartViolationsReportCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Stop violation reporting.
         /// </summary>
@@ -64,9 +59,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         {
             return await m_session.SendCommand<StopViolationsReportCommand, StopViolationsReportCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
         /// <summary>
         /// Issued when new message was logged.
         /// </summary>
@@ -74,6 +67,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
         {
             m_session.Subscribe(eventCallback);
         }
-    
     }
 }

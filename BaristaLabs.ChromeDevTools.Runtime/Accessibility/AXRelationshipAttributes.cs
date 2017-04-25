@@ -10,30 +10,21 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
     [JsonConverter(typeof(StringEnumConverter))]
     public enum AXRelationshipAttributes
     {
-    
         [EnumMember(Value = "activedescendant")]
         Activedescendant,
-    
         [EnumMember(Value = "controls")]
         Controls,
-    
         [EnumMember(Value = "describedby")]
         Describedby,
-    
         [EnumMember(Value = "details")]
         Details,
-    
         [EnumMember(Value = "errormessage")]
         Errormessage,
-    
         [EnumMember(Value = "flowto")]
         Flowto,
-    
         [EnumMember(Value = "labelledby")]
         Labelledby,
-    
         [EnumMember(Value = "owns")]
         Owns,
-    
     }
 }

@@ -7,30 +7,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// </summary>
     public sealed class PseudoElementRemovedEvent : IEvent
     {
-    
-        
         /// <summary>
         /// Pseudo element's parent element id.
         /// </summary>
-        
         [JsonProperty("parentId")]
         public long ParentId
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// The removed pseudo element id.
         /// </summary>
-        
         [JsonProperty("pseudoElementId")]
         public long PseudoElementId
         {
             get;
             set;
         }
-    
     }
 }
