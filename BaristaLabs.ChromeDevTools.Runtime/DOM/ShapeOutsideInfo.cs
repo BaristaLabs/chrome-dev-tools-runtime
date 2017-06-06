@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// </summary>
     public sealed class ShapeOutsideInfo
     {
+    
         /// <summary>
         /// Shape bounds
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// Shape coordinate details
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// Margin shape bounds
         ///</summary>
@@ -34,5 +37,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
     }
 }

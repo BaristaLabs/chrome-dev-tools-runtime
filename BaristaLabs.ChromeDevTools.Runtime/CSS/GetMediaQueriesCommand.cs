@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
     }
 
     public sealed class GetMediaQueriesCommandResponse : ICommandResponse<GetMediaQueriesCommand>
     {
+    
+        
         /// <summary>
         /// Gets or sets the medias
         /// </summary>
+        
         [JsonProperty("medias")]
         public CSSMedia[] Medias
         {
             get;
             set;
         }
+    
     }
 }

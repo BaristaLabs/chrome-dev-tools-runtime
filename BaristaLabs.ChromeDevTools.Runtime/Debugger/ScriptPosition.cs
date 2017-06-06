@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// </summary>
     public sealed class ScriptPosition
     {
+    
         /// <summary>
         /// 
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
+    
         /// <summary>
         /// 
         ///</summary>
@@ -25,5 +27,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
+    
     }
 }

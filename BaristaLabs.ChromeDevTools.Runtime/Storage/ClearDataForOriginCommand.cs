@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Security origin.
         /// </summary>
+        
         [JsonProperty("origin")]
         public string Origin
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Comma separated origin names.
         /// </summary>
+        
         [JsonProperty("storageTypes")]
         public string StorageTypes
         {
             get;
             set;
         }
+    
     }
 
     public sealed class ClearDataForOriginCommandResponse : ICommandResponse<ClearDataForOriginCommand>
     {
+    
     }
 }

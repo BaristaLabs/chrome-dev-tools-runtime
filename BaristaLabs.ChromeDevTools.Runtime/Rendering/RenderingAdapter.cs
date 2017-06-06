@@ -24,6 +24,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
             get { return m_session; }
         }
 
+    
         /// <summary>
         /// Requests that backend shows paint rectangles
         /// </summary>
@@ -31,6 +32,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
         {
             return await m_session.SendCommand<SetShowPaintRectsCommand, SetShowPaintRectsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Requests that backend shows debug borders on layers
         /// </summary>
@@ -38,6 +40,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
         {
             return await m_session.SendCommand<SetShowDebugBordersCommand, SetShowDebugBordersCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Requests that backend shows the FPS counter
         /// </summary>
@@ -45,6 +48,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
         {
             return await m_session.SendCommand<SetShowFPSCounterCommand, SetShowFPSCounterCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Requests that backend shows scroll bottleneck rects
         /// </summary>
@@ -52,6 +56,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
         {
             return await m_session.SendCommand<SetShowScrollBottleneckRectsCommand, SetShowScrollBottleneckRectsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Paints viewport size upon main frame resize.
         /// </summary>
@@ -59,6 +64,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
         {
             return await m_session.SendCommand<SetShowViewportSizeOnResizeCommand, SetShowViewportSizeOnResizeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
 
+    
     }
 }

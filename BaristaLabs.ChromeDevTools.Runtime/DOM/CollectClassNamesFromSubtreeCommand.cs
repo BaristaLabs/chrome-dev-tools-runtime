@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Id of the node to collect class names.
         /// </summary>
+        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
+    
     }
 
     public sealed class CollectClassNamesFromSubtreeCommandResponse : ICommandResponse<CollectClassNamesFromSubtreeCommand>
     {
+    
+        
         /// <summary>
         /// Class name list.
         ///</summary>
+        
         [JsonProperty("classNames")]
         public string[] ClassNames
         {
             get;
             set;
         }
+    
     }
 }

@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// True for showing scroll bottleneck rects
         /// </summary>
+        
         [JsonProperty("show")]
         public bool Show
         {
             get;
             set;
         }
+    
     }
 
     public sealed class SetShowScrollBottleneckRectsCommandResponse : ICommandResponse<SetShowScrollBottleneckRectsCommand>
     {
+    
     }
 }

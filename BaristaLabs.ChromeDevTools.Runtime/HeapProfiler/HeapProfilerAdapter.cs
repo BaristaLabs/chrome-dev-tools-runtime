@@ -24,6 +24,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
             get { return m_session; }
         }
 
+    
         /// <summary>
         /// 
         /// </summary>
@@ -31,6 +32,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -38,6 +40,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -45,6 +48,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             return await m_session.SendCommand<StartTrackingHeapObjectsCommand, StartTrackingHeapObjectsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -52,6 +56,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             return await m_session.SendCommand<StopTrackingHeapObjectsCommand, StopTrackingHeapObjectsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -59,6 +64,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             return await m_session.SendCommand<TakeHeapSnapshotCommand, TakeHeapSnapshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -66,6 +72,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             return await m_session.SendCommand<CollectGarbageCommand, CollectGarbageCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -73,6 +80,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             return await m_session.SendCommand<GetObjectByHeapObjectIdCommand, GetObjectByHeapObjectIdCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Enables console to refer to the node with given id via $x (see Command Line API for more details $x functions).
         /// </summary>
@@ -80,6 +88,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             return await m_session.SendCommand<AddInspectedHeapObjectCommand, AddInspectedHeapObjectCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -87,6 +96,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             return await m_session.SendCommand<GetHeapObjectIdCommand, GetHeapObjectIdCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -94,6 +104,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             return await m_session.SendCommand<StartSamplingCommand, StartSamplingCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -101,7 +112,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             return await m_session.SendCommand<StopSamplingCommand, StopSamplingCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
 
+    
         /// <summary>
         /// 
         /// </summary>
@@ -109,6 +122,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -116,6 +130,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -123,6 +138,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// If heap objects tracking has been started then backend regulary sends a current value for last seen object id and corresponding timestamp. If the were changes in the heap since last event then one or more heapStatsUpdate events will be sent before a new lastSeenObjectId event.
         /// </summary>
@@ -130,6 +146,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// If heap objects tracking has been started then backend may send update for one or more fragments
         /// </summary>
@@ -137,5 +154,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         {
             m_session.Subscribe(eventCallback);
         }
+    
     }
 }

@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Creates a new special &quot;via-inspector&quot; stylesheet in the frame with given &lt;code&gt;frameId&lt;/code&gt;.
+    /// Creates a new special "via-inspector" stylesheet in the frame with given <code>frameId</code>.
     /// </summary>
     public sealed class CreateStyleSheetCommand : ICommand
     {
@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Identifier of the frame where "via-inspector" stylesheet should be created.
         /// </summary>
+        
         [JsonProperty("frameId")]
         public string FrameId
         {
             get;
             set;
         }
+    
     }
 
     public sealed class CreateStyleSheetCommandResponse : ICommandResponse<CreateStyleSheetCommand>
     {
+    
+        
         /// <summary>
         /// Identifier of the created "via-inspector" stylesheet.
         ///</summary>
+        
         [JsonProperty("styleSheetId")]
         public string StyleSheetId
         {
             get;
             set;
         }
+    
     }
 }

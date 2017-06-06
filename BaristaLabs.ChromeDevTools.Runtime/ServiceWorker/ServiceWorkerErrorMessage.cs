@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     /// </summary>
     public sealed class ServiceWorkerErrorMessage
     {
+    
         /// <summary>
         /// 
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get;
             set;
         }
+    
         /// <summary>
         /// 
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get;
             set;
         }
+    
         /// <summary>
         /// 
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get;
             set;
         }
+    
         /// <summary>
         /// 
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get;
             set;
         }
+    
         /// <summary>
         /// 
         ///</summary>
@@ -52,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get;
             set;
         }
+    
         /// <summary>
         /// 
         ///</summary>
@@ -61,5 +67,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get;
             set;
         }
+    
     }
 }

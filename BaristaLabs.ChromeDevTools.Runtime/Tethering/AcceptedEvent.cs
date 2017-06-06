@@ -7,23 +7,30 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tethering
     /// </summary>
     public sealed class AcceptedEvent : IEvent
     {
+    
+        
         /// <summary>
         /// Port number that was successfully bound.
         /// </summary>
+        
         [JsonProperty("port")]
         public long Port
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Connection id to be used.
         /// </summary>
+        
         [JsonProperty("connectionId")]
         public string ConnectionId
         {
             get;
             set;
         }
+    
     }
 }

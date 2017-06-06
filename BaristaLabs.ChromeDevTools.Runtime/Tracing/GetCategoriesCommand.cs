@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
     }
 
     public sealed class GetCategoriesCommandResponse : ICommandResponse<GetCategoriesCommand>
     {
+    
+        
         /// <summary>
         /// A list of supported tracing categories.
         ///</summary>
+        
         [JsonProperty("categories")]
         public string[] Categories
         {
             get;
             set;
         }
+    
     }
 }

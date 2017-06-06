@@ -10,15 +10,21 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ResourcePriority
     {
+    
         [EnumMember(Value = "VeryLow")]
         VeryLow,
+    
         [EnumMember(Value = "Low")]
         Low,
+    
         [EnumMember(Value = "Medium")]
         Medium,
+    
         [EnumMember(Value = "High")]
         High,
+    
         [EnumMember(Value = "VeryHigh")]
         VeryHigh,
+    
     }
 }

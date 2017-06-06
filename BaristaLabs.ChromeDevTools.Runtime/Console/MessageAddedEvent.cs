@@ -7,14 +7,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
     /// </summary>
     public sealed class MessageAddedEvent : IEvent
     {
+    
+        
         /// <summary>
         /// Console message that has been added.
         /// </summary>
+        
         [JsonProperty("message")]
         public ConsoleMessage Message
         {
             get;
             set;
         }
+    
     }
 }

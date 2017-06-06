@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Frame id to set HTML for.
         /// </summary>
+        
         [JsonProperty("frameId")]
         public string FrameId
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// HTML content to set.
         /// </summary>
+        
         [JsonProperty("html")]
         public string Html
         {
             get;
             set;
         }
+    
     }
 
     public sealed class SetDocumentContentCommandResponse : ICommandResponse<SetDocumentContentCommand>
     {
+    
     }
 }

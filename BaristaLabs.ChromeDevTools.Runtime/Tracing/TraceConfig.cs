@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     /// </summary>
     public sealed class TraceConfig
     {
+    
         /// <summary>
         /// Controls how the trace buffer stores data.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             get;
             set;
         }
+    
         /// <summary>
         /// Turns on JavaScript stack sampling.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             get;
             set;
         }
+    
         /// <summary>
         /// Turns on system tracing.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             get;
             set;
         }
+    
         /// <summary>
         /// Turns on argument filter.
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             get;
             set;
         }
+    
         /// <summary>
         /// Included category filters.
         ///</summary>
@@ -52,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             get;
             set;
         }
+    
         /// <summary>
         /// Excluded category filters.
         ///</summary>
@@ -61,6 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             get;
             set;
         }
+    
         /// <summary>
         /// Configuration to synthesize the delays in tracing.
         ///</summary>
@@ -70,6 +77,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             get;
             set;
         }
+    
         /// <summary>
         /// Configuration for memory dump triggers. Used only when "memory-infra" category is enabled.
         ///</summary>
@@ -79,5 +87,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             get;
             set;
         }
+    
     }
 }

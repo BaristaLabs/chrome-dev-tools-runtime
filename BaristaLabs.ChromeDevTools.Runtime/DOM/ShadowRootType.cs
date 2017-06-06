@@ -10,11 +10,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ShadowRootType
     {
+    
         [EnumMember(Value = "user-agent")]
         UserAgent,
+    
         [EnumMember(Value = "open")]
         Open,
+    
         [EnumMember(Value = "closed")]
         Closed,
+    
     }
 }

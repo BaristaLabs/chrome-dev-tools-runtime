@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Animations to set the pause state of.
         /// </summary>
+        
         [JsonProperty("animations")]
         public string[] Animations
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Paused state to set to.
         /// </summary>
+        
         [JsonProperty("paused")]
         public bool Paused
         {
             get;
             set;
         }
+    
     }
 
     public sealed class SetPausedCommandResponse : ICommandResponse<SetPausedCommand>
     {
+    
     }
 }

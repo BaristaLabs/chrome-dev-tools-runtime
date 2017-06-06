@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
     /// </summary>
     public sealed class Cache
     {
+    
         /// <summary>
         /// An opaque unique id of the cache.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
             get;
             set;
         }
+    
         /// <summary>
         /// Security origin of the cache.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
             get;
             set;
         }
+    
         /// <summary>
         /// The name of the cache.
         ///</summary>
@@ -34,5 +37,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
             get;
             set;
         }
+    
     }
 }

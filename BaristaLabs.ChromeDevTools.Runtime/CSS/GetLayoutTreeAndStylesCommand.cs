@@ -15,36 +15,47 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Whitelist of computed styles to return.
         /// </summary>
+        
         [JsonProperty("computedStyleWhitelist")]
         public string[] ComputedStyleWhitelist
         {
             get;
             set;
         }
+    
     }
 
     public sealed class GetLayoutTreeAndStylesCommandResponse : ICommandResponse<GetLayoutTreeAndStylesCommand>
     {
+    
+        
         /// <summary>
         /// Gets or sets the layoutTreeNodes
         /// </summary>
+        
         [JsonProperty("layoutTreeNodes")]
         public LayoutTreeNode[] LayoutTreeNodes
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Gets or sets the computedStyles
         /// </summary>
+        
         [JsonProperty("computedStyles")]
         public ComputedStyle[] ComputedStyles
         {
             get;
             set;
         }
+    
     }
 }

@@ -15,36 +15,47 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Mock alpha
         /// </summary>
+        
         [JsonProperty("alpha")]
         public double Alpha
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Mock beta
         /// </summary>
+        
         [JsonProperty("beta")]
         public double Beta
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Mock gamma
         /// </summary>
+        
         [JsonProperty("gamma")]
         public double Gamma
         {
             get;
             set;
         }
+    
     }
 
     public sealed class SetDeviceOrientationOverrideCommandResponse : ICommandResponse<SetDeviceOrientationOverrideCommand>
     {
+    
     }
 }

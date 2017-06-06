@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// </summary>
     public sealed class BoxModel
     {
+    
         /// <summary>
         /// Content box
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// Padding box
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// Border box
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// Margin box
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// Node width
         ///</summary>
@@ -52,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// Node height
         ///</summary>
@@ -61,6 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// Shape outside coordinates
         ///</summary>
@@ -70,5 +77,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
     }
 }

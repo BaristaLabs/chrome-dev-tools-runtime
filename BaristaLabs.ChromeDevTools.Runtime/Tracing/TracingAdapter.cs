@@ -24,6 +24,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             get { return m_session; }
         }
 
+    
         /// <summary>
         /// Start trace events collection.
         /// </summary>
@@ -31,6 +32,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         {
             return await m_session.SendCommand<StartCommand, StartCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Stop trace events collection.
         /// </summary>
@@ -38,6 +40,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         {
             return await m_session.SendCommand<EndCommand, EndCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Gets supported tracing categories.
         /// </summary>
@@ -45,6 +48,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         {
             return await m_session.SendCommand<GetCategoriesCommand, GetCategoriesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Request a global memory dump.
         /// </summary>
@@ -52,6 +56,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         {
             return await m_session.SendCommand<RequestMemoryDumpCommand, RequestMemoryDumpCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Record a clock sync marker in the trace.
         /// </summary>
@@ -59,7 +64,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         {
             return await m_session.SendCommand<RecordClockSyncMarkerCommand, RecordClockSyncMarkerCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
 
+    
         /// <summary>
         /// Contains an bucket of collected trace events. When tracing is stopped collected events will be send as a sequence of dataCollected events followed by tracingComplete event.
         /// </summary>
@@ -67,6 +74,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Signals that tracing is stopped and there is no trace buffers pending flush, all data were delivered via dataCollected events.
         /// </summary>
@@ -74,6 +82,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -81,5 +90,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         {
             m_session.Subscribe(eventCallback);
         }
+    
     }
 }

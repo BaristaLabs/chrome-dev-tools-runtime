@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// New value for breakpoints active state.
         /// </summary>
+        
         [JsonProperty("active")]
         public bool Active
         {
             get;
             set;
         }
+    
     }
 
     public sealed class SetBreakpointsActiveCommandResponse : ICommandResponse<SetBreakpointsActiveCommand>
     {
+    
     }
 }

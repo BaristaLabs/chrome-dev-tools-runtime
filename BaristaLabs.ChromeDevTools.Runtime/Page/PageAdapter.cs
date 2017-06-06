@@ -24,6 +24,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return m_session; }
         }
 
+    
         /// <summary>
         /// Enables page domain notifications.
         /// </summary>
@@ -31,6 +32,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Disables page domain notifications.
         /// </summary>
@@ -38,6 +40,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -45,6 +48,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<AddScriptToEvaluateOnLoadCommand, AddScriptToEvaluateOnLoadCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -52,6 +56,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<RemoveScriptToEvaluateOnLoadCommand, RemoveScriptToEvaluateOnLoadCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Controls whether browser will open a new inspector window for connected pages.
         /// </summary>
@@ -59,6 +64,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<SetAutoAttachToCreatedPagesCommand, SetAutoAttachToCreatedPagesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Reloads given page optionally ignoring the cache.
         /// </summary>
@@ -66,6 +72,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<ReloadCommand, ReloadCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Navigates current page to the given URL.
         /// </summary>
@@ -73,6 +80,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<NavigateCommand, NavigateCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Force the page stop all navigations and pending resource fetches.
         /// </summary>
@@ -80,6 +88,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<StopLoadingCommand, StopLoadingCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Returns navigation history for the current page.
         /// </summary>
@@ -87,6 +96,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<GetNavigationHistoryCommand, GetNavigationHistoryCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Navigates current page to the given history entry.
         /// </summary>
@@ -94,6 +104,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<NavigateToHistoryEntryCommand, NavigateToHistoryEntryCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Returns all browser cookies. Depending on the backend support, will return detailed cookie information in the <code>cookies</code> field.
         /// </summary>
@@ -101,6 +112,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<GetCookiesCommand, GetCookiesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Deletes browser cookie with given name, domain and path.
         /// </summary>
@@ -108,6 +120,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<DeleteCookieCommand, DeleteCookieCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Returns present frame / resource tree structure.
         /// </summary>
@@ -115,6 +128,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<GetResourceTreeCommand, GetResourceTreeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Returns content of the given resource.
         /// </summary>
@@ -122,6 +136,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<GetResourceContentCommand, GetResourceContentCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Searches for given string in resource content.
         /// </summary>
@@ -129,6 +144,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<SearchInResourceCommand, SearchInResourceCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Sets given markup as the document's HTML.
         /// </summary>
@@ -136,6 +152,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<SetDocumentContentCommand, SetDocumentContentCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Overrides the values of device screen dimensions (window.screen.width, window.screen.height, window.innerWidth, window.innerHeight, and "device-width"/"device-height"-related CSS media query results).
         /// </summary>
@@ -143,6 +160,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<SetDeviceMetricsOverrideCommand, SetDeviceMetricsOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Clears the overriden device metrics.
         /// </summary>
@@ -150,6 +168,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<ClearDeviceMetricsOverrideCommand, ClearDeviceMetricsOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position unavailable.
         /// </summary>
@@ -157,6 +176,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<SetGeolocationOverrideCommand, SetGeolocationOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Clears the overriden Geolocation Position and Error.
         /// </summary>
@@ -164,6 +184,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<ClearGeolocationOverrideCommand, ClearGeolocationOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Overrides the Device Orientation.
         /// </summary>
@@ -171,6 +192,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<SetDeviceOrientationOverrideCommand, SetDeviceOrientationOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Clears the overridden Device Orientation.
         /// </summary>
@@ -178,6 +200,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<ClearDeviceOrientationOverrideCommand, ClearDeviceOrientationOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Toggles mouse event-based touch event emulation.
         /// </summary>
@@ -185,6 +208,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<SetTouchEmulationEnabledCommand, SetTouchEmulationEnabledCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Capture page screenshot.
         /// </summary>
@@ -192,6 +216,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<CaptureScreenshotCommand, CaptureScreenshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Print page as pdf.
         /// </summary>
@@ -199,6 +224,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<PrintToPDFCommand, PrintToPDFCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Starts sending each frame using the <code>screencastFrame</code> event.
         /// </summary>
@@ -206,6 +232,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<StartScreencastCommand, StartScreencastCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Stops sending each frame in the <code>screencastFrame</code>.
         /// </summary>
@@ -213,6 +240,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<StopScreencastCommand, StopScreencastCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Acknowledges that a screencast frame has been received by the frontend.
         /// </summary>
@@ -220,6 +248,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<ScreencastFrameAckCommand, ScreencastFrameAckCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Accepts or dismisses a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload).
         /// </summary>
@@ -227,6 +256,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<HandleJavaScriptDialogCommand, HandleJavaScriptDialogCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Shows / hides color picker
         /// </summary>
@@ -234,6 +264,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<SetColorPickerEnabledCommand, SetColorPickerEnabledCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Configures overlay.
         /// </summary>
@@ -241,6 +272,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<ConfigureOverlayCommand, ConfigureOverlayCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -248,6 +280,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<GetAppManifestCommand, GetAppManifestCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -255,6 +288,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<RequestAppBannerCommand, RequestAppBannerCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Toggles navigation throttling which allows programatic control over navigation and redirect response.
         /// </summary>
@@ -262,6 +296,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<SetControlNavigationsCommand, SetControlNavigationsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Should be sent in response to a navigationRequested or a redirectRequested event, telling the browser how to handle the navigation.
         /// </summary>
@@ -269,6 +304,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<ProcessNavigationCommand, ProcessNavigationCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Returns metrics relating to the layouting of the page, such as viewport bounds/scale.
         /// </summary>
@@ -276,7 +312,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<GetLayoutMetricsCommand, GetLayoutMetricsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
 
+    
         /// <summary>
         /// 
         /// </summary>
@@ -284,6 +322,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -291,6 +330,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Fired when frame has been attached to its parent.
         /// </summary>
@@ -298,6 +338,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Fired once navigation of the frame has completed. Frame is now associated with the new loader.
         /// </summary>
@@ -305,6 +346,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Fired when frame has been detached from its parent.
         /// </summary>
@@ -312,6 +354,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Fired when frame has started loading.
         /// </summary>
@@ -319,6 +362,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Fired when frame has stopped loading.
         /// </summary>
@@ -326,6 +370,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Fired when frame schedules a potential navigation.
         /// </summary>
@@ -333,6 +378,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Fired when frame no longer has a scheduled navigation.
         /// </summary>
@@ -340,6 +386,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -347,6 +394,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Fired when a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload) is about to open.
         /// </summary>
@@ -354,6 +402,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Fired when a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload) has been closed.
         /// </summary>
@@ -361,6 +410,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Compressed image data requested by the <code>startScreencast</code>.
         /// </summary>
@@ -368,6 +418,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Fired when the page with currently enabled screencast was shown or hidden </code>.
         /// </summary>
@@ -375,6 +426,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Fired when a color has been picked.
         /// </summary>
@@ -382,6 +434,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Fired when interstitial page was shown
         /// </summary>
@@ -389,6 +442,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Fired when interstitial page was hidden
         /// </summary>
@@ -396,6 +450,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Fired when a navigation is started if navigation throttles are enabled.  The navigation will be deferred until processNavigation is called.
         /// </summary>
@@ -403,5 +458,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+    
     }
 }

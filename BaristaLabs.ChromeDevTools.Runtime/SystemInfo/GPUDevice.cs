@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
     /// </summary>
     public sealed class GPUDevice
     {
+    
         /// <summary>
         /// PCI ID of the GPU vendor, if available; 0 otherwise.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
             get;
             set;
         }
+    
         /// <summary>
         /// PCI ID of the GPU device, if available; 0 otherwise.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
             get;
             set;
         }
+    
         /// <summary>
         /// String description of the GPU vendor, if the PCI ID is not available.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
             get;
             set;
         }
+    
         /// <summary>
         /// String description of the GPU device, if the PCI ID is not available.
         ///</summary>
@@ -43,5 +47,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
             get;
             set;
         }
+    
     }
 }

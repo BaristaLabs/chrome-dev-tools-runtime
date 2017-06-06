@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Identifier of the object to release.
         /// </summary>
+        
         [JsonProperty("objectId")]
         public string ObjectId
         {
             get;
             set;
         }
+    
     }
 
     public sealed class ReleaseObjectCommandResponse : ICommandResponse<ReleaseObjectCommand>
     {
+    
     }
 }

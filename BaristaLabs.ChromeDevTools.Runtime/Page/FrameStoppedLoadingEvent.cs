@@ -7,14 +7,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// </summary>
     public sealed class FrameStoppedLoadingEvent : IEvent
     {
+    
+        
         /// <summary>
         /// Id of the frame that has stopped loading.
         /// </summary>
+        
         [JsonProperty("frameId")]
         public string FrameId
         {
             get;
             set;
         }
+    
     }
 }

@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// </summary>
     public sealed class WebSocketRequest
     {
+    
         /// <summary>
         /// HTTP request headers.
         ///</summary>
@@ -16,5 +17,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
     }
 }

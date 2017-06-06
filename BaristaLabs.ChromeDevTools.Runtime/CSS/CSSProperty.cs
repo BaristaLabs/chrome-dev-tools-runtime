@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// </summary>
     public sealed class CSSProperty
     {
+    
         /// <summary>
         /// The property name.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+    
         /// <summary>
         /// The property value.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+    
         /// <summary>
         /// Whether the property has "!important" annotation (implies <code>false</code> if absent).
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+    
         /// <summary>
         /// Whether the property is implicit (implies <code>false</code> if absent).
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+    
         /// <summary>
         /// The full property text as specified in the style.
         ///</summary>
@@ -52,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+    
         /// <summary>
         /// Whether the property is understood by the browser (implies <code>true</code> if absent).
         ///</summary>
@@ -61,6 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+    
         /// <summary>
         /// Whether the property is disabled by the user (present for source-based properties only).
         ///</summary>
@@ -70,6 +77,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+    
         /// <summary>
         /// The entire property range in the enclosing style declaration (if available).
         ///</summary>
@@ -79,5 +87,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+    
     }
 }

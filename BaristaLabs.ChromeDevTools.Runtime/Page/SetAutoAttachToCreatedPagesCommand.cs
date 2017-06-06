@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// If true, browser will open a new inspector window for every page created from this one.
         /// </summary>
+        
         [JsonProperty("autoAttach")]
         public bool AutoAttach
         {
             get;
             set;
         }
+    
     }
 
     public sealed class SetAutoAttachToCreatedPagesCommandResponse : ICommandResponse<SetAutoAttachToCreatedPagesCommand>
     {
+    
     }
 }

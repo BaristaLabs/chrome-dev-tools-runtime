@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// The element id for which to force the pseudo state.
         /// </summary>
+        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Element pseudo classes to force when computing the element's style.
         /// </summary>
+        
         [JsonProperty("forcedPseudoClasses")]
         public string[] ForcedPseudoClasses
         {
             get;
             set;
         }
+    
     }
 
     public sealed class ForcePseudoStateCommandResponse : ICommandResponse<ForcePseudoStateCommand>
     {
+    
     }
 }

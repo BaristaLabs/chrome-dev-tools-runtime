@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Id of cache for deletion.
         /// </summary>
+        
         [JsonProperty("cacheId")]
         public string CacheId
         {
             get;
             set;
         }
+    
     }
 
     public sealed class DeleteCacheCommandResponse : ICommandResponse<DeleteCacheCommand>
     {
+    
     }
 }

@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     /// </summary>
     public sealed class EventListener
     {
+    
         /// <summary>
         /// <code>EventListener</code>'s type.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             get;
             set;
         }
+    
         /// <summary>
         /// <code>EventListener</code>'s useCapture.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             get;
             set;
         }
+    
         /// <summary>
         /// <code>EventListener</code>'s passive flag.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             get;
             set;
         }
+    
         /// <summary>
         /// <code>EventListener</code>'s once flag.
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             get;
             set;
         }
+    
         /// <summary>
         /// Script id of the handler code.
         ///</summary>
@@ -52,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             get;
             set;
         }
+    
         /// <summary>
         /// Line number in the script (0-based).
         ///</summary>
@@ -61,6 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             get;
             set;
         }
+    
         /// <summary>
         /// Column number in the script (0-based).
         ///</summary>
@@ -70,6 +77,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             get;
             set;
         }
+    
         /// <summary>
         /// Event handler function value.
         ///</summary>
@@ -79,6 +87,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             get;
             set;
         }
+    
         /// <summary>
         /// Event original handler function value.
         ///</summary>
@@ -88,6 +97,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             get;
             set;
         }
+    
         /// <summary>
         /// Node the listener is added to (if any).
         ///</summary>
@@ -97,5 +107,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             get;
             set;
         }
+    
     }
 }

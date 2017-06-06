@@ -15,45 +15,59 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Frame id to get resource for.
         /// </summary>
+        
         [JsonProperty("frameId")]
         public string FrameId
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// URL of the resource to get content for.
         /// </summary>
+        
         [JsonProperty("url")]
         public string Url
         {
             get;
             set;
         }
+    
     }
 
     public sealed class GetResourceContentCommandResponse : ICommandResponse<GetResourceContentCommand>
     {
+    
+        
         /// <summary>
         /// Resource content.
         ///</summary>
+        
         [JsonProperty("content")]
         public string Content
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// True, if content was served as base64.
         ///</summary>
+        
         [JsonProperty("base64Encoded")]
         public bool Base64Encoded
         {
             get;
             set;
         }
+    
     }
 }

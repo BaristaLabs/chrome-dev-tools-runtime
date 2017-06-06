@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// </summary>
     public sealed class Cookie
     {
+    
         /// <summary>
         /// Cookie name.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Cookie value.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Cookie domain.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Cookie path.
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Cookie expiration date as the number of seconds since the UNIX epoch.
         ///</summary>
@@ -52,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Cookie size.
         ///</summary>
@@ -61,6 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// True if cookie is http-only.
         ///</summary>
@@ -70,6 +77,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// True if cookie is secure.
         ///</summary>
@@ -79,6 +87,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// True in case of session cookie.
         ///</summary>
@@ -88,6 +97,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Cookie SameSite type.
         ///</summary>
@@ -97,5 +107,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
     }
 }

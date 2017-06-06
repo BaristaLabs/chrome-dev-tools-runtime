@@ -15,9 +15,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
     }
 
     public sealed class ClearBrowserCacheCommandResponse : ICommandResponse<ClearBrowserCacheCommand>
     {
+    
     }
 }

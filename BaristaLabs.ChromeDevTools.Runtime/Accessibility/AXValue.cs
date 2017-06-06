@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
     /// </summary>
     public sealed class AXValue
     {
+    
         /// <summary>
         /// The type of this value.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
         /// <summary>
         /// The computed value of this property.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
         /// <summary>
         /// One or more related nodes, if applicable.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
         /// <summary>
         /// The sources which contributed to the computation of this property.
         ///</summary>
@@ -43,5 +47,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
     }
 }

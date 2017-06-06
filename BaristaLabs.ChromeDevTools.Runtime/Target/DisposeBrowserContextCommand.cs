@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Gets or sets the browserContextId
         /// </summary>
+        
         [JsonProperty("browserContextId")]
         public string BrowserContextId
         {
             get;
             set;
         }
+    
     }
 
     public sealed class DisposeBrowserContextCommandResponse : ICommandResponse<DisposeBrowserContextCommand>
     {
+    
+        
         /// <summary>
         /// Gets or sets the success
         /// </summary>
+        
         [JsonProperty("success")]
         public bool Success
         {
             get;
             set;
         }
+    
     }
 }

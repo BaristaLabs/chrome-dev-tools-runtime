@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// </summary>
     public sealed class HighlightConfig
     {
+    
         /// <summary>
         /// Whether the node info tooltip should be shown (default: false).
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// Whether the rulers should be shown (default: false).
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// Whether the extension lines from node to the rulers should be shown (default: false).
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// 
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// The content box highlight fill color (default: transparent).
         ///</summary>
@@ -52,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// The padding highlight fill color (default: transparent).
         ///</summary>
@@ -61,6 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// The border highlight fill color (default: transparent).
         ///</summary>
@@ -70,6 +77,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// The margin highlight fill color (default: transparent).
         ///</summary>
@@ -79,6 +87,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// The event target element highlight fill color (default: transparent).
         ///</summary>
@@ -88,6 +97,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// The shape outside fill color (default: transparent).
         ///</summary>
@@ -97,6 +107,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// The shape margin fill color (default: transparent).
         ///</summary>
@@ -106,6 +117,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// Selectors to highlight relevant nodes.
         ///</summary>
@@ -115,5 +127,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
     }
 }

@@ -7,14 +7,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
     /// </summary>
     public sealed class EntryAddedEvent : IEvent
     {
+    
+        
         /// <summary>
         /// The entry.
         /// </summary>
+        
         [JsonProperty("entry")]
         public LogEntry Entry
         {
             get;
             set;
         }
+    
     }
 }

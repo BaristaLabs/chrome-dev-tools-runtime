@@ -24,6 +24,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             get { return m_session; }
         }
 
+    
         /// <summary>
         /// Controls whether to discover available targets and notify via <code>targetCreated/targetDestroyed</code> events.
         /// </summary>
@@ -31,6 +32,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             return await m_session.SendCommand<SetDiscoverTargetsCommand, SetDiscoverTargetsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Controls whether to automatically attach to new targets which are considered to be related to this one. When turned on, attaches to all existing related targets as well. When turned off, automatically detaches from all currently attached targets.
         /// </summary>
@@ -38,6 +40,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             return await m_session.SendCommand<SetAutoAttachCommand, SetAutoAttachCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -45,6 +48,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             return await m_session.SendCommand<SetAttachToFramesCommand, SetAttachToFramesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Enables target discovery for the specified locations, when <code>setDiscoverTargets</code> was set to <code>true</code>.
         /// </summary>
@@ -52,6 +56,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             return await m_session.SendCommand<SetRemoteLocationsCommand, SetRemoteLocationsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Sends protocol message to the target with given id.
         /// </summary>
@@ -59,6 +64,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             return await m_session.SendCommand<SendMessageToTargetCommand, SendMessageToTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Returns information about a target.
         /// </summary>
@@ -66,6 +72,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             return await m_session.SendCommand<GetTargetInfoCommand, GetTargetInfoCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Activates (focuses) the target.
         /// </summary>
@@ -73,6 +80,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             return await m_session.SendCommand<ActivateTargetCommand, ActivateTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Closes the target. If the target is a page that gets closed too.
         /// </summary>
@@ -80,6 +88,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             return await m_session.SendCommand<CloseTargetCommand, CloseTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Attaches to the target with given id.
         /// </summary>
@@ -87,6 +96,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             return await m_session.SendCommand<AttachToTargetCommand, AttachToTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Detaches from the target with given id.
         /// </summary>
@@ -94,6 +104,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             return await m_session.SendCommand<DetachFromTargetCommand, DetachFromTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Creates a new empty BrowserContext. Similar to an incognito profile but you can have more than one.
         /// </summary>
@@ -101,6 +112,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             return await m_session.SendCommand<CreateBrowserContextCommand, CreateBrowserContextCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Deletes a BrowserContext, will fail of any open page uses it.
         /// </summary>
@@ -108,6 +120,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             return await m_session.SendCommand<DisposeBrowserContextCommand, DisposeBrowserContextCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Creates a new page.
         /// </summary>
@@ -115,6 +128,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             return await m_session.SendCommand<CreateTargetCommand, CreateTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Retrieves a list of available targets.
         /// </summary>
@@ -122,7 +136,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             return await m_session.SendCommand<GetTargetsCommand, GetTargetsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
 
+    
         /// <summary>
         /// Issued when a possible inspection target is created.
         /// </summary>
@@ -130,6 +146,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Issued when a target is destroyed.
         /// </summary>
@@ -137,6 +154,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Issued when attached to target because of auto-attach or <code>attachToTarget</code> command.
         /// </summary>
@@ -144,6 +162,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Issued when detached from target for any reason (including <code>detachFromTarget</code> command).
         /// </summary>
@@ -151,6 +170,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// Notifies about new protocol message from attached target.
         /// </summary>
@@ -158,5 +178,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             m_session.Subscribe(eventCallback);
         }
+    
     }
 }

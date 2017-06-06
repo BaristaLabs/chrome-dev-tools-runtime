@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Id of the script.
         /// </summary>
+        
         [JsonProperty("scriptId")]
         public string ScriptId
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Gets or sets the positions
         /// </summary>
+        
         [JsonProperty("positions")]
         public ScriptPosition[] Positions
         {
             get;
             set;
         }
+    
     }
 
     public sealed class SetBlackboxedRangesCommandResponse : ICommandResponse<SetBlackboxedRangesCommand>
     {
+    
     }
 }

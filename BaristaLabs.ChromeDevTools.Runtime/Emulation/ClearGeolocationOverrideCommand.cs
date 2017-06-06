@@ -15,9 +15,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
     }
 
     public sealed class ClearGeolocationOverrideCommandResponse : ICommandResponse<ClearGeolocationOverrideCommand>
     {
+    
     }
 }

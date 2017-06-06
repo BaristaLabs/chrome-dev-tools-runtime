@@ -15,9 +15,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
     }
 
     public sealed class CollectGarbageCommandResponse : ICommandResponse<CollectGarbageCommand>
     {
+    
     }
 }

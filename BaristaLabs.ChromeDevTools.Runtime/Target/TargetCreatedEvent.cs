@@ -7,14 +7,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     /// </summary>
     public sealed class TargetCreatedEvent : IEvent
     {
+    
+        
         /// <summary>
         /// Gets or sets the targetInfo
         /// </summary>
+        
         [JsonProperty("targetInfo")]
         public TargetInfo TargetInfo
         {
             get;
             set;
         }
+    
     }
 }

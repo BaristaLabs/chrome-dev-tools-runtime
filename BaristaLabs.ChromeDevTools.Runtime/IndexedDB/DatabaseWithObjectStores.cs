@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
     /// </summary>
     public sealed class DatabaseWithObjectStores
     {
+    
         /// <summary>
         /// Database name.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
+    
         /// <summary>
         /// Database version.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
+    
         /// <summary>
         /// Object stores in this database.
         ///</summary>
@@ -34,5 +37,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
+    
     }
 }

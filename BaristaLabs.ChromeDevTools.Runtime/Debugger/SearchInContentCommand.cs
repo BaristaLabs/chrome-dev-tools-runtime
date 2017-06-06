@@ -15,54 +15,71 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Id of the script to search in.
         /// </summary>
+        
         [JsonProperty("scriptId")]
         public string ScriptId
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// String to search for.
         /// </summary>
+        
         [JsonProperty("query")]
         public string Query
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// If true, search is case sensitive.
         /// </summary>
+        
         [JsonProperty("caseSensitive", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? CaseSensitive
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// If true, treats string parameter as regex.
         /// </summary>
+        
         [JsonProperty("isRegex", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? IsRegex
         {
             get;
             set;
         }
+    
     }
 
     public sealed class SearchInContentCommandResponse : ICommandResponse<SearchInContentCommand>
     {
+    
+        
         /// <summary>
         /// List of search matches.
         ///</summary>
+        
         [JsonProperty("result")]
         public SearchMatch[] Result
         {
             get;
             set;
         }
+    
     }
 }

@@ -7,23 +7,30 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// </summary>
     public sealed class WebSocketClosedEvent : IEvent
     {
+    
+        
         /// <summary>
         /// Request identifier.
         /// </summary>
+        
         [JsonProperty("requestId")]
         public string RequestId
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Timestamp.
         /// </summary>
+        
         [JsonProperty("timestamp")]
         public double Timestamp
         {
             get;
             set;
         }
+    
     }
 }

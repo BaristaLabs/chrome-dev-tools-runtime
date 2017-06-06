@@ -15,36 +15,47 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Gets or sets the origin
         /// </summary>
+        
         [JsonProperty("origin")]
         public string Origin
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Gets or sets the registrationId
         /// </summary>
+        
         [JsonProperty("registrationId")]
         public string RegistrationId
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Gets or sets the data
         /// </summary>
+        
         [JsonProperty("data")]
         public string Data
         {
             get;
             set;
         }
+    
     }
 
     public sealed class DeliverPushMessageCommandResponse : ICommandResponse<DeliverPushMessageCommand>
     {
+    
     }
 }

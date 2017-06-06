@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// New sampling interval in microseconds.
         /// </summary>
+        
         [JsonProperty("interval")]
         public long Interval
         {
             get;
             set;
         }
+    
     }
 
     public sealed class SetSamplingIntervalCommandResponse : ICommandResponse<SetSamplingIntervalCommand>
     {
+    
     }
 }

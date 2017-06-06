@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// </summary>
     public sealed class ScreencastFrameMetadata
     {
+    
         /// <summary>
         /// Top offset in DIP.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Page scale factor.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Device screen width in DIP.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Device screen height in DIP.
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Position of horizontal scroll in CSS pixels.
         ///</summary>
@@ -52,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Position of vertical scroll in CSS pixels.
         ///</summary>
@@ -61,6 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Frame swap timestamp.
         ///</summary>
@@ -70,5 +77,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
     }
 }

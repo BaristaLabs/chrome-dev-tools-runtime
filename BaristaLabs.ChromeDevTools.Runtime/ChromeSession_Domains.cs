@@ -32,6 +32,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         private Lazy<Log.LogAdapter> m_Log;
         private Lazy<SystemInfo.SystemInfoAdapter> m_SystemInfo;
         private Lazy<Tethering.TetheringAdapter> m_Tethering;
+        private Lazy<Browser.BrowserAdapter> m_Browser;
         private Lazy<Schema.SchemaAdapter> m_Schema;
         private Lazy<Runtime.RuntimeAdapter> m_Runtime;
         private Lazy<Debugger.DebuggerAdapter> m_Debugger;
@@ -69,6 +70,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
             m_Log = new Lazy<Log.LogAdapter>(() => new Log.LogAdapter(this));
             m_SystemInfo = new Lazy<SystemInfo.SystemInfoAdapter>(() => new SystemInfo.SystemInfoAdapter(this));
             m_Tethering = new Lazy<Tethering.TetheringAdapter>(() => new Tethering.TetheringAdapter(this));
+            m_Browser = new Lazy<Browser.BrowserAdapter>(() => new Browser.BrowserAdapter(this));
             m_Schema = new Lazy<Schema.SchemaAdapter>(() => new Schema.SchemaAdapter(this));
             m_Runtime = new Lazy<Runtime.RuntimeAdapter>(() => new Runtime.RuntimeAdapter(this));
             m_Debugger = new Lazy<Debugger.DebuggerAdapter>(() => new Debugger.DebuggerAdapter(this));
@@ -299,6 +301,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         public Tethering.TetheringAdapter Tethering
         {
             get { return m_Tethering.Value; }
+        }
+        
+        /// <summary>
+        /// Gets the adapter for the Browser domain.
+        /// </summary>
+        public Browser.BrowserAdapter Browser
+        {
+            get { return m_Browser.Value; }
         }
         
         /// <summary>

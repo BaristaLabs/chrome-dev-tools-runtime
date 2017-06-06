@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
     }
 
     public sealed class TakePreciseCoverageCommandResponse : ICommandResponse<TakePreciseCoverageCommand>
     {
+    
+        
         /// <summary>
         /// Coverage data for the current isolate.
         ///</summary>
+        
         [JsonProperty("result")]
         public ScriptCoverage[] Result
         {
             get;
             set;
         }
+    
     }
 }

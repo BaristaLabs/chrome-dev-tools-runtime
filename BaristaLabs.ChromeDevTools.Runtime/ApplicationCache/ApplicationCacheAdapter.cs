@@ -24,6 +24,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
             get { return m_session; }
         }
 
+    
         /// <summary>
         /// Returns array of frame identifiers with manifest urls for each frame containing a document associated with some application cache.
         /// </summary>
@@ -31,6 +32,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         {
             return await m_session.SendCommand<GetFramesWithManifestsCommand, GetFramesWithManifestsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Enables application cache domain notifications.
         /// </summary>
@@ -38,6 +40,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Returns manifest URL for document in the given frame.
         /// </summary>
@@ -45,6 +48,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         {
             return await m_session.SendCommand<GetManifestForFrameCommand, GetManifestForFrameCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Returns relevant application cache data for the document in given frame.
         /// </summary>
@@ -52,7 +56,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         {
             return await m_session.SendCommand<GetApplicationCacheForFrameCommand, GetApplicationCacheForFrameCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
 
+    
         /// <summary>
         /// 
         /// </summary>
@@ -60,6 +66,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -67,5 +74,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         {
             m_session.Subscribe(eventCallback);
         }
+    
     }
 }

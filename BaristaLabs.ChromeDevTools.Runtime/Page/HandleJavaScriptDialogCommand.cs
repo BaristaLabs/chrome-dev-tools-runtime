@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Whether to accept or dismiss the dialog.
         /// </summary>
+        
         [JsonProperty("accept")]
         public bool Accept
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// The text to enter into the dialog prompt before accepting. Used only if this is a prompt dialog.
         /// </summary>
+        
         [JsonProperty("promptText", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string PromptText
         {
             get;
             set;
         }
+    
     }
 
     public sealed class HandleJavaScriptDialogCommandResponse : ICommandResponse<HandleJavaScriptDialogCommand>
     {
+    
     }
 }

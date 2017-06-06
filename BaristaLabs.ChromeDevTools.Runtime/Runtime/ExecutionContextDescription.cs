@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// </summary>
     public sealed class ExecutionContextDescription
     {
+    
         /// <summary>
         /// Unique id of the execution context. It can be used to specify in which execution context script evaluation should be performed.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// Execution context origin.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// Human readable name describing given context.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// Embedder-specific auxiliary data.
         ///</summary>
@@ -43,5 +47,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
     }
 }

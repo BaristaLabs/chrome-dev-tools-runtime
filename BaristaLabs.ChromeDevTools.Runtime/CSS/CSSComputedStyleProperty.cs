@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// </summary>
     public sealed class CSSComputedStyleProperty
     {
+    
         /// <summary>
         /// Computed style property name.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+    
         /// <summary>
         /// Computed style property value.
         ///</summary>
@@ -25,5 +27,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+    
     }
 }

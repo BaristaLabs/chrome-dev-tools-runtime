@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// </summary>
     public sealed class VisualViewport
     {
+    
         /// <summary>
         /// Horizontal offset relative to the layout viewport (CSS pixels).
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Vertical offset relative to the layout viewport (CSS pixels).
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Horizontal offset relative to the document (CSS pixels).
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Vertical offset relative to the document (CSS pixels).
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Width (CSS pixels), excludes scrollbar if present.
         ///</summary>
@@ -52,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Height (CSS pixels), excludes scrollbar if present.
         ///</summary>
@@ -61,6 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Scale relative to the ideal viewport (size at width=device-width).
         ///</summary>
@@ -70,5 +77,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
     }
 }

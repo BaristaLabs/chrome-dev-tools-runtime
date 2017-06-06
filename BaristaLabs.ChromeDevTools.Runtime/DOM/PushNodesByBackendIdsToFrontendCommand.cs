@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// The array of backend node ids.
         /// </summary>
+        
         [JsonProperty("backendNodeIds")]
         public long[] BackendNodeIds
         {
             get;
             set;
         }
+    
     }
 
     public sealed class PushNodesByBackendIdsToFrontendCommandResponse : ICommandResponse<PushNodesByBackendIdsToFrontendCommand>
     {
+    
+        
         /// <summary>
         /// The array of ids of pushed nodes that correspond to the backend ids specified in backendNodeIds.
         ///</summary>
+        
         [JsonProperty("nodeIds")]
         public long[] NodeIds
         {
             get;
             set;
         }
+    
     }
 }

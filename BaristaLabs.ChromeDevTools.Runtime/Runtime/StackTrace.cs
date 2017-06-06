@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// </summary>
     public sealed class StackTrace
     {
+    
         /// <summary>
         /// String label of this stack trace. For async traces this may be a name of the function that initiated the async call.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// JavaScript function name.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// Asynchronous JavaScript stack trace that preceded this stack, if available.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// Creation frame of the Promise which produced the next synchronous trace when resolved, if available.
         ///</summary>
@@ -43,5 +47,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
     }
 }

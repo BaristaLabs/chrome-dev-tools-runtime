@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Security origin.
         /// </summary>
+        
         [JsonProperty("securityOrigin")]
         public string SecurityOrigin
         {
             get;
             set;
         }
+    
     }
 
     public sealed class RequestCacheNamesCommandResponse : ICommandResponse<RequestCacheNamesCommand>
     {
+    
+        
         /// <summary>
         /// Caches for the security origin.
         ///</summary>
+        
         [JsonProperty("caches")]
         public Cache[] Caches
         {
             get;
             set;
         }
+    
     }
 }

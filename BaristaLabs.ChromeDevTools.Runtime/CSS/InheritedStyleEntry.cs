@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// </summary>
     public sealed class InheritedStyleEntry
     {
+    
         /// <summary>
         /// The ancestor node's inline style, if any, in the style inheritance chain.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+    
         /// <summary>
         /// Matches of CSS rules matching the ancestor node in the style inheritance chain.
         ///</summary>
@@ -25,5 +27,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+    
     }
 }

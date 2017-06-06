@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
     /// </summary>
     public sealed class AXProperty
     {
+    
         /// <summary>
         /// The name of this property.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
         /// <summary>
         /// The value of this property.
         ///</summary>
@@ -25,5 +27,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
     }
 }

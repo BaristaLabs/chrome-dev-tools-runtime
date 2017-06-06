@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// RGBA of the default background color. If not specified, any existing override will be cleared.
         /// </summary>
+        
         [JsonProperty("color", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public DOM.RGBA Color
         {
             get;
             set;
         }
+    
     }
 
     public sealed class SetDefaultBackgroundColorOverrideCommandResponse : ICommandResponse<SetDefaultBackgroundColorOverrideCommand>
     {
+    
     }
 }

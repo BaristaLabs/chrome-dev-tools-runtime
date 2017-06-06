@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     /// </summary>
     public sealed class ScreenOrientation
     {
+    
         /// <summary>
         /// Orientation type.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             get;
             set;
         }
+    
         /// <summary>
         /// Orientation angle.
         ///</summary>
@@ -25,5 +27,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             get;
             set;
         }
+    
     }
 }

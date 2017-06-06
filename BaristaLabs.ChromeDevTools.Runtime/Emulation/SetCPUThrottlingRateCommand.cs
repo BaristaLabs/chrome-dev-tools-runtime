@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Throttling rate as a slowdown factor (1 is no throttle, 2 is 2x slowdown, etc).
         /// </summary>
+        
         [JsonProperty("rate")]
         public double Rate
         {
             get;
             set;
         }
+    
     }
 
     public sealed class SetCPUThrottlingRateCommandResponse : ICommandResponse<SetCPUThrottlingRateCommand>
     {
+    
     }
 }

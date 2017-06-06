@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// </summary>
     public sealed class Rect
     {
+    
         /// <summary>
         /// X coordinate
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// Y coordinate
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// Rectangle width
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// Rectangle height
         ///</summary>
@@ -43,5 +47,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
     }
 }

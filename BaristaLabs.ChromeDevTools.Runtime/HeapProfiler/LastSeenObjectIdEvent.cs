@@ -7,23 +7,30 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     /// </summary>
     public sealed class LastSeenObjectIdEvent : IEvent
     {
+    
+        
         /// <summary>
         /// Gets or sets the lastSeenObjectId
         /// </summary>
+        
         [JsonProperty("lastSeenObjectId")]
         public long LastSeenObjectId
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Gets or sets the timestamp
         /// </summary>
+        
         [JsonProperty("timestamp")]
         public double Timestamp
         {
             get;
             set;
         }
+    
     }
 }

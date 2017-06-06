@@ -10,9 +10,12 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     [JsonConverter(typeof(StringEnumConverter))]
     public enum CookieSameSite
     {
+    
         [EnumMember(Value = "Strict")]
         Strict,
+    
         [EnumMember(Value = "Lax")]
         Lax,
+    
     }
 }

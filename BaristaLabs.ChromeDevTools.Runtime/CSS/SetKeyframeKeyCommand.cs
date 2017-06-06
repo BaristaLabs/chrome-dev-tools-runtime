@@ -15,45 +15,59 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Gets or sets the styleSheetId
         /// </summary>
+        
         [JsonProperty("styleSheetId")]
         public string StyleSheetId
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Gets or sets the range
         /// </summary>
+        
         [JsonProperty("range")]
         public SourceRange Range
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Gets or sets the keyText
         /// </summary>
+        
         [JsonProperty("keyText")]
         public string KeyText
         {
             get;
             set;
         }
+    
     }
 
     public sealed class SetKeyframeKeyCommandResponse : ICommandResponse<SetKeyframeKeyCommand>
     {
+    
+        
         /// <summary>
         /// The resulting key text after modification.
         ///</summary>
+        
         [JsonProperty("keyText")]
         public Value KeyText
         {
             get;
             set;
         }
+    
     }
 }

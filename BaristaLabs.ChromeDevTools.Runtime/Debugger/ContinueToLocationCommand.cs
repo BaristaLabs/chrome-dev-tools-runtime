@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Location to continue to.
         /// </summary>
+        
         [JsonProperty("location")]
         public Location Location
         {
             get;
             set;
         }
+    
     }
 
     public sealed class ContinueToLocationCommandResponse : ICommandResponse<ContinueToLocationCommand>
     {
+    
     }
 }

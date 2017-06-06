@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// </summary>
     public sealed class WebSocketResponse
     {
+    
         /// <summary>
         /// HTTP response status code.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// HTTP response status text.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// HTTP response headers.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// HTTP response headers text.
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// HTTP request headers.
         ///</summary>
@@ -52,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// HTTP request headers text.
         ///</summary>
@@ -61,5 +67,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
     }
 }

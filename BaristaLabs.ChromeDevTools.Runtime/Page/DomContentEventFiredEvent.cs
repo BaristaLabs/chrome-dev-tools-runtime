@@ -7,14 +7,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// </summary>
     public sealed class DomContentEventFiredEvent : IEvent
     {
+    
+        
         /// <summary>
         /// Gets or sets the timestamp
         /// </summary>
+        
         [JsonProperty("timestamp")]
         public double Timestamp
         {
             get;
             set;
         }
+    
     }
 }

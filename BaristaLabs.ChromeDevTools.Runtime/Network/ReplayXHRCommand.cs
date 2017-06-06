@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Identifier of XHR to replay.
         /// </summary>
+        
         [JsonProperty("requestId")]
         public string RequestId
         {
             get;
             set;
         }
+    
     }
 
     public sealed class ReplayXHRCommandResponse : ICommandResponse<ReplayXHRCommand>
     {
+    
     }
 }

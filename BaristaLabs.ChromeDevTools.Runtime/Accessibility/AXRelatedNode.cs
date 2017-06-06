@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
     /// </summary>
     public sealed class AXRelatedNode
     {
+    
         /// <summary>
         /// The BackendNodeId of the related DOM node.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
         /// <summary>
         /// The IDRef value provided, if any.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
         /// <summary>
         /// The text alternative of this node in the current context.
         ///</summary>
@@ -34,5 +37,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
     }
 }

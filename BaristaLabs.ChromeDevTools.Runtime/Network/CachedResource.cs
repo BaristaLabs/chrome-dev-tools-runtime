@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// </summary>
     public sealed class CachedResource
     {
+    
         /// <summary>
         /// Resource URL. This is the url of the original network request.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Type of this resource.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Cached response data.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Cached response body size.
         ///</summary>
@@ -43,5 +47,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
     }
 }

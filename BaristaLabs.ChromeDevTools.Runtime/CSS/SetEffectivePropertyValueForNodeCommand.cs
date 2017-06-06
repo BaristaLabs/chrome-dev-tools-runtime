@@ -15,36 +15,47 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// The element id for which to set property.
         /// </summary>
+        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Gets or sets the propertyName
         /// </summary>
+        
         [JsonProperty("propertyName")]
         public string PropertyName
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// Gets or sets the value
         /// </summary>
+        
         [JsonProperty("value")]
         public string Value
         {
             get;
             set;
         }
+    
     }
 
     public sealed class SetEffectivePropertyValueForNodeCommandResponse : ICommandResponse<SetEffectivePropertyValueForNodeCommand>
     {
+    
     }
 }

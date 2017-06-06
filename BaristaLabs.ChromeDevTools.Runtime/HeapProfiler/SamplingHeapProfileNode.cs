@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     /// </summary>
     public sealed class SamplingHeapProfileNode
     {
+    
         /// <summary>
         /// Function location.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
             get;
             set;
         }
+    
         /// <summary>
         /// Allocations size in bytes for the node excluding children.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
             get;
             set;
         }
+    
         /// <summary>
         /// Child nodes.
         ///</summary>
@@ -34,5 +37,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
             get;
             set;
         }
+    
     }
 }

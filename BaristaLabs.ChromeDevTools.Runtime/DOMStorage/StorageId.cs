@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
     /// </summary>
     public sealed class StorageId
     {
+    
         /// <summary>
         /// Security origin for the storage.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
             get;
             set;
         }
+    
         /// <summary>
         /// Whether the storage is local storage (not session storage).
         ///</summary>
@@ -25,5 +27,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
             get;
             set;
         }
+    
     }
 }

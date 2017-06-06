@@ -7,14 +7,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Inspector
     /// </summary>
     public sealed class DetachedEvent : IEvent
     {
+    
+        
         /// <summary>
         /// The reason why connection has been terminated.
         /// </summary>
+        
         [JsonProperty("reason")]
         public string Reason
         {
             get;
             set;
         }
+    
     }
 }

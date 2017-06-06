@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
     /// </summary>
     public sealed class LogEntry
     {
+    
         /// <summary>
         /// Log entry source.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             get;
             set;
         }
+    
         /// <summary>
         /// Log entry severity.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             get;
             set;
         }
+    
         /// <summary>
         /// Logged text.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             get;
             set;
         }
+    
         /// <summary>
         /// Timestamp when this entry was added.
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             get;
             set;
         }
+    
         /// <summary>
         /// URL of the resource if known.
         ///</summary>
@@ -52,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             get;
             set;
         }
+    
         /// <summary>
         /// Line number in the resource.
         ///</summary>
@@ -61,6 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             get;
             set;
         }
+    
         /// <summary>
         /// JavaScript stack trace.
         ///</summary>
@@ -70,6 +77,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             get;
             set;
         }
+    
         /// <summary>
         /// Identifier of the network request associated with this entry.
         ///</summary>
@@ -79,6 +87,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             get;
             set;
         }
+    
         /// <summary>
         /// Identifier of the worker associated with this entry.
         ///</summary>
@@ -88,5 +97,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             get;
             set;
         }
+    
     }
 }

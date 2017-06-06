@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// </summary>
     public sealed class InlineTextBox
     {
+    
         /// <summary>
         /// The absolute position bounding box.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+    
         /// <summary>
         /// The starting index in characters, for this post layout textbox substring.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+    
         /// <summary>
         /// The number of characters in this post layout textbox substring.
         ///</summary>
@@ -34,5 +37,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+    
     }
 }

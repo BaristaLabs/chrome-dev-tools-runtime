@@ -7,5 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// </summary>
     public sealed class FontsUpdatedEvent : IEvent
     {
+    
     }
 }

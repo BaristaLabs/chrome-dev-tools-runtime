@@ -7,5 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// </summary>
     public sealed class ExecutionContextsClearedEvent : IEvent
     {
+    
     }
 }

@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
     }
 
     public sealed class PrintToPDFCommandResponse : ICommandResponse<PrintToPDFCommand>
     {
+    
+        
         /// <summary>
         /// Base64-encoded pdf data.
         ///</summary>
+        
         [JsonProperty("data")]
         public string Data
         {
             get;
             set;
         }
+    
     }
 }

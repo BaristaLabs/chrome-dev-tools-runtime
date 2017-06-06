@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// </summary>
     public sealed class CustomPreview
     {
+    
         /// <summary>
         /// 
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// 
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// 
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// 
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// 
         ///</summary>
@@ -52,5 +57,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
     }
 }

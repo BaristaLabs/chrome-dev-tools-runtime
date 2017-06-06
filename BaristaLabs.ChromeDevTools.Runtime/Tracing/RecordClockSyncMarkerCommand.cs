@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// The ID of this clock sync marker
         /// </summary>
+        
         [JsonProperty("syncId")]
         public string SyncId
         {
             get;
             set;
         }
+    
     }
 
     public sealed class RecordClockSyncMarkerCommandResponse : ICommandResponse<RecordClockSyncMarkerCommand>
     {
+    
     }
 }

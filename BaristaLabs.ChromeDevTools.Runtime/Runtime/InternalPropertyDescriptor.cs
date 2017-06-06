@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// </summary>
     public sealed class InternalPropertyDescriptor
     {
+    
         /// <summary>
         /// Conventional property name.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// The value associated with the property.
         ///</summary>
@@ -25,5 +27,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
     }
 }

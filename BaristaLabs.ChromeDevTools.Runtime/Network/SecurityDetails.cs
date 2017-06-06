@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// </summary>
     public sealed class SecurityDetails
     {
+    
         /// <summary>
         /// Protocol name (e.g. "TLS 1.2" or "QUIC").
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Key Exchange used by the connection, or the empty string if not applicable.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// (EC)DH group used by the connection, if applicable.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Cipher name.
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// TLS MAC. Note that AEAD ciphers do not have separate MACs.
         ///</summary>
@@ -52,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Certificate ID value.
         ///</summary>
@@ -61,6 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Certificate subject name.
         ///</summary>
@@ -70,6 +77,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Subject Alternative Name (SAN) DNS names and IP addresses.
         ///</summary>
@@ -79,6 +87,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Name of the issuing CA.
         ///</summary>
@@ -88,6 +97,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Certificate valid from date.
         ///</summary>
@@ -97,6 +107,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// Certificate valid to (expiration) date
         ///</summary>
@@ -106,6 +117,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
         /// <summary>
         /// List of signed certificate timestamps (SCTs).
         ///</summary>
@@ -115,5 +127,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+    
     }
 }

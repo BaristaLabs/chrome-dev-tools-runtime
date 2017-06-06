@@ -24,6 +24,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
             get { return m_session; }
         }
 
+    
         /// <summary>
         /// Enables storage tracking, storage events will now be delivered to the client.
         /// </summary>
@@ -31,6 +32,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Disables storage tracking, prevents storage events from being sent to the client.
         /// </summary>
@@ -38,6 +40,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -45,6 +48,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
         {
             return await m_session.SendCommand<ClearCommand, ClearCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -52,6 +56,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
         {
             return await m_session.SendCommand<GetDOMStorageItemsCommand, GetDOMStorageItemsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -59,6 +64,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
         {
             return await m_session.SendCommand<SetDOMStorageItemCommand, SetDOMStorageItemCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -66,7 +72,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
         {
             return await m_session.SendCommand<RemoveDOMStorageItemCommand, RemoveDOMStorageItemCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
 
+    
         /// <summary>
         /// 
         /// </summary>
@@ -74,6 +82,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -81,6 +90,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -88,6 +98,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
         {
             m_session.Subscribe(eventCallback);
         }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -95,5 +106,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
         {
             m_session.Subscribe(eventCallback);
         }
+    
     }
 }

@@ -24,6 +24,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
             get { return m_session; }
         }
 
+    
         /// <summary>
         /// Requests cache names.
         /// </summary>
@@ -31,6 +32,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         {
             return await m_session.SendCommand<RequestCacheNamesCommand, RequestCacheNamesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Requests data from cache.
         /// </summary>
@@ -38,6 +40,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         {
             return await m_session.SendCommand<RequestEntriesCommand, RequestEntriesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Deletes a cache.
         /// </summary>
@@ -45,6 +48,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         {
             return await m_session.SendCommand<DeleteCacheCommand, DeleteCacheCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Deletes a cache entry.
         /// </summary>
@@ -52,6 +56,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         {
             return await m_session.SendCommand<DeleteEntryCommand, DeleteEntryCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
 
+    
     }
 }

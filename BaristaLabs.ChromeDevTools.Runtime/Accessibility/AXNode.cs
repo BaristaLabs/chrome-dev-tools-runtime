@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
     /// </summary>
     public sealed class AXNode
     {
+    
         /// <summary>
         /// Unique identifier for this node.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
         /// <summary>
         /// Whether this node is ignored for accessibility
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
         /// <summary>
         /// Collection of reasons why this node is hidden.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
         /// <summary>
         /// This <code>Node</code>'s role, whether explicit or implicit.
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
         /// <summary>
         /// The accessible name for this <code>Node</code>.
         ///</summary>
@@ -52,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
         /// <summary>
         /// The accessible description for this <code>Node</code>.
         ///</summary>
@@ -61,6 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
         /// <summary>
         /// The value for this <code>Node</code>.
         ///</summary>
@@ -70,6 +77,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
         /// <summary>
         /// All other properties
         ///</summary>
@@ -79,6 +87,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
         /// <summary>
         /// IDs for each of this node's child nodes.
         ///</summary>
@@ -88,6 +97,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
         /// <summary>
         /// The backend ID for the associated DOM node, if any.
         ///</summary>
@@ -97,5 +107,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             get;
             set;
         }
+    
     }
 }

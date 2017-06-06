@@ -7,14 +7,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// </summary>
     public sealed class AnimationStartedEvent : IEvent
     {
+    
+        
         /// <summary>
         /// Animation that was started.
         /// </summary>
+        
         [JsonProperty("animation")]
         public Animation Animation
         {
             get;
             set;
         }
+    
     }
 }

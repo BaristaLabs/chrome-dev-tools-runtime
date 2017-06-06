@@ -10,15 +10,21 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
     [JsonConverter(typeof(StringEnumConverter))]
     public enum AXLiveRegionAttributes
     {
+    
         [EnumMember(Value = "live")]
         Live,
+    
         [EnumMember(Value = "atomic")]
         Atomic,
+    
         [EnumMember(Value = "relevant")]
         Relevant,
+    
         [EnumMember(Value = "busy")]
         Busy,
+    
         [EnumMember(Value = "root")]
         Root,
+    
     }
 }

@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Frame number.
         /// </summary>
+        
         [JsonProperty("sessionId")]
         public long SessionId
         {
             get;
             set;
         }
+    
     }
 
     public sealed class ScreencastFrameAckCommandResponse : ICommandResponse<ScreencastFrameAckCommand>
     {
+    
     }
 }

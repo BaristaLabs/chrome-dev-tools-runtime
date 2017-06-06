@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// </summary>
     public sealed class RemoteObject
     {
+    
         /// <summary>
         /// Object type.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// Object subtype hint. Specified for <code>object</code> type values only.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// Object class (constructor) name. Specified for <code>object</code> type values only.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// Remote object value in case of primitive values or JSON values (if it was requested).
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// Primitive value which can not be JSON-stringified does not have <code>value</code>, but gets this property.
         ///</summary>
@@ -52,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// String representation of the object.
         ///</summary>
@@ -61,6 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// Unique object identifier (for non-primitive values).
         ///</summary>
@@ -70,6 +77,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// Preview containing abbreviated property values. Specified for <code>object</code> type values only.
         ///</summary>
@@ -79,6 +87,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
         /// <summary>
         /// 
         ///</summary>
@@ -88,5 +97,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+    
     }
 }

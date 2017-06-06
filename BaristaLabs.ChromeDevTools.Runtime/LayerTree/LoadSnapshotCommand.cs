@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// An array of tiles composing the snapshot.
         /// </summary>
+        
         [JsonProperty("tiles")]
         public PictureTile[] Tiles
         {
             get;
             set;
         }
+    
     }
 
     public sealed class LoadSnapshotCommandResponse : ICommandResponse<LoadSnapshotCommand>
     {
+    
+        
         /// <summary>
         /// The id of the snapshot.
         ///</summary>
+        
         [JsonProperty("snapshotId")]
         public string SnapshotId
         {
             get;
             set;
         }
+    
     }
 }

@@ -7,42 +7,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     /// </summary>
     public sealed class CoverageRange
     {
+    
         /// <summary>
-        /// JavaScript script line number (0-based) for the range start.
+        /// JavaScript script source offset for the range start.
         ///</summary>
-        [JsonProperty("startLineNumber")]
-        public long StartLineNumber
+        [JsonProperty("startOffset")]
+        public long StartOffset
         {
             get;
             set;
         }
+    
         /// <summary>
-        /// JavaScript script column number (0-based) for the range start.
+        /// JavaScript script source offset for the range end.
         ///</summary>
-        [JsonProperty("startColumnNumber")]
-        public long StartColumnNumber
+        [JsonProperty("endOffset")]
+        public long EndOffset
         {
             get;
             set;
         }
-        /// <summary>
-        /// JavaScript script line number (0-based) for the range end.
-        ///</summary>
-        [JsonProperty("endLineNumber")]
-        public long EndLineNumber
-        {
-            get;
-            set;
-        }
-        /// <summary>
-        /// JavaScript script column number (0-based) for the range end.
-        ///</summary>
-        [JsonProperty("endColumnNumber")]
-        public long EndColumnNumber
-        {
-            get;
-            set;
-        }
+    
         /// <summary>
         /// Collected execution count of the source range.
         ///</summary>
@@ -52,5 +37,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
+    
     }
 }

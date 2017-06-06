@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     /// </summary>
     public sealed class ScrollRect
     {
+    
         /// <summary>
         /// Rectangle itself.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
+    
         /// <summary>
         /// Reason for rectangle to force scrolling on the main thread
         ///</summary>
@@ -25,5 +27,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
+    
     }
 }

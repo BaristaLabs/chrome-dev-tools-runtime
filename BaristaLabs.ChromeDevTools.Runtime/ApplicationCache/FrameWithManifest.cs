@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
     /// </summary>
     public sealed class FrameWithManifest
     {
+    
         /// <summary>
         /// Frame identifier.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
             get;
             set;
         }
+    
         /// <summary>
         /// Manifest URL.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
             get;
             set;
         }
+    
         /// <summary>
         /// Application cache status.
         ///</summary>
@@ -34,5 +37,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
             get;
             set;
         }
+    
     }
 }

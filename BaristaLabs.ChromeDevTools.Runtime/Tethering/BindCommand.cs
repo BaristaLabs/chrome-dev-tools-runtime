@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tethering
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Port number to bind.
         /// </summary>
+        
         [JsonProperty("port")]
         public long Port
         {
             get;
             set;
         }
+    
     }
 
     public sealed class BindCommandResponse : ICommandResponse<BindCommand>
     {
+    
     }
 }

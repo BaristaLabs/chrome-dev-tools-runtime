@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Security origin.
         /// </summary>
+        
         [JsonProperty("securityOrigin")]
         public string SecurityOrigin
         {
             get;
             set;
         }
+    
     }
 
     public sealed class RequestDatabaseNamesCommandResponse : ICommandResponse<RequestDatabaseNamesCommand>
     {
+    
+        
         /// <summary>
         /// Database names for origin.
         ///</summary>
+        
         [JsonProperty("databaseNames")]
         public string[] DatabaseNames
         {
             get;
             set;
         }
+    
     }
 }

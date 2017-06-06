@@ -15,36 +15,47 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Identifier of the frame to highlight.
         /// </summary>
+        
         [JsonProperty("frameId")]
         public string FrameId
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// The content box highlight fill color (default: transparent).
         /// </summary>
+        
         [JsonProperty("contentColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RGBA ContentColor
         {
             get;
             set;
         }
+    
+        
         /// <summary>
         /// The content box highlight outline color (default: transparent).
         /// </summary>
+        
         [JsonProperty("contentOutlineColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RGBA ContentOutlineColor
         {
             get;
             set;
         }
+    
     }
 
     public sealed class HighlightFrameCommandResponse : ICommandResponse<HighlightFrameCommand>
     {
+    
     }
 }

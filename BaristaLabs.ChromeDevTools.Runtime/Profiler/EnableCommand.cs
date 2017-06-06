@@ -15,9 +15,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
     }
 
     public sealed class EnableCommandResponse : ICommandResponse<EnableCommand>
     {
+    
     }
 }

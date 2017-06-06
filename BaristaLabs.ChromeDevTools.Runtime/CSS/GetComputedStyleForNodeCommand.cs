@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Returns the computed style for a DOM node identified by &lt;code&gt;nodeId&lt;/code&gt;.
+    /// Returns the computed style for a DOM node identified by <code>nodeId</code>.
     /// </summary>
     public sealed class GetComputedStyleForNodeCommand : ICommand
     {
@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Gets or sets the nodeId
         /// </summary>
+        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
+    
     }
 
     public sealed class GetComputedStyleForNodeCommandResponse : ICommandResponse<GetComputedStyleForNodeCommand>
     {
+    
+        
         /// <summary>
         /// Computed style for the specified DOM node.
         ///</summary>
+        
         [JsonProperty("computedStyle")]
         public CSSComputedStyleProperty[] ComputedStyle
         {
             get;
             set;
         }
+    
     }
 }

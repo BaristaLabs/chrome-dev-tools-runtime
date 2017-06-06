@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// If true, memory pressure notifications will be suppressed.
         /// </summary>
+        
         [JsonProperty("suppressed")]
         public bool Suppressed
         {
             get;
             set;
         }
+    
     }
 
     public sealed class SetPressureNotificationsSuppressedCommandResponse : ICommandResponse<SetPressureNotificationsSuppressedCommand>
     {
+    
     }
 }

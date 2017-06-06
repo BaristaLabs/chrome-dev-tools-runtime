@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// </summary>
     public sealed class FrameResource
     {
+    
         /// <summary>
         /// Resource URL.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Type of this resource.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Resource mimeType as determined by the browser.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// last-modified timestamp as reported by server.
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Resource content size.
         ///</summary>
@@ -52,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// True if the resource failed to load.
         ///</summary>
@@ -61,6 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// True if the resource was canceled during loading.
         ///</summary>
@@ -70,5 +77,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
     }
 }

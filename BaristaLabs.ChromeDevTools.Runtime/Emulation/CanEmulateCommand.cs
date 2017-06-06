@@ -15,18 +15,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
     }
 
     public sealed class CanEmulateCommandResponse : ICommandResponse<CanEmulateCommand>
     {
+    
+        
         /// <summary>
         /// True if emulation is supported.
         ///</summary>
+        
         [JsonProperty("result")]
         public bool Result
         {
             get;
             set;
         }
+    
     }
 }

@@ -7,14 +7,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// </summary>
     public sealed class FrameStartedLoadingEvent : IEvent
     {
+    
+        
         /// <summary>
         /// Id of the frame that has started loading.
         /// </summary>
+        
         [JsonProperty("frameId")]
         public string FrameId
         {
             get;
             set;
         }
+    
     }
 }

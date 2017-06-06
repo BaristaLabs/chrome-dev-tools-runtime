@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Gets or sets the nodeId
         /// </summary>
+        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
+    
     }
 
     public sealed class GetPlatformFontsForNodeCommandResponse : ICommandResponse<GetPlatformFontsForNodeCommand>
     {
+    
+        
         /// <summary>
         /// Usage statistics for every employed platform font.
         ///</summary>
+        
         [JsonProperty("fonts")]
         public PlatformFontUsage[] Fonts
         {
             get;
             set;
         }
+    
     }
 }

@@ -7,14 +7,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     /// </summary>
     public sealed class WorkerRegistrationUpdatedEvent : IEvent
     {
+    
+        
         /// <summary>
         /// Gets or sets the registrations
         /// </summary>
+        
         [JsonProperty("registrations")]
         public ServiceWorkerRegistration[] Registrations
         {
             get;
             set;
         }
+    
     }
 }

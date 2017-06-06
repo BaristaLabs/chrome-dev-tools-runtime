@@ -10,11 +10,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     [JsonConverter(typeof(StringEnumConverter))]
     public enum NavigationResponse
     {
+    
         [EnumMember(Value = "Proceed")]
         Proceed,
+    
         [EnumMember(Value = "Cancel")]
         Cancel,
+    
         [EnumMember(Value = "CancelAndIgnore")]
         CancelAndIgnore,
+    
     }
 }

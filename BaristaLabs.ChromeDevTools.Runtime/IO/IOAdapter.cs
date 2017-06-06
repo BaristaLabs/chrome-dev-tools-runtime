@@ -24,6 +24,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
             get { return m_session; }
         }
 
+    
         /// <summary>
         /// Read a chunk of the stream
         /// </summary>
@@ -31,6 +32,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
         {
             return await m_session.SendCommand<ReadCommand, ReadCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
         /// <summary>
         /// Close the stream, discard any temporary backing storage.
         /// </summary>
@@ -38,6 +40,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
         {
             return await m_session.SendCommand<CloseCommand, CloseCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+    
 
+    
     }
 }

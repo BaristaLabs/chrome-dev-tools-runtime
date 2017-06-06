@@ -7,5 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// </summary>
     public sealed class InterstitialHiddenEvent : IEvent
     {
+    
     }
 }

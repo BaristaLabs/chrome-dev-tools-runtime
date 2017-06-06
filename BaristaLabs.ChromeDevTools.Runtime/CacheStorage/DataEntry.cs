@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
     /// </summary>
     public sealed class DataEntry
     {
+    
         /// <summary>
         /// Request url spec.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
             get;
             set;
         }
+    
         /// <summary>
         /// Response stataus text.
         ///</summary>
@@ -25,5 +27,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
             get;
             set;
         }
+    
     }
 }

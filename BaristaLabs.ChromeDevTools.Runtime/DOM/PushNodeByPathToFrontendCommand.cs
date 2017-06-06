@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Path to node in the proprietary format.
         /// </summary>
+        
         [JsonProperty("path")]
         public string Path
         {
             get;
             set;
         }
+    
     }
 
     public sealed class PushNodeByPathToFrontendCommandResponse : ICommandResponse<PushNodeByPathToFrontendCommand>
     {
+    
+        
         /// <summary>
         /// Id of the node for given path.
         ///</summary>
+        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
+    
     }
 }

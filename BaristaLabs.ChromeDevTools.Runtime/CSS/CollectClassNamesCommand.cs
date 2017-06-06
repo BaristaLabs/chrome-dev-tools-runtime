@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Gets or sets the styleSheetId
         /// </summary>
+        
         [JsonProperty("styleSheetId")]
         public string StyleSheetId
         {
             get;
             set;
         }
+    
     }
 
     public sealed class CollectClassNamesCommandResponse : ICommandResponse<CollectClassNamesCommand>
     {
+    
+        
         /// <summary>
         /// Class name list.
         ///</summary>
+        
         [JsonProperty("classNames")]
         public string[] ClassNames
         {
             get;
             set;
         }
+    
     }
 }

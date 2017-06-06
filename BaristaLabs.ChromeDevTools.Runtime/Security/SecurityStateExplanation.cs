@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
     /// </summary>
     public sealed class SecurityStateExplanation
     {
+    
         /// <summary>
         /// Security state representing the severity of the factor being explained.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             get;
             set;
         }
+    
         /// <summary>
         /// Short phrase describing the type of factor.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             get;
             set;
         }
+    
         /// <summary>
         /// Full text explanation of the factor.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             get;
             set;
         }
+    
         /// <summary>
         /// True if the page has a certificate.
         ///</summary>
@@ -43,5 +47,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             get;
             set;
         }
+    
     }
 }

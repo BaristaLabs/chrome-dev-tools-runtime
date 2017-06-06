@@ -7,5 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// </summary>
     public sealed class Headers
     {
+    
     }
 }

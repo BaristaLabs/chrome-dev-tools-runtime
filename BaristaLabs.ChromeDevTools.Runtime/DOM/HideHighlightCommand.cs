@@ -15,9 +15,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
     }
 
     public sealed class HideHighlightCommandResponse : ICommandResponse<HideHighlightCommand>
     {
+    
     }
 }

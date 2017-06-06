@@ -15,27 +15,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+    
+        
         /// <summary>
         /// Gets or sets the databaseId
         /// </summary>
+        
         [JsonProperty("databaseId")]
         public string DatabaseId
         {
             get;
             set;
         }
+    
     }
 
     public sealed class GetDatabaseTableNamesCommandResponse : ICommandResponse<GetDatabaseTableNamesCommand>
     {
+    
+        
         /// <summary>
         /// Gets or sets the tableNames
         /// </summary>
+        
         [JsonProperty("tableNames")]
         public string[] TableNames
         {
             get;
             set;
         }
+    
     }
 }

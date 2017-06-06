@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     /// </summary>
     public sealed class Profile
     {
+    
         /// <summary>
         /// The list of profile nodes. First item is the root node.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
+    
         /// <summary>
         /// Profiling start timestamp in microseconds.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
+    
         /// <summary>
         /// Profiling end timestamp in microseconds.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
+    
         /// <summary>
         /// Ids of samples top nodes.
         ///</summary>
@@ -43,6 +47,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
+    
         /// <summary>
         /// Time intervals between adjacent samples in microseconds. The first delta is relative to the profile startTime.
         ///</summary>
@@ -52,5 +57,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
+    
     }
 }

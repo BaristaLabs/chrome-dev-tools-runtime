@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// </summary>
     public sealed class RGBA
     {
+    
         /// <summary>
         /// The red component, in the [0-255] range.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// The green component, in the [0-255] range.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// The blue component, in the [0-255] range.
         ///</summary>
@@ -34,6 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
         /// <summary>
         /// The alpha component, in the [0-1] range (default: 1).
         ///</summary>
@@ -43,5 +47,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+    
     }
 }

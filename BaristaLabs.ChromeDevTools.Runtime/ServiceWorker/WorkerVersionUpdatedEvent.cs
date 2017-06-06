@@ -7,14 +7,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     /// </summary>
     public sealed class WorkerVersionUpdatedEvent : IEvent
     {
+    
+        
         /// <summary>
         /// Gets or sets the versions
         /// </summary>
+        
         [JsonProperty("versions")]
         public ServiceWorkerVersion[] Versions
         {
             get;
             set;
         }
+    
     }
 }

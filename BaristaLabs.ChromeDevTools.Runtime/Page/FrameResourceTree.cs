@@ -7,6 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     /// </summary>
     public sealed class FrameResourceTree
     {
+    
         /// <summary>
         /// Frame information for this tree item.
         ///</summary>
@@ -16,6 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Child frames.
         ///</summary>
@@ -25,6 +27,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
         /// <summary>
         /// Information about frame resources.
         ///</summary>
@@ -34,5 +37,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+    
     }
 }
