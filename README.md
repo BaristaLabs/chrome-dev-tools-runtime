@@ -9,10 +9,29 @@ Sample usage of the [Chrome Developer Protocol](https://developer.chrome.com/dev
  - Launch Chrome with debugging enabled at port 9223
  - Run
 
+Windows: 
 ``` bash
 $ git clone https://github.com/BaristaLabs/chrome-dev-tools-sample
 $ cd chrome-dev-tools-sample\ChromeDevToolsCLI
 $ "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9223
+$ dotnet restore
+$ dotnet run
+```
+
+macOS:
+
+On macOS the behavior is a little different when launching the chrome process.
+
+First, open a new terminal window and execute
+``` bash
+$ /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9223 --user-data-dir=remote-profile
+```
+
+Then clone and run the samples in another terminal window:
+``` bash
+$ git clone https://github.com/BaristaLabs/chrome-dev-tools-sample
+$ cd chrome-dev-tools-sample/ChromeDevToolsCLI/
+$ dotnet restore
 $ dotnet run
 ```
 
