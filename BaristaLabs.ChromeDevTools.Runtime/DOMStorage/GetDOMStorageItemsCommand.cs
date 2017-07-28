@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Gets or sets the storageId
         /// </summary>
-        
         [JsonProperty("storageId")]
         public StorageId StorageId
         {
             get;
             set;
         }
-    
     }
 
     public sealed class GetDOMStorageItemsCommandResponse : ICommandResponse<GetDOMStorageItemsCommand>
     {
-    
-        
         /// <summary>
         /// Gets or sets the entries
         /// </summary>
-        
         [JsonProperty("entries")]
         public string[][] Entries
         {
             get;
             set;
         }
-    
     }
 }

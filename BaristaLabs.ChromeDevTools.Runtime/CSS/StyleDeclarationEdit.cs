@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// </summary>
     public sealed class StyleDeclarationEdit
     {
-    
         /// <summary>
         /// The css style sheet identifier.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
         /// The range of the style text in the enclosing stylesheet.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
         /// New style text.
         ///</summary>
@@ -37,6 +34,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
     }
 }

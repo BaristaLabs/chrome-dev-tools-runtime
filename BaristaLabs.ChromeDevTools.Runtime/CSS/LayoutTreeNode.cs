@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// </summary>
     public sealed class LayoutTreeNode
     {
-    
         /// <summary>
         /// The id of the related DOM node matching one from DOM.GetDocument.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
         /// The absolute position bounding box.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
         /// Contents of the LayoutText if any
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
         /// The post layout inline text nodes, if any.
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
         /// Index into the computedStyles array returned by getLayoutTreeAndStyles.
         ///</summary>
@@ -57,6 +52,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
     }
 }

@@ -7,18 +7,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// </summary>
     public sealed class StyleSheetAddedEvent : IEvent
     {
-    
-        
         /// <summary>
         /// Added stylesheet metainfo.
         /// </summary>
-        
         [JsonProperty("header")]
         public CSSStyleSheetHeader Header
         {
             get;
             set;
         }
-    
     }
 }

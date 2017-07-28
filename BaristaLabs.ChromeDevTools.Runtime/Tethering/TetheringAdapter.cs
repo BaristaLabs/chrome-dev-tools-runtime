@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tethering
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// Request browser port binding.
         /// </summary>
@@ -32,7 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tethering
         {
             return await m_session.SendCommand<BindCommand, BindCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Request browser port unbinding.
         /// </summary>
@@ -40,9 +38,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tethering
         {
             return await m_session.SendCommand<UnbindCommand, UnbindCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
         /// <summary>
         /// Informs that port was successfully bound and got a specified connection id.
         /// </summary>
@@ -50,6 +46,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tethering
         {
             m_session.Subscribe(eventCallback);
         }
-    
     }
 }

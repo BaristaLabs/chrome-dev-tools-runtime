@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Enables target discovery for the specified locations, when <code>setDiscoverTargets</code> was set to <code>true</code>.
+    /// Enables target discovery for the specified locations, when &lt;code&gt;setDiscoverTargets&lt;/code&gt; was set to &lt;code&gt;true&lt;/code&gt;.
     /// </summary>
     public sealed class SetRemoteLocationsCommand : ICommand
     {
@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// List of remote locations.
         /// </summary>
-        
         [JsonProperty("locations")]
         public RemoteLocation[] Locations
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetRemoteLocationsCommandResponse : ICommandResponse<SetRemoteLocationsCommand>
     {
-    
     }
 }

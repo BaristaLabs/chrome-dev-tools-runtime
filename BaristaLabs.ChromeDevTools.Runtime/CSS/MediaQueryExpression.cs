@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// </summary>
     public sealed class MediaQueryExpression
     {
-    
         /// <summary>
         /// Media query expression value.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
         /// Media query expression units.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
         /// Media query expression feature.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
         /// The associated range of the value text in the enclosing stylesheet (if available).
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
         /// Computed length of media query expression (if applicable).
         ///</summary>
@@ -57,6 +52,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
     }
 }

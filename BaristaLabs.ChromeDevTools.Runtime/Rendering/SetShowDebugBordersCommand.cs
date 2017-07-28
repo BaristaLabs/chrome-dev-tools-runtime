@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Rendering
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// True for showing debug borders
         /// </summary>
-        
         [JsonProperty("show")]
         public bool Show
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetShowDebugBordersCommandResponse : ICommandResponse<SetShowDebugBordersCommand>
     {
-    
     }
 }

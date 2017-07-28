@@ -7,7 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         private Lazy<Inspector.InspectorAdapter> m_Inspector;
         private Lazy<Memory.MemoryAdapter> m_Memory;
         private Lazy<Page.PageAdapter> m_Page;
-        private Lazy<Rendering.RenderingAdapter> m_Rendering;
+        private Lazy<Overlay.OverlayAdapter> m_Overlay;
         private Lazy<Emulation.EmulationAdapter> m_Emulation;
         private Lazy<Security.SecurityAdapter> m_Security;
         private Lazy<Network.NetworkAdapter> m_Network;
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
             m_Inspector = new Lazy<Inspector.InspectorAdapter>(() => new Inspector.InspectorAdapter(this));
             m_Memory = new Lazy<Memory.MemoryAdapter>(() => new Memory.MemoryAdapter(this));
             m_Page = new Lazy<Page.PageAdapter>(() => new Page.PageAdapter(this));
-            m_Rendering = new Lazy<Rendering.RenderingAdapter>(() => new Rendering.RenderingAdapter(this));
+            m_Overlay = new Lazy<Overlay.OverlayAdapter>(() => new Overlay.OverlayAdapter(this));
             m_Emulation = new Lazy<Emulation.EmulationAdapter>(() => new Emulation.EmulationAdapter(this));
             m_Security = new Lazy<Security.SecurityAdapter>(() => new Security.SecurityAdapter(this));
             m_Network = new Lazy<Network.NetworkAdapter>(() => new Network.NetworkAdapter(this));
@@ -104,11 +104,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         }
         
         /// <summary>
-        /// Gets the adapter for the Rendering domain.
+        /// Gets the adapter for the Overlay domain.
         /// </summary>
-        public Rendering.RenderingAdapter Rendering
+        public Overlay.OverlayAdapter Overlay
         {
-            get { return m_Rendering.Value; }
+            get { return m_Overlay.Value; }
         }
         
         /// <summary>

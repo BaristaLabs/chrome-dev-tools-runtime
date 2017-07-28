@@ -7,6 +7,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     /// </summary>
     public sealed class VirtualTimeBudgetExpiredEvent : IEvent
     {
-    
     }
 }

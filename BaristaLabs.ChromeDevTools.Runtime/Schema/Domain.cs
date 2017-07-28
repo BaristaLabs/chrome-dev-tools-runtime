@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Schema
     /// </summary>
     public sealed class Domain
     {
-    
         /// <summary>
         /// Domain name.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Schema
             get;
             set;
         }
-    
         /// <summary>
         /// Domain version.
         ///</summary>
@@ -27,6 +25,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Schema
             get;
             set;
         }
-    
     }
 }

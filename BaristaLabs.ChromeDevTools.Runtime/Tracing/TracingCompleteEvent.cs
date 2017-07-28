@@ -7,18 +7,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     /// </summary>
     public sealed class TracingCompleteEvent : IEvent
     {
-    
-        
         /// <summary>
         /// A handle of the stream that holds resulting trace data.
         /// </summary>
-        
         [JsonProperty("stream", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Stream
         {
             get;
             set;
         }
-    
     }
 }

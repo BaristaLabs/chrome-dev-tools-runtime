@@ -15,47 +15,36 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Id of the node to set name for.
         /// </summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// New node's name.
         /// </summary>
-        
         [JsonProperty("name")]
         public string Name
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetNodeNameCommandResponse : ICommandResponse<SetNodeNameCommand>
     {
-    
-        
         /// <summary>
         /// New node's id.
         ///</summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
     }
 }

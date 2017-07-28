@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
     /// </summary>
     public sealed class KeyPath
     {
-    
         /// <summary>
         /// Key path type.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
         /// <summary>
         /// String value.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
         /// <summary>
         /// Array value.
         ///</summary>
@@ -37,6 +34,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
     }
 }

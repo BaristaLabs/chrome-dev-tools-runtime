@@ -10,24 +10,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     [JsonConverter(typeof(StringEnumConverter))]
     public enum BlockedReason
     {
-    
         [EnumMember(Value = "csp")]
         Csp,
-    
         [EnumMember(Value = "mixed-content")]
         MixedContent,
-    
         [EnumMember(Value = "origin")]
         Origin,
-    
         [EnumMember(Value = "inspector")]
         Inspector,
-    
         [EnumMember(Value = "subresource-filter")]
         SubresourceFilter,
-    
         [EnumMember(Value = "other")]
         Other,
-    
     }
 }

@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Gets or sets the enabled
         /// </summary>
-        
         [JsonProperty("enabled")]
         public bool Enabled
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetControlNavigationsCommandResponse : ICommandResponse<SetControlNavigationsCommand>
     {
-    
     }
 }

@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     /// </summary>
     public sealed class ProfileNode
     {
-    
         /// <summary>
         /// Unique id of the node.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
-    
         /// <summary>
         /// Function location.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
-    
         /// <summary>
         /// Number of samples where this node was on top of the call stack.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
-    
         /// <summary>
         /// Child node ids.
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
-    
         /// <summary>
         /// The reason of being not optimized. The function may be deoptimized or marked as don't optimize.
         ///</summary>
@@ -57,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
-    
         /// <summary>
         /// An array of source position ticks.
         ///</summary>
@@ -67,6 +61,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
-    
     }
 }

@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
     /// </summary>
     public sealed class ConsoleMessage
     {
-    
         /// <summary>
         /// Message source.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
             get;
             set;
         }
-    
         /// <summary>
         /// Message severity.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
             get;
             set;
         }
-    
         /// <summary>
         /// Message text.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
             get;
             set;
         }
-    
         /// <summary>
         /// URL of the message origin.
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
             get;
             set;
         }
-    
         /// <summary>
         /// Line number in the resource that generated this message (1-based).
         ///</summary>
@@ -57,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
             get;
             set;
         }
-    
         /// <summary>
         /// Column number in the resource that generated this message (1-based).
         ///</summary>
@@ -67,6 +61,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
             get;
             set;
         }
-    
     }
 }

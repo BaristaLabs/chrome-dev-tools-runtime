@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Stops sending each frame in the <code>screencastFrame</code>.
+    /// Stops sending each frame in the &lt;code&gt;screencastFrame&lt;/code&gt;.
     /// </summary>
     public sealed class StopScreencastCommand : ICommand
     {
@@ -15,11 +15,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
     }
 
     public sealed class StopScreencastCommandResponse : ICommandResponse<StopScreencastCommand>
     {
-    
     }
 }

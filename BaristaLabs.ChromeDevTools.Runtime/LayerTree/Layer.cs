@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     /// </summary>
     public sealed class Layer
     {
-    
         /// <summary>
         /// The unique id for this layer.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// The id of parent (not present for root).
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// The backend id for the node associated with this layer.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// Offset from parent layer, X coordinate.
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// Offset from parent layer, Y coordinate.
         ///</summary>
@@ -57,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// Layer width.
         ///</summary>
@@ -67,7 +61,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// Layer height.
         ///</summary>
@@ -77,7 +70,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// Transformation matrix for layer, default is identity matrix
         ///</summary>
@@ -87,7 +79,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// Transform anchor point X, absent if no transform specified
         ///</summary>
@@ -97,7 +88,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// Transform anchor point Y, absent if no transform specified
         ///</summary>
@@ -107,7 +97,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// Transform anchor point Z, absent if no transform specified
         ///</summary>
@@ -117,7 +106,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// Indicates how many time this layer has painted.
         ///</summary>
@@ -127,7 +115,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// Indicates whether this layer hosts any content, rather than being used for transform/scrolling purposes only.
         ///</summary>
@@ -137,7 +124,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// Set if layer is not visible.
         ///</summary>
@@ -147,7 +133,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// Rectangles scrolling on main thread only.
         ///</summary>
@@ -157,6 +142,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
     }
 }

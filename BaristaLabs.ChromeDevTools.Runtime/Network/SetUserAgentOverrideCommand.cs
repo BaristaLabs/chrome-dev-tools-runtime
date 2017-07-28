@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// User agent to use.
         /// </summary>
-        
         [JsonProperty("userAgent")]
         public string UserAgent
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetUserAgentOverrideCommandResponse : ICommandResponse<SetUserAgentOverrideCommand>
     {
-    
     }
 }

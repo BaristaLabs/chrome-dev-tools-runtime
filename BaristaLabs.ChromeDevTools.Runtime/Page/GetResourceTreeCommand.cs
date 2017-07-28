@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
     }
 
     public sealed class GetResourceTreeCommandResponse : ICommandResponse<GetResourceTreeCommand>
     {
-    
-        
         /// <summary>
         /// Present frame / resource tree structure.
         ///</summary>
-        
         [JsonProperty("frameTree")]
         public FrameResourceTree FrameTree
         {
             get;
             set;
         }
-    
     }
 }

@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// </summary>
     public sealed class WebSocketFrame
     {
-    
         /// <summary>
         /// WebSocket frame opcode.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// WebSocke frame mask.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// WebSocke frame payload data.
         ///</summary>
@@ -37,6 +34,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
     }
 }

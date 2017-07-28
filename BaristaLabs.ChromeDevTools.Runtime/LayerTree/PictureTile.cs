@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     /// </summary>
     public sealed class PictureTile
     {
-    
         /// <summary>
         /// Offset from owning layer left boundary
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// Offset from owning layer top boundary
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
         /// <summary>
         /// Base64-encoded snapshot data.
         ///</summary>
@@ -37,6 +34,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
-    
     }
 }

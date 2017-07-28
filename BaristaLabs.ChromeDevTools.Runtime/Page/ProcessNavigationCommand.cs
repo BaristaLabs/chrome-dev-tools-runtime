@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Gets or sets the response
         /// </summary>
-        
         [JsonProperty("response")]
         public NavigationResponse Response
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Gets or sets the navigationId
         /// </summary>
-        
         [JsonProperty("navigationId")]
         public long NavigationId
         {
             get;
             set;
         }
-    
     }
 
     public sealed class ProcessNavigationCommandResponse : ICommandResponse<ProcessNavigationCommand>
     {
-    
     }
 }

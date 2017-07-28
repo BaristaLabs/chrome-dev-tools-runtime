@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Memory pressure level of the notification.
         /// </summary>
-        
         [JsonProperty("level")]
         public PressureLevel Level
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SimulatePressureNotificationCommandResponse : ICommandResponse<SimulatePressureNotificationCommand>
     {
-    
     }
 }

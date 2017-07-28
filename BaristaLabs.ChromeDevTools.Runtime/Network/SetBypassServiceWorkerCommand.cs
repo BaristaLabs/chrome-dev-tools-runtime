@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Bypass service worker and load from network.
         /// </summary>
-        
         [JsonProperty("bypass")]
         public bool Bypass
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetBypassServiceWorkerCommandResponse : ICommandResponse<SetBypassServiceWorkerCommand>
     {
-    
     }
 }

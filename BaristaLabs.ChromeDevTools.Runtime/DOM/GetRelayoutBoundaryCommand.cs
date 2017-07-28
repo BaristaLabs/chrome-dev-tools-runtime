@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Id of the node.
         /// </summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
     }
 
     public sealed class GetRelayoutBoundaryCommandResponse : ICommandResponse<GetRelayoutBoundaryCommand>
     {
-    
-        
         /// <summary>
         /// Relayout boundary node id for the given node.
         ///</summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
     }
 }

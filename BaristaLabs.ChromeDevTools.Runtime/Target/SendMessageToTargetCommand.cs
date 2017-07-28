@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Gets or sets the targetId
         /// </summary>
-        
         [JsonProperty("targetId")]
         public string TargetId
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Gets or sets the message
         /// </summary>
-        
         [JsonProperty("message")]
         public string Message
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SendMessageToTargetCommandResponse : ICommandResponse<SendMessageToTargetCommand>
     {
-    
     }
 }

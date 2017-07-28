@@ -7,42 +7,32 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// </summary>
     public sealed class LoadingFinishedEvent : IEvent
     {
-    
-        
         /// <summary>
         /// Request identifier.
         /// </summary>
-        
         [JsonProperty("requestId")]
         public string RequestId
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Timestamp.
         /// </summary>
-        
         [JsonProperty("timestamp")]
         public double Timestamp
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Total number of bytes received for this request.
         /// </summary>
-        
         [JsonProperty("encodedDataLength")]
         public double EncodedDataLength
         {
             get;
             set;
         }
-    
     }
 }

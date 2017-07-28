@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
     /// </summary>
     public sealed class ObjectStore
     {
-    
         /// <summary>
         /// Object store name.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
         /// <summary>
         /// Object store key path.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
         /// <summary>
         /// If true, object store has auto increment flag set.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
         /// <summary>
         /// Indexes in this object store.
         ///</summary>
@@ -47,6 +43,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
     }
 }

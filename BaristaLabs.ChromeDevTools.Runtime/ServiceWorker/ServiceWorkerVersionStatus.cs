@@ -10,24 +10,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ServiceWorkerVersionStatus
     {
-    
         [EnumMember(Value = "new")]
         New,
-    
         [EnumMember(Value = "installing")]
         Installing,
-    
         [EnumMember(Value = "installed")]
         Installed,
-    
         [EnumMember(Value = "activating")]
         Activating,
-    
         [EnumMember(Value = "activated")]
         Activated,
-    
         [EnumMember(Value = "redundant")]
         Redundant,
-    
     }
 }

@@ -7,18 +7,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// </summary>
     public sealed class RequestServedFromCacheEvent : IEvent
     {
-    
-        
         /// <summary>
         /// Request identifier.
         /// </summary>
-        
         [JsonProperty("requestId")]
         public string RequestId
         {
             get;
             set;
         }
-    
     }
 }

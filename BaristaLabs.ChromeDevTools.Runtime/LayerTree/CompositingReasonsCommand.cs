@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// The id of the layer for which we want to get the reasons it was composited.
         /// </summary>
-        
         [JsonProperty("layerId")]
         public string LayerId
         {
             get;
             set;
         }
-    
     }
 
     public sealed class CompositingReasonsCommandResponse : ICommandResponse<CompositingReasonsCommand>
     {
-    
-        
         /// <summary>
         /// A list of strings specifying reasons for the given layer to become composited.
         ///</summary>
-        
         [JsonProperty("compositingReasons")]
         public string[] CompositingReasons
         {
             get;
             set;
         }
-    
     }
 }

@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Resource URL substring. All XHRs having this substring in the URL will get stopped upon.
         /// </summary>
-        
         [JsonProperty("url")]
         public string Url
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetXHRBreakpointCommandResponse : ICommandResponse<SetXHRBreakpointCommand>
     {
-    
     }
 }

@@ -7,9 +7,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// </summary>
     public sealed class BreakLocation
     {
-    
         /// <summary>
-        /// Script identifier as reported in the <code>Debugger.scriptParsed</code>.
+        /// Script identifier as reported in the &lt;code&gt;Debugger.scriptParsed&lt;/code&gt;.
         ///</summary>
         [JsonProperty("scriptId")]
         public string ScriptId
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
-    
         /// <summary>
         /// Line number in the script (0-based).
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
-    
         /// <summary>
         /// Column number in the script (0-based).
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
-    
         /// <summary>
         /// 
         ///</summary>
@@ -47,6 +43,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
-    
     }
 }

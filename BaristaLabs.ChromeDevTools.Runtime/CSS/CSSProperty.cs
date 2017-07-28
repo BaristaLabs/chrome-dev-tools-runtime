@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// </summary>
     public sealed class CSSProperty
     {
-    
         /// <summary>
         /// The property name.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
         /// The property value.
         ///</summary>
@@ -27,9 +25,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
-        /// Whether the property has "!important" annotation (implies <code>false</code> if absent).
+        /// Whether the property has &quot;!important&quot; annotation (implies &lt;code&gt;false&lt;/code&gt; if absent).
         ///</summary>
         [JsonProperty("important", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Important
@@ -37,9 +34,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
-        /// Whether the property is implicit (implies <code>false</code> if absent).
+        /// Whether the property is implicit (implies &lt;code&gt;false&lt;/code&gt; if absent).
         ///</summary>
         [JsonProperty("implicit", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Implicit
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
         /// The full property text as specified in the style.
         ///</summary>
@@ -57,9 +52,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
-        /// Whether the property is understood by the browser (implies <code>true</code> if absent).
+        /// Whether the property is understood by the browser (implies &lt;code&gt;true&lt;/code&gt; if absent).
         ///</summary>
         [JsonProperty("parsedOk", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? ParsedOk
@@ -67,7 +61,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
         /// Whether the property is disabled by the user (present for source-based properties only).
         ///</summary>
@@ -77,7 +70,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
         /// The entire property range in the enclosing style declaration (if available).
         ///</summary>
@@ -87,6 +79,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
     }
 }

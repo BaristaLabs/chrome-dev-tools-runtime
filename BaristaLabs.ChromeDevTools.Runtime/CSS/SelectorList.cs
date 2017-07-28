@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     /// </summary>
     public sealed class SelectorList
     {
-    
         /// <summary>
         /// Selectors in the list.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
         /// <summary>
         /// Rule selector text.
         ///</summary>
@@ -27,6 +25,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
-    
     }
 }

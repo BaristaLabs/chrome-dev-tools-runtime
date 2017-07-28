@@ -15,11 +15,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
     }
 
     public sealed class UndoCommandResponse : ICommandResponse<UndoCommand>
     {
-    
     }
 }

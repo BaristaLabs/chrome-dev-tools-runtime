@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Identifier of the frame containing document whose application cache is retrieved.
         /// </summary>
-        
         [JsonProperty("frameId")]
         public string FrameId
         {
             get;
             set;
         }
-    
     }
 
     public sealed class GetApplicationCacheForFrameCommandResponse : ICommandResponse<GetApplicationCacheForFrameCommand>
     {
-    
-        
         /// <summary>
         /// Relevant application cache data for the document in given frame.
         ///</summary>
-        
         [JsonProperty("applicationCache")]
         public ApplicationCache ApplicationCache
         {
             get;
             set;
         }
-    
     }
 }

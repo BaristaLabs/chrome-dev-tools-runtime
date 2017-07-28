@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// </summary>
     public sealed class Response
     {
-    
         /// <summary>
         /// Response URL. This URL can be different from CachedResource.url in case of redirect.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// HTTP response status code.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// HTTP response status text.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// HTTP response headers.
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// HTTP response headers text.
         ///</summary>
@@ -57,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Resource mimeType as determined by the browser.
         ///</summary>
@@ -67,7 +61,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Refined HTTP request headers that were actually transmitted over the network.
         ///</summary>
@@ -77,7 +70,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// HTTP request headers text.
         ///</summary>
@@ -87,7 +79,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Specifies whether physical connection was actually reused for this request.
         ///</summary>
@@ -97,7 +88,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Physical connection id that was actually used for this request.
         ///</summary>
@@ -107,7 +97,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Remote IP address.
         ///</summary>
@@ -117,7 +106,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Remote port.
         ///</summary>
@@ -127,7 +115,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Specifies that the request was served from the disk cache.
         ///</summary>
@@ -137,7 +124,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Specifies that the request was served from the ServiceWorker.
         ///</summary>
@@ -147,7 +133,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Total number of bytes received for this request so far.
         ///</summary>
@@ -157,7 +142,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Timing information for the given request.
         ///</summary>
@@ -167,7 +151,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Protocol used to fetch this request.
         ///</summary>
@@ -177,7 +160,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Security state of the request resource.
         ///</summary>
@@ -187,7 +169,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Security details for the request.
         ///</summary>
@@ -197,6 +178,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
     }
 }

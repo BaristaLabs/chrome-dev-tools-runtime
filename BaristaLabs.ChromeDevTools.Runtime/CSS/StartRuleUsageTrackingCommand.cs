@@ -15,11 +15,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
     }
 
     public sealed class StartRuleUsageTrackingCommandResponse : ICommandResponse<StartRuleUsageTrackingCommand>
     {
-    
     }
 }

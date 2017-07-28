@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Whether script execution should be disabled in the page.
         /// </summary>
-        
         [JsonProperty("value")]
         public bool Value
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetScriptExecutionDisabledCommandResponse : ICommandResponse<SetScriptExecutionDisabledCommand>
     {
-    
     }
 }

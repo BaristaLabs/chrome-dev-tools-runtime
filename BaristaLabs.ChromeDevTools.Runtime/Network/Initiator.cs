@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// </summary>
     public sealed class Initiator
     {
-    
         /// <summary>
         /// Type of this initiator.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Initiator JavaScript stack trace, set for Script only.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Initiator URL, set for Parser type only.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
         /// <summary>
         /// Initiator line number, set for Parser type only (0-based).
         ///</summary>
@@ -47,6 +43,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
-    
     }
 }

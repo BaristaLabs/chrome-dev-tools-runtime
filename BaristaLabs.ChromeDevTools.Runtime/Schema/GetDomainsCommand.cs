@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Schema
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
     }
 
     public sealed class GetDomainsCommandResponse : ICommandResponse<GetDomainsCommand>
     {
-    
-        
         /// <summary>
         /// List of supported domains.
         ///</summary>
-        
         [JsonProperty("domains")]
         public Domain[] Domains
         {
             get;
             set;
         }
-    
     }
 }

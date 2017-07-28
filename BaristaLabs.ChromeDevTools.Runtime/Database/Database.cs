@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
     /// </summary>
     public sealed class Database
     {
-    
         /// <summary>
         /// Database ID.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
             get;
             set;
         }
-    
         /// <summary>
         /// Database domain.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
             get;
             set;
         }
-    
         /// <summary>
         /// Database name.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
             get;
             set;
         }
-    
         /// <summary>
         /// Database version.
         ///</summary>
@@ -47,6 +43,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
             get;
             set;
         }
-    
     }
 }

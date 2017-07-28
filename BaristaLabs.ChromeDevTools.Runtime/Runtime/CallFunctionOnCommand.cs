@@ -15,131 +15,99 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Identifier of the object to call function on.
         /// </summary>
-        
         [JsonProperty("objectId")]
         public string ObjectId
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Declaration of the function to call.
         /// </summary>
-        
         [JsonProperty("functionDeclaration")]
         public string FunctionDeclaration
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Call arguments. All call arguments must belong to the same JavaScript world as the target object.
         /// </summary>
-        
         [JsonProperty("arguments", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public CallArgument[] Arguments
         {
             get;
             set;
         }
-    
-        
         /// <summary>
-        /// In silent mode exceptions thrown during evaluation are not reported and do not pause execution. Overrides <code>setPauseOnException</code> state.
+        /// In silent mode exceptions thrown during evaluation are not reported and do not pause execution. Overrides &lt;code&gt;setPauseOnException&lt;/code&gt; state.
         /// </summary>
-        
         [JsonProperty("silent", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Silent
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Whether the result is expected to be a JSON object which should be sent by value.
         /// </summary>
-        
         [JsonProperty("returnByValue", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? ReturnByValue
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Whether preview should be generated for the result.
         /// </summary>
-        
         [JsonProperty("generatePreview", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? GeneratePreview
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Whether execution should be treated as initiated by user in the UI.
         /// </summary>
-        
         [JsonProperty("userGesture", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? UserGesture
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Whether execution should wait for promise to be resolved. If the result of evaluation is not a Promise, it's considered to be an error.
         /// </summary>
-        
         [JsonProperty("awaitPromise", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? AwaitPromise
         {
             get;
             set;
         }
-    
     }
 
     public sealed class CallFunctionOnCommandResponse : ICommandResponse<CallFunctionOnCommand>
     {
-    
-        
         /// <summary>
         /// Call result.
         ///</summary>
-        
         [JsonProperty("result")]
         public RemoteObject Result
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Exception details.
         ///</summary>
-        
         [JsonProperty("exceptionDetails, DefaultValueHandling = DefaultValueHandling.Ignore")]
         public ExceptionDetails ExceptionDetails
         {
             get;
             set;
         }
-    
     }
 }

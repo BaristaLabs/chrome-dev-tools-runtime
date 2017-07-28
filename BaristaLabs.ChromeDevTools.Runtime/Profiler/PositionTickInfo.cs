@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     /// </summary>
     public sealed class PositionTickInfo
     {
-    
         /// <summary>
         /// Source line number (1-based).
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
-    
         /// <summary>
         /// Number of samples attributed to the source line.
         ///</summary>
@@ -27,6 +25,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
-    
     }
 }

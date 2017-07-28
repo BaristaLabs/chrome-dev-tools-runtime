@@ -15,47 +15,36 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Id of the element to set attributes for.
         /// </summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Text with a number of attributes. Will parse this text using HTML parser.
         /// </summary>
-        
         [JsonProperty("text")]
         public string Text
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Attribute name to replace with new attributes derived from text in case text parsed successfully.
         /// </summary>
-        
         [JsonProperty("name", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Name
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetAttributesAsTextCommandResponse : ICommandResponse<SetAttributesAsTextCommand>
     {
-    
     }
 }

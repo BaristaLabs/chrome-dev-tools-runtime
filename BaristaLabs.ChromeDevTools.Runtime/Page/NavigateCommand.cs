@@ -15,47 +15,45 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// URL to navigate the page to.
         /// </summary>
-        
         [JsonProperty("url")]
         public string Url
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Referrer URL.
         /// </summary>
-        
         [JsonProperty("referrer", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Referrer
         {
             get;
             set;
         }
-    
+        /// <summary>
+        /// Intended transition type.
+        /// </summary>
+        [JsonProperty("transitionType", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public TransitionType? TransitionType
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class NavigateCommandResponse : ICommandResponse<NavigateCommand>
     {
-    
-        
         /// <summary>
         /// Frame id that will be navigated.
         ///</summary>
-        
         [JsonProperty("frameId")]
         public string FrameId
         {
             get;
             set;
         }
-    
     }
 }

@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
     /// </summary>
     public sealed class KeyRange
     {
-    
         /// <summary>
         /// Lower bound.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
         /// <summary>
         /// Upper bound.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
         /// <summary>
         /// If true lower bound is open.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
         /// <summary>
         /// If true upper bound is open.
         ///</summary>
@@ -47,6 +43,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get;
             set;
         }
-    
     }
 }

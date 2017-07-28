@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Event name.
         /// </summary>
-        
         [JsonProperty("eventName")]
         public string EventName
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// EventTarget interface name.
         /// </summary>
-        
         [JsonProperty("targetName", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string TargetName
         {
             get;
             set;
         }
-    
     }
 
     public sealed class RemoveEventListenerBreakpointCommandResponse : ICommandResponse<RemoveEventListenerBreakpointCommand>
     {
-    
     }
 }

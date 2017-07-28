@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Playback rate for animations on page
         /// </summary>
-        
         [JsonProperty("playbackRate")]
         public double PlaybackRate
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetPlaybackRateCommandResponse : ICommandResponse<SetPlaybackRateCommand>
     {
-    
     }
 }

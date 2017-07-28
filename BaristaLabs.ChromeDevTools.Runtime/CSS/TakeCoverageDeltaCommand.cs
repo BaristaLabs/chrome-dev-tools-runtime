@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
     }
 
     public sealed class TakeCoverageDeltaCommandResponse : ICommandResponse<TakeCoverageDeltaCommand>
     {
-    
-        
         /// <summary>
         /// Gets or sets the coverage
         /// </summary>
-        
         [JsonProperty("coverage")]
         public RuleUsage[] Coverage
         {
             get;
             set;
         }
-    
     }
 }

@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     /// </summary>
     public sealed class KeyframesRule
     {
-    
         /// <summary>
         /// CSS keyframed animation's name.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get;
             set;
         }
-    
         /// <summary>
         /// List of animation keyframes.
         ///</summary>
@@ -27,6 +25,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get;
             set;
         }
-    
     }
 }

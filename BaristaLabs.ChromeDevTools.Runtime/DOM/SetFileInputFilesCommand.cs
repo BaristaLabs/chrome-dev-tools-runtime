@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Id of the file input node to set files for.
         /// </summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Array of file paths to set.
         /// </summary>
-        
         [JsonProperty("files")]
         public string[] Files
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetFileInputFilesCommandResponse : ICommandResponse<SetFileInputFilesCommand>
     {
-    
     }
 }

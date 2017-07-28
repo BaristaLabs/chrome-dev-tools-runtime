@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// Enables animation domain notifications.
         /// </summary>
@@ -32,7 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Disables animation domain notifications.
         /// </summary>
@@ -40,7 +38,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Gets the playback rate of the document timeline.
         /// </summary>
@@ -48,7 +45,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         {
             return await m_session.SendCommand<GetPlaybackRateCommand, GetPlaybackRateCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Sets the playback rate of the document timeline.
         /// </summary>
@@ -56,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         {
             return await m_session.SendCommand<SetPlaybackRateCommand, SetPlaybackRateCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns the current time of the an animation.
         /// </summary>
@@ -64,7 +59,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         {
             return await m_session.SendCommand<GetCurrentTimeCommand, GetCurrentTimeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Sets the paused state of a set of animations.
         /// </summary>
@@ -72,7 +66,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         {
             return await m_session.SendCommand<SetPausedCommand, SetPausedCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Sets the timing of an animation node.
         /// </summary>
@@ -80,7 +73,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         {
             return await m_session.SendCommand<SetTimingCommand, SetTimingCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Seek a set of animations to a particular time within each animation.
         /// </summary>
@@ -88,7 +80,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         {
             return await m_session.SendCommand<SeekAnimationsCommand, SeekAnimationsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Releases a set of animations to no longer be manipulated.
         /// </summary>
@@ -96,7 +87,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         {
             return await m_session.SendCommand<ReleaseAnimationsCommand, ReleaseAnimationsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Gets the remote object of the Animation.
         /// </summary>
@@ -104,9 +94,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         {
             return await m_session.SendCommand<ResolveAnimationCommand, ResolveAnimationCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
         /// <summary>
         /// Event for each animation that has been created.
         /// </summary>
@@ -114,7 +102,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Event for animation that has been started.
         /// </summary>
@@ -122,7 +109,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// Event for when an animation has been cancelled.
         /// </summary>
@@ -130,6 +116,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         {
             m_session.Subscribe(eventCallback);
         }
-    
     }
 }

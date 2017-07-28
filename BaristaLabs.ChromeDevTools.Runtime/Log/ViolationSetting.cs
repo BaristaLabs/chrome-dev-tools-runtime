@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
     /// </summary>
     public sealed class ViolationSetting
     {
-    
         /// <summary>
         /// Violation type.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             get;
             set;
         }
-    
         /// <summary>
         /// Time threshold to trigger upon.
         ///</summary>
@@ -27,6 +25,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             get;
             set;
         }
-    
     }
 }

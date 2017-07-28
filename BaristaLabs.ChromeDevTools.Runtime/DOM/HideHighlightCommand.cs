@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Hides DOM node highlight.
+    /// Hides any highlight.
     /// </summary>
     public sealed class HideHighlightCommand : ICommand
     {
@@ -15,11 +15,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
     }
 
     public sealed class HideHighlightCommandResponse : ICommandResponse<HideHighlightCommand>
     {
-    
     }
 }

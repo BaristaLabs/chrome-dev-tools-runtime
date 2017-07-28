@@ -15,47 +15,36 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
     }
 
     public sealed class GetLayoutMetricsCommandResponse : ICommandResponse<GetLayoutMetricsCommand>
     {
-    
-        
         /// <summary>
         /// Metrics relating to the layout viewport.
         ///</summary>
-        
         [JsonProperty("layoutViewport")]
         public LayoutViewport LayoutViewport
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Metrics relating to the visual viewport.
         ///</summary>
-        
         [JsonProperty("visualViewport")]
         public VisualViewport VisualViewport
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Size of scrollable area.
         ///</summary>
-        
         [JsonProperty("contentSize")]
         public DOM.Rect ContentSize
         {
             get;
             set;
         }
-    
     }
 }

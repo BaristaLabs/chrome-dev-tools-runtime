@@ -10,45 +10,31 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ResourceType
     {
-    
         [EnumMember(Value = "Document")]
         Document,
-    
         [EnumMember(Value = "Stylesheet")]
         Stylesheet,
-    
         [EnumMember(Value = "Image")]
         Image,
-    
         [EnumMember(Value = "Media")]
         Media,
-    
         [EnumMember(Value = "Font")]
         Font,
-    
         [EnumMember(Value = "Script")]
         Script,
-    
         [EnumMember(Value = "TextTrack")]
         TextTrack,
-    
         [EnumMember(Value = "XHR")]
         XHR,
-    
         [EnumMember(Value = "Fetch")]
         Fetch,
-    
         [EnumMember(Value = "EventSource")]
         EventSource,
-    
         [EnumMember(Value = "WebSocket")]
         WebSocket,
-    
         [EnumMember(Value = "Manifest")]
         Manifest,
-    
         [EnumMember(Value = "Other")]
         Other,
-    
     }
 }

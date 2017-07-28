@@ -7,18 +7,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     /// </summary>
     public sealed class DataCollectedEvent : IEvent
     {
-    
-        
         /// <summary>
         /// Gets or sets the value
         /// </summary>
-        
         [JsonProperty("value")]
         public object[] Value
         {
             get;
             set;
         }
-    
     }
 }

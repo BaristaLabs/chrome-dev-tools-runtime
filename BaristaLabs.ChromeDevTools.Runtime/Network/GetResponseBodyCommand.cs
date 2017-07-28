@@ -15,47 +15,36 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Identifier of the network request to get content for.
         /// </summary>
-        
         [JsonProperty("requestId")]
         public string RequestId
         {
             get;
             set;
         }
-    
     }
 
     public sealed class GetResponseBodyCommandResponse : ICommandResponse<GetResponseBodyCommand>
     {
-    
-        
         /// <summary>
         /// Response body.
         ///</summary>
-        
         [JsonProperty("body")]
         public string Body
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// True, if content was sent as base64.
         ///</summary>
-        
         [JsonProperty("base64Encoded")]
         public bool Base64Encoded
         {
             get;
             set;
         }
-    
     }
 }

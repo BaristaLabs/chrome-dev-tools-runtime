@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// Sets breakpoint on particular operation with DOM.
         /// </summary>
@@ -32,15 +31,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         {
             return await m_session.SendCommand<SetDOMBreakpointCommand, SetDOMBreakpointCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
-        /// Removes DOM breakpoint that was set using <code>setDOMBreakpoint</code>.
+        /// Removes DOM breakpoint that was set using &lt;code&gt;setDOMBreakpoint&lt;/code&gt;.
         /// </summary>
         public async Task<RemoveDOMBreakpointCommandResponse> RemoveDOMBreakpoint(RemoveDOMBreakpointCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<RemoveDOMBreakpointCommand, RemoveDOMBreakpointCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Sets breakpoint on particular DOM event.
         /// </summary>
@@ -48,7 +45,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         {
             return await m_session.SendCommand<SetEventListenerBreakpointCommand, SetEventListenerBreakpointCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Removes breakpoint on particular DOM event.
         /// </summary>
@@ -56,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         {
             return await m_session.SendCommand<RemoveEventListenerBreakpointCommand, RemoveEventListenerBreakpointCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Sets breakpoint on particular native event.
         /// </summary>
@@ -64,7 +59,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         {
             return await m_session.SendCommand<SetInstrumentationBreakpointCommand, SetInstrumentationBreakpointCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Removes breakpoint on particular native event.
         /// </summary>
@@ -72,7 +66,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         {
             return await m_session.SendCommand<RemoveInstrumentationBreakpointCommand, RemoveInstrumentationBreakpointCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Sets breakpoint on XMLHttpRequest.
         /// </summary>
@@ -80,7 +73,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         {
             return await m_session.SendCommand<SetXHRBreakpointCommand, SetXHRBreakpointCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Removes breakpoint from XMLHttpRequest.
         /// </summary>
@@ -88,7 +80,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         {
             return await m_session.SendCommand<RemoveXHRBreakpointCommand, RemoveXHRBreakpointCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Returns event listeners of the given object.
         /// </summary>
@@ -96,8 +87,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
         {
             return await m_session.SendCommand<GetEventListenersCommand, GetEventListenersCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
     }
 }

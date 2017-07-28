@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Gets or sets the scriptSource
         /// </summary>
-        
         [JsonProperty("scriptSource")]
         public string ScriptSource
         {
             get;
             set;
         }
-    
     }
 
     public sealed class AddScriptToEvaluateOnLoadCommandResponse : ICommandResponse<AddScriptToEvaluateOnLoadCommand>
     {
-    
-        
         /// <summary>
         /// Identifier of the added script.
         ///</summary>
-        
         [JsonProperty("identifier")]
         public string Identifier
         {
             get;
             set;
         }
-    
     }
 }

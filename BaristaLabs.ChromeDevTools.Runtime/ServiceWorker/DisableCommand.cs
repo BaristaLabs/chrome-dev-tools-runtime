@@ -15,11 +15,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
     }
 
     public sealed class DisableCommandResponse : ICommandResponse<DisableCommand>
     {
-    
     }
 }

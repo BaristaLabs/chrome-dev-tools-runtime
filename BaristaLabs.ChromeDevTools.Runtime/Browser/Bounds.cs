@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
     /// </summary>
     public sealed class Bounds
     {
-    
         /// <summary>
         /// The offset from the left edge of the screen to the window in pixels.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
             get;
             set;
         }
-    
         /// <summary>
         /// The offset from the top edge of the screen to the window in pixels.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
             get;
             set;
         }
-    
         /// <summary>
         /// The window width in pixels.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
             get;
             set;
         }
-    
         /// <summary>
         /// The window height in pixels.
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
             get;
             set;
         }
-    
         /// <summary>
         /// The window state. Default to normal.
         ///</summary>
@@ -57,6 +52,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
             get;
             set;
         }
-    
     }
 }

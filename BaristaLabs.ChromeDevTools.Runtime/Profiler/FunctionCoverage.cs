@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     /// </summary>
     public sealed class FunctionCoverage
     {
-    
         /// <summary>
         /// JavaScript function name.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
-    
         /// <summary>
         /// Source ranges inside the function with coverage data.
         ///</summary>
@@ -27,6 +25,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
-    
     }
 }

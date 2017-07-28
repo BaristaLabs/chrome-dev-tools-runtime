@@ -15,11 +15,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
     }
 
     public sealed class EndCommandResponse : ICommandResponse<EndCommand>
     {
-    
     }
 }

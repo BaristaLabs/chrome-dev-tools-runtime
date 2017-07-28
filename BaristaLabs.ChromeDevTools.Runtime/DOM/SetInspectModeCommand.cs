@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Set an inspection mode.
         /// </summary>
-        
         [JsonProperty("mode")]
         public InspectMode Mode
         {
             get;
             set;
         }
-    
-        
         /// <summary>
-        /// A descriptor for the highlight appearance of hovered-over nodes. May be omitted if <code>enabled == false</code>.
+        /// A descriptor for the highlight appearance of hovered-over nodes. May be omitted if &lt;code&gt;enabled == false&lt;/code&gt;.
         /// </summary>
-        
         [JsonProperty("highlightConfig", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public HighlightConfig HighlightConfig
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetInspectModeCommandResponse : ICommandResponse<SetInspectModeCommand>
     {
-    
     }
 }

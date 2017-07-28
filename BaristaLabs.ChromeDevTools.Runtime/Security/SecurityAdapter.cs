@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// Enables tracking security state changes.
         /// </summary>
@@ -32,7 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Disables tracking security state changes.
         /// </summary>
@@ -40,7 +38,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Displays native dialog with the certificate details.
         /// </summary>
@@ -48,7 +45,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         {
             return await m_session.SendCommand<ShowCertificateViewerCommand, ShowCertificateViewerCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Handles a certificate error that fired a certificateError event.
         /// </summary>
@@ -56,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         {
             return await m_session.SendCommand<HandleCertificateErrorCommand, HandleCertificateErrorCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Enable/disable overriding certificate errors. If enabled, all certificate error events need to be handled by the DevTools client and should be answered with handleCertificateError commands.
         /// </summary>
@@ -64,9 +59,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         {
             return await m_session.SendCommand<SetOverrideCertificateErrorsCommand, SetOverrideCertificateErrorsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
         /// <summary>
         /// The security state of the page changed.
         /// </summary>
@@ -74,7 +67,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         {
             m_session.Subscribe(eventCallback);
         }
-    
         /// <summary>
         /// There is a certificate error. If overriding certificate errors is enabled, then it should be handled with the handleCertificateError command. Note: this event does not fire if the certificate error has been allowed internally.
         /// </summary>
@@ -82,6 +74,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         {
             m_session.Subscribe(eventCallback);
         }
-    
     }
 }

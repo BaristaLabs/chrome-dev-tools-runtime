@@ -7,9 +7,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// </summary>
     public sealed class BackendNode
     {
-    
         /// <summary>
-        /// <code>Node</code>'s nodeType.
+        /// &lt;code&gt;Node&lt;/code&gt;'s nodeType.
         ///</summary>
         [JsonProperty("nodeType")]
         public long NodeType
@@ -17,9 +16,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
-        /// <code>Node</code>'s nodeName.
+        /// &lt;code&gt;Node&lt;/code&gt;'s nodeName.
         ///</summary>
         [JsonProperty("nodeName")]
         public string NodeName
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
         /// <summary>
         /// 
         ///</summary>
@@ -37,6 +34,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
-    
     }
 }

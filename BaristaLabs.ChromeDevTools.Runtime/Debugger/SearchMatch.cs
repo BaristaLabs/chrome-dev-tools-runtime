@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     /// </summary>
     public sealed class SearchMatch
     {
-    
         /// <summary>
         /// Line number in resource content.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
-    
         /// <summary>
         /// Line with match content.
         ///</summary>
@@ -27,6 +25,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
-    
     }
 }

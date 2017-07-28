@@ -15,35 +15,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Animation id.
         /// </summary>
-        
         [JsonProperty("animationId")]
         public string AnimationId
         {
             get;
             set;
         }
-    
     }
 
     public sealed class ResolveAnimationCommandResponse : ICommandResponse<ResolveAnimationCommand>
     {
-    
-        
         /// <summary>
         /// Corresponding remote object.
         ///</summary>
-        
         [JsonProperty("remoteObject")]
         public Runtime.RemoteObject RemoteObject
         {
             get;
             set;
         }
-    
     }
 }

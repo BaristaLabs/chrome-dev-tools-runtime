@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// Returns information about the system.
         /// </summary>
@@ -32,8 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
         {
             return await m_session.SendCommand<GetInfoCommand, GetInfoCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
     }
 }

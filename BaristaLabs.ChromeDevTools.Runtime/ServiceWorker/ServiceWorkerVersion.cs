@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     /// </summary>
     public sealed class ServiceWorkerVersion
     {
-    
         /// <summary>
         /// 
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get;
             set;
         }
-    
         /// <summary>
         /// 
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get;
             set;
         }
-    
         /// <summary>
         /// 
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get;
             set;
         }
-    
         /// <summary>
         /// 
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get;
             set;
         }
-    
         /// <summary>
         /// 
         ///</summary>
@@ -57,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get;
             set;
         }
-    
         /// <summary>
         /// The Last-Modified header value of the main script.
         ///</summary>
@@ -67,7 +61,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get;
             set;
         }
-    
         /// <summary>
         /// The time at which the response headers of the main script were received from the server.  For cached script it is the last time the cache entry was validated.
         ///</summary>
@@ -77,7 +70,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get;
             set;
         }
-    
         /// <summary>
         /// 
         ///</summary>
@@ -87,7 +79,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get;
             set;
         }
-    
         /// <summary>
         /// 
         ///</summary>
@@ -97,6 +88,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             get;
             set;
         }
-    
     }
 }

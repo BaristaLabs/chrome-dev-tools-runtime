@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
     /// </summary>
     public sealed class ApplicationCache
     {
-    
         /// <summary>
         /// Manifest URL.
         ///</summary>
@@ -17,7 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
             get;
             set;
         }
-    
         /// <summary>
         /// Application cache size.
         ///</summary>
@@ -27,7 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
             get;
             set;
         }
-    
         /// <summary>
         /// Application cache creation time.
         ///</summary>
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
             get;
             set;
         }
-    
         /// <summary>
         /// Application cache update time.
         ///</summary>
@@ -47,7 +43,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
             get;
             set;
         }
-    
         /// <summary>
         /// Application cache resources.
         ///</summary>
@@ -57,6 +52,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
             get;
             set;
         }
-    
     }
 }

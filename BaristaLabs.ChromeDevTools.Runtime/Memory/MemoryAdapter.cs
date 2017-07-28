@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// 
         /// </summary>
@@ -32,7 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
         {
             return await m_session.SendCommand<GetDOMCountersCommand, GetDOMCountersCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Enable/disable suppressing memory pressure notifications in all processes.
         /// </summary>
@@ -40,7 +38,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
         {
             return await m_session.SendCommand<SetPressureNotificationsSuppressedCommand, SetPressureNotificationsSuppressedCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Simulate a memory pressure notification in all processes.
         /// </summary>
@@ -48,8 +45,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
         {
             return await m_session.SendCommand<SimulatePressureNotificationCommand, SimulatePressureNotificationCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
     }
 }

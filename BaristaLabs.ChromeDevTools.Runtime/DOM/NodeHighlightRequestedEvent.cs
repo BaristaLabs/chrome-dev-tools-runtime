@@ -7,18 +7,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// </summary>
     public sealed class NodeHighlightRequestedEvent : IEvent
     {
-    
-        
         /// <summary>
         /// Gets or sets the nodeId
         /// </summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
     }
 }

@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// URL patterns to block. Wildcards ('*') are allowed.
         /// </summary>
-        
         [JsonProperty("urls")]
         public string[] Urls
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetBlockedURLsCommandResponse : ICommandResponse<SetBlockedURLsCommand>
     {
-    
     }
 }

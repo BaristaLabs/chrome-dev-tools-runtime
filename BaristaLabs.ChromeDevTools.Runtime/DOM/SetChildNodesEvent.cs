@@ -7,30 +7,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     /// </summary>
     public sealed class SetChildNodesEvent : IEvent
     {
-    
-        
         /// <summary>
         /// Parent node id to populate with children.
         /// </summary>
-        
         [JsonProperty("parentId")]
         public long ParentId
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Child nodes array.
         /// </summary>
-        
         [JsonProperty("nodes")]
         public Node[] Nodes
         {
             get;
             set;
         }
-    
     }
 }

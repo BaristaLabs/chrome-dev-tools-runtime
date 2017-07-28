@@ -15,59 +15,45 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// Id of the node to copy.
         /// </summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// Id of the element to drop the copy into.
         /// </summary>
-        
         [JsonProperty("targetNodeId")]
         public long TargetNodeId
         {
             get;
             set;
         }
-    
-        
         /// <summary>
-        /// Drop the copy before this node (if absent, the copy becomes the last child of <code>targetNodeId</code>).
+        /// Drop the copy before this node (if absent, the copy becomes the last child of &lt;code&gt;targetNodeId&lt;/code&gt;).
         /// </summary>
-        
         [JsonProperty("insertBeforeNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? InsertBeforeNodeId
         {
             get;
             set;
         }
-    
     }
 
     public sealed class CopyToCommandResponse : ICommandResponse<CopyToCommand>
     {
-    
-        
         /// <summary>
         /// Id of the node clone.
         ///</summary>
-        
         [JsonProperty("nodeId")]
         public long NodeId
         {
             get;
             set;
         }
-    
     }
 }

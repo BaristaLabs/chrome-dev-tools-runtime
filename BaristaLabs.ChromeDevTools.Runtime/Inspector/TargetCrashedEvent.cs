@@ -7,6 +7,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Inspector
     /// </summary>
     public sealed class TargetCrashedEvent : IEvent
     {
-    
     }
 }

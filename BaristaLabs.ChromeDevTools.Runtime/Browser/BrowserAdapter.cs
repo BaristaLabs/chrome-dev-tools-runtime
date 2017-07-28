@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// Get the browser window that contains the devtools target.
         /// </summary>
@@ -32,7 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
         {
             return await m_session.SendCommand<GetWindowForTargetCommand, GetWindowForTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Set position and/or size of the browser window.
         /// </summary>
@@ -40,7 +38,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
         {
             return await m_session.SendCommand<SetWindowBoundsCommand, SetWindowBoundsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Get position and size of the browser window.
         /// </summary>
@@ -48,8 +45,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
         {
             return await m_session.SendCommand<GetWindowBoundsCommand, GetWindowBoundsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
     }
 }

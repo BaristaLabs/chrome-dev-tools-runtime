@@ -10,12 +10,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
     [JsonConverter(typeof(StringEnumConverter))]
     public enum CertificateErrorAction
     {
-    
         [EnumMember(Value = "continue")]
         Continue,
-    
         [EnumMember(Value = "cancel")]
         Cancel,
-    
     }
 }

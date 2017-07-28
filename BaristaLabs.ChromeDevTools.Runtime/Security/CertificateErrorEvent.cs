@@ -7,42 +7,32 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
     /// </summary>
     public sealed class CertificateErrorEvent : IEvent
     {
-    
-        
         /// <summary>
         /// The ID of the event.
         /// </summary>
-        
         [JsonProperty("eventId")]
         public long EventId
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// The type of the error.
         /// </summary>
-        
         [JsonProperty("errorType")]
         public string ErrorType
         {
             get;
             set;
         }
-    
-        
         /// <summary>
         /// The url that was requested.
         /// </summary>
-        
         [JsonProperty("requestURL")]
         public string RequestURL
         {
             get;
             set;
         }
-    
     }
 }

@@ -10,18 +10,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     [JsonConverter(typeof(StringEnumConverter))]
     public enum DialogType
     {
-    
         [EnumMember(Value = "alert")]
         Alert,
-    
         [EnumMember(Value = "confirm")]
         Confirm,
-    
         [EnumMember(Value = "prompt")]
         Prompt,
-    
         [EnumMember(Value = "beforeunload")]
         Beforeunload,
-    
     }
 }

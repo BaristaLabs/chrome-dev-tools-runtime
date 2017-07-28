@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
     }
 
     public sealed class GetTargetsCommandResponse : ICommandResponse<GetTargetsCommand>
     {
-    
-        
         /// <summary>
         /// The list of targets.
         ///</summary>
-        
         [JsonProperty("targetInfos")]
         public TargetInfo[] TargetInfos
         {
             get;
             set;
         }
-    
     }
 }

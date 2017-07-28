@@ -15,23 +15,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             get { return ChromeRemoteInterface_CommandName; }
         }
 
-    
-        
         /// <summary>
         /// If true, certificate errors will be overridden.
         /// </summary>
-        
         [JsonProperty("override")]
         public bool Override
         {
             get;
             set;
         }
-    
     }
 
     public sealed class SetOverrideCertificateErrorsCommandResponse : ICommandResponse<SetOverrideCertificateErrorsCommand>
     {
-    
     }
 }

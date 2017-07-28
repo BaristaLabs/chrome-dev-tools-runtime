@@ -7,7 +7,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     /// </summary>
     public sealed class RemoteObject
     {
-    
         /// <summary>
         /// Object type.
         ///</summary>
@@ -17,9 +16,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
-    
         /// <summary>
-        /// Object subtype hint. Specified for <code>object</code> type values only.
+        /// Object subtype hint. Specified for &lt;code&gt;object&lt;/code&gt; type values only.
         ///</summary>
         [JsonProperty("subtype", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Subtype
@@ -27,9 +25,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
-    
         /// <summary>
-        /// Object class (constructor) name. Specified for <code>object</code> type values only.
+        /// Object class (constructor) name. Specified for &lt;code&gt;object&lt;/code&gt; type values only.
         ///</summary>
         [JsonProperty("className", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ClassName
@@ -37,7 +34,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
-    
         /// <summary>
         /// Remote object value in case of primitive values or JSON values (if it was requested).
         ///</summary>
@@ -47,9 +43,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
-    
         /// <summary>
-        /// Primitive value which can not be JSON-stringified does not have <code>value</code>, but gets this property.
+        /// Primitive value which can not be JSON-stringified does not have &lt;code&gt;value&lt;/code&gt;, but gets this property.
         ///</summary>
         [JsonProperty("unserializableValue", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public UnserializableValue? UnserializableValue
@@ -57,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
-    
         /// <summary>
         /// String representation of the object.
         ///</summary>
@@ -67,7 +61,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
-    
         /// <summary>
         /// Unique object identifier (for non-primitive values).
         ///</summary>
@@ -77,9 +70,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
-    
         /// <summary>
-        /// Preview containing abbreviated property values. Specified for <code>object</code> type values only.
+        /// Preview containing abbreviated property values. Specified for &lt;code&gt;object&lt;/code&gt; type values only.
         ///</summary>
         [JsonProperty("preview", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ObjectPreview Preview
@@ -87,7 +79,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
-    
         /// <summary>
         /// 
         ///</summary>
@@ -97,6 +88,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
-    
     }
 }

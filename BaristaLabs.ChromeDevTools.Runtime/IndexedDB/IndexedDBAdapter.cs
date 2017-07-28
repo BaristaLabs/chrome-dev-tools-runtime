@@ -24,7 +24,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             get { return m_session; }
         }
 
-    
         /// <summary>
         /// Enables events from backend.
         /// </summary>
@@ -32,7 +31,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Disables events from backend.
         /// </summary>
@@ -40,7 +38,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Requests database names for given security origin.
         /// </summary>
@@ -48,7 +45,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         {
             return await m_session.SendCommand<RequestDatabaseNamesCommand, RequestDatabaseNamesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Requests database with given name in given frame.
         /// </summary>
@@ -56,7 +52,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         {
             return await m_session.SendCommand<RequestDatabaseCommand, RequestDatabaseCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Requests data from object store or index.
         /// </summary>
@@ -64,7 +59,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         {
             return await m_session.SendCommand<RequestDataCommand, RequestDataCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Clears all entries from an object store.
         /// </summary>
@@ -72,7 +66,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         {
             return await m_session.SendCommand<ClearObjectStoreCommand, ClearObjectStoreCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
         /// <summary>
         /// Deletes a database.
         /// </summary>
@@ -80,8 +73,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
         {
             return await m_session.SendCommand<DeleteDatabaseCommand, DeleteDatabaseCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-    
 
-    
     }
 }
