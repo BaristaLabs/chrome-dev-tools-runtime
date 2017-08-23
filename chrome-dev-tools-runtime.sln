@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaristaLabs.ChromeDevTools.Runtime.Tests", "BaristaLabs.ChromeDevTools.Runtime.Tests\BaristaLabs.ChromeDevTools.Runtime.Tests.csproj", "{AD0B7D9D-D0FC-4DD8-9903-07ADEDE1C182}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D890D1BF-2BB8-4577-AFAE-FDDC6E9F65D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D890D1BF-2BB8-4577-AFAE-FDDC6E9F65D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D890D1BF-2BB8-4577-AFAE-FDDC6E9F65D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD0B7D9D-D0FC-4DD8-9903-07ADEDE1C182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD0B7D9D-D0FC-4DD8-9903-07ADEDE1C182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD0B7D9D-D0FC-4DD8-9903-07ADEDE1C182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD0B7D9D-D0FC-4DD8-9903-07ADEDE1C182}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
