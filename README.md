@@ -3,7 +3,14 @@ Runtime for the [Chrome Developer Protocol](https://developer.chrome.com/devtool
 
 > Updated for Chrome 60!!
 
+
 ### Instructions
+
+You can obtain the runtime from NuGet at the following location: 
+
+https://www.nuget.org/packages/BaristaLabs.ChromeDevTools.Runtime/
+
+To execute the sample cli:
 
  - Clone
  - Launch Chrome with debugging enabled at port 9223
