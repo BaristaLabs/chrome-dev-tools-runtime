@@ -13,8 +13,9 @@
         {
             bool exceptionThrown = false;
 
-            //Create a new session
-            var sessionInfo = await RuntimeTestSetup.Chrome.CreateNewSession();
+            //Create a new chrome instance
+            var chrome = Chrome.OpenChrome(9226);
+            var sessionInfo = await chrome.CreateNewSession();
             ChromeSession session = null;
             try
             {
@@ -23,23 +24,21 @@
                     Url = "https://www.google.com"
                 });
 
-                //Simulate closing the tab, thus terminating the websockets connection.
-                await RuntimeTestSetup.Chrome.CloseSession(sessionInfo);
+                //Dispose of the chrome process, thus killing it.
+                chrome.Dispose();
 
-                try
+                //Wait a bit to ensure that the chrome process has been terminated.
+                Thread.Sleep(2000);
+
+                //Try another navigation -- this will raise the socket exception
+                await session.Page.Navigate(new Page.NavigateCommand
                 {
-                    //Try another navigation
-                    await session.Page.Navigate(new Page.NavigateCommand
-                    {
-                        Url = "https://www.winamp.com"
-                    });
-                }
-                catch(InvalidOperationException)
-                {
-                    //Catch the command response not recieved exception
-                    exceptionThrown = true;
-                }
-                
+                    Url = "https://www.winamp.com"
+                });
+            }
+            catch(System.Net.Sockets.SocketException)
+            {
+                exceptionThrown = true;
             }
             finally
             {
