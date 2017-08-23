@@ -27,16 +27,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Enables the CSS agent for the given page. Clients should not assume that the CSS agent has been enabled until the result of this command is received.
         /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Disables the CSS agent for the given page.
         /// </summary>
-        public async Task<DisableCommandResponse> Disable(DisableCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<DisableCommandResponse> Disable(DisableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command ?? new DisableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Returns requested styles for a DOM node identified by &lt;code&gt;nodeId&lt;/code&gt;.
@@ -139,9 +139,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Returns all media queries parsed by the rendering engine.
         /// </summary>
-        public async Task<GetMediaQueriesCommandResponse> GetMediaQueries(GetMediaQueriesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<GetMediaQueriesCommandResponse> GetMediaQueries(GetMediaQueriesCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetMediaQueriesCommand, GetMediaQueriesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<GetMediaQueriesCommand, GetMediaQueriesCommandResponse>(command ?? new GetMediaQueriesCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Find a rule with the given active property for the given node and set the new value for this property
@@ -167,23 +167,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Enables the selector recording.
         /// </summary>
-        public async Task<StartRuleUsageTrackingCommandResponse> StartRuleUsageTracking(StartRuleUsageTrackingCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<StartRuleUsageTrackingCommandResponse> StartRuleUsageTracking(StartRuleUsageTrackingCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<StartRuleUsageTrackingCommand, StartRuleUsageTrackingCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<StartRuleUsageTrackingCommand, StartRuleUsageTrackingCommandResponse>(command ?? new StartRuleUsageTrackingCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Obtain list of rules that became used since last call to this method (or since start of coverage instrumentation)
         /// </summary>
-        public async Task<TakeCoverageDeltaCommandResponse> TakeCoverageDelta(TakeCoverageDeltaCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<TakeCoverageDeltaCommandResponse> TakeCoverageDelta(TakeCoverageDeltaCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<TakeCoverageDeltaCommand, TakeCoverageDeltaCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<TakeCoverageDeltaCommand, TakeCoverageDeltaCommandResponse>(command ?? new TakeCoverageDeltaCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// The list of rules with an indication of whether these were used
         /// </summary>
-        public async Task<StopRuleUsageTrackingCommandResponse> StopRuleUsageTracking(StopRuleUsageTrackingCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<StopRuleUsageTrackingCommandResponse> StopRuleUsageTracking(StopRuleUsageTrackingCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<StopRuleUsageTrackingCommand, StopRuleUsageTrackingCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<StopRuleUsageTrackingCommand, StopRuleUsageTrackingCommandResponse>(command ?? new StopRuleUsageTrackingCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
 
         /// <summary>

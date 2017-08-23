@@ -34,23 +34,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// <summary>
         /// Stop trace events collection.
         /// </summary>
-        public async Task<EndCommandResponse> End(EndCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<EndCommandResponse> End(EndCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EndCommand, EndCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<EndCommand, EndCommandResponse>(command ?? new EndCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Gets supported tracing categories.
         /// </summary>
-        public async Task<GetCategoriesCommandResponse> GetCategories(GetCategoriesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<GetCategoriesCommandResponse> GetCategories(GetCategoriesCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetCategoriesCommand, GetCategoriesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<GetCategoriesCommand, GetCategoriesCommandResponse>(command ?? new GetCategoriesCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Request a global memory dump.
         /// </summary>
-        public async Task<RequestMemoryDumpCommandResponse> RequestMemoryDump(RequestMemoryDumpCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<RequestMemoryDumpCommandResponse> RequestMemoryDump(RequestMemoryDumpCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<RequestMemoryDumpCommand, RequestMemoryDumpCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<RequestMemoryDumpCommand, RequestMemoryDumpCommandResponse>(command ?? new RequestMemoryDumpCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Record a clock sync marker in the trace.

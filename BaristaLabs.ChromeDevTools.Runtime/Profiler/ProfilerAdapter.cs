@@ -27,16 +27,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// 
         /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// 
         /// </summary>
-        public async Task<DisableCommandResponse> Disable(DisableCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<DisableCommandResponse> Disable(DisableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command ?? new DisableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Changes CPU profiler sampling interval. Must be called before CPU profiles recording started.
@@ -48,16 +48,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// 
         /// </summary>
-        public async Task<StartCommandResponse> Start(StartCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<StartCommandResponse> Start(StartCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<StartCommand, StartCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<StartCommand, StartCommandResponse>(command ?? new StartCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// 
         /// </summary>
-        public async Task<StopCommandResponse> Stop(StopCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<StopCommandResponse> Stop(StopCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<StopCommand, StopCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<StopCommand, StopCommandResponse>(command ?? new StopCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Enable precise code coverage. Coverage data for JavaScript executed before enabling precise code coverage may be incomplete. Enabling prevents running optimized code and resets execution counters.
@@ -69,23 +69,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         /// <summary>
         /// Disable precise code coverage. Disabling releases unnecessary execution count records and allows executing optimized code.
         /// </summary>
-        public async Task<StopPreciseCoverageCommandResponse> StopPreciseCoverage(StopPreciseCoverageCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<StopPreciseCoverageCommandResponse> StopPreciseCoverage(StopPreciseCoverageCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<StopPreciseCoverageCommand, StopPreciseCoverageCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<StopPreciseCoverageCommand, StopPreciseCoverageCommandResponse>(command ?? new StopPreciseCoverageCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Collect coverage data for the current isolate, and resets execution counters. Precise code coverage needs to have started.
         /// </summary>
-        public async Task<TakePreciseCoverageCommandResponse> TakePreciseCoverage(TakePreciseCoverageCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<TakePreciseCoverageCommandResponse> TakePreciseCoverage(TakePreciseCoverageCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<TakePreciseCoverageCommand, TakePreciseCoverageCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<TakePreciseCoverageCommand, TakePreciseCoverageCommandResponse>(command ?? new TakePreciseCoverageCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Collect coverage data for the current isolate. The coverage data may be incomplete due to garbage collection.
         /// </summary>
-        public async Task<GetBestEffortCoverageCommandResponse> GetBestEffortCoverage(GetBestEffortCoverageCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<GetBestEffortCoverageCommandResponse> GetBestEffortCoverage(GetBestEffortCoverageCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetBestEffortCoverageCommand, GetBestEffortCoverageCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<GetBestEffortCoverageCommand, GetBestEffortCoverageCommandResponse>(command ?? new GetBestEffortCoverageCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
 
         /// <summary>

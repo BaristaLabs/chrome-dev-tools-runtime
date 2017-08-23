@@ -27,9 +27,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
         /// <summary>
         /// 
         /// </summary>
-        public async Task<GetDOMCountersCommandResponse> GetDOMCounters(GetDOMCountersCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<GetDOMCountersCommandResponse> GetDOMCounters(GetDOMCountersCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetDOMCountersCommand, GetDOMCountersCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<GetDOMCountersCommand, GetDOMCountersCommandResponse>(command ?? new GetDOMCountersCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Enable/disable suppressing memory pressure notifications in all processes.

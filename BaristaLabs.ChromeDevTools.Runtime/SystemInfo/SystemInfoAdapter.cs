@@ -27,9 +27,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
         /// <summary>
         /// Returns information about the system.
         /// </summary>
-        public async Task<GetInfoCommandResponse> GetInfo(GetInfoCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<GetInfoCommandResponse> GetInfo(GetInfoCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetInfoCommand, GetInfoCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<GetInfoCommand, GetInfoCommandResponse>(command ?? new GetInfoCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
 
     }

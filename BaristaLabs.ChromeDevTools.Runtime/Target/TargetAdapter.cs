@@ -97,9 +97,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// <summary>
         /// Creates a new empty BrowserContext. Similar to an incognito profile but you can have more than one.
         /// </summary>
-        public async Task<CreateBrowserContextCommandResponse> CreateBrowserContext(CreateBrowserContextCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<CreateBrowserContextCommandResponse> CreateBrowserContext(CreateBrowserContextCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<CreateBrowserContextCommand, CreateBrowserContextCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<CreateBrowserContextCommand, CreateBrowserContextCommandResponse>(command ?? new CreateBrowserContextCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Deletes a BrowserContext, will fail of any open page uses it.
@@ -118,9 +118,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// <summary>
         /// Retrieves a list of available targets.
         /// </summary>
-        public async Task<GetTargetsCommandResponse> GetTargets(GetTargetsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<GetTargetsCommandResponse> GetTargets(GetTargetsCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetTargetsCommand, GetTargetsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<GetTargetsCommand, GetTargetsCommandResponse>(command ?? new GetTargetsCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
 
         /// <summary>

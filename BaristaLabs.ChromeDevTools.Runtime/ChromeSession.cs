@@ -341,10 +341,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime
 
                     if (m_sessionSocket != null)
                     {
-                        m_sessionSocket.Dispose();
                         m_sessionSocket.Opened -= Ws_Opened;
                         m_sessionSocket.Error -= Ws_Error;
                         m_sessionSocket.MessageReceived -= Ws_MessageReceived;
+                        m_sessionSocket.Dispose();
                         m_sessionSocket = null;
                     }
 
