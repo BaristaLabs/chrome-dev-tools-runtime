@@ -103,7 +103,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Exception details.
         ///</summary>
-        [JsonProperty("exceptionDetails, DefaultValueHandling = DefaultValueHandling.Ignore")]
+        [JsonProperty("exceptionDetails", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Runtime.ExceptionDetails ExceptionDetails
         {
             get;

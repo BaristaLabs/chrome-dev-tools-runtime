@@ -67,7 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Internal object properties (only of the element itself).
         ///</summary>
-        [JsonProperty("internalProperties, DefaultValueHandling = DefaultValueHandling.Ignore")]
+        [JsonProperty("internalProperties", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public InternalPropertyDescriptor[] InternalProperties
         {
             get;
@@ -76,7 +76,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// <summary>
         /// Exception details.
         ///</summary>
-        [JsonProperty("exceptionDetails, DefaultValueHandling = DefaultValueHandling.Ignore")]
+        [JsonProperty("exceptionDetails", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ExceptionDetails ExceptionDetails
         {
             get;

@@ -40,7 +40,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// URL of source map associated with script (if any).
         ///</summary>
-        [JsonProperty("sourceMapURL, DefaultValueHandling = DefaultValueHandling.Ignore")]
+        [JsonProperty("sourceMapURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string SourceMapURL
         {
             get;

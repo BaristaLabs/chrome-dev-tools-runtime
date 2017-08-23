@@ -31,7 +31,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Inline style for the specified DOM node.
         ///</summary>
-        [JsonProperty("inlineStyle, DefaultValueHandling = DefaultValueHandling.Ignore")]
+        [JsonProperty("inlineStyle", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public CSSStyle InlineStyle
         {
             get;
@@ -40,7 +40,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Attribute-defined element style (e.g. resulting from &quot;width=20 height=100%&quot;).
         ///</summary>
-        [JsonProperty("attributesStyle, DefaultValueHandling = DefaultValueHandling.Ignore")]
+        [JsonProperty("attributesStyle", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public CSSStyle AttributesStyle
         {
             get;
@@ -49,7 +49,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// CSS rules matching this node, from all applicable stylesheets.
         ///</summary>
-        [JsonProperty("matchedCSSRules, DefaultValueHandling = DefaultValueHandling.Ignore")]
+        [JsonProperty("matchedCSSRules", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RuleMatch[] MatchedCSSRules
         {
             get;
@@ -58,7 +58,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// Pseudo style matches for this node.
         ///</summary>
-        [JsonProperty("pseudoElements, DefaultValueHandling = DefaultValueHandling.Ignore")]
+        [JsonProperty("pseudoElements", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public PseudoElementMatches[] PseudoElements
         {
             get;
@@ -67,7 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// A chain of inherited styles (from the immediate node parent up to the DOM tree root).
         ///</summary>
-        [JsonProperty("inherited, DefaultValueHandling = DefaultValueHandling.Ignore")]
+        [JsonProperty("inherited", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public InheritedStyleEntry[] Inherited
         {
             get;
@@ -76,7 +76,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         /// <summary>
         /// A list of CSS keyframed animations matching this node.
         ///</summary>
-        [JsonProperty("cssKeyframesRules, DefaultValueHandling = DefaultValueHandling.Ignore")]
+        [JsonProperty("cssKeyframesRules", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public CSSKeyframesRule[] CssKeyframesRules
         {
             get;

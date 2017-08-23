@@ -40,7 +40,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// Manifest content.
         ///</summary>
-        [JsonProperty("data, DefaultValueHandling = DefaultValueHandling.Ignore")]
+        [JsonProperty("data", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Data
         {
             get;

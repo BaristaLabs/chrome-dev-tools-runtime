@@ -49,7 +49,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// New stack trace in case editing has happened while VM was stopped.
         ///</summary>
-        [JsonProperty("callFrames, DefaultValueHandling = DefaultValueHandling.Ignore")]
+        [JsonProperty("callFrames", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public CallFrame[] CallFrames
         {
             get;
@@ -58,7 +58,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Whether current call stack  was modified after applying the changes.
         ///</summary>
-        [JsonProperty("stackChanged, DefaultValueHandling = DefaultValueHandling.Ignore")]
+        [JsonProperty("stackChanged", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? StackChanged
         {
             get;
@@ -67,7 +67,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Async stack trace, if any.
         ///</summary>
-        [JsonProperty("asyncStackTrace, DefaultValueHandling = DefaultValueHandling.Ignore")]
+        [JsonProperty("asyncStackTrace", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Runtime.StackTrace AsyncStackTrace
         {
             get;
@@ -76,7 +76,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Exception details if any.
         ///</summary>
-        [JsonProperty("exceptionDetails, DefaultValueHandling = DefaultValueHandling.Ignore")]
+        [JsonProperty("exceptionDetails", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Runtime.ExceptionDetails ExceptionDetails
         {
             get;

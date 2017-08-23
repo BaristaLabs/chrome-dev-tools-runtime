@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChromeDevToolsCLI", "ChromeDevToolsCLI\ChromeDevToolsCLI.csproj", "{BCFF124E-252A-420C-9E37-4F8488022F20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChromeDevToolsRuntimeCLI", "ChromeDevToolsCLI\ChromeDevToolsRuntimeCLI.csproj", "{BCFF124E-252A-420C-9E37-4F8488022F20}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaristaLabs.ChromeDevTools.Runtime", "BaristaLabs.ChromeDevTools.Runtime\BaristaLabs.ChromeDevTools.Runtime.csproj", "{D890D1BF-2BB8-4577-AFAE-FDDC6E9F65D1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{34019544-5D88-4C70-A8B0-8E7CAD7871F2}"
 	ProjectSection(SolutionItems) = preProject
-		LICENSE. = LICENSE.
+		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -30,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20055F1F-4453-4FE8-8262-10A99B1052C9}
 	EndGlobalSection
 EndGlobal

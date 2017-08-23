@@ -1,4 +1,4 @@
-﻿namespace ChromeDevToolsCLI
+﻿namespace ChromeDevToolsRuntimeCLI
 {
     using Newtonsoft.Json;
 
