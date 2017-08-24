@@ -55,6 +55,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tests
 
         public async Task<string> NavigateToPageInNewSession(ChromeSessionInfo sessionInfo, string address)
         {
+            TestContext.WriteLine($"ThreadId: {Thread.CurrentThread.ManagedThreadId}");
+
             var s = new SemaphoreSlim(0, 1);
             string body = null;
             string requestId = null;
