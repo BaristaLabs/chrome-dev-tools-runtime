@@ -30,5 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
         CacheStorage,
         [EnumMember(Value = "all")]
         All,
+        [EnumMember(Value = "other")]
+        Other,
     }
 }

@@ -43,5 +43,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             get;
             set;
         }
+        /// <summary>
+        /// The type of mixed content described by the explanation.
+        ///</summary>
+        [JsonProperty("mixedContentType")]
+        public MixedContentType MixedContentType
+        {
+            get;
+            set;
+        }
     }
 }

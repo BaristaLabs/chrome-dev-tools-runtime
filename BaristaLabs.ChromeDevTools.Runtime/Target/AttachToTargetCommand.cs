@@ -29,10 +29,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     public sealed class AttachToTargetCommandResponse : ICommandResponse<AttachToTargetCommand>
     {
         /// <summary>
-        /// Whether attach succeeded.
+        /// Id assigned to the session.
         ///</summary>
-        [JsonProperty("success")]
-        public bool Success
+        [JsonProperty("sessionId")]
+        public string SessionId
         {
             get;
             set;

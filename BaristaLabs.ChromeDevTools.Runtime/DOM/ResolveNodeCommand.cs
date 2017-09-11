@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Resolves JavaScript node object for given node id.
+    /// Resolves the JavaScript node object for a given NodeId or BackendNodeId.
     /// </summary>
     public sealed class ResolveNodeCommand : ICommand
     {
@@ -18,8 +18,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Id of the node to resolve.
         /// </summary>
-        [JsonProperty("nodeId")]
-        public long NodeId
+        [JsonProperty("nodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? NodeId
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Backend identifier of the node to resolve.
+        /// </summary>
+        [JsonProperty("backendNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? BackendNodeId
         {
             get;
             set;

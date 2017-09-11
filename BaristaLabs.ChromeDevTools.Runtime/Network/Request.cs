@@ -44,10 +44,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// The mixed content status of the request, as defined in http://www.w3.org/TR/mixed-content/
+        /// The mixed content type of the request.
         ///</summary>
         [JsonProperty("mixedContentType", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public string MixedContentType
+        public Security.MixedContentType MixedContentType
         {
             get;
             set;

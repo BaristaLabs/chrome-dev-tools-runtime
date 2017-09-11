@@ -34,6 +34,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
+        /// Capture the screenshot of a given region only.
+        /// </summary>
+        [JsonProperty("clip", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public Viewport Clip
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Capture the screenshot from the surface, rather than the view. Defaults to true.
         /// </summary>
         [JsonProperty("fromSurface", DefaultValueHandling = DefaultValueHandling.Ignore)]

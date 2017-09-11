@@ -46,5 +46,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
 
     public sealed class CreateIsolatedWorldCommandResponse : ICommandResponse<CreateIsolatedWorldCommand>
     {
+        /// <summary>
+        /// Execution context of the isolated world.
+        ///</summary>
+        [JsonProperty("executionContextId")]
+        public long ExecutionContextId
+        {
+            get;
+            set;
+        }
     }
 }

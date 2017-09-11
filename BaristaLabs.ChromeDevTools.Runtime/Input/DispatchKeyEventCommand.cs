@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
-        /// Time at which the event occurred. Measured in UTC time in seconds since January 1, 1970 (default: current time).
+        /// Time at which the event occurred.
         /// </summary>
         [JsonProperty("timestamp", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? Timestamp

@@ -39,18 +39,32 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command ?? new DisableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// Deprecated, please use addScriptToEvaluateOnNewDocument instead.
         /// </summary>
         public async Task<AddScriptToEvaluateOnLoadCommandResponse> AddScriptToEvaluateOnLoad(AddScriptToEvaluateOnLoadCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<AddScriptToEvaluateOnLoadCommand, AddScriptToEvaluateOnLoadCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// Deprecated, please use removeScriptToEvaluateOnNewDocument instead.
         /// </summary>
         public async Task<RemoveScriptToEvaluateOnLoadCommandResponse> RemoveScriptToEvaluateOnLoad(RemoveScriptToEvaluateOnLoadCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<RemoveScriptToEvaluateOnLoadCommand, RemoveScriptToEvaluateOnLoadCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Evaluates given script in every frame upon creation (before loading frame's scripts).
+        /// </summary>
+        public async Task<AddScriptToEvaluateOnNewDocumentCommandResponse> AddScriptToEvaluateOnNewDocument(AddScriptToEvaluateOnNewDocumentCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<AddScriptToEvaluateOnNewDocumentCommand, AddScriptToEvaluateOnNewDocumentCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Removes given script from the list.
+        /// </summary>
+        public async Task<RemoveScriptToEvaluateOnNewDocumentCommandResponse> RemoveScriptToEvaluateOnNewDocument(RemoveScriptToEvaluateOnNewDocumentCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<RemoveScriptToEvaluateOnNewDocumentCommand, RemoveScriptToEvaluateOnNewDocumentCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Controls whether browser will open a new inspector window for connected pages.

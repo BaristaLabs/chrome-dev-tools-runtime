@@ -25,5 +25,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
+        /// <summary>
+        /// Whether coverage data for this function has block granularity.
+        ///</summary>
+        [JsonProperty("isBlockCoverage")]
+        public bool IsBlockCoverage
+        {
+            get;
+            set;
+        }
     }
 }

@@ -43,5 +43,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             get;
             set;
         }
+        /// <summary>
+        /// Whether the target has an attached client.
+        ///</summary>
+        [JsonProperty("attached")]
+        public bool Attached
+        {
+            get;
+            set;
+        }
     }
 }

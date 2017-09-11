@@ -3,11 +3,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Deprecated, please use removeScriptToEvaluateOnNewDocument instead.
+    /// Removes given script from the list.
     /// </summary>
-    public sealed class RemoveScriptToEvaluateOnLoadCommand : ICommand
+    public sealed class RemoveScriptToEvaluateOnNewDocumentCommand : ICommand
     {
-        private const string ChromeRemoteInterface_CommandName = "Page.removeScriptToEvaluateOnLoad";
+        private const string ChromeRemoteInterface_CommandName = "Page.removeScriptToEvaluateOnNewDocument";
         
         [JsonIgnore]
         public string CommandName
@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         }
     }
 
-    public sealed class RemoveScriptToEvaluateOnLoadCommandResponse : ICommandResponse<RemoveScriptToEvaluateOnLoadCommand>
+    public sealed class RemoveScriptToEvaluateOnNewDocumentCommandResponse : ICommandResponse<RemoveScriptToEvaluateOnNewDocumentCommand>
     {
     }
 }

@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Detaches from the target with given id.
+    /// Detaches session with given id.
     /// </summary>
     public sealed class DetachFromTargetCommand : ICommand
     {
@@ -16,9 +16,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         }
 
         /// <summary>
-        /// Gets or sets the targetId
+        /// Session to detach.
         /// </summary>
-        [JsonProperty("targetId")]
+        [JsonProperty("sessionId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string SessionId
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Deprecated.
+        /// </summary>
+        [JsonProperty("targetId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string TargetId
         {
             get;

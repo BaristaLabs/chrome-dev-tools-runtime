@@ -52,37 +52,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Whether a view that exceeds the available browser window area should be scaled down to fit.
-        /// </summary>
-        [JsonProperty("fitWindow")]
-        public bool FitWindow
-        {
-            get;
-            set;
-        }
-        /// <summary>
         /// Scale to apply to resulting view image. Ignored in |fitWindow| mode.
         /// </summary>
         [JsonProperty("scale", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? Scale
-        {
-            get;
-            set;
-        }
-        /// <summary>
-        /// X offset to shift resulting view image by. Ignored in |fitWindow| mode.
-        /// </summary>
-        [JsonProperty("offsetX", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public double? OffsetX
-        {
-            get;
-            set;
-        }
-        /// <summary>
-        /// Y offset to shift resulting view image by. Ignored in |fitWindow| mode.
-        /// </summary>
-        [JsonProperty("offsetY", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public double? OffsetY
         {
             get;
             set;
@@ -119,6 +92,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// </summary>
         [JsonProperty("positionY", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? PositionY
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Do not set visible view size, rely upon explicit setVisibleSize call.
+        /// </summary>
+        [JsonProperty("dontSetVisibleSize", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? DontSetVisibleSize
         {
             get;
             set;

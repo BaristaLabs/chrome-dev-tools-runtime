@@ -8,6 +8,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     public sealed class AttachedToTargetEvent : IEvent
     {
         /// <summary>
+        /// Identifier assigned to the session used to send/receive messages.
+        /// </summary>
+        [JsonProperty("sessionId")]
+        public string SessionId
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Gets or sets the targetInfo
         /// </summary>
         [JsonProperty("targetInfo")]

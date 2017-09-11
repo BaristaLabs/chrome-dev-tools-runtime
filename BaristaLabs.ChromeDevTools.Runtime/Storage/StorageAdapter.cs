@@ -31,6 +31,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
         {
             return await m_session.SendCommand<ClearDataForOriginCommand, ClearDataForOriginCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// Returns usage and quota in bytes.
+        /// </summary>
+        public async Task<GetUsageAndQuotaCommandResponse> GetUsageAndQuota(GetUsageAndQuotaCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetUsageAndQuotaCommand, GetUsageAndQuotaCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
     }
 }

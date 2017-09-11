@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Initiator URL, set for Parser type only.
+        /// Initiator URL, set for Parser type or for Script type (when script is importing module).
         ///</summary>
         [JsonProperty("url", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Url
@@ -35,7 +35,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Initiator line number, set for Parser type only (0-based).
+        /// Initiator line number, set for Parser type or for Script type (when script is importing module) (0-based).
         ///</summary>
         [JsonProperty("lineNumber", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? LineNumber

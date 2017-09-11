@@ -17,16 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Frame identifier.
-        /// </summary>
-        [JsonProperty("frameId")]
-        public string FrameId
-        {
-            get;
-            set;
-        }
-        /// <summary>
-        /// Loader identifier.
+        /// Loader identifier. Empty string if the request is fetched form worker.
         /// </summary>
         [JsonProperty("loaderId")]
         public string LoaderId
@@ -62,7 +53,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// UTC Timestamp.
+        /// Timestamp.
         /// </summary>
         [JsonProperty("wallTime")]
         public double WallTime
@@ -93,6 +84,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// </summary>
         [JsonProperty("type", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Page.ResourceType Type
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Frame identifier.
+        /// </summary>
+        [JsonProperty("frameId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string FrameId
         {
             get;
             set;

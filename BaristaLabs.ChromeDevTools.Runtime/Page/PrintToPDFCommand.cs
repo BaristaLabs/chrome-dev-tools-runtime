@@ -114,6 +114,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+        /// <summary>
+        /// Whether to silently ignore invalid but successfully parsed page ranges, such as '3-2'. Defaults to false.
+        /// </summary>
+        [JsonProperty("ignoreInvalidPageRanges", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? IgnoreInvalidPageRanges
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class PrintToPDFCommandResponse : ICommandResponse<PrintToPDFCommand>

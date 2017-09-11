@@ -18,6 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         private Lazy<ApplicationCache.ApplicationCacheAdapter> m_ApplicationCache;
         private Lazy<DOM.DOMAdapter> m_DOM;
         private Lazy<CSS.CSSAdapter> m_CSS;
+        private Lazy<DOMSnapshot.DOMSnapshotAdapter> m_DOMSnapshot;
         private Lazy<IO.IOAdapter> m_IO;
         private Lazy<DOMDebugger.DOMDebuggerAdapter> m_DOMDebugger;
         private Lazy<Target.TargetAdapter> m_Target;
@@ -56,6 +57,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
             m_ApplicationCache = new Lazy<ApplicationCache.ApplicationCacheAdapter>(() => new ApplicationCache.ApplicationCacheAdapter(this));
             m_DOM = new Lazy<DOM.DOMAdapter>(() => new DOM.DOMAdapter(this));
             m_CSS = new Lazy<CSS.CSSAdapter>(() => new CSS.CSSAdapter(this));
+            m_DOMSnapshot = new Lazy<DOMSnapshot.DOMSnapshotAdapter>(() => new DOMSnapshot.DOMSnapshotAdapter(this));
             m_IO = new Lazy<IO.IOAdapter>(() => new IO.IOAdapter(this));
             m_DOMDebugger = new Lazy<DOMDebugger.DOMDebuggerAdapter>(() => new DOMDebugger.DOMDebuggerAdapter(this));
             m_Target = new Lazy<Target.TargetAdapter>(() => new Target.TargetAdapter(this));
@@ -189,6 +191,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         public CSS.CSSAdapter CSS
         {
             get { return m_CSS.Value; }
+        }
+        
+        /// <summary>
+        /// Gets the adapter for the DOMSnapshot domain.
+        /// </summary>
+        public DOMSnapshot.DOMSnapshotAdapter DOMSnapshot
+        {
+            get { return m_DOMSnapshot.Value; }
         }
         
         /// <summary>

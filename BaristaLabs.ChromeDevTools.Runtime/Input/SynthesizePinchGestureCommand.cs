@@ -19,7 +19,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// X coordinate of the start of the gesture in CSS pixels.
         /// </summary>
         [JsonProperty("x")]
-        public long X
+        public double X
         {
             get;
             set;
@@ -28,7 +28,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// Y coordinate of the start of the gesture in CSS pixels.
         /// </summary>
         [JsonProperty("y")]
-        public long Y
+        public double Y
         {
             get;
             set;

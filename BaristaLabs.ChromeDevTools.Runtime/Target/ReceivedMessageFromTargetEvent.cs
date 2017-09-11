@@ -3,15 +3,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Notifies about new protocol message from attached target.
+    /// Notifies about a new protocol message received from the session (as reported in &lt;code&gt;attachedToTarget&lt;/code&gt; event).
     /// </summary>
     public sealed class ReceivedMessageFromTargetEvent : IEvent
     {
         /// <summary>
-        /// Gets or sets the targetId
+        /// Identifier of a session which sends a message.
         /// </summary>
-        [JsonProperty("targetId")]
-        public string TargetId
+        [JsonProperty("sessionId")]
+        public string SessionId
         {
             get;
             set;
@@ -21,6 +21,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// </summary>
         [JsonProperty("message")]
         public string Message
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Deprecated.
+        /// </summary>
+        [JsonProperty("targetId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string TargetId
         {
             get;
             set;

@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Sends protocol message to the target with given id.
+    /// Sends protocol message over session with given id.
     /// </summary>
     public sealed class SendMessageToTargetCommand : ICommand
     {
@@ -16,19 +16,28 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         }
 
         /// <summary>
-        /// Gets or sets the targetId
+        /// Gets or sets the message
         /// </summary>
-        [JsonProperty("targetId")]
-        public string TargetId
+        [JsonProperty("message")]
+        public string Message
         {
             get;
             set;
         }
         /// <summary>
-        /// Gets or sets the message
+        /// Identifier of the session.
         /// </summary>
-        [JsonProperty("message")]
-        public string Message
+        [JsonProperty("sessionId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string SessionId
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Deprecated.
+        /// </summary>
+        [JsonProperty("targetId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string TargetId
         {
             get;
             set;

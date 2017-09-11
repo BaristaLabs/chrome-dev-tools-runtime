@@ -25,7 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         }
 
         /// <summary>
-        /// Controls whether to discover available targets and notify via &lt;code&gt;targetCreated/targetDestroyed&lt;/code&gt; events.
+        /// Controls whether to discover available targets and notify via &lt;code&gt;targetCreated/targetInfoChanged/targetDestroyed&lt;/code&gt; events.
         /// </summary>
         public async Task<SetDiscoverTargetsCommandResponse> SetDiscoverTargets(SetDiscoverTargetsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -53,7 +53,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             return await m_session.SendCommand<SetRemoteLocationsCommand, SetRemoteLocationsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Sends protocol message to the target with given id.
+        /// Sends protocol message over session with given id.
         /// </summary>
         public async Task<SendMessageToTargetCommandResponse> SendMessageToTarget(SendMessageToTargetCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -88,7 +88,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             return await m_session.SendCommand<AttachToTargetCommand, AttachToTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Detaches from the target with given id.
+        /// Detaches session with given id.
         /// </summary>
         public async Task<DetachFromTargetCommandResponse> DetachFromTarget(DetachFromTargetCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -131,6 +131,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
+        /// Issued when some information about a target has changed. This only happens between &lt;code&gt;targetCreated&lt;/code&gt; and &lt;code&gt;targetDestroyed&lt;/code&gt;.
+        /// </summary>
+        public void SubscribeToTargetInfoChangedEvent(Action<TargetInfoChangedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
         /// Issued when a target is destroyed.
         /// </summary>
         public void SubscribeToTargetDestroyedEvent(Action<TargetDestroyedEvent> eventCallback)
@@ -145,14 +152,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Issued when detached from target for any reason (including &lt;code&gt;detachFromTarget&lt;/code&gt; command).
+        /// Issued when detached from target for any reason (including &lt;code&gt;detachFromTarget&lt;/code&gt; command). Can be issued multiple times per target if multiple sessions have been attached to it.
         /// </summary>
         public void SubscribeToDetachedFromTargetEvent(Action<DetachedFromTargetEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Notifies about new protocol message from attached target.
+        /// Notifies about a new protocol message received from the session (as reported in &lt;code&gt;attachedToTarget&lt;/code&gt; event).
         /// </summary>
         public void SubscribeToReceivedMessageFromTargetEvent(Action<ReceivedMessageFromTargetEvent> eventCallback)
         {

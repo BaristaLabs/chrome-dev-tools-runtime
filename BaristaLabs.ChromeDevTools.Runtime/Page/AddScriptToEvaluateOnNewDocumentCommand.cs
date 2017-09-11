@@ -3,11 +3,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Deprecated, please use addScriptToEvaluateOnNewDocument instead.
+    /// Evaluates given script in every frame upon creation (before loading frame's scripts).
     /// </summary>
-    public sealed class AddScriptToEvaluateOnLoadCommand : ICommand
+    public sealed class AddScriptToEvaluateOnNewDocumentCommand : ICommand
     {
-        private const string ChromeRemoteInterface_CommandName = "Page.addScriptToEvaluateOnLoad";
+        private const string ChromeRemoteInterface_CommandName = "Page.addScriptToEvaluateOnNewDocument";
         
         [JsonIgnore]
         public string CommandName
@@ -16,17 +16,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         }
 
         /// <summary>
-        /// Gets or sets the scriptSource
+        /// Gets or sets the source
         /// </summary>
-        [JsonProperty("scriptSource")]
-        public string ScriptSource
+        [JsonProperty("source")]
+        public string Source
         {
             get;
             set;
         }
     }
 
-    public sealed class AddScriptToEvaluateOnLoadCommandResponse : ICommandResponse<AddScriptToEvaluateOnLoadCommand>
+    public sealed class AddScriptToEvaluateOnNewDocumentCommandResponse : ICommandResponse<AddScriptToEvaluateOnNewDocumentCommand>
     {
         /// <summary>
         /// Identifier of the added script.

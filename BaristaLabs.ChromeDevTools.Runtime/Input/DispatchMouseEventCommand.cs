@@ -25,19 +25,19 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
-        /// X coordinate of the event relative to the main frame's viewport.
+        /// X coordinate of the event relative to the main frame's viewport in CSS pixels.
         /// </summary>
         [JsonProperty("x")]
-        public long X
+        public double X
         {
             get;
             set;
         }
         /// <summary>
-        /// Y coordinate of the event relative to the main frame's viewport. 0 refers to the top of the viewport and Y increases as it proceeds towards the bottom of the viewport.
+        /// Y coordinate of the event relative to the main frame's viewport in CSS pixels. 0 refers to the top of the viewport and Y increases as it proceeds towards the bottom of the viewport.
         /// </summary>
         [JsonProperty("y")]
-        public long Y
+        public double Y
         {
             get;
             set;
@@ -52,7 +52,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
-        /// Time at which the event occurred. Measured in UTC time in seconds since January 1, 1970 (default: current time).
+        /// Time at which the event occurred.
         /// </summary>
         [JsonProperty("timestamp", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? Timestamp

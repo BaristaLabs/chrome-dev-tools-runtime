@@ -171,6 +171,20 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         {
             return await m_session.SendCommand<GetCertificateCommand, GetCertificateCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        public async Task<SetRequestInterceptionEnabledCommandResponse> SetRequestInterceptionEnabled(SetRequestInterceptionEnabledCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetRequestInterceptionEnabledCommand, SetRequestInterceptionEnabledCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Response to Network.requestIntercepted which either modifies the request to continue with any modifications, or blocks it, or completes it with the provided response bytes. If a network fetch occurs as a result which encounters a redirect an additional Network.requestIntercepted event will be sent with the same InterceptionId.
+        /// </summary>
+        public async Task<ContinueInterceptedRequestCommandResponse> ContinueInterceptedRequest(ContinueInterceptedRequestCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<ContinueInterceptedRequestCommand, ContinueInterceptedRequestCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
         /// <summary>
         /// Fired when resource loading priority is changed
@@ -274,6 +288,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Fired when EventSource message is received.
         /// </summary>
         public void SubscribeToEventSourceMessageReceivedEvent(Action<EventSourceMessageReceivedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Details of an intercepted HTTP request, which must be either allowed, blocked, modified or mocked.
+        /// </summary>
+        public void SubscribeToRequestInterceptedEvent(Action<RequestInterceptedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

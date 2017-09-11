@@ -70,5 +70,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+        /// <summary>
+        /// If the frame failed to load, this contains the URL that could not be loaded.
+        ///</summary>
+        [JsonProperty("unreachableUrl", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string UnreachableUrl
+        {
+            get;
+            set;
+        }
     }
 }

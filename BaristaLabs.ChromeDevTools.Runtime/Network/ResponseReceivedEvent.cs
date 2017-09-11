@@ -17,16 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Frame identifier.
-        /// </summary>
-        [JsonProperty("frameId")]
-        public string FrameId
-        {
-            get;
-            set;
-        }
-        /// <summary>
-        /// Loader identifier.
+        /// Loader identifier. Empty string if the request is fetched form worker.
         /// </summary>
         [JsonProperty("loaderId")]
         public string LoaderId
@@ -57,6 +48,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// </summary>
         [JsonProperty("response")]
         public Response Response
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Frame identifier.
+        /// </summary>
+        [JsonProperty("frameId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string FrameId
         {
             get;
             set;

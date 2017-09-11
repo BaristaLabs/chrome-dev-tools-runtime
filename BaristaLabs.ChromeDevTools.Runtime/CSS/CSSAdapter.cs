@@ -158,13 +158,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             return await m_session.SendCommand<GetBackgroundColorsCommand, GetBackgroundColorsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// For the main document and any content documents, return the LayoutTreeNodes and a whitelisted subset of the computed style. It only returns pushed nodes, on way to pull all nodes is to call DOM.getDocument with a depth of -1.
-        /// </summary>
-        public async Task<GetLayoutTreeAndStylesCommandResponse> GetLayoutTreeAndStyles(GetLayoutTreeAndStylesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<GetLayoutTreeAndStylesCommand, GetLayoutTreeAndStylesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
         /// Enables the selector recording.
         /// </summary>
         public async Task<StartRuleUsageTrackingCommandResponse> StartRuleUsageTracking(StartRuleUsageTrackingCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

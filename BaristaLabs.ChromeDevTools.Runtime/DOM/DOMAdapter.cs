@@ -207,7 +207,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             return await m_session.SendCommand<SetInspectedNodeCommand, SetInspectedNodeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Resolves JavaScript node object for given node id.
+        /// Resolves the JavaScript node object for a given NodeId or BackendNodeId.
         /// </summary>
         public async Task<ResolveNodeCommandResponse> ResolveNode(ResolveNodeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {

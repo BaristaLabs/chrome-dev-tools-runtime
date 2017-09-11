@@ -19,7 +19,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// X coordinate of the start of the gesture in CSS pixels.
         /// </summary>
         [JsonProperty("x")]
-        public long X
+        public double X
         {
             get;
             set;
@@ -28,7 +28,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// Y coordinate of the start of the gesture in CSS pixels.
         /// </summary>
         [JsonProperty("y")]
-        public long Y
+        public double Y
         {
             get;
             set;
@@ -37,7 +37,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// The distance to scroll along the X axis (positive to scroll left).
         /// </summary>
         [JsonProperty("xDistance", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public long? XDistance
+        public double? XDistance
         {
             get;
             set;
@@ -46,7 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// The distance to scroll along the Y axis (positive to scroll up).
         /// </summary>
         [JsonProperty("yDistance", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public long? YDistance
+        public double? YDistance
         {
             get;
             set;
@@ -55,7 +55,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// The number of additional pixels to scroll back along the X axis, in addition to the given distance.
         /// </summary>
         [JsonProperty("xOverscroll", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public long? XOverscroll
+        public double? XOverscroll
         {
             get;
             set;
@@ -64,7 +64,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// The number of additional pixels to scroll back along the Y axis, in addition to the given distance.
         /// </summary>
         [JsonProperty("yOverscroll", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public long? YOverscroll
+        public double? YOverscroll
         {
             get;
             set;
