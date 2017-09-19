@@ -5,6 +5,16 @@
     <TargetFramework>netcoreapp1.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+    <ErrorReport>none</ErrorReport>
+    <FileAlignment>1024</FileAlignment>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\BaristaLabs.ChromeDevTools.Runtime\BaristaLabs.ChromeDevTools.Runtime.csproj" />
   </ItemGroup>

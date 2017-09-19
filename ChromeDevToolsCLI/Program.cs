@@ -16,22 +16,22 @@
         //Launch Chrome With
         //"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9223
 
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Console.WriteLine("Hello World!");
 
-            var sessions = GetSessions("http://localhost:9223/").GetAwaiter().GetResult();
+            var sessions = await GetSessions("http://localhost:9223/");
 
             using (var session = new ChromeSession(sessions.First(s => s.Type == "page").WebSocketDebuggerUrl))
             {
                 //Get the frame resource tree
-                var resource = session.Page.GetResourceTree(new Page.GetResourceTreeCommand()).GetAwaiter().GetResult();
+                var resource = await session.Page.GetResourceTree(new Page.GetResourceTreeCommand());
 
                 //Navigate to winamp.com
-                var navigateResult = session.Page.Navigate(new Page.NavigateCommand
+                var navigateResult = await session.Page.Navigate(new Page.NavigateCommand
                 {
                     Url = "http://www.winamp.com"
-                }).GetAwaiter().GetResult();
+                });
 
                 long executionContextId = -1;
 
@@ -49,15 +49,15 @@
                 });
 
                 //Enable the runtime so that execution context events are raised.
-                var result1 = session.Runtime.Enable(new Runtime.EnableCommand()).GetAwaiter().GetResult();
+                var result1 = await session.Runtime.Enable(new Runtime.EnableCommand());
 
                 //Evaluate a complex answer.
-                var result2 = session.Runtime.Evaluate(new Runtime.EvaluateCommand
+                var result2 = await session.Runtime.Evaluate(new Runtime.EvaluateCommand
                 {
                     ContextId = executionContextId,
                     ObjectGroup = "test123",
                     Expression = "6*7"
-                }).GetAwaiter().GetResult();
+                });
 
                 Console.WriteLine(result2.Result.Description);
             }
