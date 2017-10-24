@@ -39,13 +39,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command ?? new DisableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Displays native dialog with the certificate details.
-        /// </summary>
-        public async Task<ShowCertificateViewerCommandResponse> ShowCertificateViewer(ShowCertificateViewerCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<ShowCertificateViewerCommand, ShowCertificateViewerCommandResponse>(command ?? new ShowCertificateViewerCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
         /// Handles a certificate error that fired a certificateError event.
         /// </summary>
         public async Task<HandleCertificateErrorCommandResponse> HandleCertificateError(HandleCertificateErrorCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

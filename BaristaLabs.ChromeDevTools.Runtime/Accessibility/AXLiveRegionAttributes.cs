@@ -16,8 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         Atomic,
         [EnumMember(Value = "relevant")]
         Relevant,
-        [EnumMember(Value = "busy")]
-        Busy,
         [EnumMember(Value = "root")]
         Root,
     }

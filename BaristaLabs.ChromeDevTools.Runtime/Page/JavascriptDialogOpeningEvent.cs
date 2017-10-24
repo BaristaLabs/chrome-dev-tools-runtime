@@ -8,6 +8,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     public sealed class JavascriptDialogOpeningEvent : IEvent
     {
         /// <summary>
+        /// Frame url.
+        /// </summary>
+        [JsonProperty("url")]
+        public string Url
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Message that will be displayed by the dialog.
         /// </summary>
         [JsonProperty("message")]
@@ -21,6 +30,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// </summary>
         [JsonProperty("type")]
         public DialogType Type
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Default dialog prompt.
+        /// </summary>
+        [JsonProperty("defaultPrompt", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string DefaultPrompt
         {
             get;
             set;

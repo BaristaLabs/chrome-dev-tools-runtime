@@ -6,10 +6,12 @@ namespace BaristaLabs.ChromeDevTools.Runtime
     {
         private Lazy<Inspector.InspectorAdapter> m_Inspector;
         private Lazy<Memory.MemoryAdapter> m_Memory;
+        private Lazy<Performance.PerformanceAdapter> m_Performance;
         private Lazy<Page.PageAdapter> m_Page;
         private Lazy<Overlay.OverlayAdapter> m_Overlay;
         private Lazy<Emulation.EmulationAdapter> m_Emulation;
         private Lazy<Security.SecurityAdapter> m_Security;
+        private Lazy<Audits.AuditsAdapter> m_Audits;
         private Lazy<Network.NetworkAdapter> m_Network;
         private Lazy<Database.DatabaseAdapter> m_Database;
         private Lazy<IndexedDB.IndexedDBAdapter> m_IndexedDB;
@@ -45,10 +47,12 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         {
             m_Inspector = new Lazy<Inspector.InspectorAdapter>(() => new Inspector.InspectorAdapter(this));
             m_Memory = new Lazy<Memory.MemoryAdapter>(() => new Memory.MemoryAdapter(this));
+            m_Performance = new Lazy<Performance.PerformanceAdapter>(() => new Performance.PerformanceAdapter(this));
             m_Page = new Lazy<Page.PageAdapter>(() => new Page.PageAdapter(this));
             m_Overlay = new Lazy<Overlay.OverlayAdapter>(() => new Overlay.OverlayAdapter(this));
             m_Emulation = new Lazy<Emulation.EmulationAdapter>(() => new Emulation.EmulationAdapter(this));
             m_Security = new Lazy<Security.SecurityAdapter>(() => new Security.SecurityAdapter(this));
+            m_Audits = new Lazy<Audits.AuditsAdapter>(() => new Audits.AuditsAdapter(this));
             m_Network = new Lazy<Network.NetworkAdapter>(() => new Network.NetworkAdapter(this));
             m_Database = new Lazy<Database.DatabaseAdapter>(() => new Database.DatabaseAdapter(this));
             m_IndexedDB = new Lazy<IndexedDB.IndexedDBAdapter>(() => new IndexedDB.IndexedDBAdapter(this));
@@ -98,6 +102,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         }
         
         /// <summary>
+        /// Gets the adapter for the Performance domain.
+        /// </summary>
+        public Performance.PerformanceAdapter Performance
+        {
+            get { return m_Performance.Value; }
+        }
+        
+        /// <summary>
         /// Gets the adapter for the Page domain.
         /// </summary>
         public Page.PageAdapter Page
@@ -127,6 +139,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         public Security.SecurityAdapter Security
         {
             get { return m_Security.Value; }
+        }
+        
+        /// <summary>
+        /// Gets the adapter for the Audits domain.
+        /// </summary>
+        public Audits.AuditsAdapter Audits
+        {
+            get { return m_Audits.Value; }
         }
         
         /// <summary>

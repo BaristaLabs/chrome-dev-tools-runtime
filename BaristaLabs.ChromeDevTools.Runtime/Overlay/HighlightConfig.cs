@@ -115,5 +115,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
             get;
             set;
         }
+        /// <summary>
+        /// The grid layout color (default: transparent).
+        ///</summary>
+        [JsonProperty("cssGridColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public DOM.RGBA CssGridColor
+        {
+            get;
+            set;
+        }
     }
 }

@@ -37,5 +37,32 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             get;
             set;
         }
+        /// <summary>
+        /// The computed font size for this node, as a CSS computed value string (e.g. '12px').
+        ///</summary>
+        [JsonProperty("computedFontSize", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string ComputedFontSize
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The computed font weight for this node, as a CSS computed value string (e.g. 'normal' or '100').
+        ///</summary>
+        [JsonProperty("computedFontWeight", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string ComputedFontWeight
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The computed font size for the document body, as a computed CSS value string (e.g. '16px').
+        ///</summary>
+        [JsonProperty("computedBodyFontSize", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string ComputedBodyFontSize
+        {
+            get;
+            set;
+        }
     }
 }

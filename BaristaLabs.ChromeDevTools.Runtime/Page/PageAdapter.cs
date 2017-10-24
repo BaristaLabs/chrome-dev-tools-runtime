@@ -81,6 +81,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<ReloadCommand, ReloadCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Enable Chrome's experimental ad filter on all sites.
+        /// </summary>
+        public async Task<SetAdBlockingEnabledCommandResponse> SetAdBlockingEnabled(SetAdBlockingEnabledCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetAdBlockingEnabledCommand, SetAdBlockingEnabledCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Navigates current page to the given URL.
         /// </summary>
         public async Task<NavigateCommandResponse> Navigate(NavigateCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -256,20 +263,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<RequestAppBannerCommand, RequestAppBannerCommandResponse>(command ?? new RequestAppBannerCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Toggles navigation throttling which allows programatic control over navigation and redirect response.
-        /// </summary>
-        public async Task<SetControlNavigationsCommandResponse> SetControlNavigations(SetControlNavigationsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<SetControlNavigationsCommand, SetControlNavigationsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
-        /// Should be sent in response to a navigationRequested or a redirectRequested event, telling the browser how to handle the navigation.
-        /// </summary>
-        public async Task<ProcessNavigationCommandResponse> ProcessNavigation(ProcessNavigationCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<ProcessNavigationCommand, ProcessNavigationCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
         /// Returns metrics relating to the layouting of the page, such as viewport bounds/scale.
         /// </summary>
         public async Task<GetLayoutMetricsCommandResponse> GetLayoutMetrics(GetLayoutMetricsCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -283,6 +276,20 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<CreateIsolatedWorldCommand, CreateIsolatedWorldCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// Brings page to front (activates tab).
+        /// </summary>
+        public async Task<BringToFrontCommandResponse> BringToFront(BringToFrontCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<BringToFrontCommand, BringToFrontCommandResponse>(command ?? new BringToFrontCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Set the behavior when downloading a file.
+        /// </summary>
+        public async Task<SetDownloadBehaviorCommandResponse> SetDownloadBehavior(SetDownloadBehaviorCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetDownloadBehaviorCommand, SetDownloadBehaviorCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
         /// <summary>
         /// 
@@ -295,6 +302,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// 
         /// </summary>
         public void SubscribeToLoadEventFiredEvent(Action<LoadEventFiredEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Fired for top level page lifecycle events such as navigation, load, paint, etc.
+        /// </summary>
+        public void SubscribeToLifecycleEventEvent(Action<LifecycleEventEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
@@ -393,13 +407,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Fired when interstitial page was hidden
         /// </summary>
         public void SubscribeToInterstitialHiddenEvent(Action<InterstitialHiddenEvent> eventCallback)
-        {
-            m_session.Subscribe(eventCallback);
-        }
-        /// <summary>
-        /// Fired when a navigation is started if navigation throttles are enabled.  The navigation will be deferred until processNavigation is called.
-        /// </summary>
-        public void SubscribeToNavigationRequestedEvent(Action<NavigationRequestedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

@@ -35,19 +35,19 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             set;
         }
         /// <summary>
-        /// True if the page has a certificate.
+        /// The type of mixed content described by the explanation.
         ///</summary>
-        [JsonProperty("hasCertificate")]
-        public bool HasCertificate
+        [JsonProperty("mixedContentType")]
+        public MixedContentType MixedContentType
         {
             get;
             set;
         }
         /// <summary>
-        /// The type of mixed content described by the explanation.
+        /// Page certificate.
         ///</summary>
-        [JsonProperty("mixedContentType")]
-        public MixedContentType MixedContentType
+        [JsonProperty("certificate")]
+        public string[] Certificate
         {
             get;
             set;

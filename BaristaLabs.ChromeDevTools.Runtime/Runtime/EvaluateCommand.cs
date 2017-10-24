@@ -88,7 +88,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Whether execution should wait for promise to be resolved. If the result of evaluation is not a Promise, it's considered to be an error.
+        /// Whether execution should &lt;code&gt;await&lt;/code&gt; for resulting value and return once awaited promise is resolved.
         /// </summary>
         [JsonProperty("awaitPromise", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? AwaitPromise

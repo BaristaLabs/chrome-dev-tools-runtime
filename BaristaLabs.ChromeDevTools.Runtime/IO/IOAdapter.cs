@@ -38,6 +38,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
         {
             return await m_session.SendCommand<CloseCommand, CloseCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// Return UUID of Blob object specified by a remote object id.
+        /// </summary>
+        public async Task<ResolveBlobCommandResponse> ResolveBlob(ResolveBlobCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<ResolveBlobCommand, ResolveBlobCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
     }
 }

@@ -151,5 +151,12 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
         {
             m_session.Subscribe(eventCallback);
         }
+        /// <summary>
+        /// Fired when user asks to capture screenshot of some area on the page.
+        /// </summary>
+        public void SubscribeToScreenshotRequestedEvent(Action<ScreenshotRequestedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
     }
 }

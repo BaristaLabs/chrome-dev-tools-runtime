@@ -25,5 +25,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+        /// <summary>
+        /// The reason for the navigation.
+        /// </summary>
+        [JsonProperty("reason")]
+        public string Reason
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The destination URL for the scheduled navigation.
+        /// </summary>
+        [JsonProperty("url")]
+        public string Url
+        {
+            get;
+            set;
+        }
     }
 }

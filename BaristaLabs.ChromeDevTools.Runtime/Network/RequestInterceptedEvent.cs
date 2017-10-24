@@ -35,6 +35,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
+        /// Whether this is a navigation request, which can abort the navigation completely.
+        /// </summary>
+        [JsonProperty("isNavigationRequest")]
+        public bool IsNavigationRequest
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// HTTP response headers, only sent if a redirect was intercepted.
         /// </summary>
         [JsonProperty("redirectHeaders", DefaultValueHandling = DefaultValueHandling.Ignore)]

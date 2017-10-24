@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Toggles mouse event-based touch event emulation.
+    /// Enables touch on platforms which do not support them.
     /// </summary>
     public sealed class SetTouchEmulationEnabledCommand : ICommand
     {
@@ -25,10 +25,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             set;
         }
         /// <summary>
-        /// Touch/gesture events configuration. Default: current platform.
+        /// Maximum touch points supported. Defaults to one.
         /// </summary>
-        [JsonProperty("configuration", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public string Configuration
+        [JsonProperty("maxTouchPoints", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? MaxTouchPoints
         {
             get;
             set;

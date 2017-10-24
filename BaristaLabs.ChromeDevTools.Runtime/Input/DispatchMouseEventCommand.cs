@@ -78,6 +78,24 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             get;
             set;
         }
+        /// <summary>
+        /// X delta in CSS pixels for mouse wheel event (default: 0).
+        /// </summary>
+        [JsonProperty("deltaX", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? DeltaX
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Y delta in CSS pixels for mouse wheel event (default: 0).
+        /// </summary>
+        [JsonProperty("deltaY", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? DeltaY
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class DispatchMouseEventCommandResponse : ICommandResponse<DispatchMouseEventCommand>

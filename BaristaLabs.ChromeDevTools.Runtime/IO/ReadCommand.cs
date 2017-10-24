@@ -47,6 +47,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
     public sealed class ReadCommandResponse : ICommandResponse<ReadCommand>
     {
         /// <summary>
+        /// Set if the data is base64-encoded
+        ///</summary>
+        [JsonProperty("base64Encoded", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? Base64Encoded
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Data that were read.
         ///</summary>
         [JsonProperty("data")]

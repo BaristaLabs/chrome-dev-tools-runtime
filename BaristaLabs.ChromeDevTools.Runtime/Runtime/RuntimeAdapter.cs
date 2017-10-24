@@ -115,6 +115,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         {
             return await m_session.SendCommand<RunScriptCommand, RunScriptCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        public async Task<QueryObjectsCommandResponse> QueryObjects(QueryObjectsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<QueryObjectsCommand, QueryObjectsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
         /// <summary>
         /// Issued when new execution context is created.

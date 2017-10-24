@@ -143,6 +143,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
+        /// Only set for documents, contains the document's character set encoding.
+        ///</summary>
+        [JsonProperty("documentEncoding", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string DocumentEncoding
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// &lt;code&gt;DocumentType&lt;/code&gt; node's publicId.
         ///</summary>
         [JsonProperty("publicId", DefaultValueHandling = DefaultValueHandling.Ignore)]
@@ -161,7 +170,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// Frame ID for frame owner elements.
+        /// Frame ID for frame owner elements and also for the document node.
         ///</summary>
         [JsonProperty("frameId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string FrameId

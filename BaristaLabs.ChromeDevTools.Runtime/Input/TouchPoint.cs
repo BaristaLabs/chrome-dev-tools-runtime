@@ -8,16 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     public sealed class TouchPoint
     {
         /// <summary>
-        /// State of the touch point.
-        ///</summary>
-        [JsonProperty("state")]
-        public string State
-        {
-            get;
-            set;
-        }
-        /// <summary>
-        /// X coordinate of the event relative to the main frame's viewport.
+        /// X coordinate of the event relative to the main frame's viewport in CSS pixels.
         ///</summary>
         [JsonProperty("x")]
         public long X
@@ -26,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
-        /// Y coordinate of the event relative to the main frame's viewport. 0 refers to the top of the viewport and Y increases as it proceeds towards the bottom of the viewport.
+        /// Y coordinate of the event relative to the main frame's viewport in CSS pixels. 0 refers to the top of the viewport and Y increases as it proceeds towards the bottom of the viewport.
         ///</summary>
         [JsonProperty("y")]
         public long Y

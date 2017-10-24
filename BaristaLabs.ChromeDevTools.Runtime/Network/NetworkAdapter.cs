@@ -116,11 +116,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             return await m_session.SendCommand<GetAllCookiesCommand, GetAllCookiesCommandResponse>(command ?? new GetAllCookiesCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Deletes browser cookie with given name, domain and path.
+        /// Deletes browser cookies with matching name and url or domain/path pair.
         /// </summary>
-        public async Task<DeleteCookieCommandResponse> DeleteCookie(DeleteCookieCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<DeleteCookiesCommandResponse> DeleteCookies(DeleteCookiesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<DeleteCookieCommand, DeleteCookieCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<DeleteCookiesCommand, DeleteCookiesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Sets a cookie with the given cookie data; may overwrite equivalent cookies if they exist.
@@ -128,6 +128,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         public async Task<SetCookieCommandResponse> SetCookie(SetCookieCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetCookieCommand, SetCookieCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Sets given cookies.
+        /// </summary>
+        public async Task<SetCookiesCommandResponse> SetCookies(SetCookiesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetCookiesCommand, SetCookiesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Tells whether emulation of network conditions is supported.
@@ -172,7 +179,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             return await m_session.SendCommand<GetCertificateCommand, GetCertificateCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// Sets the requests to intercept that match a the provided patterns.
         /// </summary>
         public async Task<SetRequestInterceptionEnabledCommandResponse> SetRequestInterceptionEnabled(SetRequestInterceptionEnabledCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {

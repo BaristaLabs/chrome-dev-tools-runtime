@@ -142,5 +142,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
+        /// <summary>
+        /// Sticky position constraint information
+        ///</summary>
+        [JsonProperty("stickyPositionConstraint", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public StickyPositionConstraint StickyPositionConstraint
+        {
+            get;
+            set;
+        }
     }
 }

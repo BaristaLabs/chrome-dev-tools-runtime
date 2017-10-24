@@ -24,6 +24,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
+        /// <summary>
+        /// Collect block-based coverage.
+        /// </summary>
+        [JsonProperty("detailed", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? Detailed
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class StartPreciseCoverageCommandResponse : ICommandResponse<StartPreciseCoverageCommand>

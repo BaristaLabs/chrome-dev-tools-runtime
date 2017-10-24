@@ -25,7 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// If set this causes the request to fail with the given reason. Must not be set in response to an authChallenge.
+        /// If set this causes the request to fail with the given reason. Passing &lt;code&gt;Aborted&lt;/code&gt; for requests marked with &lt;code&gt;isNavigationRequest&lt;/code&gt; also cancels the navigation. Must not be set in response to an authChallenge.
         /// </summary>
         [JsonProperty("errorReason", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ErrorReason? ErrorReason

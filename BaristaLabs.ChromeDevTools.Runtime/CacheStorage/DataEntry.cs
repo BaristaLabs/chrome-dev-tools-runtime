@@ -8,19 +8,28 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
     public sealed class DataEntry
     {
         /// <summary>
-        /// Request url spec.
+        /// Request URL.
         ///</summary>
-        [JsonProperty("request")]
-        public string Request
+        [JsonProperty("requestURL")]
+        public string RequestURL
         {
             get;
             set;
         }
         /// <summary>
-        /// Response status text.
+        /// Request method.
         ///</summary>
-        [JsonProperty("response")]
-        public string Response
+        [JsonProperty("requestMethod")]
+        public string RequestMethod
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Request headers
+        ///</summary>
+        [JsonProperty("requestHeaders")]
+        public Header[] RequestHeaders
         {
             get;
             set;
@@ -30,6 +39,33 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         ///</summary>
         [JsonProperty("responseTime")]
         public double ResponseTime
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// HTTP response status code.
+        ///</summary>
+        [JsonProperty("responseStatus")]
+        public long ResponseStatus
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// HTTP response status text.
+        ///</summary>
+        [JsonProperty("responseStatusText")]
+        public string ResponseStatusText
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Response headers
+        ///</summary>
+        [JsonProperty("responseHeaders")]
+        public Header[] ResponseHeaders
         {
             get;
             set;

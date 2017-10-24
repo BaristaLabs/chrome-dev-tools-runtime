@@ -81,11 +81,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             return await m_session.SendCommand<ClearGeolocationOverrideCommand, ClearGeolocationOverrideCommandResponse>(command ?? new ClearGeolocationOverrideCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Toggles mouse event-based touch event emulation.
+        /// Enables touch on platforms which do not support them.
         /// </summary>
         public async Task<SetTouchEmulationEnabledCommandResponse> SetTouchEmulationEnabled(SetTouchEmulationEnabledCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetTouchEmulationEnabledCommand, SetTouchEmulationEnabledCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public async Task<SetEmitTouchEventsForMouseCommandResponse> SetEmitTouchEventsForMouse(SetEmitTouchEventsForMouseCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetEmitTouchEventsForMouseCommand, SetEmitTouchEventsForMouseCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Emulates the given media for CSS media queries.
@@ -124,9 +131,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         }
 
         /// <summary>
-        /// Notification sent after the virual time budget for the current VirtualTimePolicy has run out.
+        /// Notification sent after the virtual time budget for the current VirtualTimePolicy has run out.
         /// </summary>
         public void SubscribeToVirtualTimeBudgetExpiredEvent(Action<VirtualTimeBudgetExpiredEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Notification sent after the virtual time has paused.
+        /// </summary>
+        public void SubscribeToVirtualTimePausedEvent(Action<VirtualTimePausedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

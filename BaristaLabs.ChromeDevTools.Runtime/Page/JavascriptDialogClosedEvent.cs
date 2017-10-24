@@ -16,5 +16,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+        /// <summary>
+        /// User input in case of prompt.
+        /// </summary>
+        [JsonProperty("userInput")]
+        public string UserInput
+        {
+            get;
+            set;
+        }
     }
 }

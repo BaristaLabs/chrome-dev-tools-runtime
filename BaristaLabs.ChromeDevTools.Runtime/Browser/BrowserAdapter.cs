@@ -32,6 +32,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
             return await m_session.SendCommand<GetWindowForTargetCommand, GetWindowForTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Returns version information.
+        /// </summary>
+        public async Task<GetVersionCommandResponse> GetVersion(GetVersionCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetVersionCommand, GetVersionCommandResponse>(command ?? new GetVersionCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Set position and/or size of the browser window.
         /// </summary>
         public async Task<SetWindowBoundsCommandResponse> SetWindowBounds(SetWindowBoundsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

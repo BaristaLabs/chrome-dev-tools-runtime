@@ -16,8 +16,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         Neutral,
         [EnumMember(Value = "insecure")]
         Insecure,
-        [EnumMember(Value = "warning")]
-        Warning,
         [EnumMember(Value = "secure")]
         Secure,
         [EnumMember(Value = "info")]

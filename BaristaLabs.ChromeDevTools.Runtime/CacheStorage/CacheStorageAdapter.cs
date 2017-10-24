@@ -52,6 +52,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         {
             return await m_session.SendCommand<DeleteEntryCommand, DeleteEntryCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// Fetches cache entry.
+        /// </summary>
+        public async Task<RequestCachedResponseCommandResponse> RequestCachedResponse(RequestCachedResponseCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<RequestCachedResponseCommand, RequestCachedResponseCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
     }
 }

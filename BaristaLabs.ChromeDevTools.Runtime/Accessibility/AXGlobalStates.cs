@@ -10,6 +10,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
     [JsonConverter(typeof(StringEnumConverter))]
     public enum AXGlobalStates
     {
+        [EnumMember(Value = "busy")]
+        Busy,
         [EnumMember(Value = "disabled")]
         Disabled,
         [EnumMember(Value = "hidden")]

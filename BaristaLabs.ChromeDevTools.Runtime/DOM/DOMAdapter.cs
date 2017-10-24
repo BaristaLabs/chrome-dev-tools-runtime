@@ -290,6 +290,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<GetRelayoutBoundaryCommand, GetRelayoutBoundaryCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// Describes node given its id, does not require domain to be enabled. Does not start tracking any objects, can be used for automation.
+        /// </summary>
+        public async Task<DescribeNodeCommandResponse> DescribeNode(DescribeNodeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<DescribeNodeCommand, DescribeNodeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
         /// <summary>
         /// Fired when &lt;code&gt;Document&lt;/code&gt; has been totally updated. Node ids are no longer valid.

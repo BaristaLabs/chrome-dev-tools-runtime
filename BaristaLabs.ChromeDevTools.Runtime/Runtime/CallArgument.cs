@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     public sealed class CallArgument
     {
         /// <summary>
-        /// Primitive value.
+        /// Primitive value or serializable javascript object.
         ///</summary>
         [JsonProperty("value", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public object Value

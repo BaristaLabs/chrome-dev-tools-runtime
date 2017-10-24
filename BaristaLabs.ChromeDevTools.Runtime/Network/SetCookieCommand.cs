@@ -16,16 +16,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         }
 
         /// <summary>
-        /// The request-URI to associate with the setting of the cookie. This value can affect the default domain and path values of the created cookie.
-        /// </summary>
-        [JsonProperty("url")]
-        public string Url
-        {
-            get;
-            set;
-        }
-        /// <summary>
-        /// The name of the cookie.
+        /// Cookie name.
         /// </summary>
         [JsonProperty("name")]
         public string Name
@@ -34,7 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// The value of the cookie.
+        /// Cookie value.
         /// </summary>
         [JsonProperty("value")]
         public string Value
@@ -43,7 +34,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// If omitted, the cookie becomes a host-only cookie.
+        /// The request-URI to associate with the setting of the cookie. This value can affect the default domain and path values of the created cookie.
+        /// </summary>
+        [JsonProperty("url", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string Url
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Cookie domain.
         /// </summary>
         [JsonProperty("domain", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Domain
@@ -52,7 +52,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Defaults to the path portion of the url parameter.
+        /// Cookie path.
         /// </summary>
         [JsonProperty("path", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Path
@@ -61,7 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Defaults ot false.
+        /// True if cookie is secure.
         /// </summary>
         [JsonProperty("secure", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Secure
@@ -70,7 +70,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Defaults to false.
+        /// True if cookie is http-only.
         /// </summary>
         [JsonProperty("httpOnly", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? HttpOnly
@@ -79,7 +79,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Defaults to browser default behavior.
+        /// Cookie SameSite type.
         /// </summary>
         [JsonProperty("sameSite", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public CookieSameSite? SameSite
@@ -88,10 +88,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// If omitted, the cookie becomes a session cookie.
+        /// Cookie expiration date, session cookie if not set
         /// </summary>
-        [JsonProperty("expirationDate", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public double? ExpirationDate
+        [JsonProperty("expires", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? Expires
         {
             get;
             set;
