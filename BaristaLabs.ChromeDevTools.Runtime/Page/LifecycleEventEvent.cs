@@ -8,6 +8,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     public sealed class LifecycleEventEvent : IEvent
     {
         /// <summary>
+        /// Id of the frame.
+        /// </summary>
+        [JsonProperty("frameId")]
+        public string FrameId
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Gets or sets the name
         /// </summary>
         [JsonProperty("name")]

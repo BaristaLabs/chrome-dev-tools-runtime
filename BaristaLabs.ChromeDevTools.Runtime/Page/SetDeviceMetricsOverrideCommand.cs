@@ -52,7 +52,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Scale to apply to resulting view image. Ignored in |fitWindow| mode.
+        /// Scale to apply to resulting view image.
         /// </summary>
         [JsonProperty("scale", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? Scale
@@ -61,7 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Overriding screen width value in pixels (minimum 0, maximum 10000000). Only used for |mobile==true|.
+        /// Overriding screen width value in pixels (minimum 0, maximum 10000000).
         /// </summary>
         [JsonProperty("screenWidth", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ScreenWidth
@@ -70,7 +70,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Overriding screen height value in pixels (minimum 0, maximum 10000000). Only used for |mobile==true|.
+        /// Overriding screen height value in pixels (minimum 0, maximum 10000000).
         /// </summary>
         [JsonProperty("screenHeight", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ScreenHeight
@@ -79,7 +79,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Overriding view X position on screen in pixels (minimum 0, maximum 10000000). Only used for |mobile==true|.
+        /// Overriding view X position on screen in pixels (minimum 0, maximum 10000000).
         /// </summary>
         [JsonProperty("positionX", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? PositionX
@@ -88,7 +88,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Overriding view Y position on screen in pixels (minimum 0, maximum 10000000). Only used for |mobile==true|.
+        /// Overriding view Y position on screen in pixels (minimum 0, maximum 10000000).
         /// </summary>
         [JsonProperty("positionY", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? PositionY
@@ -110,6 +110,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// </summary>
         [JsonProperty("screenOrientation", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Emulation.ScreenOrientation ScreenOrientation
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The viewport dimensions and scale. If not set, the override is cleared.
+        /// </summary>
+        [JsonProperty("viewport", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public Viewport Viewport
         {
             get;
             set;

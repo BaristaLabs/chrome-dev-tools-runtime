@@ -123,6 +123,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             return await m_session.SendCommand<SetVirtualTimePolicyCommand, SetVirtualTimePolicyCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Overrides value returned by the javascript navigator object.
+        /// </summary>
+        public async Task<SetNavigatorOverridesCommandResponse> SetNavigatorOverrides(SetNavigatorOverridesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetNavigatorOverridesCommand, SetNavigatorOverridesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Sets or clears an override of the default background color of the frame. This override is used if the content does not specify one.
         /// </summary>
         public async Task<SetDefaultBackgroundColorOverrideCommandResponse> SetDefaultBackgroundColorOverride(SetDefaultBackgroundColorOverrideCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -134,6 +141,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         /// Notification sent after the virtual time budget for the current VirtualTimePolicy has run out.
         /// </summary>
         public void SubscribeToVirtualTimeBudgetExpiredEvent(Action<VirtualTimeBudgetExpiredEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Notification sent after the virtual time has advanced.
+        /// </summary>
+        public void SubscribeToVirtualTimeAdvancedEvent(Action<VirtualTimeAdvancedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

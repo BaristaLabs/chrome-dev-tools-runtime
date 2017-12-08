@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Returns search results from given &lt;code&gt;fromIndex&lt;/code&gt; to given &lt;code&gt;toIndex&lt;/code&gt; from the sarch with the given identifier.
+    /// Returns search results from given &lt;code&gt;fromIndex&lt;/code&gt; to given &lt;code&gt;toIndex&lt;/code&gt; from the search with the given identifier.
     /// </summary>
     public sealed class GetSearchResultsCommand : ICommand
     {

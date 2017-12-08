@@ -25,7 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Additional latency (ms).
+        /// Minimum latency from request sent to response headers received (ms).
         /// </summary>
         [JsonProperty("latency")]
         public double Latency
@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Maximal aggregated download throughput.
+        /// Maximal aggregated download throughput (bytes/sec). -1 disables download throttling.
         /// </summary>
         [JsonProperty("downloadThroughput")]
         public double DownloadThroughput
@@ -43,7 +43,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Maximal aggregated upload throughput.
+        /// Maximal aggregated upload throughput (bytes/sec).  -1 disables upload throttling.
         /// </summary>
         [JsonProperty("uploadThroughput")]
         public double UploadThroughput

@@ -44,6 +44,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             set;
         }
         /// <summary>
+        /// JavaScript script name or url.
+        ///</summary>
+        [JsonProperty("url")]
+        public string Url
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Scope chain for this call frame.
         ///</summary>
         [JsonProperty("scopeChain")]

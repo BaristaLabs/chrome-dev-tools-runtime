@@ -87,6 +87,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         {
             return await m_session.SendCommand<GetBestEffortCoverageCommand, GetBestEffortCoverageCommandResponse>(command ?? new GetBestEffortCoverageCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// Enable type profile.
+        /// </summary>
+        public async Task<StartTypeProfileCommandResponse> StartTypeProfile(StartTypeProfileCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<StartTypeProfileCommand, StartTypeProfileCommandResponse>(command ?? new StartTypeProfileCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Disable type profile. Disabling releases type profile data collected so far.
+        /// </summary>
+        public async Task<StopTypeProfileCommandResponse> StopTypeProfile(StopTypeProfileCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<StopTypeProfileCommand, StopTypeProfileCommandResponse>(command ?? new StopTypeProfileCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Collect type profile.
+        /// </summary>
+        public async Task<TakeTypeProfileCommandResponse> TakeTypeProfile(TakeTypeProfileCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<TakeTypeProfileCommand, TakeTypeProfileCommandResponse>(command ?? new TakeTypeProfileCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
         /// <summary>
         /// Sent when new profile recording is started using console.profile() call.

@@ -16,19 +16,19 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         }
 
         /// <summary>
-        /// Identifier of the object to call function on.
+        /// Declaration of the function to call.
         /// </summary>
-        [JsonProperty("objectId")]
-        public string ObjectId
+        [JsonProperty("functionDeclaration")]
+        public string FunctionDeclaration
         {
             get;
             set;
         }
         /// <summary>
-        /// Declaration of the function to call.
+        /// Identifier of the object to call function on. Either objectId or executionContextId should be specified.
         /// </summary>
-        [JsonProperty("functionDeclaration")]
-        public string FunctionDeclaration
+        [JsonProperty("objectId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string ObjectId
         {
             get;
             set;
@@ -83,6 +83,24 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// </summary>
         [JsonProperty("awaitPromise", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? AwaitPromise
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Specifies execution context which global object will be used to call function on. Either executionContextId or objectId should be specified.
+        /// </summary>
+        [JsonProperty("executionContextId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? ExecutionContextId
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Symbolic group name that can be used to release multiple objects. If objectGroup is not specified and objectId is, objectGroup will be inherited from object.
+        /// </summary>
+        [JsonProperty("objectGroup", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string ObjectGroup
         {
             get;
             set;

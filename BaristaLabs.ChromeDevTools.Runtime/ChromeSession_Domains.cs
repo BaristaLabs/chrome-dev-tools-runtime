@@ -24,6 +24,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         private Lazy<IO.IOAdapter> m_IO;
         private Lazy<DOMDebugger.DOMDebuggerAdapter> m_DOMDebugger;
         private Lazy<Target.TargetAdapter> m_Target;
+        private Lazy<HeadlessExperimental.HeadlessExperimentalAdapter> m_HeadlessExperimental;
         private Lazy<ServiceWorker.ServiceWorkerAdapter> m_ServiceWorker;
         private Lazy<Input.InputAdapter> m_Input;
         private Lazy<LayerTree.LayerTreeAdapter> m_LayerTree;
@@ -65,6 +66,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
             m_IO = new Lazy<IO.IOAdapter>(() => new IO.IOAdapter(this));
             m_DOMDebugger = new Lazy<DOMDebugger.DOMDebuggerAdapter>(() => new DOMDebugger.DOMDebuggerAdapter(this));
             m_Target = new Lazy<Target.TargetAdapter>(() => new Target.TargetAdapter(this));
+            m_HeadlessExperimental = new Lazy<HeadlessExperimental.HeadlessExperimentalAdapter>(() => new HeadlessExperimental.HeadlessExperimentalAdapter(this));
             m_ServiceWorker = new Lazy<ServiceWorker.ServiceWorkerAdapter>(() => new ServiceWorker.ServiceWorkerAdapter(this));
             m_Input = new Lazy<Input.InputAdapter>(() => new Input.InputAdapter(this));
             m_LayerTree = new Lazy<LayerTree.LayerTreeAdapter>(() => new LayerTree.LayerTreeAdapter(this));
@@ -243,6 +245,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         public Target.TargetAdapter Target
         {
             get { return m_Target.Value; }
+        }
+        
+        /// <summary>
+        /// Gets the adapter for the HeadlessExperimental domain.
+        /// </summary>
+        public HeadlessExperimental.HeadlessExperimentalAdapter HeadlessExperimental
+        {
+            get { return m_HeadlessExperimental.Value; }
         }
         
         /// <summary>

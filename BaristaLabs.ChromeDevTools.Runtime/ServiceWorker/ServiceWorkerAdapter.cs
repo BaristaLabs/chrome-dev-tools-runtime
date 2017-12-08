@@ -76,6 +76,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// <summary>
         /// 
         /// </summary>
+        public async Task<StopAllWorkersCommandResponse> StopAllWorkers(StopAllWorkersCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<StopAllWorkersCommand, StopAllWorkersCommandResponse>(command ?? new StopAllWorkersCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
         public async Task<InspectWorkerCommandResponse> InspectWorker(InspectWorkerCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<InspectWorkerCommand, InspectWorkerCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);

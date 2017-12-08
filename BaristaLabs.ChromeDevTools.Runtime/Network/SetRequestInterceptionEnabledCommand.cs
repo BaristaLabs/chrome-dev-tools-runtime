@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Sets the requests to intercept that match a the provided patterns.
+    /// Sets the requests to intercept that match a the provided patterns and optionally resource types.
     /// </summary>
     public sealed class SetRequestInterceptionEnabledCommand : ICommand
     {
@@ -29,6 +29,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// </summary>
         [JsonProperty("patterns", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string[] Patterns
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// If set, only requests for matching resource types will be intercepted.
+        /// </summary>
+        [JsonProperty("resourceTypes", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public Page.ResourceType[] ResourceTypes
         {
             get;
             set;

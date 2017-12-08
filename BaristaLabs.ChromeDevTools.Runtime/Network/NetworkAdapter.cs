@@ -179,7 +179,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             return await m_session.SendCommand<GetCertificateCommand, GetCertificateCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Sets the requests to intercept that match a the provided patterns.
+        /// Sets the requests to intercept that match a the provided patterns and optionally resource types.
         /// </summary>
         public async Task<SetRequestInterceptionEnabledCommandResponse> SetRequestInterceptionEnabled(SetRequestInterceptionEnabledCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {

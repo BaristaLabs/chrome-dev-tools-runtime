@@ -73,8 +73,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         /// <summary>
         /// &lt;code&gt;AnimationEffect&lt;/code&gt;'s target node.
         ///</summary>
-        [JsonProperty("backendNodeId")]
-        public long BackendNodeId
+        [JsonProperty("backendNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? BackendNodeId
         {
             get;
             set;

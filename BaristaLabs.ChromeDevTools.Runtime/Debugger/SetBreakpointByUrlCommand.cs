@@ -43,6 +43,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             set;
         }
         /// <summary>
+        /// Script hash of the resources to set breakpoint on.
+        /// </summary>
+        [JsonProperty("scriptHash", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string ScriptHash
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Offset in the line to set breakpoint at.
         /// </summary>
         [JsonProperty("columnNumber", DefaultValueHandling = DefaultValueHandling.Ignore)]

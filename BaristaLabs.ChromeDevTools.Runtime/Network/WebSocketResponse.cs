@@ -11,7 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// HTTP response status code.
         ///</summary>
         [JsonProperty("status")]
-        public double Status
+        public long Status
         {
             get;
             set;

@@ -25,6 +25,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
         }
 
         /// <summary>
+        /// Close browser gracefully.
+        /// </summary>
+        public async Task<CloseCommandResponse> Close(CloseCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<CloseCommand, CloseCommandResponse>(command ?? new CloseCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Get the browser window that contains the devtools target.
         /// </summary>
         public async Task<GetWindowForTargetCommandResponse> GetWindowForTarget(GetWindowForTargetCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

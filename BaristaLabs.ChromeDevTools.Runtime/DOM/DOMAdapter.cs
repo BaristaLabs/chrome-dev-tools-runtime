@@ -144,7 +144,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             return await m_session.SendCommand<PerformSearchCommand, PerformSearchCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Returns search results from given &lt;code&gt;fromIndex&lt;/code&gt; to given &lt;code&gt;toIndex&lt;/code&gt; from the sarch with the given identifier.
+        /// Returns search results from given &lt;code&gt;fromIndex&lt;/code&gt; to given &lt;code&gt;toIndex&lt;/code&gt; from the search with the given identifier.
         /// </summary>
         public async Task<GetSearchResultsCommandResponse> GetSearchResults(GetSearchResultsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {

@@ -11,7 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// X coordinate of the event relative to the main frame's viewport in CSS pixels.
         ///</summary>
         [JsonProperty("x")]
-        public long X
+        public double X
         {
             get;
             set;
@@ -20,25 +20,25 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         /// Y coordinate of the event relative to the main frame's viewport in CSS pixels. 0 refers to the top of the viewport and Y increases as it proceeds towards the bottom of the viewport.
         ///</summary>
         [JsonProperty("y")]
-        public long Y
+        public double Y
         {
             get;
             set;
         }
         /// <summary>
-        /// X radius of the touch area (default: 1).
+        /// X radius of the touch area (default: 1.0).
         ///</summary>
         [JsonProperty("radiusX", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public long? RadiusX
+        public double? RadiusX
         {
             get;
             set;
         }
         /// <summary>
-        /// Y radius of the touch area (default: 1).
+        /// Y radius of the touch area (default: 1.0).
         ///</summary>
         [JsonProperty("radiusY", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public long? RadiusY
+        public double? RadiusY
         {
             get;
             set;

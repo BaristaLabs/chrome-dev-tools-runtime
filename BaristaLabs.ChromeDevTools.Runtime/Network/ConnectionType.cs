@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     using System.Runtime.Serialization;
 
     /// <summary>
-    /// Loading priority of a resource request.
+    /// The underlying connection technology that the browser is supposedly using.
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ConnectionType

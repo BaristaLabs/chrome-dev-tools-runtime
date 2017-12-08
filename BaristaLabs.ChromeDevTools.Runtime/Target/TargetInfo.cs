@@ -52,5 +52,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             get;
             set;
         }
+        /// <summary>
+        /// Opener target Id
+        ///</summary>
+        [JsonProperty("openerId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string OpenerId
+        {
+            get;
+            set;
+        }
     }
 }

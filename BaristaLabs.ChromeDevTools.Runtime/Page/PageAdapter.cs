@@ -410,5 +410,12 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             m_session.Subscribe(eventCallback);
         }
+        /// <summary>
+        /// Fired when window.open() was called
+        /// </summary>
+        public void SubscribeToWindowOpenEvent(Action<WindowOpenEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
     }
 }

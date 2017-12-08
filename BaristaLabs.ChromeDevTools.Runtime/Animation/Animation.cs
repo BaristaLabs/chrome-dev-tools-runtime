@@ -71,19 +71,19 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Animation&lt;/code&gt;'s source animation node.
+        /// Animation type of &lt;code&gt;Animation&lt;/code&gt;.
         ///</summary>
-        [JsonProperty("source")]
-        public AnimationEffect Source
+        [JsonProperty("type")]
+        public string Type
         {
             get;
             set;
         }
         /// <summary>
-        /// Animation type of &lt;code&gt;Animation&lt;/code&gt;.
+        /// &lt;code&gt;Animation&lt;/code&gt;'s source animation node.
         ///</summary>
-        [JsonProperty("type")]
-        public string Type
+        [JsonProperty("source", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public AnimationEffect Source
         {
             get;
             set;

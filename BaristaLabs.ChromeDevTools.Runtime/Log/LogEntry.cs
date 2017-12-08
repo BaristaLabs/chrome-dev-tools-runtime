@@ -88,5 +88,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             get;
             set;
         }
+        /// <summary>
+        /// Call arguments.
+        ///</summary>
+        [JsonProperty("args", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public Runtime.RemoteObject[] Args
+        {
+            get;
+            set;
+        }
     }
 }
