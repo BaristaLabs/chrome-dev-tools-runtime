@@ -25,60 +25,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         }
 
         /// <summary>
-        /// Controls whether to discover available targets and notify via &lt;code&gt;targetCreated/targetInfoChanged/targetDestroyed&lt;/code&gt; events.
-        /// </summary>
-        public async Task<SetDiscoverTargetsCommandResponse> SetDiscoverTargets(SetDiscoverTargetsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<SetDiscoverTargetsCommand, SetDiscoverTargetsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
-        /// Controls whether to automatically attach to new targets which are considered to be related to this one. When turned on, attaches to all existing related targets as well. When turned off, automatically detaches from all currently attached targets.
-        /// </summary>
-        public async Task<SetAutoAttachCommandResponse> SetAutoAttach(SetAutoAttachCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<SetAutoAttachCommand, SetAutoAttachCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public async Task<SetAttachToFramesCommandResponse> SetAttachToFrames(SetAttachToFramesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<SetAttachToFramesCommand, SetAttachToFramesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
-        /// Enables target discovery for the specified locations, when &lt;code&gt;setDiscoverTargets&lt;/code&gt; was set to &lt;code&gt;true&lt;/code&gt;.
-        /// </summary>
-        public async Task<SetRemoteLocationsCommandResponse> SetRemoteLocations(SetRemoteLocationsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<SetRemoteLocationsCommand, SetRemoteLocationsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
-        /// Sends protocol message over session with given id.
-        /// </summary>
-        public async Task<SendMessageToTargetCommandResponse> SendMessageToTarget(SendMessageToTargetCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<SendMessageToTargetCommand, SendMessageToTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
-        /// Returns information about a target.
-        /// </summary>
-        public async Task<GetTargetInfoCommandResponse> GetTargetInfo(GetTargetInfoCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<GetTargetInfoCommand, GetTargetInfoCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
         /// Activates (focuses) the target.
         /// </summary>
         public async Task<ActivateTargetCommandResponse> ActivateTarget(ActivateTargetCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<ActivateTargetCommand, ActivateTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
-        /// Closes the target. If the target is a page that gets closed too.
-        /// </summary>
-        public async Task<CloseTargetCommandResponse> CloseTarget(CloseTargetCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<CloseTargetCommand, CloseTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Attaches to the target with given id.
@@ -88,11 +39,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             return await m_session.SendCommand<AttachToTargetCommand, AttachToTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Detaches session with given id.
+        /// Closes the target. If the target is a page that gets closed too.
         /// </summary>
-        public async Task<DetachFromTargetCommandResponse> DetachFromTarget(DetachFromTargetCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<CloseTargetCommandResponse> CloseTarget(CloseTargetCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<DetachFromTargetCommand, DetachFromTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<CloseTargetCommand, CloseTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Creates a new empty BrowserContext. Similar to an incognito profile but you can have more than one.
@@ -102,6 +53,20 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             return await m_session.SendCommand<CreateBrowserContextCommand, CreateBrowserContextCommandResponse>(command ?? new CreateBrowserContextCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Creates a new page.
+        /// </summary>
+        public async Task<CreateTargetCommandResponse> CreateTarget(CreateTargetCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<CreateTargetCommand, CreateTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Detaches session with given id.
+        /// </summary>
+        public async Task<DetachFromTargetCommandResponse> DetachFromTarget(DetachFromTargetCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<DetachFromTargetCommand, DetachFromTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Deletes a BrowserContext, will fail of any open page uses it.
         /// </summary>
         public async Task<DisposeBrowserContextCommandResponse> DisposeBrowserContext(DisposeBrowserContextCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -109,11 +74,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             return await m_session.SendCommand<DisposeBrowserContextCommand, DisposeBrowserContextCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Creates a new page.
+        /// Returns information about a target.
         /// </summary>
-        public async Task<CreateTargetCommandResponse> CreateTarget(CreateTargetCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<GetTargetInfoCommandResponse> GetTargetInfo(GetTargetInfoCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<CreateTargetCommand, CreateTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<GetTargetInfoCommand, GetTargetInfoCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Retrieves a list of available targets.
@@ -122,18 +87,67 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         {
             return await m_session.SendCommand<GetTargetsCommand, GetTargetsCommandResponse>(command ?? new GetTargetsCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// Sends protocol message over session with given id.
+        /// </summary>
+        public async Task<SendMessageToTargetCommandResponse> SendMessageToTarget(SendMessageToTargetCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SendMessageToTargetCommand, SendMessageToTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public async Task<SetAttachToFramesCommandResponse> SetAttachToFrames(SetAttachToFramesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetAttachToFramesCommand, SetAttachToFramesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Controls whether to automatically attach to new targets which are considered to be related to this one. When turned on, attaches to all existing related targets as well. When turned off, automatically detaches from all currently attached targets.
+        /// </summary>
+        public async Task<SetAutoAttachCommandResponse> SetAutoAttach(SetAutoAttachCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetAutoAttachCommand, SetAutoAttachCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Controls whether to discover available targets and notify via `targetCreated/targetInfoChanged/targetDestroyed` events.
+        /// </summary>
+        public async Task<SetDiscoverTargetsCommandResponse> SetDiscoverTargets(SetDiscoverTargetsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetDiscoverTargetsCommand, SetDiscoverTargetsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Enables target discovery for the specified locations, when `setDiscoverTargets` was set to `true`.
+        /// </summary>
+        public async Task<SetRemoteLocationsCommandResponse> SetRemoteLocations(SetRemoteLocationsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetRemoteLocationsCommand, SetRemoteLocationsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
         /// <summary>
-        /// Issued when a possible inspection target is created.
+        /// Issued when attached to target because of auto-attach or `attachToTarget` command.
         /// </summary>
-        public void SubscribeToTargetCreatedEvent(Action<TargetCreatedEvent> eventCallback)
+        public void SubscribeToAttachedToTargetEvent(Action<AttachedToTargetEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Issued when some information about a target has changed. This only happens between &lt;code&gt;targetCreated&lt;/code&gt; and &lt;code&gt;targetDestroyed&lt;/code&gt;.
+        /// Issued when detached from target for any reason (including `detachFromTarget` command). Can be issued multiple times per target if multiple sessions have been attached to it.
         /// </summary>
-        public void SubscribeToTargetInfoChangedEvent(Action<TargetInfoChangedEvent> eventCallback)
+        public void SubscribeToDetachedFromTargetEvent(Action<DetachedFromTargetEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Notifies about a new protocol message received from the session (as reported in `attachedToTarget` event).
+        /// </summary>
+        public void SubscribeToReceivedMessageFromTargetEvent(Action<ReceivedMessageFromTargetEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Issued when a possible inspection target is created.
+        /// </summary>
+        public void SubscribeToTargetCreatedEvent(Action<TargetCreatedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
@@ -145,23 +159,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Issued when attached to target because of auto-attach or &lt;code&gt;attachToTarget&lt;/code&gt; command.
+        /// Issued when some information about a target has changed. This only happens between `targetCreated` and `targetDestroyed`.
         /// </summary>
-        public void SubscribeToAttachedToTargetEvent(Action<AttachedToTargetEvent> eventCallback)
-        {
-            m_session.Subscribe(eventCallback);
-        }
-        /// <summary>
-        /// Issued when detached from target for any reason (including &lt;code&gt;detachFromTarget&lt;/code&gt; command). Can be issued multiple times per target if multiple sessions have been attached to it.
-        /// </summary>
-        public void SubscribeToDetachedFromTargetEvent(Action<DetachedFromTargetEvent> eventCallback)
-        {
-            m_session.Subscribe(eventCallback);
-        }
-        /// <summary>
-        /// Notifies about a new protocol message received from the session (as reported in &lt;code&gt;attachedToTarget&lt;/code&gt; event).
-        /// </summary>
-        public void SubscribeToReceivedMessageFromTargetEvent(Action<ReceivedMessageFromTargetEvent> eventCallback)
+        public void SubscribeToTargetInfoChangedEvent(Action<TargetInfoChangedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

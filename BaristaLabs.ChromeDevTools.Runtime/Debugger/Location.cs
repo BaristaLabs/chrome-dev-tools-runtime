@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     public sealed class Location
     {
         /// <summary>
-        /// Script identifier as reported in the &lt;code&gt;Debugger.scriptParsed&lt;/code&gt;.
+        /// Script identifier as reported in the <code>Debugger.scriptParsed</code>.
         ///</summary>
         [JsonProperty("scriptId")]
         public string ScriptId

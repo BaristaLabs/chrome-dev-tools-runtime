@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
     public sealed class DOMNode
     {
         /// <summary>
-        /// &lt;code&gt;Node&lt;/code&gt;'s nodeType.
+        /// `Node`'s nodeType.
         ///</summary>
         [JsonProperty("nodeType")]
         public long NodeType
@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Node&lt;/code&gt;'s nodeName.
+        /// `Node`'s nodeName.
         ///</summary>
         [JsonProperty("nodeName")]
         public string NodeName
@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Node&lt;/code&gt;'s nodeValue.
+        /// `Node`'s nodeValue.
         ///</summary>
         [JsonProperty("nodeValue")]
         public string NodeValue
@@ -71,7 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Node&lt;/code&gt;'s id, corresponds to DOM.Node.backendNodeId.
+        /// `Node`'s id, corresponds to DOM.Node.backendNodeId.
         ///</summary>
         [JsonProperty("backendNodeId")]
         public long BackendNodeId
@@ -80,7 +80,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// The indexes of the node's child nodes in the &lt;code&gt;domNodes&lt;/code&gt; array returned by &lt;code&gt;getSnapshot&lt;/code&gt;, if any.
+        /// The indexes of the node's child nodes in the `domNodes` array returned by `getSnapshot`, if any.
         ///</summary>
         [JsonProperty("childNodeIndexes", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long[] ChildNodeIndexes
@@ -89,7 +89,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// Attributes of an &lt;code&gt;Element&lt;/code&gt; node.
+        /// Attributes of an `Element` node.
         ///</summary>
         [JsonProperty("attributes", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public NameValue[] Attributes
@@ -98,7 +98,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// Indexes of pseudo elements associated with this node in the &lt;code&gt;domNodes&lt;/code&gt; array returned by &lt;code&gt;getSnapshot&lt;/code&gt;, if any.
+        /// Indexes of pseudo elements associated with this node in the `domNodes` array returned by `getSnapshot`, if any.
         ///</summary>
         [JsonProperty("pseudoElementIndexes", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long[] PseudoElementIndexes
@@ -107,7 +107,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// The index of the node's related layout tree node in the &lt;code&gt;layoutTreeNodes&lt;/code&gt; array returned by &lt;code&gt;getSnapshot&lt;/code&gt;, if any.
+        /// The index of the node's related layout tree node in the `layoutTreeNodes` array returned by `getSnapshot`, if any.
         ///</summary>
         [JsonProperty("layoutNodeIndex", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? LayoutNodeIndex
@@ -116,7 +116,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// Document URL that &lt;code&gt;Document&lt;/code&gt; or &lt;code&gt;FrameOwner&lt;/code&gt; node points to.
+        /// Document URL that `Document` or `FrameOwner` node points to.
         ///</summary>
         [JsonProperty("documentURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string DocumentURL
@@ -125,7 +125,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// Base URL that &lt;code&gt;Document&lt;/code&gt; or &lt;code&gt;FrameOwner&lt;/code&gt; node uses for URL completion.
+        /// Base URL that `Document` or `FrameOwner` node uses for URL completion.
         ///</summary>
         [JsonProperty("baseURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string BaseURL
@@ -152,7 +152,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// &lt;code&gt;DocumentType&lt;/code&gt; node's publicId.
+        /// `DocumentType` node's publicId.
         ///</summary>
         [JsonProperty("publicId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string PublicId
@@ -161,7 +161,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// &lt;code&gt;DocumentType&lt;/code&gt; node's systemId.
+        /// `DocumentType` node's systemId.
         ///</summary>
         [JsonProperty("systemId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string SystemId
@@ -179,7 +179,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// The index of a frame owner element's content document in the &lt;code&gt;domNodes&lt;/code&gt; array returned by &lt;code&gt;getSnapshot&lt;/code&gt;, if any.
+        /// The index of a frame owner element's content document in the `domNodes` array returned by `getSnapshot`, if any.
         ///</summary>
         [JsonProperty("contentDocumentIndex", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ContentDocumentIndex
@@ -188,7 +188,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// Index of the imported document's node of a link element in the &lt;code&gt;domNodes&lt;/code&gt; array returned by &lt;code&gt;getSnapshot&lt;/code&gt;, if any.
+        /// Index of the imported document's node of a link element in the `domNodes` array returned by `getSnapshot`, if any.
         ///</summary>
         [JsonProperty("importedDocumentIndex", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ImportedDocumentIndex
@@ -197,7 +197,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// Index of the content node of a template element in the &lt;code&gt;domNodes&lt;/code&gt; array returned by &lt;code&gt;getSnapshot&lt;/code&gt;.
+        /// Index of the content node of a template element in the `domNodes` array returned by `getSnapshot`.
         ///</summary>
         [JsonProperty("templateContentIndex", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? TemplateContentIndex

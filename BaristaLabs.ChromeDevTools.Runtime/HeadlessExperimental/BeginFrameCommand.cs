@@ -65,6 +65,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeadlessExperimental
             set;
         }
         /// <summary>
+        /// Whether the main frame submitted a new display frame in response to this BeginFrame.
+        ///</summary>
+        [JsonProperty("mainFrameContentUpdated")]
+        public bool MainFrameContentUpdated
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Base64-encoded image data of the screenshot, if one was requested and successfully taken.
         ///</summary>
         [JsonProperty("screenshotData", DefaultValueHandling = DefaultValueHandling.Ignore)]

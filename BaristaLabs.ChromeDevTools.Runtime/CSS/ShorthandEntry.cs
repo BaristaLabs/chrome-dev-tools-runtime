@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             set;
         }
         /// <summary>
-        /// Whether the property has &quot;!important&quot; annotation (implies &lt;code&gt;false&lt;/code&gt; if absent).
+        /// Whether the property has "!important" annotation (implies `false` if absent).
         ///</summary>
         [JsonProperty("important", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Important

@@ -25,13 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         }
 
         /// <summary>
-        /// Enables animation domain notifications.
-        /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
         /// Disables animation domain notifications.
         /// </summary>
         public async Task<DisableCommandResponse> Disable(DisableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -39,18 +32,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command ?? new DisableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Gets the playback rate of the document timeline.
+        /// Enables animation domain notifications.
         /// </summary>
-        public async Task<GetPlaybackRateCommandResponse> GetPlaybackRate(GetPlaybackRateCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetPlaybackRateCommand, GetPlaybackRateCommandResponse>(command ?? new GetPlaybackRateCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
-        /// Sets the playback rate of the document timeline.
-        /// </summary>
-        public async Task<SetPlaybackRateCommandResponse> SetPlaybackRate(SetPlaybackRateCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<SetPlaybackRateCommand, SetPlaybackRateCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Returns the current time of the an animation.
@@ -60,25 +46,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             return await m_session.SendCommand<GetCurrentTimeCommand, GetCurrentTimeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Sets the paused state of a set of animations.
+        /// Gets the playback rate of the document timeline.
         /// </summary>
-        public async Task<SetPausedCommandResponse> SetPaused(SetPausedCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<GetPlaybackRateCommandResponse> GetPlaybackRate(GetPlaybackRateCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<SetPausedCommand, SetPausedCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
-        /// Sets the timing of an animation node.
-        /// </summary>
-        public async Task<SetTimingCommandResponse> SetTiming(SetTimingCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<SetTimingCommand, SetTimingCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
-        /// Seek a set of animations to a particular time within each animation.
-        /// </summary>
-        public async Task<SeekAnimationsCommandResponse> SeekAnimations(SeekAnimationsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<SeekAnimationsCommand, SeekAnimationsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<GetPlaybackRateCommand, GetPlaybackRateCommandResponse>(command ?? new GetPlaybackRateCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Releases a set of animations to no longer be manipulated.
@@ -94,7 +66,42 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         {
             return await m_session.SendCommand<ResolveAnimationCommand, ResolveAnimationCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// Seek a set of animations to a particular time within each animation.
+        /// </summary>
+        public async Task<SeekAnimationsCommandResponse> SeekAnimations(SeekAnimationsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SeekAnimationsCommand, SeekAnimationsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Sets the paused state of a set of animations.
+        /// </summary>
+        public async Task<SetPausedCommandResponse> SetPaused(SetPausedCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetPausedCommand, SetPausedCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Sets the playback rate of the document timeline.
+        /// </summary>
+        public async Task<SetPlaybackRateCommandResponse> SetPlaybackRate(SetPlaybackRateCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetPlaybackRateCommand, SetPlaybackRateCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Sets the timing of an animation node.
+        /// </summary>
+        public async Task<SetTimingCommandResponse> SetTiming(SetTimingCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetTimingCommand, SetTimingCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
+        /// <summary>
+        /// Event for when an animation has been cancelled.
+        /// </summary>
+        public void SubscribeToAnimationCanceledEvent(Action<AnimationCanceledEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
         /// <summary>
         /// Event for each animation that has been created.
         /// </summary>
@@ -106,13 +113,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
         /// Event for animation that has been started.
         /// </summary>
         public void SubscribeToAnimationStartedEvent(Action<AnimationStartedEvent> eventCallback)
-        {
-            m_session.Subscribe(eventCallback);
-        }
-        /// <summary>
-        /// Event for when an animation has been cancelled.
-        /// </summary>
-        public void SubscribeToAnimationCanceledEvent(Action<AnimationCanceledEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

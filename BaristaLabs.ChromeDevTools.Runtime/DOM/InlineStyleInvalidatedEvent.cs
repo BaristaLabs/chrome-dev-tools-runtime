@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Fired when &lt;code&gt;Element&lt;/code&gt;'s inline style is modified via a CSS property modification.
+    /// Fired when `Element`'s inline style is modified via a CSS property modification.
     /// </summary>
     public sealed class InlineStyleInvalidatedEvent : IEvent
     {

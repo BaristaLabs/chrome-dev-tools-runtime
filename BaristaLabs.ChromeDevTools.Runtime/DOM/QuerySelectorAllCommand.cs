@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Executes &lt;code&gt;querySelectorAll&lt;/code&gt; on a given node.
+    /// Executes `querySelectorAll` on a given node.
     /// </summary>
     public sealed class QuerySelectorAllCommand : ICommand
     {

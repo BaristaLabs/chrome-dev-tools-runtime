@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     public sealed class SecurityDetails
     {
         /// <summary>
-        /// Protocol name (e.g. &quot;TLS 1.2&quot; or &quot;QUIC&quot;).
+        /// Protocol name (e.g. "TLS 1.2" or "QUIC").
         ///</summary>
         [JsonProperty("protocol")]
         public string Protocol

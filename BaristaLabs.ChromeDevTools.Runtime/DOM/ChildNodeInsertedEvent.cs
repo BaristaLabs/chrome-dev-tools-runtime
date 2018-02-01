@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Mirrors &lt;code&gt;DOMNodeInserted&lt;/code&gt; event.
+    /// Mirrors `DOMNodeInserted` event.
     /// </summary>
     public sealed class ChildNodeInsertedEvent : IEvent
     {

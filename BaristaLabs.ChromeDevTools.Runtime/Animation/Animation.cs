@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     public sealed class Animation
     {
         /// <summary>
-        /// &lt;code&gt;Animation&lt;/code&gt;'s id.
+        /// `Animation`'s id.
         ///</summary>
         [JsonProperty("id")]
         public string Id
@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Animation&lt;/code&gt;'s name.
+        /// `Animation`'s name.
         ///</summary>
         [JsonProperty("name")]
         public string Name
@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Animation&lt;/code&gt;'s internal paused state.
+        /// `Animation`'s internal paused state.
         ///</summary>
         [JsonProperty("pausedState")]
         public bool PausedState
@@ -35,7 +35,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Animation&lt;/code&gt;'s play state.
+        /// `Animation`'s play state.
         ///</summary>
         [JsonProperty("playState")]
         public string PlayState
@@ -44,7 +44,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Animation&lt;/code&gt;'s playback rate.
+        /// `Animation`'s playback rate.
         ///</summary>
         [JsonProperty("playbackRate")]
         public double PlaybackRate
@@ -53,7 +53,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Animation&lt;/code&gt;'s start time.
+        /// `Animation`'s start time.
         ///</summary>
         [JsonProperty("startTime")]
         public double StartTime
@@ -62,7 +62,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Animation&lt;/code&gt;'s current time.
+        /// `Animation`'s current time.
         ///</summary>
         [JsonProperty("currentTime")]
         public double CurrentTime
@@ -71,7 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// Animation type of &lt;code&gt;Animation&lt;/code&gt;.
+        /// Animation type of `Animation`.
         ///</summary>
         [JsonProperty("type")]
         public string Type
@@ -80,7 +80,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Animation&lt;/code&gt;'s source animation node.
+        /// `Animation`'s source animation node.
         ///</summary>
         [JsonProperty("source", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public AnimationEffect Source
@@ -89,7 +89,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// A unique ID for &lt;code&gt;Animation&lt;/code&gt; representing the sources that triggered this CSS animation/transition.
+        /// A unique ID for `Animation` representing the sources that triggered this CSS animation/transition.
         ///</summary>
         [JsonProperty("cssId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string CssId

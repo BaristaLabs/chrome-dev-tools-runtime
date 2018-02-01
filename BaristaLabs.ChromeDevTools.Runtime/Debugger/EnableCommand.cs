@@ -19,5 +19,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
 
     public sealed class EnableCommandResponse : ICommandResponse<EnableCommand>
     {
+        /// <summary>
+        /// Unique identifier of the debugger.
+        ///</summary>
+        [JsonProperty("debuggerId")]
+        public string DebuggerId
+        {
+            get;
+            set;
+        }
     }
 }

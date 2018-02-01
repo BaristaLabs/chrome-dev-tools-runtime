@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Mirrors &lt;code&gt;DOMCharacterDataModified&lt;/code&gt; event.
+    /// Mirrors `DOMCharacterDataModified` event.
     /// </summary>
     public sealed class CharacterDataModifiedEvent : IEvent
     {

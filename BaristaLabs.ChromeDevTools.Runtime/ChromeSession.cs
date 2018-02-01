@@ -114,7 +114,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         /// <summary>
         /// Sends the specified command and returns the associated command response.
         /// </summary>
-        /// <typeparam name="TCommand"></typeparam
+        /// <typeparam name="TCommand"></typeparam>
         /// <typeparam name="TCommandResponse"></typeparam>
         /// <param name="command"></param>
         /// <param name="cancellationToken"></param>

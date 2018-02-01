@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Fired when &lt;code&gt;Element&lt;/code&gt;'s attribute is removed.
+    /// Fired when `Element`'s attribute is removed.
     /// </summary>
     public sealed class AttributeRemovedEvent : IEvent
     {

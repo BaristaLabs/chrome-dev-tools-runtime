@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Returns the computed style for a DOM node identified by &lt;code&gt;nodeId&lt;/code&gt;.
+    /// Returns the computed style for a DOM node identified by `nodeId`.
     /// </summary>
     public sealed class GetComputedStyleForNodeCommand : ICommand
     {

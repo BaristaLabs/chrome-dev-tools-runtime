@@ -17,6 +17,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
+        /// Loader identifier. Empty string if the request is fetched from worker.
+        /// </summary>
+        [JsonProperty("loaderId")]
+        public string LoaderId
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Gets or sets the name
         /// </summary>
         [JsonProperty("name")]

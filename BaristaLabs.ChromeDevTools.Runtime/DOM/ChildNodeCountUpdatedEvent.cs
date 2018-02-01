@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Fired when &lt;code&gt;Container&lt;/code&gt;'s child node count has changed.
+    /// Fired when `Container`'s child node count has changed.
     /// </summary>
     public sealed class ChildNodeCountUpdatedEvent : IEvent
     {

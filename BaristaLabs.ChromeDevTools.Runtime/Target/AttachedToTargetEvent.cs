@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Issued when attached to target because of auto-attach or &lt;code&gt;attachToTarget&lt;/code&gt; command.
+    /// Issued when attached to target because of auto-attach or `attachToTarget` command.
     /// </summary>
     public sealed class AttachedToTargetEvent : IEvent
     {

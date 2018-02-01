@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Fired when the page with currently enabled screencast was shown or hidden &lt;/code&gt;.
+    /// Fired when the page with currently enabled screencast was shown or hidden `.
     /// </summary>
     public sealed class ScreencastVisibilityChangedEvent : IEvent
     {

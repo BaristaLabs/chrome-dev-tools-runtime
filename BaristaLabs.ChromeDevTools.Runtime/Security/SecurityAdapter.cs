@@ -25,18 +25,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         }
 
         /// <summary>
-        /// Enables tracking security state changes.
-        /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
         /// Disables tracking security state changes.
         /// </summary>
         public async Task<DisableCommandResponse> Disable(DisableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command ?? new DisableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Enables tracking security state changes.
+        /// </summary>
+        public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Handles a certificate error that fired a certificateError event.
@@ -54,16 +54,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         }
 
         /// <summary>
-        /// The security state of the page changed.
+        /// There is a certificate error. If overriding certificate errors is enabled, then it should be handled with the handleCertificateError command. Note: this event does not fire if the certificate error has been allowed internally.
         /// </summary>
-        public void SubscribeToSecurityStateChangedEvent(Action<SecurityStateChangedEvent> eventCallback)
+        public void SubscribeToCertificateErrorEvent(Action<CertificateErrorEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// There is a certificate error. If overriding certificate errors is enabled, then it should be handled with the handleCertificateError command. Note: this event does not fire if the certificate error has been allowed internally.
+        /// The security state of the page changed.
         /// </summary>
-        public void SubscribeToCertificateErrorEvent(Action<CertificateErrorEvent> eventCallback)
+        public void SubscribeToSecurityStateChangedEvent(Action<SecurityStateChangedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

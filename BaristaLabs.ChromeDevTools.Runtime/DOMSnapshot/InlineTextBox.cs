@@ -1,4 +1,4 @@
-namespace BaristaLabs.ChromeDevTools.Runtime.CSS
+namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
 {
     using Newtonsoft.Json;
 

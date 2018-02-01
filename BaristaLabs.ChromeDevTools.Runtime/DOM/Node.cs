@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     public sealed class Node
     {
         /// <summary>
-        /// Node identifier that is passed into the rest of the DOM messages as the &lt;code&gt;nodeId&lt;/code&gt;. Backend will only push node with given &lt;code&gt;id&lt;/code&gt; once. It is aware of all requested nodes and will only fire DOM events for nodes known to the client.
+        /// Node identifier that is passed into the rest of the DOM messages as the `nodeId`. Backend will only push node with given `id` once. It is aware of all requested nodes and will only fire DOM events for nodes known to the client.
         ///</summary>
         [JsonProperty("nodeId")]
         public long NodeId
@@ -35,7 +35,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Node&lt;/code&gt;'s nodeType.
+        /// `Node`'s nodeType.
         ///</summary>
         [JsonProperty("nodeType")]
         public long NodeType
@@ -44,7 +44,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Node&lt;/code&gt;'s nodeName.
+        /// `Node`'s nodeName.
         ///</summary>
         [JsonProperty("nodeName")]
         public string NodeName
@@ -53,7 +53,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Node&lt;/code&gt;'s localName.
+        /// `Node`'s localName.
         ///</summary>
         [JsonProperty("localName")]
         public string LocalName
@@ -62,7 +62,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Node&lt;/code&gt;'s nodeValue.
+        /// `Node`'s nodeValue.
         ///</summary>
         [JsonProperty("nodeValue")]
         public string NodeValue
@@ -71,7 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// Child count for &lt;code&gt;Container&lt;/code&gt; nodes.
+        /// Child count for `Container` nodes.
         ///</summary>
         [JsonProperty("childNodeCount", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ChildNodeCount
@@ -89,7 +89,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// Attributes of the &lt;code&gt;Element&lt;/code&gt; node in the form of flat array &lt;code&gt;[name1, value1, name2, value2]&lt;/code&gt;.
+        /// Attributes of the `Element` node in the form of flat array `[name1, value1, name2, value2]`.
         ///</summary>
         [JsonProperty("attributes", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string[] Attributes
@@ -98,7 +98,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// Document URL that &lt;code&gt;Document&lt;/code&gt; or &lt;code&gt;FrameOwner&lt;/code&gt; node points to.
+        /// Document URL that `Document` or `FrameOwner` node points to.
         ///</summary>
         [JsonProperty("documentURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string DocumentURL
@@ -107,7 +107,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// Base URL that &lt;code&gt;Document&lt;/code&gt; or &lt;code&gt;FrameOwner&lt;/code&gt; node uses for URL completion.
+        /// Base URL that `Document` or `FrameOwner` node uses for URL completion.
         ///</summary>
         [JsonProperty("baseURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string BaseURL
@@ -116,7 +116,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// &lt;code&gt;DocumentType&lt;/code&gt;'s publicId.
+        /// `DocumentType`'s publicId.
         ///</summary>
         [JsonProperty("publicId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string PublicId
@@ -125,7 +125,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// &lt;code&gt;DocumentType&lt;/code&gt;'s systemId.
+        /// `DocumentType`'s systemId.
         ///</summary>
         [JsonProperty("systemId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string SystemId
@@ -134,7 +134,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// &lt;code&gt;DocumentType&lt;/code&gt;'s internalSubset.
+        /// `DocumentType`'s internalSubset.
         ///</summary>
         [JsonProperty("internalSubset", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string InternalSubset
@@ -143,7 +143,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Document&lt;/code&gt;'s XML version in case of XML documents.
+        /// `Document`'s XML version in case of XML documents.
         ///</summary>
         [JsonProperty("xmlVersion", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string XmlVersion
@@ -152,7 +152,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Attr&lt;/code&gt;'s name.
+        /// `Attr`'s name.
         ///</summary>
         [JsonProperty("name", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Name
@@ -161,7 +161,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// &lt;code&gt;Attr&lt;/code&gt;'s value.
+        /// `Attr`'s value.
         ///</summary>
         [JsonProperty("value", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Value

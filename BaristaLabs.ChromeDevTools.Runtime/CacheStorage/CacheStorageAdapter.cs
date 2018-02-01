@@ -25,20 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         }
 
         /// <summary>
-        /// Requests cache names.
-        /// </summary>
-        public async Task<RequestCacheNamesCommandResponse> RequestCacheNames(RequestCacheNamesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<RequestCacheNamesCommand, RequestCacheNamesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
-        /// Requests data from cache.
-        /// </summary>
-        public async Task<RequestEntriesCommandResponse> RequestEntries(RequestEntriesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<RequestEntriesCommand, RequestEntriesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
         /// Deletes a cache.
         /// </summary>
         public async Task<DeleteCacheCommandResponse> DeleteCache(DeleteCacheCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -53,11 +39,25 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
             return await m_session.SendCommand<DeleteEntryCommand, DeleteEntryCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Requests cache names.
+        /// </summary>
+        public async Task<RequestCacheNamesCommandResponse> RequestCacheNames(RequestCacheNamesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<RequestCacheNamesCommand, RequestCacheNamesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Fetches cache entry.
         /// </summary>
         public async Task<RequestCachedResponseCommandResponse> RequestCachedResponse(RequestCachedResponseCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<RequestCachedResponseCommand, RequestCachedResponseCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Requests data from cache.
+        /// </summary>
+        public async Task<RequestEntriesCommandResponse> RequestEntries(RequestEntriesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<RequestEntriesCommand, RequestEntriesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
 
     }

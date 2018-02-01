@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
-        /// Relative scale factor after zooming (&gt;1.0 zooms in, &lt;1.0 zooms out).
+        /// Relative scale factor after zooming (>1.0 zooms in, <1.0 zooms out).
         /// </summary>
         [JsonProperty("scaleFactor")]
         public double ScaleFactor

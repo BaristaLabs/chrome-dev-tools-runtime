@@ -25,13 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         }
 
         /// <summary>
-        /// Start trace events collection.
-        /// </summary>
-        public async Task<StartCommandResponse> Start(StartCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<StartCommand, StartCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
         /// Stop trace events collection.
         /// </summary>
         public async Task<EndCommandResponse> End(EndCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -46,6 +39,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             return await m_session.SendCommand<GetCategoriesCommand, GetCategoriesCommandResponse>(command ?? new GetCategoriesCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Record a clock sync marker in the trace.
+        /// </summary>
+        public async Task<RecordClockSyncMarkerCommandResponse> RecordClockSyncMarker(RecordClockSyncMarkerCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<RecordClockSyncMarkerCommand, RecordClockSyncMarkerCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Request a global memory dump.
         /// </summary>
         public async Task<RequestMemoryDumpCommandResponse> RequestMemoryDump(RequestMemoryDumpCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -53,13 +53,20 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             return await m_session.SendCommand<RequestMemoryDumpCommand, RequestMemoryDumpCommandResponse>(command ?? new RequestMemoryDumpCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Record a clock sync marker in the trace.
+        /// Start trace events collection.
         /// </summary>
-        public async Task<RecordClockSyncMarkerCommandResponse> RecordClockSyncMarker(RecordClockSyncMarkerCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<StartCommandResponse> Start(StartCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<RecordClockSyncMarkerCommand, RecordClockSyncMarkerCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<StartCommand, StartCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public void SubscribeToBufferUsageEvent(Action<BufferUsageEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
         /// <summary>
         /// Contains an bucket of collected trace events. When tracing is stopped collected events will be send as a sequence of dataCollected events followed by tracingComplete event.
         /// </summary>
@@ -71,13 +78,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// Signals that tracing is stopped and there is no trace buffers pending flush, all data were delivered via dataCollected events.
         /// </summary>
         public void SubscribeToTracingCompleteEvent(Action<TracingCompleteEvent> eventCallback)
-        {
-            m_session.Subscribe(eventCallback);
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public void SubscribeToBufferUsageEvent(Action<BufferUsageEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

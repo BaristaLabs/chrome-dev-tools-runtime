@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Controls whether to discover available targets and notify via &lt;code&gt;targetCreated/targetInfoChanged/targetDestroyed&lt;/code&gt; events.
+    /// Controls whether to discover available targets and notify via `targetCreated/targetInfoChanged/targetDestroyed` events.
     /// </summary>
     public sealed class SetDiscoverTargetsCommand : ICommand
     {

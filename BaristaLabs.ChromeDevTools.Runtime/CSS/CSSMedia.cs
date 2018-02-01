@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             set;
         }
         /// <summary>
-        /// Source of the media query: &quot;mediaRule&quot; if specified by a @media rule, &quot;importRule&quot; if specified by an @import rule, &quot;linkedSheet&quot; if specified by a &quot;media&quot; attribute in a linked stylesheet's LINK tag, &quot;inlineSheet&quot; if specified by a &quot;media&quot; attribute in an inline stylesheet's STYLE tag.
+        /// Source of the media query: "mediaRule" if specified by a @media rule, "importRule" if specified by an @import rule, "linkedSheet" if specified by a "media" attribute in a linked stylesheet's LINK tag, "inlineSheet" if specified by a "media" attribute in an inline stylesheet's STYLE tag.
         ///</summary>
         [JsonProperty("source")]
         public string Source

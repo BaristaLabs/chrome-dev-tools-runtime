@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             set;
         }
         /// <summary>
-        /// Object representing the scope. For &lt;code&gt;global&lt;/code&gt; and &lt;code&gt;with&lt;/code&gt; scopes it represents the actual object; for the rest of the scopes, it is artificial transient object enumerating scope variables as its properties.
+        /// Object representing the scope. For <code>global</code> and <code>with</code> scopes it represents the actual object; for the rest of the scopes, it is artificial transient object enumerating scope variables as its properties.
         ///</summary>
         [JsonProperty("object")]
         public Runtime.RemoteObject Object

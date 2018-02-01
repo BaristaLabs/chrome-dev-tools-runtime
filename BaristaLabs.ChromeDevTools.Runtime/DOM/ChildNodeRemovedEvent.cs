@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Mirrors &lt;code&gt;DOMNodeRemoved&lt;/code&gt; event.
+    /// Mirrors `DOMNodeRemoved` event.
     /// </summary>
     public sealed class ChildNodeRemovedEvent : IEvent
     {

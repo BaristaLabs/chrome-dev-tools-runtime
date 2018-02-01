@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Executes &lt;code&gt;querySelector&lt;/code&gt; on a given node.
+    /// Executes `querySelector` on a given node.
     /// </summary>
     public sealed class QuerySelectorCommand : ICommand
     {

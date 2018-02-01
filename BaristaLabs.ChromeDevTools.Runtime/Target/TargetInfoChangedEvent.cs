@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Issued when some information about a target has changed. This only happens between &lt;code&gt;targetCreated&lt;/code&gt; and &lt;code&gt;targetDestroyed&lt;/code&gt;.
+    /// Issued when some information about a target has changed. This only happens between `targetCreated` and `targetDestroyed`.
     /// </summary>
     public sealed class TargetInfoChangedEvent : IEvent
     {

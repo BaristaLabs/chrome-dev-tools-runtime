@@ -115,7 +115,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
-        /// The name of the interaction markers to generate, if not empty (default: &quot;&quot;).
+        /// The name of the interaction markers to generate, if not empty (default: "").
         /// </summary>
         [JsonProperty("interactionMarkerName", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string InteractionMarkerName

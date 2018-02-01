@@ -11,7 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         /// The amount of virtual time that has elapsed in milliseconds since virtual time was first enabled.
         /// </summary>
         [JsonProperty("virtualTimeElapsed")]
-        public long VirtualTimeElapsed
+        public double VirtualTimeElapsed
         {
             get;
             set;

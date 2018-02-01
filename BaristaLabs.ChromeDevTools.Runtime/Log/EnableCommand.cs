@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Enables log domain, sends the entries collected so far to the client by means of the &lt;code&gt;entryAdded&lt;/code&gt; notification.
+    /// Enables log domain, sends the entries collected so far to the client by means of the `entryAdded` notification.
     /// </summary>
     public sealed class EnableCommand : ICommand
     {

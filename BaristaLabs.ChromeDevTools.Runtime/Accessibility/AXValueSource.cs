@@ -53,7 +53,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             set;
         }
         /// <summary>
-        /// The native markup source for this value, e.g. a &lt;label&gt; element.
+        /// The native markup source for this value, e.g. a <label> element.
         ///</summary>
         [JsonProperty("nativeSource", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public AXValueNativeSourceType? NativeSource

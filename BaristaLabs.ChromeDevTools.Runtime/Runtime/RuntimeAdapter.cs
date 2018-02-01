@@ -74,7 +74,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             return await m_session.SendCommand<RunIfWaitingForDebuggerCommand, RunIfWaitingForDebuggerCommandResponse>(command ?? new RunIfWaitingForDebuggerCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Enables reporting of execution contexts creation by means of &lt;code&gt;executionContextCreated&lt;/code&gt; event. When the reporting gets enabled the event will be sent immediately for each existing execution context.
+        /// Enables reporting of execution contexts creation by means of <code>executionContextCreated</code> event. When the reporting gets enabled the event will be sent immediately for each existing execution context.
         /// </summary>
         public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -121,6 +121,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         public async Task<QueryObjectsCommandResponse> QueryObjects(QueryObjectsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<QueryObjectsCommand, QueryObjectsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Returns all let, const and class variables from global scope.
+        /// </summary>
+        public async Task<GlobalLexicalScopeNamesCommandResponse> GlobalLexicalScopeNames(GlobalLexicalScopeNamesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GlobalLexicalScopeNamesCommand, GlobalLexicalScopeNamesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
 
         /// <summary>

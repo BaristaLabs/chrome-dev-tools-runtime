@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Fired when window.open() was called
+    /// Fired when a new window is going to be opened, via window.open(), link click, form submission, etc.
     /// </summary>
     public sealed class WindowOpenEvent : IEvent
     {
@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Window name passed to window.open().
+        /// Window name.
         /// </summary>
         [JsonProperty("windowName")]
         public string WindowName
@@ -26,16 +26,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Window features passed to window.open().
+        /// An array of enabled window features.
         /// </summary>
         [JsonProperty("windowFeatures")]
-        public string WindowFeatures
+        public string[] WindowFeatures
         {
             get;
             set;
         }
         /// <summary>
-        /// Whether or not window.open() was triggered by user gesture.
+        /// Whether or not it was triggered by user gesture.
         /// </summary>
         [JsonProperty("userGesture")]
         public bool UserGesture

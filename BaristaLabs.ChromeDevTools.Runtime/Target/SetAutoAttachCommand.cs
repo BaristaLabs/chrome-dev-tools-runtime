@@ -25,7 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             set;
         }
         /// <summary>
-        /// Whether to pause new targets when attaching to them. Use &lt;code&gt;Runtime.runIfWaitingForDebugger&lt;/code&gt; to run paused targets.
+        /// Whether to pause new targets when attaching to them. Use `Runtime.runIfWaitingForDebugger` to run paused targets.
         /// </summary>
         [JsonProperty("waitForDebuggerOnStart")]
         public bool WaitForDebuggerOnStart

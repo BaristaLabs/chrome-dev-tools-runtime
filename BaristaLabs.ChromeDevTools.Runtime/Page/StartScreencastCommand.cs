@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Starts sending each frame using the &lt;code&gt;screencastFrame&lt;/code&gt; event.
+    /// Starts sending each frame using the `screencastFrame` event.
     /// </summary>
     public sealed class StartScreencastCommand : ICommand
     {

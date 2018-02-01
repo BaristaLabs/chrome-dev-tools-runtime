@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Enables console domain, sends the messages collected so far to the client by means of the &lt;code&gt;messageAdded&lt;/code&gt; notification.
+    /// Enables console domain, sends the messages collected so far to the client by means of the <code>messageAdded</code> notification.
     /// </summary>
     public sealed class EnableCommand : ICommand
     {

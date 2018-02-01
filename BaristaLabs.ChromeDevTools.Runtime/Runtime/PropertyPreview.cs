@@ -44,7 +44,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Object subtype hint. Specified for &lt;code&gt;object&lt;/code&gt; type values only.
+        /// Object subtype hint. Specified for <code>object</code> type values only.
         ///</summary>
         [JsonProperty("subtype", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Subtype

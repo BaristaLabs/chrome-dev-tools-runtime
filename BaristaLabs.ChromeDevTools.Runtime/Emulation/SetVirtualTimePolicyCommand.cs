@@ -28,7 +28,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         /// If set, after this many virtual milliseconds have elapsed virtual time will be paused and a virtualTimeBudgetExpired event is sent.
         /// </summary>
         [JsonProperty("budget", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public long? Budget
+        public double? Budget
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// If set this specifies the maximum number of tasks that can be run before virtual is forced forwards to prevent deadlock.
+        /// </summary>
+        [JsonProperty("maxVirtualTimeTaskStarvationCount", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? MaxVirtualTimeTaskStarvationCount
         {
             get;
             set;
@@ -37,5 +46,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
 
     public sealed class SetVirtualTimePolicyCommandResponse : ICommandResponse<SetVirtualTimePolicyCommand>
     {
+        /// <summary>
+        /// Absolute timestamp at which virtual time was first enabled (milliseconds since epoch).
+        ///</summary>
+        [JsonProperty("virtualTimeBase")]
+        public double VirtualTimeBase
+        {
+            get;
+            set;
+        }
     }
 }

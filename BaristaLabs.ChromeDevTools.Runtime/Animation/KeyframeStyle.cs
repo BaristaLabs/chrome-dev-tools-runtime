@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;AnimationEffect&lt;/code&gt;'s timing function.
+        /// `AnimationEffect`'s timing function.
         ///</summary>
         [JsonProperty("easing")]
         public string Easing

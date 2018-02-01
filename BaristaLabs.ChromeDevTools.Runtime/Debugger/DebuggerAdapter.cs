@@ -53,7 +53,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             return await m_session.SendCommand<SetSkipAllPausesCommand, SetSkipAllPausesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Sets JavaScript breakpoint at given location specified either by URL or URL regex. Once this command is issued, all existing parsed scripts will have breakpoints resolved and returned in &lt;code&gt;locations&lt;/code&gt; property. Further matching script parsing will result in subsequent &lt;code&gt;breakpointResolved&lt;/code&gt; events issued. This logical breakpoint will survive page reloads.
+        /// Sets JavaScript breakpoint at given location specified either by URL or URL regex. Once this command is issued, all existing parsed scripts will have breakpoints resolved and returned in <code>locations</code> property. Further matching script parsing will result in subsequent <code>breakpointResolved</code> events issued. This logical breakpoint will survive page reloads.
         /// </summary>
         public async Task<SetBreakpointByUrlCommandResponse> SetBreakpointByUrl(SetBreakpointByUrlCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -88,6 +88,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             return await m_session.SendCommand<ContinueToLocationCommand, ContinueToLocationCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// 
+        /// </summary>
+        public async Task<PauseOnAsyncCallCommandResponse> PauseOnAsyncCall(PauseOnAsyncCallCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<PauseOnAsyncCallCommand, PauseOnAsyncCallCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Steps over the statement.
         /// </summary>
         public async Task<StepOverCommandResponse> StepOver(StepOverCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -97,9 +104,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         /// <summary>
         /// Steps into the function call.
         /// </summary>
-        public async Task<StepIntoCommandResponse> StepInto(StepIntoCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<StepIntoCommandResponse> StepInto(StepIntoCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<StepIntoCommand, StepIntoCommandResponse>(command ?? new StepIntoCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<StepIntoCommand, StepIntoCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Steps out of the function call.
@@ -116,7 +123,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             return await m_session.SendCommand<PauseCommand, PauseCommandResponse>(command ?? new PauseCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Steps into next scheduled async task if any is scheduled before next pause. Returns success when async task is actually scheduled, returns error if no task were scheduled or another scheduleStepIntoAsync was called.
+        /// This method is deprecated - use Debugger.stepInto with breakOnAsyncCall and Debugger.pauseOnAsyncTask instead. Steps into next scheduled async task if any is scheduled before next pause. Returns success when async task is actually scheduled, returns error if no task were scheduled or another scheduleStepIntoAsync was called.
         /// </summary>
         public async Task<ScheduleStepIntoAsyncCommandResponse> ScheduleStepIntoAsync(ScheduleStepIntoAsyncCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -128,6 +135,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         public async Task<ResumeCommandResponse> Resume(ResumeCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<ResumeCommand, ResumeCommandResponse>(command ?? new ResumeCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Returns stack trace with given <code>stackTraceId</code>.
+        /// </summary>
+        public async Task<GetStackTraceCommandResponse> GetStackTrace(GetStackTraceCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetStackTraceCommand, GetStackTraceCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Searches for given string in script content.
@@ -158,7 +172,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             return await m_session.SendCommand<GetScriptSourceCommand, GetScriptSourceCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Defines pause on exceptions state. Can be set to stop on all exceptions, uncaught exceptions or no exceptions. Initial pause on exceptions state is &lt;code&gt;none&lt;/code&gt;.
+        /// Defines pause on exceptions state. Can be set to stop on all exceptions, uncaught exceptions or no exceptions. Initial pause on exceptions state is <code>none</code>.
         /// </summary>
         public async Task<SetPauseOnExceptionsCommandResponse> SetPauseOnExceptions(SetPauseOnExceptionsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -177,6 +191,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         public async Task<SetVariableValueCommandResponse> SetVariableValue(SetVariableValueCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetVariableValueCommand, SetVariableValueCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Changes return value in top frame. Available only at return break position.
+        /// </summary>
+        public async Task<SetReturnValueCommandResponse> SetReturnValue(SetReturnValueCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetReturnValueCommand, SetReturnValueCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Enables or disables async call stacks tracking.

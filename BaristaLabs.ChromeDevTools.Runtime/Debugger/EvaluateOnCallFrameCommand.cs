@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             set;
         }
         /// <summary>
-        /// String object group name to put result into (allows rapid releasing resulting object handles using &lt;code&gt;releaseObjectGroup&lt;/code&gt;).
+        /// String object group name to put result into (allows rapid releasing resulting object handles using <code>releaseObjectGroup</code>).
         /// </summary>
         [JsonProperty("objectGroup", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ObjectGroup
@@ -52,7 +52,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             set;
         }
         /// <summary>
-        /// In silent mode exceptions thrown during evaluation are not reported and do not pause execution. Overrides &lt;code&gt;setPauseOnException&lt;/code&gt; state.
+        /// In silent mode exceptions thrown during evaluation are not reported and do not pause execution. Overrides <code>setPauseOnException</code> state.
         /// </summary>
         [JsonProperty("silent", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Silent

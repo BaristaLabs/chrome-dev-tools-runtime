@@ -71,7 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             set;
         }
         /// <summary>
-        /// Configuration for memory dump triggers. Used only when &quot;memory-infra&quot; category is enabled.
+        /// Configuration for memory dump triggers. Used only when "memory-infra" category is enabled.
         ///</summary>
         [JsonProperty("memoryDumpConfig", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public MemoryDumpConfig MemoryDumpConfig

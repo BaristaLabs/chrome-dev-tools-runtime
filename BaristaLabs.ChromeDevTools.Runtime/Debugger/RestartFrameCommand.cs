@@ -46,5 +46,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
+        /// <summary>
+        /// Async stack trace, if any.
+        ///</summary>
+        [JsonProperty("asyncStackTraceId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public Runtime.StackTraceId AsyncStackTraceId
+        {
+            get;
+            set;
+        }
     }
 }

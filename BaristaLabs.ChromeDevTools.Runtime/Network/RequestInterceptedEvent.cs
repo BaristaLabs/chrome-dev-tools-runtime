@@ -26,6 +26,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
+        /// The id of the frame that initiated the request.
+        /// </summary>
+        [JsonProperty("frameId")]
+        public string FrameId
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// How the requested resource will be used.
         /// </summary>
         [JsonProperty("resourceType")]
@@ -44,24 +53,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// HTTP response headers, only sent if a redirect was intercepted.
-        /// </summary>
-        [JsonProperty("redirectHeaders", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public Headers RedirectHeaders
-        {
-            get;
-            set;
-        }
-        /// <summary>
-        /// HTTP response code, only sent if a redirect was intercepted.
-        /// </summary>
-        [JsonProperty("redirectStatusCode", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public long? RedirectStatusCode
-        {
-            get;
-            set;
-        }
-        /// <summary>
         /// Redirect location, only sent if a redirect was intercepted.
         /// </summary>
         [JsonProperty("redirectUrl", DefaultValueHandling = DefaultValueHandling.Ignore)]
@@ -75,6 +66,33 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// </summary>
         [JsonProperty("authChallenge", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public AuthChallenge AuthChallenge
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Response error if intercepted at response stage or if redirect occurred while intercepting request.
+        /// </summary>
+        [JsonProperty("responseErrorReason", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public ErrorReason? ResponseErrorReason
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Response code if intercepted at response stage or if redirect occurred while intercepting request or auth retry occurred.
+        /// </summary>
+        [JsonProperty("responseStatusCode", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? ResponseStatusCode
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Response headers if intercepted at the response stage or if redirect occurred while intercepting request or auth retry occurred.
+        /// </summary>
+        [JsonProperty("responseHeaders", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public Headers ResponseHeaders
         {
             get;
             set;

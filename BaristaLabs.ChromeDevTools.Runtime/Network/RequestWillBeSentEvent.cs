@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Loader identifier. Empty string if the request is fetched form worker.
+        /// Loader identifier. Empty string if the request is fetched from worker.
         /// </summary>
         [JsonProperty("loaderId")]
         public string LoaderId

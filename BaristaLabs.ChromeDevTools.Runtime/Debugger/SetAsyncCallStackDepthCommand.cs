@@ -16,7 +16,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         }
 
         /// <summary>
-        /// Maximum depth of async call stacks. Setting to &lt;code&gt;0&lt;/code&gt; will effectively disable collecting async call stacks (default).
+        /// Maximum depth of async call stacks. Setting to <code>0</code> will effectively disable collecting async call stacks (default).
         /// </summary>
         [JsonProperty("maxDepth")]
         public long MaxDepth

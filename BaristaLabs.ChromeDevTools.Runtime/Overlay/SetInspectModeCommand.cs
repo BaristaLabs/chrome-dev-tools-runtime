@@ -25,7 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
             set;
         }
         /// <summary>
-        /// A descriptor for the highlight appearance of hovered-over nodes. May be omitted if &lt;code&gt;enabled == false&lt;/code&gt;.
+        /// A descriptor for the highlight appearance of hovered-over nodes. May be omitted if `enabled == false`.
         /// </summary>
         [JsonProperty("highlightConfig", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public HighlightConfig HighlightConfig

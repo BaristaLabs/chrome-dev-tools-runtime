@@ -43,7 +43,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             set;
         }
         /// <summary>
-        /// Whether to report trace events as series of dataCollected events or to save trace to a stream (defaults to &lt;code&gt;ReportEvents&lt;/code&gt;).
+        /// Whether to report trace events as series of dataCollected events or to save trace to a stream (defaults to `ReportEvents`).
         /// </summary>
         [JsonProperty("transferMode", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string TransferMode

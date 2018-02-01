@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Notifies about a new protocol message received from the session (as reported in &lt;code&gt;attachedToTarget&lt;/code&gt; event).
+    /// Notifies about a new protocol message received from the session (as reported in `attachedToTarget` event).
     /// </summary>
     public sealed class ReceivedMessageFromTargetEvent : IEvent
     {

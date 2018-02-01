@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
     public sealed class LayoutTreeNode
     {
         /// <summary>
-        /// The index of the related DOM node in the &lt;code&gt;domNodes&lt;/code&gt; array returned by &lt;code&gt;getSnapshot&lt;/code&gt;.
+        /// The index of the related DOM node in the `domNodes` array returned by `getSnapshot`.
         ///</summary>
         [JsonProperty("domNodeIndex")]
         public long DomNodeIndex
@@ -38,13 +38,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
         /// The post-layout inline text nodes, if any.
         ///</summary>
         [JsonProperty("inlineTextNodes", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public CSS.InlineTextBox[] InlineTextNodes
+        public InlineTextBox[] InlineTextNodes
         {
             get;
             set;
         }
         /// <summary>
-        /// Index into the &lt;code&gt;computedStyles&lt;/code&gt; array returned by &lt;code&gt;getSnapshot&lt;/code&gt;.
+        /// Index into the `computedStyles` array returned by `getSnapshot`.
         ///</summary>
         [JsonProperty("styleIndex", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? StyleIndex

@@ -25,13 +25,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         }
 
         /// <summary>
-        /// Ignores input events (useful while auditing page).
-        /// </summary>
-        public async Task<SetIgnoreInputEventsCommandResponse> SetIgnoreInputEvents(SetIgnoreInputEventsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<SetIgnoreInputEventsCommand, SetIgnoreInputEventsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
         /// Dispatches a key event to the page.
         /// </summary>
         public async Task<DispatchKeyEventCommandResponse> DispatchKeyEvent(DispatchKeyEventCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -58,6 +51,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         public async Task<EmulateTouchFromMouseEventCommandResponse> EmulateTouchFromMouseEvent(EmulateTouchFromMouseEventCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<EmulateTouchFromMouseEventCommand, EmulateTouchFromMouseEventCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Ignores input events (useful while auditing page).
+        /// </summary>
+        public async Task<SetIgnoreInputEventsCommandResponse> SetIgnoreInputEvents(SetIgnoreInputEventsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetIgnoreInputEventsCommand, SetIgnoreInputEventsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Synthesizes a pinch gesture over a time period by issuing appropriate touch events.

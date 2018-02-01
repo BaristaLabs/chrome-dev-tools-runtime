@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Searches for a given string in the DOM tree. Use &lt;code&gt;getSearchResults&lt;/code&gt; to access search results or &lt;code&gt;cancelSearch&lt;/code&gt; to end this search session.
+    /// Searches for a given string in the DOM tree. Use `getSearchResults` to access search results or `cancelSearch` to end this search session.
     /// </summary>
     public sealed class PerformSearchCommand : ICommand
     {

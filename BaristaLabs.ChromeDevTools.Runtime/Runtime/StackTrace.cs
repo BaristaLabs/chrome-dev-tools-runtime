@@ -35,10 +35,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Creation frame of the Promise which produced the next synchronous trace when resolved, if available.
+        /// Asynchronous JavaScript stack trace that preceded this stack, if available.
         ///</summary>
-        [JsonProperty("promiseCreationFrame", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public CallFrame PromiseCreationFrame
+        [JsonProperty("parentId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public StackTraceId ParentId
         {
             get;
             set;

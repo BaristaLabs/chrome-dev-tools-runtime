@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     public sealed class EventListener
     {
         /// <summary>
-        /// &lt;code&gt;EventListener&lt;/code&gt;'s type.
+        /// `EventListener`'s type.
         ///</summary>
         [JsonProperty("type")]
         public string Type
@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             set;
         }
         /// <summary>
-        /// &lt;code&gt;EventListener&lt;/code&gt;'s useCapture.
+        /// `EventListener`'s useCapture.
         ///</summary>
         [JsonProperty("useCapture")]
         public bool UseCapture
@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             set;
         }
         /// <summary>
-        /// &lt;code&gt;EventListener&lt;/code&gt;'s passive flag.
+        /// `EventListener`'s passive flag.
         ///</summary>
         [JsonProperty("passive")]
         public bool Passive
@@ -35,7 +35,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             set;
         }
         /// <summary>
-        /// &lt;code&gt;EventListener&lt;/code&gt;'s once flag.
+        /// `EventListener`'s once flag.
         ///</summary>
         [JsonProperty("once")]
         public bool Once

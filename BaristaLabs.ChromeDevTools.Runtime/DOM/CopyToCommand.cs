@@ -34,7 +34,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// Drop the copy before this node (if absent, the copy becomes the last child of &lt;code&gt;targetNodeId&lt;/code&gt;).
+        /// Drop the copy before this node (if absent, the copy becomes the last child of `targetNodeId`).
         /// </summary>
         [JsonProperty("insertBeforeNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? InsertBeforeNodeId

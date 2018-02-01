@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Stops sending each frame in the &lt;code&gt;screencastFrame&lt;/code&gt;.
+    /// Stops sending each frame in the `screencastFrame`.
     /// </summary>
     public sealed class StopScreencastCommand : ICommand
     {

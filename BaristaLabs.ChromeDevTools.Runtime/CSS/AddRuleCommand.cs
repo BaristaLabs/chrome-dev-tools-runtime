@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Inserts a new rule with the given &lt;code&gt;ruleText&lt;/code&gt; in a stylesheet with given &lt;code&gt;styleSheetId&lt;/code&gt;, at the position specified by &lt;code&gt;location&lt;/code&gt;.
+    /// Inserts a new rule with the given `ruleText` in a stylesheet with given `styleSheetId`, at the position specified by `location`.
     /// </summary>
     public sealed class AddRuleCommand : ICommand
     {

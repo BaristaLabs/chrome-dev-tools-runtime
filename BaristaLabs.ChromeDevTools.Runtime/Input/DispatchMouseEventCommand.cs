@@ -61,7 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
-        /// Mouse button (default: &quot;none&quot;).
+        /// Mouse button (default: "none").
         /// </summary>
         [JsonProperty("button", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Button

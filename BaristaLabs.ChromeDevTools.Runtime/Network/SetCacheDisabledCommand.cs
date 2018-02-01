@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Toggles ignoring cache for each request. If &lt;code&gt;true&lt;/code&gt;, cache will not be used.
+    /// Toggles ignoring cache for each request. If `true`, cache will not be used.
     /// </summary>
     public sealed class SetCacheDisabledCommand : ICommand
     {

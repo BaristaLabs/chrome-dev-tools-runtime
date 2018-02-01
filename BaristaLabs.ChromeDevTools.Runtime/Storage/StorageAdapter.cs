@@ -46,18 +46,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
             return await m_session.SendCommand<TrackCacheStorageForOriginCommand, TrackCacheStorageForOriginCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Unregisters origin from receiving notifications for cache storage.
-        /// </summary>
-        public async Task<UntrackCacheStorageForOriginCommandResponse> UntrackCacheStorageForOrigin(UntrackCacheStorageForOriginCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<UntrackCacheStorageForOriginCommand, UntrackCacheStorageForOriginCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
         /// Registers origin to be notified when an update occurs to its IndexedDB.
         /// </summary>
         public async Task<TrackIndexedDBForOriginCommandResponse> TrackIndexedDBForOrigin(TrackIndexedDBForOriginCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<TrackIndexedDBForOriginCommand, TrackIndexedDBForOriginCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Unregisters origin from receiving notifications for cache storage.
+        /// </summary>
+        public async Task<UntrackCacheStorageForOriginCommandResponse> UntrackCacheStorageForOrigin(UntrackCacheStorageForOriginCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<UntrackCacheStorageForOriginCommand, UntrackCacheStorageForOriginCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Unregisters origin from receiving notifications for IndexedDB.
@@ -68,13 +68,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
         }
 
         /// <summary>
-        /// A cache has been added/deleted.
-        /// </summary>
-        public void SubscribeToCacheStorageListUpdatedEvent(Action<CacheStorageListUpdatedEvent> eventCallback)
-        {
-            m_session.Subscribe(eventCallback);
-        }
-        /// <summary>
         /// A cache's contents have been modified.
         /// </summary>
         public void SubscribeToCacheStorageContentUpdatedEvent(Action<CacheStorageContentUpdatedEvent> eventCallback)
@@ -82,9 +75,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// The origin's IndexedDB database list has been modified.
+        /// A cache has been added/deleted.
         /// </summary>
-        public void SubscribeToIndexedDBListUpdatedEvent(Action<IndexedDBListUpdatedEvent> eventCallback)
+        public void SubscribeToCacheStorageListUpdatedEvent(Action<CacheStorageListUpdatedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
@@ -92,6 +85,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
         /// The origin's IndexedDB object store has been modified.
         /// </summary>
         public void SubscribeToIndexedDBContentUpdatedEvent(Action<IndexedDBContentUpdatedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// The origin's IndexedDB database list has been modified.
+        /// </summary>
+        public void SubscribeToIndexedDBListUpdatedEvent(Action<IndexedDBListUpdatedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

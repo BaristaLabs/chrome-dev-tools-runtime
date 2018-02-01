@@ -25,11 +25,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeadlessExperimental
         }
 
         /// <summary>
-        /// Enables headless events for the target.
+        /// Sends a BeginFrame to the target and returns when the frame was completed. Optionally captures a screenshot from the resulting frame. Requires that the target was created with enabled BeginFrameControl.
         /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<BeginFrameCommandResponse> BeginFrame(BeginFrameCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<BeginFrameCommand, BeginFrameCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Disables headless events for the target.
@@ -39,24 +39,24 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeadlessExperimental
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command ?? new DisableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Sends a BeginFrame to the target and returns when the frame was completed. Optionally captures a screenshot from the resulting frame. Requires that the target was created with enabled BeginFrameControl.
+        /// Enables headless events for the target.
         /// </summary>
-        public async Task<BeginFrameCommandResponse> BeginFrame(BeginFrameCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<BeginFrameCommand, BeginFrameCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
 
-        /// <summary>
-        /// Issued when the target starts or stops needing BeginFrames.
-        /// </summary>
-        public void SubscribeToNeedsBeginFramesChangedEvent(Action<NeedsBeginFramesChangedEvent> eventCallback)
-        {
-            m_session.Subscribe(eventCallback);
-        }
         /// <summary>
         /// Issued when the main frame has first submitted a frame to the browser. May only be fired while a BeginFrame is in flight. Before this event, screenshotting requests may fail.
         /// </summary>
         public void SubscribeToMainFrameReadyForScreenshotsEvent(Action<MainFrameReadyForScreenshotsEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Issued when the target starts or stops needing BeginFrames.
+        /// </summary>
+        public void SubscribeToNeedsBeginFramesChangedEvent(Action<NeedsBeginFramesChangedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

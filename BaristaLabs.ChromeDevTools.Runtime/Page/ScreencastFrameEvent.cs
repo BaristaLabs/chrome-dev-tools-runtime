@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Compressed image data requested by the &lt;code&gt;startScreencast&lt;/code&gt;.
+    /// Compressed image data requested by the `startScreencast`.
     /// </summary>
     public sealed class ScreencastFrameEvent : IEvent
     {

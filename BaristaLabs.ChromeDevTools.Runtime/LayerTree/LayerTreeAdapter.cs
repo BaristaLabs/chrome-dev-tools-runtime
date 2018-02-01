@@ -25,11 +25,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         }
 
         /// <summary>
-        /// Enables compositing tree inspection.
+        /// Provides the reasons why the given layer was composited.
         /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<CompositingReasonsCommandResponse> CompositingReasons(CompositingReasonsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<CompositingReasonsCommand, CompositingReasonsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Disables compositing tree inspection.
@@ -39,18 +39,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command ?? new DisableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Provides the reasons why the given layer was composited.
+        /// Enables compositing tree inspection.
         /// </summary>
-        public async Task<CompositingReasonsCommandResponse> CompositingReasons(CompositingReasonsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<CompositingReasonsCommand, CompositingReasonsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
-        /// Returns the layer snapshot identifier.
-        /// </summary>
-        public async Task<MakeSnapshotCommandResponse> MakeSnapshot(MakeSnapshotCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<MakeSnapshotCommand, MakeSnapshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Returns the snapshot identifier.
@@ -60,11 +53,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             return await m_session.SendCommand<LoadSnapshotCommand, LoadSnapshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Releases layer snapshot captured by the back-end.
+        /// Returns the layer snapshot identifier.
         /// </summary>
-        public async Task<ReleaseSnapshotCommandResponse> ReleaseSnapshot(ReleaseSnapshotCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<MakeSnapshotCommandResponse> MakeSnapshot(MakeSnapshotCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<ReleaseSnapshotCommand, ReleaseSnapshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<MakeSnapshotCommand, MakeSnapshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// 
@@ -72,6 +65,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         public async Task<ProfileSnapshotCommandResponse> ProfileSnapshot(ProfileSnapshotCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<ProfileSnapshotCommand, ProfileSnapshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Releases layer snapshot captured by the back-end.
+        /// </summary>
+        public async Task<ReleaseSnapshotCommandResponse> ReleaseSnapshot(ReleaseSnapshotCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<ReleaseSnapshotCommand, ReleaseSnapshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Replays the layer snapshot and returns the resulting bitmap.
@@ -91,14 +91,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// <summary>
         /// 
         /// </summary>
-        public void SubscribeToLayerTreeDidChangeEvent(Action<LayerTreeDidChangeEvent> eventCallback)
+        public void SubscribeToLayerPaintedEvent(Action<LayerPaintedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
         /// 
         /// </summary>
-        public void SubscribeToLayerPaintedEvent(Action<LayerPaintedEvent> eventCallback)
+        public void SubscribeToLayerTreeDidChangeEvent(Action<LayerTreeDidChangeEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

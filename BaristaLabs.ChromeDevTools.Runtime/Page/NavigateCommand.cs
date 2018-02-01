@@ -47,10 +47,28 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     public sealed class NavigateCommandResponse : ICommandResponse<NavigateCommand>
     {
         /// <summary>
-        /// Frame id that will be navigated.
+        /// Frame id that has navigated (or failed to navigate)
         ///</summary>
         [JsonProperty("frameId")]
         public string FrameId
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Loader identifier.
+        ///</summary>
+        [JsonProperty("loaderId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string LoaderId
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// User friendly error message, present if and only if navigation has failed.
+        ///</summary>
+        [JsonProperty("errorText", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string ErrorText
         {
             get;
             set;

@@ -35,7 +35,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             set;
         }
         /// <summary>
-        /// This &lt;code&gt;Node&lt;/code&gt;'s role, whether explicit or implicit.
+        /// This `Node`'s role, whether explicit or implicit.
         ///</summary>
         [JsonProperty("role", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public AXValue Role
@@ -44,7 +44,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             set;
         }
         /// <summary>
-        /// The accessible name for this &lt;code&gt;Node&lt;/code&gt;.
+        /// The accessible name for this `Node`.
         ///</summary>
         [JsonProperty("name", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public AXValue Name
@@ -53,7 +53,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             set;
         }
         /// <summary>
-        /// The accessible description for this &lt;code&gt;Node&lt;/code&gt;.
+        /// The accessible description for this `Node`.
         ///</summary>
         [JsonProperty("description", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public AXValue Description
@@ -62,7 +62,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             set;
         }
         /// <summary>
-        /// The value for this &lt;code&gt;Node&lt;/code&gt;.
+        /// The value for this `Node`.
         ///</summary>
         [JsonProperty("value", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public AXValue Value

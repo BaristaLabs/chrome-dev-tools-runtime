@@ -11,7 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         /// The name of this property.
         ///</summary>
         [JsonProperty("name")]
-        public string Name
+        public AXPropertyName Name
         {
             get;
             set;

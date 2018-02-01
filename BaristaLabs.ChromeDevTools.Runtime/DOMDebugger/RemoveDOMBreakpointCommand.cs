@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Removes DOM breakpoint that was set using &lt;code&gt;setDOMBreakpoint&lt;/code&gt;.
+    /// Removes DOM breakpoint that was set using `setDOMBreakpoint`.
     /// </summary>
     public sealed class RemoveDOMBreakpointCommand : ICommand
     {

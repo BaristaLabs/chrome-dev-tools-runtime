@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
     public sealed class AnimationEffect
     {
         /// <summary>
-        /// &lt;code&gt;AnimationEffect&lt;/code&gt;'s delay.
+        /// `AnimationEffect`'s delay.
         ///</summary>
         [JsonProperty("delay")]
         public double Delay
@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;AnimationEffect&lt;/code&gt;'s end delay.
+        /// `AnimationEffect`'s end delay.
         ///</summary>
         [JsonProperty("endDelay")]
         public double EndDelay
@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;AnimationEffect&lt;/code&gt;'s iteration start.
+        /// `AnimationEffect`'s iteration start.
         ///</summary>
         [JsonProperty("iterationStart")]
         public double IterationStart
@@ -35,7 +35,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;AnimationEffect&lt;/code&gt;'s iterations.
+        /// `AnimationEffect`'s iterations.
         ///</summary>
         [JsonProperty("iterations")]
         public double Iterations
@@ -44,7 +44,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;AnimationEffect&lt;/code&gt;'s iteration duration.
+        /// `AnimationEffect`'s iteration duration.
         ///</summary>
         [JsonProperty("duration")]
         public double Duration
@@ -53,7 +53,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;AnimationEffect&lt;/code&gt;'s playback direction.
+        /// `AnimationEffect`'s playback direction.
         ///</summary>
         [JsonProperty("direction")]
         public string Direction
@@ -62,7 +62,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;AnimationEffect&lt;/code&gt;'s fill mode.
+        /// `AnimationEffect`'s fill mode.
         ///</summary>
         [JsonProperty("fill")]
         public string Fill
@@ -71,7 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;AnimationEffect&lt;/code&gt;'s target node.
+        /// `AnimationEffect`'s target node.
         ///</summary>
         [JsonProperty("backendNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? BackendNodeId
@@ -80,7 +80,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;AnimationEffect&lt;/code&gt;'s keyframes.
+        /// `AnimationEffect`'s keyframes.
         ///</summary>
         [JsonProperty("keyframesRule", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public KeyframesRule KeyframesRule
@@ -89,7 +89,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// &lt;code&gt;AnimationEffect&lt;/code&gt;'s timing function.
+        /// `AnimationEffect`'s timing function.
         ///</summary>
         [JsonProperty("easing")]
         public string Easing

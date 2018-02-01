@@ -62,7 +62,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             set;
         }
         /// <summary>
-        /// &lt;code&gt;this&lt;/code&gt; object for this call frame.
+        /// <code>this</code> object for this call frame.
         ///</summary>
         [JsonProperty("this")]
         public Runtime.RemoteObject This
