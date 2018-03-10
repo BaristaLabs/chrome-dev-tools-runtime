@@ -35,7 +35,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// A function which serves as a getter for the property, or <code>undefined</code> if there is no getter (accessor descriptors only).
+        /// A function which serves as a getter for the property, or `undefined` if there is no getter
+        /// (accessor descriptors only).
         ///</summary>
         [JsonProperty("get", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RemoteObject Get
@@ -44,7 +45,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// A function which serves as a setter for the property, or <code>undefined</code> if there is no setter (accessor descriptors only).
+        /// A function which serves as a setter for the property, or `undefined` if there is no setter
+        /// (accessor descriptors only).
         ///</summary>
         [JsonProperty("set", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RemoteObject Set
@@ -53,7 +55,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// True if the type of this property descriptor may be changed and if the property may be deleted from the corresponding object.
+        /// True if the type of this property descriptor may be changed and if the property may be
+        /// deleted from the corresponding object.
         ///</summary>
         [JsonProperty("configurable")]
         public bool Configurable
@@ -62,7 +65,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// True if this property shows up during enumeration of the properties on the corresponding object.
+        /// True if this property shows up during enumeration of the properties on the corresponding
+        /// object.
         ///</summary>
         [JsonProperty("enumerable")]
         public bool Enumerable
@@ -89,7 +93,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Property symbol object, if the property is of the <code>symbol</code> type.
+        /// Property symbol object, if the property is of the `symbol` type.
         ///</summary>
         [JsonProperty("symbol", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public RemoteObject Symbol

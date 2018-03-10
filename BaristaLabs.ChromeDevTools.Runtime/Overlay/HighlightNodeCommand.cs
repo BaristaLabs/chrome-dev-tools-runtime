@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Highlights DOM node with given id or with the given JavaScript object wrapper. Either nodeId or objectId must be specified.
+    /// Highlights DOM node with given id or with the given JavaScript object wrapper. Either nodeId or
+    /// objectId must be specified.
     /// </summary>
     public sealed class HighlightNodeCommand : ICommand
     {

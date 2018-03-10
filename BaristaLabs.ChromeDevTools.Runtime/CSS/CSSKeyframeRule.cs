@@ -8,7 +8,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     public sealed class CSSKeyframeRule
     {
         /// <summary>
-        /// The css style sheet identifier (absent for user agent stylesheet and user-specified stylesheet rules) this rule came from.
+        /// The css style sheet identifier (absent for user agent stylesheet and user-specified
+        /// stylesheet rules) this rule came from.
         ///</summary>
         [JsonProperty("styleSheetId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string StyleSheetId

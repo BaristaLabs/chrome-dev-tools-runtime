@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Sets attributes on element with given id. This method is useful when user edits some existing attribute value and types in several attribute name/value pairs.
+    /// Sets attributes on element with given id. This method is useful when user edits some existing
+    /// attribute value and types in several attribute name/value pairs.
     /// </summary>
     public sealed class SetAttributesAsTextCommand : ICommand
     {
@@ -34,7 +35,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// Attribute name to replace with new attributes derived from text in case text parsed successfully.
+        /// Attribute name to replace with new attributes derived from text in case text parsed
+        /// successfully.
         /// </summary>
         [JsonProperty("name", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Name

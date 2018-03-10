@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Calls function with given declaration on the given object. Object group of the result is inherited from the target object.
+    /// Calls function with given declaration on the given object. Object group of the result is
+    /// inherited from the target object.
     /// </summary>
     public sealed class CallFunctionOnCommand : ICommand
     {
@@ -25,7 +26,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Identifier of the object to call function on. Either objectId or executionContextId should be specified.
+        /// Identifier of the object to call function on. Either objectId or executionContextId should
+        /// be specified.
         /// </summary>
         [JsonProperty("objectId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ObjectId
@@ -34,7 +36,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Call arguments. All call arguments must belong to the same JavaScript world as the target object.
+        /// Call arguments. All call arguments must belong to the same JavaScript world as the target
+        /// object.
         /// </summary>
         [JsonProperty("arguments", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public CallArgument[] Arguments
@@ -43,7 +46,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// In silent mode exceptions thrown during evaluation are not reported and do not pause execution. Overrides <code>setPauseOnException</code> state.
+        /// In silent mode exceptions thrown during evaluation are not reported and do not pause
+        /// execution. Overrides `setPauseOnException` state.
         /// </summary>
         [JsonProperty("silent", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Silent
@@ -79,7 +83,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Whether execution should <code>await</code> for resulting value and return once awaited promise is resolved.
+        /// Whether execution should `await` for resulting value and return once awaited promise is
+        /// resolved.
         /// </summary>
         [JsonProperty("awaitPromise", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? AwaitPromise
@@ -88,7 +93,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Specifies execution context which global object will be used to call function on. Either executionContextId or objectId should be specified.
+        /// Specifies execution context which global object will be used to call function on. Either
+        /// executionContextId or objectId should be specified.
         /// </summary>
         [JsonProperty("executionContextId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ExecutionContextId
@@ -97,7 +103,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Symbolic group name that can be used to release multiple objects. If objectGroup is not specified and objectId is, objectGroup will be inherited from object.
+        /// Symbolic group name that can be used to release multiple objects. If objectGroup is not
+        /// specified and objectId is, objectGroup will be inherited from object.
         /// </summary>
         [JsonProperty("objectGroup", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ObjectGroup

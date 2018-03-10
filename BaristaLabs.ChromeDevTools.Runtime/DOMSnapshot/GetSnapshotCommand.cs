@@ -3,7 +3,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Returns a document snapshot, including the full DOM tree of the root node (including iframes, template contents, and imported documents) in a flattened array, as well as layout and white-listed computed style information for the nodes. Shadow DOM in the returned DOM tree is flattened.
+    /// Returns a document snapshot, including the full DOM tree of the root node (including iframes,
+    /// template contents, and imported documents) in a flattened array, as well as layout and
+    /// white-listed computed style information for the nodes. Shadow DOM in the returned DOM tree is
+    /// flattened.
     /// </summary>
     public sealed class GetSnapshotCommand : ICommand
     {
@@ -20,6 +23,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
         /// </summary>
         [JsonProperty("computedStyleWhitelist")]
         public string[] ComputedStyleWhitelist
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Whether or not to retrieve details of DOM listeners (default false).
+        /// </summary>
+        [JsonProperty("includeEventListeners", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? IncludeEventListeners
         {
             get;
             set;

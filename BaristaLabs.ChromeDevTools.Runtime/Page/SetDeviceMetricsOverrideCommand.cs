@@ -3,7 +3,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Overrides the values of device screen dimensions (window.screen.width, window.screen.height, window.innerWidth, window.innerHeight, and "device-width"/"device-height"-related CSS media query results).
+    /// Overrides the values of device screen dimensions (window.screen.width, window.screen.height,
+    /// window.innerWidth, window.innerHeight, and "device-width"/"device-height"-related CSS media
+    /// query results).
     /// </summary>
     public sealed class SetDeviceMetricsOverrideCommand : ICommand
     {
@@ -43,7 +45,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Whether to emulate mobile device. This includes viewport meta tag, overlay scrollbars, text autosizing and more.
+        /// Whether to emulate mobile device. This includes viewport meta tag, overlay scrollbars, text
+        /// autosizing and more.
         /// </summary>
         [JsonProperty("mobile")]
         public bool Mobile

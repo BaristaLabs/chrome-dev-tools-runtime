@@ -8,7 +8,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     public sealed class ExecutionContextDescription
     {
         /// <summary>
-        /// Unique id of the execution context. It can be used to specify in which execution context script evaluation should be performed.
+        /// Unique id of the execution context. It can be used to specify in which execution context
+        /// script evaluation should be performed.
         ///</summary>
         [JsonProperty("id")]
         public long Id

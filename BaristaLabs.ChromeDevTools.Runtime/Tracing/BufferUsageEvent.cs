@@ -8,7 +8,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     public sealed class BufferUsageEvent : IEvent
     {
         /// <summary>
-        /// A number in range [0..1] that indicates the used size of event buffer as a fraction of its total size.
+        /// A number in range [0..1] that indicates the used size of event buffer as a fraction of its
+        /// total size.
         /// </summary>
         [JsonProperty("percentFull", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? PercentFull
@@ -26,7 +27,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             set;
         }
         /// <summary>
-        /// A number in range [0..1] that indicates the used size of event buffer as a fraction of its total size.
+        /// A number in range [0..1] that indicates the used size of event buffer as a fraction of its
+        /// total size.
         /// </summary>
         [JsonProperty("value", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? Value

@@ -17,7 +17,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             set;
         }
         /// <summary>
-        /// Source of the media query: "mediaRule" if specified by a @media rule, "importRule" if specified by an @import rule, "linkedSheet" if specified by a "media" attribute in a linked stylesheet's LINK tag, "inlineSheet" if specified by a "media" attribute in an inline stylesheet's STYLE tag.
+        /// Source of the media query: "mediaRule" if specified by a @media rule, "importRule" if
+        /// specified by an @import rule, "linkedSheet" if specified by a "media" attribute in a linked
+        /// stylesheet's LINK tag, "inlineSheet" if specified by a "media" attribute in an inline
+        /// stylesheet's STYLE tag.
         ///</summary>
         [JsonProperty("source")]
         public string Source
@@ -35,7 +38,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             set;
         }
         /// <summary>
-        /// The associated rule (@media or @import) header range in the enclosing stylesheet (if available).
+        /// The associated rule (@media or @import) header range in the enclosing stylesheet (if
+        /// available).
         ///</summary>
         [JsonProperty("range", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public SourceRange Range

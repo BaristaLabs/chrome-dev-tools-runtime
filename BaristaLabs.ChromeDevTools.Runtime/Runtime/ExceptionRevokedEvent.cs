@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// The id of revoked exception, as reported in <code>exceptionThrown</code>.
+        /// The id of revoked exception, as reported in `exceptionThrown`.
         /// </summary>
         [JsonProperty("exceptionId")]
         public long ExceptionId

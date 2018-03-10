@@ -106,7 +106,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Paper ranges to print, e.g., '1-5, 8, 11-13'. Defaults to the empty string, which means print all pages.
+        /// Paper ranges to print, e.g., '1-5, 8, 11-13'. Defaults to the empty string, which means
+        /// print all pages.
         /// </summary>
         [JsonProperty("pageRanges", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string PageRanges
@@ -115,10 +116,37 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Whether to silently ignore invalid but successfully parsed page ranges, such as '3-2'. Defaults to false.
+        /// Whether to silently ignore invalid but successfully parsed page ranges, such as '3-2'.
+        /// Defaults to false.
         /// </summary>
         [JsonProperty("ignoreInvalidPageRanges", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? IgnoreInvalidPageRanges
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// HTML template for the print header. Should be valid HTML markup with following
+        /// classes used to inject printing values into them:
+        /// - date - formatted print date
+        /// - title - document title
+        /// - url - document location
+        /// - pageNumber - current page number
+        /// - totalPages - total pages in the document
+        /// 
+        /// For example, <span class=title></span> would generate span containing the title.
+        /// </summary>
+        [JsonProperty("headerTemplate", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string HeaderTemplate
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// HTML template for the print footer. Should use the same format as the `headerTemplate`.
+        /// </summary>
+        [JsonProperty("footerTemplate", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string FooterTemplate
         {
             get;
             set;

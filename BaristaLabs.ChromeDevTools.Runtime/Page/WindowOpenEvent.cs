@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Fired when a new window is going to be opened, via window.open(), link click, form submission, etc.
+    /// Fired when a new window is going to be opened, via window.open(), link click, form submission,
+    /// etc.
     /// </summary>
     public sealed class WindowOpenEvent : IEvent
     {

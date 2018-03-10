@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Turns on virtual time for all frames (replacing real-time with a synthetic time source) and sets the current virtual time policy.  Note this supersedes any previous time budget.
+    /// Turns on virtual time for all frames (replacing real-time with a synthetic time source) and sets
+    /// the current virtual time policy.  Note this supersedes any previous time budget.
     /// </summary>
     public sealed class SetVirtualTimePolicyCommand : ICommand
     {
@@ -25,7 +26,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             set;
         }
         /// <summary>
-        /// If set, after this many virtual milliseconds have elapsed virtual time will be paused and a virtualTimeBudgetExpired event is sent.
+        /// If set, after this many virtual milliseconds have elapsed virtual time will be paused and a
+        /// virtualTimeBudgetExpired event is sent.
         /// </summary>
         [JsonProperty("budget", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? Budget
@@ -34,10 +36,21 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             set;
         }
         /// <summary>
-        /// If set this specifies the maximum number of tasks that can be run before virtual is forced forwards to prevent deadlock.
+        /// If set this specifies the maximum number of tasks that can be run before virtual is forced
+        /// forwards to prevent deadlock.
         /// </summary>
         [JsonProperty("maxVirtualTimeTaskStarvationCount", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? MaxVirtualTimeTaskStarvationCount
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// If set the virtual time policy change should be deferred until any frame starts navigating.
+        /// Note any previous deferred policy change is superseded.
+        /// </summary>
+        [JsonProperty("waitForNavigation", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? WaitForNavigation
         {
             get;
             set;

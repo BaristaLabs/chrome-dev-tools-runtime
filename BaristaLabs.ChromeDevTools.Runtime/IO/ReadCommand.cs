@@ -25,7 +25,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
             set;
         }
         /// <summary>
-        /// Seek to the specified offset before reading (if not specificed, proceed with offset following the last read).
+        /// Seek to the specified offset before reading (if not specificed, proceed with offset
+        /// following the last read).
         /// </summary>
         [JsonProperty("offset", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Offset

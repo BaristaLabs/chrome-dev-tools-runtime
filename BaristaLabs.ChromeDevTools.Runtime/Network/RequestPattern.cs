@@ -8,7 +8,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     public sealed class RequestPattern
     {
         /// <summary>
-        /// Wildcards ('*' -> zero or more, '?' -> exactly one) are allowed. Escape character is backslash. Omitting is equivalent to "*".
+        /// Wildcards ('*' -> zero or more, '?' -> exactly one) are allowed. Escape character is
+        /// backslash. Omitting is equivalent to "*".
         ///</summary>
         [JsonProperty("urlPattern", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string UrlPattern

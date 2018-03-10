@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Ensures that the given node will have specified pseudo-classes whenever its style is computed by the browser.
+    /// Ensures that the given node will have specified pseudo-classes whenever its style is computed by
+    /// the browser.
     /// </summary>
     public sealed class ForcePseudoStateCommand : ICommand
     {

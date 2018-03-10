@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Collect coverage data for the current isolate, and resets execution counters. Precise code coverage needs to have started.
+    /// Collect coverage data for the current isolate, and resets execution counters. Precise code
+    /// coverage needs to have started.
     /// </summary>
     public sealed class TakePreciseCoverageCommand : ICommand
     {

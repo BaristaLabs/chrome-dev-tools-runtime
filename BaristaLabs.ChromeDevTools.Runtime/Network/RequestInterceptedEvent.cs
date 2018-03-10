@@ -3,12 +3,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Details of an intercepted HTTP request, which must be either allowed, blocked, modified or mocked.
+    /// Details of an intercepted HTTP request, which must be either allowed, blocked, modified or
+    /// mocked.
     /// </summary>
     public sealed class RequestInterceptedEvent : IEvent
     {
         /// <summary>
-        /// Each request the page makes will have a unique id, however if any redirects are encountered while processing that fetch, they will be reported with the same id as the original fetch. Likewise if HTTP authentication is needed then the same fetch id will be used.
+        /// Each request the page makes will have a unique id, however if any redirects are encountered
+        /// while processing that fetch, they will be reported with the same id as the original fetch.
+        /// Likewise if HTTP authentication is needed then the same fetch id will be used.
         /// </summary>
         [JsonProperty("interceptionId")]
         public string InterceptionId
@@ -62,7 +65,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Details of the Authorization Challenge encountered. If this is set then continueInterceptedRequest must contain an authChallengeResponse.
+        /// Details of the Authorization Challenge encountered. If this is set then
+        /// continueInterceptedRequest must contain an authChallengeResponse.
         /// </summary>
         [JsonProperty("authChallenge", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public AuthChallenge AuthChallenge
@@ -71,7 +75,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Response error if intercepted at response stage or if redirect occurred while intercepting request.
+        /// Response error if intercepted at response stage or if redirect occurred while intercepting
+        /// request.
         /// </summary>
         [JsonProperty("responseErrorReason", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ErrorReason? ResponseErrorReason
@@ -80,7 +85,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Response code if intercepted at response stage or if redirect occurred while intercepting request or auth retry occurred.
+        /// Response code if intercepted at response stage or if redirect occurred while intercepting
+        /// request or auth retry occurred.
         /// </summary>
         [JsonProperty("responseStatusCode", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ResponseStatusCode
@@ -89,7 +95,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Response headers if intercepted at the response stage or if redirect occurred while intercepting request or auth retry occurred.
+        /// Response headers if intercepted at the response stage or if redirect occurred while
+        /// intercepting request or auth retry occurred.
         /// </summary>
         [JsonProperty("responseHeaders", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Headers ResponseHeaders

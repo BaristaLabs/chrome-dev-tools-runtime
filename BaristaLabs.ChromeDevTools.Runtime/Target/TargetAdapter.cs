@@ -46,7 +46,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             return await m_session.SendCommand<CloseTargetCommand, CloseTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Creates a new empty BrowserContext. Similar to an incognito profile but you can have more than one.
+        /// Creates a new empty BrowserContext. Similar to an incognito profile but you can have more than
+        /// one.
         /// </summary>
         public async Task<CreateBrowserContextCommandResponse> CreateBrowserContext(CreateBrowserContextCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -102,21 +103,25 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             return await m_session.SendCommand<SetAttachToFramesCommand, SetAttachToFramesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Controls whether to automatically attach to new targets which are considered to be related to this one. When turned on, attaches to all existing related targets as well. When turned off, automatically detaches from all currently attached targets.
+        /// Controls whether to automatically attach to new targets which are considered to be related to
+        /// this one. When turned on, attaches to all existing related targets as well. When turned off,
+        /// automatically detaches from all currently attached targets.
         /// </summary>
         public async Task<SetAutoAttachCommandResponse> SetAutoAttach(SetAutoAttachCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetAutoAttachCommand, SetAutoAttachCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Controls whether to discover available targets and notify via `targetCreated/targetInfoChanged/targetDestroyed` events.
+        /// Controls whether to discover available targets and notify via
+        /// `targetCreated/targetInfoChanged/targetDestroyed` events.
         /// </summary>
         public async Task<SetDiscoverTargetsCommandResponse> SetDiscoverTargets(SetDiscoverTargetsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetDiscoverTargetsCommand, SetDiscoverTargetsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Enables target discovery for the specified locations, when `setDiscoverTargets` was set to `true`.
+        /// Enables target discovery for the specified locations, when `setDiscoverTargets` was set to
+        /// `true`.
         /// </summary>
         public async Task<SetRemoteLocationsCommandResponse> SetRemoteLocations(SetRemoteLocationsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -131,14 +136,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Issued when detached from target for any reason (including `detachFromTarget` command). Can be issued multiple times per target if multiple sessions have been attached to it.
+        /// Issued when detached from target for any reason (including `detachFromTarget` command). Can be
+        /// issued multiple times per target if multiple sessions have been attached to it.
         /// </summary>
         public void SubscribeToDetachedFromTargetEvent(Action<DetachedFromTargetEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Notifies about a new protocol message received from the session (as reported in `attachedToTarget` event).
+        /// Notifies about a new protocol message received from the session (as reported in
+        /// `attachedToTarget` event).
         /// </summary>
         public void SubscribeToReceivedMessageFromTargetEvent(Action<ReceivedMessageFromTargetEvent> eventCallback)
         {
@@ -159,7 +166,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Issued when some information about a target has changed. This only happens between `targetCreated` and `targetDestroyed`.
+        /// Issued when some information about a target has changed. This only happens between
+        /// `targetCreated` and `targetDestroyed`.
         /// </summary>
         public void SubscribeToTargetInfoChangedEvent(Action<TargetInfoChangedEvent> eventCallback)
         {

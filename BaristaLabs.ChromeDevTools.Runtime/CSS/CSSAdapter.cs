@@ -25,7 +25,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         }
 
         /// <summary>
-        /// Inserts a new rule with the given `ruleText` in a stylesheet with given `styleSheetId`, at the position specified by `location`.
+        /// Inserts a new rule with the given `ruleText` in a stylesheet with given `styleSheetId`, at the
+        /// position specified by `location`.
         /// </summary>
         public async Task<AddRuleCommandResponse> AddRule(AddRuleCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -53,14 +54,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command ?? new DisableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Enables the CSS agent for the given page. Clients should not assume that the CSS agent has been enabled until the result of this command is received.
+        /// Enables the CSS agent for the given page. Clients should not assume that the CSS agent has been
+        /// enabled until the result of this command is received.
         /// </summary>
         public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Ensures that the given node will have specified pseudo-classes whenever its style is computed by the browser.
+        /// Ensures that the given node will have specified pseudo-classes whenever its style is computed by
+        /// the browser.
         /// </summary>
         public async Task<ForcePseudoStateCommandResponse> ForcePseudoState(ForcePseudoStateCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -81,7 +84,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             return await m_session.SendCommand<GetComputedStyleForNodeCommand, GetComputedStyleForNodeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Returns the styles defined inline (explicitly in the "style" attribute and implicitly, using DOM attributes) for a DOM node identified by `nodeId`.
+        /// Returns the styles defined inline (explicitly in the "style" attribute and implicitly, using DOM
+        /// attributes) for a DOM node identified by `nodeId`.
         /// </summary>
         public async Task<GetInlineStylesForNodeCommandResponse> GetInlineStylesForNode(GetInlineStylesForNodeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -102,7 +106,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             return await m_session.SendCommand<GetMediaQueriesCommand, GetMediaQueriesCommandResponse>(command ?? new GetMediaQueriesCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Requests information about platform fonts which we used to render child TextNodes in the given node.
+        /// Requests information about platform fonts which we used to render child TextNodes in the given
+        /// node.
         /// </summary>
         public async Task<GetPlatformFontsForNodeCommandResponse> GetPlatformFontsForNode(GetPlatformFontsForNodeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -116,7 +121,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             return await m_session.SendCommand<GetStyleSheetTextCommand, GetStyleSheetTextCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Find a rule with the given active property for the given node and set the new value for this property
+        /// Find a rule with the given active property for the given node and set the new value for this
+        /// property
         /// </summary>
         public async Task<SetEffectivePropertyValueForNodeCommandResponse> SetEffectivePropertyValueForNode(SetEffectivePropertyValueForNodeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -172,7 +178,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             return await m_session.SendCommand<StopRuleUsageTrackingCommand, StopRuleUsageTrackingCommandResponse>(command ?? new StopRuleUsageTrackingCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Obtain list of rules that became used since last call to this method (or since start of coverage instrumentation)
+        /// Obtain list of rules that became used since last call to this method (or since start of coverage
+        /// instrumentation)
         /// </summary>
         public async Task<TakeCoverageDeltaCommandResponse> TakeCoverageDelta(TakeCoverageDeltaCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -187,7 +194,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Fires whenever a MediaQuery result changes (for example, after a browser window has been resized.) The current implementation considers only viewport-dependent media features.
+        /// Fires whenever a MediaQuery result changes (for example, after a browser window has been
+        /// resized.) The current implementation considers only viewport-dependent media features.
         /// </summary>
         public void SubscribeToMediaQueryResultChangedEvent(Action<MediaQueryResultChangedEvent> eventCallback)
         {

@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Object subtype hint. Specified for <code>object</code> type values only.
+        /// Object subtype hint. Specified for `object` type values only.
         ///</summary>
         [JsonProperty("subtype", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Subtype
@@ -53,7 +53,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// List of the entries. Specified for <code>map</code> and <code>set</code> subtype values only.
+        /// List of the entries. Specified for `map` and `set` subtype values only.
         ///</summary>
         [JsonProperty("entries", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public EntryPreview[] Entries

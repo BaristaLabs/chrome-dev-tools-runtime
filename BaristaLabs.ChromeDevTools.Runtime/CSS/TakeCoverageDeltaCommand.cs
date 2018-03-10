@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Obtain list of rules that became used since last call to this method (or since start of coverage instrumentation)
+    /// Obtain list of rules that became used since last call to this method (or since start of coverage
+    /// instrumentation)
     /// </summary>
     public sealed class TakeCoverageDeltaCommand : ICommand
     {

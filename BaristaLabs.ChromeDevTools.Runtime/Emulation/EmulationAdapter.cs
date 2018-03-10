@@ -60,14 +60,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             return await m_session.SendCommand<SetCPUThrottlingRateCommand, SetCPUThrottlingRateCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Sets or clears an override of the default background color of the frame. This override is used if the content does not specify one.
+        /// Sets or clears an override of the default background color of the frame. This override is used
+        /// if the content does not specify one.
         /// </summary>
         public async Task<SetDefaultBackgroundColorOverrideCommandResponse> SetDefaultBackgroundColorOverride(SetDefaultBackgroundColorOverrideCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetDefaultBackgroundColorOverrideCommand, SetDefaultBackgroundColorOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Overrides the values of device screen dimensions (window.screen.width, window.screen.height, window.innerWidth, window.innerHeight, and "device-width"/"device-height"-related CSS media query results).
+        /// Overrides the values of device screen dimensions (window.screen.width, window.screen.height,
+        /// window.innerWidth, window.innerHeight, and "device-width"/"device-height"-related CSS media
+        /// query results).
         /// </summary>
         public async Task<SetDeviceMetricsOverrideCommandResponse> SetDeviceMetricsOverride(SetDeviceMetricsOverrideCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -88,7 +91,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             return await m_session.SendCommand<SetEmulatedMediaCommand, SetEmulatedMediaCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position unavailable.
+        /// Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position
+        /// unavailable.
         /// </summary>
         public async Task<SetGeolocationOverrideCommandResponse> SetGeolocationOverride(SetGeolocationOverrideCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -123,14 +127,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             return await m_session.SendCommand<SetTouchEmulationEnabledCommand, SetTouchEmulationEnabledCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Turns on virtual time for all frames (replacing real-time with a synthetic time source) and sets the current virtual time policy.  Note this supersedes any previous time budget.
+        /// Turns on virtual time for all frames (replacing real-time with a synthetic time source) and sets
+        /// the current virtual time policy.  Note this supersedes any previous time budget.
         /// </summary>
         public async Task<SetVirtualTimePolicyCommandResponse> SetVirtualTimePolicy(SetVirtualTimePolicyCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetVirtualTimePolicyCommand, SetVirtualTimePolicyCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Resizes the frame/viewport of the page. Note that this does not affect the frame's container (e.g. browser window). Can be used to produce screenshots of the specified size. Not supported on Android.
+        /// Resizes the frame/viewport of the page. Note that this does not affect the frame's container
+        /// (e.g. browser window). Can be used to produce screenshots of the specified size. Not supported
+        /// on Android.
         /// </summary>
         public async Task<SetVisibleSizeCommandResponse> SetVisibleSize(SetVisibleSizeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {

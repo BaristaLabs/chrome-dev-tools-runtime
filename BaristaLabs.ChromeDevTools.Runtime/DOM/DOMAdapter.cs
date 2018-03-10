@@ -32,14 +32,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             return await m_session.SendCommand<CollectClassNamesFromSubtreeCommand, CollectClassNamesFromSubtreeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Creates a deep copy of the specified node and places it into the target container before the given anchor.
+        /// Creates a deep copy of the specified node and places it into the target container before the
+        /// given anchor.
         /// </summary>
         public async Task<CopyToCommandResponse> CopyTo(CopyToCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<CopyToCommand, CopyToCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Describes node given its id, does not require domain to be enabled. Does not start tracking any objects, can be used for automation.
+        /// Describes node given its id, does not require domain to be enabled. Does not start tracking any
+        /// objects, can be used for automation.
         /// </summary>
         public async Task<DescribeNodeCommandResponse> DescribeNode(DescribeNodeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -53,7 +55,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command ?? new DisableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Discards search results from the session with the given id. `getSearchResults` should no longer be called for that search.
+        /// Discards search results from the session with the given id. `getSearchResults` should no longer
+        /// be called for that search.
         /// </summary>
         public async Task<DiscardSearchResultsCommandResponse> DiscardSearchResults(DiscardSearchResultsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -123,7 +126,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             return await m_session.SendCommand<GetRelayoutBoundaryCommand, GetRelayoutBoundaryCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Returns search results from given `fromIndex` to given `toIndex` from the search with the given identifier.
+        /// Returns search results from given `fromIndex` to given `toIndex` from the search with the given
+        /// identifier.
         /// </summary>
         public async Task<GetSearchResultsCommandResponse> GetSearchResults(GetSearchResultsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -165,7 +169,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             return await m_session.SendCommand<MoveToCommand, MoveToCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Searches for a given string in the DOM tree. Use `getSearchResults` to access search results or `cancelSearch` to end this search session.
+        /// Searches for a given string in the DOM tree. Use `getSearchResults` to access search results or
+        /// `cancelSearch` to end this search session.
         /// </summary>
         public async Task<PerformSearchCommandResponse> PerformSearch(PerformSearchCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -221,14 +226,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             return await m_session.SendCommand<RemoveNodeCommand, RemoveNodeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Requests that children of the node with given id are returned to the caller in form of `setChildNodes` events where not only immediate children are retrieved, but all children down to the specified depth.
+        /// Requests that children of the node with given id are returned to the caller in form of
+        /// `setChildNodes` events where not only immediate children are retrieved, but all children down to
+        /// the specified depth.
         /// </summary>
         public async Task<RequestChildNodesCommandResponse> RequestChildNodes(RequestChildNodesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<RequestChildNodesCommand, RequestChildNodesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Requests that the node is sent to the caller given the JavaScript node object reference. All nodes that form the path from the node to the root are also sent to the client as a series of `setChildNodes` notifications.
+        /// Requests that the node is sent to the caller given the JavaScript node object reference. All
+        /// nodes that form the path from the node to the root are also sent to the client as a series of
+        /// `setChildNodes` notifications.
         /// </summary>
         public async Task<RequestNodeCommandResponse> RequestNode(RequestNodeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -249,7 +258,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             return await m_session.SendCommand<SetAttributeValueCommand, SetAttributeValueCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Sets attributes on element with given id. This method is useful when user edits some existing attribute value and types in several attribute name/value pairs.
+        /// Sets attributes on element with given id. This method is useful when user edits some existing
+        /// attribute value and types in several attribute name/value pairs.
         /// </summary>
         public async Task<SetAttributesAsTextCommandResponse> SetAttributesAsText(SetAttributesAsTextCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -263,7 +273,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             return await m_session.SendCommand<SetFileInputFilesCommand, SetFileInputFilesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Enables console to refer to the node with given id via $x (see Command Line API for more details $x functions).
+        /// Enables console to refer to the node with given id via $x (see Command Line API for more details
+        /// $x functions).
         /// </summary>
         public async Task<SetInspectedNodeCommandResponse> SetInspectedNode(SetInspectedNodeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -376,7 +387,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Fired when backend wants to provide client with the missing DOM structure. This happens upon most of the calls requesting node ids.
+        /// Fired when backend wants to provide client with the missing DOM structure. This happens upon
+        /// most of the calls requesting node ids.
         /// </summary>
         public void SubscribeToSetChildNodesEvent(Action<SetChildNodesEvent> eventCallback)
         {

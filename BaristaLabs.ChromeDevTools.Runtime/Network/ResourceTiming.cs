@@ -8,7 +8,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     public sealed class ResourceTiming
     {
         /// <summary>
-        /// Timing's requestTime is a baseline in seconds, while the other numbers are ticks in milliseconds relatively to this requestTime.
+        /// Timing's requestTime is a baseline in seconds, while the other numbers are ticks in
+        /// milliseconds relatively to this requestTime.
         ///</summary>
         [JsonProperty("requestTime")]
         public double RequestTime

@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Fired when virtual machine parses script. This event is also fired for all known and uncollected scripts upon enabling debugger.
+    /// Fired when virtual machine parses script. This event is also fired for all known and uncollected
+    /// scripts upon enabling debugger.
     /// </summary>
     public sealed class ScriptParsedEvent : IEvent
     {

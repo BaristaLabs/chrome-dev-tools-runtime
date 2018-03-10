@@ -16,7 +16,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         }
 
         /// <summary>
-        /// If true 'reportHeapSnapshotProgress' events will be generated while snapshot is being taken when the tracking is stopped.
+        /// If true 'reportHeapSnapshotProgress' events will be generated while snapshot is being taken
+        /// when the tracking is stopped.
         /// </summary>
         [JsonProperty("reportProgress", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? ReportProgress

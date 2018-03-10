@@ -34,7 +34,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Whether or not universal access should be granted to the isolated world. This is a powerful option, use with caution.
+        /// Whether or not universal access should be granted to the isolated world. This is a powerful
+        /// option, use with caution.
         /// </summary>
         [JsonProperty("grantUniveralAccess", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? GrantUniveralAccess

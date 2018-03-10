@@ -68,14 +68,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Contains an bucket of collected trace events. When tracing is stopped collected events will be send as a sequence of dataCollected events followed by tracingComplete event.
+        /// Contains an bucket of collected trace events. When tracing is stopped collected events will be
+        /// send as a sequence of dataCollected events followed by tracingComplete event.
         /// </summary>
         public void SubscribeToDataCollectedEvent(Action<DataCollectedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Signals that tracing is stopped and there is no trace buffers pending flush, all data were delivered via dataCollected events.
+        /// Signals that tracing is stopped and there is no trace buffers pending flush, all data were
+        /// delivered via dataCollected events.
         /// </summary>
         public void SubscribeToTracingCompleteEvent(Action<TracingCompleteEvent> eventCallback)
         {

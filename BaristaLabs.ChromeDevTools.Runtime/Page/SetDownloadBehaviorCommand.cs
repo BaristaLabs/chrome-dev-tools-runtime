@@ -16,7 +16,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         }
 
         /// <summary>
-        /// Whether to allow all or deny all download requests, or use default Chrome behavior if available (otherwise deny).
+        /// Whether to allow all or deny all download requests, or use default Chrome behavior if
+        /// available (otherwise deny).
         /// </summary>
         [JsonProperty("behavior")]
         public string Behavior

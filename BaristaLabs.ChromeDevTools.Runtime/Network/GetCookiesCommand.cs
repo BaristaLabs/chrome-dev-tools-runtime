@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Returns all browser cookies for the current URL. Depending on the backend support, will return detailed cookie information in the `cookies` field.
+    /// Returns all browser cookies for the current URL. Depending on the backend support, will return
+    /// detailed cookie information in the `cookies` field.
     /// </summary>
     public sealed class GetCookiesCommand : ICommand
     {

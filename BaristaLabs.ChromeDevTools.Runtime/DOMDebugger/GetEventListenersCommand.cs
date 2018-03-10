@@ -25,7 +25,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             set;
         }
         /// <summary>
-        /// The maximum depth at which Node children should be retrieved, defaults to 1. Use -1 for the entire subtree or provide an integer larger than 0.
+        /// The maximum depth at which Node children should be retrieved, defaults to 1. Use -1 for the
+        /// entire subtree or provide an integer larger than 0.
         /// </summary>
         [JsonProperty("depth", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Depth
@@ -34,7 +35,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMDebugger
             set;
         }
         /// <summary>
-        /// Whether or not iframes and shadow roots should be traversed when returning the subtree (default is false). Reports listeners for all contexts if pierce is enabled.
+        /// Whether or not iframes and shadow roots should be traversed when returning the subtree
+        /// (default is false). Reports listeners for all contexts if pierce is enabled.
         /// </summary>
         [JsonProperty("pierce", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Pierce

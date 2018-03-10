@@ -39,6 +39,20 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
             return await m_session.SendCommand<GetVersionCommand, GetVersionCommandResponse>(command ?? new GetVersionCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Get Chrome histograms.
+        /// </summary>
+        public async Task<GetHistogramsCommandResponse> GetHistograms(GetHistogramsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetHistogramsCommand, GetHistogramsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Get a Chrome histogram by name.
+        /// </summary>
+        public async Task<GetHistogramCommandResponse> GetHistogram(GetHistogramCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetHistogramCommand, GetHistogramCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Get position and size of the browser window.
         /// </summary>
         public async Task<GetWindowBoundsCommandResponse> GetWindowBounds(GetWindowBoundsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

@@ -25,11 +25,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
         }
 
         /// <summary>
-        /// Enables console domain, sends the messages collected so far to the client by means of the <code>messageAdded</code> notification.
+        /// Does nothing.
         /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<ClearMessagesCommandResponse> ClearMessages(ClearMessagesCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<ClearMessagesCommand, ClearMessagesCommandResponse>(command ?? new ClearMessagesCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Disables console domain, prevents further console messages from being reported to the client.
@@ -39,11 +39,12 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Console
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command ?? new DisableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Does nothing.
+        /// Enables console domain, sends the messages collected so far to the client by means of the
+        /// `messageAdded` notification.
         /// </summary>
-        public async Task<ClearMessagesCommandResponse> ClearMessages(ClearMessagesCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<ClearMessagesCommand, ClearMessagesCommandResponse>(command ?? new ClearMessagesCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
 
         /// <summary>

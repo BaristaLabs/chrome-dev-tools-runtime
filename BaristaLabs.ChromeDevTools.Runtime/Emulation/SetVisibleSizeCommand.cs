@@ -3,7 +3,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Resizes the frame/viewport of the page. Note that this does not affect the frame's container (e.g. browser window). Can be used to produce screenshots of the specified size. Not supported on Android.
+    /// Resizes the frame/viewport of the page. Note that this does not affect the frame's container
+    /// (e.g. browser window). Can be used to produce screenshots of the specified size. Not supported
+    /// on Android.
     /// </summary>
     public sealed class SetVisibleSizeCommand : ICommand
     {

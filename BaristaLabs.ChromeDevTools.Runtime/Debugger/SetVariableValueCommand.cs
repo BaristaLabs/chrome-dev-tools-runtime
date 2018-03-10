@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Changes value of variable in a callframe. Object-based scopes are not supported and must be mutated manually.
+    /// Changes value of variable in a callframe. Object-based scopes are not supported and must be
+    /// mutated manually.
     /// </summary>
     public sealed class SetVariableValueCommand : ICommand
     {
@@ -16,7 +17,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         }
 
         /// <summary>
-        /// 0-based number of scope as was listed in scope chain. Only 'local', 'closure' and 'catch' scope types are allowed. Other scopes could be manipulated manually.
+        /// 0-based number of scope as was listed in scope chain. Only 'local', 'closure' and 'catch'
+        /// scope types are allowed. Other scopes could be manipulated manually.
         /// </summary>
         [JsonProperty("scopeNumber")]
         public long ScopeNumber

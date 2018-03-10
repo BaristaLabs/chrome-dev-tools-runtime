@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Enables the CSS agent for the given page. Clients should not assume that the CSS agent has been enabled until the result of this command is received.
+    /// Enables the CSS agent for the given page. Clients should not assume that the CSS agent has been
+    /// enabled until the result of this command is received.
     /// </summary>
     public sealed class EnableCommand : ICommand
     {

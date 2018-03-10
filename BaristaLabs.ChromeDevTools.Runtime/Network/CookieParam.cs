@@ -26,7 +26,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// The request-URI to associate with the setting of the cookie. This value can affect the default domain and path values of the created cookie.
+        /// The request-URI to associate with the setting of the cookie. This value can affect the
+        /// default domain and path values of the created cookie.
         ///</summary>
         [JsonProperty("url", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Url

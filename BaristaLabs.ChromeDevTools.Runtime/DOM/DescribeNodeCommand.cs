@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Describes node given its id, does not require domain to be enabled. Does not start tracking any objects, can be used for automation.
+    /// Describes node given its id, does not require domain to be enabled. Does not start tracking any
+    /// objects, can be used for automation.
     /// </summary>
     public sealed class DescribeNodeCommand : ICommand
     {
@@ -43,7 +44,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// The maximum depth at which children should be retrieved, defaults to 1. Use -1 for the entire subtree or provide an integer larger than 0.
+        /// The maximum depth at which children should be retrieved, defaults to 1. Use -1 for the
+        /// entire subtree or provide an integer larger than 0.
         /// </summary>
         [JsonProperty("depth", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Depth
@@ -52,7 +54,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// Whether or not iframes and shadow roots should be traversed when returning the subtree (default is false).
+        /// Whether or not iframes and shadow roots should be traversed when returning the subtree
+        /// (default is false).
         /// </summary>
         [JsonProperty("pierce", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Pierce

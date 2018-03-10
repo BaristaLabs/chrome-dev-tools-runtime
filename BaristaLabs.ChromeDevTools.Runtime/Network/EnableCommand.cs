@@ -33,6 +33,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+        /// <summary>
+        /// Longest post body size (in bytes) that would be included in requestWillBeSent notification
+        /// </summary>
+        [JsonProperty("maxPostDataSize", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? MaxPostDataSize
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class EnableCommandResponse : ICommandResponse<EnableCommand>

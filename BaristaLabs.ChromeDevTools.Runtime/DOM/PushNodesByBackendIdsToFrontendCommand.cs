@@ -29,7 +29,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     public sealed class PushNodesByBackendIdsToFrontendCommandResponse : ICommandResponse<PushNodesByBackendIdsToFrontendCommand>
     {
         /// <summary>
-        /// The array of ids of pushed nodes that correspond to the backend ids specified in backendNodeIds.
+        /// The array of ids of pushed nodes that correspond to the backend ids specified in
+        /// backendNodeIds.
         ///</summary>
         [JsonProperty("nodeIds")]
         public long[] NodeIds

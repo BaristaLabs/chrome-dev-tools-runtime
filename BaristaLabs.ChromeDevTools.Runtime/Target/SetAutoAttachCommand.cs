@@ -3,7 +3,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Controls whether to automatically attach to new targets which are considered to be related to this one. When turned on, attaches to all existing related targets as well. When turned off, automatically detaches from all currently attached targets.
+    /// Controls whether to automatically attach to new targets which are considered to be related to
+    /// this one. When turned on, attaches to all existing related targets as well. When turned off,
+    /// automatically detaches from all currently attached targets.
     /// </summary>
     public sealed class SetAutoAttachCommand : ICommand
     {
@@ -25,7 +27,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             set;
         }
         /// <summary>
-        /// Whether to pause new targets when attaching to them. Use `Runtime.runIfWaitingForDebugger` to run paused targets.
+        /// Whether to pause new targets when attaching to them. Use `Runtime.runIfWaitingForDebugger`
+        /// to run paused targets.
         /// </summary>
         [JsonProperty("waitForDebuggerOnStart")]
         public bool WaitForDebuggerOnStart

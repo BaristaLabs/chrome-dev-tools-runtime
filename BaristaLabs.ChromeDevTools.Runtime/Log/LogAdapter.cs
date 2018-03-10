@@ -39,7 +39,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command ?? new DisableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Enables log domain, sends the entries collected so far to the client by means of the `entryAdded` notification.
+        /// Enables log domain, sends the entries collected so far to the client by means of the
+        /// `entryAdded` notification.
         /// </summary>
         public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {

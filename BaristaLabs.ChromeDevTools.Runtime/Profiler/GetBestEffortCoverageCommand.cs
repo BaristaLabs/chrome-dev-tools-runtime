@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Collect coverage data for the current isolate. The coverage data may be incomplete due to garbage collection.
+    /// Collect coverage data for the current isolate. The coverage data may be incomplete due to
+    /// garbage collection.
     /// </summary>
     public sealed class GetBestEffortCoverageCommand : ICommand
     {

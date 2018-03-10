@@ -25,7 +25,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Specifies in which execution context to perform script run. If the parameter is omitted the evaluation will be performed in the context of the inspected page.
+        /// Specifies in which execution context to perform script run. If the parameter is omitted the
+        /// evaluation will be performed in the context of the inspected page.
         /// </summary>
         [JsonProperty("executionContextId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ExecutionContextId
@@ -43,7 +44,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// In silent mode exceptions thrown during evaluation are not reported and do not pause execution. Overrides <code>setPauseOnException</code> state.
+        /// In silent mode exceptions thrown during evaluation are not reported and do not pause
+        /// execution. Overrides `setPauseOnException` state.
         /// </summary>
         [JsonProperty("silent", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Silent
@@ -79,7 +81,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Whether execution should <code>await</code> for resulting value and return once awaited promise is resolved.
+        /// Whether execution should `await` for resulting value and return once awaited promise is
+        /// resolved.
         /// </summary>
         [JsonProperty("awaitPromise", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? AwaitPromise

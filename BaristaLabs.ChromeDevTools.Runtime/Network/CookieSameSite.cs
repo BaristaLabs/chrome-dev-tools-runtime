@@ -5,7 +5,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     using System.Runtime.Serialization;
 
     /// <summary>
-    /// Represents the cookie's 'SameSite' status: https://tools.ietf.org/html/draft-west-first-party-cookies
+    /// Represents the cookie's 'SameSite' status:
+    /// https://tools.ietf.org/html/draft-west-first-party-cookies
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum CookieSameSite

@@ -8,7 +8,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     public sealed class VirtualTimePausedEvent : IEvent
     {
         /// <summary>
-        /// The amount of virtual time that has elapsed in milliseconds since virtual time was first enabled.
+        /// The amount of virtual time that has elapsed in milliseconds since virtual time was first
+        /// enabled.
         /// </summary>
         [JsonProperty("virtualTimeElapsed")]
         public double VirtualTimeElapsed

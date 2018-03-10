@@ -16,7 +16,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
         }
 
         /// <summary>
-        /// Type of the touch event. TouchEnd and TouchCancel must not contain any touch points, while TouchStart and TouchMove must contains at least one.
+        /// Type of the touch event. TouchEnd and TouchCancel must not contain any touch points, while
+        /// TouchStart and TouchMove must contains at least one.
         /// </summary>
         [JsonProperty("type")]
         public string Type
@@ -25,7 +26,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
-        /// Active touch points on the touch device. One event per any changed point (compared to previous touch event in a sequence) is generated, emulating pressing/moving/releasing points one by one.
+        /// Active touch points on the touch device. One event per any changed point (compared to
+        /// previous touch event in a sequence) is generated, emulating pressing/moving/releasing points
+        /// one by one.
         /// </summary>
         [JsonProperty("touchPoints")]
         public TouchPoint[] TouchPoints
@@ -34,7 +37,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
-        /// Bit field representing pressed modifier keys. Alt=1, Ctrl=2, Meta/Command=4, Shift=8 (default: 0).
+        /// Bit field representing pressed modifier keys. Alt=1, Ctrl=2, Meta/Command=4, Shift=8
+        /// (default: 0).
         /// </summary>
         [JsonProperty("modifiers", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Modifiers

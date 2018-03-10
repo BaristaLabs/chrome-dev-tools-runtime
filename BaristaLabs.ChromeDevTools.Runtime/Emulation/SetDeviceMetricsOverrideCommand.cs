@@ -3,7 +3,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Overrides the values of device screen dimensions (window.screen.width, window.screen.height, window.innerWidth, window.innerHeight, and "device-width"/"device-height"-related CSS media query results).
+    /// Overrides the values of device screen dimensions (window.screen.width, window.screen.height,
+    /// window.innerWidth, window.innerHeight, and "device-width"/"device-height"-related CSS media
+    /// query results).
     /// </summary>
     public sealed class SetDeviceMetricsOverrideCommand : ICommand
     {
@@ -43,7 +45,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             set;
         }
         /// <summary>
-        /// Whether to emulate mobile device. This includes viewport meta tag, overlay scrollbars, text autosizing and more.
+        /// Whether to emulate mobile device. This includes viewport meta tag, overlay scrollbars, text
+        /// autosizing and more.
         /// </summary>
         [JsonProperty("mobile")]
         public bool Mobile
@@ -115,7 +118,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             set;
         }
         /// <summary>
-        /// If set, the visible area of the page will be overridden to this viewport. This viewport change is not observed by the page, e.g. viewport-relative elements do not change positions.
+        /// If set, the visible area of the page will be overridden to this viewport. This viewport
+        /// change is not observed by the page, e.g. viewport-relative elements do not change positions.
         /// </summary>
         [JsonProperty("viewport", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Page.Viewport Viewport

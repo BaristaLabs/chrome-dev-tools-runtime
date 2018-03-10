@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Fired when backend wants to provide client with the missing DOM structure. This happens upon most of the calls requesting node ids.
+    /// Fired when backend wants to provide client with the missing DOM structure. This happens upon
+    /// most of the calls requesting node ids.
     /// </summary>
     public sealed class SetChildNodesEvent : IEvent
     {

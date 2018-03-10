@@ -3,7 +3,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Response to Network.requestIntercepted which either modifies the request to continue with any modifications, or blocks it, or completes it with the provided response bytes. If a network fetch occurs as a result which encounters a redirect an additional Network.requestIntercepted event will be sent with the same InterceptionId.
+    /// Response to Network.requestIntercepted which either modifies the request to continue with any
+    /// modifications, or blocks it, or completes it with the provided response bytes. If a network
+    /// fetch occurs as a result which encounters a redirect an additional Network.requestIntercepted
+    /// event will be sent with the same InterceptionId.
     /// </summary>
     public sealed class ContinueInterceptedRequestCommand : ICommand
     {
@@ -25,7 +28,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// If set this causes the request to fail with the given reason. Passing `Aborted` for requests marked with `isNavigationRequest` also cancels the navigation. Must not be set in response to an authChallenge.
+        /// If set this causes the request to fail with the given reason. Passing `Aborted` for requests
+        /// marked with `isNavigationRequest` also cancels the navigation. Must not be set in response
+        /// to an authChallenge.
         /// </summary>
         [JsonProperty("errorReason", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ErrorReason? ErrorReason
@@ -34,7 +39,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// If set the requests completes using with the provided base64 encoded raw response, including HTTP status line and headers etc... Must not be set in response to an authChallenge.
+        /// If set the requests completes using with the provided base64 encoded raw response, including
+        /// HTTP status line and headers etc... Must not be set in response to an authChallenge.
         /// </summary>
         [JsonProperty("rawResponse", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string RawResponse
@@ -43,7 +49,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// If set the request url will be modified in a way that's not observable by page. Must not be set in response to an authChallenge.
+        /// If set the request url will be modified in a way that's not observable by page. Must not be
+        /// set in response to an authChallenge.
         /// </summary>
         [JsonProperty("url", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Url
@@ -52,7 +59,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// If set this allows the request method to be overridden. Must not be set in response to an authChallenge.
+        /// If set this allows the request method to be overridden. Must not be set in response to an
+        /// authChallenge.
         /// </summary>
         [JsonProperty("method", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Method
@@ -70,7 +78,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// If set this allows the request headers to be changed. Must not be set in response to an authChallenge.
+        /// If set this allows the request headers to be changed. Must not be set in response to an
+        /// authChallenge.
         /// </summary>
         [JsonProperty("headers", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Headers Headers

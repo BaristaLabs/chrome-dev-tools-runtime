@@ -80,7 +80,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// The indexes of the node's child nodes in the `domNodes` array returned by `getSnapshot`, if any.
+        /// The indexes of the node's child nodes in the `domNodes` array returned by `getSnapshot`, if
+        /// any.
         ///</summary>
         [JsonProperty("childNodeIndexes", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long[] ChildNodeIndexes
@@ -98,7 +99,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// Indexes of pseudo elements associated with this node in the `domNodes` array returned by `getSnapshot`, if any.
+        /// Indexes of pseudo elements associated with this node in the `domNodes` array returned by
+        /// `getSnapshot`, if any.
         ///</summary>
         [JsonProperty("pseudoElementIndexes", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long[] PseudoElementIndexes
@@ -107,7 +109,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// The index of the node's related layout tree node in the `layoutTreeNodes` array returned by `getSnapshot`, if any.
+        /// The index of the node's related layout tree node in the `layoutTreeNodes` array returned by
+        /// `getSnapshot`, if any.
         ///</summary>
         [JsonProperty("layoutNodeIndex", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? LayoutNodeIndex
@@ -179,7 +182,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// The index of a frame owner element's content document in the `domNodes` array returned by `getSnapshot`, if any.
+        /// The index of a frame owner element's content document in the `domNodes` array returned by
+        /// `getSnapshot`, if any.
         ///</summary>
         [JsonProperty("contentDocumentIndex", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ContentDocumentIndex
@@ -188,7 +192,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// Index of the imported document's node of a link element in the `domNodes` array returned by `getSnapshot`, if any.
+        /// Index of the imported document's node of a link element in the `domNodes` array returned by
+        /// `getSnapshot`, if any.
         ///</summary>
         [JsonProperty("importedDocumentIndex", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? ImportedDocumentIndex
@@ -197,7 +202,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// Index of the content node of a template element in the `domNodes` array returned by `getSnapshot`.
+        /// Index of the content node of a template element in the `domNodes` array returned by
+        /// `getSnapshot`.
         ///</summary>
         [JsonProperty("templateContentIndex", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? TemplateContentIndex
@@ -215,10 +221,21 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// Whether this DOM node responds to mouse clicks. This includes nodes that have had click event listeners attached via JavaScript as well as anchor tags that naturally navigate when clicked.
+        /// Whether this DOM node responds to mouse clicks. This includes nodes that have had click
+        /// event listeners attached via JavaScript as well as anchor tags that naturally navigate when
+        /// clicked.
         ///</summary>
         [JsonProperty("isClickable", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? IsClickable
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Details of the node's event listeners, if any.
+        ///</summary>
+        [JsonProperty("eventListeners", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public DOMDebugger.EventListener[] EventListeners
         {
             get;
             set;

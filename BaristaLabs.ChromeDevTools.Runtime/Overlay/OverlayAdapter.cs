@@ -60,7 +60,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
             return await m_session.SendCommand<HighlightFrameCommand, HighlightFrameCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Highlights DOM node with given id or with the given JavaScript object wrapper. Either nodeId or objectId must be specified.
+        /// Highlights DOM node with given id or with the given JavaScript object wrapper. Either nodeId or
+        /// objectId must be specified.
         /// </summary>
         public async Task<HighlightNodeCommandResponse> HighlightNode(HighlightNodeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -81,7 +82,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
             return await m_session.SendCommand<HighlightRectCommand, HighlightRectCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Enters the 'inspect' mode. In this mode, elements that user is hovering over are highlighted. Backend then generates 'inspectNodeRequested' event upon element selection.
+        /// Enters the 'inspect' mode. In this mode, elements that user is hovering over are highlighted.
+        /// Backend then generates 'inspectNodeRequested' event upon element selection.
         /// </summary>
         public async Task<SetInspectModeCommandResponse> SetInspectMode(SetInspectModeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -138,7 +140,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
         }
 
         /// <summary>
-        /// Fired when the node should be inspected. This happens after call to `setInspectMode` or when user manually inspects an element.
+        /// Fired when the node should be inspected. This happens after call to `setInspectMode` or when
+        /// user manually inspects an element.
         /// </summary>
         public void SubscribeToInspectNodeRequestedEvent(Action<InspectNodeRequestedEvent> eventCallback)
         {

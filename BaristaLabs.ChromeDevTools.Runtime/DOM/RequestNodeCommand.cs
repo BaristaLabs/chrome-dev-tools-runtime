@@ -3,7 +3,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Requests that the node is sent to the caller given the JavaScript node object reference. All nodes that form the path from the node to the root are also sent to the client as a series of `setChildNodes` notifications.
+    /// Requests that the node is sent to the caller given the JavaScript node object reference. All
+    /// nodes that form the path from the node to the root are also sent to the client as a series of
+    /// `setChildNodes` notifications.
     /// </summary>
     public sealed class RequestNodeCommand : ICommand
     {

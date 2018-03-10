@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Enable/disable overriding certificate errors. If enabled, all certificate error events need to be handled by the DevTools client and should be answered with handleCertificateError commands.
+    /// Enable/disable overriding certificate errors. If enabled, all certificate error events need to
+    /// be handled by the DevTools client and should be answered with handleCertificateError commands.
     /// </summary>
     public sealed class SetOverrideCertificateErrorsCommand : ICommand
     {

@@ -52,7 +52,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
-        /// The number of additional pixels to scroll back along the X axis, in addition to the given distance.
+        /// The number of additional pixels to scroll back along the X axis, in addition to the given
+        /// distance.
         /// </summary>
         [JsonProperty("xOverscroll", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? XOverscroll
@@ -61,7 +62,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
-        /// The number of additional pixels to scroll back along the Y axis, in addition to the given distance.
+        /// The number of additional pixels to scroll back along the Y axis, in addition to the given
+        /// distance.
         /// </summary>
         [JsonProperty("yOverscroll", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? YOverscroll
@@ -88,7 +90,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
-        /// Which type of input events to be generated (default: 'default', which queries the platform for the preferred input type).
+        /// Which type of input events to be generated (default: 'default', which queries the platform
+        /// for the preferred input type).
         /// </summary>
         [JsonProperty("gestureSourceType", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public GestureSourceType? GestureSourceType

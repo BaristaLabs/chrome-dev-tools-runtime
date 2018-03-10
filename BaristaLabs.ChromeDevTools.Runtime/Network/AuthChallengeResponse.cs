@@ -8,7 +8,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     public sealed class AuthChallengeResponse
     {
         /// <summary>
-        /// The decision on what to do in response to the authorization challenge.  Default means deferring to the default behavior of the net stack, which will likely either the Cancel authentication or display a popup dialog box.
+        /// The decision on what to do in response to the authorization challenge.  Default means
+        /// deferring to the default behavior of the net stack, which will likely either the Cancel
+        /// authentication or display a popup dialog box.
         ///</summary>
         [JsonProperty("response")]
         public string Response
@@ -17,7 +19,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// The username to provide, possibly empty. Should only be set if response is ProvideCredentials.
+        /// The username to provide, possibly empty. Should only be set if response is
+        /// ProvideCredentials.
         ///</summary>
         [JsonProperty("username", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Username
@@ -26,7 +29,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// The password to provide, possibly empty. Should only be set if response is ProvideCredentials.
+        /// The password to provide, possibly empty. Should only be set if response is
+        /// ProvideCredentials.
         ///</summary>
         [JsonProperty("password", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Password

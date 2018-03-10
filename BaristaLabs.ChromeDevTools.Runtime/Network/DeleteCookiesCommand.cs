@@ -25,7 +25,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// If specified, deletes all the cookies with the given name where domain and path match provided URL.
+        /// If specified, deletes all the cookies with the given name where domain and path match
+        /// provided URL.
         /// </summary>
         [JsonProperty("url", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Url

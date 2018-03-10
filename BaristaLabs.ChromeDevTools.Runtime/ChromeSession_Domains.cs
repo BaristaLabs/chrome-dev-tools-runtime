@@ -37,12 +37,12 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         private Lazy<Target.TargetAdapter> m_Target;
         private Lazy<Tethering.TetheringAdapter> m_Tethering;
         private Lazy<Tracing.TracingAdapter> m_Tracing;
-        private Lazy<Schema.SchemaAdapter> m_Schema;
-        private Lazy<Runtime.RuntimeAdapter> m_Runtime;
-        private Lazy<Debugger.DebuggerAdapter> m_Debugger;
         private Lazy<Console.ConsoleAdapter> m_Console;
-        private Lazy<Profiler.ProfilerAdapter> m_Profiler;
+        private Lazy<Debugger.DebuggerAdapter> m_Debugger;
         private Lazy<HeapProfiler.HeapProfilerAdapter> m_HeapProfiler;
+        private Lazy<Profiler.ProfilerAdapter> m_Profiler;
+        private Lazy<Runtime.RuntimeAdapter> m_Runtime;
+        private Lazy<Schema.SchemaAdapter> m_Schema;
 
         public ChromeSession()
         {
@@ -79,12 +79,12 @@ namespace BaristaLabs.ChromeDevTools.Runtime
             m_Target = new Lazy<Target.TargetAdapter>(() => new Target.TargetAdapter(this));
             m_Tethering = new Lazy<Tethering.TetheringAdapter>(() => new Tethering.TetheringAdapter(this));
             m_Tracing = new Lazy<Tracing.TracingAdapter>(() => new Tracing.TracingAdapter(this));
-            m_Schema = new Lazy<Schema.SchemaAdapter>(() => new Schema.SchemaAdapter(this));
-            m_Runtime = new Lazy<Runtime.RuntimeAdapter>(() => new Runtime.RuntimeAdapter(this));
-            m_Debugger = new Lazy<Debugger.DebuggerAdapter>(() => new Debugger.DebuggerAdapter(this));
             m_Console = new Lazy<Console.ConsoleAdapter>(() => new Console.ConsoleAdapter(this));
-            m_Profiler = new Lazy<Profiler.ProfilerAdapter>(() => new Profiler.ProfilerAdapter(this));
+            m_Debugger = new Lazy<Debugger.DebuggerAdapter>(() => new Debugger.DebuggerAdapter(this));
             m_HeapProfiler = new Lazy<HeapProfiler.HeapProfilerAdapter>(() => new HeapProfiler.HeapProfilerAdapter(this));
+            m_Profiler = new Lazy<Profiler.ProfilerAdapter>(() => new Profiler.ProfilerAdapter(this));
+            m_Runtime = new Lazy<Runtime.RuntimeAdapter>(() => new Runtime.RuntimeAdapter(this));
+            m_Schema = new Lazy<Schema.SchemaAdapter>(() => new Schema.SchemaAdapter(this));
         }
 
         /// <summary>
@@ -352,19 +352,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         }
         
         /// <summary>
-        /// Gets the adapter for the Schema domain.
+        /// Gets the adapter for the Console domain.
         /// </summary>
-        public Schema.SchemaAdapter Schema
+        public Console.ConsoleAdapter Console
         {
-            get { return m_Schema.Value; }
-        }
-        
-        /// <summary>
-        /// Gets the adapter for the Runtime domain.
-        /// </summary>
-        public Runtime.RuntimeAdapter Runtime
-        {
-            get { return m_Runtime.Value; }
+            get { return m_Console.Value; }
         }
         
         /// <summary>
@@ -376,11 +368,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         }
         
         /// <summary>
-        /// Gets the adapter for the Console domain.
+        /// Gets the adapter for the HeapProfiler domain.
         /// </summary>
-        public Console.ConsoleAdapter Console
+        public HeapProfiler.HeapProfilerAdapter HeapProfiler
         {
-            get { return m_Console.Value; }
+            get { return m_HeapProfiler.Value; }
         }
         
         /// <summary>
@@ -392,11 +384,19 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         }
         
         /// <summary>
-        /// Gets the adapter for the HeapProfiler domain.
+        /// Gets the adapter for the Runtime domain.
         /// </summary>
-        public HeapProfiler.HeapProfilerAdapter HeapProfiler
+        public Runtime.RuntimeAdapter Runtime
         {
-            get { return m_HeapProfiler.Value; }
+            get { return m_Runtime.Value; }
+        }
+        
+        /// <summary>
+        /// Gets the adapter for the Schema domain.
+        /// </summary>
+        public Schema.SchemaAdapter Schema
+        {
+            get { return m_Schema.Value; }
         }
         
     }

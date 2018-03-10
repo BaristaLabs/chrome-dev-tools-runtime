@@ -3,7 +3,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Sets JavaScript breakpoint at given location specified either by URL or URL regex. Once this command is issued, all existing parsed scripts will have breakpoints resolved and returned in <code>locations</code> property. Further matching script parsing will result in subsequent <code>breakpointResolved</code> events issued. This logical breakpoint will survive page reloads.
+    /// Sets JavaScript breakpoint at given location specified either by URL or URL regex. Once this
+    /// command is issued, all existing parsed scripts will have breakpoints resolved and returned in
+    /// `locations` property. Further matching script parsing will result in subsequent
+    /// `breakpointResolved` events issued. This logical breakpoint will survive page reloads.
     /// </summary>
     public sealed class SetBreakpointByUrlCommand : ICommand
     {
@@ -34,7 +37,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             set;
         }
         /// <summary>
-        /// Regex pattern for the URLs of the resources to set breakpoints on. Either <code>url</code> or <code>urlRegex</code> must be specified.
+        /// Regex pattern for the URLs of the resources to set breakpoints on. Either `url` or
+        /// `urlRegex` must be specified.
         /// </summary>
         [JsonProperty("urlRegex", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string UrlRegex
@@ -61,7 +65,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             set;
         }
         /// <summary>
-        /// Expression to use as a breakpoint condition. When specified, debugger will only stop on the breakpoint if this expression evaluates to true.
+        /// Expression to use as a breakpoint condition. When specified, debugger will only stop on the
+        /// breakpoint if this expression evaluates to true.
         /// </summary>
         [JsonProperty("condition", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Condition

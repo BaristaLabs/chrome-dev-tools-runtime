@@ -44,6 +44,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
+        /// True when the request has POST data. Note that postData might still be omitted when this flag is true when the data is too long.
+        ///</summary>
+        [JsonProperty("hasPostData", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? HasPostData
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// The mixed content type of the request.
         ///</summary>
         [JsonProperty("mixedContentType", DefaultValueHandling = DefaultValueHandling.Ignore)]

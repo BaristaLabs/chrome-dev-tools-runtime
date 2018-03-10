@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Details of post layout rendered text positions. The exact layout should not be regarded as stable and may change between versions.
+    /// Details of post layout rendered text positions. The exact layout should not be regarded as
+    /// stable and may change between versions.
     /// </summary>
     public sealed class InlineTextBox
     {

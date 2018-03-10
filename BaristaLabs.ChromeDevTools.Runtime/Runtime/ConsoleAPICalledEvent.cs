@@ -53,7 +53,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Console context descriptor for calls on non-default console context (not console.*): 'anonymous#unique-logger-id' for call on unnamed context, 'name#unique-logger-id' for call on named context.
+        /// Console context descriptor for calls on non-default console context (not console.*):
+        /// 'anonymous#unique-logger-id' for call on unnamed context, 'name#unique-logger-id' for call
+        /// on named context.
         /// </summary>
         [JsonProperty("context", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Context

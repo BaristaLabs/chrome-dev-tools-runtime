@@ -26,7 +26,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             set;
         }
         /// <summary>
-        /// List of explanations for the security state. If the overall security state is `insecure` or `warning`, at least one corresponding explanation should be included.
+        /// List of explanations for the security state. If the overall security state is `insecure` or
+        /// `warning`, at least one corresponding explanation should be included.
         /// </summary>
         [JsonProperty("explanations")]
         public SecurityStateExplanation[] Explanations

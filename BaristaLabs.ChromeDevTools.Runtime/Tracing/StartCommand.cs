@@ -43,10 +43,21 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             set;
         }
         /// <summary>
-        /// Whether to report trace events as series of dataCollected events or to save trace to a stream (defaults to `ReportEvents`).
+        /// Whether to report trace events as series of dataCollected events or to save trace to a
+        /// stream (defaults to `ReportEvents`).
         /// </summary>
         [JsonProperty("transferMode", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string TransferMode
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Compression format to use. This only applies when using `ReturnAsStream`
+        /// transfer mode (defaults to `none`)
+        /// </summary>
+        [JsonProperty("streamCompression", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public StreamCompression? StreamCompression
         {
             get;
             set;

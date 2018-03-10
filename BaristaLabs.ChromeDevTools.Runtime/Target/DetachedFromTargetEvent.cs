@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Issued when detached from target for any reason (including `detachFromTarget` command). Can be issued multiple times per target if multiple sessions have been attached to it.
+    /// Issued when detached from target for any reason (including `detachFromTarget` command). Can be
+    /// issued multiple times per target if multiple sessions have been attached to it.
     /// </summary>
     public sealed class DetachedFromTargetEvent : IEvent
     {

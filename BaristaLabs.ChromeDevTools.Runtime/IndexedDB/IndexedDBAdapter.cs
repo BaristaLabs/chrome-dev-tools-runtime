@@ -39,6 +39,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             return await m_session.SendCommand<DeleteDatabaseCommand, DeleteDatabaseCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Delete a range of entries from an object store
+        /// </summary>
+        public async Task<DeleteObjectStoreEntriesCommandResponse> DeleteObjectStoreEntries(DeleteObjectStoreEntriesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<DeleteObjectStoreEntriesCommand, DeleteObjectStoreEntriesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Disables events from backend.
         /// </summary>
         public async Task<DisableCommandResponse> Disable(DisableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

@@ -25,7 +25,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// The text to enter into the dialog prompt before accepting. Used only if this is a prompt dialog.
+        /// The text to enter into the dialog prompt before accepting. Used only if this is a prompt
+        /// dialog.
         /// </summary>
         [JsonProperty("promptText", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string PromptText

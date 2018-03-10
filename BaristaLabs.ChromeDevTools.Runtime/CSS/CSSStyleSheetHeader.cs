@@ -89,7 +89,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             set;
         }
         /// <summary>
-        /// Whether this stylesheet is created for STYLE tag by parser. This flag is not set for document.written STYLE tags.
+        /// Whether this stylesheet is created for STYLE tag by parser. This flag is not set for
+        /// document.written STYLE tags.
         ///</summary>
         [JsonProperty("isInline")]
         public bool IsInline

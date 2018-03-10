@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Defines pause on exceptions state. Can be set to stop on all exceptions, uncaught exceptions or no exceptions. Initial pause on exceptions state is <code>none</code>.
+    /// Defines pause on exceptions state. Can be set to stop on all exceptions, uncaught exceptions or
+    /// no exceptions. Initial pause on exceptions state is `none`.
     /// </summary>
     public sealed class SetPauseOnExceptionsCommand : ICommand
     {

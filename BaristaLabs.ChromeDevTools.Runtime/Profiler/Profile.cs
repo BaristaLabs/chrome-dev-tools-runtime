@@ -44,7 +44,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             set;
         }
         /// <summary>
-        /// Time intervals between adjacent samples in microseconds. The first delta is relative to the profile startTime.
+        /// Time intervals between adjacent samples in microseconds. The first delta is relative to the
+        /// profile startTime.
         ///</summary>
         [JsonProperty("timeDeltas", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long[] TimeDeltas

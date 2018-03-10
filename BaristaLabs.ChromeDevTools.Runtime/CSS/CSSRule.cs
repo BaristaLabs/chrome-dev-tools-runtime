@@ -8,7 +8,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     public sealed class CSSRule
     {
         /// <summary>
-        /// The css style sheet identifier (absent for user agent stylesheet and user-specified stylesheet rules) this rule came from.
+        /// The css style sheet identifier (absent for user agent stylesheet and user-specified
+        /// stylesheet rules) this rule came from.
         ///</summary>
         [JsonProperty("styleSheetId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string StyleSheetId
@@ -44,7 +45,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             set;
         }
         /// <summary>
-        /// Media list array (for rules involving media queries). The array enumerates media queries starting with the innermost one, going outwards.
+        /// Media list array (for rules involving media queries). The array enumerates media queries
+        /// starting with the innermost one, going outwards.
         ///</summary>
         [JsonProperty("media", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public CSSMedia[] Media

@@ -38,7 +38,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
             set;
         }
         /// <summary>
-        /// Bounds information of the window. When window state is 'minimized', the restored window position and size are returned.
+        /// Bounds information of the window. When window state is 'minimized', the restored window
+        /// position and size are returned.
         ///</summary>
         [JsonProperty("bounds")]
         public Bounds Bounds

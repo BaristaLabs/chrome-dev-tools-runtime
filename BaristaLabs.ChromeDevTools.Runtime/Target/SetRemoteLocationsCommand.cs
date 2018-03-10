@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Enables target discovery for the specified locations, when `setDiscoverTargets` was set to `true`.
+    /// Enables target discovery for the specified locations, when `setDiscoverTargets` was set to
+    /// `true`.
     /// </summary>
     public sealed class SetRemoteLocationsCommand : ICommand
     {

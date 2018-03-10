@@ -34,7 +34,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             set;
         }
         /// <summary>
-        /// String object group name to put result into (allows rapid releasing resulting object handles using <code>releaseObjectGroup</code>).
+        /// String object group name to put result into (allows rapid releasing resulting object handles
+        /// using `releaseObjectGroup`).
         /// </summary>
         [JsonProperty("objectGroup", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ObjectGroup
@@ -43,7 +44,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             set;
         }
         /// <summary>
-        /// Specifies whether command line API should be available to the evaluated expression, defaults to false.
+        /// Specifies whether command line API should be available to the evaluated expression, defaults
+        /// to false.
         /// </summary>
         [JsonProperty("includeCommandLineAPI", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? IncludeCommandLineAPI
@@ -52,7 +54,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             set;
         }
         /// <summary>
-        /// In silent mode exceptions thrown during evaluation are not reported and do not pause execution. Overrides <code>setPauseOnException</code> state.
+        /// In silent mode exceptions thrown during evaluation are not reported and do not pause
+        /// execution. Overrides `setPauseOnException` state.
         /// </summary>
         [JsonProperty("silent", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? Silent

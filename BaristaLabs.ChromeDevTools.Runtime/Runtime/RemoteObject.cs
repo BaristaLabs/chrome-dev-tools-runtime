@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Object subtype hint. Specified for <code>object</code> type values only.
+        /// Object subtype hint. Specified for `object` type values only.
         ///</summary>
         [JsonProperty("subtype", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Subtype
@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Object class (constructor) name. Specified for <code>object</code> type values only.
+        /// Object class (constructor) name. Specified for `object` type values only.
         ///</summary>
         [JsonProperty("className", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ClassName
@@ -44,7 +44,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Primitive value which can not be JSON-stringified does not have <code>value</code>, but gets this property.
+        /// Primitive value which can not be JSON-stringified does not have `value`, but gets this
+        /// property.
         ///</summary>
         [JsonProperty("unserializableValue", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public UnserializableValue? UnserializableValue
@@ -71,7 +72,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// Preview containing abbreviated property values. Specified for <code>object</code> type values only.
+        /// Preview containing abbreviated property values. Specified for `object` type values only.
         ///</summary>
         [JsonProperty("preview", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ObjectPreview Preview

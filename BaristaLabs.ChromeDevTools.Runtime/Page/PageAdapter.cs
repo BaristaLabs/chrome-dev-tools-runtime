@@ -109,7 +109,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<GetAppManifestCommand, GetAppManifestCommandResponse>(command ?? new GetAppManifestCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Returns all browser cookies. Depending on the backend support, will return detailed cookie information in the `cookies` field.
+        /// Returns all browser cookies. Depending on the backend support, will return detailed cookie
+        /// information in the `cookies` field.
         /// </summary>
         public async Task<GetCookiesCommandResponse> GetCookies(GetCookiesCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -228,14 +229,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<SetAdBlockingEnabledCommand, SetAdBlockingEnabledCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Controls whether browser will open a new inspector window for connected pages.
-        /// </summary>
-        public async Task<SetAutoAttachToCreatedPagesCommandResponse> SetAutoAttachToCreatedPages(SetAutoAttachToCreatedPagesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<SetAutoAttachToCreatedPagesCommand, SetAutoAttachToCreatedPagesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
-        /// Overrides the values of device screen dimensions (window.screen.width, window.screen.height, window.innerWidth, window.innerHeight, and "device-width"/"device-height"-related CSS media query results).
+        /// Overrides the values of device screen dimensions (window.screen.width, window.screen.height,
+        /// window.innerWidth, window.innerHeight, and "device-width"/"device-height"-related CSS media
+        /// query results).
         /// </summary>
         public async Task<SetDeviceMetricsOverrideCommandResponse> SetDeviceMetricsOverride(SetDeviceMetricsOverrideCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -263,7 +259,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<SetDownloadBehaviorCommand, SetDownloadBehaviorCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position unavailable.
+        /// Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position
+        /// unavailable.
         /// </summary>
         public async Task<SetGeolocationOverrideCommandResponse> SetGeolocationOverride(SetGeolocationOverrideCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -296,6 +293,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         public async Task<StopLoadingCommandResponse> StopLoading(StopLoadingCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<StopLoadingCommand, StopLoadingCommandResponse>(command ?? new StopLoadingCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Crashes renderer on the IO thread, generates minidumps.
+        /// </summary>
+        public async Task<CrashCommandResponse> Crash(CrashCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<CrashCommand, CrashCommandResponse>(command ?? new CrashCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Stops sending each frame in the `screencastFrame`.
@@ -383,14 +387,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Fired when a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload) has been closed.
+        /// Fired when a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload) has been
+        /// closed.
         /// </summary>
         public void SubscribeToJavascriptDialogClosedEvent(Action<JavascriptDialogClosedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Fired when a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload) is about to open.
+        /// Fired when a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload) is about to
+        /// open.
         /// </summary>
         public void SubscribeToJavascriptDialogOpeningEvent(Action<JavascriptDialogOpeningEvent> eventCallback)
         {
@@ -425,7 +431,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Fired when a new window is going to be opened, via window.open(), link click, form submission, etc.
+        /// Fired when a new window is going to be opened, via window.open(), link click, form submission,
+        /// etc.
         /// </summary>
         public void SubscribeToWindowOpenEvent(Action<WindowOpenEvent> eventCallback)
         {

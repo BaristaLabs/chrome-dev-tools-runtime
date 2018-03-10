@@ -17,6 +17,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             set;
         }
         /// <summary>
+        /// Title describing the type of factor.
+        ///</summary>
+        [JsonProperty("title")]
+        public string Title
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Short phrase describing the type of factor.
         ///</summary>
         [JsonProperty("summary")]

@@ -89,7 +89,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Animation
             set;
         }
         /// <summary>
-        /// A unique ID for `Animation` representing the sources that triggered this CSS animation/transition.
+        /// A unique ID for `Animation` representing the sources that triggered this CSS
+        /// animation/transition.
         ///</summary>
         [JsonProperty("cssId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string CssId

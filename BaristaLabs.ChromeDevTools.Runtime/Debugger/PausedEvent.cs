@@ -62,7 +62,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             set;
         }
         /// <summary>
-        /// Just scheduled async call will have this stack trace as parent stack during async execution. This field is available only after <code>Debugger.stepInto</code> call with <code>breakOnAsynCall</code> flag.
+        /// Just scheduled async call will have this stack trace as parent stack during async execution.
+        /// This field is available only after `Debugger.stepInto` call with `breakOnAsynCall` flag.
         /// </summary>
         [JsonProperty("asyncCallStackTraceId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Runtime.StackTraceId AsyncCallStackTraceId

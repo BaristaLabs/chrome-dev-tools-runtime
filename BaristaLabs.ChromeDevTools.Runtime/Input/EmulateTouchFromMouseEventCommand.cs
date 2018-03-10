@@ -79,7 +79,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
-        /// Bit field representing pressed modifier keys. Alt=1, Ctrl=2, Meta/Command=4, Shift=8 (default: 0).
+        /// Bit field representing pressed modifier keys. Alt=1, Ctrl=2, Meta/Command=4, Shift=8
+        /// (default: 0).
         /// </summary>
         [JsonProperty("modifiers", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Modifiers

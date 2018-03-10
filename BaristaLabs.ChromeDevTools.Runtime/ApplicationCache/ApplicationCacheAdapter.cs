@@ -39,7 +39,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
             return await m_session.SendCommand<GetApplicationCacheForFrameCommand, GetApplicationCacheForFrameCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Returns array of frame identifiers with manifest urls for each frame containing a document associated with some application cache.
+        /// Returns array of frame identifiers with manifest urls for each frame containing a document
+        /// associated with some application cache.
         /// </summary>
         public async Task<GetFramesWithManifestsCommandResponse> GetFramesWithManifests(GetFramesWithManifestsCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {

@@ -5,7 +5,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     using System.Runtime.Serialization;
 
     /// <summary>
-    /// Stages of the interception to begin intercepting. Request will intercept before the request is sent. Response will intercept after the response is received.
+    /// Stages of the interception to begin intercepting. Request will intercept before the request is
+    /// sent. Response will intercept after the response is received.
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum InterceptionStage

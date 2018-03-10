@@ -16,7 +16,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         }
 
         /// <summary>
-        /// Average sample interval in bytes. Poisson distribution is used for the intervals. The default value is 32768 bytes.
+        /// Average sample interval in bytes. Poisson distribution is used for the intervals. The
+        /// default value is 32768 bytes.
         /// </summary>
         [JsonProperty("samplingInterval", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? SamplingInterval

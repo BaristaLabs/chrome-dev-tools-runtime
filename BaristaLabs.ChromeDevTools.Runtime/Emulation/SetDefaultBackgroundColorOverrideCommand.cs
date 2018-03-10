@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Sets or clears an override of the default background color of the frame. This override is used if the content does not specify one.
+    /// Sets or clears an override of the default background color of the frame. This override is used
+    /// if the content does not specify one.
     /// </summary>
     public sealed class SetDefaultBackgroundColorOverrideCommand : ICommand
     {
@@ -16,7 +17,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         }
 
         /// <summary>
-        /// RGBA of the default background color. If not specified, any existing override will be cleared.
+        /// RGBA of the default background color. If not specified, any existing override will be
+        /// cleared.
         /// </summary>
         [JsonProperty("color", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public DOM.RGBA Color

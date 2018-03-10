@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position unavailable.
+    /// Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position
+    /// unavailable.
     /// </summary>
     public sealed class SetGeolocationOverrideCommand : ICommand
     {

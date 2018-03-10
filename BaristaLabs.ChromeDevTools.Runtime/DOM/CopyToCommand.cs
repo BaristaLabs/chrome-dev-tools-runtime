@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Creates a deep copy of the specified node and places it into the target container before the given anchor.
+    /// Creates a deep copy of the specified node and places it into the target container before the
+    /// given anchor.
     /// </summary>
     public sealed class CopyToCommand : ICommand
     {
@@ -34,7 +35,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// Drop the copy before this node (if absent, the copy becomes the last child of `targetNodeId`).
+        /// Drop the copy before this node (if absent, the copy becomes the last child of
+        /// `targetNodeId`).
         /// </summary>
         [JsonProperty("insertBeforeNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? InsertBeforeNodeId

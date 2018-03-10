@@ -25,7 +25,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Audits
         }
 
         /// <summary>
-        /// Returns the response body and size if it were re-encoded with the specified settings. Only applies to images.
+        /// Returns the response body and size if it were re-encoded with the specified settings. Only
+        /// applies to images.
         /// </summary>
         public async Task<GetEncodedResponseCommandResponse> GetEncodedResponse(GetEncodedResponseCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {

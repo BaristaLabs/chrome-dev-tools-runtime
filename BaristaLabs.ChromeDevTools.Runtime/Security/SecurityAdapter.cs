@@ -39,6 +39,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Enable/disable whether all certificate errors should be ignored.
+        /// </summary>
+        public async Task<SetIgnoreCertificateErrorsCommandResponse> SetIgnoreCertificateErrors(SetIgnoreCertificateErrorsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetIgnoreCertificateErrorsCommand, SetIgnoreCertificateErrorsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Handles a certificate error that fired a certificateError event.
         /// </summary>
         public async Task<HandleCertificateErrorCommandResponse> HandleCertificateError(HandleCertificateErrorCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -46,7 +53,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             return await m_session.SendCommand<HandleCertificateErrorCommand, HandleCertificateErrorCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Enable/disable overriding certificate errors. If enabled, all certificate error events need to be handled by the DevTools client and should be answered with handleCertificateError commands.
+        /// Enable/disable overriding certificate errors. If enabled, all certificate error events need to
+        /// be handled by the DevTools client and should be answered with handleCertificateError commands.
         /// </summary>
         public async Task<SetOverrideCertificateErrorsCommandResponse> SetOverrideCertificateErrors(SetOverrideCertificateErrorsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -54,7 +62,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         }
 
         /// <summary>
-        /// There is a certificate error. If overriding certificate errors is enabled, then it should be handled with the handleCertificateError command. Note: this event does not fire if the certificate error has been allowed internally.
+        /// There is a certificate error. If overriding certificate errors is enabled, then it should be
+        /// handled with the handleCertificateError command. Note: this event does not fire if the
+        /// certificate error has been allowed internally. Only one client per target should override
+        /// certificate errors at the same time.
         /// </summary>
         public void SubscribeToCertificateErrorEvent(Action<CertificateErrorEvent> eventCallback)
         {

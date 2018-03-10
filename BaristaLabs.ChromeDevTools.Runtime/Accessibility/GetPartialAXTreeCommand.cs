@@ -38,7 +38,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
     public sealed class GetPartialAXTreeCommandResponse : ICommandResponse<GetPartialAXTreeCommand>
     {
         /// <summary>
-        /// The `Accessibility.AXNode` for this DOM node, if it exists, plus its ancestors, siblings and children, if requested.
+        /// The `Accessibility.AXNode` for this DOM node, if it exists, plus its ancestors, siblings and
+        /// children, if requested.
         ///</summary>
         [JsonProperty("nodes")]
         public AXNode[] Nodes

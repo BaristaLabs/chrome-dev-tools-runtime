@@ -60,7 +60,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             return await m_session.SendCommand<ClearBrowserCookiesCommand, ClearBrowserCookiesCommandResponse>(command ?? new ClearBrowserCookiesCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Response to Network.requestIntercepted which either modifies the request to continue with any modifications, or blocks it, or completes it with the provided response bytes. If a network fetch occurs as a result which encounters a redirect an additional Network.requestIntercepted event will be sent with the same InterceptionId.
+        /// Response to Network.requestIntercepted which either modifies the request to continue with any
+        /// modifications, or blocks it, or completes it with the provided response bytes. If a network
+        /// fetch occurs as a result which encounters a redirect an additional Network.requestIntercepted
+        /// event will be sent with the same InterceptionId.
         /// </summary>
         public async Task<ContinueInterceptedRequestCommandResponse> ContinueInterceptedRequest(ContinueInterceptedRequestCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -95,7 +98,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Returns all browser cookies. Depending on the backend support, will return detailed cookie information in the `cookies` field.
+        /// Returns all browser cookies. Depending on the backend support, will return detailed cookie
+        /// information in the `cookies` field.
         /// </summary>
         public async Task<GetAllCookiesCommandResponse> GetAllCookies(GetAllCookiesCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -109,7 +113,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             return await m_session.SendCommand<GetCertificateCommand, GetCertificateCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Returns all browser cookies for the current URL. Depending on the backend support, will return detailed cookie information in the `cookies` field.
+        /// Returns all browser cookies for the current URL. Depending on the backend support, will return
+        /// detailed cookie information in the `cookies` field.
         /// </summary>
         public async Task<GetCookiesCommandResponse> GetCookies(GetCookiesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -123,6 +128,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             return await m_session.SendCommand<GetResponseBodyCommand, GetResponseBodyCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Returns post data sent with the request. Returns an error when no data was sent with the request.
+        /// </summary>
+        public async Task<GetRequestPostDataCommandResponse> GetRequestPostData(GetRequestPostDataCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetRequestPostDataCommand, GetRequestPostDataCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Returns content served for the given currently intercepted request.
         /// </summary>
         public async Task<GetResponseBodyForInterceptionCommandResponse> GetResponseBodyForInterception(GetResponseBodyForInterceptionCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -130,7 +142,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             return await m_session.SendCommand<GetResponseBodyForInterceptionCommand, GetResponseBodyForInterceptionCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// This method sends a new XMLHttpRequest which is identical to the original one. The following parameters should be identical: method, url, async, request body, extra headers, withCredentials attribute, user, password.
+        /// This method sends a new XMLHttpRequest which is identical to the original one. The following
+        /// parameters should be identical: method, url, async, request body, extra headers, withCredentials
+        /// attribute, user, password.
         /// </summary>
         public async Task<ReplayXHRCommandResponse> ReplayXHR(ReplayXHRCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -236,7 +250,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Details of an intercepted HTTP request, which must be either allowed, blocked, modified or mocked.
+        /// Details of an intercepted HTTP request, which must be either allowed, blocked, modified or
+        /// mocked.
         /// </summary>
         public void SubscribeToRequestInterceptedEvent(Action<RequestInterceptedEvent> eventCallback)
         {

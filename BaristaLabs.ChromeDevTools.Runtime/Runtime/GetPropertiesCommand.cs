@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Returns properties of a given object. Object group of the result is inherited from the target object.
+    /// Returns properties of a given object. Object group of the result is inherited from the target
+    /// object.
     /// </summary>
     public sealed class GetPropertiesCommand : ICommand
     {
@@ -25,7 +26,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// If true, returns properties belonging only to the element itself, not to its prototype chain.
+        /// If true, returns properties belonging only to the element itself, not to its prototype
+        /// chain.
         /// </summary>
         [JsonProperty("ownProperties", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? OwnProperties
@@ -34,7 +36,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// If true, returns accessor properties (with getter/setter) only; internal properties are not returned either.
+        /// If true, returns accessor properties (with getter/setter) only; internal properties are not
+        /// returned either.
         /// </summary>
         [JsonProperty("accessorPropertiesOnly", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? AccessorPropertiesOnly
