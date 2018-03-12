@@ -85,3 +85,10 @@ using (var session = new ChromeSession("ws://...")
 
 note that you may need to send the associated enable command for a particular domain.
 As events are asynchronous, you may need to ensure you program is still running when the event occurs or you may miss it.
+
+### Sample Projects
+
+ - [Skinny Html2Pdf](https://github.com/baristalabs/skinny-html2pdf) - Convert Pages to PDF within a container.
+ - [Skrapr](https://github.com/BaristaLabs/skrapr) - Declarative Web Scraping.
+
+
