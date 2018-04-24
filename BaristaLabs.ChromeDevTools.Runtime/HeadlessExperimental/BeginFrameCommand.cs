@@ -5,7 +5,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeadlessExperimental
     /// <summary>
     /// Sends a BeginFrame to the target and returns when the frame was completed. Optionally captures a
     /// screenshot from the resulting frame. Requires that the target was created with enabled
-    /// BeginFrameControl.
+    /// BeginFrameControl. Designed for use with --run-all-compositor-stages-before-draw, see also
+    /// https://goo.gl/3zHXhB for more background.
     /// </summary>
     public sealed class BeginFrameCommand : ICommand
     {
@@ -60,7 +61,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeadlessExperimental
         }
         /// <summary>
         /// If set, a screenshot of the frame will be captured and returned in the response. Otherwise,
-        /// no screenshot will be captured.
+        /// no screenshot will be captured. Note that capturing a screenshot can fail, for example,
+        /// during renderer initialization. In such a case, no screenshot data will be returned.
         /// </summary>
         [JsonProperty("screenshot", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ScreenshotParams Screenshot
@@ -74,19 +76,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeadlessExperimental
     {
         /// <summary>
         /// Whether the BeginFrame resulted in damage and, thus, a new frame was committed to the
-        /// display.
+        /// display. Reported for diagnostic uses, may be removed in the future.
         ///</summary>
         [JsonProperty("hasDamage")]
         public bool HasDamage
-        {
-            get;
-            set;
-        }
-        /// <summary>
-        /// Whether the main frame submitted a new display frame in response to this BeginFrame.
-        ///</summary>
-        [JsonProperty("mainFrameContentUpdated")]
-        public bool MainFrameContentUpdated
         {
             get;
             set;

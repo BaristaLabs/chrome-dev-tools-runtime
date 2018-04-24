@@ -42,6 +42,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+        /// <summary>
+        /// Frame id to navigate, if not specified navigates the top frame.
+        /// </summary>
+        [JsonProperty("frameId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string FrameId
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class NavigateCommandResponse : ICommandResponse<NavigateCommand>

@@ -308,6 +308,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         {
             return await m_session.SendCommand<UndoCommand, UndoCommandResponse>(command ?? new UndoCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// Returns iframe node that owns iframe with the given domain.
+        /// </summary>
+        public async Task<GetFrameOwnerCommandResponse> GetFrameOwner(GetFrameOwnerCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetFrameOwnerCommand, GetFrameOwnerCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
         /// <summary>
         /// Fired when `Element`'s attribute is modified.

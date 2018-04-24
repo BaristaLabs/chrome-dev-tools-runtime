@@ -151,6 +151,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+        /// <summary>
+        /// Whether or not to prefer page size as defined by css. Defaults to false,
+        /// in which case the content will be scaled to fit the paper size.
+        /// </summary>
+        [JsonProperty("preferCSSPageSize", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? PreferCSSPageSize
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class PrintToPDFCommandResponse : ICommandResponse<PrintToPDFCommand>

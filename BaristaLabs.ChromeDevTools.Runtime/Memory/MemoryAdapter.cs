@@ -52,6 +52,44 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
         {
             return await m_session.SendCommand<SimulatePressureNotificationCommand, SimulatePressureNotificationCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// Start collecting native memory profile.
+        /// </summary>
+        public async Task<StartSamplingCommandResponse> StartSampling(StartSamplingCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<StartSamplingCommand, StartSamplingCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Stop collecting native memory profile.
+        /// </summary>
+        public async Task<StopSamplingCommandResponse> StopSampling(StopSamplingCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<StopSamplingCommand, StopSamplingCommandResponse>(command ?? new StopSamplingCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Retrieve native memory allocations profile
+        /// collected since renderer process startup.
+        /// </summary>
+        public async Task<GetAllTimeSamplingProfileCommandResponse> GetAllTimeSamplingProfile(GetAllTimeSamplingProfileCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetAllTimeSamplingProfileCommand, GetAllTimeSamplingProfileCommandResponse>(command ?? new GetAllTimeSamplingProfileCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Retrieve native memory allocations profile
+        /// collected since browser process startup.
+        /// </summary>
+        public async Task<GetBrowserSamplingProfileCommandResponse> GetBrowserSamplingProfile(GetBrowserSamplingProfileCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetBrowserSamplingProfileCommand, GetBrowserSamplingProfileCommandResponse>(command ?? new GetBrowserSamplingProfileCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Retrieve native memory allocations profile collected since last
+        /// `startSampling` call.
+        /// </summary>
+        public async Task<GetSamplingProfileCommandResponse> GetSamplingProfile(GetSamplingProfileCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetSamplingProfileCommand, GetSamplingProfileCommandResponse>(command ?? new GetSamplingProfileCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
     }
 }

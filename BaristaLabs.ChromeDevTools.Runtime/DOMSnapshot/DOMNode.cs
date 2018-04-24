@@ -221,6 +221,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
+        /// Shadow root type.
+        ///</summary>
+        [JsonProperty("shadowRootType", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public DOM.ShadowRootType ShadowRootType
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Whether this DOM node responds to mouse clicks. This includes nodes that have had click
         /// event listeners attached via JavaScript as well as anchor tags that naturally navigate when
         /// clicked.
@@ -236,6 +245,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
         ///</summary>
         [JsonProperty("eventListeners", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public DOMDebugger.EventListener[] EventListeners
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The selected url for nodes with a srcset attribute.
+        ///</summary>
+        [JsonProperty("currentSourceURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string CurrentSourceURL
         {
             get;
             set;

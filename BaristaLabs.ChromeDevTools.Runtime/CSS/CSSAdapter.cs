@@ -171,7 +171,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             return await m_session.SendCommand<StartRuleUsageTrackingCommand, StartRuleUsageTrackingCommandResponse>(command ?? new StartRuleUsageTrackingCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// The list of rules with an indication of whether these were used
+        /// Stop tracking rule usage and return the list of rules that were used since last call to
+        /// `takeCoverageDelta` (or since start of coverage instrumentation)
         /// </summary>
         public async Task<StopRuleUsageTrackingCommandResponse> StopRuleUsageTracking(StopRuleUsageTrackingCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -187,7 +188,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         }
 
         /// <summary>
-        /// Fires whenever a web font gets loaded.
+        /// Fires whenever a web font is updated.  A non-empty font parameter indicates a successfully loaded
+        /// web font
         /// </summary>
         public void SubscribeToFontsUpdatedEvent(Action<FontsUpdatedEvent> eventCallback)
         {

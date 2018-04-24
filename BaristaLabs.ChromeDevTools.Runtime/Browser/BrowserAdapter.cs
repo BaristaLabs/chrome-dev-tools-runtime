@@ -39,6 +39,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
             return await m_session.SendCommand<GetVersionCommand, GetVersionCommandResponse>(command ?? new GetVersionCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Returns the command line switches for the browser process if, and only if
+        /// --enable-automation is on the commandline.
+        /// </summary>
+        public async Task<GetCommandLineCommandResponse> GetCommandLine(GetCommandLineCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetCommandLineCommand, GetCommandLineCommandResponse>(command ?? new GetCommandLineCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Get Chrome histograms.
         /// </summary>
         public async Task<GetHistogramsCommandResponse> GetHistograms(GetHistogramsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

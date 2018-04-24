@@ -96,13 +96,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             return await m_session.SendCommand<SendMessageToTargetCommand, SendMessageToTargetCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
-        /// </summary>
-        public async Task<SetAttachToFramesCommandResponse> SetAttachToFrames(SetAttachToFramesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<SetAttachToFramesCommand, SetAttachToFramesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
         /// Controls whether to automatically attach to new targets which are considered to be related to
         /// this one. When turned on, attaches to all existing related targets as well. When turned off,
         /// automatically detaches from all currently attached targets.

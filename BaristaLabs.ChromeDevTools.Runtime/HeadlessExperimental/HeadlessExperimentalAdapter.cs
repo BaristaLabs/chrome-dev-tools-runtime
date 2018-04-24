@@ -27,7 +27,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeadlessExperimental
         /// <summary>
         /// Sends a BeginFrame to the target and returns when the frame was completed. Optionally captures a
         /// screenshot from the resulting frame. Requires that the target was created with enabled
-        /// BeginFrameControl.
+        /// BeginFrameControl. Designed for use with --run-all-compositor-stages-before-draw, see also
+        /// https://goo.gl/3zHXhB for more background.
         /// </summary>
         public async Task<BeginFrameCommandResponse> BeginFrame(BeginFrameCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -48,14 +49,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeadlessExperimental
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
 
-        /// <summary>
-        /// Issued when the main frame has first submitted a frame to the browser. May only be fired while a
-        /// BeginFrame is in flight. Before this event, screenshotting requests may fail.
-        /// </summary>
-        public void SubscribeToMainFrameReadyForScreenshotsEvent(Action<MainFrameReadyForScreenshotsEvent> eventCallback)
-        {
-            m_session.Subscribe(eventCallback);
-        }
         /// <summary>
         /// Issued when the target starts or stops needing BeginFrames.
         /// </summary>

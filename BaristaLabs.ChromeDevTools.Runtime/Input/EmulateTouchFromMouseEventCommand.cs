@@ -43,19 +43,19 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
-        /// Time at which the event occurred.
+        /// Mouse button.
         /// </summary>
-        [JsonProperty("timestamp")]
-        public double Timestamp
+        [JsonProperty("button")]
+        public string Button
         {
             get;
             set;
         }
         /// <summary>
-        /// Mouse button.
+        /// Time at which the event occurred (default: current time).
         /// </summary>
-        [JsonProperty("button")]
-        public string Button
+        [JsonProperty("timestamp", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? Timestamp
         {
             get;
             set;

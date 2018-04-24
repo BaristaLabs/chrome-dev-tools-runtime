@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     using Newtonsoft.Json;
 
     /// <summary>
-    /// The list of rules with an indication of whether these were used
+    /// Stop tracking rule usage and return the list of rules that were used since last call to
+    /// `takeCoverageDelta` (or since start of coverage instrumentation)
     /// </summary>
     public sealed class StopRuleUsageTrackingCommand : ICommand
     {
