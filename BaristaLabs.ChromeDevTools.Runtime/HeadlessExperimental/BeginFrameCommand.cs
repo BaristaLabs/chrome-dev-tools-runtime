@@ -20,7 +20,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeadlessExperimental
 
         /// <summary>
         /// Timestamp of this BeginFrame (milliseconds since epoch). If not set, the current time will
-        /// be used.
+        /// be used unless frameTicks is specified.
         /// </summary>
         [JsonProperty("frameTime", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? FrameTime
@@ -29,11 +29,31 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeadlessExperimental
             set;
         }
         /// <summary>
+        /// Timestamp of this BeginFrame in Renderer TimeTicks (milliseconds of uptime). If not set,
+        /// the current time will be used unless frameTime is specified.
+        /// </summary>
+        [JsonProperty("frameTimeTicks", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? FrameTimeTicks
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Deadline of this BeginFrame (milliseconds since epoch). If not set, the deadline will be
-        /// calculated from the frameTime and interval.
+        /// calculated from the frameTime and interval unless deadlineTicks is specified.
         /// </summary>
         [JsonProperty("deadline", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? Deadline
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Deadline of this BeginFrame in Renderer TimeTicks  (milliseconds of uptime). If not set,
+        /// the deadline will be calculated from the frameTime and interval unless deadline is specified.
+        /// </summary>
+        [JsonProperty("deadlineTicks", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? DeadlineTicks
         {
             get;
             set;

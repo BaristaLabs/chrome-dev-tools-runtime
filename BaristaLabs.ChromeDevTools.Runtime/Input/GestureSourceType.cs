@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     using System.Runtime.Serialization;
 
     /// <summary>
-    /// 
+    /// GestureSourceType
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum GestureSourceType

@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// GetDOMCounters
     /// </summary>
     public sealed class GetDOMCountersCommand : ICommand
     {

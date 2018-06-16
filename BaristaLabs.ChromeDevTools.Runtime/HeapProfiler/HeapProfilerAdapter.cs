@@ -33,77 +33,77 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
             return await m_session.SendCommand<AddInspectedHeapObjectCommand, AddInspectedHeapObjectCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// collectGarbage
         /// </summary>
         public async Task<CollectGarbageCommandResponse> CollectGarbage(CollectGarbageCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<CollectGarbageCommand, CollectGarbageCommandResponse>(command ?? new CollectGarbageCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// disable
         /// </summary>
         public async Task<DisableCommandResponse> Disable(DisableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command ?? new DisableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// enable
         /// </summary>
         public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// getHeapObjectId
         /// </summary>
         public async Task<GetHeapObjectIdCommandResponse> GetHeapObjectId(GetHeapObjectIdCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<GetHeapObjectIdCommand, GetHeapObjectIdCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// getObjectByHeapObjectId
         /// </summary>
         public async Task<GetObjectByHeapObjectIdCommandResponse> GetObjectByHeapObjectId(GetObjectByHeapObjectIdCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<GetObjectByHeapObjectIdCommand, GetObjectByHeapObjectIdCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// getSamplingProfile
         /// </summary>
         public async Task<GetSamplingProfileCommandResponse> GetSamplingProfile(GetSamplingProfileCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<GetSamplingProfileCommand, GetSamplingProfileCommandResponse>(command ?? new GetSamplingProfileCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// startSampling
         /// </summary>
         public async Task<StartSamplingCommandResponse> StartSampling(StartSamplingCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<StartSamplingCommand, StartSamplingCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// startTrackingHeapObjects
         /// </summary>
         public async Task<StartTrackingHeapObjectsCommandResponse> StartTrackingHeapObjects(StartTrackingHeapObjectsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<StartTrackingHeapObjectsCommand, StartTrackingHeapObjectsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// stopSampling
         /// </summary>
         public async Task<StopSamplingCommandResponse> StopSampling(StopSamplingCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<StopSamplingCommand, StopSamplingCommandResponse>(command ?? new StopSamplingCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// stopTrackingHeapObjects
         /// </summary>
         public async Task<StopTrackingHeapObjectsCommandResponse> StopTrackingHeapObjects(StopTrackingHeapObjectsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<StopTrackingHeapObjectsCommand, StopTrackingHeapObjectsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// takeHeapSnapshot
         /// </summary>
         public async Task<TakeHeapSnapshotCommandResponse> TakeHeapSnapshot(TakeHeapSnapshotCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -111,7 +111,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         }
 
         /// <summary>
-        /// 
+        /// addHeapSnapshotChunk
         /// </summary>
         public void SubscribeToAddHeapSnapshotChunkEvent(Action<AddHeapSnapshotChunkEvent> eventCallback)
         {
@@ -134,14 +134,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// 
+        /// reportHeapSnapshotProgress
         /// </summary>
         public void SubscribeToReportHeapSnapshotProgressEvent(Action<ReportHeapSnapshotProgressEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// 
+        /// resetProfiles
         /// </summary>
         public void SubscribeToResetProfilesEvent(Action<ResetProfilesEvent> eventCallback)
         {

@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// SetCustomObjectFormatterEnabled
     /// </summary>
     public sealed class SetCustomObjectFormatterEnabledCommand : ICommand
     {

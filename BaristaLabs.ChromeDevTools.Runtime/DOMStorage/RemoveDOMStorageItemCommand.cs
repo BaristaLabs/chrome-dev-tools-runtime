@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// RemoveDOMStorageItem
     /// </summary>
     public sealed class RemoveDOMStorageItemCommand : ICommand
     {

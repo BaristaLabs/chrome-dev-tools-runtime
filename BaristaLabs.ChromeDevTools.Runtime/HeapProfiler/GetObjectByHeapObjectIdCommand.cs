@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// GetObjectByHeapObjectId
     /// </summary>
     public sealed class GetObjectByHeapObjectIdCommand : ICommand
     {

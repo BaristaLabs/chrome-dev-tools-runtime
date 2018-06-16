@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// RequestAppBanner
     /// </summary>
     public sealed class RequestAppBannerCommand : ICommand
     {

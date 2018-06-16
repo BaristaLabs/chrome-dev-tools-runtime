@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     public sealed class SamplingHeapProfile
     {
         /// <summary>
-        /// 
+        /// head
         ///</summary>
         [JsonProperty("head")]
         public SamplingHeapProfileNode Head

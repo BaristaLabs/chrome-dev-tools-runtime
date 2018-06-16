@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
     public sealed class SamplingProfile
     {
         /// <summary>
-        /// 
+        /// samples
         ///</summary>
         [JsonProperty("samples")]
         public SamplingProfileNode[] Samples

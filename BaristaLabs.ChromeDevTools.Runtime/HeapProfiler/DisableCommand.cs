@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// Disable
     /// </summary>
     public sealed class DisableCommand : ICommand
     {

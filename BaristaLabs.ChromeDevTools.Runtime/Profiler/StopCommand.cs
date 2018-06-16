@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// Stop
     /// </summary>
     public sealed class StopCommand : ICommand
     {

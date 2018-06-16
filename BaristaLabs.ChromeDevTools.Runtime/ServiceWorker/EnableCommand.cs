@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// Enable
     /// </summary>
     public sealed class EnableCommand : ICommand
     {

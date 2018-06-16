@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// StartTrackingHeapObjects
     /// </summary>
     public sealed class StartTrackingHeapObjectsCommand : ICommand
     {

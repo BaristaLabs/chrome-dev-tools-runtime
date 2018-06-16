@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// SetSuspended
     /// </summary>
     public sealed class SetSuspendedCommand : ICommand
     {

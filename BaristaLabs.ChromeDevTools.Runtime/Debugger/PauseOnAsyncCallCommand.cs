@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// PauseOnAsyncCall
     /// </summary>
     public sealed class PauseOnAsyncCallCommand : ICommand
     {

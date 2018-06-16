@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     using System.Runtime.Serialization;
 
     /// <summary>
-    /// 
+    /// ServiceWorkerVersionRunningStatus
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum ServiceWorkerVersionRunningStatus

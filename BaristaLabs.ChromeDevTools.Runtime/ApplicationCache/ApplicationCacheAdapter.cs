@@ -55,14 +55,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
         }
 
         /// <summary>
-        /// 
+        /// applicationCacheStatusUpdated
         /// </summary>
         public void SubscribeToApplicationCacheStatusUpdatedEvent(Action<ApplicationCacheStatusUpdatedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// 
+        /// networkStateUpdated
         /// </summary>
         public void SubscribeToNetworkStateUpdatedEvent(Action<NetworkStateUpdatedEvent> eventCallback)
         {

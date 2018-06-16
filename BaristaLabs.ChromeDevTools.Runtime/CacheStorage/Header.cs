@@ -3,12 +3,12 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// Header
     /// </summary>
     public sealed class Header
     {
         /// <summary>
-        /// 
+        /// name
         ///</summary>
         [JsonProperty("name")]
         public string Name
@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
             set;
         }
         /// <summary>
-        /// 
+        /// value
         ///</summary>
         [JsonProperty("value")]
         public string Value

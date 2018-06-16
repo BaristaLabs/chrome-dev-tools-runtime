@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     public sealed class ServiceWorkerRegistration
     {
         /// <summary>
-        /// 
+        /// registrationId
         ///</summary>
         [JsonProperty("registrationId")]
         public string RegistrationId
@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             set;
         }
         /// <summary>
-        /// 
+        /// scopeURL
         ///</summary>
         [JsonProperty("scopeURL")]
         public string ScopeURL
@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             set;
         }
         /// <summary>
-        /// 
+        /// isDeleted
         ///</summary>
         [JsonProperty("isDeleted")]
         public bool IsDeleted

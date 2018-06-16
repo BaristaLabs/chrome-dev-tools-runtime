@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     public sealed class ServiceWorkerErrorMessage
     {
         /// <summary>
-        /// 
+        /// errorMessage
         ///</summary>
         [JsonProperty("errorMessage")]
         public string ErrorMessage
@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             set;
         }
         /// <summary>
-        /// 
+        /// registrationId
         ///</summary>
         [JsonProperty("registrationId")]
         public string RegistrationId
@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             set;
         }
         /// <summary>
-        /// 
+        /// versionId
         ///</summary>
         [JsonProperty("versionId")]
         public string VersionId
@@ -35,7 +35,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             set;
         }
         /// <summary>
-        /// 
+        /// sourceURL
         ///</summary>
         [JsonProperty("sourceURL")]
         public string SourceURL
@@ -44,7 +44,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             set;
         }
         /// <summary>
-        /// 
+        /// lineNumber
         ///</summary>
         [JsonProperty("lineNumber")]
         public long LineNumber
@@ -53,7 +53,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             set;
         }
         /// <summary>
-        /// 
+        /// columnNumber
         ///</summary>
         [JsonProperty("columnNumber")]
         public long ColumnNumber

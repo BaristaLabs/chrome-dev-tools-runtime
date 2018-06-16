@@ -97,5 +97,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+        /// <summary>
+        /// Whether the request is initiated by a user gesture. Defaults to false.
+        /// </summary>
+        [JsonProperty("hasUserGesture", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? HasUserGesture
+        {
+            get;
+            set;
+        }
     }
 }

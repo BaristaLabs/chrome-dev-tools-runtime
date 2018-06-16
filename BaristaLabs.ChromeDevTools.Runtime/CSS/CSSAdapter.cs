@@ -70,7 +70,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             return await m_session.SendCommand<ForcePseudoStateCommand, ForcePseudoStateCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// getBackgroundColors
         /// </summary>
         public async Task<GetBackgroundColorsCommandResponse> GetBackgroundColors(GetBackgroundColorsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {

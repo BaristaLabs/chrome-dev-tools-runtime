@@ -128,13 +128,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// <summary>
         /// HTML template for the print header. Should be valid HTML markup with following
         /// classes used to inject printing values into them:
-        /// - date - formatted print date
-        /// - title - document title
-        /// - url - document location
-        /// - pageNumber - current page number
-        /// - totalPages - total pages in the document
+        /// - `date`: formatted print date
+        /// - `title`: document title
+        /// - `url`: document location
+        /// - `pageNumber`: current page number
+        /// - `totalPages`: total pages in the document
         /// 
-        /// For example, <span class=title></span> would generate span containing the title.
+        /// For example, `<span class=title></span>` would generate span containing the title.
         /// </summary>
         [JsonProperty("headerTemplate", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string HeaderTemplate

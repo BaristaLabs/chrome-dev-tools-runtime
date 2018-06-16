@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// AddHeapSnapshotChunk
     /// </summary>
     public sealed class AddHeapSnapshotChunkEvent : IEvent
     {

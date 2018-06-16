@@ -35,7 +35,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
             set;
         }
         /// <summary>
-        /// 
+        /// displayAsMaterial
         ///</summary>
         [JsonProperty("displayAsMaterial", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? DisplayAsMaterial

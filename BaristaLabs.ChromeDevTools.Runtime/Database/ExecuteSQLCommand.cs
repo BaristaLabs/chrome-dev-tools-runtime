@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// ExecuteSQL
     /// </summary>
     public sealed class ExecuteSQLCommand : ICommand
     {

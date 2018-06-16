@@ -9,7 +9,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     public sealed class StackTraceId
     {
         /// <summary>
-        /// 
+        /// id
         ///</summary>
         [JsonProperty("id")]
         public string Id
@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// 
+        /// debuggerId
         ///</summary>
         [JsonProperty("debuggerId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string DebuggerId

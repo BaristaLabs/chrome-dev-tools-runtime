@@ -28,7 +28,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             set;
         }
         /// <summary>
-        /// 
+        /// name
         ///</summary>
         [JsonProperty("name", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Name

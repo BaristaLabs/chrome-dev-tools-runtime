@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// StartWorker
     /// </summary>
     public sealed class StartWorkerCommand : ICommand
     {

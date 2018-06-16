@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// SetPausedInDebuggerMessage
     /// </summary>
     public sealed class SetPausedInDebuggerMessageCommand : ICommand
     {

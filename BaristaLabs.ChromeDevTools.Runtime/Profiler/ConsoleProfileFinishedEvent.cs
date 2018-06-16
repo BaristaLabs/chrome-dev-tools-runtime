@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// ConsoleProfileFinished
     /// </summary>
     public sealed class ConsoleProfileFinishedEvent : IEvent
     {

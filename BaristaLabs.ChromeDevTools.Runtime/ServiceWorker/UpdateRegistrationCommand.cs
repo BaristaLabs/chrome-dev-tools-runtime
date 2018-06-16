@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// UpdateRegistration
     /// </summary>
     public sealed class UpdateRegistrationCommand : ICommand
     {

@@ -90,7 +90,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
             return await m_session.SendCommand<SetInspectModeCommand, SetInspectModeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// setPausedInDebuggerMessage
         /// </summary>
         public async Task<SetPausedInDebuggerMessageCommandResponse> SetPausedInDebuggerMessage(SetPausedInDebuggerMessageCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -132,7 +132,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
             return await m_session.SendCommand<SetShowViewportSizeOnResizeCommand, SetShowViewportSizeOnResizeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// setSuspended
         /// </summary>
         public async Task<SetSuspendedCommandResponse> SetSuspended(SetSuspendedCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {

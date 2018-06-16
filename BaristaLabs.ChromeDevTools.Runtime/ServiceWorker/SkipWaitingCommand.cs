@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// SkipWaiting
     /// </summary>
     public sealed class SkipWaitingCommand : ICommand
     {

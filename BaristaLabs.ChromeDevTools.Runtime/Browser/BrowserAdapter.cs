@@ -42,9 +42,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
         /// Returns the command line switches for the browser process if, and only if
         /// --enable-automation is on the commandline.
         /// </summary>
-        public async Task<GetCommandLineCommandResponse> GetCommandLine(GetCommandLineCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<GetBrowserCommandLineCommandResponse> GetBrowserCommandLine(GetBrowserCommandLineCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<GetCommandLineCommand, GetCommandLineCommandResponse>(command ?? new GetCommandLineCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<GetBrowserCommandLineCommand, GetBrowserCommandLineCommandResponse>(command ?? new GetBrowserCommandLineCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Get Chrome histograms.

@@ -83,7 +83,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             return await m_session.SendCommand<PauseCommand, PauseCommandResponse>(command ?? new PauseCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// pauseOnAsyncCall
         /// </summary>
         public async Task<PauseOnAsyncCallCommandResponse> PauseOnAsyncCall(PauseOnAsyncCallCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {

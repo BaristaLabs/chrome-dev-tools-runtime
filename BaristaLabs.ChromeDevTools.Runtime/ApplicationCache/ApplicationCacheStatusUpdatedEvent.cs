@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ApplicationCache
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// ApplicationCacheStatusUpdated
     /// </summary>
     public sealed class ApplicationCacheStatusUpdatedEvent : IEvent
     {

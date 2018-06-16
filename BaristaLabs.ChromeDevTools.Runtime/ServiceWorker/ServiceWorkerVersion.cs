@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     public sealed class ServiceWorkerVersion
     {
         /// <summary>
-        /// 
+        /// versionId
         ///</summary>
         [JsonProperty("versionId")]
         public string VersionId
@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             set;
         }
         /// <summary>
-        /// 
+        /// registrationId
         ///</summary>
         [JsonProperty("registrationId")]
         public string RegistrationId
@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             set;
         }
         /// <summary>
-        /// 
+        /// scriptURL
         ///</summary>
         [JsonProperty("scriptURL")]
         public string ScriptURL
@@ -35,7 +35,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             set;
         }
         /// <summary>
-        /// 
+        /// runningStatus
         ///</summary>
         [JsonProperty("runningStatus")]
         public ServiceWorkerVersionRunningStatus RunningStatus
@@ -44,7 +44,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             set;
         }
         /// <summary>
-        /// 
+        /// status
         ///</summary>
         [JsonProperty("status")]
         public ServiceWorkerVersionStatus Status
@@ -72,7 +72,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             set;
         }
         /// <summary>
-        /// 
+        /// controlledClients
         ///</summary>
         [JsonProperty("controlledClients", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ControlledClients
@@ -81,7 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             set;
         }
         /// <summary>
-        /// 
+        /// targetId
         ///</summary>
         [JsonProperty("targetId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string TargetId

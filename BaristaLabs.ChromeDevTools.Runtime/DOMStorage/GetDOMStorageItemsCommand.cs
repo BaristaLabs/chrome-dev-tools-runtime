@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// GetDOMStorageItems
     /// </summary>
     public sealed class GetDOMStorageItemsCommand : ICommand
     {

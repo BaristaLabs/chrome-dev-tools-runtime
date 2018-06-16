@@ -39,14 +39,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// executeSQL
         /// </summary>
         public async Task<ExecuteSQLCommandResponse> ExecuteSQL(ExecuteSQLCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<ExecuteSQLCommand, ExecuteSQLCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// getDatabaseTableNames
         /// </summary>
         public async Task<GetDatabaseTableNamesCommandResponse> GetDatabaseTableNames(GetDatabaseTableNamesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
         }
 
         /// <summary>
-        /// 
+        /// addDatabase
         /// </summary>
         public void SubscribeToAddDatabaseEvent(Action<AddDatabaseEvent> eventCallback)
         {

@@ -3,12 +3,12 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// CustomPreview
     /// </summary>
     public sealed class CustomPreview
     {
         /// <summary>
-        /// 
+        /// header
         ///</summary>
         [JsonProperty("header")]
         public string Header
@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// 
+        /// hasBody
         ///</summary>
         [JsonProperty("hasBody")]
         public bool HasBody
@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// 
+        /// formatterObjectId
         ///</summary>
         [JsonProperty("formatterObjectId")]
         public string FormatterObjectId
@@ -35,7 +35,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// 
+        /// bindRemoteObjectFunctionId
         ///</summary>
         [JsonProperty("bindRemoteObjectFunctionId")]
         public string BindRemoteObjectFunctionId
@@ -44,7 +44,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// 
+        /// configObjectId
         ///</summary>
         [JsonProperty("configObjectId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ConfigObjectId

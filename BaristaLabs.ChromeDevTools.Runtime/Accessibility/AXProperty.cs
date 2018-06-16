@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// AXProperty
     /// </summary>
     public sealed class AXProperty
     {

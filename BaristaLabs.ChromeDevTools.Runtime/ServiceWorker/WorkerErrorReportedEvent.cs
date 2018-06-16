@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// WorkerErrorReported
     /// </summary>
     public sealed class WorkerErrorReportedEvent : IEvent
     {

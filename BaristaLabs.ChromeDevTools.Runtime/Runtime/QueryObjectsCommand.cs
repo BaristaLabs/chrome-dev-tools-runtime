@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// QueryObjects
     /// </summary>
     public sealed class QueryObjectsCommand : ICommand
     {
@@ -20,6 +20,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// </summary>
         [JsonProperty("prototypeObjectId")]
         public string PrototypeObjectId
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Symbolic group name that can be used to release the results.
+        /// </summary>
+        [JsonProperty("objectGroup", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string ObjectGroup
         {
             get;
             set;

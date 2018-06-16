@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// SetForceUpdateOnPageLoad
     /// </summary>
     public sealed class SetForceUpdateOnPageLoadCommand : ICommand
     {

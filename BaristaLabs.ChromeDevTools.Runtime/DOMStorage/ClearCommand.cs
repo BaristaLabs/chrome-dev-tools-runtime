@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// Clear
     /// </summary>
     public sealed class ClearCommand : ICommand
     {

@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// StartSampling
     /// </summary>
     public sealed class StartSamplingCommand : ICommand
     {

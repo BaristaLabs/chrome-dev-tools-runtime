@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// GetBackgroundColors
     /// </summary>
     public sealed class GetBackgroundColorsCommand : ICommand
     {

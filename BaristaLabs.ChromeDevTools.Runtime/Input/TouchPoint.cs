@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// TouchPoint
     /// </summary>
     public sealed class TouchPoint
     {

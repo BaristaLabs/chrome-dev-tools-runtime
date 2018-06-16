@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// LoadEventFired
     /// </summary>
     public sealed class LoadEventFiredEvent : IEvent
     {

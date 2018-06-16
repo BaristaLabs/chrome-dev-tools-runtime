@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// EntryPreview
     /// </summary>
     public sealed class EntryPreview
     {

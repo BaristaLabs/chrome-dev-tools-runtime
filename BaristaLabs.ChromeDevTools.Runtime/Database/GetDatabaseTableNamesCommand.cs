@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// GetDatabaseTableNames
     /// </summary>
     public sealed class GetDatabaseTableNamesCommand : ICommand
     {

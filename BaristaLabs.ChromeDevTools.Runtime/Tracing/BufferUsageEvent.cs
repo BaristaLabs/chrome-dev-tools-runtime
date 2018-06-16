@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// BufferUsage
     /// </summary>
     public sealed class BufferUsageEvent : IEvent
     {

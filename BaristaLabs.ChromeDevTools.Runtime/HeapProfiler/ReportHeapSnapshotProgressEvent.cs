@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// ReportHeapSnapshotProgress
     /// </summary>
     public sealed class ReportHeapSnapshotProgressEvent : IEvent
     {

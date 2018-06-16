@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// PrepareForLeakDetection
     /// </summary>
     public sealed class PrepareForLeakDetectionCommand : ICommand
     {

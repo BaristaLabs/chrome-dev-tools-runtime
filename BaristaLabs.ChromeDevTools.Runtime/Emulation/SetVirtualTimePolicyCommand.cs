@@ -68,5 +68,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             get;
             set;
         }
+        /// <summary>
+        /// Absolute timestamp at which virtual time was first enabled (up time in milliseconds).
+        ///</summary>
+        [JsonProperty("virtualTimeTicksBase")]
+        public double VirtualTimeTicksBase
+        {
+            get;
+            set;
+        }
     }
 }

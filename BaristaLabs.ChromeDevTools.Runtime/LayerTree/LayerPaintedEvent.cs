@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// LayerPainted
     /// </summary>
     public sealed class LayerPaintedEvent : IEvent
     {

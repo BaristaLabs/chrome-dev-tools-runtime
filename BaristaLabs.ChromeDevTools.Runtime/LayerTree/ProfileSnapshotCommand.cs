@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// ProfileSnapshot
     /// </summary>
     public sealed class ProfileSnapshotCommand : ICommand
     {

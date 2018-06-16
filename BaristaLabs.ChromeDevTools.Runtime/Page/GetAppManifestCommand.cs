@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// GetAppManifest
     /// </summary>
     public sealed class GetAppManifestCommand : ICommand
     {

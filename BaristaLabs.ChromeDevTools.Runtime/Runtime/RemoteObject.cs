@@ -48,7 +48,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// property.
         ///</summary>
         [JsonProperty("unserializableValue", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public UnserializableValue? UnserializableValue
+        public string UnserializableValue
         {
             get;
             set;
@@ -81,7 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
-        /// 
+        /// customPreview
         ///</summary>
         [JsonProperty("customPreview", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public CustomPreview CustomPreview

@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// BreakLocation
     /// </summary>
     public sealed class BreakLocation
     {
@@ -35,7 +35,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             set;
         }
         /// <summary>
-        /// 
+        /// type
         ///</summary>
         [JsonProperty("type", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Type

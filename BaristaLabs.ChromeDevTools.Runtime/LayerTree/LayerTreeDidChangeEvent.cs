@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// LayerTreeDidChange
     /// </summary>
     public sealed class LayerTreeDidChangeEvent : IEvent
     {

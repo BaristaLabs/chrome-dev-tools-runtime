@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// 
+        /// backendNodeId
         ///</summary>
         [JsonProperty("backendNodeId")]
         public long BackendNodeId

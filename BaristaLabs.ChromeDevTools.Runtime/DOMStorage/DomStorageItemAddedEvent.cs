@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMStorage
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// DomStorageItemAdded
     /// </summary>
     public sealed class DomStorageItemAddedEvent : IEvent
     {

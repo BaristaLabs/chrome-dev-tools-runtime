@@ -3,12 +3,12 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// TargetInfo
     /// </summary>
     public sealed class TargetInfo
     {
         /// <summary>
-        /// 
+        /// targetId
         ///</summary>
         [JsonProperty("targetId")]
         public string TargetId
@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             set;
         }
         /// <summary>
-        /// 
+        /// type
         ///</summary>
         [JsonProperty("type")]
         public string Type
@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             set;
         }
         /// <summary>
-        /// 
+        /// title
         ///</summary>
         [JsonProperty("title")]
         public string Title
@@ -35,7 +35,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             set;
         }
         /// <summary>
-        /// 
+        /// url
         ///</summary>
         [JsonProperty("url")]
         public string Url

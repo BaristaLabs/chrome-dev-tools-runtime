@@ -60,7 +60,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             return await m_session.SendCommand<MakeSnapshotCommand, MakeSnapshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// profileSnapshot
         /// </summary>
         public async Task<ProfileSnapshotCommandResponse> ProfileSnapshot(ProfileSnapshotCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -89,14 +89,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         }
 
         /// <summary>
-        /// 
+        /// layerPainted
         /// </summary>
         public void SubscribeToLayerPaintedEvent(Action<LayerPaintedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// 
+        /// layerTreeDidChange
         /// </summary>
         public void SubscribeToLayerTreeDidChangeEvent(Action<LayerTreeDidChangeEvent> eventCallback)
         {

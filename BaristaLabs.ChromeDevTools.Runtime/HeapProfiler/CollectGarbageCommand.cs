@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// CollectGarbage
     /// </summary>
     public sealed class CollectGarbageCommand : ICommand
     {

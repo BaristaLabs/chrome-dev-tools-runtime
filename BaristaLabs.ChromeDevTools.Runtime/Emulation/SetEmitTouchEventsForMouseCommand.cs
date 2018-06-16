@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// SetEmitTouchEventsForMouse
     /// </summary>
     public sealed class SetEmitTouchEventsForMouseCommand : ICommand
     {

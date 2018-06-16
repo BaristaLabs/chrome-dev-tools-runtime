@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// TraceConfig
     /// </summary>
     public sealed class TraceConfig
     {

@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Database
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// AddDatabase
     /// </summary>
     public sealed class AddDatabaseEvent : IEvent
     {

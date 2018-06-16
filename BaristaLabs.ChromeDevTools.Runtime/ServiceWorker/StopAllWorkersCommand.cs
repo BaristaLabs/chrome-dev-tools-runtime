@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// StopAllWorkers
     /// </summary>
     public sealed class StopAllWorkersCommand : ICommand
     {

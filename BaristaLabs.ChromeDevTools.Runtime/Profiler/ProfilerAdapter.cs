@@ -25,14 +25,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         }
 
         /// <summary>
-        /// 
+        /// disable
         /// </summary>
         public async Task<DisableCommandResponse> Disable(DisableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<DisableCommand, DisableCommandResponse>(command ?? new DisableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// enable
         /// </summary>
         public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -54,7 +54,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             return await m_session.SendCommand<SetSamplingIntervalCommand, SetSamplingIntervalCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// start
         /// </summary>
         public async Task<StartCommandResponse> Start(StartCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -77,7 +77,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             return await m_session.SendCommand<StartTypeProfileCommand, StartTypeProfileCommandResponse>(command ?? new StartTypeProfileCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// stop
         /// </summary>
         public async Task<StopCommandResponse> Stop(StopCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -115,7 +115,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
         }
 
         /// <summary>
-        /// 
+        /// consoleProfileFinished
         /// </summary>
         public void SubscribeToConsoleProfileFinishedEvent(Action<ConsoleProfileFinishedEvent> eventCallback)
         {

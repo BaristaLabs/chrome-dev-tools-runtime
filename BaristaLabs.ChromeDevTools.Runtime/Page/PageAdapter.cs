@@ -102,7 +102,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// getAppManifest
         /// </summary>
         public async Task<GetAppManifestCommandResponse> GetAppManifest(GetAppManifestCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -201,7 +201,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<RemoveScriptToEvaluateOnNewDocumentCommand, RemoveScriptToEvaluateOnNewDocumentCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// requestAppBanner
         /// </summary>
         public async Task<RequestAppBannerCommandResponse> RequestAppBanner(RequestAppBannerCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -227,6 +227,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         public async Task<SetAdBlockingEnabledCommandResponse> SetAdBlockingEnabled(SetAdBlockingEnabledCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetAdBlockingEnabledCommand, SetAdBlockingEnabledCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Enable page Content Security Policy by-passing.
+        /// </summary>
+        public async Task<SetBypassCSPCommandResponse> SetBypassCSP(SetBypassCSPCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetBypassCSPCommand, SetBypassCSPCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Overrides the values of device screen dimensions (window.screen.width, window.screen.height,
@@ -310,7 +317,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         }
 
         /// <summary>
-        /// 
+        /// domContentEventFired
         /// </summary>
         public void SubscribeToDomContentEventFiredEvent(Action<DomContentEventFiredEvent> eventCallback)
         {
@@ -345,7 +352,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// 
+        /// frameResized
         /// </summary>
         public void SubscribeToFrameResizedEvent(Action<FrameResizedEvent> eventCallback)
         {
@@ -410,9 +417,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// 
+        /// loadEventFired
         /// </summary>
         public void SubscribeToLoadEventFiredEvent(Action<LoadEventFiredEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Fired when same-document navigation happens, e.g. due to history API usage or anchor navigation.
+        /// </summary>
+        public void SubscribeToNavigatedWithinDocumentEvent(Action<NavigatedWithinDocumentEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

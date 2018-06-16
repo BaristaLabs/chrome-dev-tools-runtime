@@ -5,7 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
     using System.Runtime.Serialization;
 
     /// <summary>
-    /// 
+    /// InspectMode
     /// </summary>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum InspectMode

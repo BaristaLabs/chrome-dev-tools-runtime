@@ -25,14 +25,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
         }
 
         /// <summary>
-        /// 
+        /// getDOMCounters
         /// </summary>
         public async Task<GetDOMCountersCommandResponse> GetDOMCounters(GetDOMCountersCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<GetDOMCountersCommand, GetDOMCountersCommandResponse>(command ?? new GetDOMCountersCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// 
+        /// prepareForLeakDetection
         /// </summary>
         public async Task<PrepareForLeakDetectionCommandResponse> PrepareForLeakDetection(PrepareForLeakDetectionCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {

@@ -61,7 +61,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         }
 
         /// <summary>
-        /// 
+        /// bufferUsage
         /// </summary>
         public void SubscribeToBufferUsageEvent(Action<BufferUsageEvent> eventCallback)
         {

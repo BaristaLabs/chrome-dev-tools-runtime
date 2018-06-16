@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// PropertyPreview
     /// </summary>
     public sealed class PropertyPreview
     {

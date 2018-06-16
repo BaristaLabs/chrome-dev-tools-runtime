@@ -3,12 +3,12 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// RemoteLocation
     /// </summary>
     public sealed class RemoteLocation
     {
         /// <summary>
-        /// 
+        /// host
         ///</summary>
         [JsonProperty("host")]
         public string Host
@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             set;
         }
         /// <summary>
-        /// 
+        /// port
         ///</summary>
         [JsonProperty("port")]
         public long Port

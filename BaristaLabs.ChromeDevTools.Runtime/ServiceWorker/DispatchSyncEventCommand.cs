@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// DispatchSyncEvent
     /// </summary>
     public sealed class DispatchSyncEventCommand : ICommand
     {

@@ -16,10 +16,28 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         }
 
         /// <summary>
-        /// ID of node to get the partial accessibility tree for.
+        /// Identifier of the node to get the partial accessibility tree for.
         /// </summary>
-        [JsonProperty("nodeId")]
-        public long NodeId
+        [JsonProperty("nodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? NodeId
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Identifier of the backend node to get the partial accessibility tree for.
+        /// </summary>
+        [JsonProperty("backendNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? BackendNodeId
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// JavaScript object id of the node wrapper to get the partial accessibility tree for.
+        /// </summary>
+        [JsonProperty("objectId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string ObjectId
         {
             get;
             set;

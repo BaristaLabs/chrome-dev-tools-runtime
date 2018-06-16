@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// TakeHeapSnapshot
     /// </summary>
     public sealed class TakeHeapSnapshotCommand : ICommand
     {

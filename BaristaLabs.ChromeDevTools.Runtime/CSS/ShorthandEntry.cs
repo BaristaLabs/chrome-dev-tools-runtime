@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     using Newtonsoft.Json;
 
     /// <summary>
-    /// 
+    /// ShorthandEntry
     /// </summary>
     public sealed class ShorthandEntry
     {
