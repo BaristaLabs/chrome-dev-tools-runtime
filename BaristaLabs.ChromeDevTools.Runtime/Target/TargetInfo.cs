@@ -61,5 +61,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             get;
             set;
         }
+        /// <summary>
+        /// browserContextId
+        ///</summary>
+        [JsonProperty("browserContextId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string BrowserContextId
+        {
+            get;
+            set;
+        }
     }
 }

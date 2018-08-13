@@ -309,6 +309,22 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<CrashCommand, CrashCommandResponse>(command ?? new CrashCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Tries to close page, running its beforeunload hooks, if any.
+        /// </summary>
+        public async Task<CloseCommandResponse> Close(CloseCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<CloseCommand, CloseCommandResponse>(command ?? new CloseCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Tries to update the web lifecycle state of the page.
+        /// It will transition the page to the given state according to:
+        /// https://github.com/WICG/web-lifecycle/
+        /// </summary>
+        public async Task<SetWebLifecycleStateCommandResponse> SetWebLifecycleState(SetWebLifecycleStateCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetWebLifecycleStateCommand, SetWebLifecycleStateCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Stops sending each frame in the `screencastFrame`.
         /// </summary>
         public async Task<StopScreencastCommandResponse> StopScreencast(StopScreencastCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

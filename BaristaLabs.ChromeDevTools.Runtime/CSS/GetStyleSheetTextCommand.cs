@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Returns the current textual content and the URL for a stylesheet.
+    /// Returns the current textual content for a stylesheet.
     /// </summary>
     public sealed class GetStyleSheetTextCommand : ICommand
     {

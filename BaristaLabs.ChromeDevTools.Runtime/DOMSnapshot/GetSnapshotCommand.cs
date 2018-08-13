@@ -45,6 +45,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             get;
             set;
         }
+        /// <summary>
+        /// Whether to include UA shadow tree in the snapshot (default false).
+        /// </summary>
+        [JsonProperty("includeUserAgentShadowTree", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? IncludeUserAgentShadowTree
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class GetSnapshotCommandResponse : ICommandResponse<GetSnapshotCommand>

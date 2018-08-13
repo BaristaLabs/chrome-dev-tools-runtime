@@ -171,6 +171,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             return await m_session.SendCommand<SetBreakpointByUrlCommand, SetBreakpointByUrlCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Sets JavaScript breakpoint before each call to the given function.
+        /// If another function was created from the same source as a given one,
+        /// calling it will also trigger the breakpoint.
+        /// </summary>
+        public async Task<SetBreakpointOnFunctionCallCommandResponse> SetBreakpointOnFunctionCall(SetBreakpointOnFunctionCallCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetBreakpointOnFunctionCallCommand, SetBreakpointOnFunctionCallCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Activates / deactivates all breakpoints on the page.
         /// </summary>
         public async Task<SetBreakpointsActiveCommandResponse> SetBreakpointsActive(SetBreakpointsActiveCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

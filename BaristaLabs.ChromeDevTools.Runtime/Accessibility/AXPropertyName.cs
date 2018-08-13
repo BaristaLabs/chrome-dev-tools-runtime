@@ -38,8 +38,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         Root,
         [EnumMember(Value = "autocomplete")]
         Autocomplete,
-        [EnumMember(Value = "haspopup")]
-        Haspopup,
+        [EnumMember(Value = "hasPopup")]
+        HasPopup,
         [EnumMember(Value = "level")]
         Level,
         [EnumMember(Value = "multiselectable")]

@@ -142,6 +142,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             return await m_session.SendCommand<GetResponseBodyForInterceptionCommand, GetResponseBodyForInterceptionCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Returns a handle to the stream representing the response body. Note that after this command,
+        /// the intercepted request can't be continued as is -- you either need to cancel it or to provide
+        /// the response body. The stream only supports sequential read, IO.read will fail if the position
+        /// is specified.
+        /// </summary>
+        public async Task<TakeResponseBodyForInterceptionAsStreamCommandResponse> TakeResponseBodyForInterceptionAsStream(TakeResponseBodyForInterceptionAsStreamCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<TakeResponseBodyForInterceptionAsStreamCommand, TakeResponseBodyForInterceptionAsStreamCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// This method sends a new XMLHttpRequest which is identical to the original one. The following
         /// parameters should be identical: method, url, async, request body, extra headers, withCredentials
         /// attribute, user, password.
@@ -275,6 +285,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Fired when resource loading priority is changed
         /// </summary>
         public void SubscribeToResourceChangedPriorityEvent(Action<ResourceChangedPriorityEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Fired when a signed exchange was received over the network
+        /// </summary>
+        public void SubscribeToSignedExchangeReceivedEvent(Action<SignedExchangeReceivedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

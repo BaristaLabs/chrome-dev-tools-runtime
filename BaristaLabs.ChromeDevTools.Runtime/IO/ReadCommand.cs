@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
         }
         /// <summary>
         /// Seek to the specified offset before reading (if not specificed, proceed with offset
-        /// following the last read).
+        /// following the last read). Some types of streams may only support sequential reads.
         /// </summary>
         [JsonProperty("offset", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? Offset

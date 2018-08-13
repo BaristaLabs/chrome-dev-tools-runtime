@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Initiator URL, set for Parser type or for Script type (when script is importing module).
+        /// Initiator URL, set for Parser type or for Script type (when script is importing module) or for SignedExchange type.
         ///</summary>
         [JsonProperty("url", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Url

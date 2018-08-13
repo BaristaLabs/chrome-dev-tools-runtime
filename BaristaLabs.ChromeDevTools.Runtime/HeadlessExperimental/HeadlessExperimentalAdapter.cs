@@ -35,14 +35,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeadlessExperimental
             return await m_session.SendCommand<BeginFrameCommand, BeginFrameCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Puts the browser into deterministic mode.  Only effective for subsequently created web contents.
-        /// Only supported in headless mode.  Once set there's no way of leaving deterministic mode.
-        /// </summary>
-        public async Task<EnterDeterministicModeCommandResponse> EnterDeterministicMode(EnterDeterministicModeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<EnterDeterministicModeCommand, EnterDeterministicModeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
         /// Disables headless events for the target.
         /// </summary>
         public async Task<DisableCommandResponse> Disable(DisableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

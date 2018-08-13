@@ -114,7 +114,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             return await m_session.SendCommand<GetPlatformFontsForNodeCommand, GetPlatformFontsForNodeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Returns the current textual content and the URL for a stylesheet.
+        /// Returns the current textual content for a stylesheet.
         /// </summary>
         public async Task<GetStyleSheetTextCommandResponse> GetStyleSheetText(GetStyleSheetTextCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {

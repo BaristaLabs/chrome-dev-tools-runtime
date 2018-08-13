@@ -56,6 +56,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
+        /// Set if the request is a navigation that will result in a download.
+        /// Only present after response is received from the server (i.e. HeadersReceived stage).
+        /// </summary>
+        [JsonProperty("isDownload", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? IsDownload
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Redirect location, only sent if a redirect was intercepted.
         /// </summary>
         [JsonProperty("redirectUrl", DefaultValueHandling = DefaultValueHandling.Ignore)]

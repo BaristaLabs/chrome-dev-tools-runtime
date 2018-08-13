@@ -108,6 +108,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+        /// <summary>
+        /// Terminate execution after timing out (number of milliseconds).
+        /// </summary>
+        [JsonProperty("timeout", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? Timeout
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class EvaluateCommandResponse : ICommandResponse<EvaluateCommand>

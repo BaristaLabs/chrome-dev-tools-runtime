@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Deletes a BrowserContext, will fail of any open page uses it.
+    /// Deletes a BrowserContext. All the belonging pages will be closed without calling their
+    /// beforeunload hooks.
     /// </summary>
     public sealed class DisposeBrowserContextCommand : ICommand
     {
@@ -28,14 +29,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
 
     public sealed class DisposeBrowserContextCommandResponse : ICommandResponse<DisposeBrowserContextCommand>
     {
-        /// <summary>
-        /// Gets or sets the success
-        /// </summary>
-        [JsonProperty("success")]
-        public bool Success
-        {
-            get;
-            set;
-        }
     }
 }
