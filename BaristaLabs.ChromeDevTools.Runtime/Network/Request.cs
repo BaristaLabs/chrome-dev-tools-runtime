@@ -8,10 +8,19 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     public sealed class Request
     {
         /// <summary>
-        /// Request URL.
+        /// Request URL (without fragment).
         ///</summary>
         [JsonProperty("url")]
         public string Url
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Fragment of the requested URL starting with hash, if present.
+        ///</summary>
+        [JsonProperty("urlFragment", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string UrlFragment
         {
             get;
             set;

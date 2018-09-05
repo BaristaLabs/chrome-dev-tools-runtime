@@ -75,7 +75,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
         /// controlledClients
         ///</summary>
         [JsonProperty("controlledClients", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public string ControlledClients
+        public string[] ControlledClients
         {
             get;
             set;

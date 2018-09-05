@@ -36,6 +36,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         Manifest,
         [EnumMember(Value = "SignedExchange")]
         SignedExchange,
+        [EnumMember(Value = "Ping")]
+        Ping,
+        [EnumMember(Value = "CSPViolationReport")]
+        CSPViolationReport,
         [EnumMember(Value = "Other")]
         Other,
     }

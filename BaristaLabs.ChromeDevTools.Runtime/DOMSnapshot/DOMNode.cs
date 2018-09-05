@@ -192,26 +192,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// Index of the imported document's node of a link element in the `domNodes` array returned by
-        /// `getSnapshot`, if any.
-        ///</summary>
-        [JsonProperty("importedDocumentIndex", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public long? ImportedDocumentIndex
-        {
-            get;
-            set;
-        }
-        /// <summary>
-        /// Index of the content node of a template element in the `domNodes` array returned by
-        /// `getSnapshot`.
-        ///</summary>
-        [JsonProperty("templateContentIndex", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public long? TemplateContentIndex
-        {
-            get;
-            set;
-        }
-        /// <summary>
         /// Type of a pseudo element node.
         ///</summary>
         [JsonProperty("pseudoType", DefaultValueHandling = DefaultValueHandling.Ignore)]

@@ -26,6 +26,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
             get;
             set;
         }
+        /// <summary>
+        /// If true, retrieve delta since last call.
+        /// </summary>
+        [JsonProperty("delta", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? Delta
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class GetHistogramsCommandResponse : ICommandResponse<GetHistogramsCommand>

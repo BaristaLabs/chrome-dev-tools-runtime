@@ -24,5 +24,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         SubresourceFilter,
         [EnumMember(Value = "content-type")]
         ContentType,
+        [EnumMember(Value = "collapsed-by-client")]
+        CollapsedByClient,
     }
 }

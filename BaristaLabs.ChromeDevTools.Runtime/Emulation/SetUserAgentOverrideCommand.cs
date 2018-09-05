@@ -1,4 +1,4 @@
-namespace BaristaLabs.ChromeDevTools.Runtime.Network
+namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
 {
     using Newtonsoft.Json;
 
@@ -7,7 +7,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// </summary>
     public sealed class SetUserAgentOverrideCommand : ICommand
     {
-        private const string ChromeRemoteInterface_CommandName = "Network.setUserAgentOverride";
+        private const string ChromeRemoteInterface_CommandName = "Emulation.setUserAgentOverride";
         
         [JsonIgnore]
         public string CommandName

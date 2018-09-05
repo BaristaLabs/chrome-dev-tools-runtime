@@ -7,6 +7,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Net.Http;
+    using System.Threading;
     using System.Threading.Tasks;
     using Page = BaristaLabs.ChromeDevTools.Runtime.Page;
     using Runtime = BaristaLabs.ChromeDevTools.Runtime.Runtime;
@@ -30,10 +31,11 @@
                 //Navigate to winamp.com
                 var navigateResult = await session.Page.Navigate(new Page.NavigateCommand
                 {
-                    Url = "http://www.winamp.com"
+                    Url = "http://www.amazon.com"
                 });
 
                 long executionContextId = -1;
+                var s = new SemaphoreSlim(0, 1);
 
                 //Subscribe to the eval command and determine the execution context id to use which
                 //correlates to the page we navigated to.
@@ -42,14 +44,17 @@
                     var auxData = e.Context.AuxData as JObject;
                     var frameId = auxData["frameId"].Value<string>();
 
-                    if (e.Context.Origin == "http://www.winamp.com" && frameId == navigateResult.FrameId)
+                    if (e.Context.Origin == "https://www.amazon.com" && frameId == navigateResult.FrameId)
                     {
                         executionContextId = e.Context.Id;
+                        s.Release();
                     }
                 });
 
                 //Enable the runtime so that execution context events are raised.
                 var result1 = await session.Runtime.Enable(new Runtime.EnableCommand());
+
+                await s.WaitAsync();
 
                 //Evaluate a complex answer.
                 var result2 = await session.Runtime.Evaluate(new Runtime.EvaluateCommand
@@ -60,6 +65,12 @@
                 });
 
                 Console.WriteLine(result2.Result.Description);
+
+                // New in Chrome 69, get a DOM snapshot.
+                var result3 = await session.DOMSnapshot.CaptureSnapshot(new BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot.CaptureSnapshotCommand()
+                {
+                    ComputedStyles = new string[0]
+                });
             }
         }
 

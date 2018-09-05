@@ -91,6 +91,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             return await m_session.SendCommand<GetBoxModelCommand, GetBoxModelCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Returns quads that describe node position on the page. This method
+        /// might return multiple quads for inline nodes.
+        /// </summary>
+        public async Task<GetContentQuadsCommandResponse> GetContentQuads(GetContentQuadsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetContentQuadsCommand, GetContentQuadsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Returns the root DOM node (and optionally the subtree) to the caller.
         /// </summary>
         public async Task<GetDocumentCommandResponse> GetDocument(GetDocumentCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

@@ -38,7 +38,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Errors occurred while handling the signed exchagne.
         ///</summary>
         [JsonProperty("errors", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public string[] Errors
+        public SignedExchangeError[] Errors
         {
             get;
             set;

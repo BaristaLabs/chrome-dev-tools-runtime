@@ -142,11 +142,25 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             return await m_session.SendCommand<RunScriptCommand, RunScriptCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Enables or disables async call stacks tracking.
+        /// </summary>
+        public async Task<SetAsyncCallStackDepthCommandResponse> SetAsyncCallStackDepth(SetAsyncCallStackDepthCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetAsyncCallStackDepthCommand, SetAsyncCallStackDepthCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// setCustomObjectFormatterEnabled
         /// </summary>
         public async Task<SetCustomObjectFormatterEnabledCommandResponse> SetCustomObjectFormatterEnabled(SetCustomObjectFormatterEnabledCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetCustomObjectFormatterEnabledCommand, SetCustomObjectFormatterEnabledCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// setMaxCallStackSizeToCapture
+        /// </summary>
+        public async Task<SetMaxCallStackSizeToCaptureCommandResponse> SetMaxCallStackSizeToCapture(SetMaxCallStackSizeToCaptureCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetMaxCallStackSizeToCaptureCommand, SetMaxCallStackSizeToCaptureCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Terminate current or next JavaScript execution.
@@ -156,7 +170,36 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         {
             return await m_session.SendCommand<TerminateExecutionCommand, TerminateExecutionCommandResponse>(command ?? new TerminateExecutionCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// If executionContextId is empty, adds binding with the given name on the
+        /// global objects of all inspected contexts, including those created later,
+        /// bindings survive reloads.
+        /// If executionContextId is specified, adds binding only on global object of
+        /// given execution context.
+        /// Binding function takes exactly one argument, this argument should be string,
+        /// in case of any other input, function throws an exception.
+        /// Each binding function call produces Runtime.bindingCalled notification.
+        /// </summary>
+        public async Task<AddBindingCommandResponse> AddBinding(AddBindingCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<AddBindingCommand, AddBindingCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// This method does not remove binding function from global object but
+        /// unsubscribes current runtime agent from Runtime.bindingCalled notifications.
+        /// </summary>
+        public async Task<RemoveBindingCommandResponse> RemoveBinding(RemoveBindingCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<RemoveBindingCommand, RemoveBindingCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
+        /// <summary>
+        /// Notification is issued every time when binding is called.
+        /// </summary>
+        public void SubscribeToBindingCalledEvent(Action<BindingCalledEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
         /// <summary>
         /// Issued when console API was called.
         /// </summary>

@@ -35,10 +35,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Set when response was blocked due to being cross-site document response.
+        /// Set when 1) response was blocked by Cross-Origin Read Blocking and also
+        /// 2) this needs to be reported to the DevTools console.
         /// </summary>
-        [JsonProperty("blockedCrossSiteDocument", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public bool? BlockedCrossSiteDocument
+        [JsonProperty("shouldReportCorbBlocking", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? ShouldReportCorbBlocking
         {
             get;
             set;

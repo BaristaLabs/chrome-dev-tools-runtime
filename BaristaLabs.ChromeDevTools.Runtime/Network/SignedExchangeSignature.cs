@@ -18,6 +18,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
+        /// The hex string of signed exchange signature.
+        ///</summary>
+        [JsonProperty("signature")]
+        public string Signature
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Signed exchange signature integrity.
         ///</summary>
         [JsonProperty("integrity")]
@@ -29,8 +38,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// <summary>
         /// Signed exchange signature cert Url.
         ///</summary>
-        [JsonProperty("certUrl")]
+        [JsonProperty("certUrl", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string CertUrl
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The hex string of signed exchange signature cert sha256.
+        ///</summary>
+        [JsonProperty("certSha256", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string CertSha256
         {
             get;
             set;
@@ -58,6 +76,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         ///</summary>
         [JsonProperty("expires")]
         public long Expires
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The encoded certificates.
+        ///</summary>
+        [JsonProperty("certificates", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string[] Certificates
         {
             get;
             set;

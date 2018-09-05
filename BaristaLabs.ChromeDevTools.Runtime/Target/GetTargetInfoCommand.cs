@@ -18,7 +18,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// <summary>
         /// Gets or sets the targetId
         /// </summary>
-        [JsonProperty("targetId")]
+        [JsonProperty("targetId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string TargetId
         {
             get;
