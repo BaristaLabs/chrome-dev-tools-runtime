@@ -43,5 +43,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             get;
             set;
         }
+        /// <summary>
+        /// Stacking context information.
+        ///</summary>
+        [JsonProperty("stackingContexts")]
+        public RareBooleanData StackingContexts
+        {
+            get;
+            set;
+        }
     }
 }

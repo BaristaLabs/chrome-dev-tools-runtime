@@ -25,6 +25,20 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
         }
 
         /// <summary>
+        /// Grant specific permissions to the given origin and reject all others.
+        /// </summary>
+        public async Task<GrantPermissionsCommandResponse> GrantPermissions(GrantPermissionsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GrantPermissionsCommand, GrantPermissionsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Reset all permission management for all origins.
+        /// </summary>
+        public async Task<ResetPermissionsCommandResponse> ResetPermissions(ResetPermissionsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<ResetPermissionsCommand, ResetPermissionsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Close browser gracefully.
         /// </summary>
         public async Task<CloseCommandResponse> Close(CloseCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

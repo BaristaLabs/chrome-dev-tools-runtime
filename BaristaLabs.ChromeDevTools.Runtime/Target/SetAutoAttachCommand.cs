@@ -36,6 +36,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             get;
             set;
         }
+        /// <summary>
+        /// Enables "flat" access to the session via specifying sessionId attribute in the commands.
+        /// </summary>
+        [JsonProperty("flatten", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? Flatten
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class SetAutoAttachCommandResponse : ICommandResponse<SetAutoAttachCommand>

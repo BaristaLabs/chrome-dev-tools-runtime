@@ -32,6 +32,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             return await m_session.SendCommand<DispatchKeyEventCommand, DispatchKeyEventCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// This method emulates inserting text that doesn't come from a key press,
+        /// for example an emoji keyboard or an IME.
+        /// </summary>
+        public async Task<InsertTextCommandResponse> InsertText(InsertTextCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<InsertTextCommand, InsertTextCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Dispatches a mouse event to the page.
         /// </summary>
         public async Task<DispatchMouseEventCommandResponse> DispatchMouseEvent(DispatchMouseEventCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

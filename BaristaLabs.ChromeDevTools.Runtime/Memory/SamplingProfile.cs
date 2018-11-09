@@ -16,5 +16,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
             get;
             set;
         }
+        /// <summary>
+        /// modules
+        ///</summary>
+        [JsonProperty("modules")]
+        public Module[] Modules
+        {
+            get;
+            set;
+        }
     }
 }

@@ -367,6 +367,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         {
             return await m_session.SendCommand<ClearCompilationCacheCommand, ClearCompilationCacheCommandResponse>(command ?? new ClearCompilationCacheCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// Generates a report for testing.
+        /// </summary>
+        public async Task<GenerateTestReportCommandResponse> GenerateTestReport(GenerateTestReportCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GenerateTestReportCommand, GenerateTestReportCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
         /// <summary>
         /// domContentEventFired

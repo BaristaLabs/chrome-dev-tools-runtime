@@ -63,5 +63,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             get;
             set;
         }
+        /// <summary>
+        /// Set to true to indicate the element begins a new stacking context.
+        ///</summary>
+        [JsonProperty("isStackingContext", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? IsStackingContext
+        {
+            get;
+            set;
+        }
     }
 }
