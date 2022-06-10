@@ -44,12 +44,10 @@
                 session.Page.SubscribeToLoadEventFiredEvent(async (e) =>
                 {
                     var screenshot = await session.Page.CaptureScreenshot(new Page.CaptureScreenshotCommand());
-                    if (!string.IsNullOrWhiteSpace(screenshot.Data))
-                    {
-                        File.WriteAllBytes(fileName, Convert.FromBase64String(screenshot.Data));
-                        m_testContext.WriteLine($"saved to {fileName}");
-                        s.Release();
-                    }
+                    File.WriteAllBytes(fileName, screenshot.Data);
+                    m_testContext.WriteLine($"saved to {fileName}");
+                    s.Release();
+
                 });
 
                 var navigateResult = await session.Page.Navigate(new Page.NavigateCommand

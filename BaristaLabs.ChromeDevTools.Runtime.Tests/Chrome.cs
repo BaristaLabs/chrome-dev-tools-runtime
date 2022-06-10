@@ -145,7 +145,10 @@
             Process chromeProcess;
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                chromeProcess = Process.Start(new ProcessStartInfo(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", chromeProcessArgs) { CreateNoWindow = true });
+                String programFiles = RuntimeInformation.OSArchitecture == Architecture.X86
+                    ? "Program Files (x86)"
+                    : "Program Files";
+                chromeProcess = Process.Start(new ProcessStartInfo($"C:\\{programFiles}\\Google\\Chrome\\Application\\chrome.exe", chromeProcessArgs) { CreateNoWindow = true });
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
