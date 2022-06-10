@@ -70,9 +70,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// Creates a new empty BrowserContext. Similar to an incognito profile but you can have more than
         /// one.
         /// </summary>
-        public async Task<CreateBrowserContextCommandResponse> CreateBrowserContext(CreateBrowserContextCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<CreateBrowserContextCommandResponse> CreateBrowserContext(CreateBrowserContextCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<CreateBrowserContextCommand, CreateBrowserContextCommandResponse>(command ?? new CreateBrowserContextCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<CreateBrowserContextCommand, CreateBrowserContextCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Returns all browser contexts created with `Target.createBrowserContext` method.
@@ -119,6 +119,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         }
         /// <summary>
         /// Sends protocol message over session with given id.
+        /// Consider using flat mode instead; see commands attachToTarget, setAutoAttach,
+        /// and crbug.com/991325.
         /// </summary>
         public async Task<SendMessageToTargetCommandResponse> SendMessageToTarget(SendMessageToTargetCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -128,10 +130,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// Controls whether to automatically attach to new targets which are considered to be related to
         /// this one. When turned on, attaches to all existing related targets as well. When turned off,
         /// automatically detaches from all currently attached targets.
+        /// This also clears all targets added by `autoAttachRelated` from the list of targets to watch
+        /// for creation of related targets.
         /// </summary>
         public async Task<SetAutoAttachCommandResponse> SetAutoAttach(SetAutoAttachCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetAutoAttachCommand, SetAutoAttachCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Adds the specified target to the list of targets that will be monitored for any related target
+        /// creation (such as child frames, child workers and new versions of service worker) and reported
+        /// through `attachedToTarget`. The specified target is also auto-attached.
+        /// This cancels the effect of any previous `setAutoAttach` and is also cancelled by subsequent
+        /// `setAutoAttach`. Only available at the Browser target.
+        /// </summary>
+        public async Task<AutoAttachRelatedCommandResponse> AutoAttachRelated(AutoAttachRelatedCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<AutoAttachRelatedCommand, AutoAttachRelatedCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Controls whether to discover available targets and notify via

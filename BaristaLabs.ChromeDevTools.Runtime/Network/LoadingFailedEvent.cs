@@ -29,7 +29,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Resource type.
         /// </summary>
         [JsonProperty("type")]
-        public Page.ResourceType Type
+        public ResourceType Type
         {
             get;
             set;
@@ -57,6 +57,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// </summary>
         [JsonProperty("blockedReason", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public BlockedReason? BlockedReason
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The reason why loading was blocked by CORS, if any.
+        /// </summary>
+        [JsonProperty("corsErrorStatus", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public CorsErrorStatus CorsErrorStatus
         {
             get;
             set;

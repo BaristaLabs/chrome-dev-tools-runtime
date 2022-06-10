@@ -25,7 +25,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
             set;
         }
         /// <summary>
-        /// Comma separated origin names.
+        /// Comma separated list of StorageType to clear.
         /// </summary>
         [JsonProperty("storageTypes")]
         public string StorageTypes

@@ -11,7 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         /// Entry content, base64-encoded.
         ///</summary>
         [JsonProperty("body")]
-        public string Body
+        public byte[] Body
         {
             get;
             set;

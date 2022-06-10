@@ -34,9 +34,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Performance
         /// <summary>
         /// Enable collecting and reporting metrics.
         /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Sets time domain to use for collecting and reporting duration metrics.
+        /// Note that this must be called before enabling metrics collection. Calling
+        /// this method while metrics collection is enabled returns an error.
+        /// </summary>
+        public async Task<SetTimeDomainCommandResponse> SetTimeDomain(SetTimeDomainCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetTimeDomainCommand, SetTimeDomainCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Retrieve current values of run-time metrics.

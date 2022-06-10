@@ -121,6 +121,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             return await m_session.SendCommand<GetStyleSheetTextCommand, GetStyleSheetTextCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Returns all layers parsed by the rendering engine for the tree scope of a node.
+        /// Given a DOM element identified by nodeId, getLayersForNode returns the root
+        /// layer for the nearest ancestor document or shadow root. The layer root contains
+        /// the full layer tree for the tree scope and their ordering.
+        /// </summary>
+        public async Task<GetLayersForNodeCommandResponse> GetLayersForNode(GetLayersForNodeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetLayersForNodeCommand, GetLayersForNodeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Starts tracking the given computed styles for updates. The specified array of properties
+        /// replaces the one previously specified. Pass empty array to disable tracking.
+        /// Use takeComputedStyleUpdates to retrieve the list of nodes that had properties modified.
+        /// The changes to computed style properties are only tracked for nodes pushed to the front-end
+        /// by the DOM agent. If no changes to the tracked properties occur after the node has been pushed
+        /// to the front-end, no updates will be issued for the node.
+        /// </summary>
+        public async Task<TrackComputedStyleUpdatesCommandResponse> TrackComputedStyleUpdates(TrackComputedStyleUpdatesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<TrackComputedStyleUpdatesCommand, TrackComputedStyleUpdatesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Polls the next batch of computed style updates.
+        /// </summary>
+        public async Task<TakeComputedStyleUpdatesCommandResponse> TakeComputedStyleUpdates(TakeComputedStyleUpdatesCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<TakeComputedStyleUpdatesCommand, TakeComputedStyleUpdatesCommandResponse>(command ?? new TakeComputedStyleUpdatesCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Find a rule with the given active property for the given node and set the new value for this
         /// property
         /// </summary>
@@ -141,6 +170,20 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         public async Task<SetMediaTextCommandResponse> SetMediaText(SetMediaTextCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetMediaTextCommand, SetMediaTextCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Modifies the expression of a container query.
+        /// </summary>
+        public async Task<SetContainerQueryTextCommandResponse> SetContainerQueryText(SetContainerQueryTextCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetContainerQueryTextCommand, SetContainerQueryTextCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Modifies the expression of a supports at-rule.
+        /// </summary>
+        public async Task<SetSupportsTextCommandResponse> SetSupportsText(SetSupportsTextCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetSupportsTextCommand, SetSupportsTextCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Modifies the rule selector.
@@ -185,6 +228,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         public async Task<TakeCoverageDeltaCommandResponse> TakeCoverageDelta(TakeCoverageDeltaCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<TakeCoverageDeltaCommand, TakeCoverageDeltaCommandResponse>(command ?? new TakeCoverageDeltaCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Enables/disables rendering of local CSS fonts (enabled by default).
+        /// </summary>
+        public async Task<SetLocalFontsEnabledCommandResponse> SetLocalFontsEnabled(SetLocalFontsEnabledCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetLocalFontsEnabledCommand, SetLocalFontsEnabledCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
 
         /// <summary>

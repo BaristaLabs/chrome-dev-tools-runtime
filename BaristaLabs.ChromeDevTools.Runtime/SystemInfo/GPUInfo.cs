@@ -43,5 +43,32 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
             get;
             set;
         }
+        /// <summary>
+        /// Supported accelerated video decoding capabilities.
+        ///</summary>
+        [JsonProperty("videoDecoding")]
+        public VideoDecodeAcceleratorCapability[] VideoDecoding
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Supported accelerated video encoding capabilities.
+        ///</summary>
+        [JsonProperty("videoEncoding")]
+        public VideoEncodeAcceleratorCapability[] VideoEncoding
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Supported accelerated image decoding capabilities.
+        ///</summary>
+        [JsonProperty("imageDecoding")]
+        public ImageDecodeAcceleratorCapability[] ImageDecoding
+        {
+            get;
+            set;
+        }
     }
 }

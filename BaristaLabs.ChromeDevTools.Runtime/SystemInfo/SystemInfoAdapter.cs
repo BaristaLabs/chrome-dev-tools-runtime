@@ -31,6 +31,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
         {
             return await m_session.SendCommand<GetInfoCommand, GetInfoCommandResponse>(command ?? new GetInfoCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// Returns information about all running processes.
+        /// </summary>
+        public async Task<GetProcessInfoCommandResponse> GetProcessInfo(GetProcessInfoCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetProcessInfoCommand, GetProcessInfoCommandResponse>(command ?? new GetProcessInfoCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
     }
 }

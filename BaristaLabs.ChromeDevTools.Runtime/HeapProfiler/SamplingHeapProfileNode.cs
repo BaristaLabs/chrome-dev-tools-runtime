@@ -26,6 +26,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
             set;
         }
         /// <summary>
+        /// Node id. Ids are unique across all profiles collected between startSampling and stopSampling.
+        ///</summary>
+        [JsonProperty("id")]
+        public long Id
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Child nodes.
         ///</summary>
         [JsonProperty("children")]

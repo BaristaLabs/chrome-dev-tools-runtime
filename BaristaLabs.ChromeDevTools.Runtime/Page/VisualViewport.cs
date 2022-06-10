@@ -70,5 +70,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+        /// <summary>
+        /// Page zoom factor (CSS to device independent pixels ratio).
+        ///</summary>
+        [JsonProperty("zoom", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? Zoom
+        {
+            get;
+            set;
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Type of this resource.
         ///</summary>
         [JsonProperty("type")]
-        public ResourceType Type
+        public Network.ResourceType Type
         {
             get;
             set;

@@ -16,7 +16,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         }
 
         /// <summary>
-        /// Id of cache that contains the enty.
+        /// Id of cache that contains the entry.
         /// </summary>
         [JsonProperty("cacheId")]
         public string CacheId
@@ -29,6 +29,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         /// </summary>
         [JsonProperty("requestURL")]
         public string RequestURL
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// headers of the request.
+        /// </summary>
+        [JsonProperty("requestHeaders")]
+        public Header[] RequestHeaders
         {
             get;
             set;

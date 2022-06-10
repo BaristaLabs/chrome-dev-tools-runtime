@@ -16,19 +16,19 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
         }
 
         /// <summary>
-        /// Gets or sets the origin
+        /// Gets or sets the permissions
         /// </summary>
-        [JsonProperty("origin")]
-        public string Origin
+        [JsonProperty("permissions")]
+        public PermissionType[] Permissions
         {
             get;
             set;
         }
         /// <summary>
-        /// Gets or sets the permissions
+        /// Origin the permission applies to, all origins if not specified.
         /// </summary>
-        [JsonProperty("permissions")]
-        public PermissionType[] Permissions
+        [JsonProperty("origin", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string Origin
         {
             get;
             set;

@@ -16,11 +16,20 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         }
 
         /// <summary>
-        /// Debugger will issue additional Debugger.paused notification if any async task is scheduled
+        /// Debugger will pause on the execution of the first async task which was scheduled
         /// before next pause.
         /// </summary>
         [JsonProperty("breakOnAsyncCall", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? BreakOnAsyncCall
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The skipList specifies location ranges that should be skipped on step into.
+        /// </summary>
+        [JsonProperty("skipList", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public LocationRange[] SkipList
         {
             get;
             set;

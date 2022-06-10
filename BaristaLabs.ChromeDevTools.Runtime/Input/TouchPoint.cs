@@ -63,6 +63,42 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
+        /// The normalized tangential pressure, which has a range of [-1,1] (default: 0).
+        ///</summary>
+        [JsonProperty("tangentialPressure", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? TangentialPressure
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The plane angle between the Y-Z plane and the plane containing both the stylus axis and the Y axis, in degrees of the range [-90,90], a positive tiltX is to the right (default: 0)
+        ///</summary>
+        [JsonProperty("tiltX", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? TiltX
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The plane angle between the X-Z plane and the plane containing both the stylus axis and the X axis, in degrees of the range [-90,90], a positive tiltY is towards the user (default: 0).
+        ///</summary>
+        [JsonProperty("tiltY", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? TiltY
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The clockwise rotation of a pen stylus around its own major axis, in degrees in the range [0,359] (default: 0).
+        ///</summary>
+        [JsonProperty("twist", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? Twist
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Identifier used to track touch sources between events, must be unique within an event.
         ///</summary>
         [JsonProperty("id", DefaultValueHandling = DefaultValueHandling.Ignore)]

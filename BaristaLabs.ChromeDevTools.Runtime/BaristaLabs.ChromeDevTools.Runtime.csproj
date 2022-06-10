@@ -2,7 +2,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard1.3</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>70.0.3538.77</Version>
+        <Version>102.0.5005.63</Version>
         <Authors>Sean McLellan</Authors>
         <Company>BaristaLabs, LLC</Company>
         <RepositoryUrl>https://github.com/BaristaLabs/chrome-dev-tools-runtime.git</RepositoryUrl>
@@ -12,7 +12,7 @@
         <Copyright>Copyright (c) 2017 BaristaLabs, LLC</Copyright>
         <PackageProjectUrl>https://github.com/BaristaLabs/chrome-dev-tools-runtime</PackageProjectUrl>
         <Description>.Net Core based runtime to interact with an running instance of Chrome via the ChromeDevTools protocol.</Description>
-        <PackageReleaseNotes>Chrome Version: 70.0.3538.77; Protocol Version: 1.3;</PackageReleaseNotes>
+        <PackageReleaseNotes>Chrome Version: 102.0.5005.63; Protocol Version: 1.3;</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>

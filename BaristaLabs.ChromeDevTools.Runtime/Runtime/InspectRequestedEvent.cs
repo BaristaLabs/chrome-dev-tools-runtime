@@ -26,5 +26,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+        /// <summary>
+        /// Identifier of the context where the call was made.
+        /// </summary>
+        [JsonProperty("executionContextId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? ExecutionContextId
+        {
+            get;
+            set;
+        }
     }
 }

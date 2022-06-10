@@ -53,7 +53,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<CaptureScreenshotCommand, CaptureScreenshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Clears the overriden device metrics.
+        /// Returns a snapshot of the page as a string. For MHTML format, the serialization includes
+        /// iframes, shadow DOM, external resources, and element-inline styles.
+        /// </summary>
+        public async Task<CaptureSnapshotCommandResponse> CaptureSnapshot(CaptureSnapshotCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<CaptureSnapshotCommand, CaptureSnapshotCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Clears the overridden device metrics.
         /// </summary>
         public async Task<ClearDeviceMetricsOverrideCommandResponse> ClearDeviceMetricsOverride(ClearDeviceMetricsOverrideCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -67,7 +75,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<ClearDeviceOrientationOverrideCommand, ClearDeviceOrientationOverrideCommandResponse>(command ?? new ClearDeviceOrientationOverrideCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Clears the overriden Geolocation Position and Error.
+        /// Clears the overridden Geolocation Position and Error.
         /// </summary>
         public async Task<ClearGeolocationOverrideCommandResponse> ClearGeolocationOverride(ClearGeolocationOverrideCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -109,6 +117,28 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<GetAppManifestCommand, GetAppManifestCommandResponse>(command ?? new GetAppManifestCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// getInstallabilityErrors
+        /// </summary>
+        public async Task<GetInstallabilityErrorsCommandResponse> GetInstallabilityErrors(GetInstallabilityErrorsCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetInstallabilityErrorsCommand, GetInstallabilityErrorsCommandResponse>(command ?? new GetInstallabilityErrorsCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// getManifestIcons
+        /// </summary>
+        public async Task<GetManifestIconsCommandResponse> GetManifestIcons(GetManifestIconsCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetManifestIconsCommand, GetManifestIconsCommandResponse>(command ?? new GetManifestIconsCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Returns the unique (PWA) app id.
+        /// Only returns values if the feature flag 'WebAppEnableManifestId' is enabled
+        /// </summary>
+        public async Task<GetAppIdCommandResponse> GetAppId(GetAppIdCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetAppIdCommand, GetAppIdCommandResponse>(command ?? new GetAppIdCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Returns all browser cookies. Depending on the backend support, will return detailed cookie
         /// information in the `cookies` field.
         /// </summary>
@@ -136,6 +166,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         public async Task<GetNavigationHistoryCommandResponse> GetNavigationHistory(GetNavigationHistoryCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<GetNavigationHistoryCommand, GetNavigationHistoryCommandResponse>(command ?? new GetNavigationHistoryCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Resets navigation history for the current page.
+        /// </summary>
+        public async Task<ResetNavigationHistoryCommandResponse> ResetNavigationHistory(ResetNavigationHistoryCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<ResetNavigationHistoryCommand, ResetNavigationHistoryCommandResponse>(command ?? new ResetNavigationHistoryCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Returns content of the given resource.
@@ -201,13 +238,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<RemoveScriptToEvaluateOnNewDocumentCommand, RemoveScriptToEvaluateOnNewDocumentCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// requestAppBanner
-        /// </summary>
-        public async Task<RequestAppBannerCommandResponse> RequestAppBanner(RequestAppBannerCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
-        {
-            return await m_session.SendCommand<RequestAppBannerCommand, RequestAppBannerCommandResponse>(command ?? new RequestAppBannerCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
-        }
-        /// <summary>
         /// Acknowledges that a screencast frame has been received by the frontend.
         /// </summary>
         public async Task<ScreencastFrameAckCommandResponse> ScreencastFrameAck(ScreencastFrameAckCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -234,6 +264,20 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         public async Task<SetBypassCSPCommandResponse> SetBypassCSP(SetBypassCSPCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetBypassCSPCommand, SetBypassCSPCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Get Permissions Policy state on given frame.
+        /// </summary>
+        public async Task<GetPermissionsPolicyStateCommandResponse> GetPermissionsPolicyState(GetPermissionsPolicyStateCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetPermissionsPolicyStateCommand, GetPermissionsPolicyStateCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Get Origin Trials on given frame.
+        /// </summary>
+        public async Task<GetOriginTrialsCommandResponse> GetOriginTrials(GetOriginTrialsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetOriginTrialsCommand, GetOriginTrialsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Overrides the values of device screen dimensions (window.screen.width, window.screen.height,
@@ -346,11 +390,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<StopScreencastCommand, StopScreencastCommandResponse>(command ?? new StopScreencastCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Forces compilation cache to be generated for every subresource script.
+        /// Requests backend to produce compilation cache for the specified scripts.
+        /// `scripts` are appeneded to the list of scripts for which the cache
+        /// would be produced. The list may be reset during page navigation.
+        /// When script with a matching URL is encountered, the cache is optionally
+        /// produced upon backend discretion, based on internal heuristics.
+        /// See also: `Page.compilationCacheProduced`.
         /// </summary>
-        public async Task<SetProduceCompilationCacheCommandResponse> SetProduceCompilationCache(SetProduceCompilationCacheCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<ProduceCompilationCacheCommandResponse> ProduceCompilationCache(ProduceCompilationCacheCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<SetProduceCompilationCacheCommand, SetProduceCompilationCacheCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<ProduceCompilationCacheCommand, ProduceCompilationCacheCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Seeds compilation cache for given url. Compilation cache does not survive
@@ -368,17 +417,48 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             return await m_session.SendCommand<ClearCompilationCacheCommand, ClearCompilationCacheCommandResponse>(command ?? new ClearCompilationCacheCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Sets the Secure Payment Confirmation transaction mode.
+        /// https://w3c.github.io/secure-payment-confirmation/#sctn-automation-set-spc-transaction-mode
+        /// </summary>
+        public async Task<SetSPCTransactionModeCommandResponse> SetSPCTransactionMode(SetSPCTransactionModeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetSPCTransactionModeCommand, SetSPCTransactionModeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Generates a report for testing.
         /// </summary>
         public async Task<GenerateTestReportCommandResponse> GenerateTestReport(GenerateTestReportCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<GenerateTestReportCommand, GenerateTestReportCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// Pauses page execution. Can be resumed using generic Runtime.runIfWaitingForDebugger.
+        /// </summary>
+        public async Task<WaitForDebuggerCommandResponse> WaitForDebugger(WaitForDebuggerCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<WaitForDebuggerCommand, WaitForDebuggerCommandResponse>(command ?? new WaitForDebuggerCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Intercept file chooser requests and transfer control to protocol clients.
+        /// When file chooser interception is enabled, native file chooser dialog is not shown.
+        /// Instead, a protocol event `Page.fileChooserOpened` is emitted.
+        /// </summary>
+        public async Task<SetInterceptFileChooserDialogCommandResponse> SetInterceptFileChooserDialog(SetInterceptFileChooserDialogCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetInterceptFileChooserDialogCommand, SetInterceptFileChooserDialogCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
         /// <summary>
         /// domContentEventFired
         /// </summary>
         public void SubscribeToDomContentEventFiredEvent(Action<DomContentEventFiredEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Emitted only when `page.interceptFileChooser` is enabled.
+        /// </summary>
+        public void SubscribeToFileChooserOpenedEvent(Action<FileChooserOpenedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
@@ -411,9 +491,24 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
+        /// Fired when opening document to write to.
+        /// </summary>
+        public void SubscribeToDocumentOpenedEvent(Action<DocumentOpenedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
         /// frameResized
         /// </summary>
         public void SubscribeToFrameResizedEvent(Action<FrameResizedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Fired when a renderer-initiated navigation is requested.
+        /// Navigation may still be cancelled after the event is issued.
+        /// </summary>
+        public void SubscribeToFrameRequestedNavigationEvent(Action<FrameRequestedNavigationEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
@@ -435,6 +530,22 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Fired when frame has stopped loading.
         /// </summary>
         public void SubscribeToFrameStoppedLoadingEvent(Action<FrameStoppedLoadingEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Fired when page is about to start a download.
+        /// Deprecated. Use Browser.downloadWillBegin instead.
+        /// </summary>
+        public void SubscribeToDownloadWillBeginEvent(Action<DownloadWillBeginEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Fired when download makes progress. Last call has |done| == true.
+        /// Deprecated. Use Browser.downloadProgress instead.
+        /// </summary>
+        public void SubscribeToDownloadProgressEvent(Action<DownloadProgressEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }
@@ -472,6 +583,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Fired for top level page lifecycle events such as navigation, load, paint, etc.
         /// </summary>
         public void SubscribeToLifecycleEventEvent(Action<LifecycleEventEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Fired for failed bfcache history navigations if BackForwardCache feature is enabled. Do
+        /// not assume any ordering with the Page.frameNavigated event. This event is fired only for
+        /// main-frame history navigation where the document changes (non-same-document navigations),
+        /// when bfcache navigation fails.
+        /// </summary>
+        public void SubscribeToBackForwardCacheNotUsedEvent(Action<BackForwardCacheNotUsedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Fired when a prerender attempt is completed.
+        /// </summary>
+        public void SubscribeToPrerenderAttemptCompletedEvent(Action<PrerenderAttemptCompletedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

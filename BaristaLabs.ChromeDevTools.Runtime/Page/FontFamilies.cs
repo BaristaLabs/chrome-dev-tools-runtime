@@ -61,14 +61,5 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
-        /// <summary>
-        /// The pictograph font-family.
-        ///</summary>
-        [JsonProperty("pictograph", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public string Pictograph
-        {
-            get;
-            set;
-        }
     }
 }

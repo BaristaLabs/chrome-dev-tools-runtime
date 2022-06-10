@@ -32,14 +32,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             return await m_session.SendCommand<CanEmulateCommand, CanEmulateCommandResponse>(command ?? new CanEmulateCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Clears the overriden device metrics.
+        /// Clears the overridden device metrics.
         /// </summary>
         public async Task<ClearDeviceMetricsOverrideCommandResponse> ClearDeviceMetricsOverride(ClearDeviceMetricsOverrideCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<ClearDeviceMetricsOverrideCommand, ClearDeviceMetricsOverrideCommandResponse>(command ?? new ClearDeviceMetricsOverrideCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Clears the overriden Geolocation Position and Error.
+        /// Clears the overridden Geolocation Position and Error.
         /// </summary>
         public async Task<ClearGeolocationOverrideCommandResponse> ClearGeolocationOverride(ClearGeolocationOverrideCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -51,6 +51,20 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         public async Task<ResetPageScaleFactorCommandResponse> ResetPageScaleFactor(ResetPageScaleFactorCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<ResetPageScaleFactorCommand, ResetPageScaleFactorCommandResponse>(command ?? new ResetPageScaleFactorCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Enables or disables simulating a focused and active page.
+        /// </summary>
+        public async Task<SetFocusEmulationEnabledCommandResponse> SetFocusEmulationEnabled(SetFocusEmulationEnabledCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetFocusEmulationEnabledCommand, SetFocusEmulationEnabledCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Automatically render all web contents using a dark theme.
+        /// </summary>
+        public async Task<SetAutoDarkModeOverrideCommandResponse> SetAutoDarkModeOverride(SetAutoDarkModeOverrideCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetAutoDarkModeOverrideCommand, SetAutoDarkModeOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Enables CPU throttling to emulate slow CPUs.
@@ -98,11 +112,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             return await m_session.SendCommand<SetEmitTouchEventsForMouseCommand, SetEmitTouchEventsForMouseCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Emulates the given media for CSS media queries.
+        /// Emulates the given media type or media feature for CSS media queries.
         /// </summary>
         public async Task<SetEmulatedMediaCommandResponse> SetEmulatedMedia(SetEmulatedMediaCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetEmulatedMediaCommand, SetEmulatedMediaCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Emulates the given vision deficiency.
+        /// </summary>
+        public async Task<SetEmulatedVisionDeficiencyCommandResponse> SetEmulatedVisionDeficiency(SetEmulatedVisionDeficiencyCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetEmulatedVisionDeficiencyCommand, SetEmulatedVisionDeficiencyCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position
@@ -111,6 +132,20 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
         public async Task<SetGeolocationOverrideCommandResponse> SetGeolocationOverride(SetGeolocationOverrideCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetGeolocationOverrideCommand, SetGeolocationOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Overrides the Idle state.
+        /// </summary>
+        public async Task<SetIdleOverrideCommandResponse> SetIdleOverride(SetIdleOverrideCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetIdleOverrideCommand, SetIdleOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Clears Idle state overrides.
+        /// </summary>
+        public async Task<ClearIdleOverrideCommandResponse> ClearIdleOverride(ClearIdleOverrideCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<ClearIdleOverrideCommand, ClearIdleOverrideCommandResponse>(command ?? new ClearIdleOverrideCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Overrides value returned by the javascript navigator object.
@@ -149,6 +184,20 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             return await m_session.SendCommand<SetVirtualTimePolicyCommand, SetVirtualTimePolicyCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Overrides default host system locale with the specified one.
+        /// </summary>
+        public async Task<SetLocaleOverrideCommandResponse> SetLocaleOverride(SetLocaleOverrideCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetLocaleOverrideCommand, SetLocaleOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Overrides default host system timezone with the specified one.
+        /// </summary>
+        public async Task<SetTimezoneOverrideCommandResponse> SetTimezoneOverride(SetTimezoneOverrideCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetTimezoneOverrideCommand, SetTimezoneOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Resizes the frame/viewport of the page. Note that this does not affect the frame's container
         /// (e.g. browser window). Can be used to produce screenshots of the specified size. Not supported
         /// on Android.
@@ -158,31 +207,31 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             return await m_session.SendCommand<SetVisibleSizeCommand, SetVisibleSizeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// setDisabledImageTypes
+        /// </summary>
+        public async Task<SetDisabledImageTypesCommandResponse> SetDisabledImageTypes(SetDisabledImageTypesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetDisabledImageTypesCommand, SetDisabledImageTypesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Allows overriding user agent with the given string.
         /// </summary>
         public async Task<SetUserAgentOverrideCommandResponse> SetUserAgentOverride(SetUserAgentOverrideCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetUserAgentOverrideCommand, SetUserAgentOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
-
         /// <summary>
-        /// Notification sent after the virtual time has advanced.
+        /// Allows overriding the automation flag.
         /// </summary>
-        public void SubscribeToVirtualTimeAdvancedEvent(Action<VirtualTimeAdvancedEvent> eventCallback)
+        public async Task<SetAutomationOverrideCommandResponse> SetAutomationOverride(SetAutomationOverrideCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            m_session.Subscribe(eventCallback);
+            return await m_session.SendCommand<SetAutomationOverrideCommand, SetAutomationOverrideCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+
         /// <summary>
         /// Notification sent after the virtual time budget for the current VirtualTimePolicy has run out.
         /// </summary>
         public void SubscribeToVirtualTimeBudgetExpiredEvent(Action<VirtualTimeBudgetExpiredEvent> eventCallback)
-        {
-            m_session.Subscribe(eventCallback);
-        }
-        /// <summary>
-        /// Notification sent after the virtual time has paused.
-        /// </summary>
-        public void SubscribeToVirtualTimePausedEvent(Action<VirtualTimePausedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

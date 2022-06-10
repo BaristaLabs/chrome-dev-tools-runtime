@@ -27,8 +27,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         /// <summary>
         /// Number of records to skip.
         /// </summary>
-        [JsonProperty("skipCount")]
-        public long SkipCount
+        [JsonProperty("skipCount", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? SkipCount
         {
             get;
             set;
@@ -36,8 +36,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
         /// <summary>
         /// Number of records to fetch.
         /// </summary>
-        [JsonProperty("pageSize")]
-        public long PageSize
+        [JsonProperty("pageSize", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? PageSize
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// If present, only return the entries containing this substring in the path
+        /// </summary>
+        [JsonProperty("pathFilter", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string PathFilter
         {
             get;
             set;
@@ -56,10 +65,11 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
             set;
         }
         /// <summary>
-        /// If true, there are more entries to fetch in the given range.
+        /// Count of returned entries from this storage. If pathFilter is empty, it
+        /// is the count of all entries from this storage.
         ///</summary>
-        [JsonProperty("hasMore")]
-        public bool HasMore
+        [JsonProperty("returnCount")]
+        public double ReturnCount
         {
             get;
             set;

@@ -43,10 +43,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             set;
         }
         /// <summary>
-        /// Mouse button.
+        /// Mouse button. Only "none", "left", "right" are supported.
         /// </summary>
         [JsonProperty("button")]
-        public string Button
+        public MouseButton Button
         {
             get;
             set;

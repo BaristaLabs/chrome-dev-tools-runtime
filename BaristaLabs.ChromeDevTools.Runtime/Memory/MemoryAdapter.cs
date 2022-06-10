@@ -39,6 +39,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Memory
             return await m_session.SendCommand<PrepareForLeakDetectionCommand, PrepareForLeakDetectionCommandResponse>(command ?? new PrepareForLeakDetectionCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Simulate OomIntervention by purging V8 memory.
+        /// </summary>
+        public async Task<ForciblyPurgeJavaScriptMemoryCommandResponse> ForciblyPurgeJavaScriptMemory(ForciblyPurgeJavaScriptMemoryCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<ForciblyPurgeJavaScriptMemoryCommand, ForciblyPurgeJavaScriptMemoryCommandResponse>(command ?? new ForciblyPurgeJavaScriptMemoryCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Enable/disable suppressing memory pressure notifications in all processes.
         /// </summary>
         public async Task<SetPressureNotificationsSuppressedCommandResponse> SetPressureNotificationsSuppressed(SetPressureNotificationsSuppressedCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

@@ -44,5 +44,24 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+        /// <summary>
+        /// Initiator column number, set for Parser type or for Script type (when script is importing
+        /// module) (0-based).
+        ///</summary>
+        [JsonProperty("columnNumber", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? ColumnNumber
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Set if another request triggered this request (e.g. preflight).
+        ///</summary>
+        [JsonProperty("requestId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string RequestId
+        {
+            get;
+            set;
+        }
     }
 }

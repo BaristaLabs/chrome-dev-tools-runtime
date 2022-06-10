@@ -80,6 +80,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
             set;
         }
         /// <summary>
+        /// ID for this node's parent.
+        ///</summary>
+        [JsonProperty("parentId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string ParentId
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// IDs for each of this node's child nodes.
         ///</summary>
         [JsonProperty("childIds", DefaultValueHandling = DefaultValueHandling.Ignore)]
@@ -93,6 +102,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         ///</summary>
         [JsonProperty("backendDOMNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public long? BackendDOMNodeId
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The frame ID for the frame associated with this nodes document.
+        ///</summary>
+        [JsonProperty("frameId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string FrameId
         {
             get;
             set;

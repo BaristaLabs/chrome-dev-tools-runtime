@@ -78,7 +78,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeadlessExperimental
         /// Base64-encoded image data of the screenshot, if one was requested and successfully taken.
         ///</summary>
         [JsonProperty("screenshotData", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public string ScreenshotData
+        public byte[] ScreenshotData
         {
             get;
             set;

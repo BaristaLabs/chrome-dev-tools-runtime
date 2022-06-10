@@ -174,8 +174,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         /// If executionContextId is empty, adds binding with the given name on the
         /// global objects of all inspected contexts, including those created later,
         /// bindings survive reloads.
-        /// If executionContextId is specified, adds binding only on global object of
-        /// given execution context.
         /// Binding function takes exactly one argument, this argument should be string,
         /// in case of any other input, function throws an exception.
         /// Each binding function call produces Runtime.bindingCalled notification.
@@ -191,6 +189,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         public async Task<RemoveBindingCommandResponse> RemoveBinding(RemoveBindingCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<RemoveBindingCommand, RemoveBindingCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// This method tries to lookup and populate exception details for a
+        /// JavaScript Error object.
+        /// Note that the stackTrace portion of the resulting exceptionDetails will
+        /// only be populated if the Runtime domain was enabled at the time when the
+        /// Error was thrown.
+        /// </summary>
+        public async Task<GetExceptionDetailsCommandResponse> GetExceptionDetails(GetExceptionDetailsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetExceptionDetailsCommand, GetExceptionDetailsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
 
         /// <summary>

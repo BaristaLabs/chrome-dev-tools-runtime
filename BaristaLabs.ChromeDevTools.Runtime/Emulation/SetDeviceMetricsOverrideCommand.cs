@@ -127,6 +127,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             get;
             set;
         }
+        /// <summary>
+        /// If set, the display feature of a multi-segment screen. If not set, multi-segment support
+        /// is turned-off.
+        /// </summary>
+        [JsonProperty("displayFeature", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public DisplayFeature DisplayFeature
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class SetDeviceMetricsOverrideCommandResponse : ICommandResponse<SetDeviceMetricsOverrideCommand>

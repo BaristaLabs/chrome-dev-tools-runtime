@@ -236,7 +236,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             set;
         }
         /// <summary>
-        /// Import document for the HTMLImport links.
+        /// Deprecated, as the HTML Imports API has been removed (crbug.com/937746).
+        /// This property used to return the imported document for the HTMLImport links.
+        /// The property is always undefined now.
         ///</summary>
         [JsonProperty("importedDocument", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Node ImportedDocument
@@ -258,6 +260,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         ///</summary>
         [JsonProperty("isSVG", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? IsSVG
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// compatibilityMode
+        ///</summary>
+        [JsonProperty("compatibilityMode", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public CompatibilityMode? CompatibilityMode
         {
             get;
             set;

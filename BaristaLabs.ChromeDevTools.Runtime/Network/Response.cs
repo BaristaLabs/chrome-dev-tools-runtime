@@ -44,7 +44,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// HTTP response headers text.
+        /// HTTP response headers text. This has been replaced by the headers in Network.responseReceivedExtraInfo.
         ///</summary>
         [JsonProperty("headersText", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string HeadersText
@@ -71,7 +71,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// HTTP request headers text.
+        /// HTTP request headers text. This has been replaced by the headers in Network.requestWillBeSentExtraInfo.
         ///</summary>
         [JsonProperty("requestHeadersText", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string RequestHeadersText
@@ -134,6 +134,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
+        /// Specifies that the request was served from the prefetch cache.
+        ///</summary>
+        [JsonProperty("fromPrefetchCache", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? FromPrefetchCache
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Total number of bytes received for this request so far.
         ///</summary>
         [JsonProperty("encodedDataLength")]
@@ -147,6 +156,33 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         ///</summary>
         [JsonProperty("timing", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public ResourceTiming Timing
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Response source of response from ServiceWorker.
+        ///</summary>
+        [JsonProperty("serviceWorkerResponseSource", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public ServiceWorkerResponseSource? ServiceWorkerResponseSource
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The time at which the returned response was generated.
+        ///</summary>
+        [JsonProperty("responseTime", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? ResponseTime
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Cache Storage Cache Name.
+        ///</summary>
+        [JsonProperty("cacheStorageCacheName", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string CacheStorageCacheName
         {
             get;
             set;

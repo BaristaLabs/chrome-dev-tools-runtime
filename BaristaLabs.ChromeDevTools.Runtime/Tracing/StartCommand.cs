@@ -53,6 +53,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             set;
         }
         /// <summary>
+        /// Trace data format to use. This only applies when using `ReturnAsStream`
+        /// transfer mode (defaults to `json`).
+        /// </summary>
+        [JsonProperty("streamFormat", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public StreamFormat? StreamFormat
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Compression format to use. This only applies when using `ReturnAsStream`
         /// transfer mode (defaults to `none`)
         /// </summary>
@@ -67,6 +77,26 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// </summary>
         [JsonProperty("traceConfig", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public TraceConfig TraceConfig
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Base64-encoded serialized perfetto.protos.TraceConfig protobuf message
+        /// When specified, the parameters `categories`, `options`, `traceConfig`
+        /// are ignored.
+        /// </summary>
+        [JsonProperty("perfettoConfig", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public byte[] PerfettoConfig
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Backend type (defaults to `auto`)
+        /// </summary>
+        [JsonProperty("tracingBackend", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public TracingBackend? TracingBackend
         {
             get;
             set;

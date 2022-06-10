@@ -112,6 +112,24 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+        /// <summary>
+        /// Whether to throw an exception if side effect cannot be ruled out during evaluation.
+        /// </summary>
+        [JsonProperty("throwOnSideEffect", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? ThrowOnSideEffect
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Whether the result should be serialized according to https://w3c.github.io/webdriver-bidi.
+        /// </summary>
+        [JsonProperty("generateWebDriverValue", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? GenerateWebDriverValue
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class CallFunctionOnCommandResponse : ICommandResponse<CallFunctionOnCommand>

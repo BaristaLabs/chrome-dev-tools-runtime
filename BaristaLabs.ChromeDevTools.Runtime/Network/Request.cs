@@ -62,6 +62,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
+        /// Request body elements. This will be converted from base64 to binary
+        ///</summary>
+        [JsonProperty("postDataEntries", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public PostDataEntry[] PostDataEntries
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// The mixed content type of the request.
         ///</summary>
         [JsonProperty("mixedContentType", DefaultValueHandling = DefaultValueHandling.Ignore)]
@@ -93,6 +102,26 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         ///</summary>
         [JsonProperty("isLinkPreload", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? IsLinkPreload
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Set for requests when the TrustToken API is used. Contains the parameters
+        /// passed by the developer (e.g. via "fetch") as understood by the backend.
+        ///</summary>
+        [JsonProperty("trustTokenParams", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public TrustTokenParams TrustTokenParams
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// True if this resource request is considered to be the 'same site' as the
+        /// request correspondinfg to the main frame.
+        ///</summary>
+        [JsonProperty("isSameSite", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? IsSameSite
         {
             get;
             set;

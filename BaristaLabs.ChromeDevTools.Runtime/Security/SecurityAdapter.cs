@@ -74,6 +74,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         /// <summary>
         /// The security state of the page changed.
         /// </summary>
+        public void SubscribeToVisibleSecurityStateChangedEvent(Action<VisibleSecurityStateChangedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// The security state of the page changed. No longer being sent.
+        /// </summary>
         public void SubscribeToSecurityStateChangedEvent(Action<SecurityStateChangedEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);

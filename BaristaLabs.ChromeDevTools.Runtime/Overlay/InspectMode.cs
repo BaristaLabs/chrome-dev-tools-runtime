@@ -14,6 +14,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
         SearchForNode,
         [EnumMember(Value = "searchForUAShadowDOM")]
         SearchForUAShadowDOM,
+        [EnumMember(Value = "captureAreaScreenshot")]
+        CaptureAreaScreenshot,
+        [EnumMember(Value = "showDistances")]
+        ShowDistances,
         [EnumMember(Value = "none")]
         None,
     }

@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
     using Newtonsoft.Json;
 
     /// <summary>
-    /// The security state of the page changed.
+    /// The security state of the page changed. No longer being sent.
     /// </summary>
     public sealed class SecurityStateChangedEvent : IEvent
     {
@@ -26,8 +26,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             set;
         }
         /// <summary>
-        /// List of explanations for the security state. If the overall security state is `insecure` or
-        /// `warning`, at least one corresponding explanation should be included.
+        /// Previously a list of explanations for the security state. Now always
+        /// empty.
         /// </summary>
         [JsonProperty("explanations")]
         public SecurityStateExplanation[] Explanations
@@ -45,7 +45,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             set;
         }
         /// <summary>
-        /// Overrides user-visible description of the state.
+        /// Overrides user-visible description of the state. Always omitted.
         /// </summary>
         [JsonProperty("summary", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Summary

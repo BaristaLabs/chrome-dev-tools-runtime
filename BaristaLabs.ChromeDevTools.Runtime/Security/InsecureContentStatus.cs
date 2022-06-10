@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
     public sealed class InsecureContentStatus
     {
         /// <summary>
-        /// True if the page was loaded over HTTPS and ran mixed (HTTP) content such as scripts.
+        /// Always false.
         ///</summary>
         [JsonProperty("ranMixedContent")]
         public bool RanMixedContent
@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             set;
         }
         /// <summary>
-        /// True if the page was loaded over HTTPS and displayed mixed (HTTP) content such as images.
+        /// Always false.
         ///</summary>
         [JsonProperty("displayedMixedContent")]
         public bool DisplayedMixedContent
@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             set;
         }
         /// <summary>
-        /// True if the page was loaded over HTTPS and contained a form targeting an insecure url.
+        /// Always false.
         ///</summary>
         [JsonProperty("containedMixedForm")]
         public bool ContainedMixedForm
@@ -35,8 +35,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             set;
         }
         /// <summary>
-        /// True if the page was loaded over HTTPS without certificate errors, and ran content such as
-        /// scripts that were loaded with certificate errors.
+        /// Always false.
         ///</summary>
         [JsonProperty("ranContentWithCertErrors")]
         public bool RanContentWithCertErrors
@@ -45,8 +44,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             set;
         }
         /// <summary>
-        /// True if the page was loaded over HTTPS without certificate errors, and displayed content
-        /// such as images that were loaded with certificate errors.
+        /// Always false.
         ///</summary>
         [JsonProperty("displayedContentWithCertErrors")]
         public bool DisplayedContentWithCertErrors
@@ -55,7 +53,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             set;
         }
         /// <summary>
-        /// Security state representing a page that ran insecure content.
+        /// Always set to unknown.
         ///</summary>
         [JsonProperty("ranInsecureContentStyle")]
         public SecurityState RanInsecureContentStyle
@@ -64,7 +62,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             set;
         }
         /// <summary>
-        /// Security state representing a page that displayed insecure content.
+        /// Always set to unknown.
         ///</summary>
         [JsonProperty("displayedInsecureContentStyle")]
         public SecurityState DisplayedInsecureContentStyle

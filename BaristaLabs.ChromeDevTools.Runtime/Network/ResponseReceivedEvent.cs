@@ -38,7 +38,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// Resource type.
         /// </summary>
         [JsonProperty("type")]
-        public Page.ResourceType Type
+        public ResourceType Type
         {
             get;
             set;
@@ -48,6 +48,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// </summary>
         [JsonProperty("response")]
         public Response Response
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Indicates whether requestWillBeSentExtraInfo and responseReceivedExtraInfo events will be
+        /// or were emitted for this request.
+        /// </summary>
+        [JsonProperty("hasExtraInfo")]
+        public bool HasExtraInfo
         {
             get;
             set;

@@ -26,6 +26,24 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
             set;
         }
         /// <summary>
+        /// Sub sys ID of the GPU, only available on Windows.
+        ///</summary>
+        [JsonProperty("subSysId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? SubSysId
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Revision of the GPU, only available on Windows.
+        ///</summary>
+        [JsonProperty("revision", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? Revision
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// String description of the GPU vendor, if the PCI ID is not available.
         ///</summary>
         [JsonProperty("vendorString")]
@@ -39,6 +57,24 @@ namespace BaristaLabs.ChromeDevTools.Runtime.SystemInfo
         ///</summary>
         [JsonProperty("deviceString")]
         public string DeviceString
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// String description of the GPU driver vendor.
+        ///</summary>
+        [JsonProperty("driverVendor")]
+        public string DriverVendor
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// String description of the GPU driver version.
+        ///</summary>
+        [JsonProperty("driverVersion")]
+        public string DriverVersion
         {
             get;
             set;

@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Fired when WebSocket frame is sent.
+    /// Fired when WebSocket message is sent.
     /// </summary>
     public sealed class WebSocketFrameSentEvent : IEvent
     {

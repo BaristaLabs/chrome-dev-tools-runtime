@@ -18,15 +18,6 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Signed exchange request method.
-        ///</summary>
-        [JsonProperty("requestMethod")]
-        public string RequestMethod
-        {
-            get;
-            set;
-        }
-        /// <summary>
         /// Signed exchange response code.
         ///</summary>
         [JsonProperty("responseCode")]
@@ -49,6 +40,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         ///</summary>
         [JsonProperty("signatures")]
         public SignedExchangeSignature[] Signatures
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Signed exchange header integrity hash in the form of "sha256-<base64-hash-value>".
+        ///</summary>
+        [JsonProperty("headerIntegrity")]
+        public string HeaderIntegrity
         {
             get;
             set;

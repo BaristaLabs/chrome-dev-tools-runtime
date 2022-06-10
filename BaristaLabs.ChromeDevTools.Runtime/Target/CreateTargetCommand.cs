@@ -16,7 +16,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         }
 
         /// <summary>
-        /// The initial URL the page will be navigated to.
+        /// The initial URL the page will be navigated to. An empty string indicates about:blank.
         /// </summary>
         [JsonProperty("url")]
         public string Url
@@ -57,6 +57,25 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
         /// </summary>
         [JsonProperty("enableBeginFrameControl", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public bool? EnableBeginFrameControl
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Whether to create a new Window or Tab (chrome-only, false by default).
+        /// </summary>
+        [JsonProperty("newWindow", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? NewWindow
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Whether to create the target in background or foreground (chrome-only,
+        /// false by default).
+        /// </summary>
+        [JsonProperty("background", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? Background
         {
             get;
             set;

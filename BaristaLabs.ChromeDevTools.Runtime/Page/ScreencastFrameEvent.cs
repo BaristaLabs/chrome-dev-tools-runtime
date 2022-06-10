@@ -11,7 +11,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Base64-encoded compressed image.
         /// </summary>
         [JsonProperty("data")]
-        public string Data
+        public byte[] Data
         {
             get;
             set;
