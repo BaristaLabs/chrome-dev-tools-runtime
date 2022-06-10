@@ -42,6 +42,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get;
             set;
         }
+        /// <summary>
+        /// Execution context in which to resolve the node.
+        /// </summary>
+        [JsonProperty("executionContextId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? ExecutionContextId
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class ResolveNodeCommandResponse : ICommandResponse<ResolveNodeCommand>

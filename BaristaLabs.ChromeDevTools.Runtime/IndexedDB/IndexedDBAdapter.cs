@@ -67,6 +67,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IndexedDB
             return await m_session.SendCommand<RequestDataCommand, RequestDataCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Gets metadata of an object store
+        /// </summary>
+        public async Task<GetMetadataCommandResponse> GetMetadata(GetMetadataCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetMetadataCommand, GetMetadataCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Requests database with given name in given frame.
         /// </summary>
         public async Task<RequestDatabaseCommandResponse> RequestDatabase(RequestDatabaseCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

@@ -36,6 +36,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             set;
         }
         /// <summary>
+        /// A system-unique execution context identifier. Unlike the id, this is unique across
+        /// multiple processes, so can be reliably used to identify specific context while backend
+        /// performs a cross-process navigation.
+        ///</summary>
+        [JsonProperty("uniqueId")]
+        public string UniqueId
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Embedder-specific auxiliary data.
         ///</summary>
         [JsonProperty("auxData", DefaultValueHandling = DefaultValueHandling.Ignore)]

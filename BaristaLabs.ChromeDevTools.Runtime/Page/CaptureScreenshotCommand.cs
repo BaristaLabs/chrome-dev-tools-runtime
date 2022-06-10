@@ -51,6 +51,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+        /// <summary>
+        /// Capture the screenshot beyond the viewport. Defaults to false.
+        /// </summary>
+        [JsonProperty("captureBeyondViewport", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? CaptureBeyondViewport
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class CaptureScreenshotCommandResponse : ICommandResponse<CaptureScreenshotCommand>
@@ -59,7 +68,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// Base64-encoded image data.
         ///</summary>
         [JsonProperty("data")]
-        public string Data
+        public byte[] Data
         {
             get;
             set;

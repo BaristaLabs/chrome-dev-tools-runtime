@@ -10,6 +10,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
     [JsonConverter(typeof(StringEnumConverter))]
     public enum AXValueNativeSourceType
     {
+        [EnumMember(Value = "description")]
+        Description,
         [EnumMember(Value = "figcaption")]
         Figcaption,
         [EnumMember(Value = "label")]
@@ -20,6 +22,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Accessibility
         Labelwrapped,
         [EnumMember(Value = "legend")]
         Legend,
+        [EnumMember(Value = "rubyannotation")]
+        Rubyannotation,
         [EnumMember(Value = "tablecaption")]
         Tablecaption,
         [EnumMember(Value = "title")]

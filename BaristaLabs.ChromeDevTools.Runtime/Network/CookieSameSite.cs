@@ -15,5 +15,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         Strict,
         [EnumMember(Value = "Lax")]
         Lax,
+        [EnumMember(Value = "None")]
+        None,
     }
 }

@@ -54,6 +54,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+        /// <summary>
+        /// If true, returns non-indexed properties only.
+        /// </summary>
+        [JsonProperty("nonIndexedPropertiesOnly", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? NonIndexedPropertiesOnly
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class GetPropertiesCommandResponse : ICommandResponse<GetPropertiesCommand>
@@ -72,6 +81,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
         ///</summary>
         [JsonProperty("internalProperties", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public InternalPropertyDescriptor[] InternalProperties
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Object private properties.
+        ///</summary>
+        [JsonProperty("privateProperties", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public PrivatePropertyDescriptor[] PrivateProperties
         {
             get;
             set;

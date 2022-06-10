@@ -28,6 +28,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
         ServiceWorkers,
         [EnumMember(Value = "cache_storage")]
         CacheStorage,
+        [EnumMember(Value = "interest_groups")]
+        InterestGroups,
         [EnumMember(Value = "all")]
         All,
         [EnumMember(Value = "other")]

@@ -133,5 +133,32 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get;
             set;
         }
+        /// <summary>
+        /// If the scriptLanguage is WebAssembly, the code section offset in the module.
+        /// </summary>
+        [JsonProperty("codeOffset", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? CodeOffset
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The language of the script.
+        /// </summary>
+        [JsonProperty("scriptLanguage", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public Debugger.ScriptLanguage ScriptLanguage
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// The name the embedder supplied for this script.
+        /// </summary>
+        [JsonProperty("embedderName", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string EmbedderName
+        {
+            get;
+            set;
+        }
     }
 }

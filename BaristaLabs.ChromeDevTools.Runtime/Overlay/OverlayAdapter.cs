@@ -46,6 +46,20 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
             return await m_session.SendCommand<GetHighlightObjectForTestCommand, GetHighlightObjectForTestCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// For Persistent Grid testing.
+        /// </summary>
+        public async Task<GetGridHighlightObjectsForTestCommandResponse> GetGridHighlightObjectsForTest(GetGridHighlightObjectsForTestCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetGridHighlightObjectsForTestCommand, GetGridHighlightObjectsForTestCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// For Source Order Viewer testing.
+        /// </summary>
+        public async Task<GetSourceOrderHighlightObjectForTestCommandResponse> GetSourceOrderHighlightObjectForTest(GetSourceOrderHighlightObjectForTestCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetSourceOrderHighlightObjectForTestCommand, GetSourceOrderHighlightObjectForTestCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Hides any highlight.
         /// </summary>
         public async Task<HideHighlightCommandResponse> HideHighlight(HideHighlightCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -54,6 +68,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
         }
         /// <summary>
         /// Highlights owner element of the frame with given id.
+        /// Deprecated: Doesn't work reliablity and cannot be fixed due to process
+        /// separatation (the owner node might be in a different process). Determine
+        /// the owner node in the client and use highlightNode.
         /// </summary>
         public async Task<HighlightFrameCommandResponse> HighlightFrame(HighlightFrameCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -82,12 +99,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
             return await m_session.SendCommand<HighlightRectCommand, HighlightRectCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Highlights the source order of the children of the DOM node with given id or with the given
+        /// JavaScript object wrapper. Either nodeId or objectId must be specified.
+        /// </summary>
+        public async Task<HighlightSourceOrderCommandResponse> HighlightSourceOrder(HighlightSourceOrderCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<HighlightSourceOrderCommand, HighlightSourceOrderCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Enters the 'inspect' mode. In this mode, elements that user is hovering over are highlighted.
         /// Backend then generates 'inspectNodeRequested' event upon element selection.
         /// </summary>
         public async Task<SetInspectModeCommandResponse> SetInspectMode(SetInspectModeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetInspectModeCommand, SetInspectModeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Highlights owner element of all frames detected to be ads.
+        /// </summary>
+        public async Task<SetShowAdHighlightsCommandResponse> SetShowAdHighlights(SetShowAdHighlightsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetShowAdHighlightsCommand, SetShowAdHighlightsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// setPausedInDebuggerMessage
@@ -111,11 +143,46 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
             return await m_session.SendCommand<SetShowFPSCounterCommand, SetShowFPSCounterCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Highlight multiple elements with the CSS Grid overlay.
+        /// </summary>
+        public async Task<SetShowGridOverlaysCommandResponse> SetShowGridOverlays(SetShowGridOverlaysCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetShowGridOverlaysCommand, SetShowGridOverlaysCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// setShowFlexOverlays
+        /// </summary>
+        public async Task<SetShowFlexOverlaysCommandResponse> SetShowFlexOverlays(SetShowFlexOverlaysCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetShowFlexOverlaysCommand, SetShowFlexOverlaysCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// setShowScrollSnapOverlays
+        /// </summary>
+        public async Task<SetShowScrollSnapOverlaysCommandResponse> SetShowScrollSnapOverlays(SetShowScrollSnapOverlaysCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetShowScrollSnapOverlaysCommand, SetShowScrollSnapOverlaysCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// setShowContainerQueryOverlays
+        /// </summary>
+        public async Task<SetShowContainerQueryOverlaysCommandResponse> SetShowContainerQueryOverlays(SetShowContainerQueryOverlaysCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetShowContainerQueryOverlaysCommand, SetShowContainerQueryOverlaysCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Requests that backend shows paint rectangles
         /// </summary>
         public async Task<SetShowPaintRectsCommandResponse> SetShowPaintRects(SetShowPaintRectsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<SetShowPaintRectsCommand, SetShowPaintRectsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Requests that backend shows layout shift regions
+        /// </summary>
+        public async Task<SetShowLayoutShiftRegionsCommandResponse> SetShowLayoutShiftRegions(SetShowLayoutShiftRegionsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetShowLayoutShiftRegionsCommand, SetShowLayoutShiftRegionsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Requests that backend shows scroll bottleneck rects
@@ -125,6 +192,20 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
             return await m_session.SendCommand<SetShowScrollBottleneckRectsCommand, SetShowScrollBottleneckRectsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Deprecated, no longer has any effect.
+        /// </summary>
+        public async Task<SetShowHitTestBordersCommandResponse> SetShowHitTestBorders(SetShowHitTestBordersCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetShowHitTestBordersCommand, SetShowHitTestBordersCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Request that backend shows an overlay with web vital metrics.
+        /// </summary>
+        public async Task<SetShowWebVitalsCommandResponse> SetShowWebVitals(SetShowWebVitalsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetShowWebVitalsCommand, SetShowWebVitalsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Paints viewport size upon main frame resize.
         /// </summary>
         public async Task<SetShowViewportSizeOnResizeCommandResponse> SetShowViewportSizeOnResize(SetShowViewportSizeOnResizeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -132,11 +213,18 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
             return await m_session.SendCommand<SetShowViewportSizeOnResizeCommand, SetShowViewportSizeOnResizeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// setSuspended
+        /// Add a dual screen device hinge
         /// </summary>
-        public async Task<SetSuspendedCommandResponse> SetSuspended(SetSuspendedCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<SetShowHingeCommandResponse> SetShowHinge(SetShowHingeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<SetSuspendedCommand, SetSuspendedCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<SetShowHingeCommand, SetShowHingeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Show elements in isolation mode with overlays.
+        /// </summary>
+        public async Task<SetShowIsolatedElementsCommandResponse> SetShowIsolatedElements(SetShowIsolatedElementsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetShowIsolatedElementsCommand, SetShowIsolatedElementsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
 
         /// <summary>
@@ -158,6 +246,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
         /// Fired when user asks to capture screenshot of some area on the page.
         /// </summary>
         public void SubscribeToScreenshotRequestedEvent(Action<ScreenshotRequestedEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Fired when user cancels the inspect mode.
+        /// </summary>
+        public void SubscribeToInspectModeCanceledEvent(Action<InspectModeCanceledEvent> eventCallback)
         {
             m_session.Subscribe(eventCallback);
         }

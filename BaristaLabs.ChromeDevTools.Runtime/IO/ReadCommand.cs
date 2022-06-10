@@ -66,7 +66,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.IO
             set;
         }
         /// <summary>
-        /// Set if the end-of-file condition occured while reading.
+        /// Set if the end-of-file condition occurred while reading.
         ///</summary>
         [JsonProperty("eof")]
         public bool Eof

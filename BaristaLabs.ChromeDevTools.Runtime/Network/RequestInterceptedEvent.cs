@@ -5,6 +5,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     /// <summary>
     /// Details of an intercepted HTTP request, which must be either allowed, blocked, modified or
     /// mocked.
+    /// Deprecated, use Fetch.requestPaused instead.
     /// </summary>
     public sealed class RequestInterceptedEvent : IEvent
     {
@@ -41,7 +42,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// How the requested resource will be used.
         /// </summary>
         [JsonProperty("resourceType")]
-        public Page.ResourceType ResourceType
+        public ResourceType ResourceType
         {
             get;
             set;
@@ -110,6 +111,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// </summary>
         [JsonProperty("responseHeaders", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public Headers ResponseHeaders
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// If the intercepted request had a corresponding requestWillBeSent event fired for it, then
+        /// this requestId will be the same as the requestId present in the requestWillBeSent event.
+        /// </summary>
+        [JsonProperty("requestId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string RequestId
         {
             get;
             set;

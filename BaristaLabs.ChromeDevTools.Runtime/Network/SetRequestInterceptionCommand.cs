@@ -3,7 +3,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Sets the requests to intercept that match a the provided patterns and optionally resource types.
+    /// Sets the requests to intercept that match the provided patterns and optionally resource types.
+    /// Deprecated, please use Fetch.enable instead.
     /// </summary>
     public sealed class SetRequestInterceptionCommand : ICommand
     {

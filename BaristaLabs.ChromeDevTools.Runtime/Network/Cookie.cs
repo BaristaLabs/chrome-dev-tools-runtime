@@ -97,5 +97,62 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+        /// <summary>
+        /// Cookie Priority
+        ///</summary>
+        [JsonProperty("priority")]
+        public CookiePriority Priority
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// True if cookie is SameParty.
+        ///</summary>
+        [JsonProperty("sameParty")]
+        public bool SameParty
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Cookie source scheme type.
+        ///</summary>
+        [JsonProperty("sourceScheme")]
+        public CookieSourceScheme SourceScheme
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Cookie source port. Valid values are {-1, [1, 65535]}, -1 indicates an unspecified port.
+        /// An unspecified port value allows protocol clients to emulate legacy cookie scope for the port.
+        /// This is a temporary ability and it will be removed in the future.
+        ///</summary>
+        [JsonProperty("sourcePort")]
+        public long SourcePort
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Cookie partition key. The site of the top-level URL the browser was visiting at the start
+        /// of the request to the endpoint that set the cookie.
+        ///</summary>
+        [JsonProperty("partitionKey", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string PartitionKey
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// True if cookie partition key is opaque.
+        ///</summary>
+        [JsonProperty("partitionKeyOpaque", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? PartitionKeyOpaque
+        {
+            get;
+            set;
+        }
     }
 }

@@ -60,7 +60,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Audits
         /// The encoded body as a base64 string. Omitted if sizeOnly is true.
         ///</summary>
         [JsonProperty("body", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public string Body
+        public byte[] Body
         {
             get;
             set;

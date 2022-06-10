@@ -16,10 +16,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
         AudioCapture,
         [EnumMember(Value = "backgroundSync")]
         BackgroundSync,
-        [EnumMember(Value = "clipboardRead")]
-        ClipboardRead,
-        [EnumMember(Value = "clipboardWrite")]
-        ClipboardWrite,
+        [EnumMember(Value = "backgroundFetch")]
+        BackgroundFetch,
+        [EnumMember(Value = "clipboardReadWrite")]
+        ClipboardReadWrite,
+        [EnumMember(Value = "clipboardSanitizedWrite")]
+        ClipboardSanitizedWrite,
+        [EnumMember(Value = "displayCapture")]
+        DisplayCapture,
         [EnumMember(Value = "durableStorage")]
         DurableStorage,
         [EnumMember(Value = "flash")]
@@ -30,15 +34,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
         Midi,
         [EnumMember(Value = "midiSysex")]
         MidiSysex,
+        [EnumMember(Value = "nfc")]
+        Nfc,
         [EnumMember(Value = "notifications")]
         Notifications,
         [EnumMember(Value = "paymentHandler")]
         PaymentHandler,
+        [EnumMember(Value = "periodicBackgroundSync")]
+        PeriodicBackgroundSync,
         [EnumMember(Value = "protectedMediaIdentifier")]
         ProtectedMediaIdentifier,
         [EnumMember(Value = "sensors")]
         Sensors,
         [EnumMember(Value = "videoCapture")]
         VideoCapture,
+        [EnumMember(Value = "videoCapturePanTiltZoom")]
+        VideoCapturePanTiltZoom,
+        [EnumMember(Value = "idleDetection")]
+        IdleDetection,
+        [EnumMember(Value = "wakeLockScreen")]
+        WakeLockScreen,
+        [EnumMember(Value = "wakeLockSystem")]
+        WakeLockSystem,
     }
 }

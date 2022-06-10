@@ -35,7 +35,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         }
         /// <summary>
         /// The request-URI to associate with the setting of the cookie. This value can affect the
-        /// default domain and path values of the created cookie.
+        /// default domain, path, source port, and source scheme values of the created cookie.
         /// </summary>
         [JsonProperty("url", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string Url
@@ -97,12 +97,61 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             get;
             set;
         }
+        /// <summary>
+        /// Cookie Priority type.
+        /// </summary>
+        [JsonProperty("priority", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public CookiePriority? Priority
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// True if cookie is SameParty.
+        /// </summary>
+        [JsonProperty("sameParty", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? SameParty
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Cookie source scheme type.
+        /// </summary>
+        [JsonProperty("sourceScheme", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public CookieSourceScheme? SourceScheme
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Cookie source port. Valid values are {-1, [1, 65535]}, -1 indicates an unspecified port.
+        /// An unspecified port value allows protocol clients to emulate legacy cookie scope for the port.
+        /// This is a temporary ability and it will be removed in the future.
+        /// </summary>
+        [JsonProperty("sourcePort", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public long? SourcePort
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Cookie partition key. The site of the top-level URL the browser was visiting at the start
+        /// of the request to the endpoint that set the cookie.
+        /// If not set, the cookie will be set as not partitioned.
+        /// </summary>
+        [JsonProperty("partitionKey", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string PartitionKey
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class SetCookieCommandResponse : ICommandResponse<SetCookieCommand>
     {
         /// <summary>
-        /// True if successfully set cookie.
+        /// Always set to true. If an error occurs, the response indicates protocol error.
         ///</summary>
         [JsonProperty("success")]
         public bool Success

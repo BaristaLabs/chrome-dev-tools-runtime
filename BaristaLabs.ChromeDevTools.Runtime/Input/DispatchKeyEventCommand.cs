@@ -146,6 +146,17 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Input
             get;
             set;
         }
+        /// <summary>
+        /// Editing commands to send with the key event (e.g., 'selectAll') (default: []).
+        /// These are related to but not equal the command names used in `document.execCommand` and NSStandardKeyBindingResponding.
+        /// See https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/editing/commands/editor_command_names.h for valid command names.
+        /// </summary>
+        [JsonProperty("commands", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string[] Commands
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class DispatchKeyEventCommandResponse : ICommandResponse<DispatchKeyEventCommand>

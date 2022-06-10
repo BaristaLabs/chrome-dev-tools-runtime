@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Overlay
     public sealed class ScreenshotRequestedEvent : IEvent
     {
         /// <summary>
-        /// Viewport to capture, in CSS.
+        /// Viewport to capture, in device independent pixels (dip).
         /// </summary>
         [JsonProperty("viewport")]
         public Page.Viewport Viewport

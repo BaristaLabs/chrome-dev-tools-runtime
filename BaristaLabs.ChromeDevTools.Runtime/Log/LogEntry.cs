@@ -35,6 +35,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Log
             set;
         }
         /// <summary>
+        /// category
+        ///</summary>
+        [JsonProperty("category", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string Category
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Timestamp when this entry was added.
         ///</summary>
         [JsonProperty("timestamp")]

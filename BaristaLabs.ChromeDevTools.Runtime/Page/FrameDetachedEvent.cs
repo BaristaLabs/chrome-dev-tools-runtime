@@ -16,5 +16,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+        /// <summary>
+        /// Gets or sets the reason
+        /// </summary>
+        [JsonProperty("reason")]
+        public string Reason
+        {
+            get;
+            set;
+        }
     }
 }

@@ -14,6 +14,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         Link,
         [EnumMember(Value = "typed")]
         Typed,
+        [EnumMember(Value = "address_bar")]
+        AddressBar,
         [EnumMember(Value = "auto_bookmark")]
         AutoBookmark,
         [EnumMember(Value = "auto_subframe")]

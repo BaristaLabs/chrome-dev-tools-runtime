@@ -161,15 +161,33 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+        /// <summary>
+        /// return as stream
+        /// </summary>
+        [JsonProperty("transferMode", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string TransferMode
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class PrintToPDFCommandResponse : ICommandResponse<PrintToPDFCommand>
     {
         /// <summary>
-        /// Base64-encoded pdf data.
+        /// Base64-encoded pdf data. Empty if |returnAsStream| is specified.
         ///</summary>
         [JsonProperty("data")]
-        public string Data
+        public byte[] Data
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// A handle of the stream that holds resulting PDF data.
+        ///</summary>
+        [JsonProperty("stream", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string Stream
         {
             get;
             set;

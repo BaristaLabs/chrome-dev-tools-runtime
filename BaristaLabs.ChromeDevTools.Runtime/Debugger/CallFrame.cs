@@ -45,6 +45,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
         }
         /// <summary>
         /// JavaScript script name or url.
+        /// Deprecated in favor of using the `location.scriptId` to resolve the URL via a previously
+        /// sent `Debugger.scriptParsed` event.
         ///</summary>
         [JsonProperty("url")]
         public string Url

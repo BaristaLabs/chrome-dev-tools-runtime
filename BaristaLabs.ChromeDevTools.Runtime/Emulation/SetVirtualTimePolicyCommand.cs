@@ -46,17 +46,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Emulation
             set;
         }
         /// <summary>
-        /// If set the virtual time policy change should be deferred until any frame starts navigating.
-        /// Note any previous deferred policy change is superseded.
-        /// </summary>
-        [JsonProperty("waitForNavigation", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public bool? WaitForNavigation
-        {
-            get;
-            set;
-        }
-        /// <summary>
-        /// If set, base::Time::Now will be overriden to initially return this value.
+        /// If set, base::Time::Now will be overridden to initially return this value.
         /// </summary>
         [JsonProperty("initialVirtualTime", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public double? InitialVirtualTime

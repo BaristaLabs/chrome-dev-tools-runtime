@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Fired when WebSocket frame error occurs.
+    /// Fired when WebSocket message error occurs.
     /// </summary>
     public sealed class WebSocketFrameErrorEvent : IEvent
     {
@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// WebSocket frame error message.
+        /// WebSocket error message.
         /// </summary>
         [JsonProperty("errorMessage")]
         public string ErrorMessage

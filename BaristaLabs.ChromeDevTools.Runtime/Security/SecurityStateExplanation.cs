@@ -61,5 +61,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
             get;
             set;
         }
+        /// <summary>
+        /// Recommendations to fix any issues.
+        ///</summary>
+        [JsonProperty("recommendations", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string[] Recommendations
+        {
+            get;
+            set;
+        }
     }
 }

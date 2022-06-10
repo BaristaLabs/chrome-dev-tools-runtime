@@ -247,5 +247,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             get;
             set;
         }
+        /// <summary>
+        /// Scroll offsets, set when this node is a Document.
+        ///</summary>
+        [JsonProperty("scrollOffsetX", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? ScrollOffsetX
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// scrollOffsetY
+        ///</summary>
+        [JsonProperty("scrollOffsetY", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? ScrollOffsetY
+        {
+            get;
+            set;
+        }
     }
 }

@@ -35,9 +35,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Profiler
             get;
             set;
         }
+        /// <summary>
+        /// Allow the backend to send updates on its own initiative
+        /// </summary>
+        [JsonProperty("allowTriggeredUpdates", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? AllowTriggeredUpdates
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class StartPreciseCoverageCommandResponse : ICommandResponse<StartPreciseCoverageCommand>
     {
+        /// <summary>
+        /// Monotonically increasing time (in seconds) when the coverage update was taken in the backend.
+        ///</summary>
+        [JsonProperty("timestamp")]
+        public double Timestamp
+        {
+            get;
+            set;
+        }
     }
 }

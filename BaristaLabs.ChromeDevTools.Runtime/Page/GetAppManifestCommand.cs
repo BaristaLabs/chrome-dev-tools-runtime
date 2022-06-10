@@ -46,5 +46,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+        /// <summary>
+        /// Parsed manifest properties
+        ///</summary>
+        [JsonProperty("parsed", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public AppManifestParsedProperties Parsed
+        {
+            get;
+            set;
+        }
     }
 }

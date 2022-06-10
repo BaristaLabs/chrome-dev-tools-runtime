@@ -3,13 +3,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Details of post layout rendered text positions. The exact layout should not be regarded as
+    /// Table of details of the post layout rendered text positions. The exact layout should not be regarded as
     /// stable and may change between versions.
     /// </summary>
     public sealed class TextBoxSnapshot
     {
         /// <summary>
-        /// Intex of th elayout tree node that owns this box collection.
+        /// Index of the layout tree node that owns this box collection.
         ///</summary>
         [JsonProperty("layoutIndex")]
         public long[] LayoutIndex

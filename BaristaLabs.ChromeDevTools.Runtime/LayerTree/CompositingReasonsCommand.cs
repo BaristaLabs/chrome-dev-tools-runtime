@@ -37,5 +37,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
             get;
             set;
         }
+        /// <summary>
+        /// A list of strings specifying reason IDs for the given layer to become composited.
+        ///</summary>
+        [JsonProperty("compositingReasonIds")]
+        public string[] CompositingReasonIds
+        {
+            get;
+            set;
+        }
     }
 }

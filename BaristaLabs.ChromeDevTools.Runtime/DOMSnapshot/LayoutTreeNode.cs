@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
-        /// The absolute position bounding box.
+        /// The bounding box in document coordinates. Note that scroll offset of the document is ignored.
         ///</summary>
         [JsonProperty("boundingBox")]
         public DOM.Rect BoundingBox

@@ -16,6 +16,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+        /// <summary>
+        /// The maximum size in bytes of collected scripts (not referenced by other heap objects)
+        /// the debugger can hold. Puts no limit if parameter is omitted.
+        /// </summary>
+        [JsonProperty("maxScriptsCacheSize", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public double? MaxScriptsCacheSize
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class EnableCommandResponse : ICommandResponse<EnableCommand>

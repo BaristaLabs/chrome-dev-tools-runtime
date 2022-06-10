@@ -62,6 +62,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CacheStorage
             set;
         }
         /// <summary>
+        /// HTTP response type
+        ///</summary>
+        [JsonProperty("responseType")]
+        public CachedResponseType ResponseType
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Response headers
         ///</summary>
         [JsonProperty("responseHeaders")]

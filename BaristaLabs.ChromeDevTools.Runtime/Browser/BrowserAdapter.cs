@@ -25,6 +25,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
         }
 
         /// <summary>
+        /// Set permission settings for given origin.
+        /// </summary>
+        public async Task<SetPermissionCommandResponse> SetPermission(SetPermissionCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetPermissionCommand, SetPermissionCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Grant specific permissions to the given origin and reject all others.
         /// </summary>
         public async Task<GrantPermissionsCommandResponse> GrantPermissions(GrantPermissionsCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -39,11 +46,39 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
             return await m_session.SendCommand<ResetPermissionsCommand, ResetPermissionsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Set the behavior when downloading a file.
+        /// </summary>
+        public async Task<SetDownloadBehaviorCommandResponse> SetDownloadBehavior(SetDownloadBehaviorCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetDownloadBehaviorCommand, SetDownloadBehaviorCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Cancel a download if in progress
+        /// </summary>
+        public async Task<CancelDownloadCommandResponse> CancelDownload(CancelDownloadCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<CancelDownloadCommand, CancelDownloadCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Close browser gracefully.
         /// </summary>
         public async Task<CloseCommandResponse> Close(CloseCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<CloseCommand, CloseCommandResponse>(command ?? new CloseCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Crashes browser on the main thread.
+        /// </summary>
+        public async Task<CrashCommandResponse> Crash(CrashCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<CrashCommand, CrashCommandResponse>(command ?? new CrashCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Crashes GPU process.
+        /// </summary>
+        public async Task<CrashGpuProcessCommandResponse> CrashGpuProcess(CrashGpuProcessCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<CrashGpuProcessCommand, CrashGpuProcessCommandResponse>(command ?? new CrashGpuProcessCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Returns version information.
@@ -95,6 +130,34 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
         {
             return await m_session.SendCommand<SetWindowBoundsCommand, SetWindowBoundsCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
+        /// <summary>
+        /// Set dock tile details, platform-specific.
+        /// </summary>
+        public async Task<SetDockTileCommandResponse> SetDockTile(SetDockTileCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetDockTileCommand, SetDockTileCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Invoke custom browser commands used by telemetry.
+        /// </summary>
+        public async Task<ExecuteBrowserCommandCommandResponse> ExecuteBrowserCommand(ExecuteBrowserCommandCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<ExecuteBrowserCommandCommand, ExecuteBrowserCommandCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
 
+        /// <summary>
+        /// Fired when page is about to start a download.
+        /// </summary>
+        public void SubscribeToDownloadWillBeginEvent(Action<DownloadWillBeginEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
+        /// <summary>
+        /// Fired when download makes progress. Last call has |done| == true.
+        /// </summary>
+        public void SubscribeToDownloadProgressEvent(Action<DownloadProgressEvent> eventCallback)
+        {
+            m_session.Subscribe(eventCallback);
+        }
     }
 }

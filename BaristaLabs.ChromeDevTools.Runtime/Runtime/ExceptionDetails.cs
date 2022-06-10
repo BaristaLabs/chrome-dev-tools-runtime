@@ -89,5 +89,16 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Runtime
             get;
             set;
         }
+        /// <summary>
+        /// Dictionary with entries of meta data that the client associated
+        /// with this exception, such as information about associated network
+        /// requests, etc.
+        ///</summary>
+        [JsonProperty("exceptionMetaData", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public object ExceptionMetaData
+        {
+            get;
+            set;
+        }
     }
 }

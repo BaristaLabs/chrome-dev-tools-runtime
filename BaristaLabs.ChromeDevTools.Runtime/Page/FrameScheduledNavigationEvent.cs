@@ -30,7 +30,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
         /// The reason for the navigation.
         /// </summary>
         [JsonProperty("reason")]
-        public string Reason
+        public ClientNavigationReason Reason
         {
             get;
             set;

@@ -6,13 +6,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime
     {
         private Lazy<Accessibility.AccessibilityAdapter> m_Accessibility;
         private Lazy<Animation.AnimationAdapter> m_Animation;
-        private Lazy<ApplicationCache.ApplicationCacheAdapter> m_ApplicationCache;
         private Lazy<Audits.AuditsAdapter> m_Audits;
+        private Lazy<BackgroundService.BackgroundServiceAdapter> m_BackgroundService;
         private Lazy<Browser.BrowserAdapter> m_Browser;
         private Lazy<CSS.CSSAdapter> m_CSS;
         private Lazy<CacheStorage.CacheStorageAdapter> m_CacheStorage;
+        private Lazy<Cast.CastAdapter> m_Cast;
         private Lazy<DOM.DOMAdapter> m_DOM;
         private Lazy<DOMDebugger.DOMDebuggerAdapter> m_DOMDebugger;
+        private Lazy<EventBreakpoints.EventBreakpointsAdapter> m_EventBreakpoints;
         private Lazy<DOMSnapshot.DOMSnapshotAdapter> m_DOMSnapshot;
         private Lazy<DOMStorage.DOMStorageAdapter> m_DOMStorage;
         private Lazy<Database.DatabaseAdapter> m_Database;
@@ -30,6 +32,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         private Lazy<Overlay.OverlayAdapter> m_Overlay;
         private Lazy<Page.PageAdapter> m_Page;
         private Lazy<Performance.PerformanceAdapter> m_Performance;
+        private Lazy<PerformanceTimeline.PerformanceTimelineAdapter> m_PerformanceTimeline;
         private Lazy<Security.SecurityAdapter> m_Security;
         private Lazy<ServiceWorker.ServiceWorkerAdapter> m_ServiceWorker;
         private Lazy<Storage.StorageAdapter> m_Storage;
@@ -37,7 +40,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         private Lazy<Target.TargetAdapter> m_Target;
         private Lazy<Tethering.TetheringAdapter> m_Tethering;
         private Lazy<Tracing.TracingAdapter> m_Tracing;
-        private Lazy<Testing.TestingAdapter> m_Testing;
+        private Lazy<Fetch.FetchAdapter> m_Fetch;
+        private Lazy<WebAudio.WebAudioAdapter> m_WebAudio;
+        private Lazy<WebAuthn.WebAuthnAdapter> m_WebAuthn;
+        private Lazy<Media.MediaAdapter> m_Media;
         private Lazy<Console.ConsoleAdapter> m_Console;
         private Lazy<Debugger.DebuggerAdapter> m_Debugger;
         private Lazy<HeapProfiler.HeapProfilerAdapter> m_HeapProfiler;
@@ -49,13 +55,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         {
             m_Accessibility = new Lazy<Accessibility.AccessibilityAdapter>(() => new Accessibility.AccessibilityAdapter(this));
             m_Animation = new Lazy<Animation.AnimationAdapter>(() => new Animation.AnimationAdapter(this));
-            m_ApplicationCache = new Lazy<ApplicationCache.ApplicationCacheAdapter>(() => new ApplicationCache.ApplicationCacheAdapter(this));
             m_Audits = new Lazy<Audits.AuditsAdapter>(() => new Audits.AuditsAdapter(this));
+            m_BackgroundService = new Lazy<BackgroundService.BackgroundServiceAdapter>(() => new BackgroundService.BackgroundServiceAdapter(this));
             m_Browser = new Lazy<Browser.BrowserAdapter>(() => new Browser.BrowserAdapter(this));
             m_CSS = new Lazy<CSS.CSSAdapter>(() => new CSS.CSSAdapter(this));
             m_CacheStorage = new Lazy<CacheStorage.CacheStorageAdapter>(() => new CacheStorage.CacheStorageAdapter(this));
+            m_Cast = new Lazy<Cast.CastAdapter>(() => new Cast.CastAdapter(this));
             m_DOM = new Lazy<DOM.DOMAdapter>(() => new DOM.DOMAdapter(this));
             m_DOMDebugger = new Lazy<DOMDebugger.DOMDebuggerAdapter>(() => new DOMDebugger.DOMDebuggerAdapter(this));
+            m_EventBreakpoints = new Lazy<EventBreakpoints.EventBreakpointsAdapter>(() => new EventBreakpoints.EventBreakpointsAdapter(this));
             m_DOMSnapshot = new Lazy<DOMSnapshot.DOMSnapshotAdapter>(() => new DOMSnapshot.DOMSnapshotAdapter(this));
             m_DOMStorage = new Lazy<DOMStorage.DOMStorageAdapter>(() => new DOMStorage.DOMStorageAdapter(this));
             m_Database = new Lazy<Database.DatabaseAdapter>(() => new Database.DatabaseAdapter(this));
@@ -73,6 +81,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime
             m_Overlay = new Lazy<Overlay.OverlayAdapter>(() => new Overlay.OverlayAdapter(this));
             m_Page = new Lazy<Page.PageAdapter>(() => new Page.PageAdapter(this));
             m_Performance = new Lazy<Performance.PerformanceAdapter>(() => new Performance.PerformanceAdapter(this));
+            m_PerformanceTimeline = new Lazy<PerformanceTimeline.PerformanceTimelineAdapter>(() => new PerformanceTimeline.PerformanceTimelineAdapter(this));
             m_Security = new Lazy<Security.SecurityAdapter>(() => new Security.SecurityAdapter(this));
             m_ServiceWorker = new Lazy<ServiceWorker.ServiceWorkerAdapter>(() => new ServiceWorker.ServiceWorkerAdapter(this));
             m_Storage = new Lazy<Storage.StorageAdapter>(() => new Storage.StorageAdapter(this));
@@ -80,7 +89,10 @@ namespace BaristaLabs.ChromeDevTools.Runtime
             m_Target = new Lazy<Target.TargetAdapter>(() => new Target.TargetAdapter(this));
             m_Tethering = new Lazy<Tethering.TetheringAdapter>(() => new Tethering.TetheringAdapter(this));
             m_Tracing = new Lazy<Tracing.TracingAdapter>(() => new Tracing.TracingAdapter(this));
-            m_Testing = new Lazy<Testing.TestingAdapter>(() => new Testing.TestingAdapter(this));
+            m_Fetch = new Lazy<Fetch.FetchAdapter>(() => new Fetch.FetchAdapter(this));
+            m_WebAudio = new Lazy<WebAudio.WebAudioAdapter>(() => new WebAudio.WebAudioAdapter(this));
+            m_WebAuthn = new Lazy<WebAuthn.WebAuthnAdapter>(() => new WebAuthn.WebAuthnAdapter(this));
+            m_Media = new Lazy<Media.MediaAdapter>(() => new Media.MediaAdapter(this));
             m_Console = new Lazy<Console.ConsoleAdapter>(() => new Console.ConsoleAdapter(this));
             m_Debugger = new Lazy<Debugger.DebuggerAdapter>(() => new Debugger.DebuggerAdapter(this));
             m_HeapProfiler = new Lazy<HeapProfiler.HeapProfilerAdapter>(() => new HeapProfiler.HeapProfilerAdapter(this));
@@ -106,19 +118,19 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         }
         
         /// <summary>
-        /// Gets the adapter for the ApplicationCache domain.
-        /// </summary>
-        public ApplicationCache.ApplicationCacheAdapter ApplicationCache
-        {
-            get { return m_ApplicationCache.Value; }
-        }
-        
-        /// <summary>
         /// Gets the adapter for the Audits domain.
         /// </summary>
         public Audits.AuditsAdapter Audits
         {
             get { return m_Audits.Value; }
+        }
+        
+        /// <summary>
+        /// Gets the adapter for the BackgroundService domain.
+        /// </summary>
+        public BackgroundService.BackgroundServiceAdapter BackgroundService
+        {
+            get { return m_BackgroundService.Value; }
         }
         
         /// <summary>
@@ -146,6 +158,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         }
         
         /// <summary>
+        /// Gets the adapter for the Cast domain.
+        /// </summary>
+        public Cast.CastAdapter Cast
+        {
+            get { return m_Cast.Value; }
+        }
+        
+        /// <summary>
         /// Gets the adapter for the DOM domain.
         /// </summary>
         public DOM.DOMAdapter DOM
@@ -159,6 +179,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         public DOMDebugger.DOMDebuggerAdapter DOMDebugger
         {
             get { return m_DOMDebugger.Value; }
+        }
+        
+        /// <summary>
+        /// Gets the adapter for the EventBreakpoints domain.
+        /// </summary>
+        public EventBreakpoints.EventBreakpointsAdapter EventBreakpoints
+        {
+            get { return m_EventBreakpoints.Value; }
         }
         
         /// <summary>
@@ -298,6 +326,14 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         }
         
         /// <summary>
+        /// Gets the adapter for the PerformanceTimeline domain.
+        /// </summary>
+        public PerformanceTimeline.PerformanceTimelineAdapter PerformanceTimeline
+        {
+            get { return m_PerformanceTimeline.Value; }
+        }
+        
+        /// <summary>
         /// Gets the adapter for the Security domain.
         /// </summary>
         public Security.SecurityAdapter Security
@@ -354,11 +390,35 @@ namespace BaristaLabs.ChromeDevTools.Runtime
         }
         
         /// <summary>
-        /// Gets the adapter for the Testing domain.
+        /// Gets the adapter for the Fetch domain.
         /// </summary>
-        public Testing.TestingAdapter Testing
+        public Fetch.FetchAdapter Fetch
         {
-            get { return m_Testing.Value; }
+            get { return m_Fetch.Value; }
+        }
+        
+        /// <summary>
+        /// Gets the adapter for the WebAudio domain.
+        /// </summary>
+        public WebAudio.WebAudioAdapter WebAudio
+        {
+            get { return m_WebAudio.Value; }
+        }
+        
+        /// <summary>
+        /// Gets the adapter for the WebAuthn domain.
+        /// </summary>
+        public WebAuthn.WebAuthnAdapter WebAuthn
+        {
+            get { return m_WebAuthn.Value; }
+        }
+        
+        /// <summary>
+        /// Gets the adapter for the Media domain.
+        /// </summary>
+        public Media.MediaAdapter Media
+        {
+            get { return m_Media.Value; }
         }
         
         /// <summary>

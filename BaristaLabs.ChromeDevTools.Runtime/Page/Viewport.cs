@@ -8,7 +8,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     public sealed class Viewport
     {
         /// <summary>
-        /// X offset in CSS pixels.
+        /// X offset in device independent pixels (dip).
         ///</summary>
         [JsonProperty("x")]
         public double X
@@ -17,7 +17,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Y offset in CSS pixels
+        /// Y offset in device independent pixels (dip).
         ///</summary>
         [JsonProperty("y")]
         public double Y
@@ -26,7 +26,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Rectangle width in CSS pixels
+        /// Rectangle width in device independent pixels (dip).
         ///</summary>
         [JsonProperty("width")]
         public double Width
@@ -35,7 +35,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Rectangle height in CSS pixels
+        /// Rectangle height in device independent pixels (dip).
         ///</summary>
         [JsonProperty("height")]
         public double Height

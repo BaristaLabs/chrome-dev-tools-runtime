@@ -24,6 +24,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+        /// <summary>
+        /// Specifies font families to set for individual scripts.
+        /// </summary>
+        [JsonProperty("forScripts", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public ScriptFontFamilies[] ForScripts
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class SetFontFamiliesCommandResponse : ICommandResponse<SetFontFamiliesCommand>

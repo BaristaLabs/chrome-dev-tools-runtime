@@ -26,6 +26,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOMSnapshot
             set;
         }
         /// <summary>
+        /// Type of the shadow root the `Node` is in. String values are equal to the `ShadowRootType` enum.
+        ///</summary>
+        [JsonProperty("shadowRootType", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public RareStringData ShadowRootType
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// `Node`'s nodeName.
         ///</summary>
         [JsonProperty("nodeName", DefaultValueHandling = DefaultValueHandling.Ignore)]

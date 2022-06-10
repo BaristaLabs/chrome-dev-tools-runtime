@@ -8,8 +8,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
     public sealed class RequestPattern
     {
         /// <summary>
-        /// Wildcards ('*' -> zero or more, '?' -> exactly one) are allowed. Escape character is
-        /// backslash. Omitting is equivalent to "*".
+        /// Wildcards (`'*'` -> zero or more, `'?'` -> exactly one) are allowed. Escape character is
+        /// backslash. Omitting is equivalent to `"*"`.
         ///</summary>
         [JsonProperty("urlPattern", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string UrlPattern
@@ -21,13 +21,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
         /// If set, only requests for matching resource types will be intercepted.
         ///</summary>
         [JsonProperty("resourceType", DefaultValueHandling = DefaultValueHandling.Ignore)]
-        public Page.ResourceType ResourceType
+        public ResourceType? ResourceType
         {
             get;
             set;
         }
         /// <summary>
-        /// Stage at wich to begin intercepting requests. Default is Request.
+        /// Stage at which to begin intercepting requests. Default is Request.
         ///</summary>
         [JsonProperty("interceptionStage", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public InterceptionStage? InterceptionStage

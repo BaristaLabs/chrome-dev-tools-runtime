@@ -15,6 +15,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Debugger
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+        /// <summary>
+        /// The skipList specifies location ranges that should be skipped on step over.
+        /// </summary>
+        [JsonProperty("skipList", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public LocationRange[] SkipList
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class StepOverCommandResponse : ICommandResponse<StepOverCommand>

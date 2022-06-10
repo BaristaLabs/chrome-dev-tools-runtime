@@ -20,5 +20,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Security
         Secure,
         [EnumMember(Value = "info")]
         Info,
+        [EnumMember(Value = "insecure-broken")]
+        InsecureBroken,
     }
 }

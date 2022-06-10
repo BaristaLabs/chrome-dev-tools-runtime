@@ -24,6 +24,27 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             get;
             set;
         }
+        /// <summary>
+        /// If specified, creates an isolated world with the given name and evaluates given script in it.
+        /// This world name will be used as the ExecutionContextDescription::name when the corresponding
+        /// event is emitted.
+        /// </summary>
+        [JsonProperty("worldName", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string WorldName
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Specifies whether command line API should be available to the script, defaults
+        /// to false.
+        /// </summary>
+        [JsonProperty("includeCommandLineAPI", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? IncludeCommandLineAPI
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class AddScriptToEvaluateOnNewDocumentCommandResponse : ICommandResponse<AddScriptToEvaluateOnNewDocumentCommand>

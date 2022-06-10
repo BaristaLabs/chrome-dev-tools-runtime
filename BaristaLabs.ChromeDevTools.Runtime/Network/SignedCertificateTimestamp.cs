@@ -44,7 +44,8 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Network
             set;
         }
         /// <summary>
-        /// Issuance date.
+        /// Issuance date. Unlike TimeSinceEpoch, this contains the number of
+        /// milliseconds since January 1, 1970, UTC, not the number of seconds.
         ///</summary>
         [JsonProperty("timestamp")]
         public double Timestamp

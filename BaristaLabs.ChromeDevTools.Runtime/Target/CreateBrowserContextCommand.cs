@@ -16,6 +16,43 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Target
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+        /// <summary>
+        /// If specified, disposes this context when debugging session disconnects.
+        /// </summary>
+        [JsonProperty("disposeOnDetach", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? DisposeOnDetach
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Proxy server, similar to the one passed to --proxy-server
+        /// </summary>
+        [JsonProperty("proxyServer", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string ProxyServer
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Proxy bypass list, similar to the one passed to --proxy-bypass-list
+        /// </summary>
+        [JsonProperty("proxyBypassList", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string ProxyBypassList
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// An optional list of origins to grant unlimited cross-origin access to.
+        /// Parts of the URL other than those constituting origin are ignored.
+        /// </summary>
+        [JsonProperty("originsWithUniversalNetworkAccess", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string[] OriginsWithUniversalNetworkAccess
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class CreateBrowserContextCommandResponse : ICommandResponse<CreateBrowserContextCommand>

@@ -48,6 +48,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             return await m_session.SendCommand<DescribeNodeCommand, DescribeNodeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Scrolls the specified rect of the given node into view if not already visible.
+        /// Note: exactly one between nodeId, backendNodeId and objectId should be passed
+        /// to identify the node.
+        /// </summary>
+        public async Task<ScrollIntoViewIfNeededCommandResponse> ScrollIntoViewIfNeeded(ScrollIntoViewIfNeededCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<ScrollIntoViewIfNeededCommand, ScrollIntoViewIfNeededCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Disables DOM agent for the given page.
         /// </summary>
         public async Task<DisableCommandResponse> Disable(DisableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
@@ -65,9 +74,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         /// <summary>
         /// Enables DOM agent for the given page.
         /// </summary>
-        public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<EnableCommandResponse> Enable(EnableCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command ?? new EnableCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<EnableCommand, EnableCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Focuses the given element.
@@ -107,13 +116,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         }
         /// <summary>
         /// Returns the root DOM node (and optionally the subtree) to the caller.
+        /// Deprecated, as it is not designed to work well with the rest of the DOM agent.
+        /// Use DOMSnapshot.captureSnapshot instead.
         /// </summary>
         public async Task<GetFlattenedDocumentCommandResponse> GetFlattenedDocument(GetFlattenedDocumentCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<GetFlattenedDocumentCommand, GetFlattenedDocumentCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
-        /// Returns node id at given location.
+        /// Finds nodes with a given computed style in a subtree.
+        /// </summary>
+        public async Task<GetNodesForSubtreeByStyleCommandResponse> GetNodesForSubtreeByStyle(GetNodesForSubtreeByStyleCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetNodesForSubtreeByStyleCommand, GetNodesForSubtreeByStyleCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Returns node id at given location. Depending on whether DOM domain is enabled, nodeId is
+        /// either returned or not.
         /// </summary>
         public async Task<GetNodeForLocationCommandResponse> GetNodeForLocation(GetNodeForLocationCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
@@ -281,6 +300,28 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             return await m_session.SendCommand<SetFileInputFilesCommand, SetFileInputFilesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// Sets if stack traces should be captured for Nodes. See `Node.getNodeStackTraces`. Default is disabled.
+        /// </summary>
+        public async Task<SetNodeStackTracesEnabledCommandResponse> SetNodeStackTracesEnabled(SetNodeStackTracesEnabledCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<SetNodeStackTracesEnabledCommand, SetNodeStackTracesEnabledCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Gets stack traces associated with a Node. As of now, only provides stack trace for Node creation.
+        /// </summary>
+        public async Task<GetNodeStackTracesCommandResponse> GetNodeStackTraces(GetNodeStackTracesCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetNodeStackTracesCommand, GetNodeStackTracesCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Returns file information for the given
+        /// File wrapper.
+        /// </summary>
+        public async Task<GetFileInfoCommandResponse> GetFileInfo(GetFileInfoCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetFileInfoCommand, GetFileInfoCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// Enables console to refer to the node with given id via $x (see Command Line API for more details
         /// $x functions).
         /// </summary>
@@ -322,6 +363,23 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
         public async Task<GetFrameOwnerCommandResponse> GetFrameOwner(GetFrameOwnerCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
             return await m_session.SendCommand<GetFrameOwnerCommand, GetFrameOwnerCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Returns the container of the given node based on container query conditions.
+        /// If containerName is given, it will find the nearest container with a matching name;
+        /// otherwise it will find the nearest container regardless of its container name.
+        /// </summary>
+        public async Task<GetContainerForNodeCommandResponse> GetContainerForNode(GetContainerForNodeCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetContainerForNodeCommand, GetContainerForNodeCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
+        /// Returns the descendants of a container query container that have
+        /// container queries against this container.
+        /// </summary>
+        public async Task<GetQueryingDescendantsForContainerCommandResponse> GetQueryingDescendantsForContainer(GetQueryingDescendantsForContainerCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<GetQueryingDescendantsForContainerCommand, GetQueryingDescendantsForContainerCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
 
         /// <summary>
@@ -367,7 +425,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             m_session.Subscribe(eventCallback);
         }
         /// <summary>
-        /// Called when distrubution is changed.
+        /// Called when distribution is changed.
         /// </summary>
         public void SubscribeToDistributedNodesUpdatedEvent(Action<DistributedNodesUpdatedEvent> eventCallback)
         {

@@ -3,12 +3,12 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Called when distrubution is changed.
+    /// Called when distribution is changed.
     /// </summary>
     public sealed class DistributedNodesUpdatedEvent : IEvent
     {
         /// <summary>
-        /// Insertion point where distrubuted nodes were updated.
+        /// Insertion point where distributed nodes were updated.
         /// </summary>
         [JsonProperty("insertionPointId")]
         public long InsertionPointId

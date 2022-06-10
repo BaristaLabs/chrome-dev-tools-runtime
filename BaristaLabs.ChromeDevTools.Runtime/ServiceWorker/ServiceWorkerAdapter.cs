@@ -46,6 +46,13 @@ namespace BaristaLabs.ChromeDevTools.Runtime.ServiceWorker
             return await m_session.SendCommand<DispatchSyncEventCommand, DispatchSyncEventCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
+        /// dispatchPeriodicSyncEvent
+        /// </summary>
+        public async Task<DispatchPeriodicSyncEventCommandResponse> DispatchPeriodicSyncEvent(DispatchPeriodicSyncEventCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        {
+            return await m_session.SendCommand<DispatchPeriodicSyncEventCommand, DispatchPeriodicSyncEventCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+        }
+        /// <summary>
         /// enable
         /// </summary>
         public async Task<EnableCommandResponse> Enable(EnableCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)

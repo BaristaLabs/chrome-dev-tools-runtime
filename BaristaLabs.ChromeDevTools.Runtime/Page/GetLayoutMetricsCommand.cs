@@ -20,7 +20,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
     public sealed class GetLayoutMetricsCommandResponse : ICommandResponse<GetLayoutMetricsCommand>
     {
         /// <summary>
-        /// Metrics relating to the layout viewport.
+        /// Deprecated metrics relating to the layout viewport. Is in device pixels. Use `cssLayoutViewport` instead.
         ///</summary>
         [JsonProperty("layoutViewport")]
         public LayoutViewport LayoutViewport
@@ -29,7 +29,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Metrics relating to the visual viewport.
+        /// Deprecated metrics relating to the visual viewport. Is in device pixels. Use `cssVisualViewport` instead.
         ///</summary>
         [JsonProperty("visualViewport")]
         public VisualViewport VisualViewport
@@ -38,10 +38,37 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Page
             set;
         }
         /// <summary>
-        /// Size of scrollable area.
+        /// Deprecated size of scrollable area. Is in DP. Use `cssContentSize` instead.
         ///</summary>
         [JsonProperty("contentSize")]
         public DOM.Rect ContentSize
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Metrics relating to the layout viewport in CSS pixels.
+        ///</summary>
+        [JsonProperty("cssLayoutViewport")]
+        public LayoutViewport CssLayoutViewport
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Metrics relating to the visual viewport in CSS pixels.
+        ///</summary>
+        [JsonProperty("cssVisualViewport")]
+        public VisualViewport CssVisualViewport
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Size of scrollable area in CSS pixels.
+        ///</summary>
+        [JsonProperty("cssContentSize")]
+        public DOM.Rect CssContentSize
         {
             get;
             set;

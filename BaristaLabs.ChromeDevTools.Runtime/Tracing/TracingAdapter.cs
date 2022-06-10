@@ -48,9 +48,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
         /// <summary>
         /// Request a global memory dump.
         /// </summary>
-        public async Task<RequestMemoryDumpCommandResponse> RequestMemoryDump(RequestMemoryDumpCommand command = null, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+        public async Task<RequestMemoryDumpCommandResponse> RequestMemoryDump(RequestMemoryDumpCommand command, CancellationToken cancellationToken = default(CancellationToken), int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
         {
-            return await m_session.SendCommand<RequestMemoryDumpCommand, RequestMemoryDumpCommandResponse>(command ?? new RequestMemoryDumpCommand(), cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
+            return await m_session.SendCommand<RequestMemoryDumpCommand, RequestMemoryDumpCommandResponse>(command, cancellationToken, millisecondsTimeout, throwExceptionIfResponseNotReceived);
         }
         /// <summary>
         /// Start trace events collection.

@@ -15,6 +15,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.DOM
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+        /// <summary>
+        /// Whether to include whitespaces in the children array of returned Nodes.
+        /// </summary>
+        [JsonProperty("includeWhitespace", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public string IncludeWhitespace
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class EnableCommandResponse : ICommandResponse<EnableCommand>

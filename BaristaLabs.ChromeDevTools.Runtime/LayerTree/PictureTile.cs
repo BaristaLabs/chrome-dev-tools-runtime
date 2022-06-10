@@ -29,7 +29,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.LayerTree
         /// Base64-encoded snapshot data.
         ///</summary>
         [JsonProperty("picture")]
-        public string Picture
+        public byte[] Picture
         {
             get;
             set;

@@ -47,6 +47,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Storage
             set;
         }
         /// <summary>
+        /// Whether or not the origin has an active storage quota override
+        ///</summary>
+        [JsonProperty("overrideActive")]
+        public bool OverrideActive
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Storage usage per type (bytes).
         ///</summary>
         [JsonProperty("usageBreakdown")]

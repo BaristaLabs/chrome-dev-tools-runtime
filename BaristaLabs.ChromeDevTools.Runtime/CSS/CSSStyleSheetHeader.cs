@@ -26,7 +26,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             set;
         }
         /// <summary>
-        /// Stylesheet resource URL.
+        /// Stylesheet resource URL. Empty if this is a constructed stylesheet created using
+        /// new CSSStyleSheet() (but non-empty if this is a constructed sylesheet imported
+        /// as a CSS module script).
         ///</summary>
         [JsonProperty("sourceURL")]
         public string SourceURL
@@ -99,6 +101,28 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             set;
         }
         /// <summary>
+        /// Whether this stylesheet is mutable. Inline stylesheets become mutable
+        /// after they have been modified via CSSOM API.
+        /// <link> element's stylesheets become mutable only if DevTools modifies them.
+        /// Constructed stylesheets (new CSSStyleSheet()) are mutable immediately after creation.
+        ///</summary>
+        [JsonProperty("isMutable")]
+        public bool IsMutable
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// True if this stylesheet is created through new CSSStyleSheet() or imported as a
+        /// CSS module script.
+        ///</summary>
+        [JsonProperty("isConstructed")]
+        public bool IsConstructed
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// Line offset of the stylesheet within the resource (zero based).
         ///</summary>
         [JsonProperty("startLine")]
@@ -121,6 +145,24 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         ///</summary>
         [JsonProperty("length")]
         public double Length
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Line offset of the end of the stylesheet within the resource (zero based).
+        ///</summary>
+        [JsonProperty("endLine")]
+        public double EndLine
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Column offset of the end of the stylesheet within the resource (zero based).
+        ///</summary>
+        [JsonProperty("endColumn")]
+        public double EndColumn
         {
             get;
             set;

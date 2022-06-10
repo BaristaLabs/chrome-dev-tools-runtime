@@ -4,6 +4,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
 
     /// <summary>
     /// Properties of a web font: https://www.w3.org/TR/2008/REC-CSS2-20080411/fonts.html#font-descriptions
+    /// and additional information such as platformFontFamily and fontVariationAxes.
     /// </summary>
     public sealed class FontFace
     {
@@ -75,6 +76,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
         ///</summary>
         [JsonProperty("platformFontFamily")]
         public string PlatformFontFamily
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Available variation settings (a.k.a. "axes").
+        ///</summary>
+        [JsonProperty("fontVariationAxes", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public FontVariationAxis[] FontVariationAxes
         {
             get;
             set;

@@ -74,6 +74,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.CSS
             set;
         }
         /// <summary>
+        /// A chain of inherited pseudo element styles (from the immediate node parent up to the DOM tree root).
+        ///</summary>
+        [JsonProperty("inheritedPseudoElements", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public InheritedPseudoElementMatches[] InheritedPseudoElements
+        {
+            get;
+            set;
+        }
+        /// <summary>
         /// A list of CSS keyframed animations matching this node.
         ///</summary>
         [JsonProperty("cssKeyframesRules", DefaultValueHandling = DefaultValueHandling.Ignore)]

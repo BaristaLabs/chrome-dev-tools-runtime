@@ -3,7 +3,7 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
     using Newtonsoft.Json;
 
     /// <summary>
-    /// Profile.
+    /// Sampling profile.
     /// </summary>
     public sealed class SamplingHeapProfile
     {
@@ -12,6 +12,15 @@ namespace BaristaLabs.ChromeDevTools.Runtime.HeapProfiler
         ///</summary>
         [JsonProperty("head")]
         public SamplingHeapProfileNode Head
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// samples
+        ///</summary>
+        [JsonProperty("samples")]
+        public SamplingHeapProfileSample[] Samples
         {
             get;
             set;

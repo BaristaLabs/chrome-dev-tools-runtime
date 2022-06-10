@@ -15,6 +15,24 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Tracing
             get { return ChromeRemoteInterface_CommandName; }
         }
 
+        /// <summary>
+        /// Enables more deterministic results by forcing garbage collection
+        /// </summary>
+        [JsonProperty("deterministic", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public bool? Deterministic
+        {
+            get;
+            set;
+        }
+        /// <summary>
+        /// Specifies level of details in memory dump. Defaults to "detailed".
+        /// </summary>
+        [JsonProperty("levelOfDetail", DefaultValueHandling = DefaultValueHandling.Ignore)]
+        public MemoryDumpLevelOfDetail? LevelOfDetail
+        {
+            get;
+            set;
+        }
     }
 
     public sealed class RequestMemoryDumpCommandResponse : ICommandResponse<RequestMemoryDumpCommand>

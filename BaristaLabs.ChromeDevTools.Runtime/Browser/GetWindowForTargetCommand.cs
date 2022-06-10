@@ -16,9 +16,9 @@ namespace BaristaLabs.ChromeDevTools.Runtime.Browser
         }
 
         /// <summary>
-        /// Devtools agent host id.
+        /// Devtools agent host id. If called as a part of the session, associated targetId is used.
         /// </summary>
-        [JsonProperty("targetId")]
+        [JsonProperty("targetId", DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string TargetId
         {
             get;
